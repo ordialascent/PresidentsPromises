@@ -234,6 +234,7 @@ export const agStyles = `
   width: 14px;
   height: 14px;
   margin-top: -5px;
+  box-sizing: border-box;
   border-radius: 50%;
   background: var(--ag-accent, var(--ag-series));
   border: 2px solid var(--ag-bg);
@@ -243,6 +244,7 @@ export const agStyles = `
 .ag-slider::-moz-range-thumb {
   width: 14px;
   height: 14px;
+  box-sizing: border-box;
   border-radius: 50%;
   background: var(--ag-accent, var(--ag-series));
   border: 2px solid var(--ag-bg);
