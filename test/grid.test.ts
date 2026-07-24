@@ -2,20 +2,23 @@ import { describe, it, expect } from 'vitest';
 import {
   RECORDED_FY2009_BILLIONS,
   STATED_BASELINE_BILLIONS,
-  baselineChoices,
-  deadlineChoices,
+  deficitTopic,
   readAt,
   toDeficitBillions,
-} from '../src/claim/obamaDeficit2009.js';
+} from '../src/content/deficit.js';
 
 /**
- * The grid the product refuses to collapse. Pinned against the committed
- * snapshot. Outcomes are asserted exactly (they are robust to small revisions);
- * the single met margin is asserted within a tolerant band so the first real
- * FRED refresh, which supersedes the bootstrap values, cannot break this test.
+ * The grid the product refuses to collapse, pinned against the committed
+ * snapshot. Outcomes are asserted exactly (robust to small revisions); the
+ * single met margin is asserted within a tolerant band so the first real FRED
+ * refresh, which supersedes the bootstrap values, cannot break this test.
  */
-describe('the 2x2 reading grid', () => {
-  const cell = (baselineValue: number, deadlineX: number) => readAt(baselineValue, deadlineX).outcome;
+describe('the deficit topic, Obama 2009 promise', () => {
+  const promise = deficitTopic.promises[0]!;
+  const cell = (baselineValue: number, deadlineX: number) =>
+    readAt(deficitTopic, promise, baselineValue, deadlineX).outcome;
+  const read = (baselineValue: number, deadlineX: number) =>
+    readAt(deficitTopic, promise, baselineValue, deadlineX);
 
   it('sign/units transform: FYFSD negative millions -> positive billions of deficit', () => {
     expect(toDeficitBillions(-1412688)).toBeCloseTo(1412.688, 3);
@@ -23,8 +26,8 @@ describe('the 2x2 reading grid', () => {
   });
 
   it('targets derive by halving the chosen baseline', () => {
-    expect(readAt(STATED_BASELINE_BILLIONS, 2012).target).toBe(650);
-    expect(readAt(RECORDED_FY2009_BILLIONS, 2013).target).toBeCloseTo(RECORDED_FY2009_BILLIONS / 2, 6);
+    expect(read(STATED_BASELINE_BILLIONS, 2012).target).toBe(650);
+    expect(read(RECORDED_FY2009_BILLIONS, 2013).target).toBeCloseTo(RECORDED_FY2009_BILLIONS / 2, 6);
   });
 
   it('stated $1.30T baseline (target $650B) misses at both deadlines', () => {
@@ -37,20 +40,23 @@ describe('the 2x2 reading grid', () => {
     expect(cell(RECORDED_FY2009_BILLIONS, 2013)).toBe('met');
   });
 
-  it('exactly three readings miss and one is met', () => {
-    const outcomes = baselineChoices.flatMap((b) =>
-      deadlineChoices.map((d) => cell(b.value, d.x)),
+  it('exactly three readings miss and one is met, across the promise candidates', () => {
+    const outcomes = promise.baselineCandidates.flatMap((b) =>
+      promise.deadlineCandidates.map((d) => cell(b.value, d.x)),
     );
     expect(outcomes.filter((o) => o === 'missed')).toHaveLength(3);
     expect(outcomes.filter((o) => o === 'met')).toHaveLength(1);
   });
 
   it('the single met cell is (recorded FY2009 baseline, FY2013 deadline), by a hair', () => {
-    const met = readAt(RECORDED_FY2009_BILLIONS, 2013);
+    const met = read(RECORDED_FY2009_BILLIONS, 2013);
     expect(met.outcome).toBe('met');
     expect(met.distanceWord).toBe('under');
-    // met by a small margin — brief says ~$27B; keep a tolerant band for refreshes.
     expect(met.distance).toBeGreaterThan(0);
     expect(met.distance).toBeLessThan(60);
+  });
+
+  it('the reading is derived, never supplied: a missing observation is indeterminate', () => {
+    expect(cell(RECORDED_FY2009_BILLIONS, 2099)).toBe('indeterminate');
   });
 });

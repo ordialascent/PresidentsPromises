@@ -15,7 +15,7 @@ begins at FY2015 and cannot express a 2009 claim at all.
 
 **Sign convention is preserved as published**: surplus is positive, deficit is
 negative. The transform into a positive deficit magnitude (and into billions)
-happens in the app, in `src/claim/obamaDeficit2009.ts`, right next to the
+happens in the app, in `src/content/deficit.ts`, right next to the
 comparator that depends on it — never in this file.
 
 ## Every row carries its own provenance

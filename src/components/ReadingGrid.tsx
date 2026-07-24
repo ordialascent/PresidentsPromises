@@ -1,5 +1,6 @@
-import type { Outcome } from 'ambiguity-graphs';
-import { baselineChoices, deadlineChoices, formatUSD, readAt } from '../claim/obamaDeficit2009.js';
+import type { Outcome } from '../chart/index.js';
+import { formatUSD, readAt } from '../content/deficit.js';
+import type { PromiseSpec, Topic } from '../content/types.js';
 
 const BADGE: Record<Outcome, string> = {
   met: 'MET',
@@ -13,38 +14,43 @@ const GLYPH: Record<Outcome, string> = {
 };
 
 /**
- * The four defensible readings, shown at once so the flip is visible no matter
- * where the interactive knobs happen to sit. Three read missed, one reads met;
- * the single met cell is (recorded FY2009 baseline, FY2013 deadline). The
- * product does not pick one.
+ * Every defensible reading of one promise, shown at once so the flip is visible
+ * no matter where the interactive knobs sit. The product does not pick one.
+ * Rows are the promise's baseline candidates; columns its deadline candidates.
  */
-export function ReadingGrid() {
+export function ReadingGrid({ topic, promise }: { topic: Topic; promise: PromiseSpec }) {
+  const deadlines = promise.deadlineCandidates;
   return (
-    <div className="grid" role="table" aria-label="The four readings">
+    <div className="grid" role="table" aria-label="Every reading of this promise">
       <div className="grid-cell grid-corner" role="columnheader">
         baseline &nbsp;\&nbsp; deadline
       </div>
-      {deadlineChoices.map((d) => (
+      {deadlines.map((d) => (
         <div className="grid-cell grid-head" role="columnheader" key={d.label}>
           {d.label}
         </div>
       ))}
 
-      {baselineChoices.map((b) => (
-        <ReadingRow key={b.label} baselineLabel={b.label} baselineValue={b.value} />
+      {promise.baselineCandidates.map((b) => (
+        <ReadingRow key={b.label} topic={topic} promise={promise} baselineLabel={b.label} baselineValue={b.value} />
       ))}
     </div>
   );
 }
 
-function ReadingRow(props: { baselineLabel: string; baselineValue: number }) {
+function ReadingRow(props: {
+  topic: Topic;
+  promise: PromiseSpec;
+  baselineLabel: string;
+  baselineValue: number;
+}) {
   return (
     <>
       <div className="grid-cell grid-head" role="rowheader">
         {props.baselineLabel}
       </div>
-      {deadlineChoices.map((d) => {
-        const r = readAt(props.baselineValue, d.x, d.label);
+      {props.promise.deadlineCandidates.map((d) => {
+        const r = readAt(props.topic, props.promise, props.baselineValue, d.x, d.label);
         return (
           <div className="grid-cell grid-reading" role="cell" key={d.label} data-outcome={r.outcome}>
             <span className="grid-badge" data-outcome={r.outcome}>
