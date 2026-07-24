@@ -90,9 +90,13 @@ export function YearSlider(props: {
           onChange={(e) => props.onChange(Number(e.target.value))}
         />
         <div className="ag-marks" aria-hidden="true">
-          {visibleMarks.map((m) => (
-            <span key={m.x} className="ag-mark-tick" style={{ left: along(frac(m.x)) }} />
-          ))}
+          {visibleMarks
+            // Hide a tick once the thumb reaches it — it's redundant there, and
+            // it sidesteps the sub-pixel misalignment between thumb and tick.
+            .filter((m) => Math.abs(m.x - value) >= EPS)
+            .map((m) => (
+              <span key={m.x} className="ag-mark-tick" style={{ left: along(frac(m.x)) }} />
+            ))}
         </div>
       </div>
       {visibleMarks.length > 0 && (
