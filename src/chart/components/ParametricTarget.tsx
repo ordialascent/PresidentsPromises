@@ -34,7 +34,6 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
   }, []);
 
   const [scopeIndex, setScopeIndex] = React.useState(0);
-  const [yMode, setYMode] = React.useState(claim.yScaleMode ?? 'locked');
   const [startX, setStartX] = React.useState(Math.round(claim.defaultStartX));
   const [deadlineX, setDeadlineX] = React.useState(Math.round(claim.defaultDeadlineX));
   const [customStart, setCustomStart] = React.useState(false);
@@ -57,17 +56,18 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
   const minYear = yearsInWindow.length ? Math.min(...yearsInWindow) : Math.round(currentWindow.xMin);
   const maxYear = yearsInWindow.length ? Math.max(...yearsInWindow) : Math.round(currentWindow.xMax);
 
-  // Keep the year knobs inside the window (and start <= end) when scope changes.
+  // Keep the year knobs inside the window and at least one year apart when the
+  // scope changes.
   React.useEffect(() => {
-    const s = clamp(startX, minYear, maxYear);
-    const d = clamp(deadlineX, minYear, maxYear);
-    setStartX(Math.min(s, d));
-    setDeadlineX(Math.max(s, d));
+    const d = clamp(deadlineX, minYear + 1, maxYear);
+    const s = clamp(startX, minYear, d - 1);
+    setStartX(s);
+    setDeadlineX(d);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scopeIndex]);
 
-  const safeStartX = clamp(startX, minYear, maxYear);
-  const safeDeadlineX = clamp(deadlineX, Math.min(safeStartX, maxYear), maxYear);
+  const safeDeadlineX = clamp(deadlineX, minYear + 1, maxYear);
+  const safeStartX = clamp(startX, minYear, safeDeadlineX - 1);
 
   // The recorded value at the baseline year, unless overridden by a custom one.
   const valueAtYear = (x: number): number => {
@@ -95,11 +95,10 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
     comparator: claim.comparator,
   });
 
-  const onStart = (v: number) => setStartX(clamp(Math.round(v), minYear, safeDeadlineX));
-  const onEnd = (v: number) => setDeadlineX(clamp(Math.round(v), safeStartX, maxYear));
+  const onStart = (v: number) => setStartX(clamp(Math.round(v), minYear, safeDeadlineX - 1));
+  const onEnd = (v: number) => setDeadlineX(clamp(Math.round(v), safeStartX + 1, maxYear));
 
   const scopeOptions = claim.scopePresets.map((p, i) => ({ label: p.label, value: String(i) }));
-  const isOpen = scopeIndex !== 0;
 
   return (
     <div
@@ -113,17 +112,6 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
           value={String(scopeIndex)}
           onChange={(v) => setScopeIndex(Number(v))}
         />
-        {isOpen && (
-          <SegmentedToggle
-            ariaLabel="Vertical scale"
-            options={[
-              { label: 'Y · locked', value: 'locked' },
-              { label: 'Y · fit', value: 'auto' },
-            ]}
-            value={yMode}
-            onChange={(v) => setYMode(v as 'locked' | 'auto')}
-          />
-        )}
       </div>
 
       <div className="ag-card">
@@ -132,7 +120,7 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
           periods={claim.periods}
           currentWindow={currentWindow}
           defaultWindow={defaultWindow}
-          yMode={isOpen ? yMode : 'locked'}
+          yMode="auto"
           baseline={{ value: baselineValue, x: safeStartX, decoupled: customStart }}
           derivation={derivation}
           formatValue={formatValue}
@@ -169,7 +157,7 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
           <YearSlider
             label="start · baseline year"
             min={minYear}
-            max={safeDeadlineX}
+            max={safeDeadlineX - 1}
             value={safeStartX}
             onChange={onStart}
             marks={claim.startMarks ?? []}
@@ -214,7 +202,7 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
         <div>
           <YearSlider
             label="end · deadline year"
-            min={safeStartX}
+            min={safeStartX + 1}
             max={maxYear}
             value={safeDeadlineX}
             onChange={onEnd}

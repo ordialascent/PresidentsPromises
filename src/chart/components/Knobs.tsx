@@ -2,6 +2,7 @@ import * as React from 'react';
 import type { YearMark } from '../types.js';
 
 const EPS = 1e-6;
+const THUMB = 14; // px; must match the thumb width in theme.ts
 
 export interface SegOption {
   label: string;
@@ -31,10 +32,27 @@ export function SegmentedToggle(props: {
   );
 }
 
+type Accent = 'series' | 'decoupled' | 'target';
+const accentVar = (a: Accent): string =>
+  a === 'decoupled' ? '--ag-decoupled' : a === 'target' ? '--ag-target' : '--ag-series';
+
+// Position along the track that lines up with the thumb *centre*, accounting
+// for the thumb width (so ticks sit under the thumb, not a few px off).
+const along = (frac: number): string => `calc(${frac} * (100% - ${THUMB}px) + ${THUMB / 2}px)`;
+
+function trackStyle(frac: number, accent: Accent): React.CSSProperties {
+  const v = accentVar(accent);
+  const at = along(frac);
+  return {
+    ['--ag-accent' as unknown as string]: `var(${v})`,
+    background: `linear-gradient(90deg, var(${v}) 0, var(${v}) ${at}, var(--ag-border) ${at}, var(--ag-border) 100%)`,
+  } as React.CSSProperties;
+}
+
 /**
- * A slider over integer years, with event markers rendered as ticks on the
- * track and as a clickable legend below. The value readout is annotated with a
- * marker's label when the slider sits on it.
+ * A slider over integer years, with event markers rendered as ticks aligned to
+ * the thumb and as a clickable legend below. The value readout is on its own
+ * line so an annotation can't reflow the label while dragging.
  */
 export function YearSlider(props: {
   label: string;
@@ -48,7 +66,7 @@ export function YearSlider(props: {
 }): React.ReactElement {
   const { min, max, value, marks, formatX } = props;
   const span = max - min || 1;
-  const pct = (x: number) => ((x - min) / span) * 100;
+  const frac = (x: number) => Math.max(0, Math.min(1, (x - min) / span));
   const onMark = marks.find((m) => Math.abs(m.x - value) < EPS);
   const valueText = onMark ? `${formatX(value)} · ${onMark.label}` : formatX(value);
   const visibleMarks = marks.filter((m) => m.x >= min - EPS && m.x <= max + EPS);
@@ -63,7 +81,7 @@ export function YearSlider(props: {
         <input
           className="ag-slider"
           type="range"
-          data-accent={props.accent ?? 'series'}
+          style={trackStyle(frac(value), props.accent ?? 'series')}
           min={min}
           max={max}
           step={1}
@@ -72,9 +90,13 @@ export function YearSlider(props: {
           onChange={(e) => props.onChange(Number(e.target.value))}
         />
         <div className="ag-marks" aria-hidden="true">
-          {visibleMarks.map((m) => (
-            <span key={m.x} className="ag-mark-tick" style={{ left: `${pct(m.x)}%` }} />
-          ))}
+          {visibleMarks
+            // Hide a tick once the thumb reaches it — it's redundant there, and
+            // it sidesteps the sub-pixel misalignment between thumb and tick.
+            .filter((m) => Math.abs(m.x - value) >= EPS)
+            .map((m) => (
+              <span key={m.x} className="ag-mark-tick" style={{ left: along(frac(m.x)) }} />
+            ))}
         </div>
       </div>
       {visibleMarks.length > 0 && (
@@ -87,7 +109,7 @@ export function YearSlider(props: {
               data-on={Math.abs(m.x - value) < EPS}
               onClick={() => props.onChange(m.x)}
             >
-              {formatX(m.x)} · {m.label}
+              {formatX(m.x)}: {m.label}
             </button>
           ))}
         </div>
@@ -106,26 +128,31 @@ export function ValueSlider(props: {
   onChange: (value: number) => void;
   accent?: 'series' | 'decoupled' | 'target';
 }): React.ReactElement {
-  const step = (props.max - props.min) / 500 || 1;
+  const span = props.max - props.min || 1;
+  const step = span / 500 || 1;
+  const frac = Math.max(0, Math.min(1, (props.value - props.min) / span));
+  const accent = props.accent ?? 'series';
   return (
     <div className="ag-knob">
       <div className="ag-knob-head">
         <span className="ag-knob-label">{props.label}</span>
-        <span className="ag-knob-value" data-decoupled={props.accent === 'decoupled'}>
+        <span className="ag-knob-value" data-decoupled={accent === 'decoupled'}>
           {props.valueText}
         </span>
       </div>
-      <input
-        className="ag-slider"
-        type="range"
-        data-accent={props.accent ?? 'series'}
-        min={props.min}
-        max={props.max}
-        step={step}
-        value={props.value}
-        aria-label={props.label}
-        onChange={(e) => props.onChange(Number(e.target.value))}
-      />
+      <div className="ag-slider-wrap">
+        <input
+          className="ag-slider"
+          type="range"
+          style={trackStyle(frac, accent)}
+          min={props.min}
+          max={props.max}
+          step={step}
+          value={props.value}
+          aria-label={props.label}
+          onChange={(e) => props.onChange(Number(e.target.value))}
+        />
+      </div>
     </div>
   );
 }
