@@ -1,0 +1,20 @@
+period,value_raw_musd,series_id,publisher,source_url,retrieved_at,retrieval_method,note
+FY1998,69270,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY1999,125610,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2000,236241,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2001,128236,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2002,-157758,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2003,-377585,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2004,-412727,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2005,-318346,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2006,-248181,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2007,-160701,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2008,-458553,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2009,-1412688,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,inherited-deficit claim baseline
+FY2010,-1294373,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2011,-1299593,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2012,-1087000,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,approximate; superseded on first automated refresh
+FY2013,-679549,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2014,-484600,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2015,-438899,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
+FY2016,-584651,FYFSD,OMB (via FRED),https://fred.stlouisfed.org/series/FYFSD,2026-07-24,manual-bootstrap,
