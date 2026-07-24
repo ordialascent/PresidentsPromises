@@ -1,45 +1,45 @@
 import * as React from 'react';
 import type { ParametricTargetClaim } from '../types.js';
 import { deriveVerdict } from '../logic/deriveVerdict.js';
+import { observedAt } from '../logic/resolve.js';
 import { ensureStyles, themeToStyle, type Theme } from '../theme.js';
 import { Chart } from './Chart.js';
 import { VerdictBlock, type OutcomeLabels } from './VerdictBlock.js';
-import { ChipRow, DecoupleToggle, SegmentedToggle, Slider, type Chip } from './Knobs.js';
+import {
+  CheckboxToggle,
+  PresetButtons,
+  SegmentedToggle,
+  ValueSlider,
+  YearSlider,
+} from './Knobs.js';
 
-const EPS = 1e-6;
+const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
 
 export interface ParametricTargetProps {
   claim: ParametricTargetClaim;
   theme?: Theme;
   outcomeLabels?: OutcomeLabels;
-  /** Label for the checkbox that frees the baseline from the series. */
-  decoupleLabel?: string;
+  /** Label for the checkbox that overrides the baseline with a custom value. */
+  customLabel?: string;
   className?: string;
 }
 
 export function ParametricTarget(props: ParametricTargetProps): React.ReactElement {
   const { claim } = props;
   const formatValue = claim.formatValue ?? ((n: number) => String(Math.round(n)));
-  const formatX = claim.formatX ?? ((n: number) => String(n));
+  const formatX = claim.formatX ?? ((n: number) => String(Math.round(n)));
 
   React.useEffect(() => {
     ensureStyles();
   }, []);
 
-  const coupledCandidates = claim.baselineCandidates.filter((c) => !c.stated);
-  const statedCandidates = claim.baselineCandidates.filter((c) => c.stated);
-
   const [scopeIndex, setScopeIndex] = React.useState(0);
   const [yMode, setYMode] = React.useState(claim.yScaleMode ?? 'locked');
-  const [decoupled, setDecoupled] = React.useState(false);
-  const [coupledValue, setCoupledValue] = React.useState(
-    coupledCandidates[0]?.value ?? claim.bounds.start.min,
-  );
-  const [statedValue, setStatedValue] = React.useState(
-    statedCandidates[0]?.value ?? claim.bounds.start.min,
-  );
-  const [deadlineX, setDeadlineX] = React.useState(
-    claim.deadlineCandidates[0]?.x ?? claim.bounds.end.min,
+  const [startX, setStartX] = React.useState(Math.round(claim.defaultStartX));
+  const [deadlineX, setDeadlineX] = React.useState(Math.round(claim.defaultDeadlineX));
+  const [customStart, setCustomStart] = React.useState(false);
+  const [customValue, setCustomValue] = React.useState(
+    claim.customValuePresets?.[0]?.value ?? claim.valueBounds.min,
   );
 
   const currentWindow = claim.scopePresets[scopeIndex] ?? claim.scopePresets[0];
@@ -48,48 +48,64 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
     throw new Error('parametric-target: claim.scopePresets must not be empty');
   }
 
-  const anchorX =
-    claim.baselineAnchorX ??
-    coupledCandidates.find((c) => c.x != null)?.x ??
-    currentWindow.xMin;
-  const effectiveBaseline = decoupled ? statedValue : coupledValue;
-  const deadlineLabel =
-    claim.deadlineCandidates.find((c) => Math.abs(c.x - deadlineX) < EPS)?.label ??
-    formatX(deadlineX);
+  // Selectable years are the series years inside the current view window: a
+  // narrow (scoped) window couples the sliders to the term ±1y; the wide window
+  // uncouples them across the whole range.
+  const yearsInWindow = claim.series
+    .map((p) => p.x)
+    .filter((x) => x >= currentWindow.xMin - 1e-6 && x <= currentWindow.xMax + 1e-6);
+  const minYear = yearsInWindow.length ? Math.min(...yearsInWindow) : Math.round(currentWindow.xMin);
+  const maxYear = yearsInWindow.length ? Math.max(...yearsInWindow) : Math.round(currentWindow.xMax);
+
+  // Keep the year knobs inside the window (and start <= end) when scope changes.
+  React.useEffect(() => {
+    const s = clamp(startX, minYear, maxYear);
+    const d = clamp(deadlineX, minYear, maxYear);
+    setStartX(Math.min(s, d));
+    setDeadlineX(Math.max(s, d));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scopeIndex]);
+
+  const safeStartX = clamp(startX, minYear, maxYear);
+  const safeDeadlineX = clamp(deadlineX, Math.min(safeStartX, maxYear), maxYear);
+
+  // The recorded value at the baseline year, unless overridden by a custom one.
+  const valueAtYear = (x: number): number => {
+    const exact = observedAt(claim.series, x);
+    if (exact !== null) return exact;
+    let best: number | null = null;
+    let bestDist = Infinity;
+    for (const p of claim.series) {
+      const d = Math.abs(p.x - x);
+      if (d < bestDist) {
+        bestDist = d;
+        best = p.y;
+      }
+    }
+    return best ?? claim.valueBounds.min;
+  };
+  const baselineValue = customStart ? customValue : valueAtYear(safeStartX);
 
   const derivation = deriveVerdict({
     series: claim.series,
-    baselineValue: effectiveBaseline,
-    deadlineX,
-    deadlineLabel,
+    baselineValue,
+    deadlineX: safeDeadlineX,
+    deadlineLabel: formatX(safeDeadlineX),
     targetRule: claim.targetRule,
     comparator: claim.comparator,
   });
 
-  const seriesMaxX = claim.series.reduce((m, p) => Math.max(m, p.x), claim.bounds.end.min);
-  const endMax = claim.bounds.end.max ?? (claim.bounds.end.openEnded ? seriesMaxX + 3 : seriesMaxX);
-  const startStep = (claim.bounds.start.max - claim.bounds.start.min) / 500 || 1;
-
-  const coupledChips: Chip[] = coupledCandidates.map((c) => ({
-    label: c.label,
-    value: c.value,
-    source: c.source,
-  }));
-  const statedChips: Chip[] = statedCandidates.map((c) => ({
-    label: c.label,
-    value: c.value,
-    source: c.source,
-  }));
-  const deadlineChips: Chip[] = claim.deadlineCandidates.map((c) => ({
-    label: c.label,
-    value: c.x,
-    source: c.source,
-  }));
+  const onStart = (v: number) => setStartX(clamp(Math.round(v), minYear, safeDeadlineX));
+  const onEnd = (v: number) => setDeadlineX(clamp(Math.round(v), safeStartX, maxYear));
 
   const scopeOptions = claim.scopePresets.map((p, i) => ({ label: p.label, value: String(i) }));
+  const isOpen = scopeIndex !== 0;
 
   return (
-    <div className={`ag-root${props.className ? ` ${props.className}` : ''}`} style={themeToStyle(props.theme)}>
+    <div
+      className={`ag-root${props.className ? ` ${props.className}` : ''}`}
+      style={themeToStyle(props.theme)}
+    >
       <div className="ag-topbar">
         <SegmentedToggle
           ariaLabel="View window"
@@ -97,15 +113,17 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
           value={String(scopeIndex)}
           onChange={(v) => setScopeIndex(Number(v))}
         />
-        <SegmentedToggle
-          ariaLabel="Vertical scale"
-          options={[
-            { label: 'Y · locked', value: 'locked' },
-            { label: 'Y · fit', value: 'auto' },
-          ]}
-          value={yMode}
-          onChange={(v) => setYMode(v as 'locked' | 'auto')}
-        />
+        {isOpen && (
+          <SegmentedToggle
+            ariaLabel="Vertical scale"
+            options={[
+              { label: 'Y · locked', value: 'locked' },
+              { label: 'Y · fit', value: 'auto' },
+            ]}
+            value={yMode}
+            onChange={(v) => setYMode(v as 'locked' | 'auto')}
+          />
+        )}
       </div>
 
       <div className="ag-card">
@@ -114,8 +132,8 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
           periods={claim.periods}
           currentWindow={currentWindow}
           defaultWindow={defaultWindow}
-          yMode={yMode}
-          baseline={{ value: effectiveBaseline, x: anchorX, decoupled }}
+          yMode={isOpen ? yMode : 'locked'}
+          baseline={{ value: baselineValue, x: safeStartX, decoupled: customStart }}
           derivation={derivation}
           formatValue={formatValue}
           formatX={formatX}
@@ -144,54 +162,49 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
         </div>
       </div>
 
-      <VerdictBlock
-        derivation={derivation}
-        formatValue={formatValue}
-        labels={props.outcomeLabels}
-      />
+      <VerdictBlock derivation={derivation} formatValue={formatValue} labels={props.outcomeLabels} />
 
       <div className="ag-controls">
         <div>
-          <Slider
-            label="start · baseline"
-            valueText={formatValue(coupledValue)}
-            min={claim.bounds.start.min}
-            max={claim.bounds.start.max}
-            step={startStep}
-            value={coupledValue}
-            onChange={setCoupledValue}
+          <YearSlider
+            label="start · baseline year"
+            min={minYear}
+            max={safeDeadlineX}
+            value={safeStartX}
+            onChange={onStart}
+            marks={claim.startMarks ?? []}
+            formatX={formatX}
             accent="series"
-            disabled={decoupled}
           />
-          {coupledChips.length > 0 && (
-            <ChipRow chips={coupledChips} activeValue={coupledValue} onPick={setCoupledValue} />
-          )}
-          {statedCandidates.length > 0 && (
-            <DecoupleToggle
-              checked={decoupled}
-              onChange={setDecoupled}
-              label={props.decoupleLabel ?? 'decouple from series (stated value)'}
+          <div className="ag-knob-value ag-baseline-readout" data-decoupled={customStart}>
+            baseline = {formatValue(baselineValue)}
+            {customStart ? ' *' : ` · recorded ${formatX(safeStartX)}`}
+          </div>
+
+          {(claim.customValuePresets?.length ?? 0) > 0 && (
+            <CheckboxToggle
+              checked={customStart}
+              onChange={setCustomStart}
+              label={props.customLabel ?? 'custom start value (override the recorded figure)'}
             />
           )}
-          {decoupled && (
+          {customStart && (
             <>
-              <Slider
-                label="stated value"
-                valueText={formatValue(statedValue)}
-                valueDecoupled
-                min={claim.bounds.start.min}
-                max={claim.bounds.start.max}
-                step={startStep}
-                value={statedValue}
-                onChange={setStatedValue}
+              <ValueSlider
+                label="custom start value"
+                valueText={formatValue(customValue)}
+                min={claim.valueBounds.min}
+                max={claim.valueBounds.max}
+                value={customValue}
+                onChange={setCustomValue}
                 accent="decoupled"
               />
-              {statedChips.length > 0 && (
-                <ChipRow
-                  chips={statedChips}
-                  activeValue={statedValue}
-                  onPick={setStatedValue}
-                  accent="decoupled"
+              {claim.customValuePresets && claim.customValuePresets.length > 0 && (
+                <PresetButtons
+                  presets={claim.customValuePresets}
+                  activeValue={customValue}
+                  onPick={setCustomValue}
+                  formatValue={formatValue}
                 />
               )}
             </>
@@ -199,19 +212,16 @@ export function ParametricTarget(props: ParametricTargetProps): React.ReactEleme
         </div>
 
         <div>
-          <Slider
-            label="end · deadline"
-            valueText={deadlineLabel}
-            min={claim.bounds.end.min}
-            max={endMax}
-            step={1}
-            value={deadlineX}
-            onChange={setDeadlineX}
+          <YearSlider
+            label="end · deadline year"
+            min={safeStartX}
+            max={maxYear}
+            value={safeDeadlineX}
+            onChange={onEnd}
+            marks={claim.deadlineMarks ?? []}
+            formatX={formatX}
             accent="target"
           />
-          {deadlineChips.length > 0 && (
-            <ChipRow chips={deadlineChips} activeValue={deadlineX} onPick={setDeadlineX} />
-          )}
         </div>
 
         {claim.periodNote && <p className="ag-note">{claim.periodNote}</p>}
