@@ -2,7 +2,6 @@ import type {
   BaselineCandidate,
   Comparator,
   DeadlineCandidate,
-  KnobBounds,
   ScopePreset,
   SeriesPoint,
   TargetRule,
@@ -60,7 +59,8 @@ export interface Topic {
   /** The one series every promise on this topic is measured against. */
   series: SeriesPoint[];
   terms: Term[];
-  bounds: KnobBounds;
+  /** Range for the optional custom (free-standing) baseline value. */
+  valueBounds: { min: number; max: number };
   scopePresets: ScopePreset[];
   yScaleMode?: YScaleMode;
   periodNote?: string;

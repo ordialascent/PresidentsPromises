@@ -248,6 +248,32 @@ export const agStyles = `
 }
 .ag-decouple input { accent-color: var(--ag-decoupled); cursor: pointer; }
 .ag-note { font-family: var(--ag-font-mono); font-size: 10.5px; color: var(--ag-dim); opacity: 0.85; }
+
+.ag-slider-wrap { position: relative; }
+.ag-marks { position: absolute; left: 0; right: 0; top: 50%; height: 0; pointer-events: none; }
+.ag-mark-tick {
+  position: absolute;
+  top: -8px;
+  width: 2px;
+  height: 16px;
+  margin-left: -1px;
+  background: var(--ag-dim);
+  opacity: 0.8;
+  border-radius: 1px;
+}
+.ag-mark-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.ag-marker {
+  font-family: var(--ag-font-mono);
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--ag-border);
+  background: transparent;
+  color: var(--ag-dim);
+  cursor: pointer;
+}
+.ag-marker[data-on="true"] { color: var(--ag-ink); border-color: var(--ag-target); }
+.ag-baseline-readout { margin-top: 8px; }
 `;
 
 export function ensureStyles(): void {

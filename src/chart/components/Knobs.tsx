@@ -1,4 +1,5 @@
 import * as React from 'react';
+import type { YearMark } from '../types.js';
 
 const EPS = 1e-6;
 
@@ -30,23 +31,87 @@ export function SegmentedToggle(props: {
   );
 }
 
-export function Slider(props: {
+/**
+ * A slider over integer years, with event markers rendered as ticks on the
+ * track and as a clickable legend below. The value readout is annotated with a
+ * marker's label when the slider sits on it.
+ */
+export function YearSlider(props: {
   label: string;
-  valueText: string;
   min: number;
   max: number;
-  step: number;
   value: number;
   onChange: (value: number) => void;
-  accent?: 'series' | 'decoupled' | 'target';
-  valueDecoupled?: boolean;
-  disabled?: boolean;
+  marks: YearMark[];
+  formatX: (x: number) => string;
+  accent?: 'series' | 'target';
 }): React.ReactElement {
+  const { min, max, value, marks, formatX } = props;
+  const span = max - min || 1;
+  const pct = (x: number) => ((x - min) / span) * 100;
+  const onMark = marks.find((m) => Math.abs(m.x - value) < EPS);
+  const valueText = onMark ? `${formatX(value)} · ${onMark.label}` : formatX(value);
+  const visibleMarks = marks.filter((m) => m.x >= min - EPS && m.x <= max + EPS);
+
   return (
     <div className="ag-knob">
       <div className="ag-knob-head">
         <span className="ag-knob-label">{props.label}</span>
-        <span className="ag-knob-value" data-decoupled={props.valueDecoupled ?? false}>
+        <span className="ag-knob-value">{valueText}</span>
+      </div>
+      <div className="ag-slider-wrap">
+        <input
+          className="ag-slider"
+          type="range"
+          data-accent={props.accent ?? 'series'}
+          min={min}
+          max={max}
+          step={1}
+          value={value}
+          aria-label={props.label}
+          onChange={(e) => props.onChange(Number(e.target.value))}
+        />
+        <div className="ag-marks" aria-hidden="true">
+          {visibleMarks.map((m) => (
+            <span key={m.x} className="ag-mark-tick" style={{ left: `${pct(m.x)}%` }} />
+          ))}
+        </div>
+      </div>
+      {visibleMarks.length > 0 && (
+        <div className="ag-mark-legend">
+          {visibleMarks.map((m) => (
+            <button
+              key={m.x}
+              type="button"
+              className="ag-marker"
+              data-on={Math.abs(m.x - value) < EPS}
+              onClick={() => props.onChange(m.x)}
+            >
+              {formatX(m.x)} · {m.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** A plain value slider (used for the custom baseline value). */
+export function ValueSlider(props: {
+  label: string;
+  valueText: string;
+  min: number;
+  max: number;
+  value: number;
+  onChange: (value: number) => void;
+  accent?: 'series' | 'decoupled' | 'target';
+}): React.ReactElement {
+  const step = (props.max - props.min) / 500 || 1;
+  return (
+    <div className="ag-knob">
+      <div className="ag-knob-head">
+        <span className="ag-knob-label">{props.label}</span>
+        <span className="ag-knob-value" data-decoupled={props.accent === 'decoupled'}>
           {props.valueText}
         </span>
       </div>
@@ -56,9 +121,8 @@ export function Slider(props: {
         data-accent={props.accent ?? 'series'}
         min={props.min}
         max={props.max}
-        step={props.step}
+        step={step}
         value={props.value}
-        disabled={props.disabled}
         aria-label={props.label}
         onChange={(e) => props.onChange(Number(e.target.value))}
       />
@@ -66,39 +130,7 @@ export function Slider(props: {
   );
 }
 
-export interface Chip {
-  label: string;
-  value: number;
-  source?: string;
-}
-
-export function ChipRow(props: {
-  chips: Chip[];
-  activeValue: number;
-  onPick: (value: number) => void;
-  accent?: 'series' | 'decoupled';
-}): React.ReactElement {
-  return (
-    <div className="ag-chips">
-      {props.chips.map((chip) => (
-        <button
-          key={chip.label}
-          type="button"
-          className="ag-chip"
-          data-accent={props.accent ?? 'series'}
-          data-on={Math.abs(chip.value - props.activeValue) < EPS}
-          onClick={() => props.onPick(chip.value)}
-          title={chip.source}
-        >
-          {chip.label}
-          {chip.source ? <span className="ag-chip-source"> · {chip.source}</span> : null}
-        </button>
-      ))}
-    </div>
-  );
-}
-
-export function DecoupleToggle(props: {
+export function CheckboxToggle(props: {
   checked: boolean;
   onChange: (checked: boolean) => void;
   label: string;
@@ -112,5 +144,35 @@ export function DecoupleToggle(props: {
       />
       {props.label}
     </label>
+  );
+}
+
+export interface Preset {
+  label: string;
+  value: number;
+}
+
+export function PresetButtons(props: {
+  presets: Preset[];
+  activeValue: number;
+  onPick: (value: number) => void;
+  formatValue: (n: number) => string;
+}): React.ReactElement {
+  return (
+    <div className="ag-chips">
+      {props.presets.map((p) => (
+        <button
+          key={p.label}
+          type="button"
+          className="ag-chip"
+          data-accent="decoupled"
+          data-on={Math.abs(p.value - props.activeValue) < EPS}
+          onClick={() => props.onPick(p.value)}
+        >
+          set to {p.label}
+          <span className="ag-chip-source"> · {props.formatValue(p.value)}</span>
+        </button>
+      ))}
+    </div>
   );
 }

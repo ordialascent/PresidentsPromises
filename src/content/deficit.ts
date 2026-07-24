@@ -33,7 +33,7 @@ const usd = (n: number): string => {
   return `${sign}$${a.toFixed(1)}B`;
 };
 
-const fy = (x: number): string => `FY${String(Math.round(x)).slice(2)}`;
+const fy = (x: number): string => `FY${Math.round(x)}`;
 
 // Inauguration (~Jan 20) falls about a third into the fiscal year, so on an axis
 // whose integer marks are fiscal-year ends it sits ~0.7 before the mark. Bands
@@ -57,6 +57,8 @@ const terms: Term[] = [
   { label: 'Bush II', from: 2005, to: 2009 },
   { label: 'Obama I', from: 2009, to: 2013 },
   { label: 'Obama II', from: 2013, to: 2017 },
+  { label: 'Trump I', from: 2017, to: 2021 },
+  { label: 'Biden', from: 2021, to: 2025 },
 ];
 
 const obamaDeficit2009: PromiseSpec = {
@@ -66,12 +68,12 @@ const obamaDeficit2009: PromiseSpec = {
   occasion: 'Fiscal Responsibility Summit',
   date: '23 February 2009',
   baselineCandidates: [
-    { label: 'recorded FY2009', value: RECORDED_FY2009_BILLIONS, x: 2009, source: 'FYFSD', stated: false },
+    { label: 'recorded FY2009', value: RECORDED_FY2009_BILLIONS, x: 2009, source: 'inherited deficit', stated: false },
     { label: 'stated $1.30T', value: STATED_BASELINE_BILLIONS, source: '2009 remarks', stated: true },
   ],
   deadlineCandidates: [
-    { label: 'FY2012', x: 2012, source: 'strict end of term' },
-    { label: 'FY2013', x: 2013, source: 'FY the term ended in' },
+    { label: 'FY2012', x: 2012, source: 'end of term' },
+    { label: 'FY2013', x: 2013, source: 'term ended' },
   ],
   targetRule: { kind: 'halve' },
   baselineAnchorX: 2009,
@@ -84,13 +86,10 @@ export const deficitTopic: Topic = {
   comparator: 'lte',
   series,
   terms,
-  bounds: {
-    start: { min: 600, max: 1600 },
-    end: { min: 2009, openEnded: true },
-  },
+  valueBounds: { min: 400, max: 2000 },
   scopePresets: [
     { label: 'SCOPED · TERM ±1Y', xMin: 2007, xMax: 2014 },
-    { label: 'OPEN · full range', xMin: 1997, xMax: 2017 },
+    { label: 'OPEN · full range', xMin: 1997, xMax: 2025 },
   ],
   yScaleMode: 'locked',
   periodNote:
@@ -103,23 +102,28 @@ export const deficitTopic: Topic = {
 
 /** Build a chart claim from a topic and one of its promises. */
 export function toClaim(topic: Topic, promise: PromiseSpec): ParametricTargetClaim {
+  const recorded = promise.baselineCandidates.filter((c) => c.x != null);
+  const stated = promise.baselineCandidates.filter((c) => c.stated);
+  const surname = promise.who.split(/\s+/).slice(-1)[0] ?? promise.who;
   return {
     subject: topic.subject,
     series: topic.series,
-    baselineCandidates: promise.baselineCandidates,
-    deadlineCandidates: promise.deadlineCandidates,
-    targetRule: promise.targetRule,
     comparator: topic.comparator,
-    bounds: topic.bounds,
-    scopePresets: topic.scopePresets,
+    targetRule: promise.targetRule,
     periods: topic.terms.map((t) => ({
       label: t.label,
       x0: inaugurationX(t.from),
       x1: inaugurationX(t.to),
     })),
+    scopePresets: topic.scopePresets,
     yScaleMode: topic.yScaleMode,
-    baselineAnchorX: promise.baselineAnchorX,
     periodNote: topic.periodNote,
+    defaultStartX: promise.baselineAnchorX ?? recorded[0]?.x ?? Math.round(topic.scopePresets[0].xMin),
+    startMarks: recorded.map((c) => ({ x: c.x as number, label: c.source ?? c.label })),
+    valueBounds: topic.valueBounds,
+    customValuePresets: stated.map((c) => ({ label: `${surname}'s claim`, value: c.value })),
+    defaultDeadlineX: promise.deadlineCandidates[0]?.x ?? Math.round(topic.scopePresets[0].xMax),
+    deadlineMarks: promise.deadlineCandidates.map((c) => ({ x: c.x, label: c.source ?? c.label })),
     formatValue: topic.formatValue,
     formatX: topic.formatX,
   };
