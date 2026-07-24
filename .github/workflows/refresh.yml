@@ -1,0 +1,34 @@
+name: Refresh deficit snapshot
+
+# The snapshot is the as-of log. This job ONLY EVER INSERTS (see
+# scripts/refresh.mjs): a revised figure is appended as a new row, never an
+# in-place edit. The commit it makes is the durable record of "as of when".
+on:
+  schedule:
+    - cron: '17 8 1 * *' # 08:17 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch FRED FYFSD and append any new/revised rows
+        run: node scripts/refresh.mjs
+      - name: Commit appended rows if the snapshot grew
+        run: |
+          if [ -n "$(git status --porcelain data/deficit_fyfsd.csv)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/deficit_fyfsd.csv
+            git commit -m "data: append FYFSD refresh $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "no new or revised figures; nothing to commit"
+          fi
