@@ -203,23 +203,54 @@ export const agStyles = `
 .ag-knob { display: flex; flex-direction: column; gap: 7px; }
 .ag-knob-head {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
 }
 .ag-knob-label {
   font-family: var(--ag-font-mono);
   font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ag-dim);
 }
-.ag-knob-value { font-family: var(--ag-font-mono); font-size: 12.5px; color: var(--ag-ink); }
+.ag-knob-value { font-family: var(--ag-font-mono); font-size: 12.5px; color: var(--ag-ink); white-space: nowrap; }
 .ag-knob-value[data-decoupled="true"] { color: var(--ag-decoupled); }
 
-.ag-slider { width: 100%; accent-color: var(--ag-series); cursor: pointer; }
-.ag-slider[data-accent="decoupled"] { accent-color: var(--ag-decoupled); }
-.ag-slider[data-accent="target"] { accent-color: var(--ag-target); }
+.ag-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ag-border);
+  cursor: pointer;
+  outline: none;
+}
+.ag-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: var(--ag-accent, var(--ag-series));
+  border: 2px solid var(--ag-bg);
+  box-shadow: 0 0 0 1px var(--ag-border);
+  cursor: pointer;
+}
+.ag-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ag-accent, var(--ag-series));
+  border: 2px solid var(--ag-bg);
+  box-shadow: 0 0 0 1px var(--ag-border);
+  cursor: pointer;
+}
+.ag-slider::-moz-range-track { height: 4px; border-radius: 2px; background: transparent; }
+.ag-slider:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 2px var(--ag-ink); }
 
 .ag-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .ag-chip {
@@ -256,9 +287,9 @@ export const agStyles = `
   top: -8px;
   width: 2px;
   height: 16px;
-  margin-left: -1px;
+  transform: translateX(-50%);
   background: var(--ag-dim);
-  opacity: 0.8;
+  opacity: 0.85;
   border-radius: 1px;
 }
 .ag-mark-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
