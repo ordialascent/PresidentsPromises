@@ -77,6 +77,14 @@ const obamaDeficit2009: PromiseSpec = {
   ],
   targetRule: { kind: 'halve' },
   baselineAnchorX: 2009,
+  // Symmetric with the deadline: two defensible baseline years. FY2009 is the
+  // FY he took office (his stated ~$1.3T referred to it); FY2008 is the last
+  // full FY before the term. Halving from FY2008 (~$459B) is a much harsher
+  // target he never stated — which is exactly how much the year choice matters.
+  startMarks: [
+    { x: 2008, label: 'year before term' },
+    { x: 2009, label: 'took office' },
+  ],
 };
 
 export const deficitTopic: Topic = {
@@ -119,7 +127,7 @@ export function toClaim(topic: Topic, promise: PromiseSpec): ParametricTargetCla
     yScaleMode: topic.yScaleMode,
     periodNote: topic.periodNote,
     defaultStartX: promise.baselineAnchorX ?? recorded[0]?.x ?? Math.round(topic.scopePresets[0].xMin),
-    startMarks: recorded.map((c) => ({ x: c.x as number, label: c.source ?? c.label })),
+    startMarks: promise.startMarks ?? recorded.map((c) => ({ x: c.x as number, label: c.source ?? c.label })),
     valueBounds: topic.valueBounds,
     customValuePresets: stated.map((c) => ({ label: `${surname}'s claim`, value: c.value })),
     defaultDeadlineX: promise.deadlineCandidates[0]?.x ?? Math.round(topic.scopePresets[0].xMax),

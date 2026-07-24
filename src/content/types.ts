@@ -5,6 +5,7 @@ import type {
   ScopePreset,
   SeriesPoint,
   TargetRule,
+  YearMark,
   YScaleMode,
 } from '../chart/index.js';
 
@@ -36,8 +37,13 @@ export interface PromiseSpec {
   baselineCandidates: BaselineCandidate[];
   deadlineCandidates: DeadlineCandidate[];
   targetRule: TargetRule;
-  /** Where to place a baseline dot whose candidate has no meaningful x. */
+  /** Default year for the baseline (start) slider. */
   baselineAnchorX?: number;
+  /**
+   * Notable baseline *years* to mark on the start slider — a different axis from
+   * baselineCandidates (a *value* dispute). Omit to derive from the candidates.
+   */
+  startMarks?: YearMark[];
 }
 
 export interface TopicProvenance {
