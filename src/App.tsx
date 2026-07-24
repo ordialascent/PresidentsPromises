@@ -44,7 +44,7 @@ export function App() {
             The chart is rendered by{' '}
             <a href="https://github.com/ordialascent/AmbiguityGraphs">AmbiguityGraphs</a>, a generic
             component library that carries no domain knowledge: the reading is derived inside it from
-            the parameters, never passed in. Data is CC0. See{' '}
+            the parameters, never passed in. See{' '}
             <a href="https://github.com/ordialascent/PresidentsPromises/blob/main/ARCHITECTURE.md">
               ARCHITECTURE.md
             </a>{' '}

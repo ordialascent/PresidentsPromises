@@ -4,11 +4,11 @@ Two repositories, one dependency edge, and two invariants that future work must
 not erode.
 
 ```
-  ordialascent/AmbiguityGraphs   (public, MIT)   the reusable graph template
+  ordialascent/AmbiguityGraphs   (public)   the reusable graph template
             ▲                                    zero domain knowledge
             │  depends on (git dependency)
             │
-  ordialascent/PresidentsPromises (public, CC0 data)   the product + data layer
+  ordialascent/PresidentsPromises (public)   the product + data layer
 ```
 
 The app depends on the library. **The library never depends on the app**, and

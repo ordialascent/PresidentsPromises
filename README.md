@@ -71,8 +71,3 @@ No verdict emitted as fact, no aggregate score, no party coloring, no
 cross-president comparison, no causal claims. It measures only whether a numeric
 target was met under a given reading — never whether anyone caused it. Term
 bands are names-only reading aids.
-
-## License
-
-Application code: MIT ([LICENSE](LICENSE)). Data: CC0 1.0
-([data/LICENSE](data/LICENSE)).

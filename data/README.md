@@ -44,7 +44,3 @@ FY2012 in particular is approximate. The first successful automated refresh
 (`npm run refresh`, or the scheduled workflow, run from a network that can reach
 FRED) will **insert** authoritative rows that supersede these by `retrieved_at`
 — no bootstrap row is deleted; it simply stops being the latest.
-
-## License
-
-CC0 1.0 Universal (public domain dedication) — see [LICENSE](LICENSE).
