@@ -1,0 +1,5 @@
+# Promises extracted from Donald J. Trump's 2024 nomination acceptance speech.
+# Extraction is a later step. Schema: ../README.md and ../obama/promises.yaml
+# (each promise cited by paragraph.sentence and scored on
+#  metric / threshold / deadline / instrument).
+promises: []
