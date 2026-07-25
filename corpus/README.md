@@ -28,17 +28,13 @@ so any span can be referenced.
 
 ```markdown
 ---
-president: Barack Obama
-party: Democratic
-office_sought: President
-election_year: 2008
-event: Democratic National Convention — nomination acceptance
-date: 2008-08-28
-venue: Invesco Field at Mile High, Denver, Colorado
-source_url: https://www.presidency.ucsb.edu/...
-source_publisher: The American Presidency Project (UC Santa Barbara)
-retrieved_at: 2026-07-25
-transcript_note: Verbatim. Paragraph/sentence numbering added for reference; wording unchanged.
+name: Barack Obama
+title: 'Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: "The American Promise"'
+type: speech
+date_published: 2008-08-28
+date_pulled: 2026-07-25
+source_url: https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver
+source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
 ---
 
 ## ¶1
@@ -54,6 +50,8 @@ transcript_note: Verbatim. Paragraph/sentence numbering added for reference; wor
 - **Paragraphs** are numbered `¶1, ¶2, …` in speech order.
 - **Sentences** are the ordered list items under each paragraph.
 - Wording is untouched. The only thing added is the numbering.
+- **Quote any front-matter value containing a colon** (like `title` above); an
+  unquoted `key: text: more` is read as a nested mapping and breaks YAML.
 
 ## Reference convention
 

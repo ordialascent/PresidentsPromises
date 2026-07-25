@@ -3,7 +3,7 @@ name: Barack Obama
 title: 'Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: "The American Promise"'
 type: speech
 date_published: 2008-08-28
-date_pulled: 2027-07-25
+date_pulled: 2026-07-25
 source_url: https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver
 source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
 ---
