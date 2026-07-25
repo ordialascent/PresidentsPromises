@@ -1,0 +1,5 @@
+# Promises extracted from Joseph R. Biden, Jr.'s 2020 nomination acceptance speech.
+# Extraction is a later step. Schema: ../README.md and ../obama/promises.yaml
+# (each promise cited by paragraph.sentence and scored on
+#  metric / threshold / deadline / instrument).
+promises: []
