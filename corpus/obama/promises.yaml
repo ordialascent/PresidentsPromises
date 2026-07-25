@@ -1,24 +1,370 @@
-# Promises extracted from Barack Obama's nomination acceptance speech(es).
-# Extraction is step two — this file holds the schema and is filled then.
-# Conventions: ../README.md
-
-promises: []
-# Each entry, once extracted, looks like:
+# Promises extracted from Barack Obama's 2008 nomination acceptance speech
+# (corpus/obama/2008-acceptance.md). Refs are paragraph.sentence, per
+# corpus/README.md.
 #
-#   - id: obama-2008-deficit          # stable slug
-#     speech: 2008-acceptance         # which speech file in this directory
-#     ref: "N.n-N.n"                  # paragraph.sentence span (see ../README.md)
-#     quote: >
-#       <verbatim, from exactly those sentences>
-#     promise: >
-#       <concise restatement>
-#     topic: deficit                  # links to a measurable topic, or null
-#     measurability:
-#       status: unclear               # measurable | unmeasurable | unclear
-#       metric: null                  # data series id, e.g. FYFSD
-#       comparator: null              # lte | gte
-#       target_rule: null             # { kind: halve } | { kind: reduceByPercent, percent: N } | { kind: reduceToAbsolute, value: N }
-#       baselines: []                 # candidate baselines (value / year)
-#       deadlines: []                 # candidate deadlines (year)
-#       notes: >
-#         <what's measurable or not; which figures are disputed>
+# Each promise is scored on four dimensions — the ingredients that decide
+# whether "was it kept?" can even be asked as a *measured* question:
+#
+#   metric     — is there a named quantity, AND a record that tracks it?
+#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
+#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
+#   instrument — does he name what HE will DO, or only what WILL happen?
+#
+# measurable:
+#   full     — metric + threshold + deadline all present (even if parametrically
+#              disputed — that dispute is the product, not a disqualifier)
+#   partial  — at least one of the three is missing or too vague to pin down
+#   no       — aspirational; no measurable quantity at all
+# (instrument sharpens accountability: an outcome-only promise is one he can't
+#  fully control. A promise can still be measurable without it.)
+#
+# NOTE: the "cut the deficit we inherited in half by the end of my first term"
+# claim the chart currently uses is NOT in this speech — Obama made it at the
+# 23 Feb 2009 Fiscal Responsibility Summit. The closest fiscal promise here is
+# obama-2008-fiscal-payfor.
+
+promises:
+  - id: obama-2008-oil-mideast
+    ref: "¶44.1"
+    theme: energy
+    quote: >
+      And for the sake of our economy, our security, and the future of our
+      planet, I will set a clear goal as President: in ten years, we will
+      finally end our dependence on oil from the Middle East.
+    restatement: End US dependence on Middle East oil within ten years.
+    metric:
+      present: true
+      quantity: US oil imports from the Middle East ("dependence")
+      record: EIA — U.S. imports of crude oil and petroleum products by origin
+    threshold:
+      present: true
+      stated: end / to zero
+    deadline:
+      present: true
+      stated: in ten years (2008 -> ~2018)
+    instrument:
+      present: true
+      stated: sets it as a goal; named actions follow in 47 (gas, clean coal, nuclear, renewables)
+    measurable: full
+    notes: >
+      The one fully-shaped promise here — and exactly the deficit shape: all
+      four ingredients present, but "dependence" and "the Middle East" are
+      undefined (zero barrels? no strategic reliance?), so which import series
+      and which baseline year you pick swings the verdict. A natural second
+      chart topic.
+
+  - id: obama-2008-energy-invest
+    ref: "¶47.4"
+    theme: energy
+    quote: >
+      And I'll invest 150 billion dollars over the next decade in affordable,
+      renewable sources of energy – wind power and solar power and the next
+      generation of biofuels; an investment that will lead to new industries
+      and five million new jobs that pay well and can't ever be outsourced.
+    restatement: Invest $150B over ten years in renewable energy, yielding five million jobs.
+    metric:
+      present: true
+      quantity: federal spending on renewable energy; jobs created
+      record: federal budget outlays; BLS employment (jobs attribution is contested)
+    threshold:
+      present: true
+      stated: $150 billion; five million jobs
+    deadline:
+      present: true
+      stated: over the next decade
+    instrument:
+      present: true
+      stated: direct federal investment
+    measurable: full
+    notes: >
+      Spending is cleanly trackable; the "five million new jobs" half is an
+      outcome he can't fully control and can't be cleanly attributed to the
+      spending — split a compound promise into its measurable and outcome parts.
+
+  - id: obama-2008-tax-cut-95
+    ref: "¶43.1"
+    theme: taxes
+    quote: >
+      I will cut taxes – cut taxes – for 95% of all working families.
+    restatement: Cut taxes for 95% of working families.
+    metric:
+      present: true
+      quantity: share of working families receiving a net tax cut
+      record: Tax Policy Center / JCT distributional analysis
+    threshold:
+      present: true
+      stated: 95%
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: cut taxes
+    measurable: partial
+    notes: >
+      Sharp number, real record — but no deadline, and "working families" and
+      "a tax cut" both need a definition that moves the 95%.
+
+  - id: obama-2008-capgains-smallbiz
+    ref: "¶42.1"
+    theme: taxes
+    quote: >
+      I will eliminate capital gains taxes for the small businesses and the
+      start-ups that will create the high-wage, high-tech jobs of tomorrow.
+    restatement: Eliminate capital gains taxes for small businesses and start-ups.
+    metric:
+      present: true
+      quantity: whether the policy was enacted (binary), not a trend
+      record: enacted tax law
+    threshold:
+      present: true
+      stated: eliminate / to zero
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: change the tax code
+    measurable: partial
+    notes: >
+      Measurable only as a yes/no policy outcome, not a quantity over time. "Small
+      businesses and start-ups" is the disputed boundary.
+
+  - id: obama-2008-offshoring-taxbreaks
+    ref: "¶41.1"
+    theme: taxes
+    quote: >
+      Unlike John McCain, I will stop giving tax breaks to corporations that
+      ship jobs overseas, and I will start giving them to companies that create
+      good jobs right here in America.
+    restatement: End tax breaks for offshoring; give them to domestic job creators.
+    metric:
+      present: false
+      quantity: no clean quantity (specific tax provisions; jobs "shipped overseas" is undefined)
+      record: null
+    threshold:
+      present: true
+      stated: stop / start (direction only, no number)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: change specific tax-code provisions
+    measurable: partial
+    notes: >
+      An instrument with a direction but no number, no deadline, and no agreed
+      metric for "jobs shipped overseas."
+
+  - id: obama-2008-healthcare-universal
+    ref: "¶50.1-50.2"
+    theme: health
+    quote: >
+      Now is the time to finally keep the promise of affordable, accessible
+      health care for every single American. If you have health care, my plan
+      will lower your premiums.
+    restatement: Affordable, accessible health care for every American; lower premiums for the insured.
+    metric:
+      present: true
+      quantity: uninsured rate; average premiums
+      record: Census/CPS uninsured rate; KFF premium surveys
+    threshold:
+      present: true
+      stated: every single American (universal); premiums lower (direction)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: his health-care plan
+    measurable: partial
+    notes: >
+      Good metrics and records, but no deadline, and "lower premiums" has no
+      baseline or magnitude — lower than what, and by how much?
+
+  - id: obama-2008-fiscal-payfor
+    ref: "¶54.1-54.2"
+    theme: fiscal
+    quote: >
+      Now, many of these plans will cost money, which is why I've laid out how
+      I'll pay for every dime – by closing corporate loopholes and tax havens
+      that don't help America grow. But I will also go through the federal
+      budget, line by line, eliminating programs that no longer work and making
+      the ones we do need work better and cost less – because we cannot meet
+      twenty-first century challenges with a twentieth century bureaucracy.
+    restatement: Pay for every new dollar of spending; cut wasteful programs line by line.
+    metric:
+      present: true
+      quantity: net budget cost of his agenda; the deficit
+      record: CBO/OMB; FRED FYFSD (the series already in the app)
+    threshold:
+      present: true
+      stated: pay for every dime (deficit-neutral)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: close loopholes/tax havens; line-by-line cuts
+    measurable: partial
+    notes: >
+      The nearest fiscal promise in this speech — NOT the "halve the deficit"
+      claim (that is Feb 2009). "Every dime" is a clear direction but has no
+      deadline and no accounting boundary.
+
+  - id: obama-2008-equal-pay
+    ref: "¶53.1"
+    theme: labor
+    quote: >
+      And now is the time to keep the promise of equal pay for an equal day's
+      work, because I want my daughters to have exactly the same opportunities
+      as your sons.
+    restatement: Equal pay for equal work.
+    metric:
+      present: true
+      quantity: gender pay gap
+      record: Census/BLS earnings by sex
+    threshold:
+      present: true
+      stated: equal / parity (direction)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"keep the promise\" — a goal, not a named action (though it prefigures the Ledbetter Act)"
+    measurable: partial
+    notes: >
+      A real metric with a direction, but no target level, no deadline, and no
+      named instrument — an aspiration attached to a measurable quantity.
+
+  - id: obama-2008-paid-leave
+    ref: "¶51.1"
+    theme: labor
+    quote: >
+      Now is the time to help families with paid sick days and better family
+      leave, because nobody in America should have to choose between keeping
+      their jobs and caring for a sick child or ailing parent.
+    restatement: Guarantee paid sick days and better family leave.
+    metric:
+      present: false
+      quantity: policy action (binary), not a quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: paid sick days and family leave policy
+    measurable: no
+    notes: >
+      A named instrument with no number, no deadline, no metric — measurable
+      only as "did such a federal policy pass?"
+
+  - id: obama-2008-iraq-end
+    ref: "¶64.1"
+    theme: foreign-policy
+    quote: >
+      I will end this war in Iraq responsibly, and finish the fight against al
+      Qaeda and the Taliban in Afghanistan.
+    restatement: End the Iraq war responsibly; finish the fight in Afghanistan.
+    metric:
+      present: true
+      quantity: US troop levels in Iraq/Afghanistan
+      record: DoD troop-strength reports
+    threshold:
+      present: false
+      stated: "\"responsibly\" / \"finish\" — no level or count"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: end the war; continue the Afghanistan campaign
+    measurable: partial
+    notes: >
+      Troop levels are perfectly measurable, but the promise attaches no number
+      and no date to them ("responsibly", "finish") — so the metric exists but
+      the promise doesn't pin it.
+
+  - id: obama-2008-iran-nukes
+    ref: "¶64.3"
+    theme: foreign-policy
+    quote: >
+      But I will also renew the tough, direct diplomacy that can prevent Iran
+      from obtaining nuclear weapons and curb Russian aggression.
+    restatement: Prevent Iran from obtaining nuclear weapons through diplomacy.
+    metric:
+      present: true
+      quantity: whether Iran obtains a nuclear weapon (binary)
+      record: IAEA reporting
+    threshold:
+      present: true
+      stated: prevent / zero weapons
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "tough, direct diplomacy (an outcome he cannot fully control)"
+    measurable: partial
+    notes: >
+      Clear metric and threshold, but no deadline, and it is an outcome-only
+      promise — success depends on Iran, not only on him.
+
+  - id: obama-2008-education-worldclass
+    ref: "¶49.1-49.5"
+    theme: education
+    quote: >
+      Now is the time to finally meet our moral obligation to provide every
+      child a world-class education, because it will take nothing less to
+      compete in the global economy. [...] I'll invest in early childhood
+      education. I'll recruit an army of new teachers, and pay them higher
+      salaries and give them more support.
+    restatement: Provide every child a world-class education; invest in early education and teachers.
+    metric:
+      present: false
+      quantity: "\"world-class\" and \"an army of teachers\" have no agreed measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: invest in early childhood education; recruit/pay teachers; raise standards
+    measurable: no
+    notes: >
+      Named instruments, but the goal ("world-class") has no metric, number, or
+      deadline — the aspirational end of the spectrum, with real actions under it.
+
+  - id: obama-2008-moral-standing
+    ref: "¶64.5"
+    theme: foreign-policy
+    quote: >
+      And I will restore our moral standing, so that America is once again that
+      last, best hope for all who are called to the cause of freedom, who long
+      for lives of peace, and who yearn for a better future.
+    restatement: Restore America's moral standing in the world.
+    metric:
+      present: false
+      quantity: none
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: null
+    measurable: no
+    notes: >
+      Pure aspiration — no quantity, no threshold, no deadline, no instrument.
+      The zero-of-four case, kept to anchor that end of the scale.
