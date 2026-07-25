@@ -1,0 +1,24 @@
+# Promises extracted from Barack Obama's nomination acceptance speech(es).
+# Extraction is step two — this file holds the schema and is filled then.
+# Conventions: ../README.md
+
+promises: []
+# Each entry, once extracted, looks like:
+#
+#   - id: obama-2008-deficit          # stable slug
+#     speech: 2008-acceptance         # which speech file in this directory
+#     ref: "N.n-N.n"                  # paragraph.sentence span (see ../README.md)
+#     quote: >
+#       <verbatim, from exactly those sentences>
+#     promise: >
+#       <concise restatement>
+#     topic: deficit                  # links to a measurable topic, or null
+#     measurability:
+#       status: unclear               # measurable | unmeasurable | unclear
+#       metric: null                  # data series id, e.g. FYFSD
+#       comparator: null              # lte | gte
+#       target_rule: null             # { kind: halve } | { kind: reduceByPercent, percent: N } | { kind: reduceToAbsolute, value: N }
+#       baselines: []                 # candidate baselines (value / year)
+#       deadlines: []                 # candidate deadlines (year)
+#       notes: >
+#         <what's measurable or not; which figures are disputed>
