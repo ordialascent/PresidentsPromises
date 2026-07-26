@@ -1,4 +1,7 @@
+import { useMemo, useState } from 'react';
 import { PromisesChart } from '../promises/PromisesChart.js';
+import { TopicDonut } from '../promises/TopicDonut.js';
+import { topicCounts } from '../promises/model.js';
 import { CORPUS_TERMS, CORPUS_PROMISE_COUNT } from '../content/promises.generated.js';
 
 /**
@@ -7,6 +10,20 @@ import { CORPUS_TERMS, CORPUS_PROMISE_COUNT } from '../content/promises.generate
  * scorecard — it is how much of what candidates promise can even be checked.
  */
 export function PromisesPage() {
+  const [topic, setTopic] = useState<string | null>(null);
+  const topics = useMemo(() => topicCounts(CORPUS_TERMS), []);
+
+  // Selecting a topic filters the bars to that topic's promises. Memoised by
+  // `topic` so the array identity is stable — the chart only resets its own
+  // block-selection when the filter actually changes.
+  const terms = useMemo(
+    () =>
+      topic == null
+        ? CORPUS_TERMS
+        : CORPUS_TERMS.map((t) => ({ ...t, promises: t.promises.filter((p) => p.theme === topic) })),
+    [topic],
+  );
+
   return (
     <div className="page">
       <header className="masthead">
@@ -25,8 +42,15 @@ export function PromisesPage() {
       </header>
 
       <main>
+        <TopicDonut
+          topics={topics}
+          total={CORPUS_PROMISE_COUNT}
+          selected={topic}
+          onSelect={setTopic}
+        />
+
         <PromisesChart
-          terms={CORPUS_TERMS}
+          terms={terms}
           onOpenPromise={(promise) => {
             // Per-promise analysis pages are a later feature. For now, the one
             // built page is the deficit deep-dive.
@@ -45,7 +69,7 @@ export function PromisesPage() {
             exists to show.
           </p>
           <p>
-            The three colours are the flag's — Old Glory Red, Old Glory Blue, white — and they
+            The three colours are the flag's — Old Glory Red, white, Old Glory Blue — and they
             encode the measurability tier (full / partial / none), the same three for every
             president. They are not a party coding: no causation, no scorecard, no party comparison.
             Bars are ordered by term.

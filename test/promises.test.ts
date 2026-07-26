@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { CORPUS_TERMS, CORPUS_PROMISE_COUNT } from '../src/content/promises.generated.js';
-import { QUALITIES, deltaBetween, share, summarize } from '../src/promises/model.js';
+import { QUALITIES, deltaBetween, share, summarize, topicCounts } from '../src/promises/model.js';
 
 /**
  * The overview aggregation, pinned against the generated corpus. Totals are the
@@ -39,6 +39,32 @@ describe('promises overview aggregation', () => {
       const totalShare = QUALITIES.reduce((n, q) => n + share(s, q), 0);
       expect(totalShare).toBeCloseTo(1, 10);
     }
+  });
+
+  it('topic counts cover every promise, are sorted, and match a spot check', () => {
+    const topics = topicCounts(CORPUS_TERMS);
+    // every promise lands in exactly one topic
+    expect(topics.reduce((n, t) => n + t.count, 0)).toBe(CORPUS_PROMISE_COUNT);
+    // sorted by count desc (ties alphabetical)
+    for (let i = 1; i < topics.length; i += 1) {
+      const a = topics[i - 1]!;
+      const b = topics[i]!;
+      expect(a.count > b.count || (a.count === b.count && a.theme < b.theme)).toBe(true);
+    }
+    // a manual count of one topic, straight from the corpus promises
+    const health = CORPUS_TERMS.flatMap((t) => t.promises).filter((p) => p.theme === 'health').length;
+    expect(topics.find((t) => t.theme === 'health')!.count).toBe(health);
+  });
+
+  it('filtering terms to one topic keeps only that topic and preserves tiers', () => {
+    const filtered = CORPUS_TERMS.map((t) => ({
+      ...t,
+      promises: t.promises.filter((p) => p.theme === 'taxes'),
+    }));
+    const s = summarize(filtered);
+    const total = s.reduce((n, x) => n + x.total, 0);
+    expect(total).toBe(topicCounts(CORPUS_TERMS).find((t) => t.theme === 'taxes')!.count);
+    for (const term of filtered) for (const p of term.promises) expect(p.theme).toBe('taxes');
   });
 
   it('deltas are the difference between adjacent terms, both count and points', () => {

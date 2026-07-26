@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   QUALITIES,
   QUALITY_META,
@@ -82,6 +82,10 @@ export function PromisesChart({
 }) {
   const [mode, setMode] = useState<Mode>('absolute');
   const [selected, setSelected] = useState<Selection | null>(null);
+
+  // A change of `terms` means the topic filter changed — drop any open block
+  // selection so the list panel can't point at a now-empty tier.
+  useEffect(() => setSelected(null), [terms]);
 
   const summaries = useMemo(() => summarize(terms), [terms]);
   const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
