@@ -13,12 +13,17 @@ the structure and holds the speeches.
 ```
 corpus/
   README.md                     ← this file (the conventions)
-  <president>/                  ← one directory per president (slug: lowercase surname)
+  <term-years> <name>/          ← one directory per presidential term
     <election-year>-acceptance.md   ← the speech, verbatim + numbered
-    promises.yaml                   ← promises extracted from that president's speech(es)
+    promises.yaml                   ← promises extracted from that speech
 ```
 
-Example: `corpus/obama/2008-acceptance.md`, `corpus/obama/promises.yaml`.
+Directories are named `<start>-<end> <name>`, e.g. `2009-2013 Obama`,
+`2021-2025 Biden`. A president who serves non-consecutive terms gets one
+directory per term (e.g. `2017-2021 Trump` and `2025-2029 Trump`), each holding
+the acceptance speech that opened it.
+
+Example: `corpus/2009-2013 Obama/2008-acceptance.md`, `corpus/2009-2013 Obama/promises.yaml`.
 
 ## Speech file
 

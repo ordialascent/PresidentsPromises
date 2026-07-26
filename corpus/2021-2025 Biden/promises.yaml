@@ -1,5 +1,507 @@
-# Promises extracted from Joseph R. Biden, Jr.'s 2020 nomination acceptance speech.
-# Extraction is a later step. Schema: ../README.md and ../obama/promises.yaml
-# (each promise cited by paragraph.sentence and scored on
-#  metric / threshold / deadline / instrument).
-promises: []
+# Promises extracted from Joseph R. Biden, Jr.'s 2020 nomination acceptance
+# speech (corpus/2021-2025 Biden/2020-acceptance.md). Refs are
+# paragraph.sentence, per corpus/README.md.
+#
+# Each promise is scored on four dimensions — the ingredients that decide
+# whether "was it kept?" can even be asked as a *measured* question:
+#
+#   metric     — is there a named quantity, AND a record that tracks it?
+#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
+#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
+#   instrument — does he name what HE will DO, or only what WILL happen?
+#
+# measurable:
+#   full     — metric + threshold + deadline all present (even if parametrically
+#              disputed — that dispute is the product, not a disqualifier)
+#   partial  — at least one of the three is missing or too vague to pin down
+#   no       — aspirational; no measurable quantity at all
+# (instrument sharpens accountability: an outcome-only promise is one he can't
+#  fully control. A promise can still be measurable without it.)
+#
+# NOTE: this speech was delivered inside the COVID-19 emergency and is unusually
+# dominated by pandemic-response commitments. Almost every promise here is
+# plan-shaped or outcome-shaped and, tellingly, none reaches "full" — deadlines
+# are the missing ingredient throughout ("day one" and "first step" are the
+# closest it gets). The recurring "build it back better" framing bundles many
+# discrete promises under one slogan; they are split out below.
+
+promises:
+  - id: biden-2020-virus-control
+    ref: "¶67.1"
+    theme: health
+    quote: >
+      As president, the first step I will take will be to get control of the
+      virus that's ruined so many lives.
+    restatement: Get control of the COVID-19 virus as the first priority in office.
+    metric:
+      present: true
+      quantity: COVID-19 cases and deaths ("control of the virus")
+      record: CDC / Johns Hopkins COVID-19 case and death tracking
+    threshold:
+      present: false
+      stated: "\"get control\" — a direction, no level or count"
+    deadline:
+      present: false
+      stated: "\"first step\" implies immediacy but sets no bounded period"
+    instrument:
+      present: true
+      stated: get control of the virus (the concrete actions follow in 78-83)
+    measurable: "partial"
+    notes: >
+      Cases and deaths are perfectly trackable, but "get control" fixes no
+      number and "first step" fixes no date — so the metric exists while the
+      promise pins neither a level nor a deadline to it.
+
+  - id: biden-2020-covid-strategy
+    ref: "¶78.1"
+    theme: health
+    quote: >
+      If I'm president on day one we'll implement the national strategy I've
+      been laying out since March.
+    restatement: Implement a national COVID-19 strategy on the first day in office.
+    metric:
+      present: false
+      quantity: whether the strategy was implemented (policy action, binary)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: true
+      stated: day one
+    instrument:
+      present: true
+      stated: implement his pre-existing national strategy
+    measurable: "partial"
+    notes: >
+      Sharp deadline ("day one") and a clear instrument, but the object is a
+      binary policy act, not a quantity over time — measurable only as "was a
+      national strategy stood up?", with no target the strategy must hit.
+
+  - id: biden-2020-rapid-tests
+    ref: "¶79.1"
+    theme: health
+    quote: >
+      We'll develop and deploy rapid tests with results available immediately.
+    restatement: Develop and deploy rapid COVID tests with immediate results.
+    metric:
+      present: true
+      quantity: testing capacity and turnaround time
+      record: HHS / CDC COVID-19 testing volumes and turnaround reporting
+    threshold:
+      present: true
+      stated: results available immediately (turnaround toward zero delay)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: develop and deploy rapid tests
+    measurable: "partial"
+    notes: >
+      Real metric and a crisp direction ("immediately"), but no date and no
+      volume target — "rapid" and "immediately" are the disputed boundary, since
+      any turnaround short of instant can be argued either way.
+
+  - id: biden-2020-domestic-ppe
+    ref: "¶80.1-80.3"
+    theme: trade
+    quote: >
+      We'll make the medical supplies and protective equipment our country
+      needs. And we'll make them here in America. So we will never again be at
+      the mercy of China and other foreign countries in order to protect our
+      own people.
+    restatement: Manufacture medical supplies and PPE domestically to end reliance on China.
+    metric:
+      present: false
+      quantity: domestic production share of medical supplies/PPE (no clean series)
+      record: null
+    threshold:
+      present: false
+      stated: "\"never again be at the mercy\" — direction, no number"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: make medical supplies and PPE in America
+    measurable: "no"
+    notes: >
+      A named instrument with no agreed metric, no number, and no date. "At the
+      mercy of China" has no threshold for import share, so it is measurable only
+      as a vague yes/no about domestic sourcing.
+
+  - id: biden-2020-schools-reopen
+    ref: "¶81.1"
+    theme: education
+    quote: >
+      We'll make sure our schools have the resources they need to be open, safe,
+      and effective.
+    restatement: Give schools the resources to reopen safely and effectively.
+    metric:
+      present: false
+      quantity: "\"resources... to be open, safe, and effective\" has no agreed measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: fund schools' reopening resources
+    measurable: "no"
+    notes: >
+      An instrument aimed at an unquantified end. "Open, safe, and effective"
+      names no level of funding, no reopening rate, and no date — aspirational
+      with a concrete action underneath.
+
+  - id: biden-2020-experts-transparency
+    ref: "¶82.1"
+    theme: health
+    quote: >
+      We'll put the politics aside and take the muzzle off our experts so the
+      public gets the information they need and deserve.
+    restatement: Let public-health experts speak freely so the public gets unvarnished information.
+    metric:
+      present: false
+      quantity: whether experts communicate freely (governance posture, not a quantity)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: stop political interference with public-health experts' communication
+    measurable: "no"
+    notes: >
+      Part of the same "day one" strategy bundle as the tests, supplies, and
+      mask promises, but the softest of them to measure — "take the muzzle off"
+      names an action with no quantity, no number, and no date, gaugeable only as
+      a vague yes/no about whether experts were allowed to speak.
+
+  - id: biden-2020-mask-mandate
+    ref: "¶83.1"
+    theme: health
+    quote: >
+      We'll have a national mandate to wear a mask-not as a burden, but to
+      protect each other.
+    restatement: Institute a national mask mandate.
+    metric:
+      present: false
+      quantity: whether a national mandate exists (policy action, binary)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: a national mask mandate
+    measurable: "no"
+    notes: >
+      A concrete instrument, but a binary one with no metric, number, or date —
+      and the disputed boundary is authority itself, since a president's power to
+      impose a truly "national" mandate is contested.
+
+  - id: biden-2020-infrastructure-jobs
+    ref: "¶106.3-107.3"
+    theme: economy
+    quote: >
+      And when we do, we'll not only build it back, we'll build it back better.
+      With modern roads, bridges, highways, broadband, ports and airports as a
+      new foundation for economic growth. With pipes that transport clean water
+      to every community. With 5 million new manufacturing and technology jobs
+      so the future is made in America.
+    restatement: Rebuild infrastructure and create five million manufacturing and technology jobs.
+    metric:
+      present: true
+      quantity: manufacturing and technology employment; infrastructure investment
+      record: BLS employment (manufacturing/tech); federal infrastructure outlays
+    threshold:
+      present: true
+      stated: 5 million new manufacturing and technology jobs
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: rebuild economy / infrastructure investment ("build it back better")
+    measurable: "partial"
+    notes: >
+      The same 5-million-jobs shape as Obama's renewable pledge, but missing the
+      "over the next decade" clause that made his measurable-full — no timeframe
+      here drops it to partial, and the jobs are an outcome he can't fully
+      control or cleanly attribute.
+
+  - id: biden-2020-health-premiums
+    ref: "¶108.1"
+    theme: health
+    quote: >
+      With a health care system that lowers premiums, deductibles, and drug
+      prices by building on the Affordable Care Act he's trying to rip away.
+    restatement: Lower premiums, deductibles, and drug prices by building on the ACA.
+    metric:
+      present: true
+      quantity: insurance premiums, deductibles, and prescription drug prices
+      record: KFF premium/deductible surveys; CMS drug spending data
+    threshold:
+      present: true
+      stated: lowers (direction, no magnitude)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: build on the Affordable Care Act
+    measurable: "partial"
+    notes: >
+      Good metrics with real records and a clear direction, but no baseline, no
+      magnitude, and no date — "lower than what, and by how much?" is exactly the
+      unfilled boundary, echoing Obama's 2008 premium promise.
+
+  - id: biden-2020-college-cost
+    ref: "¶109.1"
+    theme: education
+    quote: >
+      With an education system that trains our people for the best jobs of the
+      21st century, where cost doesn't prevent young people from going to
+      college, and student debt doesn't crush them when they get out.
+    restatement: Make college affordable so cost and student debt aren't barriers.
+    metric:
+      present: true
+      quantity: college affordability; outstanding student debt burden
+      record: Federal Reserve / Dept. of Education student loan debt series
+    threshold:
+      present: false
+      stated: "\"cost doesn't prevent\" / \"debt doesn't crush\" — no number"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: reform the education system (mechanism unspecified)
+    measurable: "partial"
+    notes: >
+      Student debt is a hard, trackable series, but the promise attaches no
+      target level and no date, and "doesn't crush" has no agreed threshold — a
+      real metric with an aspiration draped over it.
+
+  - id: biden-2020-care-economy
+    ref: "¶110.1"
+    theme: labor
+    quote: >
+      With child care and elder care that make it possible for parents to go to
+      work and for the elderly to stay in their homes with dignity.
+    restatement: Provide child care and elder care so parents can work and the elderly can age at home.
+    metric:
+      present: false
+      quantity: "\"child care and elder care\" access has no single agreed measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: fund child care and elder care programs (mechanism unspecified)
+    measurable: "no"
+    notes: >
+      Another strand split out of the "build it back better" list. A named
+      instrument aimed at an unquantified end — no level of coverage, no number
+      of families, and no date — so it registers only as "did such programs
+      expand?"
+
+  - id: biden-2020-immigration
+    ref: "¶110.2"
+    theme: immigration
+    quote: >
+      With an immigration system that powers our economy and reflects our
+      values.
+    restatement: Reform the immigration system to power the economy and reflect American values.
+    metric:
+      present: false
+      quantity: "\"powers our economy and reflects our values\" has no agreed measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: reform the immigration system (mechanism unspecified)
+    measurable: "no"
+    notes: >
+      The vaguest strand of the "build it back better" list — an aspiration with
+      no quantity, no threshold, and no date, and the instrument itself is left
+      unspecified, so nothing here can be pinned to a measured outcome.
+
+  - id: biden-2020-labor
+    ref: "¶110.3-110.5"
+    theme: labor
+    quote: >
+      With newly empowered labor unions. With equal pay for women. With rising
+      wages you can raise a family on.
+    restatement: Empower unions, guarantee equal pay for women, and raise wages.
+    metric:
+      present: true
+      quantity: union membership; gender pay gap; wage levels
+      record: BLS union membership; Census/BLS earnings by sex; BLS wage series
+    threshold:
+      present: true
+      stated: equal pay (parity); rising wages (direction, no level)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: empower unions, enforce equal pay, raise wages (a bundle)
+    measurable: "partial"
+    notes: >
+      Each strand has a real metric and record, and "equal pay" carries a parity
+      direction, but there is no target wage, no gap target, and no deadline — a
+      measurable quantity with no level or date pinned to it.
+
+  - id: biden-2020-essential-workers-pay
+    ref: "¶110.6-110.7"
+    theme: labor
+    quote: >
+      Yes, we're going to do more than praise our essential workers. We're
+      finally going to pay them.
+    restatement: Raise the pay of essential workers.
+    metric:
+      present: true
+      quantity: wages of essential/frontline workers
+      record: BLS wages for relevant occupations
+    threshold:
+      present: false
+      stated: "\"pay them\" — a direction (raise pay), no amount"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: raise essential-worker pay (mechanism unspecified)
+    measurable: "partial"
+    notes: >
+      A trackable wage metric and a clear direction, but no amount, no defined
+      class of "essential workers", and no date — measurable in principle, but
+      the promise fixes none of the parameters.
+
+  - id: biden-2020-clean-energy-jobs
+    ref: "¶111.1-111.3"
+    theme: climate
+    quote: >
+      We can, and we will, deal with climate change. It's not only a crisis,
+      it's an enormous opportunity. An opportunity for America to lead the world
+      in clean energy and create millions of new good-paying jobs in the
+      process.
+    restatement: Address climate change and create millions of clean-energy jobs.
+    metric:
+      present: true
+      quantity: greenhouse-gas emissions; clean-energy employment
+      record: EPA/EIA emissions data; BLS/DOE clean-energy jobs reporting
+    threshold:
+      present: true
+      stated: millions of new good-paying jobs (order of magnitude, no exact number)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: lead the world in clean energy
+    measurable: "partial"
+    notes: >
+      "Deal with climate change" is aspirational and "millions of jobs" is only
+      an order of magnitude, with no emissions target and no date — the metrics
+      exist but the promise sets no pinnable level or deadline.
+
+  - id: biden-2020-tax-fair-share
+    ref: "¶112.1"
+    theme: taxes
+    quote: >
+      And we can pay for these investments by ending loopholes and the
+      president's $1.3 trillion tax giveaway to the wealthiest 1 percent and the
+      biggest, most profitable corporations, some of which pay no tax at all.
+    restatement: Pay for the agenda by ending loopholes and repealing the $1.3T tax cut for the top 1% and corporations.
+    metric:
+      present: true
+      quantity: federal revenue from top earners and corporations
+      record: Treasury/CBO revenue data; JCT distributional analysis
+    threshold:
+      present: true
+      stated: "\"$1.3 trillion tax giveaway\" — end it"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: end loopholes and repeal the 2017 tax cuts
+    measurable: "partial"
+    notes: >
+      A named dollar figure and a real revenue record, but no deadline, and the
+      "$1.3 trillion" magnitude is itself a contested scoring estimate — the
+      disputed boundary is which provisions and baseline that number covers.
+
+  - id: biden-2020-social-security-medicare
+    ref: "¶115.2"
+    theme: fiscal
+    quote: >
+      If I'm your president, we're going to protect Social Security and
+      Medicare.
+    restatement: Protect Social Security and Medicare from cuts.
+    metric:
+      present: false
+      quantity: whether Social Security/Medicare benefits are cut (defensive, binary)
+      record: null
+    threshold:
+      present: false
+      stated: "\"protect\" — hold at status quo, no level"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: protect the programs (block cuts to benefits/funding)
+    measurable: "no"
+    notes: >
+      A defensive promise — "protect" means prevent a bad outcome, which has no
+      target level, no date, and is hard to attribute to him rather than to
+      Congress. Measurable only as a vague "were benefits cut on his watch?"
+
+  - id: biden-2020-election-interference
+    ref: "¶129.1-129.2"
+    theme: foreign-policy
+    quote: >
+      Under President Biden, America will not turn a blind eye to Russian
+      bounties on the heads of American soldiers. Nor will I put up with foreign
+      interference in our most sacred democratic exercise -- voting.
+    restatement: Confront Russian bounties on US troops and foreign election interference.
+    metric:
+      present: false
+      quantity: none clean (foreign interference and bounties are not a tracked series)
+      record: null
+    threshold:
+      present: false
+      stated: "\"not turn a blind eye\" / \"not put up with\" — direction only"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: respond to Russian bounties; counter election interference
+    measurable: "no"
+    notes: >
+      A stance-and-instrument promise with no quantity to track, no number, and
+      no date — and largely an outcome he cannot fully control, since it depends
+      on adversaries' conduct, not only on his response.

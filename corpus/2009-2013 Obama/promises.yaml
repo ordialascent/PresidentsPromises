@@ -1,5 +1,5 @@
 # Promises extracted from Barack Obama's 2008 nomination acceptance speech
-# (corpus/obama/2008-acceptance.md). Refs are paragraph.sentence, per
+# (corpus/2009-2013 Obama/2008-acceptance.md). Refs are paragraph.sentence, per
 # corpus/README.md.
 #
 # Each promise is scored on four dimensions — the ingredients that decide
@@ -45,7 +45,7 @@ promises:
     instrument:
       present: true
       stated: sets it as a goal; named actions follow in 47 (gas, clean coal, nuclear, renewables)
-    measurable: full
+    measurable: "full"
     notes: >
       The one fully-shaped promise here — and exactly the deficit shape: all
       four ingredients present, but "dependence" and "the Middle East" are
@@ -75,7 +75,7 @@ promises:
     instrument:
       present: true
       stated: direct federal investment
-    measurable: full
+    measurable: "full"
     notes: >
       Spending is cleanly trackable; the "five million new jobs" half is an
       outcome he can't fully control and can't be cleanly attributed to the
@@ -100,7 +100,7 @@ promises:
     instrument:
       present: true
       stated: cut taxes
-    measurable: partial
+    measurable: "partial"
     notes: >
       Sharp number, real record — but no deadline, and "working families" and
       "a tax cut" both need a definition that moves the 95%.
@@ -125,7 +125,7 @@ promises:
     instrument:
       present: true
       stated: change the tax code
-    measurable: partial
+    measurable: "partial"
     notes: >
       Measurable only as a yes/no policy outcome, not a quantity over time. "Small
       businesses and start-ups" is the disputed boundary.
@@ -151,7 +151,7 @@ promises:
     instrument:
       present: true
       stated: change specific tax-code provisions
-    measurable: partial
+    measurable: "partial"
     notes: >
       An instrument with a direction but no number, no deadline, and no agreed
       metric for "jobs shipped overseas."
@@ -177,7 +177,7 @@ promises:
     instrument:
       present: true
       stated: his health-care plan
-    measurable: partial
+    measurable: "partial"
     notes: >
       Good metrics and records, but no deadline, and "lower premiums" has no
       baseline or magnitude — lower than what, and by how much?
@@ -206,7 +206,7 @@ promises:
     instrument:
       present: true
       stated: close loopholes/tax havens; line-by-line cuts
-    measurable: partial
+    measurable: "partial"
     notes: >
       The nearest fiscal promise in this speech — NOT the "halve the deficit"
       claim (that is Feb 2009). "Every dime" is a clear direction but has no
@@ -233,7 +233,7 @@ promises:
     instrument:
       present: false
       stated: "\"keep the promise\" — a goal, not a named action (though it prefigures the Ledbetter Act)"
-    measurable: partial
+    measurable: "partial"
     notes: >
       A real metric with a direction, but no target level, no deadline, and no
       named instrument — an aspiration attached to a measurable quantity.
@@ -259,7 +259,7 @@ promises:
     instrument:
       present: true
       stated: paid sick days and family leave policy
-    measurable: no
+    measurable: "no"
     notes: >
       A named instrument with no number, no deadline, no metric — measurable
       only as "did such a federal policy pass?"
@@ -284,7 +284,7 @@ promises:
     instrument:
       present: true
       stated: end the war; continue the Afghanistan campaign
-    measurable: partial
+    measurable: "partial"
     notes: >
       Troop levels are perfectly measurable, but the promise attaches no number
       and no date to them ("responsibly", "finish") — so the metric exists but
@@ -310,7 +310,7 @@ promises:
     instrument:
       present: true
       stated: "tough, direct diplomacy (an outcome he cannot fully control)"
-    measurable: partial
+    measurable: "partial"
     notes: >
       Clear metric and threshold, but no deadline, and it is an outcome-only
       promise — success depends on Iran, not only on him.
@@ -338,7 +338,7 @@ promises:
     instrument:
       present: true
       stated: invest in early childhood education; recruit/pay teachers; raise standards
-    measurable: no
+    measurable: "no"
     notes: >
       Named instruments, but the goal ("world-class") has no metric, number, or
       deadline — the aspirational end of the spectrum, with real actions under it.
@@ -364,7 +364,7 @@ promises:
     instrument:
       present: false
       stated: null
-    measurable: no
+    measurable: "no"
     notes: >
       Pure aspiration — no quantity, no threshold, no deadline, no instrument.
       The zero-of-four case, kept to anchor that end of the scale.

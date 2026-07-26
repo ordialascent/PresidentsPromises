@@ -1,5 +1,663 @@
-# Promises extracted from Donald J. Trump's 2016 nomination acceptance speech.
-# Extraction is a later step. Schema: ../README.md and ../obama/promises.yaml
-# (each promise cited by paragraph.sentence and scored on
-#  metric / threshold / deadline / instrument).
-promises: []
+# Promises extracted from Donald J. Trump's 2016 nomination acceptance speech
+# (corpus/2017-2021 Trump/2016-acceptance.md). Refs are paragraph.sentence, per
+# corpus/README.md.
+#
+# Each promise is scored on four dimensions — the ingredients that decide
+# whether "was it kept?" can even be asked as a *measured* question:
+#
+#   metric     — is there a named quantity, AND a record that tracks it?
+#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
+#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
+#   instrument — does he name what HE will DO, or only what WILL happen?
+#
+# measurable:
+#   full     — metric + threshold + deadline all present (even if parametrically
+#              disputed — that dispute is the product, not a disqualifier)
+#   partial  — at least one of the three is missing or too vague to pin down
+#   no       — aspirational; no measurable quantity at all
+# (instrument sharpens accountability: an outcome-only promise is one he can't
+#  fully control. A promise can still be measurable without it.)
+
+promises:
+  - id: trump-2016-border-wall
+    ref: "¶77.1"
+    theme: immigration
+    quote: >
+      We are going to build a great border wall to stop illegal immigration,
+      to stop the gangs and the violence, and to stop the drugs from pouring
+      into our communities.
+    restatement: Build a border wall to stop illegal immigration, gangs, and drugs.
+    metric:
+      present: true
+      quantity: miles of new border barrier built; illegal border crossings
+      record: CBP border wall system status; Border Patrol apprehension data
+    threshold:
+      present: true
+      stated: "\"stop\" / a \"great\" wall (direction; no mileage target)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: build a physical border wall
+    measurable: "partial"
+    notes: >
+      The signature pledge — a named instrument with trackable proxies, but the
+      speech attaches no wall length, no funding, and no date. The disputed
+      boundary is what counts as "a great wall" and whether "stop" means any
+      measurable drop in crossings or literally zero.
+
+  - id: trump-2016-suspend-terror-immigration
+    ref: "¶70.1"
+    theme: immigration
+    quote: >
+      Lastly, and very importantly, we must immediately suspend immigration
+      from any nation that has been compromised by terrorism until such time as
+      proven vetting mechanisms have been put in place.
+    restatement: Suspend immigration from terror-compromised nations until vetting is proven.
+    metric:
+      present: true
+      quantity: whether such a suspension is enacted (binary policy action)
+      record: enacted executive orders / entry restrictions
+    threshold:
+      present: true
+      stated: "suspend / to zero (from the named nations)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: executive suspension of immigration from named nations
+    measurable: "partial"
+    notes: >
+      Measurable only as a yes/no policy act, not a tracked trend. "Immediately"
+      supplies urgency but no bounded period, and "any nation compromised by
+      terrorism" is the undefined boundary that decides who is covered.
+
+  - id: trump-2016-end-catch-and-release
+    ref: "¶78.1"
+    theme: immigration
+    quote: >
+      By ending catch-and-release on the border, we will stop the cycle of
+      human smuggling and violence.
+    restatement: End catch-and-release to stop human smuggling and border violence.
+    metric:
+      present: true
+      quantity: illegal border crossings; whether catch-and-release is ended (binary)
+      record: CBP apprehensions / releases data
+    threshold:
+      present: true
+      stated: "end catch-and-release; \"stop\" (direction)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: end the catch-and-release policy
+    measurable: "partial"
+    notes: >
+      A named policy lever with a real record, but no number and no deadline.
+      "Stop the cycle of human smuggling" is an outcome he only partly controls,
+      so the measurable core is really the binary "did catch-and-release end?"
+
+  - id: trump-2016-defeat-isis
+    ref: "¶60.1"
+    theme: foreign-policy
+    quote: >
+      To make life safe in America, we must also address the growing threats we
+      face from outside the country: We are going to defeat the barbarians of
+      ISIS, and we are going to defeat them fast.
+    restatement: Defeat ISIS, and do it fast.
+    metric:
+      present: true
+      quantity: ISIS territorial control / operational capacity
+      record: territory-held tracking (e.g., IHS/ISW caliphate maps)
+    threshold:
+      present: true
+      stated: "defeat / to zero"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "military defeat of ISIS (an outcome partly outside his control)"
+    measurable: "partial"
+    notes: >
+      Clear metric and a to-zero threshold, but "fast" is not a bounded period
+      and the outcome depends on coalition partners and events abroad. The
+      disputed boundary is whether "defeat" means loss of territory or the
+      group's eradication.
+
+  - id: trump-2016-largest-tax-reduction
+    ref: "¶95.2"
+    theme: taxes
+    quote: >
+      While Hillary Clinton plans a massive -- and I mean massive -- tax
+      increase, I have proposed the largest tax reduction of any candidate who
+      has declared for the presidential race this year – Democrat or Republican.
+    restatement: Enact the largest tax reduction proposed by any candidate this cycle.
+    metric:
+      present: true
+      quantity: size of the tax cut relative to other candidates' plans
+      record: JCT / Tax Policy Center scoring of enacted and proposed plans
+    threshold:
+      present: true
+      stated: "\"largest of any candidate\" (a relative superlative, not a number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: tax reform / rate reduction legislation
+    measurable: "partial"
+    notes: >
+      The benchmark is other candidates' proposals, not an enacted policy
+      metric, so the claim is about the *plan he proposed*, not a delivered
+      outcome. No deadline and a moving comparison set are the disputed edges.
+
+  - id: trump-2016-end-regulation
+    ref: "¶96.5"
+    theme: regulation
+    quote: >
+      Excessive regulation is costing our country as much as $2 trillion a year,
+      and we will end it very very quickly.
+    restatement: End the excessive regulation he says costs $2 trillion a year.
+    metric:
+      present: true
+      quantity: cost of federal regulation
+      record: no agreed series (contested estimates, e.g., NAM / OMB)
+    threshold:
+      present: true
+      stated: "\"end it\" (to zero of the cited $2 trillion)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: deregulation
+    measurable: "partial"
+    notes: >
+      "$2 trillion a year" is a vivid figure but there is no consensus record of
+      regulatory cost, and "end it" as a literal to-zero is implausible. The
+      metric itself is the disputed boundary; "very very quickly" gives no date.
+
+  - id: trump-2016-lift-energy-restrictions
+    ref: "¶96.6-96.7"
+    theme: energy
+    quote: >
+      We are going to lift the restrictions on the production of American
+      energy. This will produce more than $20 trillion in job creating economic
+      activity over the next four decades.
+    restatement: Lift restrictions on US energy production, generating $20T of activity over 40 years.
+    metric:
+      present: true
+      quantity: American energy production; economic activity generated
+      record: EIA production data (activity attribution is contested)
+    threshold:
+      present: true
+      stated: "more than $20 trillion"
+    deadline:
+      present: true
+      stated: over the next four decades
+    instrument:
+      present: true
+      stated: lift restrictions on domestic energy production
+    measurable: "full"
+    notes: >
+      The one fully-shaped promise here — metric, a $20 trillion threshold, and a
+      four-decade window all present. But like Obama's renewable-jobs pledge, the
+      "$20 trillion in activity" half is an outcome he cannot fully control and
+      cannot be cleanly attributed to lifting restrictions.
+
+  - id: trump-2016-repeal-obamacare
+    ref: "¶99.3"
+    theme: health
+    quote: >
+      We will repeal and replace disastrous Obamacare.
+    restatement: Repeal and replace the Affordable Care Act.
+    metric:
+      present: true
+      quantity: whether the ACA is repealed and replaced (binary)
+      record: enacted health-care law
+    threshold:
+      present: true
+      stated: "repeal and replace (full)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: repeal-and-replace legislation
+    measurable: "partial"
+    notes: >
+      Measurable as a yes/no policy outcome, not a quantity over time, and with
+      no deadline. "Replace" is the disputed boundary — repeal alone would not
+      satisfy the second, and harder, half of the promise.
+
+  - id: trump-2016-renegotiate-nafta
+    ref: "¶93.3-93.4"
+    theme: trade
+    quote: >
+      Our horrible trade agreements with China and many others, will be totally
+      renegotiated. That includes renegotiating NAFTA to get a much better deal
+      for America – and we'll walk away if we don't get the deal that we want.
+    restatement: Totally renegotiate NAFTA and other trade deals, or walk away.
+    metric:
+      present: true
+      quantity: whether the named agreements are renegotiated (binary)
+      record: enacted trade agreements (e.g., the NAFTA successor)
+    threshold:
+      present: true
+      stated: "\"totally renegotiated\" (or walk away)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: renegotiate the agreements; withdraw if terms are unmet
+    measurable: "partial"
+    notes: >
+      A clear instrument and a binary "was it renegotiated?" record, but "totally"
+      and "a much better deal" have no metric, and there is no deadline. The
+      disputed boundary is how much change counts as "totally renegotiated."
+
+  - id: trump-2016-no-bad-trade-deals
+    ref: "¶91.5-91.6"
+    theme: trade
+    quote: >
+      I pledge to never sign any trade agreement that hurts our workers, or that
+      diminishes our freedom and independence. I will never, ever sign bad trade
+      deals.
+    restatement: Never sign a trade deal that hurts American workers.
+    metric:
+      present: false
+      quantity: no clean quantity ("hurts our workers" has no agreed measure)
+      record: null
+    threshold:
+      present: true
+      stated: "never / zero (direction)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: refuse to sign disfavored agreements
+    measurable: "partial"
+    notes: >
+      A "never" pledge with a sharp direction but no metric — "hurts our workers"
+      is undefined — and no deadline. Like Obama's offshoring pledge, it is an
+      instrument with a direction attached to no agreed quantity.
+
+  - id: trump-2016-bring-jobs-back
+    ref: "¶89.1"
+    theme: labor
+    quote: >
+      I am going to bring our jobs back to Ohio and Pennsylvania and New York
+      and Michigan and all of America – and I am not going to let companies move
+      to other countries, firing their employees along the way, without
+      consequences.
+    restatement: Bring jobs back to the industrial states and penalize companies that offshore.
+    metric:
+      present: true
+      quantity: manufacturing / total employment in the named states
+      record: BLS state and manufacturing employment series
+    threshold:
+      present: true
+      stated: "\"bring back\" (direction; no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: impose "consequences" on companies that move jobs abroad
+    measurable: "partial"
+    notes: >
+      Real, trackable metrics for the named states, but the promise pins no
+      number and no date to them, and "without consequences" names an intent, not
+      a specific policy. "Our jobs" and attribution to his actions are disputed.
+
+  - id: trump-2016-rebuild-military
+    ref: "¶102.1"
+    theme: foreign-policy
+    quote: >
+      We will completely rebuild our depleted military, and the countries that
+      we protect, at a massive loss, will be asked to pay their fair share.
+    restatement: Rebuild the military and make protected allies pay their fair share.
+    metric:
+      present: true
+      quantity: defense spending / force levels; allied burden-sharing
+      record: DoD budget; NATO defense-spending shares
+    threshold:
+      present: true
+      stated: "\"completely rebuild\"; \"fair share\" (direction; no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: increase military funding; demand allied contributions
+    measurable: "partial"
+    notes: >
+      Both halves have real records, but neither "completely rebuild" nor "fair
+      share" is quantified, there is no deadline, and allied payments are an
+      outcome he cannot unilaterally control.
+
+  - id: trump-2016-veterans-choice
+    ref: "¶103.1-103.3"
+    theme: veterans
+    quote: >
+      We will take care of our great veterans like they have never been taken
+      care of before. [...] We will guarantee those who serve this country will
+      be able to visit the doctor or hospital of their choice without waiting
+      five days in line and dying.
+    restatement: Guarantee veterans can see the doctor of their choice without long waits.
+    metric:
+      present: true
+      quantity: VA appointment wait times / access to care
+      record: VA wait-time and access reporting
+    threshold:
+      present: true
+      stated: "choice of any doctor; \"without waiting five days in line\""
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: guarantee choice of provider / VA reform
+    measurable: "partial"
+    notes: >
+      Wait times are cleanly measurable, but "like they have never been taken
+      care of before" is unmeasurable and "five days" is rhetorical, not a
+      standard. No deadline. The measurable core is the choice-of-provider
+      guarantee.
+
+  - id: trump-2016-wasteful-spending-100-days
+    ref: "¶104.2"
+    theme: fiscal
+    quote: >
+      We are going to ask every Department Head in government to provide a list
+      of wasteful spending projects that we can eliminate in my first 100 days.
+    restatement: Have every department head list wasteful spending to cut in the first 100 days.
+    metric:
+      present: false
+      quantity: no tracked quantity (a process — lists produced — not a spending target)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: true
+      stated: in my first 100 days
+    instrument:
+      present: true
+      stated: direct every department head to submit a list
+    measurable: "partial"
+    notes: >
+      Unusually, the deadline is the sharp part ("first 100 days") while the
+      metric and threshold are absent — no dollar target, only a process. It is
+      measurable only as "were the lists produced?", not as spending reduced.
+
+  - id: trump-2016-supreme-court
+    ref: "¶105.1"
+    theme: judiciary
+    quote: >
+      We are also going to appoint justices to the United States Supreme Court
+      who will uphold our laws and our Constitution.
+    restatement: Appoint Supreme Court justices who will uphold the laws and Constitution.
+    metric:
+      present: true
+      quantity: whether such justices are appointed (binary / count)
+      record: confirmed Supreme Court appointments
+    threshold:
+      present: true
+      stated: "appoint (qualitative criterion, no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: nominate justices (confirmation depends on the Senate)
+    measurable: "partial"
+    notes: >
+      The act of appointing is trackable, but "who will uphold our laws and our
+      Constitution" is a judgment, not a measure, there is no deadline, and
+      confirmation is an outcome he shares with the Senate.
+
+  - id: trump-2016-restore-law-and-order
+    ref: "¶54.4"
+    theme: crime
+    quote: >
+      I have a message to every last person threatening the peace on our streets
+      and the safety of our police: when I take the oath of office next year, I
+      will restore law and order to our country.
+    restatement: Restore law and order upon taking office.
+    metric:
+      present: true
+      quantity: crime and violence rates
+      record: FBI UCR / homicide statistics
+    threshold:
+      present: true
+      stated: "\"restore\" (direction; no number)"
+    deadline:
+      present: true
+      stated: when I take the oath of office next year (Jan 2017)
+    instrument:
+      present: true
+      stated: "restore law and order (a goal, not a specific action)"
+    measurable: "partial"
+    notes: >
+      Metric and a dated starting point are present, but "law and order" has no
+      numeric target and "restore" no baseline, so the promise names when it
+      begins without saying what level counts as success.
+
+  - id: trump-2016-crime-end
+    ref: "¶6.1"
+    theme: crime
+    quote: >
+      I have a message for all of you: the crime and violence that today
+      afflicts our nation will soon – and I mean very soon – come to an end.
+    restatement: Crime and violence will soon come to an end.
+    metric:
+      present: true
+      quantity: crime and violence rates
+      record: FBI UCR / homicide statistics
+    threshold:
+      present: true
+      stated: "\"come to an end\" (to zero)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: null
+    measurable: "partial"
+    notes: >
+      A real metric and a to-zero threshold, but no named instrument (it "will
+      come to an end", stated as an outcome) and "very soon" is not a bounded
+      period. Measurable in principle yet almost entirely outside his control.
+
+  - id: trump-2016-repeal-johnson-amendment
+    ref: "¶108.1"
+    theme: religion
+    quote: >
+      I am going to work very hard to repeal that language and protect free
+      speech for all Americans.
+    restatement: Repeal the Johnson Amendment language restricting churches' political speech.
+    metric:
+      present: true
+      quantity: whether the Johnson Amendment language is repealed (binary)
+      record: enacted tax-code amendments
+    threshold:
+      present: true
+      stated: "repeal (the language)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"work very hard to repeal\" — legislative effort, not a controlled outcome"
+    measurable: "partial"
+    notes: >
+      Measurable as a yes/no legislative outcome, but "work very hard to repeal"
+      commits to effort rather than result, and there is no deadline. Whether an
+      administrative or partial change counts as repeal is the disputed edge.
+
+  - id: trump-2016-enforce-trade-tariffs
+    ref: "¶92.2"
+    theme: trade
+    quote: >
+      We are going to enforce all trade violations against any country including
+      through the use of taxes and tariffs, against any country that cheats.
+    restatement: Enforce trade violations against cheating countries, including through taxes and tariffs.
+    metric:
+      present: true
+      quantity: trade-enforcement actions; tariffs/duties imposed
+      record: USTR / Commerce trade actions; USITC tariff data
+    threshold:
+      present: true
+      stated: "\"all trade violations\" (direction; no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: impose taxes and tariffs on countries that cheat
+    measurable: "partial"
+    notes: >
+      A named instrument — tariffs and taxes — with a trackable record, but "all
+      trade violations" and "any country that cheats" set no number, and the
+      promise carries no deadline. The disputed boundary is what counts as a
+      "violation" and as "cheating."
+
+  - id: trump-2016-rebuild-infrastructure
+    ref: "¶98.1"
+    theme: infrastructure
+    quote: >
+      We will build the roads, highways, bridges, tunnels, airports, and the
+      railways of tomorrow.
+    restatement: Build new roads, highways, bridges, tunnels, airports, and railways.
+    metric:
+      present: true
+      quantity: infrastructure investment / projects built
+      record: federal infrastructure outlays; DOT project data
+    threshold:
+      present: true
+      stated: "\"build\" the infrastructure \"of tomorrow\" (direction; no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: federal infrastructure construction
+    measurable: "partial"
+    notes: >
+      A broad build-it commitment with a trackable spending record, but no dollar
+      figure, no mileage or project count, and no deadline. "Of tomorrow" is
+      rhetorical, not a standard.
+
+  - id: trump-2016-school-choice
+    ref: "¶98.3"
+    theme: education
+    quote: >
+      We will rescue kids from failing schools by helping their parents send
+      them to a safe school of their choice.
+    restatement: Expand school choice so parents can move children out of failing schools.
+    metric:
+      present: false
+      quantity: policy action (binary), not a tracked quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: school-choice policy (help parents choose a safe school)
+    measurable: "no"
+    notes: >
+      A named instrument — school choice — but no number, no deadline, and no
+      metric beyond "did such a policy advance?" Like Obama's paid-leave pledge,
+      measurable only as a yes/no policy outcome.
+
+  - id: trump-2016-student-debt
+    ref: "¶101.1"
+    theme: education
+    quote: >
+      We are going to work with all of our students who are drowning in debt to
+      take the pressure off these young people just starting out their adult
+      lives.
+    restatement: Ease the burden of student debt on young people starting out.
+    metric:
+      present: true
+      quantity: student-debt burden (balances / repayment pressure)
+      record: Federal Reserve and Dept. of Education student-loan data
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"work with\" students to ease debt — effort, not a specified action"
+    measurable: "partial"
+    notes: >
+      Student debt is trackable, but the promise attaches no target and no
+      deadline and names only a vague instrument ("work with ... to take the
+      pressure off"), so the metric exists while the commitment does not pin it.
+
+  - id: trump-2016-visa-overstays
+    ref: "¶78.7"
+    theme: immigration
+    quote: >
+      By enforcing the rules for the millions who overstay their visas, our laws
+      will finally receive the respect they deserve.
+    restatement: Enforce the rules against the millions who overstay their visas.
+    metric:
+      present: true
+      quantity: visa-overstay rate / enforcement actions
+      record: DHS Entry/Exit Overstay Reports
+    threshold:
+      present: true
+      stated: "\"enforcing the rules\" (direction; no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: enforce existing visa-overstay rules
+    measurable: "partial"
+    notes: >
+      Distinct from the border-crossing pledges: this targets visa overstays,
+      which DHS tracks. But "enforcing the rules" sets no numeric target and the
+      promise carries no deadline.
+
+  - id: trump-2016-protect-lgbtq
+    ref: "¶64.1"
+    theme: civil-rights
+    quote: >
+      As your President, I will do everything in my power to protect our LGBTQ
+      citizens from the violence and oppression of a hateful foreign ideology –
+      believe me.
+    restatement: Protect LGBTQ citizens from terrorist violence and oppression.
+    metric:
+      present: false
+      quantity: no clean quantity ("do everything in my power" to protect from a "foreign ideology")
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"do everything in my power\" — an effort commitment, not a controlled outcome"
+    measurable: "no"
+    notes: >
+      A genuine commitment but an aspirational one: "do everything in my power"
+      pledges effort, and "protect ... from a hateful foreign ideology" has no
+      metric, no target level, and no deadline. Instrument-only, on the
+      aspirational end of the scale.
