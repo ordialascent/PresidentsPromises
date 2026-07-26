@@ -1,5 +1,590 @@
-# Promises extracted from Donald J. Trump's 2024 nomination acceptance speech.
-# Extraction is a later step. Schema: ../README.md and ../obama/promises.yaml
-# (each promise cited by paragraph.sentence and scored on
-#  metric / threshold / deadline / instrument).
-promises: []
+# Promises extracted from Donald J. Trump's 2024 nomination acceptance speech
+# (corpus/2025-2029 Trump/2024-acceptance.md). Refs are paragraph.sentence,
+# per corpus/README.md.
+#
+# Each promise is scored on four dimensions — the ingredients that decide
+# whether "was it kept?" can even be asked as a *measured* question:
+#
+#   metric     — is there a named quantity, AND a record that tracks it?
+#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
+#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
+#   instrument — does he name what HE will DO, or only what WILL happen?
+#
+# measurable:
+#   full     — metric + threshold + deadline all present (even if parametrically
+#              disputed — that dispute is the product, not a disqualifier)
+#   partial  — at least one of the three is missing or too vague to pin down
+#   no       — aspirational; no measurable quantity at all
+# (instrument sharpens accountability: an outcome-only promise is one he can't
+#  fully control. A promise can still be measurable without it.)
+#
+# NOTE: this speech leans heavily on "Day 1", "immediately", and "very quickly"
+# as its deadline language. Where a concrete date attaches (inauguration / "Day
+# 1" = 20 Jan 2025) that counts as a real deadline; "immediately"/"very rapidly"
+# is treated as a bounded-but-undated direction, which is why several otherwise
+# sharp promises land at partial.
+
+promises:
+  - id: trump-2024-inflation
+    ref: "¶83.1"
+    theme: inflation
+    quote: >
+      I will end the devastating inflation crisis immediately, bring down
+      interest rates and lower the cost of energy.
+    restatement: End the inflation crisis immediately; cut interest rates and energy costs.
+    metric:
+      present: true
+      quantity: consumer price inflation; interest rates; energy prices
+      record: BLS CPI; Fed funds rate; EIA energy prices
+    threshold:
+      present: true
+      stated: end the crisis / bring down (direction, no level)
+    deadline:
+      present: false
+      stated: immediately (bounded-but-undated, not a real deadline per this file)
+    instrument:
+      present: true
+      stated: lower energy costs / drill; but rates are set by the Fed, not the president
+    measurable: "partial"
+    notes: >
+      Metric and threshold are present but soft, and "immediately" is not a
+      real deadline (per this file's convention) — so it lands at partial:
+      "end" names no target rate, and interest rates are an outcome he does not
+      directly control. The disputed boundary is what counts as the crisis
+      being "ended" — CPI back to 2%, or merely falling?
+
+  - id: trump-2024-prices-day1
+    ref: "¶118.2"
+    theme: inflation
+    quote: >
+      Starting on Day 1, we will drive down prices and make America affordable
+      again.
+    restatement: Begin driving down consumer prices on Day 1.
+    metric:
+      present: true
+      quantity: consumer price level
+      record: BLS CPI
+    threshold:
+      present: true
+      stated: drive down (direction only, no magnitude)
+    deadline:
+      present: true
+      stated: "starting on Day 1 (20 Jan 2025)"
+    instrument:
+      present: true
+      stated: the Republican price plan (energy costs, deregulation)
+    measurable: "partial"
+    notes: >
+      A clean start date and a real metric, but "drive down" fixes no target
+      and no by-when-endpoint — a direction with a launch day but no finish
+      line, so how far prices must fall to count is undefined.
+
+  - id: trump-2024-energy-dominance
+    ref: "¶120.7-120.9"
+    theme: energy
+    quote: >
+      Under the Trump administration just three and a half years ago, we were
+      energy independent. But soon we will actually be better than that. We will
+      be energy dominant and supply not only ourselves, but we will supply the
+      rest of the world.
+    restatement: Make the US "energy dominant" — a net supplier to the rest of the world.
+    metric:
+      present: true
+      quantity: US energy production and net exports
+      record: EIA — U.S. energy production, imports/exports
+    threshold:
+      present: true
+      stated: "\"energy dominant\" / supply the rest of the world (direction)"
+    deadline:
+      present: false
+      stated: soon
+    instrument:
+      present: true
+      stated: expanded drilling / production
+    measurable: "partial"
+    notes: >
+      Production and export series track this cleanly, but "dominant" has no
+      agreed definition (the US was already a net energy exporter by 2020) and
+      "soon" is no deadline. The metric exists; the promise doesn't pin it.
+
+  - id: trump-2024-debt
+    ref: "¶121.1-121.2"
+    theme: fiscal
+    quote: >
+      With numbers that nobody has ever seen and we will reduce our debt, $36
+      trillion. We will start reducing that.
+    restatement: Reduce the national debt (cited at $36 trillion).
+    metric:
+      present: true
+      quantity: gross federal debt
+      record: Treasury / FRED GFDEBTN
+    threshold:
+      present: true
+      stated: reduce (direction; from $36T, no target level)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: growth and tax policy ("that's what's going to pay off our debt", 121.19)
+    measurable: "partial"
+    notes: >
+      The debt is one of the most precisely tracked numbers in government, but
+      "start reducing" is a bare direction with no target and no deadline — and
+      the same passage pairs it with further tax cuts, so the mechanism cuts
+      against the goal.
+
+  - id: trump-2024-taxes-cut
+    ref: "¶121.3"
+    theme: taxes
+    quote: >
+      And we will also reduce your taxes still further.
+    restatement: Cut taxes further beyond the 2017 cuts.
+    metric:
+      present: true
+      quantity: federal tax burden on households
+      record: JCT / Tax Policy Center distributional analysis
+    threshold:
+      present: true
+      stated: reduce still further (direction, no number)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: further tax-rate cuts
+    measurable: "partial"
+    notes: >
+      A real metric and a clear direction, but no magnitude, no deadline, and
+      "your taxes" leaves the affected group undefined — whose taxes, and by
+      how much?
+
+  - id: trump-2024-no-tax-tips
+    ref: "¶132.4"
+    theme: taxes
+    quote: >
+      It's called no tax on tips.
+    restatement: Exempt tip income from taxation.
+    metric:
+      present: true
+      quantity: whether the exemption is enacted (binary), not a trend
+      record: enacted tax law
+    threshold:
+      present: true
+      stated: no tax / to zero
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: change the tax code
+    measurable: "partial"
+    notes: >
+      Measurable only as a yes/no policy outcome, not a quantity over time. The
+      disputed boundary is scope — which workers and which taxes (income only,
+      or payroll too?).
+
+  - id: trump-2024-wall
+    ref: "¶87.1"
+    theme: immigration
+    quote: >
+      I will end the illegal immigration crisis by closing our border and
+      finishing the wall, most of which I've already built.
+    restatement: End illegal immigration by sealing the border and finishing the wall.
+    metric:
+      present: true
+      quantity: illegal border crossings; miles of border wall
+      record: CBP Southwest Border encounters; CBP wall-mileage reports
+    threshold:
+      present: true
+      stated: close the border / finish the wall (completion, direction to zero)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: close the border; complete wall construction
+    measurable: "partial"
+    notes: >
+      Encounters and wall mileage are both tracked, but "finishing the wall"
+      has no agreed total length and "closing the border" no target crossing
+      level, and no deadline is attached here.
+
+  - id: trump-2024-border-day1
+    ref: "¶157.1-157.2"
+    theme: immigration
+    quote: >
+      At the heart of the Republican platform is our pledge to end this border
+      nightmare, and fully restore the sacred and sovereign borders of the
+      United States of America. And we're going to do that on Day 1.
+    restatement: End the border crisis and restore secure borders, starting on Day 1.
+    metric:
+      present: true
+      quantity: illegal border crossings / border-security status
+      record: CBP Southwest Border encounters
+    threshold:
+      present: true
+      stated: end the border nightmare / fully restore secure borders (direction, no level)
+    deadline:
+      present: true
+      stated: "on Day 1 (20 Jan 2025)"
+    instrument:
+      present: true
+      stated: the Republican platform's border agenda (sealing the border; enforcement)
+    measurable: "partial"
+    notes: >
+      The same border promise as trump-2024-wall but with a hard Day-1 date
+      attached — yet "end this border nightmare" and "fully restore" set no
+      target crossing level, and Day 1 is a launch, not a completion point, so
+      it lands at partial rather than full. Overlaps trump-2024-wall (¶87.1),
+      which carries no deadline.
+
+  - id: trump-2024-deportation
+    ref: "¶176.2-176.3"
+    theme: immigration
+    quote: >
+      That's why, to keep our family safe, the Republican platform promises to
+      launch the largest deportation operation in the history of our country.
+      Even larger than that of President Dwight D. Eisenhower, from many years
+      ago.
+    restatement: Launch the largest deportation operation in US history.
+    metric:
+      present: true
+      quantity: number of deportations / removals
+      record: ICE/DHS removal statistics
+    threshold:
+      present: true
+      stated: largest ever (exceed the historical record)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: a mass deportation operation
+    measurable: "partial"
+    notes: >
+      A genuine metric with a record to beat (the ~1.1M of Eisenhower's 1954
+      operation, by the usual telling), but no deadline and a contested
+      counting basis (removals vs. returns vs. total departures) — the boundary
+      that decides "largest."
+
+  - id: trump-2024-ev-mandate
+    ref: "¶124.1"
+    theme: energy
+    quote: >
+      And I will end the electric vehicle mandate on day one.
+    restatement: End the electric-vehicle mandate on Day 1.
+    metric:
+      present: true
+      quantity: whether the rule is rescinded (binary), not a trend
+      record: Federal Register / EPA-NHTSA rulemaking
+    threshold:
+      present: true
+      stated: end / to zero
+    deadline:
+      present: true
+      stated: "on day one (20 Jan 2025)"
+    instrument:
+      present: true
+      stated: executive/regulatory action
+    measurable: "partial"
+    notes: >
+      Threshold and a hard date are both present, but the metric is a yes/no
+      policy action rather than a measured quantity, and there is no single
+      federal "EV mandate" — which rules count is the disputed boundary.
+
+  - id: trump-2024-auto-jobs
+    ref: "¶131.4-131.5"
+    theme: labor
+    quote: >
+      This very simple formula will create massive numbers of jobs. We will take
+      over the auto industry again and many many, hundreds of thousands of jobs,
+      we lost so many jobs over the years.
+    restatement: Bring back the auto industry and hundreds of thousands of manufacturing jobs.
+    metric:
+      present: true
+      quantity: auto / manufacturing employment
+      record: BLS employment (motor vehicles & parts)
+    threshold:
+      present: true
+      stated: hundreds of thousands of jobs (direction with rough magnitude)
+    deadline:
+      present: false
+      stated: "null (\"fast\", 125.3)"
+    instrument:
+      present: true
+      stated: build-in-America requirement backed by tariffs
+    measurable: "partial"
+    notes: >
+      Employment is cleanly tracked and there is even a rough number, but "take
+      over the auto industry again" is undefined, there's no deadline, and job
+      creation is an outcome he can't fully attribute to the policy.
+
+  - id: trump-2024-car-tariff
+    ref: "¶127.2"
+    theme: trade
+    quote: >
+      And if they don't agree with us, we'll put a tariff of approximately 100
+      to 200 percent on each car and they will be unsellable in the United
+      States.
+    restatement: Impose a 100-200% tariff on cars built abroad (esp. China-in-Mexico plants).
+    metric:
+      present: true
+      quantity: whether the tariff is imposed (binary) / tariff rate
+      record: USTR / Federal Register tariff schedules
+    threshold:
+      present: true
+      stated: 100 to 200 percent
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: impose a tariff
+    measurable: "partial"
+    notes: >
+      A sharp number and a clear instrument, but conditional ("if they don't
+      agree"), with no deadline and a wide 100-200% band — the trigger and rate
+      are the disputed boundary.
+
+  - id: trump-2024-ss-medicare
+    ref: "¶148.1"
+    theme: health
+    quote: >
+      I am going to protect Social Security and Medicare.
+    restatement: Protect Social Security and Medicare (no benefit cuts).
+    metric:
+      present: true
+      quantity: Social Security / Medicare benefit levels and solvency
+      record: SSA / CMS Trustees reports
+    threshold:
+      present: true
+      stated: protect / no cuts (direction only)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"my plan\" — no named mechanism"
+    measurable: "partial"
+    notes: >
+      A real metric with a maintain-the-level direction, but "protect" sets no
+      target (nominal benefits? solvency date? real value against inflation?),
+      names no instrument, and carries no deadline.
+
+  - id: trump-2024-end-wars
+    ref: "¶89.1"
+    theme: foreign-policy
+    quote: >
+      I will end every single international crisis that the current
+      administration has created, including the horrible war with Russia and
+      Ukraine, which would have never happened if I was president.
+    restatement: End every international crisis, including the Russia-Ukraine war.
+    metric:
+      present: true
+      quantity: active international conflicts (esp. the Russia-Ukraine war)
+      record: conflict-tracking datasets (e.g. UCDP/ACLED); ceasefire status
+    threshold:
+      present: true
+      stated: end every single one / to zero
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: asserts he'll end them, but names no mechanism — an outcome he can't fully control
+    measurable: "partial"
+    notes: >
+      "Every single" is a clean to-zero threshold and the wars are trackable,
+      but there is no deadline in this sentence, no named instrument, and
+      ending a war depends on other parties — the classic outcome-only promise.
+
+  - id: trump-2024-iron-dome
+    ref: "¶210.7"
+    theme: defense
+    quote: >
+      We will replenish our military and build an iron dome missile defense
+      system to ensure that no enemy can strike our homeland.
+    restatement: Build a nationwide "iron dome" missile-defense system over the US.
+    metric:
+      present: true
+      quantity: whether the system is built/fielded (binary)
+      record: DoD/MDA program milestones and budgets
+    threshold:
+      present: true
+      stated: build it / no enemy can strike the homeland
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: fund and build the system domestically
+    measurable: "partial"
+    notes: >
+      Trackable as a defense-program milestone, but "no enemy can strike the
+      homeland" is an unfalsifiable coverage claim, there is no deadline, and
+      "an iron dome" over a continent-sized country has no defined completion
+      point.
+
+  - id: trump-2024-womens-sports
+    ref: "¶217.1-217.2"
+    theme: culture
+    quote: >
+      We will not have men playing in women's sports. That will end
+      immediately.
+    restatement: End transgender participation in women's sports immediately.
+    metric:
+      present: true
+      quantity: whether a barring policy is enacted (binary)
+      record: federal Title IX rule / executive order
+    threshold:
+      present: true
+      stated: end / to zero
+    deadline:
+      present: false
+      stated: immediately (bounded-but-undated, not a real deadline per this file)
+    instrument:
+      present: true
+      stated: executive/regulatory action
+    measurable: "partial"
+    notes: >
+      Threshold is present and "immediately" signals urgency but is not a real
+      deadline (per this file's convention); the object is a yes/no policy
+      rather than a measured quantity, and enforcement reach (federal funding
+      leverage vs. actual participation) is the disputed boundary.
+
+  - id: trump-2024-cancer-cures
+    ref: "¶215.1"
+    theme: health
+    quote: >
+      We will unleash the power of American innovation, and as we do, we will
+      soon be on the verge of finding the cures to cancer, Alzheimer's disease
+      and many other diseases.
+    restatement: Approach cures for cancer, Alzheimer's, and other diseases.
+    metric:
+      present: false
+      quantity: "\"cures\" and \"on the verge\" have no agreed measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: soon
+    instrument:
+      present: false
+      stated: "\"unleash American innovation\" — no named action"
+    measurable: "no"
+    notes: >
+      Aspirational — "on the verge of finding cures" pins no quantity, no
+      target, no date, and no instrument. The far end of the scale, with a
+      hedge ("on the verge") that is unfalsifiable by design.
+
+  - id: trump-2024-cities
+    ref: "¶218.1"
+    theme: crime
+    quote: >
+      And we will restore and renovate our nation's once-great cities, making
+      them safe, clean and beautiful again.
+    restatement: Restore US cities to be safe, clean, and beautiful.
+    metric:
+      present: false
+      quantity: "\"safe, clean and beautiful\" has no agreed measure (crime rates only partly capture it)"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"restore and renovate\" — no named mechanism"
+    measurable: "no"
+    notes: >
+      Pure aspiration — no quantity, no threshold, no deadline, no instrument.
+      Crime statistics touch "safe," but "clean and beautiful" resists any
+      series, so the promise as a whole doesn't attach to a metric.
+
+  - id: trump-2024-hostages
+    ref: "¶208.1"
+    theme: foreign-policy
+    quote: >
+      we want our hostages back — and they better be back before I assume
+      office, or you will be paying a very big price.
+    restatement: Get American hostages returned before Inauguration Day.
+    metric:
+      present: true
+      quantity: number of American hostages held abroad
+      record: State Dept / SPEHA hostage-recovery reporting
+    threshold:
+      present: true
+      stated: all back / to zero
+    deadline:
+      present: true
+      stated: "before I assume office (before 20 Jan 2025)"
+    instrument:
+      present: true
+      stated: threat of "a very big price" — coercion, an outcome he can't fully control
+    measurable: "full"
+    notes: >
+      All four ingredients are present — a countable metric, a to-zero
+      threshold, and a hard date — yet it's an outcome-only promise (release
+      depends on captors) and "our hostages" is an undefined set, which is
+      exactly the disputed boundary.
+
+  - id: trump-2024-green-redirect
+    ref: "¶123.1"
+    theme: fiscal
+    quote: >
+      And all of the trillions of dollars that are sitting there not yet spent,
+      we will redirect that money for important projects like roads, bridges,
+      dams and we will not allow it to be spent on the meaningless Green New
+      scam ideas.
+    restatement: Redirect unspent "Green New Deal" funds to roads, bridges, and dams.
+    metric:
+      present: true
+      quantity: reallocation of appropriated funds (binary/budget outlays)
+      record: OMB/agency obligation and outlay data
+    threshold:
+      present: true
+      stated: redirect all unspent funds (direction)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: redirect / rescind and reprogram appropriations
+    measurable: "partial"
+    notes: >
+      Obligation data can track reallocation, but "all of the trillions ...
+      not yet spent" has no defined baseline, no deadline, and much of it is
+      already legally obligated — the accounting boundary is the dispute.
+
+  - id: trump-2024-incomes-prosper
+    ref: "¶149.1"
+    theme: economy
+    quote: >
+      Under my plan, incomes will skyrocket, inflation will vanish completely,
+      jobs will come roaring back, and the middle class will prosper like never,
+      ever before and we're going to do it very rapidly.
+    restatement: Incomes skyrocket, inflation vanishes completely, jobs return, middle class prospers.
+    metric:
+      present: true
+      quantity: real household incomes; inflation rate; employment
+      record: Census real median household income; BLS CPI; BLS payrolls
+    threshold:
+      present: true
+      stated: "\"skyrocket\" / \"vanish completely\" (to zero for inflation) / \"roaring back\""
+    deadline:
+      present: false
+      stated: very rapidly
+    instrument:
+      present: false
+      stated: "\"my plan\" — no named mechanism in this sentence"
+    measurable: "partial"
+    notes: >
+      Rich, well-tracked metrics, and "inflation will vanish completely" is a
+      genuine to-zero threshold — but "skyrocket"/"roaring back" set no level,
+      "very rapidly" no date, and no instrument is named, so most of it stays
+      unpinned.

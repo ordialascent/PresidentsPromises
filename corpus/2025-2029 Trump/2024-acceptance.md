@@ -563,7 +563,7 @@ source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Pr
 1. So tonight, I make this pledge to the great people of America.
 
 ## ¶83
-1. I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy .
+1. I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy.
 2. We will drill, baby, drill.
 3. Can you believe what they're doing?
 
