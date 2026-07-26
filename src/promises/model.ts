@@ -34,6 +34,20 @@ export interface TermSummary {
   promises: CorpusPromise[];
 }
 
+export interface TopicCount {
+  theme: string;
+  count: number;
+}
+
+/** Promise count per topic across all terms, largest first (ties alphabetical). */
+export function topicCounts(terms: CorpusTerm[]): TopicCount[] {
+  const m = new Map<string, number>();
+  for (const t of terms) for (const p of t.promises) m.set(p.theme, (m.get(p.theme) ?? 0) + 1);
+  return [...m.entries()]
+    .map(([theme, count]) => ({ theme, count }))
+    .sort((a, b) => b.count - a.count || a.theme.localeCompare(b.theme));
+}
+
 export function summarize(terms: CorpusTerm[]): TermSummary[] {
   return terms.map((t) => {
     const counts: Record<Quality, number> = { full: 0, partial: 0, no: 0 };
