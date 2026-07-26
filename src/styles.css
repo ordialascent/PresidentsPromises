@@ -14,14 +14,14 @@
      president — NOT kept/broken, NOT a party coding. `-line` variants are
      lightened only so connectors/edges stay visible on the dark theme. */
   --q-full: #b31942;
-  --q-partial: #0a3161;
-  --q-no: #ffffff;
+  --q-partial: #ffffff;
+  --q-no: #0a3161;
   --q-full-line: #e05c7e;
-  --q-partial-line: #6f8fc0;
-  --q-no-line: #ffffff;
+  --q-partial-line: #ffffff;
+  --q-no-line: #6f8fc0;
   --q-full-ink: #ffffff;
-  --q-partial-ink: #ffffff;
-  --q-no-ink: #0c1116;
+  --q-partial-ink: #0c1116;
+  --q-no-ink: #ffffff;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -322,7 +322,7 @@ main {
   opacity: 1 !important;
 }
 /* on the white block, an ink outline is invisible — use the dark base */
-.pc-seg[data-q="no"][data-on="true"] { stroke: var(--bg); }
+.pc-seg[data-q="partial"][data-on="true"] { stroke: var(--bg); }
 
 .pc-seg-n {
   font-family: var(--font-mono);
@@ -342,8 +342,8 @@ main {
   stroke-dasharray: 3 3;
 }
 .pc-link[data-q="full"] line { stroke: var(--q-full-line); }
-.pc-link[data-q="partial"] line { stroke: var(--q-partial-line); }
-.pc-link[data-q="no"] line { stroke: var(--q-no-line); opacity: 0.4; }
+.pc-link[data-q="partial"] line { stroke: var(--q-partial-line); opacity: 0.4; }
+.pc-link[data-q="no"] line { stroke: var(--q-no-line); }
 .pc-link-label {
   font-family: var(--font-mono);
   font-size: 10px;
