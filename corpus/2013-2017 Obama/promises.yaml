@@ -1,5 +1,380 @@
-# Promises extracted from Barack Obama's 2012 nomination acceptance speech.
-# Extraction is a later step. Schema: ../README.md and ../2009-2013 Obama/promises.yaml
-# (each promise cited by paragraph.sentence and scored on
-#  metric / threshold / deadline / instrument).
-promises: []
+# Promises extracted from Barack Obama's 2012 nomination acceptance speech
+# (corpus/2013-2017 Obama/2012-acceptance.md). Refs are paragraph.sentence, per
+# corpus/README.md.
+#
+# Each promise is scored on four dimensions — the ingredients that decide
+# whether "was it kept?" can even be asked as a *measured* question:
+#
+#   metric     — is there a named quantity, AND a record that tracks it?
+#   threshold  — a number or an explicit direction ("in half", "to zero", "double")?
+#   deadline   — a date or a bounded period ("in ten years", "by 2020")?
+#   instrument — does he name what HE will DO, or only what WILL happen?
+#
+# measurable:
+#   full     — metric + threshold + deadline all present (even if parametrically
+#              disputed — that dispute is the product, not a disqualifier)
+#   partial  — at least one of the three is missing or too vague to pin down
+#   no       — aspirational; no measurable quantity at all
+# (instrument sharpens accountability: an outcome-only promise is one he can't
+#  fully control. A promise can still be measurable without it.)
+#
+# NOTE: this speech is unusually goal-heavy — Obama explicitly asks voters to
+# "rally around a set of goals" (¶21) and then attaches real numbers and dates
+# to several of them, so it has more "full" promises than most. Two are directly
+# chart-relevant: obama-2012-deficit-4t (¶43.2) is the fiscal/deficit pledge (the
+# FYFSD series the app already uses), and obama-2012-oil-imports-half (¶28.2)
+# repeats the exact parametric shape of his 2008 oil-from-the-Middle-East claim.
+
+promises:
+  - id: obama-2012-manufacturing-jobs
+    ref: "¶25.2"
+    theme: economy
+    quote: >
+      We can help big factories and small businesses double their exports, and
+      if we choose this path, we can create a million new manufacturing jobs in
+      the next 4 years.
+    restatement: Create a million new manufacturing jobs over the next four years.
+    metric:
+      present: true
+      quantity: manufacturing employment
+      record: BLS manufacturing payrolls (attribution to policy is contested)
+    threshold:
+      present: true
+      stated: a million new manufacturing jobs
+    deadline:
+      present: true
+      stated: in the next 4 years (2012 -> 2016)
+    instrument:
+      present: true
+      stated: reward companies that hire at home; help firms double exports
+    measurable: "full"
+    notes: >
+      All four ingredients present, but the count is an outcome he can't fully
+      control and can't be cleanly attributed to the named actions — and the
+      baseline month you measure "a million" from swings the verdict. The
+      "double exports" half is a second, separately-trackable target.
+
+  - id: obama-2012-oil-imports-half
+    ref: "¶28.2"
+    theme: energy
+    quote: >
+      If you choose this path, we can cut our oil imports in half by 2020 and
+      support more than 600,000 new jobs in natural gas alone.
+    restatement: Cut US oil imports in half by 2020; support 600,000+ natural-gas jobs.
+    metric:
+      present: true
+      quantity: US oil imports; natural-gas-sector jobs
+      record: EIA petroleum imports series; BLS employment
+    threshold:
+      present: true
+      stated: in half (oil imports); more than 600,000 (gas jobs)
+    deadline:
+      present: true
+      stated: by 2020
+    instrument:
+      present: true
+      stated: the all-of-the-above energy plan named in ¶28.1 (wind/solar/clean coal/biofuels/gas)
+    measurable: "full"
+    notes: >
+      The exact parametric shape of his 2008 "end our dependence on oil from the
+      Middle East" pledge — clean number and date, but "in half" needs a baseline
+      year (2008? 2012? gross imports or net?), so which series and baseline you
+      pick decides whether it was met. A natural companion to the 2008 entry.
+
+  - id: obama-2012-teachers-100k
+    ref: "¶34.2"
+    theme: education
+    quote: >
+      Help me recruit 100,000 math and science teachers within 10 years and
+      improve early childhood education.
+    restatement: Recruit 100,000 math and science teachers within ten years.
+    metric:
+      present: true
+      quantity: number of math and science teachers recruited
+      record: no single official series (NCES staffing counts; program enrollment)
+    threshold:
+      present: true
+      stated: 100,000
+    deadline:
+      present: true
+      stated: within 10 years
+    instrument:
+      present: true
+      stated: a federal teacher-recruitment effort
+    measurable: "full"
+    notes: >
+      Number and deadline are sharp, but the metric is soft: there is no clean,
+      agreed record of "math and science teachers recruited" attributable to the
+      program, so the dispute here is measurement (what counts, and against what
+      baseline) rather than the target itself. The early-childhood half is
+      direction-only.
+
+  - id: obama-2012-community-college-2m
+    ref: "¶34.3"
+    theme: education
+    quote: >
+      Help give 2 million workers the chance to learn skills at their community
+      college that will lead directly to a job.
+    restatement: Give 2 million workers job-focused skills training at community colleges.
+    metric:
+      present: true
+      quantity: workers trained in community-college skills programs
+      record: NCES / community-college enrollment; program participant counts
+    threshold:
+      present: true
+      stated: 2 million workers
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: federal community-college partnerships
+    measurable: "partial"
+    notes: >
+      A clean number and a named instrument, but no deadline, and "the chance to
+      learn skills... that will lead directly to a job" is an eligibility count,
+      not an employment outcome — measurable, but the boundary of what counts is
+      wide open.
+
+  - id: obama-2012-tuition-half
+    ref: "¶34.4"
+    theme: education
+    quote: >
+      Help us work with colleges and universities to cut in half the growth of
+      tuition costs over the next 10 years.
+    restatement: Halve the growth rate of tuition costs over the next ten years.
+    metric:
+      present: true
+      quantity: rate of growth of college tuition
+      record: College Board / BLS tuition CPI
+    threshold:
+      present: true
+      stated: cut in half (the growth rate)
+    deadline:
+      present: true
+      stated: over the next 10 years
+    instrument:
+      present: true
+      stated: work with colleges and universities
+    measurable: "full"
+    notes: >
+      A rate-of-change target, which makes the baseline especially load-bearing:
+      "in half" relative to which prior growth rate, and measured on sticker
+      price or net price? The instrument ("work with") is also weak leverage over
+      an outcome set by thousands of institutions.
+
+  - id: obama-2012-afghanistan-end
+    ref: "¶35.6"
+    theme: foreign-policy
+    quote: >
+      We've blunted the Taliban's momentum in Afghanistan, and in 2014, our
+      longest war will be over.
+    restatement: End the war in Afghanistan by 2014.
+    metric:
+      present: true
+      quantity: US troop levels / combat-mission status in Afghanistan
+      record: DoD troop-strength reports
+    threshold:
+      present: true
+      stated: the war "will be over" (end / drawdown)
+    deadline:
+      present: true
+      stated: in 2014
+    instrument:
+      present: true
+      stated: the announced withdrawal timeline (reaffirmed in ¶41.3)
+    measurable: "full"
+    notes: >
+      A dated end-state on a measurable quantity — but "the war will be over" has
+      no agreed definition (combat mission ended? all troops out? which counts
+      as "over"?), and US forces remained past 2014, so the verdict turns
+      entirely on how you define the endpoint.
+
+  - id: obama-2012-deficit-4t
+    ref: "¶43.2"
+    theme: fiscal
+    quote: >
+      Independent experts say that my plan would cut our deficit by $4 trillion.
+    restatement: Cut the deficit by $4 trillion under his budget plan.
+    metric:
+      present: true
+      quantity: the federal deficit / cumulative deficit reduction
+      record: CBO/OMB; FRED FYFSD (the series already in the app)
+    threshold:
+      present: true
+      stated: by $4 trillion
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: his budget plan (attributed to "independent experts")
+    measurable: "partial"
+    notes: >
+      The fiscal promise in this speech and a direct chart candidate — but note
+      what is NOT said: no time window (the usual "$4 trillion" was a 10-year
+      figure, but the speech omits it) and no baseline against which the cut is
+      measured, which is precisely the parameter the app lets the reader move.
+      "Cut the deficit by $4T" is also ambiguous between reducing the deficit and
+      reducing the debt.
+
+  - id: obama-2012-tax-reform-250k
+    ref: "¶44.1"
+    theme: taxes
+    quote: >
+      I want to reform the Tax Code so that it's simple, fair, and asks the
+      wealthiest households to pay higher taxes on incomes over $250,000, the
+      same rate we had when Bill Clinton was President
+    restatement: Reform the tax code; raise rates on income over $250,000 to Clinton-era levels.
+    metric:
+      present: true
+      quantity: top marginal tax rate on income over $250,000
+      record: enacted IRC rate schedules
+    threshold:
+      present: true
+      stated: higher taxes over $250,000 (the Clinton-era rate)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: reform the tax code (legislation)
+    measurable: "partial"
+    notes: >
+      A specific rate on a specific bracket with a clean record, but no deadline,
+      and "reform the Tax Code so that it's simple, fair" bundles an unmeasurable
+      aspiration onto the pin-downable rate change. Measurable mainly as a yes/no
+      on the bracket rate.
+
+  - id: obama-2012-carbon-reduce
+    ref: "¶29.1"
+    theme: energy
+    quote: >
+      And yes, my plan will continue to reduce the carbon pollution that is
+      heating our planet, because climate change is not a hoax.
+    restatement: Continue reducing US carbon pollution.
+    metric:
+      present: true
+      quantity: US greenhouse-gas / carbon emissions
+      record: EPA GHG Inventory; EIA CO2 emissions
+    threshold:
+      present: true
+      stated: "reduce / continue to reduce (direction, no level)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: his climate/energy plan
+    measurable: "partial"
+    notes: >
+      A real metric with excellent records, but only a direction — no target
+      level and no deadline — so "did emissions fall?" is answerable while "did
+      he keep the promise?" has no threshold to test against.
+
+  - id: obama-2012-medicare-no-voucher
+    ref: "¶48.1"
+    theme: health
+    quote: >
+      And I will never—I will never—turn Medicare into a voucher.
+    restatement: Never convert Medicare into a voucher program.
+    metric:
+      present: true
+      quantity: whether Medicare is converted to a voucher/premium-support model (binary)
+      record: enacted Medicare law
+    threshold:
+      present: true
+      stated: never (to zero)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: block any such conversion
+    measurable: "partial"
+    notes: >
+      A negative pledge: measurable only as a yes/no policy outcome, not a
+      quantity over time. The disputed boundary is definitional — what would
+      count as "turning Medicare into a voucher" (full privatization? premium
+      support? means-testing?).
+
+  - id: obama-2012-medicare-strengthen
+    ref: "¶48.4"
+    theme: health
+    quote: >
+      Yes, we will reform and strengthen Medicare for the long haul, but we'll do
+      it by reducing the cost of health care, not by asking seniors to pay
+      thousands of dollars more.
+    restatement: Strengthen Medicare by cutting health-care costs, not raising seniors' costs.
+    metric:
+      present: true
+      quantity: Medicare costs; out-of-pocket costs for seniors
+      record: CMS National Health Expenditure; Medicare trustees' reports
+    threshold:
+      present: true
+      stated: "reduce cost / not thousands more (direction)"
+    deadline:
+      present: false
+      stated: "\"for the long haul\" — unbounded, not a deadline"
+    instrument:
+      present: true
+      stated: reduce the cost of health care
+    measurable: "partial"
+    notes: >
+      Good metrics and records, but the threshold is directional and "for the
+      long haul" is explicitly open-ended, so there is no bounded period to test.
+      "Thousands of dollars more" hints at a magnitude but pins no baseline.
+
+  - id: obama-2012-social-security
+    ref: "¶49.1"
+    theme: social-security
+    quote: >
+      And we will keep the promise of Social Security by taking the responsible
+      steps to strengthen it, not by turning it over to Wall Street.
+    restatement: Strengthen Social Security without privatizing it.
+    metric:
+      present: true
+      quantity: Social Security trust-fund solvency
+      record: SSA/OASDI trustees' reports
+    threshold:
+      present: false
+      stated: "\"strengthen\" — no solvency target or horizon"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"responsible steps\" (unnamed); rules out privatization"
+    measurable: "partial"
+    notes: >
+      A measurable metric (solvency) with a named non-action (no privatization),
+      but no target level, no deadline, and no named positive mechanism — the
+      "responsible steps" are left blank, so only the negative half is testable.
+
+  - id: obama-2012-war-savings-infrastructure
+    ref: "¶42.1"
+    theme: fiscal
+    quote: >
+      I will use the money we're no longer spending on war to pay down our debt
+      and put more people back to work rebuilding roads and bridges and schools
+      and runways.
+    restatement: Redirect war savings to debt reduction and infrastructure jobs.
+    metric:
+      present: true
+      quantity: federal debt; infrastructure spending / jobs
+      record: Treasury debt; BEA/BLS construction outlays and employment
+    threshold:
+      present: true
+      stated: "pay down / put back to work (direction, no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: redirect drawdown savings ("the money we're no longer spending on war")
+    measurable: "partial"
+    notes: >
+      A compound promise (debt + infrastructure) built on the "peace dividend"
+      framing — but the "war savings" are a contested accounting construct (much
+      was borrowed, not banked), and there is no number or deadline on either
+      half.

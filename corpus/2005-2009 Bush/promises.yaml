@@ -1,5 +1,507 @@
-# Promises extracted from George W. Bush's 2004 nomination acceptance speech.
-# Extraction is a later step. Schema: ../README.md and ../2009-2013 Obama/promises.yaml
-# (each promise cited by paragraph.sentence and scored on
-#  metric / threshold / deadline / instrument).
-promises: []
+# Promises extracted from George W. Bush's 2004 nomination acceptance speech
+# (corpus/2005-2009 Bush/2004-acceptance.md). Refs are paragraph.sentence, per
+# corpus/README.md.
+#
+# Each promise is scored on four dimensions — the ingredients that decide
+# whether "was it kept?" can even be asked as a *measured* question:
+#
+#   metric     — is there a named quantity, AND a record that tracks it?
+#   threshold  — a number or an explicit direction ("double", "to zero", "every")?
+#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
+#   instrument — does he name what HE will DO, or only what WILL happen?
+#
+# measurable:
+#   full     — metric + threshold + deadline all present (even if parametrically
+#              disputed — that dispute is the product, not a disqualifier)
+#   partial  — at least one of the three is missing or too vague to pin down
+#   no       — aspirational; no measurable quantity at all
+# (instrument sharpens accountability: an outcome-only promise is one he can't
+#  fully control. A promise can still be measurable without it.)
+#
+# NOTE: this speech recurrently frames domestic pledges "in a new term" — a
+# bounded period that counts as a deadline ("by end of term"), so several
+# otherwise-vague pledges carry a real time bound even where no number does.
+
+promises:
+  - id: bush-2004-homes-ownership
+    ref: "¶26.2"
+    theme: housing
+    quote: >
+      Tonight we set a new goal: 7 million more affordable homes in the next 10
+      years so more American families will be able to open the door and say,
+      "Welcome to my home."
+    restatement: Add 7 million more affordable homes over the next ten years.
+    metric:
+      present: true
+      quantity: number of affordable / owner-occupied homes added
+      record: Census homeownership & housing-unit series; HUD affordable-housing counts
+    threshold:
+      present: true
+      stated: 7 million more
+    deadline:
+      present: true
+      stated: in the next 10 years (2004 -> ~2014)
+    instrument:
+      present: true
+      stated: "\"we set a new goal\" — a national goal, no specific federal program named"
+    measurable: "full"
+    notes: >
+      The one cleanly-shaped promise here, and exactly the Obama oil-import
+      shape: a number and a decade, all four ingredients nominally present — but
+      "affordable homes" has no agreed definition (units built? net homeownership
+      gain? added to which baseline?), so the boundary you pick swings the
+      verdict, and the instrument is only a stated goal, not a named mechanism.
+
+  - id: bush-2004-health-centers
+    ref: "¶22.4"
+    theme: health
+    quote: >
+      In a new term, I will ensure every poor county in America has a community
+      or rural health center.
+    restatement: Give every poor county a community or rural health center within the term.
+    metric:
+      present: true
+      quantity: number of poor counties lacking a community/rural health center
+      record: HRSA health-center program site/coverage data
+    threshold:
+      present: true
+      stated: every poor county (to zero without)
+    deadline:
+      present: true
+      stated: in a new term (by end of term, ~Jan 2009)
+    instrument:
+      present: true
+      stated: "\"I will ensure\" — federal health-center funding/expansion"
+    measurable: "full"
+    notes: >
+      Metric, an absolute threshold, and a term-bounded deadline all present.
+      The disputed boundary is entirely in the definitions — what counts as a
+      "poor county" and what counts as a qualifying "community or rural health
+      center" (a full site, an access point, a subsidized clinic?).
+
+  - id: bush-2004-job-training-double
+    ref: "¶19.1-19.3"
+    theme: labor
+    quote: >
+      Another priority in a new term will be to help workers take advantage of
+      the expanding economy to find better and higher paying jobs. [...] So we
+      will double the number of people served by our principal job training
+      program and increase funding for our community colleges.
+    restatement: Double the number served by the principal job-training program in a new term.
+    metric:
+      present: true
+      quantity: people served by the principal federal job-training program
+      record: DoL/ETA WIA (Workforce Investment Act) participant counts
+    threshold:
+      present: true
+      stated: double (100% increase)
+    deadline:
+      present: true
+      stated: in a new term (from the ¶19.1 framing)
+    instrument:
+      present: true
+      stated: increased federal training funding
+    measurable: "full"
+    notes: >
+      "Double" is a clean directional threshold and the deadline rides in on the
+      paragraph's "in a new term" framing, so it grades full — but the baseline
+      year the doubling is measured from, and which program counts as "our
+      principal job training program," are the open parameters. The community-
+      college half is only "increase funding" (direction, no number).
+
+  - id: bush-2004-tax-reform
+    ref: "¶18.3"
+    theme: taxes
+    quote: >
+      In a new term, I will lead a bipartisan effort to reform and simplify the
+      Federal Tax Code.
+    restatement: Lead a bipartisan effort to reform and simplify the tax code.
+    metric:
+      present: false
+      quantity: no clean quantity ("simpler, fairer, progrowth" has no agreed measure)
+      record: null
+    threshold:
+      present: true
+      stated: simpler / fairer (direction only, no number)
+    deadline:
+      present: true
+      stated: in a new term
+    instrument:
+      present: true
+      stated: "\"lead a bipartisan effort\" — legislative push"
+    measurable: "partial"
+    notes: >
+      A term-bounded deadline and a named instrument, but "reform and simplify"
+      is a direction with no metric and no threshold — measurable only as "did a
+      tax-reform bill pass?", a yes/no, not a tracked quantity.
+
+  - id: bush-2004-tax-relief-permanent
+    ref: "¶17.4"
+    theme: taxes
+    quote: >
+      To create jobs, my plan will encourage investment and expansion by
+      restraining Federal spending, reducing regulation, and making the tax
+      relief permanent.
+    restatement: Restrain spending, cut regulation, and make the tax cuts permanent.
+    metric:
+      present: false
+      quantity: three bundled aims, no single quantity (spending, regulation, tax permanence)
+      record: null
+    threshold:
+      present: true
+      stated: restrain / reduce / make permanent (directions, no numbers)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: his fiscal/legislative plan
+    measurable: "partial"
+    notes: >
+      A compound of three directional aims with a named instrument but no number
+      and no deadline. "Making the tax relief permanent" is a clean yes/no; the
+      spending-restraint half has a record (outlays) but no target the promise
+      pins it to.
+
+  - id: bush-2004-energy-imports
+    ref: "¶17.5"
+    theme: energy
+    quote: >
+      To create jobs, we will make our country less dependent on foreign sources
+      of energy.
+    restatement: Reduce US dependence on foreign energy.
+    metric:
+      present: true
+      quantity: energy / oil imports as a share of consumption
+      record: EIA imports and net-import-share series
+    threshold:
+      present: true
+      stated: "\"less dependent\" — direction only, no number"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"we will make\" — no named mechanism"
+    measurable: "partial"
+    notes: >
+      The instructive contrast with Obama's fully-shaped "end our dependence on
+      oil from the Middle East in ten years": same metric and record, but here
+      only a direction ("less"), no number, no deadline, and no instrument —
+      the same subject stripped of everything that would make it gradable.
+
+  - id: bush-2004-small-biz-health
+    ref: "¶21.3"
+    theme: health
+    quote: >
+      In a new term, we must allow small firms to join together to purchase
+      insurance at the discounts available to big companies.
+    restatement: Let small firms pool to buy insurance at large-employer discounts.
+    metric:
+      present: false
+      quantity: policy action (association health plans enacted), not a quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: true
+      stated: in a new term
+    instrument:
+      present: true
+      stated: change law to permit association health plans
+    measurable: "partial"
+    notes: >
+      A named instrument with a term deadline, but no metric and no threshold —
+      measurable only as "did association-health-plan legislation pass?" The
+      disputed boundary is what qualifies as the promised pooling authority.
+
+  - id: bush-2004-hsa-taxcredit
+    ref: "¶22.1"
+    theme: health
+    quote: >
+      We will offer a tax credit to encourage small businesses and their
+      employees to set up health savings accounts and provide direct help for
+      low-income Americans to purchase them.
+    restatement: Create a tax credit to spread health savings accounts, with help for low-income buyers.
+    metric:
+      present: true
+      quantity: HSA enrollment / accounts opened (uptake)
+      record: Treasury/IRS HSA data; industry HSA census
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: a new tax credit plus direct subsidies
+    measurable: "partial"
+    notes: >
+      A clear instrument and a trackable uptake metric, but no target number and
+      no deadline — "encourage" sets no level the promise can be held to.
+
+  - id: bush-2004-medical-liability
+    ref: "¶23.2"
+    theme: health
+    quote: >
+      To make health care more affordable and accessible, we must pass medical
+      liability reform now.
+    restatement: Pass medical liability (malpractice) reform.
+    metric:
+      present: false
+      quantity: policy action (federal malpractice reform enacted), not a quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: "\"now\" is urgency, not a bounded deadline"
+    instrument:
+      present: true
+      stated: pass federal liability-reform legislation
+    measurable: "partial"
+    notes: >
+      "Now" reads as a deadline but functions like Obama's "immediately/soon" —
+      urgency, not a date — so it does not count. A yes/no policy outcome with no
+      quantity behind it.
+
+  - id: bush-2004-comptime-flextime
+    ref: "¶24.2"
+    theme: labor
+    quote: >
+      In a new term, we will change outdated labor laws to offer comp-time and
+      flex-time.
+    restatement: Change labor law to allow comp-time and flex-time.
+    metric:
+      present: false
+      quantity: policy action (labor-law change), not a quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: true
+      stated: in a new term
+    instrument:
+      present: true
+      stated: amend federal labor law
+    measurable: "partial"
+    notes: >
+      Named instrument and a term deadline, but no metric and no threshold — a
+      binary "did the law change?" The scope of "comp-time and flex-time" is the
+      only thing to adjudicate.
+
+  - id: bush-2004-opportunity-zones
+    ref: "¶20.2-20.3"
+    theme: economy
+    quote: >
+      To stand with workers in poor communities and those that have lost
+      manufacturing, textile, and other jobs, we will create American
+      opportunity zones. In these areas, we will provide tax relief and other
+      incentives [...]
+    restatement: Create "American opportunity zones" with tax relief and incentives for distressed areas.
+    metric:
+      present: false
+      quantity: policy action (zones created), not a tracked quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: create zones offering tax relief and incentives
+    measurable: "partial"
+    notes: >
+      A concrete instrument but no number, no deadline, and no metric — gradable
+      only as "were the zones created?" What counts as an "opportunity zone" (and
+      how many) is left entirely open.
+
+  - id: bush-2004-ss-personal-accounts
+    ref: "¶27.4"
+    theme: social-security
+    quote: >
+      We must strengthen Social Security by allowing younger workers to save
+      some of their taxes in a personal account, a nest egg you can call your own
+      and Government can never take away.
+    restatement: Let younger workers divert some payroll taxes into personal Social Security accounts.
+    metric:
+      present: false
+      quantity: policy action (private-account law enacted), not a quantity
+      record: null
+    threshold:
+      present: true
+      stated: "\"some of their taxes\" — a direction with no magnitude"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: create personal retirement accounts within Social Security
+    measurable: "partial"
+    notes: >
+      A named instrument, but "some of their taxes" fixes no share and there is
+      no deadline — the yes/no of whether private accounts were ever enacted (they
+      were not) is all that can be measured.
+
+  - id: bush-2004-child-health-enroll
+    ref: "¶32.2"
+    theme: health
+    quote: >
+      In a new term, we will lead an aggressive effort to enroll millions of poor
+      children who are eligible but not signed up for the Government's health
+      insurance programs.
+    restatement: Enroll millions of eligible-but-unenrolled poor children in public health insurance.
+    metric:
+      present: true
+      quantity: children newly enrolled in Medicaid/SCHIP
+      record: CMS Medicaid/SCHIP enrollment data
+    threshold:
+      present: true
+      stated: "\"millions\" — a soft number, no precise target or baseline"
+    deadline:
+      present: true
+      stated: in a new term
+    instrument:
+      present: true
+      stated: "\"an aggressive effort\" — federal enrollment/outreach push"
+    measurable: "partial"
+    notes: >
+      Metric, deadline, and instrument are all present, so this comes closest of
+      the domestic pledges to full — but "millions" is an unquantified target with
+      no baseline, so the threshold is too soft to pin, holding it at partial.
+
+  - id: bush-2004-pell-grants
+    ref: "¶31.6"
+    theme: education
+    quote: >
+      By raising performance in our high schools and expanding Pell grants for
+      low- and middle-income families, we will help more Americans start their
+      career with a college diploma.
+    restatement: Expand Pell grants to raise college completion.
+    metric:
+      present: true
+      quantity: Pell grant recipients / maximum award; college completion
+      record: Dept. of Education Federal Pell Grant program data
+    threshold:
+      present: true
+      stated: "\"expanding\" / \"more\" — direction only"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: increase Pell grant funding/eligibility
+    measurable: "partial"
+    notes: >
+      Real metric and record, but only a direction ("expanding", "more") and no
+      deadline. The college-diploma half is an outcome he can't fully control and
+      can't cleanly attribute to the Pell change.
+
+  - id: bush-2004-hs-graduation-exam
+    ref: "¶31.5"
+    theme: education
+    quote: >
+      As we make progress, we will require a rigorous exam before graduation.
+    restatement: Require a rigorous exam before high-school graduation.
+    metric:
+      present: false
+      quantity: policy action (a required exam), not a quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: a federal graduation-exam requirement
+    measurable: "partial"
+    notes: >
+      A named instrument with no number and no deadline. Beyond that, high-school
+      graduation exams sit largely with the states, so "we will require" names an
+      action whose federal reach is itself contestable — a yes/no at best.
+
+  - id: bush-2004-troops-return
+    ref: "¶47.5"
+    theme: foreign-policy
+    quote: >
+      And then our troops will return home with the honor they have earned.
+    restatement: Bring the troops home once Afghanistan and Iraq reach stability.
+    metric:
+      present: true
+      quantity: US troop levels in Iraq/Afghanistan
+      record: DoD troop-strength reports
+    threshold:
+      present: false
+      stated: "\"return home\" implies to zero, but no level or count is stated"
+    deadline:
+      present: false
+      stated: "\"then\" — conditioned on stability, not dated"
+    instrument:
+      present: false
+      stated: "outcome-framed (\"our troops will return\"), no action he names"
+    measurable: "partial"
+    notes: >
+      The same shape as Obama's Iraq pledge: troop levels are perfectly
+      measurable, but the promise attaches no number and no date — withdrawal is
+      made contingent on "stability and democracy" ("then"), an outcome, not a
+      deadline.
+
+  - id: bush-2004-strict-judges
+    ref: "¶38.4"
+    theme: judiciary
+    quote: >
+      I will continue to appoint Federal judges who know the difference between
+      personal opinion and the strict interpretation of the law.
+    restatement: Keep appointing strict-constructionist federal judges.
+    metric:
+      present: false
+      quantity: judicial philosophy has no agreed measure
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: judicial nominations/appointments (a named action)
+    measurable: "no"
+    notes: >
+      A named instrument he genuinely controls, but the standard — judges who
+      "know the difference between personal opinion and the strict interpretation
+      of the law" — is a value judgment with no metric, number, or deadline. Like
+      Obama's paid-leave pledge: a real action attached to no measurable quantity.
+
+  - id: bush-2004-preempt-threats
+    ref: "¶44.6"
+    theme: foreign-policy
+    quote: >
+      We must and we will confront threats to America before it is too late.
+    restatement: Confront threats pre-emptively, before they materialize.
+    metric:
+      present: false
+      quantity: none
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: null
+    measurable: "no"
+    notes: >
+      The statement of the pre-emption doctrine — a forward commitment in force,
+      but pure posture: no quantity, no threshold, no deadline, no named
+      instrument. The zero-of-four anchor at the aspirational end of the scale.

@@ -1,5 +1,480 @@
-# Promises extracted from George W. Bush's 2000 nomination acceptance speech.
-# Extraction is a later step. Schema: ../README.md and ../2009-2013 Obama/promises.yaml
-# (each promise cited by paragraph.sentence and scored on
-#  metric / threshold / deadline / instrument).
-promises: []
+# Promises extracted from George W. Bush's 2000 nomination acceptance speech
+# (corpus/2001-2005 Bush/2000-acceptance.md). Refs are paragraph.sentence, per
+# corpus/README.md.
+#
+# Each promise is scored on four dimensions — the ingredients that decide
+# whether "was it kept?" can even be asked as a *measured* question:
+#
+#   metric     — is there a named quantity, AND a record that tracks it?
+#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
+#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
+#   instrument — does he name what HE will DO, or only what WILL happen?
+#
+# measurable:
+#   full     — metric + threshold + deadline all present (even if parametrically
+#              disputed — that dispute is the product, not a disqualifier)
+#   partial  — at least one of the three is missing or too vague to pin down
+#   no       — aspirational; no measurable quantity at all
+# (instrument sharpens accountability: an outcome-only promise is one he can't
+#  fully control. A promise can still be measurable without it.)
+
+promises:
+  - id: bush-2000-medicare-drugs
+    ref: "¶42.2"
+    theme: health
+    quote: >
+      We will set it on firm financial ground and make prescription drugs
+      available and affordable for every senior who needs them.
+    restatement: Put Medicare on firm financial ground and make prescription drugs available and affordable for every senior.
+    metric:
+      present: true
+      quantity: Medicare solvency; share of seniors with affordable drug coverage
+      record: Medicare Trustees reports; CMS Part D enrollment (from 2006)
+    threshold:
+      present: true
+      stated: "for every senior who needs them (universal, direction) — no dollar figure"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: Medicare reform and a prescription-drug benefit
+    measurable: "partial"
+    notes: >
+      Real records exist and the 2003 Medicare Modernization Act created a drug
+      benefit, but "firm financial ground" sets no target solvency level,
+      "available and affordable" gives no baseline or magnitude, and there is no
+      deadline. "Every senior who needs them" is the disputed boundary.
+
+  - id: bush-2000-socialsecurity-preserve
+    ref: "¶44.1-44.2"
+    theme: fiscal
+    quote: >
+      To the seniors in this country, you earned your benefits, you made your
+      plans, and President George W. Bush will keep the promise of Social
+      Security. No changes, no reductions, no way.
+    restatement: Preserve current Social Security benefits for today's seniors with no cuts.
+    metric:
+      present: true
+      quantity: scheduled Social Security benefit levels for current retirees
+      record: SSA benefit schedules / OASDI Trustees data
+    threshold:
+      present: true
+      stated: "No changes, no reductions (zero cuts, direction)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: protect the current-benefit guarantee ("keep the promise")
+    measurable: "partial"
+    notes: >
+      A clear zero-cut direction against a trackable benefit schedule, but it is
+      scoped only to current seniors, carries no date, and "the promise of Social
+      Security" is left undefined against the program's long-run solvency gap —
+      the very boundary the personal-accounts pledge below actually contests.
+
+  - id: bush-2000-socialsecurity-accounts
+    ref: "¶47.1"
+    theme: fiscal
+    quote: >
+      For younger workers, we will give you the option, your choice, to put part
+      of your payroll taxes into sound, responsible investments.
+    restatement: Let younger workers divert part of their payroll taxes into voluntary personal investment accounts.
+    metric:
+      present: true
+      quantity: whether personal accounts are enacted (binary), not a trend
+      record: enacted Social Security law
+    threshold:
+      present: true
+      stated: "part of your payroll taxes (direction/portion) — no percentage"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: create voluntary personal retirement accounts
+    measurable: "partial"
+    notes: >
+      Measurable only as a yes/no policy outcome, not a quantity over time; "part
+      of your payroll taxes" states a direction but no share, and there is no
+      deadline. (The proposal reached Congress in 2005 and died there — a clean
+      binary verdict, but not a measured trend.)
+
+  - id: bush-2000-death-tax
+    ref: "¶58.3"
+    theme: taxes
+    quote: >
+      On principle, every family, every farmer and small-business person should
+      be free to pass on their life's work to those they love, so we will abolish
+      the death tax.
+    restatement: Abolish the estate ("death") tax.
+    metric:
+      present: true
+      quantity: whether the estate tax is repealed (binary)
+      record: enacted tax law (estate-tax provisions)
+    threshold:
+      present: true
+      stated: abolish / to zero
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: repeal the estate tax
+    measurable: "partial"
+    notes: >
+      A clean to-zero policy target with a real legislative record, but no
+      deadline. The disputed boundary is what counts as kept: EGTRRA (2001) only
+      phased the tax out for a single year (2010) before it snapped back, so
+      "abolish" versus "temporarily zero out" is the live dispute.
+
+  - id: bush-2000-tax-rates-allbrackets
+    ref: "¶59.1"
+    theme: taxes
+    quote: >
+      On principle, no one in America should have to pay more than a third of
+      their income to the federal government, so we will reduce tax rates for
+      everyone in every bracket.
+    restatement: Cut income-tax rates in every bracket, with no rate exceeding a third of income.
+    metric:
+      present: true
+      quantity: statutory marginal tax rates by bracket
+      record: IRS / statutory rate schedules
+    threshold:
+      present: true
+      stated: "everyone in every bracket (direction); no more than a third (~33% ceiling)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: cut statutory income-tax rates
+    measurable: "partial"
+    notes: >
+      Direction is unambiguous and rates are perfectly recorded, and the "no more
+      than a third" cap adds a ceiling — but there is no deadline and no stated
+      size of cut per bracket, and the cap is voiced as a principle rather than a
+      dated target, so it stops short of "full."
+
+  - id: bush-2000-bottom-rate-child-credit
+    ref: "¶60.1"
+    theme: taxes
+    quote: >
+      On principle, those with the greatest need should receive the greatest
+      help, so we will lower the bottom rate from 15 percent to 10 percent and
+      double the child credit.
+    restatement: Cut the bottom income-tax rate from 15% to 10% and double the child tax credit.
+    metric:
+      present: true
+      quantity: the bottom statutory rate; the child tax credit amount
+      record: statutory rate schedule; IRC child-credit provision
+    threshold:
+      present: true
+      stated: "from 15 percent to 10 percent; double the child credit"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: statutory rate cut plus credit increase
+    measurable: "partial"
+    notes: >
+      The most sharply specified promise in the speech — two exact numeric
+      targets against clean records — but with no deadline it still falls short of
+      "full." The textbook metric-plus-threshold-without-a-deadline case.
+
+  - id: bush-2000-head-start
+    ref: "¶54.1"
+    theme: education
+    quote: >
+      Now is the time to make Head Start an early learning program to teach all
+      our children to read and renew the promise of America's public schools.
+    restatement: Refocus Head Start as an early-learning and reading program.
+    metric:
+      present: false
+      quantity: "\"an early learning program\" has no agreed measure; \"teach all our children to read\" has no record tied to it"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: restructure Head Start toward early literacy
+    measurable: "no"
+    notes: >
+      A named instrument (reorient the program) with no metric, threshold, or
+      deadline — measurable at best as "did the program's mission change?" The
+      reading goal ("teach all our children to read") is aspirational.
+
+  - id: bush-2000-school-accountability
+    ref: "¶53.2-53.3"
+    theme: education
+    quote: >
+      When a school district receives federal funds to teach poor children, we
+      expect them to learn. And if they don't, parents should get the money to
+      make a different choice.
+    restatement: Tie federal school funds to results; let parents redirect the money if schools fail.
+    metric:
+      present: true
+      quantity: achievement of poor children in federally funded (Title I) schools
+      record: NAEP / state assessment results
+    threshold:
+      present: false
+      stated: "\"we expect them to learn\" — no proficiency level"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: federal-funds accountability plus parental choice of the funds
+    measurable: "partial"
+    notes: >
+      A real metric (achievement of poor children, later operationalized by the
+      testing regime of No Child Left Behind), but the promise names no
+      proficiency target and no date, and "parents should get the money" is
+      hedged ("should"), softening the instrument.
+
+  - id: bush-2000-military-means
+    ref: "¶63.1"
+    theme: defense
+    quote: >
+      We will give our military the means to keep the peace, and we will give it
+      one thing more: a commander-in-chief who respects our men and women in
+      uniform and a commander-in-chief who earns their respect.
+    restatement: Give the military the resources to keep the peace, plus respectful leadership.
+    metric:
+      present: false
+      quantity: "\"the means to keep the peace\" names no quantity; the defense budget is trackable but never invoked"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: resource and equip the military
+    measurable: "no"
+    notes: >
+      A named instrument (resource the military) with no quantity, target, or
+      date; the second half ("respects... earns their respect") is pure
+      disposition. The adjacent ¶62.2 gives a direction ("better equipment,
+      better training and better pay") but frames it as a need, not a pledge.
+
+  - id: bush-2000-reduce-nuclear
+    ref: "¶65.1"
+    theme: foreign-policy
+    quote: >
+      I will work to reduce nuclear weapons and nuclear tension in the world, to
+      turn these years of influence into decades of peace.
+    restatement: Work to reduce nuclear weapons and nuclear tensions.
+    metric:
+      present: true
+      quantity: US (and global) nuclear warhead counts
+      record: arms-control declarations (e.g., START data)
+    threshold:
+      present: true
+      stated: "reduce (direction only, no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"I will work to\" — pledges effort toward reductions (an outcome he cannot fully control)"
+    measurable: "partial"
+    notes: >
+      Warhead counts are measurable and there is a reduce-direction, but no number
+      and no date, and "I will work to" promises effort rather than a result — an
+      outcome-shaped promise whose success depends on other states too.
+
+  - id: bush-2000-missile-defense
+    ref: "¶65.2"
+    theme: defense
+    quote: >
+      And at the earliest possible date, my administration will deploy missile
+      defenses to guard against attack and blackmail.
+    restatement: Deploy missile defenses to protect against attack and blackmail.
+    metric:
+      present: true
+      quantity: whether an operational missile-defense system is deployed (milestone)
+      record: DoD / Missile Defense Agency deployment records
+    threshold:
+      present: true
+      stated: deploy (fielded / operational)
+    deadline:
+      present: false
+      stated: "\"at the earliest possible date\" — bounded-but-undated, not a fixed period"
+    instrument:
+      present: true
+      stated: direct deployment by his administration
+    measurable: "partial"
+    notes: >
+      A deploy-or-not milestone he directly controls, but "at the earliest
+      possible date" is an intention to hurry, not a deadline, so it cannot score
+      "full." The disputed boundary is what counts as "deploy" — initial
+      ground-based interceptors versus a full shield.
+
+  - id: bush-2000-health-tax-credits
+    ref: "¶92.1"
+    theme: health
+    quote: >
+      We will give low-income Americans tax credits to buy the private health
+      insurance they need and deserve.
+    restatement: Give low-income Americans tax credits to buy private health insurance.
+    metric:
+      present: true
+      quantity: whether the credits are enacted (binary); low-income uninsured rate
+      record: enacted tax law; Census/CPS uninsured rate
+    threshold:
+      present: false
+      stated: "no credit amount and no coverage target"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: refundable health-insurance tax credits
+    measurable: "partial"
+    notes: >
+      Measurable as a yes/no enactment with a real record, but no dollar amount,
+      no coverage target, and no deadline; "low-income Americans" is the undefined
+      boundary.
+
+  - id: bush-2000-housing-ownership
+    ref: "¶93.1"
+    theme: housing
+    quote: >
+      We will transform today's housing rental program to help hundreds of
+      thousands of low-income families find stability and dignity in a home of
+      their own.
+    restatement: Convert rental assistance to help hundreds of thousands of low-income families become homeowners.
+    metric:
+      present: true
+      quantity: number of low-income families moved into homeownership
+      record: HUD homeownership-voucher / program data
+    threshold:
+      present: true
+      stated: "hundreds of thousands (order-of-magnitude count)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: transform the rental-voucher program toward ownership
+    measurable: "partial"
+    notes: >
+      Has a named instrument and a stated quantity ("hundreds of thousands") —
+      closer to full than most here — but the number is an order of magnitude, not
+      a firm target, there is no deadline, and "a home of their own" leaves the
+      success measure loose.
+
+  - id: bush-2000-charitable-incentives
+    ref: "¶98.2"
+    theme: welfare
+    quote: >
+      My administration will give taxpayers new incentives to donate to charity,
+      encourage after-school programs that build character, and support mentoring
+      groups that shape and save young lives.
+    restatement: Create new tax incentives for charitable giving and back after-school and mentoring programs.
+    metric:
+      present: false
+      quantity: a bundle of policy actions; "encourage" and "support" carry no quantity
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: new charitable-giving incentives plus program support
+    measurable: "no"
+    notes: >
+      A cluster of named instruments with no number, target, or date; measurable
+      at best as "did such incentives pass?" The charitable-giving-incentive piece
+      is the only cleanly binary element in the bundle.
+
+  - id: bush-2000-gun-enforcement
+    ref: "¶102.1"
+    theme: crime
+    quote: >
+      We must help protect our children in our schools and streets, and by
+      finally and strictly enforcing our nation's gun laws.
+    restatement: Protect children by strictly enforcing existing gun laws.
+    metric:
+      present: true
+      quantity: federal gun-law prosecutions / enforcement actions
+      record: DOJ / ATF prosecution statistics
+    threshold:
+      present: false
+      stated: "\"strictly\" — a direction with no level"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: enforce existing gun laws (not new legislation)
+    measurable: "partial"
+    notes: >
+      Enforcement volume is trackable (prosecutions), giving a real metric, but
+      "strictly" sets no level and there is no date; "we must" frames it as an
+      obligation more than a personal action. The enforce-not-legislate framing is
+      the notable boundary.
+
+  - id: bush-2000-partial-birth-abortion
+    ref: "¶104.2"
+    theme: abortion
+    quote: >
+      And when Congress sends me a bill against partial-birth abortion, I will
+      sign it into law.
+    restatement: Sign a partial-birth abortion ban if Congress passes one.
+    metric:
+      present: true
+      quantity: whether he signs such a bill (binary)
+      record: enacted legislation / presidential signing record
+    threshold:
+      present: true
+      stated: sign it into law (yes/no)
+    deadline:
+      present: false
+      stated: "conditional on Congress (\"when Congress sends me\"), no date"
+    instrument:
+      present: true
+      stated: presidential signature
+    measurable: "partial"
+    notes: >
+      Cleanly binary and fully within his control once triggered (he signed the
+      Partial-Birth Abortion Ban Act in 2003), but it is conditional on Congress
+      acting and carries no date — a conditional promise where the trigger, not
+      just the timing, is out of his hands.
+
+  - id: bush-2000-tone-of-washington
+    ref: "¶77.5"
+    theme: governance
+    quote: >
+      I want to change the tone of Washington to one of civility and respect.
+    restatement: Change the tone of Washington to civility and respect.
+    metric:
+      present: false
+      quantity: none
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"I want to\" — a wish, with no named mechanism"
+    measurable: "no"
+    notes: >
+      Pure aspiration — no quantity, threshold, deadline, or instrument, and even
+      the verb is a wish. Kept to anchor the aspirational end of the scale, the
+      counterpart to the concrete tax-rate pledges above.
