@@ -100,6 +100,24 @@ promises:
         ...
 ```
 
+## Sources beyond the acceptance speech
+
+Today every promise in a term directory comes from that term's nomination
+acceptance speech, so no promise names its source explicitly — it is implied by
+the directory. As other sources are added (debates, official statements, other
+speeches), a promise names its own with an optional single-line `source:` field,
+and the source document lives alongside the acceptance speech in the same term
+directory (numbered the same way). The app is already source-aware: the overview
+chart carries a `source` per promise (defaulting to the acceptance speech) and
+only surfaces it once a term actually draws on more than one.
+
+```yaml
+  - id: obama-2012-example
+    ref: "12.1"
+    source: 2012 town hall, Denver   # optional; omit for the acceptance speech
+    ...
+```
+
 ## Rules
 
 1. **Verbatim only.** Speech bodies are transcribed from an authoritative

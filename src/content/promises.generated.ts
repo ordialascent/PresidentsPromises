@@ -3,11 +3,19 @@
 
 export type Quality = 'full' | 'partial' | 'no';
 
+/** Where a promise was made. Today always the term's acceptance speech; the
+ *  field exists so other source types can be added without reshaping. */
+export interface PromiseSource {
+  kind: string;
+  label: string;
+}
+
 export interface CorpusPromise {
   id: string;
   theme: string;
   restatement: string;
   quality: Quality;
+  source: PromiseSource;
 }
 
 export interface CorpusTerm {
@@ -42,103 +50,171 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "bush-2000-medicare-drugs",
         "theme": "health",
         "restatement": "Put Medicare on firm financial ground and make prescription drugs available and affordable for every senior.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-socialsecurity-preserve",
         "theme": "fiscal",
         "restatement": "Preserve current Social Security benefits for today's seniors with no cuts.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-socialsecurity-accounts",
         "theme": "fiscal",
         "restatement": "Let younger workers divert part of their payroll taxes into voluntary personal investment accounts.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-death-tax",
         "theme": "taxes",
         "restatement": "Abolish the estate (\"death\") tax.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-tax-rates-allbrackets",
         "theme": "taxes",
         "restatement": "Cut income-tax rates in every bracket, with no rate exceeding a third of income.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-bottom-rate-child-credit",
         "theme": "taxes",
         "restatement": "Cut the bottom income-tax rate from 15% to 10% and double the child tax credit.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-head-start",
         "theme": "education",
         "restatement": "Refocus Head Start as an early-learning and reading program.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-school-accountability",
         "theme": "education",
         "restatement": "Tie federal school funds to results; let parents redirect the money if schools fail.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-military-means",
         "theme": "defense",
         "restatement": "Give the military the resources to keep the peace, plus respectful leadership.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-reduce-nuclear",
         "theme": "foreign-policy",
         "restatement": "Work to reduce nuclear weapons and nuclear tensions.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-missile-defense",
         "theme": "defense",
         "restatement": "Deploy missile defenses to protect against attack and blackmail.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-health-tax-credits",
         "theme": "health",
         "restatement": "Give low-income Americans tax credits to buy private health insurance.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-housing-ownership",
         "theme": "housing",
         "restatement": "Convert rental assistance to help hundreds of thousands of low-income families become homeowners.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-charitable-incentives",
         "theme": "welfare",
         "restatement": "Create new tax incentives for charitable giving and back after-school and mentoring programs.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-gun-enforcement",
         "theme": "crime",
         "restatement": "Protect children by strictly enforcing existing gun laws.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-partial-birth-abortion",
         "theme": "abortion",
         "restatement": "Sign a partial-birth abortion ban if Congress passes one.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       },
       {
         "id": "bush-2000-tone-of-washington",
         "theme": "governance",
         "restatement": "Change the tone of Washington to civility and respect.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2000 acceptance speech"
+        }
       }
     ]
   },
@@ -155,109 +231,181 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "bush-2004-homes-ownership",
         "theme": "housing",
         "restatement": "Add 7 million more affordable homes over the next ten years.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-health-centers",
         "theme": "health",
         "restatement": "Give every poor county a community or rural health center within the term.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-job-training-double",
         "theme": "labor",
         "restatement": "Double the number served by the principal job-training program in a new term.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-tax-reform",
         "theme": "taxes",
         "restatement": "Lead a bipartisan effort to reform and simplify the tax code.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-tax-relief-permanent",
         "theme": "taxes",
         "restatement": "Restrain spending, cut regulation, and make the tax cuts permanent.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-energy-imports",
         "theme": "energy",
         "restatement": "Reduce US dependence on foreign energy.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-small-biz-health",
         "theme": "health",
         "restatement": "Let small firms pool to buy insurance at large-employer discounts.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-hsa-taxcredit",
         "theme": "health",
         "restatement": "Create a tax credit to spread health savings accounts, with help for low-income buyers.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-medical-liability",
         "theme": "health",
         "restatement": "Pass medical liability (malpractice) reform.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-comptime-flextime",
         "theme": "labor",
         "restatement": "Change labor law to allow comp-time and flex-time.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-opportunity-zones",
         "theme": "economy",
         "restatement": "Create \"American opportunity zones\" with tax relief and incentives for distressed areas.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-ss-personal-accounts",
         "theme": "social-security",
         "restatement": "Let younger workers divert some payroll taxes into personal Social Security accounts.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-child-health-enroll",
         "theme": "health",
         "restatement": "Enroll millions of eligible-but-unenrolled poor children in public health insurance.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-pell-grants",
         "theme": "education",
         "restatement": "Expand Pell grants to raise college completion.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-hs-graduation-exam",
         "theme": "education",
         "restatement": "Require a rigorous exam before high-school graduation.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-troops-return",
         "theme": "foreign-policy",
         "restatement": "Bring the troops home once Afghanistan and Iraq reach stability.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-strict-judges",
         "theme": "judiciary",
         "restatement": "Keep appointing strict-constructionist federal judges.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       },
       {
         "id": "bush-2004-preempt-threats",
         "theme": "foreign-policy",
         "restatement": "Confront threats pre-emptively, before they materialize.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2004 acceptance speech"
+        }
       }
     ]
   },
@@ -274,79 +422,131 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "obama-2008-oil-mideast",
         "theme": "energy",
         "restatement": "End US dependence on Middle East oil within ten years.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-energy-invest",
         "theme": "energy",
         "restatement": "Invest $150B over ten years in renewable energy, yielding five million jobs.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-tax-cut-95",
         "theme": "taxes",
         "restatement": "Cut taxes for 95% of working families.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-capgains-smallbiz",
         "theme": "taxes",
         "restatement": "Eliminate capital gains taxes for small businesses and start-ups.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-offshoring-taxbreaks",
         "theme": "taxes",
         "restatement": "End tax breaks for offshoring; give them to domestic job creators.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-healthcare-universal",
         "theme": "health",
         "restatement": "Affordable, accessible health care for every American; lower premiums for the insured.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-fiscal-payfor",
         "theme": "fiscal",
         "restatement": "Pay for every new dollar of spending; cut wasteful programs line by line.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-equal-pay",
         "theme": "labor",
         "restatement": "Equal pay for equal work.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-paid-leave",
         "theme": "labor",
         "restatement": "Guarantee paid sick days and better family leave.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-iraq-end",
         "theme": "foreign-policy",
         "restatement": "End the Iraq war responsibly; finish the fight in Afghanistan.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-iran-nukes",
         "theme": "foreign-policy",
         "restatement": "Prevent Iran from obtaining nuclear weapons through diplomacy.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-education-worldclass",
         "theme": "education",
         "restatement": "Provide every child a world-class education; invest in early education and teachers.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       },
       {
         "id": "obama-2008-moral-standing",
         "theme": "foreign-policy",
         "restatement": "Restore America's moral standing in the world.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2008 acceptance speech"
+        }
       }
     ]
   },
@@ -363,79 +563,131 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "obama-2012-manufacturing-jobs",
         "theme": "economy",
         "restatement": "Create a million new manufacturing jobs over the next four years.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-oil-imports-half",
         "theme": "energy",
         "restatement": "Cut US oil imports in half by 2020; support 600,000+ natural-gas jobs.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-teachers-100k",
         "theme": "education",
         "restatement": "Recruit 100,000 math and science teachers within ten years.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-community-college-2m",
         "theme": "education",
         "restatement": "Give 2 million workers job-focused skills training at community colleges.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-tuition-half",
         "theme": "education",
         "restatement": "Halve the growth rate of tuition costs over the next ten years.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-afghanistan-end",
         "theme": "foreign-policy",
         "restatement": "End the war in Afghanistan by 2014.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-deficit-4t",
         "theme": "fiscal",
         "restatement": "Cut the deficit by $4 trillion under his budget plan.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-tax-reform-250k",
         "theme": "taxes",
         "restatement": "Reform the tax code; raise rates on income over $250,000 to Clinton-era levels.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-carbon-reduce",
         "theme": "energy",
         "restatement": "Continue reducing US carbon pollution.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-medicare-no-voucher",
         "theme": "health",
         "restatement": "Never convert Medicare into a voucher program.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-medicare-strengthen",
         "theme": "health",
         "restatement": "Strengthen Medicare by cutting health-care costs, not raising seniors' costs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-social-security",
         "theme": "social-security",
         "restatement": "Strengthen Social Security without privatizing it.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       },
       {
         "id": "obama-2012-war-savings-infrastructure",
         "theme": "fiscal",
         "restatement": "Redirect war savings to debt reduction and infrastructure jobs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2012 acceptance speech"
+        }
       }
     ]
   },
@@ -452,145 +704,241 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "trump-2016-border-wall",
         "theme": "immigration",
         "restatement": "Build a border wall to stop illegal immigration, gangs, and drugs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-suspend-terror-immigration",
         "theme": "immigration",
         "restatement": "Suspend immigration from terror-compromised nations until vetting is proven.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-end-catch-and-release",
         "theme": "immigration",
         "restatement": "End catch-and-release to stop human smuggling and border violence.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-defeat-isis",
         "theme": "foreign-policy",
         "restatement": "Defeat ISIS, and do it fast.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-largest-tax-reduction",
         "theme": "taxes",
         "restatement": "Enact the largest tax reduction proposed by any candidate this cycle.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-end-regulation",
         "theme": "regulation",
         "restatement": "End the excessive regulation he says costs $2 trillion a year.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-lift-energy-restrictions",
         "theme": "energy",
         "restatement": "Lift restrictions on US energy production, generating $20T of activity over 40 years.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-repeal-obamacare",
         "theme": "health",
         "restatement": "Repeal and replace the Affordable Care Act.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-renegotiate-nafta",
         "theme": "trade",
         "restatement": "Totally renegotiate NAFTA and other trade deals, or walk away.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-no-bad-trade-deals",
         "theme": "trade",
         "restatement": "Never sign a trade deal that hurts American workers.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-bring-jobs-back",
         "theme": "labor",
         "restatement": "Bring jobs back to the industrial states and penalize companies that offshore.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-rebuild-military",
         "theme": "foreign-policy",
         "restatement": "Rebuild the military and make protected allies pay their fair share.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-veterans-choice",
         "theme": "veterans",
         "restatement": "Guarantee veterans can see the doctor of their choice without long waits.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-wasteful-spending-100-days",
         "theme": "fiscal",
         "restatement": "Have every department head list wasteful spending to cut in the first 100 days.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-supreme-court",
         "theme": "judiciary",
         "restatement": "Appoint Supreme Court justices who will uphold the laws and Constitution.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-restore-law-and-order",
         "theme": "crime",
         "restatement": "Restore law and order upon taking office.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-crime-end",
         "theme": "crime",
         "restatement": "Crime and violence will soon come to an end.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-repeal-johnson-amendment",
         "theme": "religion",
         "restatement": "Repeal the Johnson Amendment language restricting churches' political speech.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-enforce-trade-tariffs",
         "theme": "trade",
         "restatement": "Enforce trade violations against cheating countries, including through taxes and tariffs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-rebuild-infrastructure",
         "theme": "infrastructure",
         "restatement": "Build new roads, highways, bridges, tunnels, airports, and railways.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-school-choice",
         "theme": "education",
         "restatement": "Expand school choice so parents can move children out of failing schools.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-student-debt",
         "theme": "education",
         "restatement": "Ease the burden of student debt on young people starting out.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-visa-overstays",
         "theme": "immigration",
         "restatement": "Enforce the rules against the millions who overstay their visas.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       },
       {
         "id": "trump-2016-protect-lgbtq",
         "theme": "civil-rights",
         "restatement": "Protect LGBTQ citizens from terrorist violence and oppression.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2016 acceptance speech"
+        }
       }
     ]
   },
@@ -607,109 +955,181 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "biden-2020-virus-control",
         "theme": "health",
         "restatement": "Get control of the COVID-19 virus as the first priority in office.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-covid-strategy",
         "theme": "health",
         "restatement": "Implement a national COVID-19 strategy on the first day in office.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-rapid-tests",
         "theme": "health",
         "restatement": "Develop and deploy rapid COVID tests with immediate results.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-domestic-ppe",
         "theme": "trade",
         "restatement": "Manufacture medical supplies and PPE domestically to end reliance on China.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-schools-reopen",
         "theme": "education",
         "restatement": "Give schools the resources to reopen safely and effectively.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-experts-transparency",
         "theme": "health",
         "restatement": "Let public-health experts speak freely so the public gets unvarnished information.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-mask-mandate",
         "theme": "health",
         "restatement": "Institute a national mask mandate.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-infrastructure-jobs",
         "theme": "economy",
         "restatement": "Rebuild infrastructure and create five million manufacturing and technology jobs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-health-premiums",
         "theme": "health",
         "restatement": "Lower premiums, deductibles, and drug prices by building on the ACA.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-college-cost",
         "theme": "education",
         "restatement": "Make college affordable so cost and student debt aren't barriers.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-care-economy",
         "theme": "labor",
         "restatement": "Provide child care and elder care so parents can work and the elderly can age at home.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-immigration",
         "theme": "immigration",
         "restatement": "Reform the immigration system to power the economy and reflect American values.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-labor",
         "theme": "labor",
         "restatement": "Empower unions, guarantee equal pay for women, and raise wages.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-essential-workers-pay",
         "theme": "labor",
         "restatement": "Raise the pay of essential workers.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-clean-energy-jobs",
         "theme": "climate",
         "restatement": "Address climate change and create millions of clean-energy jobs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-tax-fair-share",
         "theme": "taxes",
         "restatement": "Pay for the agenda by ending loopholes and repealing the $1.3T tax cut for the top 1% and corporations.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-social-security-medicare",
         "theme": "fiscal",
         "restatement": "Protect Social Security and Medicare from cuts.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       },
       {
         "id": "biden-2020-election-interference",
         "theme": "foreign-policy",
         "restatement": "Confront Russian bounties on US troops and foreign election interference.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2020 acceptance speech"
+        }
       }
     ]
   },
@@ -726,127 +1146,211 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "trump-2024-inflation",
         "theme": "inflation",
         "restatement": "End the inflation crisis immediately; cut interest rates and energy costs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-prices-day1",
         "theme": "inflation",
         "restatement": "Begin driving down consumer prices on Day 1.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-energy-dominance",
         "theme": "energy",
         "restatement": "Make the US \"energy dominant\" — a net supplier to the rest of the world.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-debt",
         "theme": "fiscal",
         "restatement": "Reduce the national debt (cited at $36 trillion).",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-taxes-cut",
         "theme": "taxes",
         "restatement": "Cut taxes further beyond the 2017 cuts.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-no-tax-tips",
         "theme": "taxes",
         "restatement": "Exempt tip income from taxation.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-wall",
         "theme": "immigration",
         "restatement": "End illegal immigration by sealing the border and finishing the wall.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-border-day1",
         "theme": "immigration",
         "restatement": "End the border crisis and restore secure borders, starting on Day 1.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-deportation",
         "theme": "immigration",
         "restatement": "Launch the largest deportation operation in US history.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-ev-mandate",
         "theme": "energy",
         "restatement": "End the electric-vehicle mandate on Day 1.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-auto-jobs",
         "theme": "labor",
         "restatement": "Bring back the auto industry and hundreds of thousands of manufacturing jobs.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-car-tariff",
         "theme": "trade",
         "restatement": "Impose a 100-200% tariff on cars built abroad (esp. China-in-Mexico plants).",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-ss-medicare",
         "theme": "health",
         "restatement": "Protect Social Security and Medicare (no benefit cuts).",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-end-wars",
         "theme": "foreign-policy",
         "restatement": "End every international crisis, including the Russia-Ukraine war.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-iron-dome",
         "theme": "defense",
         "restatement": "Build a nationwide \"iron dome\" missile-defense system over the US.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-womens-sports",
         "theme": "culture",
         "restatement": "End transgender participation in women's sports immediately.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-cancer-cures",
         "theme": "health",
         "restatement": "Approach cures for cancer, Alzheimer's, and other diseases.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-cities",
         "theme": "crime",
         "restatement": "Restore US cities to be safe, clean, and beautiful.",
-        "quality": "no"
+        "quality": "no",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-hostages",
         "theme": "foreign-policy",
         "restatement": "Get American hostages returned before Inauguration Day.",
-        "quality": "full"
+        "quality": "full",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-green-redirect",
         "theme": "fiscal",
         "restatement": "Redirect unspent \"Green New Deal\" funds to roads, bridges, and dams.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       },
       {
         "id": "trump-2024-incomes-prosper",
         "theme": "economy",
         "restatement": "Incomes skyrocket, inflation vanishes completely, jobs return, middle class prospers.",
-        "quality": "partial"
+        "quality": "partial",
+        "source": {
+          "kind": "acceptance",
+          "label": "2024 acceptance speech"
+        }
       }
     ]
   }

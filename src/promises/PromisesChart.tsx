@@ -96,6 +96,10 @@ export function PromisesChart({
     selectedBar && selected
       ? selectedBar.summary.promises.filter((p) => p.quality === selected.quality)
       : [];
+  // Show a per-promise source tag only once a term actually draws on more than
+  // one source; while everything is from the acceptance speech it stays hidden.
+  const showSource =
+    !!selectedBar && new Set(selectedBar.summary.promises.map((p) => p.source.label)).size > 1;
 
   return (
     <div className="pc">
@@ -182,7 +186,7 @@ export function PromisesChart({
                     </title>
                   </rect>
                   {s.h >= 16 && (
-                    <text className="pc-seg-n" x={s.cx} y={s.cy} dy="0.32em">
+                    <text className="pc-seg-n" data-q={s.quality} x={s.cx} y={s.cy} dy="0.32em">
                       {mode === 'percent'
                         ? `${Math.round((s.count / Math.max(1, bar.summary.total)) * 100)}%`
                         : s.count}
@@ -228,7 +232,10 @@ export function PromisesChart({
                   onClick={() => onOpenPromise?.(p, selectedBar.summary)}
                 >
                   <span className="pc-promise-theme">{p.theme}</span>
-                  <span className="pc-promise-text">{p.restatement}</span>
+                  <span className="pc-promise-text">
+                    {p.restatement}
+                    {showSource && <span className="pc-promise-src">{p.source.label}</span>}
+                  </span>
                 </button>
               </li>
             ))}

@@ -9,10 +9,19 @@
   --decoupled: #c084fc;
   --series: #38bec9;
   --target: #f0a202;
-  /* measurability tiers — a quality axis, NOT kept/broken and NOT party */
-  --q-full: #38bec9;
-  --q-partial: #f0a202;
-  --q-no: #5b7186;
+  /* measurability tiers, in official U.S. flag colours (Old Glory Red /
+     Old Glory Blue / White). A quality axis applied identically to every
+     president — NOT kept/broken, NOT a party coding. `-line` variants are
+     lightened only so connectors/edges stay visible on the dark theme. */
+  --q-full: #b31942;
+  --q-partial: #0a3161;
+  --q-no: #ffffff;
+  --q-full-line: #e05c7e;
+  --q-partial-line: #6f8fc0;
+  --q-no-line: #ffffff;
+  --q-full-ink: #ffffff;
+  --q-partial-ink: #ffffff;
+  --q-no-ink: #0c1116;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -251,6 +260,7 @@ main {
   height: 12px;
   border-radius: 3px;
   display: inline-block;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 }
 .pc-swatch[data-q="full"] { background: var(--q-full); }
 .pc-swatch[data-q="partial"] { background: var(--q-partial); }
@@ -296,8 +306,10 @@ main {
 
 .pc-seg {
   cursor: pointer;
-  stroke: var(--panel);
-  stroke-width: 1.5;
+  /* hairline edge so dark navy reads against the dark panel, and every block
+     is delineated from its neighbour regardless of fill */
+  stroke: rgba(255, 255, 255, 0.28);
+  stroke-width: 1;
   transition: opacity 120ms ease;
 }
 .pc-seg[data-q="full"] { fill: var(--q-full); }
@@ -306,12 +318,13 @@ main {
 .pc-svg:hover .pc-seg:not(:hover) { opacity: 0.72; }
 .pc-seg[data-on="true"] {
   stroke: var(--ink);
-  stroke-width: 2;
+  stroke-width: 2.5;
   opacity: 1 !important;
 }
+/* on the white block, an ink outline is invisible — use the dark base */
+.pc-seg[data-q="no"][data-on="true"] { stroke: var(--bg); }
 
 .pc-seg-n {
-  fill: #0c1116;
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
@@ -319,15 +332,18 @@ main {
   pointer-events: none;
   font-variant-numeric: tabular-nums;
 }
+.pc-seg-n[data-q="full"] { fill: var(--q-full-ink); }
+.pc-seg-n[data-q="partial"] { fill: var(--q-partial-ink); }
+.pc-seg-n[data-q="no"] { fill: var(--q-no-ink); }
 
 .pc-link line {
   stroke-width: 1;
-  opacity: 0.5;
+  opacity: 0.55;
   stroke-dasharray: 3 3;
 }
-.pc-link[data-q="full"] line { stroke: var(--q-full); }
-.pc-link[data-q="partial"] line { stroke: var(--q-partial); }
-.pc-link[data-q="no"] line { stroke: var(--q-no); }
+.pc-link[data-q="full"] line { stroke: var(--q-full-line); }
+.pc-link[data-q="partial"] line { stroke: var(--q-partial-line); }
+.pc-link[data-q="no"] line { stroke: var(--q-no-line); opacity: 0.4; }
 .pc-link-label {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -435,3 +451,11 @@ main {
   min-width: 92px;
 }
 .pc-promise-text { flex: 1; }
+
+.pc-promise-src {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--dim);
+}

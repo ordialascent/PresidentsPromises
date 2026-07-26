@@ -45,8 +45,15 @@ export function PromisesPage() {
             exists to show.
           </p>
           <p>
-            No causation, no scorecard, no party comparison, no party colouring. Bars are ordered by
-            term. See{' '}
+            The three colours are the flag's — Old Glory Red, Old Glory Blue, white — and they
+            encode the measurability tier (full / partial / none), the same three for every
+            president. They are not a party coding: no causation, no scorecard, no party comparison.
+            Bars are ordered by term.
+          </p>
+          <p>
+            For now every promise is drawn from a nomination acceptance speech, but each one already
+            carries its own <em>source</em>, so other kinds — debates, official statements, other
+            speeches — can be added without reshaping the model or this chart. See{' '}
             <a href="https://github.com/ordialascent/PresidentsPromises/blob/main/ARCHITECTURE.md">
               ARCHITECTURE.md
             </a>{' '}

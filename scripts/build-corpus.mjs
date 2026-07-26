@@ -37,7 +37,7 @@ function parsePromises(yamlText) {
     }
     if (!cur) continue;
     // exactly-4-space field lines only — disqualifies 6-space quote/sub-block lines
-    const field = line.match(/^ {4}(theme|restatement|measurable):\s*(.+?)\s*$/);
+    const field = line.match(/^ {4}(theme|restatement|measurable|source):\s*(.+?)\s*$/);
     if (field) cur[field[1]] = unquote(field[2]);
   }
   if (cur) out.push(cur);
@@ -56,11 +56,27 @@ for (const name of readdirSync(CORPUS)) {
   const speechFile = files.find((f) => /^\d{4}-acceptance\.md$/.test(f));
   if (!promisesFile) continue;
   const speechYear = speechFile ? Number(speechFile.slice(0, 4)) : null;
+  // The default source for a term is its nomination acceptance speech. As other
+  // source types are added (interviews, official statements, other speeches), a
+  // promise names its own via a `source:` field and the file carrying it; until
+  // then every promise inherits this default, so the model is already source-
+  // aware without any per-promise annotation in today's corpus.
+  const defaultSource = {
+    kind: 'acceptance',
+    label: speechYear ? `${speechYear} acceptance speech` : 'acceptance speech',
+  };
   const promises = parsePromises(readFileSync(join(dir, promisesFile), 'utf8')).map((p) => {
     if (!QUALITIES.includes(p.measurable)) {
       throw new Error(`${name}/${p.id}: bad measurable ${JSON.stringify(p.measurable)}`);
     }
-    return { id: p.id, theme: p.theme ?? 'other', restatement: p.restatement ?? p.id, quality: p.measurable };
+    const source = p.source ? { kind: 'other', label: p.source } : defaultSource;
+    return {
+      id: p.id,
+      theme: p.theme ?? 'other',
+      restatement: p.restatement ?? p.id,
+      quality: p.measurable,
+      source,
+    };
   });
   terms.push({
     key: name,
@@ -84,11 +100,19 @@ const banner =
 const body = `${banner}
 export type Quality = 'full' | 'partial' | 'no';
 
+/** Where a promise was made. Today always the term's acceptance speech; the
+ *  field exists so other source types can be added without reshaping. */
+export interface PromiseSource {
+  kind: string;
+  label: string;
+}
+
 export interface CorpusPromise {
   id: string;
   theme: string;
   restatement: string;
   quality: Quality;
+  source: PromiseSource;
 }
 
 export interface CorpusTerm {
