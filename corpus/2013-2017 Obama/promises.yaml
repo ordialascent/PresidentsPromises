@@ -1,0 +1,5 @@
+# Promises extracted from Barack Obama's 2012 nomination acceptance speech.
+# Extraction is a later step. Schema: ../README.md and ../2009-2013 Obama/promises.yaml
+# (each promise cited by paragraph.sentence and scored on
+#  metric / threshold / deadline / instrument).
+promises: []
