@@ -582,3 +582,111 @@ main {
   font-size: 13px;
   line-height: 1.5;
 }
+
+/* ---- Promise detail (opens between the chart and the list) ----------- */
+
+.pc-detail {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pc-detail[data-q="full"] { box-shadow: inset 3px 0 0 var(--q-full); }
+.pc-detail[data-q="partial"] { box-shadow: inset 3px 0 0 var(--q-partial); }
+.pc-detail[data-q="no"] { box-shadow: inset 3px 0 0 var(--q-no); }
+
+.pc-detail-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pc-detail-tier {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+.pc-detail-tier[data-q="full"] { color: var(--q-full); border-color: var(--q-full); }
+.pc-detail-tier[data-q="partial"] { color: var(--ink); border-color: var(--q-partial); }
+.pc-detail-tier[data-q="no"] { color: var(--q-no-line); border-color: var(--q-no-line); }
+.pc-detail-theme {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.pc-detail-close {
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  color: var(--dim);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+}
+
+.pc-detail-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.pc-detail-quote {
+  margin: 0;
+  padding: 10px 14px;
+  border-left: 2px solid var(--border);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.pc-detail-context {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--dim);
+}
+.pc-detail-speaker { color: var(--ink); font-weight: 600; }
+.pc-detail-dot { opacity: 0.5; }
+.pc-detail-event { font-style: italic; }
+.pc-detail-medium {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dim);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 7px;
+}
+
+.pc-detail-cite {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
+}
+.pc-detail-cite a {
+  color: var(--series);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--series) 40%, transparent);
+}
+.pc-detail-cite a:hover { border-bottom-color: var(--series); }
+
+.pc-promise[data-open="true"] {
+  background: color-mix(in srgb, var(--series) 16%, transparent);
+  box-shadow: inset 2px 0 0 var(--series);
+}

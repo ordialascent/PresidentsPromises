@@ -3,10 +3,28 @@
 
 export type Quality = 'full' | 'partial' | 'no';
 
-/** Where a promise was made. Today always the term's acceptance speech; the
- *  field exists so other source types can be added without reshaping. */
+/** The context of a promise: who said it, when, at what event, in what medium.
+ *  Today always the term's nomination acceptance speech, described by that
+ *  speech's front-matter — generalised so debates, interviews, or written
+ *  statements slot in as new kind/medium values without reshaping. */
 export interface PromiseSource {
+  /** e.g. "acceptance" | "other" (future: "debate", "interview", "statement"). */
   kind: string;
+  /** The medium — "speech" today; e.g. "debate", "interview", "press release". */
+  medium: string;
+  /** Who made the promise. */
+  speaker: string;
+  /** The occasion, e.g. the acceptance-speech title / venue. */
+  event: string;
+  /** Year the promise was made. */
+  year: number | null;
+  /** Full date, if known (ISO). */
+  date: string;
+  /** Citation publisher. */
+  publisher: string;
+  /** Link to the source. */
+  url: string;
+  /** Compact label, e.g. "2016 acceptance speech". */
   label: string;
 }
 
@@ -16,6 +34,10 @@ export interface CorpusPromise {
   restatement: string;
   quality: Quality;
   source: PromiseSource;
+  /** Paragraph.sentence reference into the source, e.g. "¶44.1". */
+  ref: string;
+  /** Verbatim promise text. */
+  quote: string;
 }
 
 export interface CorpusTerm {
@@ -53,8 +75,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶42.2",
+        "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them."
       },
       {
         "id": "bush-2000-socialsecurity-preserve",
@@ -63,8 +94,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶44.1-44.2",
+        "quote": "To the seniors in this country, you earned your benefits, you made your plans, and President George W. Bush will keep the promise of Social Security. No changes, no reductions, no way."
       },
       {
         "id": "bush-2000-socialsecurity-accounts",
@@ -73,8 +113,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶47.1",
+        "quote": "For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments."
       },
       {
         "id": "bush-2000-death-tax",
@@ -83,8 +132,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶58.3",
+        "quote": "On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
       },
       {
         "id": "bush-2000-tax-rates-allbrackets",
@@ -93,8 +151,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶59.1",
+        "quote": "On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket."
       },
       {
         "id": "bush-2000-bottom-rate-child-credit",
@@ -103,8 +170,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶60.1",
+        "quote": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit."
       },
       {
         "id": "bush-2000-head-start",
@@ -113,8 +189,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶54.1",
+        "quote": "Now is the time to make Head Start an early learning program to teach all our children to read and renew the promise of America's public schools."
       },
       {
         "id": "bush-2000-school-accountability",
@@ -123,8 +208,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶53.2-53.3",
+        "quote": "When a school district receives federal funds to teach poor children, we expect them to learn. And if they don't, parents should get the money to make a different choice."
       },
       {
         "id": "bush-2000-military-means",
@@ -133,8 +227,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶63.1",
+        "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
       },
       {
         "id": "bush-2000-reduce-nuclear",
@@ -143,8 +246,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶65.1",
+        "quote": "I will work to reduce nuclear weapons and nuclear tension in the world, to turn these years of influence into decades of peace."
       },
       {
         "id": "bush-2000-missile-defense",
@@ -153,8 +265,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶65.2",
+        "quote": "And at the earliest possible date, my administration will deploy missile defenses to guard against attack and blackmail."
       },
       {
         "id": "bush-2000-health-tax-credits",
@@ -163,8 +284,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶92.1",
+        "quote": "We will give low-income Americans tax credits to buy the private health insurance they need and deserve."
       },
       {
         "id": "bush-2000-housing-ownership",
@@ -173,8 +303,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶93.1",
+        "quote": "We will transform today's housing rental program to help hundreds of thousands of low-income families find stability and dignity in a home of their own."
       },
       {
         "id": "bush-2000-charitable-incentives",
@@ -183,8 +322,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶98.2",
+        "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
       },
       {
         "id": "bush-2000-gun-enforcement",
@@ -193,8 +341,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶102.1",
+        "quote": "We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws."
       },
       {
         "id": "bush-2000-partial-birth-abortion",
@@ -203,8 +360,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶104.2",
+        "quote": "And when Congress sends me a bill against partial-birth abortion, I will sign it into law."
       },
       {
         "id": "bush-2000-tone-of-washington",
@@ -213,8 +379,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+          "year": 2000,
+          "date": "2000-08-03",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
           "label": "2000 acceptance speech"
-        }
+        },
+        "ref": "¶77.5",
+        "quote": "I want to change the tone of Washington to one of civility and respect."
       }
     ]
   },
@@ -234,8 +409,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶26.2",
+        "quote": "Tonight we set a new goal: 7 million more affordable homes in the next 10 years so more American families will be able to open the door and say, \"Welcome to my home.\""
       },
       {
         "id": "bush-2004-health-centers",
@@ -244,8 +428,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶22.4",
+        "quote": "In a new term, I will ensure every poor county in America has a community or rural health center."
       },
       {
         "id": "bush-2004-job-training-double",
@@ -254,8 +447,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶19.1-19.3",
+        "quote": "Another priority in a new term will be to help workers take advantage of the expanding economy to find better and higher paying jobs. [...] So we will double the number of people served by our principal job training program and increase funding for our community colleges."
       },
       {
         "id": "bush-2004-tax-reform",
@@ -264,8 +466,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶18.3",
+        "quote": "In a new term, I will lead a bipartisan effort to reform and simplify the Federal Tax Code."
       },
       {
         "id": "bush-2004-tax-relief-permanent",
@@ -274,8 +485,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶17.4",
+        "quote": "To create jobs, my plan will encourage investment and expansion by restraining Federal spending, reducing regulation, and making the tax relief permanent."
       },
       {
         "id": "bush-2004-energy-imports",
@@ -284,8 +504,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶17.5",
+        "quote": "To create jobs, we will make our country less dependent on foreign sources of energy."
       },
       {
         "id": "bush-2004-small-biz-health",
@@ -294,8 +523,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶21.3",
+        "quote": "In a new term, we must allow small firms to join together to purchase insurance at the discounts available to big companies."
       },
       {
         "id": "bush-2004-hsa-taxcredit",
@@ -304,8 +542,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶22.1",
+        "quote": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts and provide direct help for low-income Americans to purchase them."
       },
       {
         "id": "bush-2004-medical-liability",
@@ -314,8 +561,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶23.2",
+        "quote": "To make health care more affordable and accessible, we must pass medical liability reform now."
       },
       {
         "id": "bush-2004-comptime-flextime",
@@ -324,8 +580,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶24.2",
+        "quote": "In a new term, we will change outdated labor laws to offer comp-time and flex-time."
       },
       {
         "id": "bush-2004-opportunity-zones",
@@ -334,8 +599,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶20.2-20.3",
+        "quote": "To stand with workers in poor communities and those that have lost manufacturing, textile, and other jobs, we will create American opportunity zones. In these areas, we will provide tax relief and other incentives [...]"
       },
       {
         "id": "bush-2004-ss-personal-accounts",
@@ -344,8 +618,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶27.4",
+        "quote": "We must strengthen Social Security by allowing younger workers to save some of their taxes in a personal account, a nest egg you can call your own and Government can never take away."
       },
       {
         "id": "bush-2004-child-health-enroll",
@@ -354,8 +637,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶32.2",
+        "quote": "In a new term, we will lead an aggressive effort to enroll millions of poor children who are eligible but not signed up for the Government's health insurance programs."
       },
       {
         "id": "bush-2004-pell-grants",
@@ -364,8 +656,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶31.6",
+        "quote": "By raising performance in our high schools and expanding Pell grants for low- and middle-income families, we will help more Americans start their career with a college diploma."
       },
       {
         "id": "bush-2004-hs-graduation-exam",
@@ -374,8 +675,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶31.5",
+        "quote": "As we make progress, we will require a rigorous exam before graduation."
       },
       {
         "id": "bush-2004-troops-return",
@@ -384,8 +694,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶47.5",
+        "quote": "And then our troops will return home with the honor they have earned."
       },
       {
         "id": "bush-2004-strict-judges",
@@ -394,8 +713,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶38.4",
+        "quote": "I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law."
       },
       {
         "id": "bush-2004-preempt-threats",
@@ -404,8 +732,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "George W. Bush",
+          "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+          "year": 2004,
+          "date": "2004-09-02",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
           "label": "2004 acceptance speech"
-        }
+        },
+        "ref": "¶44.6",
+        "quote": "We must and we will confront threats to America before it is too late."
       }
     ]
   },
@@ -425,8 +762,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶44.1",
+        "quote": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East."
       },
       {
         "id": "obama-2008-energy-invest",
@@ -435,8 +781,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶47.4",
+        "quote": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy – wind power and solar power and the next generation of biofuels; an investment that will lead to new industries and five million new jobs that pay well and can't ever be outsourced."
       },
       {
         "id": "obama-2008-tax-cut-95",
@@ -445,8 +800,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶43.1",
+        "quote": "I will cut taxes – cut taxes – for 95% of all working families."
       },
       {
         "id": "obama-2008-capgains-smallbiz",
@@ -455,8 +819,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶42.1",
+        "quote": "I will eliminate capital gains taxes for the small businesses and the start-ups that will create the high-wage, high-tech jobs of tomorrow."
       },
       {
         "id": "obama-2008-offshoring-taxbreaks",
@@ -465,8 +838,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶41.1",
+        "quote": "Unlike John McCain, I will stop giving tax breaks to corporations that ship jobs overseas, and I will start giving them to companies that create good jobs right here in America."
       },
       {
         "id": "obama-2008-healthcare-universal",
@@ -475,8 +857,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶50.1-50.2",
+        "quote": "Now is the time to finally keep the promise of affordable, accessible health care for every single American. If you have health care, my plan will lower your premiums."
       },
       {
         "id": "obama-2008-fiscal-payfor",
@@ -485,8 +876,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶54.1-54.2",
+        "quote": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime – by closing corporate loopholes and tax havens that don't help America grow. But I will also go through the federal budget, line by line, eliminating programs that no longer work and making the ones we do need work better and cost less – because we cannot meet twenty-first century challenges with a twentieth century bureaucracy."
       },
       {
         "id": "obama-2008-equal-pay",
@@ -495,8 +895,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶53.1",
+        "quote": "And now is the time to keep the promise of equal pay for an equal day's work, because I want my daughters to have exactly the same opportunities as your sons."
       },
       {
         "id": "obama-2008-paid-leave",
@@ -505,8 +914,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶51.1",
+        "quote": "Now is the time to help families with paid sick days and better family leave, because nobody in America should have to choose between keeping their jobs and caring for a sick child or ailing parent."
       },
       {
         "id": "obama-2008-iraq-end",
@@ -515,8 +933,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶64.1",
+        "quote": "I will end this war in Iraq responsibly, and finish the fight against al Qaeda and the Taliban in Afghanistan."
       },
       {
         "id": "obama-2008-iran-nukes",
@@ -525,8 +952,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶64.3",
+        "quote": "But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons and curb Russian aggression."
       },
       {
         "id": "obama-2008-education-worldclass",
@@ -535,8 +971,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶49.1-49.5",
+        "quote": "Now is the time to finally meet our moral obligation to provide every child a world-class education, because it will take nothing less to compete in the global economy. [...] I'll invest in early childhood education. I'll recruit an army of new teachers, and pay them higher salaries and give them more support."
       },
       {
         "id": "obama-2008-moral-standing",
@@ -545,8 +990,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+          "year": 2008,
+          "date": "2008-08-28",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
           "label": "2008 acceptance speech"
-        }
+        },
+        "ref": "¶64.5",
+        "quote": "And I will restore our moral standing, so that America is once again that last, best hope for all who are called to the cause of freedom, who long for lives of peace, and who yearn for a better future."
       }
     ]
   },
@@ -566,8 +1020,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶25.2",
+        "quote": "We can help big factories and small businesses double their exports, and if we choose this path, we can create a million new manufacturing jobs in the next 4 years."
       },
       {
         "id": "obama-2012-oil-imports-half",
@@ -576,8 +1039,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶28.2",
+        "quote": "If you choose this path, we can cut our oil imports in half by 2020 and support more than 600,000 new jobs in natural gas alone."
       },
       {
         "id": "obama-2012-teachers-100k",
@@ -586,8 +1058,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶34.2",
+        "quote": "Help me recruit 100,000 math and science teachers within 10 years and improve early childhood education."
       },
       {
         "id": "obama-2012-community-college-2m",
@@ -596,8 +1077,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶34.3",
+        "quote": "Help give 2 million workers the chance to learn skills at their community college that will lead directly to a job."
       },
       {
         "id": "obama-2012-tuition-half",
@@ -606,8 +1096,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶34.4",
+        "quote": "Help us work with colleges and universities to cut in half the growth of tuition costs over the next 10 years."
       },
       {
         "id": "obama-2012-afghanistan-end",
@@ -616,8 +1115,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶35.6",
+        "quote": "We've blunted the Taliban's momentum in Afghanistan, and in 2014, our longest war will be over."
       },
       {
         "id": "obama-2012-deficit-4t",
@@ -626,8 +1134,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶43.2",
+        "quote": "Independent experts say that my plan would cut our deficit by $4 trillion."
       },
       {
         "id": "obama-2012-tax-reform-250k",
@@ -636,8 +1153,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶44.1",
+        "quote": "I want to reform the Tax Code so that it's simple, fair, and asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President"
       },
       {
         "id": "obama-2012-carbon-reduce",
@@ -646,8 +1172,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶29.1",
+        "quote": "And yes, my plan will continue to reduce the carbon pollution that is heating our planet, because climate change is not a hoax."
       },
       {
         "id": "obama-2012-medicare-no-voucher",
@@ -656,8 +1191,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶48.1",
+        "quote": "And I will never—I will never—turn Medicare into a voucher."
       },
       {
         "id": "obama-2012-medicare-strengthen",
@@ -666,8 +1210,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶48.4",
+        "quote": "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care, not by asking seniors to pay thousands of dollars more."
       },
       {
         "id": "obama-2012-social-security",
@@ -676,8 +1229,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶49.1",
+        "quote": "And we will keep the promise of Social Security by taking the responsible steps to strengthen it, not by turning it over to Wall Street."
       },
       {
         "id": "obama-2012-war-savings-infrastructure",
@@ -686,8 +1248,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Barack Obama",
+          "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+          "year": 2012,
+          "date": "2012-09-06",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
           "label": "2012 acceptance speech"
-        }
+        },
+        "ref": "¶42.1",
+        "quote": "I will use the money we're no longer spending on war to pay down our debt and put more people back to work rebuilding roads and bridges and schools and runways."
       }
     ]
   },
@@ -707,8 +1278,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶77.1",
+        "quote": "We are going to build a great border wall to stop illegal immigration, to stop the gangs and the violence, and to stop the drugs from pouring into our communities."
       },
       {
         "id": "trump-2016-suspend-terror-immigration",
@@ -717,8 +1297,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶70.1",
+        "quote": "Lastly, and very importantly, we must immediately suspend immigration from any nation that has been compromised by terrorism until such time as proven vetting mechanisms have been put in place."
       },
       {
         "id": "trump-2016-end-catch-and-release",
@@ -727,8 +1316,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶78.1",
+        "quote": "By ending catch-and-release on the border, we will stop the cycle of human smuggling and violence."
       },
       {
         "id": "trump-2016-defeat-isis",
@@ -737,8 +1335,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶60.1",
+        "quote": "To make life safe in America, we must also address the growing threats we face from outside the country: We are going to defeat the barbarians of ISIS, and we are going to defeat them fast."
       },
       {
         "id": "trump-2016-largest-tax-reduction",
@@ -747,8 +1354,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶95.2",
+        "quote": "While Hillary Clinton plans a massive -- and I mean massive -- tax increase, I have proposed the largest tax reduction of any candidate who has declared for the presidential race this year – Democrat or Republican."
       },
       {
         "id": "trump-2016-end-regulation",
@@ -757,8 +1373,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶96.5",
+        "quote": "Excessive regulation is costing our country as much as $2 trillion a year, and we will end it very very quickly."
       },
       {
         "id": "trump-2016-lift-energy-restrictions",
@@ -767,8 +1392,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶96.6-96.7",
+        "quote": "We are going to lift the restrictions on the production of American energy. This will produce more than $20 trillion in job creating economic activity over the next four decades."
       },
       {
         "id": "trump-2016-repeal-obamacare",
@@ -777,8 +1411,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶99.3",
+        "quote": "We will repeal and replace disastrous Obamacare."
       },
       {
         "id": "trump-2016-renegotiate-nafta",
@@ -787,8 +1430,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶93.3-93.4",
+        "quote": "Our horrible trade agreements with China and many others, will be totally renegotiated. That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want."
       },
       {
         "id": "trump-2016-no-bad-trade-deals",
@@ -797,8 +1449,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶91.5-91.6",
+        "quote": "I pledge to never sign any trade agreement that hurts our workers, or that diminishes our freedom and independence. I will never, ever sign bad trade deals."
       },
       {
         "id": "trump-2016-bring-jobs-back",
@@ -807,8 +1468,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶89.1",
+        "quote": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America – and I am not going to let companies move to other countries, firing their employees along the way, without consequences."
       },
       {
         "id": "trump-2016-rebuild-military",
@@ -817,8 +1487,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶102.1",
+        "quote": "We will completely rebuild our depleted military, and the countries that we protect, at a massive loss, will be asked to pay their fair share."
       },
       {
         "id": "trump-2016-veterans-choice",
@@ -827,8 +1506,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶103.1-103.3",
+        "quote": "We will take care of our great veterans like they have never been taken care of before. [...] We will guarantee those who serve this country will be able to visit the doctor or hospital of their choice without waiting five days in line and dying."
       },
       {
         "id": "trump-2016-wasteful-spending-100-days",
@@ -837,8 +1525,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶104.2",
+        "quote": "We are going to ask every Department Head in government to provide a list of wasteful spending projects that we can eliminate in my first 100 days."
       },
       {
         "id": "trump-2016-supreme-court",
@@ -847,8 +1544,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶105.1",
+        "quote": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution."
       },
       {
         "id": "trump-2016-restore-law-and-order",
@@ -857,8 +1563,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶54.4",
+        "quote": "I have a message to every last person threatening the peace on our streets and the safety of our police: when I take the oath of office next year, I will restore law and order to our country."
       },
       {
         "id": "trump-2016-crime-end",
@@ -867,8 +1582,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶6.1",
+        "quote": "I have a message for all of you: the crime and violence that today afflicts our nation will soon – and I mean very soon – come to an end."
       },
       {
         "id": "trump-2016-repeal-johnson-amendment",
@@ -877,8 +1601,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶108.1",
+        "quote": "I am going to work very hard to repeal that language and protect free speech for all Americans."
       },
       {
         "id": "trump-2016-enforce-trade-tariffs",
@@ -887,8 +1620,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶92.2",
+        "quote": "We are going to enforce all trade violations against any country including through the use of taxes and tariffs, against any country that cheats."
       },
       {
         "id": "trump-2016-rebuild-infrastructure",
@@ -897,8 +1639,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶98.1",
+        "quote": "We will build the roads, highways, bridges, tunnels, airports, and the railways of tomorrow."
       },
       {
         "id": "trump-2016-school-choice",
@@ -907,8 +1658,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶98.3",
+        "quote": "We will rescue kids from failing schools by helping their parents send them to a safe school of their choice."
       },
       {
         "id": "trump-2016-student-debt",
@@ -917,8 +1677,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶101.1",
+        "quote": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people just starting out their adult lives."
       },
       {
         "id": "trump-2016-visa-overstays",
@@ -927,8 +1696,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶78.7",
+        "quote": "By enforcing the rules for the millions who overstay their visas, our laws will finally receive the respect they deserve."
       },
       {
         "id": "trump-2016-protect-lgbtq",
@@ -937,8 +1715,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+          "year": 2016,
+          "date": "2016-07-21",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
           "label": "2016 acceptance speech"
-        }
+        },
+        "ref": "¶64.1",
+        "quote": "As your President, I will do everything in my power to protect our LGBTQ citizens from the violence and oppression of a hateful foreign ideology – believe me."
       }
     ]
   },
@@ -958,8 +1745,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶67.1",
+        "quote": "As president, the first step I will take will be to get control of the virus that's ruined so many lives."
       },
       {
         "id": "biden-2020-covid-strategy",
@@ -968,8 +1764,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶78.1",
+        "quote": "If I'm president on day one we'll implement the national strategy I've been laying out since March."
       },
       {
         "id": "biden-2020-rapid-tests",
@@ -978,8 +1783,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶79.1",
+        "quote": "We'll develop and deploy rapid tests with results available immediately."
       },
       {
         "id": "biden-2020-domestic-ppe",
@@ -988,8 +1802,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶80.1-80.3",
+        "quote": "We'll make the medical supplies and protective equipment our country needs. And we'll make them here in America. So we will never again be at the mercy of China and other foreign countries in order to protect our own people."
       },
       {
         "id": "biden-2020-schools-reopen",
@@ -998,8 +1821,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶81.1",
+        "quote": "We'll make sure our schools have the resources they need to be open, safe, and effective."
       },
       {
         "id": "biden-2020-experts-transparency",
@@ -1008,8 +1840,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶82.1",
+        "quote": "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve."
       },
       {
         "id": "biden-2020-mask-mandate",
@@ -1018,8 +1859,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶83.1",
+        "quote": "We'll have a national mandate to wear a mask-not as a burden, but to protect each other."
       },
       {
         "id": "biden-2020-infrastructure-jobs",
@@ -1028,8 +1878,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶106.3-107.3",
+        "quote": "And when we do, we'll not only build it back, we'll build it back better. With modern roads, bridges, highways, broadband, ports and airports as a new foundation for economic growth. With pipes that transport clean water to every community. With 5 million new manufacturing and technology jobs so the future is made in America."
       },
       {
         "id": "biden-2020-health-premiums",
@@ -1038,8 +1897,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶108.1",
+        "quote": "With a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act he's trying to rip away."
       },
       {
         "id": "biden-2020-college-cost",
@@ -1048,8 +1916,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶109.1",
+        "quote": "With an education system that trains our people for the best jobs of the 21st century, where cost doesn't prevent young people from going to college, and student debt doesn't crush them when they get out."
       },
       {
         "id": "biden-2020-care-economy",
@@ -1058,8 +1935,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶110.1",
+        "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
       },
       {
         "id": "biden-2020-immigration",
@@ -1068,8 +1954,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶110.2",
+        "quote": "With an immigration system that powers our economy and reflects our values."
       },
       {
         "id": "biden-2020-labor",
@@ -1078,8 +1973,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶110.3-110.5",
+        "quote": "With newly empowered labor unions. With equal pay for women. With rising wages you can raise a family on."
       },
       {
         "id": "biden-2020-essential-workers-pay",
@@ -1088,8 +1992,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶110.6-110.7",
+        "quote": "Yes, we're going to do more than praise our essential workers. We're finally going to pay them."
       },
       {
         "id": "biden-2020-clean-energy-jobs",
@@ -1098,8 +2011,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶111.1-111.3",
+        "quote": "We can, and we will, deal with climate change. It's not only a crisis, it's an enormous opportunity. An opportunity for America to lead the world in clean energy and create millions of new good-paying jobs in the process."
       },
       {
         "id": "biden-2020-tax-fair-share",
@@ -1108,8 +2030,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶112.1",
+        "quote": "And we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent and the biggest, most profitable corporations, some of which pay no tax at all."
       },
       {
         "id": "biden-2020-social-security-medicare",
@@ -1118,8 +2049,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶115.2",
+        "quote": "If I'm your president, we're going to protect Social Security and Medicare."
       },
       {
         "id": "biden-2020-election-interference",
@@ -1128,8 +2068,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Joseph R. Biden, Jr.",
+          "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+          "year": 2020,
+          "date": "2020-08-20",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
           "label": "2020 acceptance speech"
-        }
+        },
+        "ref": "¶129.1-129.2",
+        "quote": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers. Nor will I put up with foreign interference in our most sacred democratic exercise -- voting."
       }
     ]
   },
@@ -1149,8 +2098,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶83.1",
+        "quote": "I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy."
       },
       {
         "id": "trump-2024-prices-day1",
@@ -1159,8 +2117,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶118.2",
+        "quote": "Starting on Day 1, we will drive down prices and make America affordable again."
       },
       {
         "id": "trump-2024-energy-dominance",
@@ -1169,8 +2136,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶120.7-120.9",
+        "quote": "Under the Trump administration just three and a half years ago, we were energy independent. But soon we will actually be better than that. We will be energy dominant and supply not only ourselves, but we will supply the rest of the world."
       },
       {
         "id": "trump-2024-debt",
@@ -1179,8 +2155,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶121.1-121.2",
+        "quote": "With numbers that nobody has ever seen and we will reduce our debt, $36 trillion. We will start reducing that."
       },
       {
         "id": "trump-2024-taxes-cut",
@@ -1189,8 +2174,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶121.3",
+        "quote": "And we will also reduce your taxes still further."
       },
       {
         "id": "trump-2024-no-tax-tips",
@@ -1199,8 +2193,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶132.4",
+        "quote": "It's called no tax on tips."
       },
       {
         "id": "trump-2024-wall",
@@ -1209,8 +2212,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶87.1",
+        "quote": "I will end the illegal immigration crisis by closing our border and finishing the wall, most of which I've already built."
       },
       {
         "id": "trump-2024-border-day1",
@@ -1219,8 +2231,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶157.1-157.2",
+        "quote": "At the heart of the Republican platform is our pledge to end this border nightmare, and fully restore the sacred and sovereign borders of the United States of America. And we're going to do that on Day 1."
       },
       {
         "id": "trump-2024-deportation",
@@ -1229,8 +2250,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶176.2-176.3",
+        "quote": "That's why, to keep our family safe, the Republican platform promises to launch the largest deportation operation in the history of our country. Even larger than that of President Dwight D. Eisenhower, from many years ago."
       },
       {
         "id": "trump-2024-ev-mandate",
@@ -1239,8 +2269,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶124.1",
+        "quote": "And I will end the electric vehicle mandate on day one."
       },
       {
         "id": "trump-2024-auto-jobs",
@@ -1249,8 +2288,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶131.4-131.5",
+        "quote": "This very simple formula will create massive numbers of jobs. We will take over the auto industry again and many many, hundreds of thousands of jobs, we lost so many jobs over the years."
       },
       {
         "id": "trump-2024-car-tariff",
@@ -1259,8 +2307,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶127.2",
+        "quote": "And if they don't agree with us, we'll put a tariff of approximately 100 to 200 percent on each car and they will be unsellable in the United States."
       },
       {
         "id": "trump-2024-ss-medicare",
@@ -1269,8 +2326,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶148.1",
+        "quote": "I am going to protect Social Security and Medicare."
       },
       {
         "id": "trump-2024-end-wars",
@@ -1279,8 +2345,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶89.1",
+        "quote": "I will end every single international crisis that the current administration has created, including the horrible war with Russia and Ukraine, which would have never happened if I was president."
       },
       {
         "id": "trump-2024-iron-dome",
@@ -1289,8 +2364,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶210.7",
+        "quote": "We will replenish our military and build an iron dome missile defense system to ensure that no enemy can strike our homeland."
       },
       {
         "id": "trump-2024-womens-sports",
@@ -1299,8 +2383,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶217.1-217.2",
+        "quote": "We will not have men playing in women's sports. That will end immediately."
       },
       {
         "id": "trump-2024-cancer-cures",
@@ -1309,8 +2402,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶215.1",
+        "quote": "We will unleash the power of American innovation, and as we do, we will soon be on the verge of finding the cures to cancer, Alzheimer's disease and many other diseases."
       },
       {
         "id": "trump-2024-cities",
@@ -1319,8 +2421,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "no",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶218.1",
+        "quote": "And we will restore and renovate our nation's once-great cities, making them safe, clean and beautiful again."
       },
       {
         "id": "trump-2024-hostages",
@@ -1329,8 +2440,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "full",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶208.1",
+        "quote": "we want our hostages back — and they better be back before I assume office, or you will be paying a very big price."
       },
       {
         "id": "trump-2024-green-redirect",
@@ -1339,8 +2459,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶123.1",
+        "quote": "And all of the trillions of dollars that are sitting there not yet spent, we will redirect that money for important projects like roads, bridges, dams and we will not allow it to be spent on the meaningless Green New scam ideas."
       },
       {
         "id": "trump-2024-incomes-prosper",
@@ -1349,8 +2478,17 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "quality": "partial",
         "source": {
           "kind": "acceptance",
+          "medium": "speech",
+          "speaker": "Donald J. Trump",
+          "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+          "year": 2024,
+          "date": "2024-07-18",
+          "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+          "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
           "label": "2024 acceptance speech"
-        }
+        },
+        "ref": "¶149.1",
+        "quote": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly."
       }
     ]
   }

@@ -4,7 +4,6 @@ import {
   QUALITY_META,
   deltaBetween,
   summarize,
-  type CorpusPromise,
   type CorpusTerm,
   type Quality,
   type TermSummary,
@@ -73,19 +72,17 @@ interface Selection {
   quality: Quality;
 }
 
-export function PromisesChart({
-  terms,
-  onOpenPromise,
-}: {
-  terms: CorpusTerm[];
-  onOpenPromise?: (promise: CorpusPromise, term: TermSummary) => void;
-}) {
+export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
   const [mode, setMode] = useState<Mode>('absolute');
   const [selected, setSelected] = useState<Selection | null>(null);
+  const [openId, setOpenId] = useState<string | null>(null);
 
-  // A change of `terms` means the topic filter changed — drop any open block
-  // selection so the list panel can't point at a now-empty tier.
-  useEffect(() => setSelected(null), [terms]);
+  // A change of `terms` means the topic filter changed — drop the block
+  // selection (so the list can't point at a now-empty tier) and the open promise.
+  useEffect(() => {
+    setSelected(null);
+    setOpenId(null);
+  }, [terms]);
 
   const summaries = useMemo(() => summarize(terms), [terms]);
   const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
@@ -104,6 +101,7 @@ export function PromisesChart({
   // one source; while everything is from the acceptance speech it stays hidden.
   const showSource =
     !!selectedBar && new Set(selectedBar.summary.promises.map((p) => p.source.label)).size > 1;
+  const openPromise = selectedList.find((p) => p.id === openId) ?? null;
 
   return (
     <div className="pc">
@@ -179,11 +177,11 @@ export function PromisesChart({
                     y={s.y}
                     width={s.w}
                     height={s.h}
-                    onClick={() =>
-                      setSelected(
-                        on ? null : { termKey: bar.summary.key, quality: s.quality },
-                      )
-                    }
+                    onClick={() => {
+                      // clicking a block resets any open promise detail
+                      setOpenId(null);
+                      setSelected(on ? null : { termKey: bar.summary.key, quality: s.quality });
+                    }}
                   >
                     <title>
                       {bar.summary.label} · {QUALITY_META[s.quality].label}: {s.count}
@@ -213,6 +211,44 @@ export function PromisesChart({
         ))}
       </svg>
 
+      {openPromise && (
+        <div className="pc-detail" data-q={openPromise.quality}>
+          <div className="pc-detail-top">
+            <span className="pc-detail-tier" data-q={openPromise.quality}>
+              {QUALITY_META[openPromise.quality].label}
+            </span>
+            <span className="pc-detail-theme">{openPromise.theme}</span>
+            <button type="button" className="pc-detail-close" onClick={() => setOpenId(null)}>
+              ✕
+            </button>
+          </div>
+          <div className="pc-detail-title">{openPromise.restatement}</div>
+          <blockquote className="pc-detail-quote">“{openPromise.quote}”</blockquote>
+          <div className="pc-detail-context">
+            <span className="pc-detail-speaker">{openPromise.source.speaker}</span>
+            {openPromise.source.year != null && (
+              <>
+                <span className="pc-detail-dot">·</span>
+                <span>{openPromise.source.year}</span>
+              </>
+            )}
+            <span className="pc-detail-dot">·</span>
+            <span className="pc-detail-event">{openPromise.source.event}</span>
+            <span className="pc-detail-medium">{openPromise.source.medium}</span>
+          </div>
+          {(openPromise.ref || openPromise.source.url) && (
+            <div className="pc-detail-cite">
+              {openPromise.ref && <span className="pc-detail-ref">{openPromise.ref}</span>}
+              {openPromise.source.url && (
+                <a href={openPromise.source.url} target="_blank" rel="noreferrer">
+                  {openPromise.source.publisher || 'source'} ↗
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
       {selected && selectedBar ? (
         <div className="pc-list">
           <div className="pc-list-head">
@@ -233,7 +269,8 @@ export function PromisesChart({
                 <button
                   type="button"
                   className="pc-promise"
-                  onClick={() => onOpenPromise?.(p, selectedBar.summary)}
+                  data-open={openId === p.id}
+                  onClick={() => setOpenId((cur) => (cur === p.id ? null : p.id))}
                 >
                   <span className="pc-promise-theme">{p.theme}</span>
                   <span className="pc-promise-text">

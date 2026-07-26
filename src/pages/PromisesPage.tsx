@@ -49,15 +49,7 @@ export function PromisesPage() {
           onSelect={setTopic}
         />
 
-        <PromisesChart
-          terms={terms}
-          onOpenPromise={(promise) => {
-            // Per-promise analysis pages are a later feature. For now, the one
-            // built page is the deficit deep-dive.
-            void promise;
-            window.location.hash = 'deficit';
-          }}
-        />
+        <PromisesChart terms={terms} />
 
         <footer className="colophon">
           <p>
