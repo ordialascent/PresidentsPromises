@@ -27,17 +27,13 @@ export function PromisesPage() {
   return (
     <div className="page">
       <header className="masthead">
-        <div className="eyebrow">Presidents' Promises · nomination acceptance speeches</div>
-        <h1>What can even be measured?</h1>
+        <div className="eyebrow">Presidents' Promises · What can be measured and what was achieved? · MVP</div>
+        <h1>The Promises Presidents Make</h1>
         <p className="subtitle">
-          Every promise in each president's nomination acceptance speech since 2000, sorted by
-          whether the promise carries what it takes to be checked at all — a named metric, a
-          threshold, and a deadline. Most don't. This is the raw material the rest of the tool
-          reads promise by promise; it takes no view on whether any promise was kept.
+          A collection of promises from comparable and authoritative sources, starting in 2000, categorized by verifiability.
         </p>
         <p className="provenance">
-          {CORPUS_PROMISE_COUNT} promises · {CORPUS_TERMS.length} terms · sources verbatim from The
-          American Presidency Project
+          {CORPUS_PROMISE_COUNT} promises · {CORPUS_TERMS.length} terms · sources verbatim
         </p>
       </header>
 
@@ -53,27 +49,13 @@ export function PromisesPage() {
 
         <footer className="colophon">
           <p>
-            “Measurable” is a property of the sentence, not a judgment of the president: a promise
-            is <em>full</em> when it names a metric, a threshold, and a deadline; <em>partial</em>{' '}
-            when one of those is missing or too vague; <em>none</em> when it is aspirational with no
-            measurable quantity at all. Even a <em>full</em> promise is usually still disputable —
-            which baseline, which endpoint — and that dispute is exactly what the per-promise view
-            exists to show.
+            Verifiability is a property of the sentence, not of the president. A promise is <em>full</em> when it names a metric, a threshold, and a deadline; <em>partial</em> when one of those is missing or vague; <em>none</em> when it names no measurable quantity. Even a <em>full</em> promise can still be disputed on baseline or endpoint.
           </p>
           <p>
-            The three colours are the flag's — Old Glory Red, white, Old Glory Blue — and they
-            encode the measurability tier (full / partial / none), the same three for every
-            president. They are not a party coding: no causation, no scorecard, no party comparison.
-            Bars are ordered by term.
+            The colors are taken from the US flag and do not represent the parties. Nowhere does this site make a causal claim or compare parties.
           </p>
           <p>
-            For now every promise is drawn from a nomination acceptance speech, but each one already
-            carries its own <em>source</em>, so other kinds — debates, official statements, other
-            speeches — can be added without reshaping the model or this chart. See{' '}
-            <a href="https://github.com/ordialascent/PresidentsPromises/blob/main/ARCHITECTURE.md">
-              ARCHITECTURE.md
-            </a>{' '}
-            for the corpus and the measurability model.
+            Sources currently in use:</br><ul><li>Nomination acceptance speech from <em>The American Presidency Project</em></li></ul>
           </p>
         </footer>
       </main>
