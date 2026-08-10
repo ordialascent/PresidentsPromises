@@ -97,10 +97,6 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
     selectedBar && selected
       ? selectedBar.summary.promises.filter((p) => p.quality === selected.quality)
       : [];
-  // Show a per-promise source tag only once a term actually draws on more than
-  // one source; while everything is from the acceptance speech it stays hidden.
-  const showSource =
-    !!selectedBar && new Set(selectedBar.summary.promises.map((p) => p.source.label)).size > 1;
   const openPromise = selectedList.find((p) => p.id === openId) ?? null;
 
   return (
@@ -218,34 +214,43 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
               {QUALITY_META[openPromise.quality].label}
             </span>
             <span className="pc-detail-theme">{openPromise.theme}</span>
+            {openPromise.occurrences.length > 1 && (
+              <span className="pc-detail-count">
+                promised {openPromise.occurrences.length}×
+              </span>
+            )}
             <button type="button" className="pc-detail-close" onClick={() => setOpenId(null)}>
               ✕
             </button>
           </div>
           <div className="pc-detail-title">{openPromise.restatement}</div>
-          <blockquote className="pc-detail-quote">“{openPromise.quote}”</blockquote>
-          <div className="pc-detail-context">
-            <span className="pc-detail-speaker">{openPromise.source.speaker}</span>
-            {openPromise.source.year != null && (
-              <>
+          {openPromise.occurrences.map((o, k) => (
+            <div className="pc-detail-occ" key={`${o.source.kind}-${k}`}>
+              <blockquote className="pc-detail-quote">“{o.quote}”</blockquote>
+              <div className="pc-detail-context">
+                <span className="pc-detail-speaker">{o.source.speaker}</span>
+                {o.source.year != null && (
+                  <>
+                    <span className="pc-detail-dot">·</span>
+                    <span>{o.source.year}</span>
+                  </>
+                )}
                 <span className="pc-detail-dot">·</span>
-                <span>{openPromise.source.year}</span>
-              </>
-            )}
-            <span className="pc-detail-dot">·</span>
-            <span className="pc-detail-event">{openPromise.source.event}</span>
-            <span className="pc-detail-medium">{openPromise.source.medium}</span>
-          </div>
-          {(openPromise.ref || openPromise.source.url) && (
-            <div className="pc-detail-cite">
-              {openPromise.ref && <span className="pc-detail-ref">{openPromise.ref}</span>}
-              {openPromise.source.url && (
-                <a href={openPromise.source.url} target="_blank" rel="noreferrer">
-                  {openPromise.source.publisher || 'source'} ↗
-                </a>
+                <span className="pc-detail-event">{o.source.event}</span>
+                <span className="pc-detail-medium">{o.source.medium}</span>
+              </div>
+              {(o.ref || o.source.url) && (
+                <div className="pc-detail-cite">
+                  {o.ref && <span className="pc-detail-ref">{o.ref}</span>}
+                  {o.source.url && (
+                    <a href={o.source.url} target="_blank" rel="noreferrer">
+                      {o.source.publisher || 'source'} ↗
+                    </a>
+                  )}
+                </div>
               )}
             </div>
-          )}
+          ))}
         </div>
       )}
 
@@ -275,7 +280,9 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
                   <span className="pc-promise-theme">{p.theme}</span>
                   <span className="pc-promise-text">
                     {p.restatement}
-                    {showSource && <span className="pc-promise-src">{p.source.label}</span>}
+                    {p.occurrences.length > 1 && (
+                      <span className="pc-promise-src">promised {p.occurrences.length}×</span>
+                    )}
                   </span>
                 </button>
               </li>

@@ -1,5 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { CORPUS_TERMS, CORPUS_PROMISE_COUNT } from '../src/content/promises.generated.js';
+import {
+  CORPUS_TERMS,
+  CORPUS_PROMISE_COUNT,
+  CORPUS_OCCURRENCE_COUNT,
+} from '../src/content/promises.generated.js';
 import { QUALITIES, deltaBetween, share, summarize, topicCounts } from '../src/promises/model.js';
 
 /**
@@ -15,6 +19,23 @@ describe('promises overview aggregation', () => {
     for (const t of CORPUS_TERMS) {
       for (const p of t.promises) expect(QUALITIES).toContain(p.quality);
     }
+  });
+
+  it('every promise has at least one occurrence, summing to the occurrence count', () => {
+    let occ = 0;
+    for (const t of CORPUS_TERMS) {
+      for (const p of t.promises) {
+        expect(p.occurrences.length).toBeGreaterThanOrEqual(1);
+        for (const o of p.occurrences) {
+          expect(o.source.kind).toBeTruthy();
+          expect(o.quote).toBeTypeOf('string');
+        }
+        occ += p.occurrences.length;
+      }
+    }
+    expect(occ).toBe(CORPUS_OCCURRENCE_COUNT);
+    // today the corpus is acceptance-only, so it's one occurrence per promise
+    expect(CORPUS_OCCURRENCE_COUNT).toBe(CORPUS_PROMISE_COUNT);
   });
 
   it('per-term counts sum to the term total, and totals to the corpus count', () => {
