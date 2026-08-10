@@ -15,28 +15,22 @@ corpus/
   README.md                       ← this file (the conventions)
   <term-years> <name>/            ← one directory per presidential term
     <year>-acceptance.md              ← source document, verbatim + numbered
-    promises.yaml                     ← promises from the acceptance speech
     <year>-inaugural.md               ← another source document (same term)
-    <year>-inaugural.promises.yaml    ← promises from the inaugural address
+    promises.yaml                     ← ALL of the term's promises, from every source
 ```
 
 Directories are named `<start>-<end> <name>`, e.g. `2009-2013 Obama`,
 `2021-2025 Biden`. A president who serves non-consecutive terms gets one
 directory per term (e.g. `2017-2021 Trump` and `2025-2029 Trump`).
 
-**A term can hold more than one source document.** Each is a
-`<year>-<kind>.md` file (`<kind>` is `acceptance`, `inaugural`, …), numbered the
-same way, and each pairs with its own promises file — so a promise's `¶ref` is
-never ambiguous about which document it points into:
-
-- `<year>-<kind>.md`  ↔  `<year>-<kind>.promises.yaml`
-- the acceptance speech keeps the legacy flat name `promises.yaml`.
-
-Example: `corpus/2009-2013 Obama/2008-acceptance.md` + `promises.yaml`, and
-`corpus/2009-2013 Obama/2009-inaugural.md` + `2009-inaugural.promises.yaml`. The
-app reads each promise's context (speaker / event / date / medium) from the
-front-matter of the document that carries it, so adding a source kind is a data
-addition, not a schema change.
+**A term can hold more than one source document** — each a `<year>-<kind>.md`
+file (`<kind>` is `acceptance`, `inaugural`, …), numbered the same way. But there
+is **one `promises.yaml` per term** that aggregates every promise the term made,
+across all of its sources. The promise is the unit (the *commitment*); each
+promise lists where it was said (see [the promise file](#promise-file-promisesyaml)).
+The app reads each occurrence's context — speaker / event / date / medium — from
+the front-matter of the document that carries it, so adding a source kind is a
+data addition, not a schema change.
 
 ## Speech file
 
@@ -91,43 +85,60 @@ whether/how it can be measured. The `measurability` block mirrors the chart's
 model (`src/content`), so a *measurable* promise maps straight onto a topic +
 `PromiseSpec` with no reshaping.
 
+A promise is scored on four dimensions (`metric` / `threshold` / `deadline` /
+`instrument`, each `present:` + details) that decide `measurable: full | partial
+| no`. **Single-source** promise — top-level `ref` + `quote`, which default to
+the term's acceptance speech:
+
 ```yaml
-# Promises extracted from <president>'s nomination acceptance speech(es).
-promises:
-  - id: obama-2008-deficit             # stable slug
-    speech: 2008-acceptance            # which speech file in this directory
-    ref: "2.3-2.5"                     # paragraph.sentence span into that speech
+  - id: obama-2008-oil-mideast         # stable slug, prefixed with the term's election year
+    ref: "¶44.1"                       # paragraph.sentence span into the acceptance speech
+    theme: energy
     quote: >                           # verbatim, from exactly those sentences
       ...
-    promise: >                         # concise restatement
+    restatement: End US dependence on Middle East oil within ten years.
+    metric:     { present: true, quantity: ..., record: ... }
+    threshold:  { present: true, stated: to zero }
+    deadline:   { present: true, stated: in ten years }
+    instrument: { present: true, stated: ... }
+    measurable: "full"
+    notes: >
       ...
-    topic: deficit                     # links to a measurable topic (or null)
-    measurability:
-      status: measurable               # measurable | unmeasurable | unclear (TBD in step two)
-      metric: FYFSD                    # data series id, if measurable
-      comparator: lte                  # lte | gte
-      target_rule: { kind: halve }     # halve | reduceByPercent | reduceToAbsolute
-      baselines: []                    # candidate baselines (value/year), TBD
-      deadlines: []                    # candidate deadlines (year), TBD
-      notes: >
-        ...
 ```
 
 ## Sources beyond the acceptance speech
 
-A term can carry several source documents (see [Layout](#layout)). Each
-`<year>-<kind>.md` source pairs with its own `<year>-<kind>.promises.yaml`, so a
-promise's source is simply **the file it lives in** — no per-promise `source:`
-tag, and its `¶ref` unambiguously points into that one document. The acceptance
-speech keeps the flat `promises.yaml` for back-compat.
+The promise is the **unit** — the commitment — and it lists every occurrence:
+where and when it was said. A commitment made in more than one source (say the
+acceptance speech *and* the inaugural) is **one promise** with a `sources:` list,
+not two entries. Replace the top-level `ref`/`quote` with the list; `in:` names
+the source kind (`acceptance`, `inaugural`, …), which the generator resolves to
+the term's `<year>-<kind>.md` for that occurrence's context:
 
-Adding a source kind (e.g. the inaugural address) is therefore just: drop in the
-numbered `<year>-<kind>.md`, add a sibling `<year>-<kind>.promises.yaml`, and
-extract. The app reads each promise's context — speaker, event, date, medium —
-from the front-matter of the document that carries it, and the overview chart
-surfaces a per-promise source tag automatically once a term draws on more than
-one source. Give inaugural-address promise ids a term-year prefix
-(`obama-2009-…`) so they never collide with the acceptance ids (`obama-2008-…`).
+```yaml
+  - id: obama-2008-oil-mideast
+    theme: energy
+    restatement: End US dependence on Middle East oil within ten years.
+    sources:
+      - in: acceptance
+        ref: "¶44.1"
+        quote: >
+          ...
+      - in: inaugural
+        ref: "¶9.2"
+        quote: >
+          ...
+    metric: { ... }
+    # ... same four-dimension scoring + measurable + notes
+```
+
+The four-dimension scoring stays at the promise level (it's a property of the
+commitment; if two phrasings differ materially, note it). The occurrence count is
+the recurrence signal (how often the thing was promised). Adding a source kind is
+just: drop in the numbered `<year>-<kind>.md`, then either add its promises to
+`promises.yaml` or attach an `in: <kind>` occurrence to an existing promise. Keep
+promise ids prefixed with the **term's election year** (`obama-2008-…` for the
+whole 2009–2013 term, whatever source a promise came from) so they stay unique.
 
 ## Rules
 
