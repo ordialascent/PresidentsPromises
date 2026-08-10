@@ -54,9 +54,12 @@ export function PromisesPage() {
           <p>
             The colors are taken from the US flag and do not represent the parties. Nowhere does this site make a causal claim or compare parties.
           </p>
-          <p>
-            Sources currently in use:</br><ul><li>Nomination acceptance speech from <em>The American Presidency Project</em></li></ul>
-          </p>
+          <div>
+            Sources currently in use:
+            <ul>
+              <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
+            </ul>
+          </div>
         </footer>
       </main>
     </div>
