@@ -84,6 +84,27 @@ function parseFrontMatter(md) {
   return fm;
 }
 
+// Human-readable label for a source kind, used in the compact source tag.
+const KIND_LABEL = { acceptance: 'acceptance speech', inaugural: 'inaugural address' };
+
+// Build the rich source (the promise's "context") from a source doc's own
+// front-matter, so who/when/where/medium always come from the document that
+// actually carries the promise.
+function buildSource(dir, stem, kind, year) {
+  const fm = parseFrontMatter(readFileSync(join(dir, `${stem}.md`), 'utf8'));
+  return {
+    kind,
+    medium: fm.type || 'speech',
+    speaker: fm.name || '',
+    event: fm.title || '',
+    year: Number.isFinite(year) ? year : null,
+    date: fm.date_published || '',
+    publisher: fm.source_publisher || '',
+    url: fm.source_url || '',
+    label: `${year} ${KIND_LABEL[kind] || kind}`,
+  };
+}
+
 const terms = [];
 for (const name of readdirSync(CORPUS)) {
   const dir = join(CORPUS, name);
@@ -92,47 +113,48 @@ for (const name of readdirSync(CORPUS)) {
   if (!m) continue;
   const [, fromStr, toStr, surname] = m;
   const files = readdirSync(dir);
-  const promisesFile = files.find((f) => f === 'promises.yaml');
-  const speechFile = files.find((f) => /^\d{4}-acceptance\.md$/.test(f));
-  if (!promisesFile) continue;
-  const speechYear = speechFile ? Number(speechFile.slice(0, 4)) : null;
-  const fm = speechFile ? parseFrontMatter(readFileSync(join(dir, speechFile), 'utf8')) : {};
-  // The default source for a term is its nomination acceptance speech, described
-  // by the speech's own front-matter (speaker / event / date / medium). As other
-  // source types are added (debates, interviews, statements), a promise names its
-  // own via a `source:` field pointing at that document; until then every promise
-  // inherits this default, so the "context" (who / when / where / what medium) is
-  // already carried without any per-promise annotation in today's corpus.
-  const defaultSource = {
-    kind: 'acceptance',
-    medium: fm.type || 'speech',
-    speaker: fm.name || surname,
-    event: fm.title || 'Nomination acceptance speech',
-    year: speechYear,
-    date: fm.date_published || '',
-    publisher: fm.source_publisher || '',
-    url: fm.source_url || '',
-    label: speechYear ? `${speechYear} acceptance speech` : 'acceptance speech',
-  };
-  const promises = parsePromises(readFileSync(join(dir, promisesFile), 'utf8')).map((p) => {
-    if (!QUALITIES.includes(p.measurable)) {
-      throw new Error(`${name}/${p.id}: bad measurable ${JSON.stringify(p.measurable)}`);
+
+  // Every source document in the term is "<year>-<kind>.md" (e.g. an acceptance
+  // speech and an inaugural address). Each pairs with its own promises file, so
+  // a promise's ¶ref is unambiguous and its source is the document it lives in.
+  const sourceDocs = files
+    .map((f) => {
+      const sm = f.match(/^(\d{4})-([a-z]+)\.md$/);
+      return sm ? { stem: f.slice(0, -3), year: Number(sm[1]), kind: sm[2] } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.year - b.year || a.kind.localeCompare(b.kind));
+  if (!sourceDocs.length) continue;
+
+  const promises = [];
+  for (const doc of sourceDocs) {
+    const source = buildSource(dir, doc.stem, doc.kind, doc.year);
+    // Promises paired with this doc: "<stem>.promises.yaml"; the acceptance doc
+    // keeps the legacy flat "promises.yaml".
+    const pf =
+      (files.includes(`${doc.stem}.promises.yaml`) && `${doc.stem}.promises.yaml`) ||
+      (doc.kind === 'acceptance' && files.includes('promises.yaml') && 'promises.yaml') ||
+      null;
+    if (!pf) continue;
+    for (const p of parsePromises(readFileSync(join(dir, pf), 'utf8'))) {
+      if (!QUALITIES.includes(p.measurable)) {
+        throw new Error(`${name}/${pf}: ${p.id} has bad measurable ${JSON.stringify(p.measurable)}`);
+      }
+      promises.push({
+        id: p.id,
+        theme: p.theme ?? 'other',
+        restatement: p.restatement ?? p.id,
+        quality: p.measurable,
+        source,
+        ref: p.ref ?? '',
+        quote: p.quote ?? '',
+      });
     }
-    // A per-promise `source:` override names a different source; full metadata
-    // for such a document will attach when those documents are added.
-    const source = p.source
-      ? { ...defaultSource, kind: 'other', event: p.source, label: p.source }
-      : defaultSource;
-    return {
-      id: p.id,
-      theme: p.theme ?? 'other',
-      restatement: p.restatement ?? p.id,
-      quality: p.measurable,
-      source,
-      ref: p.ref ?? '',
-      quote: p.quote ?? '',
-    };
-  });
+  }
+
+  // Term identity (the tuple + its bar label) is anchored on the acceptance year.
+  const acceptance = sourceDocs.find((d) => d.kind === 'acceptance') ?? sourceDocs[0];
+  const speechYear = acceptance ? acceptance.year : null;
   terms.push({
     key: name,
     surname,
