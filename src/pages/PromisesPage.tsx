@@ -58,6 +58,7 @@ export function PromisesPage() {
             Sources currently in use:
             <ul>
               <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
+              <li>Inaugural address from <em>The American Presidency Project</em></li>
             </ul>
           </div>
         </footer>
