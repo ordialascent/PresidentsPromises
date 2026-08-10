@@ -1,0 +1,5 @@
+# Promises extracted from Barack Obama's 2013 inaugural address.
+# Extraction is a later step. Schema: ../README.md and ../2009-2013 Obama/promises.yaml
+# (each promise cited by paragraph.sentence and scored on
+#  metric / threshold / deadline / instrument). Use ids prefixed "obama-2013-".
+promises: []

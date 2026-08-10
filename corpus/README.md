@@ -12,18 +12,31 @@ the structure and holds the speeches.
 
 ```
 corpus/
-  README.md                     ← this file (the conventions)
-  <term-years> <name>/          ← one directory per presidential term
-    <election-year>-acceptance.md   ← the speech, verbatim + numbered
-    promises.yaml                   ← promises extracted from that speech
+  README.md                       ← this file (the conventions)
+  <term-years> <name>/            ← one directory per presidential term
+    <year>-acceptance.md              ← source document, verbatim + numbered
+    promises.yaml                     ← promises from the acceptance speech
+    <year>-inaugural.md               ← another source document (same term)
+    <year>-inaugural.promises.yaml    ← promises from the inaugural address
 ```
 
 Directories are named `<start>-<end> <name>`, e.g. `2009-2013 Obama`,
 `2021-2025 Biden`. A president who serves non-consecutive terms gets one
-directory per term (e.g. `2017-2021 Trump` and `2025-2029 Trump`), each holding
-the acceptance speech that opened it.
+directory per term (e.g. `2017-2021 Trump` and `2025-2029 Trump`).
 
-Example: `corpus/2009-2013 Obama/2008-acceptance.md`, `corpus/2009-2013 Obama/promises.yaml`.
+**A term can hold more than one source document.** Each is a
+`<year>-<kind>.md` file (`<kind>` is `acceptance`, `inaugural`, …), numbered the
+same way, and each pairs with its own promises file — so a promise's `¶ref` is
+never ambiguous about which document it points into:
+
+- `<year>-<kind>.md`  ↔  `<year>-<kind>.promises.yaml`
+- the acceptance speech keeps the legacy flat name `promises.yaml`.
+
+Example: `corpus/2009-2013 Obama/2008-acceptance.md` + `promises.yaml`, and
+`corpus/2009-2013 Obama/2009-inaugural.md` + `2009-inaugural.promises.yaml`. The
+app reads each promise's context (speaker / event / date / medium) from the
+front-matter of the document that carries it, so adding a source kind is a data
+addition, not a schema change.
 
 ## Speech file
 
@@ -102,21 +115,19 @@ promises:
 
 ## Sources beyond the acceptance speech
 
-Today every promise in a term directory comes from that term's nomination
-acceptance speech, so no promise names its source explicitly — it is implied by
-the directory. As other sources are added (debates, official statements, other
-speeches), a promise names its own with an optional single-line `source:` field,
-and the source document lives alongside the acceptance speech in the same term
-directory (numbered the same way). The app is already source-aware: the overview
-chart carries a `source` per promise (defaulting to the acceptance speech) and
-only surfaces it once a term actually draws on more than one.
+A term can carry several source documents (see [Layout](#layout)). Each
+`<year>-<kind>.md` source pairs with its own `<year>-<kind>.promises.yaml`, so a
+promise's source is simply **the file it lives in** — no per-promise `source:`
+tag, and its `¶ref` unambiguously points into that one document. The acceptance
+speech keeps the flat `promises.yaml` for back-compat.
 
-```yaml
-  - id: obama-2012-example
-    ref: "12.1"
-    source: 2012 town hall, Denver   # optional; omit for the acceptance speech
-    ...
-```
+Adding a source kind (e.g. the inaugural address) is therefore just: drop in the
+numbered `<year>-<kind>.md`, add a sibling `<year>-<kind>.promises.yaml`, and
+extract. The app reads each promise's context — speaker, event, date, medium —
+from the front-matter of the document that carries it, and the overview chart
+surfaces a per-promise source tag automatically once a term draws on more than
+one source. Give inaugural-address promise ids a term-year prefix
+(`obama-2009-…`) so they never collide with the acceptance ids (`obama-2008-…`).
 
 ## Rules
 
