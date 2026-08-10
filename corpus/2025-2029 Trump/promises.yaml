@@ -26,11 +26,19 @@
 
 promises:
   - id: trump-2024-inflation
-    ref: "¶83.1"
     theme: inflation
-    quote: >
-      I will end the devastating inflation crisis immediately, bring down
-      interest rates and lower the cost of energy.
+    sources:
+      - in: acceptance
+        ref: "¶83.1"
+        quote: >
+          I will end the devastating inflation crisis immediately,
+          bring down interest rates and lower the cost of energy.
+      - in: inaugural
+        ref: "¶30.1"
+        quote: >
+          Next, I will direct all members of my Cabinet to marshal
+          the vast powers at their disposal to defeat what was
+          record inflation and rapidly bring down costs and prices.
     restatement: End the inflation crisis immediately; cut interest rates and energy costs.
     metric:
       present: true
@@ -80,13 +88,20 @@ promises:
       line, so how far prices must fall to count is undefined.
 
   - id: trump-2024-energy-dominance
-    ref: "¶120.7-120.9"
     theme: energy
-    quote: >
-      Under the Trump administration just three and a half years ago, we were
-      energy independent. But soon we will actually be better than that. We will
-      be energy dominant and supply not only ourselves, but we will supply the
-      rest of the world.
+    sources:
+      - in: acceptance
+        ref: "¶120.7-120.9"
+        quote: >
+          Under the Trump administration just three and a half years
+          ago, we were energy independent. But soon we will actually
+          be better than that. We will be energy dominant and supply
+          not only ourselves, but we will supply the rest of the
+          world.
+      - in: inaugural
+        ref: "¶30.3"
+        quote: >
+          We will drill, baby, drill.
     restatement: Make the US "energy dominant" — a net supplier to the rest of the world.
     metric:
       present: true
@@ -269,10 +284,19 @@ promises:
       that decides "largest."
 
   - id: trump-2024-ev-mandate
-    ref: "¶124.1"
     theme: energy
-    quote: >
-      And I will end the electric vehicle mandate on day one.
+    sources:
+      - in: acceptance
+        ref: "¶124.1"
+        quote: >
+          And I will end the electric vehicle mandate on day one.
+      - in: inaugural
+        ref: "¶33.1"
+        quote: >
+          With my actions today, we will end the "green new deal,"
+          and we will revoke the electric vehicle mandate, saving
+          our auto industry and keeping my sacred pledge to our
+          great American autoworkers.
     restatement: End the electric-vehicle mandate on Day 1.
     metric:
       present: true
@@ -294,12 +318,20 @@ promises:
       federal "EV mandate" — which rules count is the disputed boundary.
 
   - id: trump-2024-auto-jobs
-    ref: "¶131.4-131.5"
     theme: labor
-    quote: >
-      This very simple formula will create massive numbers of jobs. We will take
-      over the auto industry again and many many, hundreds of thousands of jobs,
-      we lost so many jobs over the years.
+    sources:
+      - in: acceptance
+        ref: "¶131.4-131.5"
+        quote: >
+          This very simple formula will create massive numbers of
+          jobs. We will take over the auto industry again and many
+          many, hundreds of thousands of jobs, we lost so many jobs
+          over the years.
+      - in: inaugural
+        ref: "¶34.1"
+        quote: >
+          We will build automobiles in America again at a rate that
+          nobody could have dreamt possible just a few years ago.
     restatement: Bring back the auto industry and hundreds of thousands of manufacturing jobs.
     metric:
       present: true
@@ -373,12 +405,21 @@ promises:
       names no instrument, and carries no deadline.
 
   - id: trump-2024-end-wars
-    ref: "¶89.1"
     theme: foreign-policy
-    quote: >
-      I will end every single international crisis that the current
-      administration has created, including the horrible war with Russia and
-      Ukraine, which would have never happened if I was president.
+    sources:
+      - in: acceptance
+        ref: "¶89.1"
+        quote: >
+          I will end every single international crisis that the
+          current administration has created, including the horrible
+          war with Russia and Ukraine, which would have never
+          happened if I was president.
+      - in: inaugural
+        ref: "¶64.4"
+        quote: >
+          Our power will stop all wars and bring a new spirit of
+          unity to a world that has been angry, violent, and totally
+          unpredictable.
     restatement: End every international crisis, including the Russia-Ukraine war.
     metric:
       present: true
@@ -481,11 +522,18 @@ promises:
       hedge ("on the verge") that is unfalsifiable by design.
 
   - id: trump-2024-cities
-    ref: "¶218.1"
     theme: crime
-    quote: >
-      And we will restore and renovate our nation's once-great cities, making
-      them safe, clean and beautiful again.
+    sources:
+      - in: acceptance
+        ref: "¶218.1"
+        quote: >
+          And we will restore and renovate our nation's once-great
+          cities, making them safe, clean and beautiful again.
+      - in: inaugural
+        ref: "¶39.5"
+        quote: >
+          And we are going to bring law and order back to our
+          cities.
     restatement: Restore US cities to be safe, clean, and beautiful.
     metric:
       present: false

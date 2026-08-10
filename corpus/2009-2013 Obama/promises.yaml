@@ -54,13 +54,22 @@ promises:
       chart topic.
 
   - id: obama-2008-energy-invest
-    ref: "¶47.4"
     theme: energy
-    quote: >
-      And I'll invest 150 billion dollars over the next decade in affordable,
-      renewable sources of energy – wind power and solar power and the next
-      generation of biofuels; an investment that will lead to new industries
-      and five million new jobs that pay well and can't ever be outsourced.
+    sources:
+      - in: acceptance
+        ref: "¶47.4"
+        quote: >
+          And I'll invest 150 billion dollars over the next decade
+          in affordable, renewable sources of energy – wind power
+          and solar power and the next generation of biofuels; an
+          investment that will lead to new industries and five
+          million new jobs that pay well and can't ever be
+          outsourced.
+      - in: inaugural
+        ref: "¶12.5"
+        quote: >
+          We will harness the sun and the winds and the soil to fuel
+          our cars and run our factories.
     restatement: Invest $150B over ten years in renewable energy, yielding five million jobs.
     metric:
       present: true
@@ -157,12 +166,20 @@ promises:
       metric for "jobs shipped overseas."
 
   - id: obama-2008-healthcare-universal
-    ref: "¶50.1-50.2"
     theme: health
-    quote: >
-      Now is the time to finally keep the promise of affordable, accessible
-      health care for every single American. If you have health care, my plan
-      will lower your premiums.
+    sources:
+      - in: acceptance
+        ref: "¶50.1-50.2"
+        quote: >
+          Now is the time to finally keep the promise of affordable,
+          accessible health care for every single American. If you
+          have health care, my plan will lower your premiums.
+      - in: inaugural
+        ref: "¶12.4"
+        quote: >
+          We will restore science to its rightful place and wield
+          technology's wonders to raise health care's quality and
+          lower its cost.
     restatement: Affordable, accessible health care for every American; lower premiums for the insured.
     metric:
       present: true
@@ -183,15 +200,27 @@ promises:
       baseline or magnitude — lower than what, and by how much?
 
   - id: obama-2008-fiscal-payfor
-    ref: "¶54.1-54.2"
     theme: fiscal
-    quote: >
-      Now, many of these plans will cost money, which is why I've laid out how
-      I'll pay for every dime – by closing corporate loopholes and tax havens
-      that don't help America grow. But I will also go through the federal
-      budget, line by line, eliminating programs that no longer work and making
-      the ones we do need work better and cost less – because we cannot meet
-      twenty-first century challenges with a twentieth century bureaucracy.
+    sources:
+      - in: acceptance
+        ref: "¶54.1-54.2"
+        quote: >
+          Now, many of these plans will cost money, which is why
+          I've laid out how I'll pay for every dime – by closing
+          corporate loopholes and tax havens that don't help America
+          grow. But I will also go through the federal budget, line
+          by line, eliminating programs that no longer work and
+          making the ones we do need work better and cost less –
+          because we cannot meet twenty-first century challenges
+          with a twentieth century bureaucracy.
+      - in: inaugural
+        ref: "¶14.4-14.5"
+        quote: >
+          Where the answer is no, programs will end. And those of us
+          who manage the public's dollars will be held to account to
+          spend wisely, reform bad habits, and do our business in
+          the light of day, because only then can we restore the
+          vital trust between a people and their government.
     restatement: Pay for every new dollar of spending; cut wasteful programs line by line.
     metric:
       present: true
@@ -265,11 +294,18 @@ promises:
       only as "did such a federal policy pass?"
 
   - id: obama-2008-iraq-end
-    ref: "¶64.1"
     theme: foreign-policy
-    quote: >
-      I will end this war in Iraq responsibly, and finish the fight against al
-      Qaeda and the Taliban in Afghanistan.
+    sources:
+      - in: acceptance
+        ref: "¶64.1"
+        quote: >
+          I will end this war in Iraq responsibly, and finish the
+          fight against al Qaeda and the Taliban in Afghanistan.
+      - in: inaugural
+        ref: "¶18.3"
+        quote: >
+          We will begin to responsibly leave Iraq to its people and
+          forge a hard-earned peace in Afghanistan.
     restatement: End the Iraq war responsibly; finish the fight in Afghanistan.
     metric:
       present: true
@@ -316,14 +352,22 @@ promises:
       promise — success depends on Iran, not only on him.
 
   - id: obama-2008-education-worldclass
-    ref: "¶49.1-49.5"
     theme: education
-    quote: >
-      Now is the time to finally meet our moral obligation to provide every
-      child a world-class education, because it will take nothing less to
-      compete in the global economy. [...] I'll invest in early childhood
-      education. I'll recruit an army of new teachers, and pay them higher
-      salaries and give them more support.
+    sources:
+      - in: acceptance
+        ref: "¶49.1-49.5"
+        quote: >
+          Now is the time to finally meet our moral obligation to
+          provide every child a world-class education, because it
+          will take nothing less to compete in the global economy.
+          [...] I'll invest in early childhood education. I'll
+          recruit an army of new teachers, and pay them higher
+          salaries and give them more support.
+      - in: inaugural
+        ref: "¶12.6"
+        quote: >
+          And we will transform our schools and colleges and
+          universities to meet the demands of a new age.
     restatement: Provide every child a world-class education; invest in early education and teachers.
     metric:
       present: false

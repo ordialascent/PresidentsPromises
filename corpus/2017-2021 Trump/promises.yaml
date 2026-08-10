@@ -289,13 +289,19 @@ promises:
       instrument with a direction attached to no agreed quantity.
 
   - id: trump-2016-bring-jobs-back
-    ref: "¶89.1"
     theme: labor
-    quote: >
-      I am going to bring our jobs back to Ohio and Pennsylvania and New York
-      and Michigan and all of America – and I am not going to let companies move
-      to other countries, firing their employees along the way, without
-      consequences.
+    sources:
+      - in: acceptance
+        ref: "¶89.1"
+        quote: >
+          I am going to bring our jobs back to Ohio and Pennsylvania
+          and New York and Michigan and all of America – and I am
+          not going to let companies move to other countries, firing
+          their employees along the way, without consequences.
+      - in: inaugural
+        ref: "¶18.2"
+        quote: >
+          We will bring back our jobs.
     restatement: Bring jobs back to the industrial states and penalize companies that offshore.
     metric:
       present: true
@@ -530,11 +536,19 @@ promises:
       "violation" and as "cheating."
 
   - id: trump-2016-rebuild-infrastructure
-    ref: "¶98.1"
     theme: infrastructure
-    quote: >
-      We will build the roads, highways, bridges, tunnels, airports, and the
-      railways of tomorrow.
+    sources:
+      - in: acceptance
+        ref: "¶98.1"
+        quote: >
+          We will build the roads, highways, bridges, tunnels,
+          airports, and the railways of tomorrow.
+      - in: inaugural
+        ref: "¶19.1"
+        quote: >
+          We will build new roads and highways and bridges and
+          airports and tunnels and railways all across our wonderful
+          Nation.
     restatement: Build new roads, highways, bridges, tunnels, airports, and railways.
     metric:
       present: true

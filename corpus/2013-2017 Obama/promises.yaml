@@ -247,11 +247,20 @@ promises:
       on the bracket rate.
 
   - id: obama-2012-carbon-reduce
-    ref: "¶29.1"
     theme: energy
-    quote: >
-      And yes, my plan will continue to reduce the carbon pollution that is
-      heating our planet, because climate change is not a hoax.
+    sources:
+      - in: acceptance
+        ref: "¶29.1"
+        quote: >
+          And yes, my plan will continue to reduce the carbon
+          pollution that is heating our planet, because climate
+          change is not a hoax.
+      - in: inaugural
+        ref: "¶18.2"
+        quote: >
+          We will respond to the threat of climate change, knowing
+          that the failure to do so would betray our children and
+          future generations.
     restatement: Continue reducing US carbon pollution.
     metric:
       present: true

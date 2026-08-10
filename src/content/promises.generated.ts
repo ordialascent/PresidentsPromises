@@ -1102,6 +1102,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶47.4",
             "quote": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy – wind power and solar power and the next generation of biofuels; an investment that will lead to new industries and five million new jobs that pay well and can't ever be outsourced."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.5",
+            "quote": "We will harness the sun and the winds and the soil to fuel our cars and run our factories."
           }
         ]
       },
@@ -1194,6 +1209,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶50.1-50.2",
             "quote": "Now is the time to finally keep the promise of affordable, accessible health care for every single American. If you have health care, my plan will lower your premiums."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.4",
+            "quote": "We will restore science to its rightful place and wield technology's wonders to raise health care's quality and lower its cost."
           }
         ]
       },
@@ -1217,6 +1247,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶54.1-54.2",
             "quote": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime – by closing corporate loopholes and tax havens that don't help America grow. But I will also go through the federal budget, line by line, eliminating programs that no longer work and making the ones we do need work better and cost less – because we cannot meet twenty-first century challenges with a twentieth century bureaucracy."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶14.4-14.5",
+            "quote": "Where the answer is no, programs will end. And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government."
           }
         ]
       },
@@ -1286,6 +1331,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶64.1",
             "quote": "I will end this war in Iraq responsibly, and finish the fight against al Qaeda and the Taliban in Afghanistan."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶18.3",
+            "quote": "We will begin to responsibly leave Iraq to its people and forge a hard-earned peace in Afghanistan."
           }
         ]
       },
@@ -1332,6 +1392,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶49.1-49.5",
             "quote": "Now is the time to finally meet our moral obligation to provide every child a world-class education, because it will take nothing less to compete in the global economy. [...] I'll invest in early childhood education. I'll recruit an army of new teachers, and pay them higher salaries and give them more support."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.6",
+            "quote": "And we will transform our schools and colleges and universities to meet the demands of a new age."
           }
         ]
       },
@@ -1665,6 +1740,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶29.1",
             "quote": "And yes, my plan will continue to reduce the carbon pollution that is heating our planet, because climate change is not a hoax."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶18.2",
+            "quote": "We will respond to the threat of climate change, knowing that the failure to do so would betray our children and future generations."
           }
         ]
       },
@@ -2113,6 +2203,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶89.1",
             "quote": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America – and I am not going to let companies move to other countries, firing their employees along the way, without consequences."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶18.2",
+            "quote": "We will bring back our jobs."
           }
         ]
       },
@@ -2320,6 +2425,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶98.1",
             "quote": "We will build the roads, highways, bridges, tunnels, airports, and the railways of tomorrow."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶19.1",
+            "quote": "We will build new roads and highways and bridges and airports and tunnels and railways all across our wonderful Nation."
           }
         ]
       },
@@ -2515,6 +2635,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶67.1",
             "quote": "As president, the first step I will take will be to get control of the virus that's ruined so many lives."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶27.4",
+            "quote": "We must set aside politics and finally face this pandemic as one Nation."
           }
         ]
       },
@@ -3009,6 +3144,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶83.1",
             "quote": "I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶30.1",
+            "quote": "Next, I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation and rapidly bring down costs and prices."
           }
         ]
       },
@@ -3055,6 +3205,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶120.7-120.9",
             "quote": "Under the Trump administration just three and a half years ago, we were energy independent. But soon we will actually be better than that. We will be energy dominant and supply not only ourselves, but we will supply the rest of the world."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶30.3",
+            "quote": "We will drill, baby, drill."
           }
         ]
       },
@@ -3216,6 +3381,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶124.1",
             "quote": "And I will end the electric vehicle mandate on day one."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶33.1",
+            "quote": "With my actions today, we will end the \"green new deal,\" and we will revoke the electric vehicle mandate, saving our auto industry and keeping my sacred pledge to our great American autoworkers."
           }
         ]
       },
@@ -3239,6 +3419,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶131.4-131.5",
             "quote": "This very simple formula will create massive numbers of jobs. We will take over the auto industry again and many many, hundreds of thousands of jobs, we lost so many jobs over the years."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶34.1",
+            "quote": "We will build automobiles in America again at a rate that nobody could have dreamt possible just a few years ago."
           }
         ]
       },
@@ -3308,6 +3503,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶89.1",
             "quote": "I will end every single international crisis that the current administration has created, including the horrible war with Russia and Ukraine, which would have never happened if I was president."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶64.4",
+            "quote": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable."
           }
         ]
       },
@@ -3400,6 +3610,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶218.1",
             "quote": "And we will restore and renovate our nation's once-great cities, making them safe, clean and beautiful again."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶39.5",
+            "quote": "And we are going to bring law and order back to our cities."
           }
         ]
       },
@@ -3963,4 +4188,4 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 export const CORPUS_PROMISE_COUNT = 166;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 166;
+export const CORPUS_OCCURRENCE_COUNT = 181;
