@@ -16,6 +16,7 @@ corpus/
   <term-years> <name>/            ← one directory per presidential term
     <year>-acceptance.md              ← source document, verbatim + numbered
     <year>-inaugural.md               ← another source document (same term)
+    <year>-debate.md                  ← the term's final general-election debate
     promises.yaml                     ← ALL of the term's promises, from every source
 ```
 
@@ -24,7 +25,7 @@ Directories are named `<start>-<end> <name>`, e.g. `2009-2013 Obama`,
 directory per term (e.g. `2017-2021 Trump` and `2025-2029 Trump`).
 
 **A term can hold more than one source document** — each a `<year>-<kind>.md`
-file (`<kind>` is `acceptance`, `inaugural`, …), numbered the same way. But there
+file (`<kind>` is `acceptance`, `inaugural`, `debate`, …), numbered the same way. But there
 is **one `promises.yaml` per term** that aggregates every promise the term made,
 across all of its sources. The promise is the unit (the *commitment*); each
 promise lists where it was said (see [the promise file](#promise-file-promisesyaml)).
@@ -139,6 +140,21 @@ just: drop in the numbered `<year>-<kind>.md`, then either add its promises to
 `promises.yaml` or attach an `in: <kind>` occurrence to an existing promise. Keep
 promise ids prefixed with the **term's election year** (`obama-2008-…` for the
 whole 2009–2013 term, whatever source a promise came from) so they stay unique.
+
+### Debate source (`<year>-debate.md`) — winner only
+
+The third source per term is the **final general-election debate** of the cycle
+(the last time the two nominees face each other before the vote — arguably where
+promises count the most). Its front-matter uses `type: debate`, and `name` is the
+**eventual president** — the one nominee whose promises this corpus tracks.
+
+A debate is a two-person transcript, so we deviate from "verbatim whole
+document" in one controlled way: **paste the full transcript and number it** (so
+refs match the source), but **extract promises only from the eventual
+president's turns** — the winner-only convention. We do not score the opponent's
+commitments; this corpus follows presidents through their term, and the loser
+never gets one. Cite refs into the numbered debate exactly like any other source
+(`in: debate`).
 
 ## Rules
 

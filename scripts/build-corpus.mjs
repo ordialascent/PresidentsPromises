@@ -29,7 +29,11 @@ const CORPUS = join(ROOT, 'corpus');
 const OUT = join(ROOT, 'src', 'content', 'promises.generated.ts');
 
 const QUALITIES = ['full', 'partial', 'no'];
-const KIND_LABEL = { acceptance: 'acceptance speech', inaugural: 'inaugural address' };
+const KIND_LABEL = {
+  acceptance: 'acceptance speech',
+  inaugural: 'inaugural address',
+  debate: 'debate',
+};
 const unquote = (s) => s.replace(/^["'](.*)["']$/, '$1');
 const isBlock = (v) => /^[>|]-?$/.test(v) || v === '';
 
