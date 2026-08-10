@@ -661,3 +661,93 @@ promises:
       pledges effort, and "protect ... from a hateful foreign ideology" has no
       metric, no target level, and no deadline. Instrument-only, on the
       aspirational end of the scale.
+
+  - id: trump-2016-buy-american-hire-american
+    theme: trade
+    restatement: Adopt "Buy American and hire American" as governing rules.
+    sources:
+      - in: inaugural
+        ref: "¶20.2"
+        quote: >
+          We will follow two simple rules: Buy American and hire American.
+    metric:
+      present: true
+      quantity: whether Buy-American / Hire-American rules are adopted (binary policy action); federal procurement domestic-content share
+      record: executive orders (e.g., Buy American, Hire American); federal procurement data (no single agreed series)
+    threshold:
+      present: true
+      stated: "\"Buy American and hire American\" (adopt / direction; no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: impose Buy-American procurement and Hire-American rules
+    measurable: "partial"
+    notes: >
+      A named policy rule measurable chiefly as a yes/no — were such rules
+      adopted and enforced? — not as a tracked quantity. There is no domestic-
+      content target, no hiring number, and no deadline. "Buy American" and
+      "hire American" are the undefined boundaries (which contracts, which
+      visas count).
+
+  - id: trump-2016-welfare-to-work
+    theme: labor
+    restatement: Move people off welfare and back to work.
+    sources:
+      - in: inaugural
+        ref: "¶20.1"
+        quote: >
+          We will get our people off of welfare and back to work, rebuilding
+          our country with American hands and American labor.
+    metric:
+      present: true
+      quantity: welfare-program enrollment; employment
+      record: SNAP/TANF enrollment; BLS employment series
+    threshold:
+      present: true
+      stated: "\"off of welfare and back to work\" (direction; no number)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"rebuilding our country with American hands and American labor\" — a goal, not a specified action"
+    measurable: "partial"
+    notes: >
+      Welfare rolls and employment are cleanly trackable, but the promise pins
+      no target level and no date, and names only a vague instrument, so the
+      metric exists while the commitment does not fix it. "Our people" and
+      attribution to his actions are the disputed edges.
+
+  - id: trump-2016-eradicate-radical-islamic-terrorism
+    theme: foreign-policy
+    restatement: Eradicate radical Islamic terrorism completely from the Earth.
+    sources:
+      - in: inaugural
+        ref: "¶22.1"
+        quote: >
+          We will reinforce old alliances and form new ones and unite the
+          civilized world against radical Islamic terrorism, which we will
+          eradicate completely from the face of the Earth.
+    metric:
+      present: true
+      quantity: radical-Islamic-terrorism activity (attacks / active groups)
+      record: no single agreed series (e.g., Global Terrorism Database; State Dept. country reports)
+    threshold:
+      present: true
+      stated: "\"eradicate completely from the face of the Earth\" (to zero)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "unite the civilized world against it — a coalition outcome he cannot unilaterally control"
+    measurable: "partial"
+    notes: >
+      Broader than the acceptance speech's defeat-ISIS pledge (this targets
+      radical Islamic terrorism as a whole, not one named group), so it is
+      kept as its own commitment rather than a source of trump-2016-defeat-isis.
+      A to-zero threshold on a real phenomenon, but there is no agreed metric,
+      no deadline, and eradicating a global phenomenon "completely" is an
+      outcome largely outside his control.

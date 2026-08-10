@@ -368,3 +368,127 @@ promises:
     notes: >
       Pure aspiration — no quantity, no threshold, no deadline, no instrument.
       The zero-of-four case, kept to anchor that end of the scale.
+
+  # --- Promises from the 2009 Inaugural Address (2009-inaugural.md) ---
+  # Inaugurals are thematic and aspirational: fewer concrete commitments, more
+  # "no"/"partial". Restatements of acceptance-speech promises (Iraq, energy,
+  # education, health-care cost, fiscal discipline) are NOT duplicated here.
+
+  - id: obama-2008-economy-jobs
+    theme: economy
+    restatement: Act boldly to create new jobs and lay a new foundation for growth.
+    sources:
+      - in: inaugural
+        ref: "¶12.2"
+        quote: >
+          The state of the economy calls for action, bold and swift, and we
+          will act not only to create new jobs but to lay a new foundation for
+          growth.
+    metric:
+      present: true
+      quantity: jobs created / employment
+      record: BLS payroll employment (attribution to any single action is contested)
+    threshold:
+      present: true
+      stated: create new jobs (direction — increase; no number)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"bold and swift\" government action (unnamed here; the Recovery Act followed)"
+    measurable: "partial"
+    notes: >
+      Same shape as the acceptance jobs language: a real metric with a direction
+      but no number and no deadline. "Lay a new foundation for growth" is the
+      aspirational half with no measure. Distinct from the acceptance's
+      energy-jobs and offshoring promises, so kept as its own general commitment
+      rather than merged.
+
+  - id: obama-2008-infrastructure
+    theme: infrastructure
+    restatement: Build roads, bridges, electric grids, and digital lines.
+    sources:
+      - in: inaugural
+        ref: "¶12.3"
+        quote: >
+          We will build the roads and bridges, the electric grids and digital
+          lines that feed our commerce and bind us together.
+    metric:
+      present: false
+      quantity: no named quantity (miles, dollars, or grid/broadband targets are all unstated)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: federal investment in physical and digital infrastructure
+    measurable: "no"
+    notes: >
+      A named instrument with no number, no deadline, and no metric — measurable
+      only as "did such building happen?" The list of asset types (roads,
+      bridges, grids, digital lines) is the disputed boundary.
+
+  - id: obama-2008-climate-nuclear
+    theme: climate
+    restatement: Work to lessen the nuclear threat and reverse a warming planet.
+    sources:
+      - in: inaugural
+        ref: "¶18.4"
+        quote: >
+          With old friends and former foes, we will work tirelessly to lessen
+          the nuclear threat and roll back the specter of a warming planet.
+    metric:
+      present: false
+      quantity: "\"the nuclear threat\" and \"the specter of a warming planet\" name no agreed measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"work tirelessly\" with allies and rivals (effort, an outcome he can't fully control)"
+    measurable: "no"
+    notes: >
+      A compound commitment to effort. The nuclear clause is broader than the
+      acceptance's Iran-specific promise (obama-2008-iran-nukes) — general
+      threat reduction, not a single binary — so it is not a restatement of it.
+      The warming-planet clause introduces climate as a theme absent from the
+      acceptance speech. "Lessen" and "roll back the specter" are rhetorical
+      directions, not stated thresholds against a named metric.
+
+  - id: obama-2008-poor-nations
+    theme: foreign-policy
+    restatement: Help poor nations grow food, gain clean water, and feed their people.
+    sources:
+      - in: inaugural
+        ref: "¶21.1"
+        quote: >
+          To the people of poor nations, we pledge to work alongside you to make
+          your farms flourish and let clean waters flow, to nourish starved
+          bodies and feed hungry minds.
+    metric:
+      present: false
+      quantity: none named (development, food, water, and education aims are all unquantified)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"work alongside\" — foreign development assistance"
+    measurable: "no"
+    notes: >
+      An explicit pledge, but purely directional: no target, no deadline, no
+      metric, and the aid instrument is named only in the broadest terms. New to
+      this term (no development pledge in the acceptance speech).

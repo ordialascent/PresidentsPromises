@@ -588,3 +588,630 @@ promises:
       genuine to-zero threshold — but "skyrocket"/"roaring back" set no level,
       "very rapidly" no date, and no instrument is named, so most of it stays
       unpinned.
+
+  # --- Promises from the 2025 Inaugural Address (corpus/2025-2029 Trump/
+  # 2025-inaugural.md). Refs are paragraph.sentence into that document. The
+  # inaugural leans on "today", "this week", "immediately", and "a short time
+  # from now" — treated as urgency, not real completion dates (same convention
+  # as this file's "Day 1"/"immediately" handling), so none reach "full". Where
+  # an inaugural line merely restates a promise already made in the 2024
+  # acceptance speech (halt illegal entry, deport, drill/energy, prices/
+  # inflation, EV mandate, green new deal, auto jobs, general tariffs, stop all
+  # wars, hostages, law-and-order cities), NO duplicate entry is added.
+
+  - id: trump-2024-border-emergency
+    theme: immigration
+    restatement: Declare a national emergency at the southern border.
+    sources:
+      - in: inaugural
+        ref: "¶26.1"
+        quote: >
+          First, I will declare a national emergency at our southern border.
+    metric:
+      present: true
+      quantity: whether the emergency is declared (binary), not a trend
+      record: presidential proclamation / Federal Register
+    threshold:
+      present: true
+      stated: declare / issue the emergency
+    deadline:
+      present: false
+      stated: today (from ¶25.1; urgency, not a completion date)
+    instrument:
+      present: true
+      stated: national emergency declaration
+    measurable: "partial"
+    notes: >
+      A discrete, checkable executive act — declared or not — so the metric is
+      a yes/no policy action rather than a measured quantity, and "today" is
+      urgency, not a completion date. What powers the emergency actually
+      unlocks is the disputed boundary.
+
+  - id: trump-2024-remain-in-mexico
+    theme: immigration
+    restatement: Reinstate the "Remain in Mexico" policy.
+    sources:
+      - in: inaugural
+        ref: "¶26.3"
+        quote: >
+          We will reinstate my "Remain in Mexico" policy.
+    metric:
+      present: true
+      quantity: whether the policy is reinstated (binary), not a trend
+      record: DHS policy / Migrant Protection Protocols records
+    threshold:
+      present: true
+      stated: reinstate the policy
+    deadline:
+      present: false
+      stated: today (from ¶25.1; urgency, not a completion date)
+    instrument:
+      present: true
+      stated: executive/DHS action reviving MPP
+    measurable: "partial"
+    notes: >
+      A yes/no restoration of a named prior policy — measurable only as "was it
+      reinstated?", not a quantity over time, and no completion date. Scope of
+      "reinstate" (identical to the first-term MPP, or a variant?) is the
+      disputed boundary.
+
+  - id: trump-2024-catch-and-release
+    theme: immigration
+    restatement: End the practice of catch-and-release.
+    sources:
+      - in: inaugural
+        ref: "¶27.1"
+        quote: >
+          I will end the practice of catch-and-release.
+    metric:
+      present: true
+      quantity: whether the practice is ended (binary); releases pending proceedings
+      record: DHS/ICE release and detention data
+    threshold:
+      present: true
+      stated: end / to zero
+    deadline:
+      present: false
+      stated: today (from ¶27.3 "the orders I sign today"; urgency, not a completion date)
+    instrument:
+      present: true
+      stated: enforcement/executive action ending catch-and-release
+    measurable: "partial"
+    notes: >
+      Releases can in principle be counted, but "the practice" has no defined
+      baseline or target level, there is no completion date, and detention
+      capacity constrains it — so it lands at a yes/no direction rather than a
+      pinned quantity.
+
+  - id: trump-2024-troops-border
+    theme: immigration
+    restatement: Deploy troops to the southern border.
+    sources:
+      - in: inaugural
+        ref: "¶27.2"
+        quote: >
+          And I will send troops to the southern border to repel the disastrous
+          invasion of our country.
+    metric:
+      present: true
+      quantity: number of troops deployed to the southern border
+      record: DoD / Northern Command deployment figures
+    threshold:
+      present: true
+      stated: send troops (direction, no number)
+    deadline:
+      present: false
+      stated: today (from ¶27.3; urgency, not a completion date)
+    instrument:
+      present: true
+      stated: military deployment order
+    measurable: "partial"
+    notes: >
+      Troop counts are cleanly tracked, but the promise attaches no number and
+      no completion date — "send troops to repel the invasion" fixes neither a
+      level nor a by-when, so the metric exists but the promise doesn't pin it.
+
+  - id: trump-2024-cartels-fto
+    theme: immigration
+    restatement: Designate the drug cartels as foreign terrorist organizations.
+    sources:
+      - in: inaugural
+        ref: "¶27.3"
+        quote: >
+          Under the orders I sign today, we will also be designating the cartels
+          as foreign terrorist organizations.
+    metric:
+      present: true
+      quantity: whether the cartels are designated (binary), not a trend
+      record: State Department Foreign Terrorist Organization list
+    threshold:
+      present: true
+      stated: designate as FTOs
+    deadline:
+      present: false
+      stated: today (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: executive designation via State Department process
+    measurable: "partial"
+    notes: >
+      A yes/no legal designation with a formal record, not a measured quantity,
+      and "today" is urgency rather than a completion date. Which cartels and
+      how many the designation ultimately covers is the disputed boundary.
+
+  - id: trump-2024-alien-enemies-act
+    theme: immigration
+    restatement: Invoke the Alien Enemies Act of 1798 to eliminate all foreign gangs and criminal networks.
+    sources:
+      - in: inaugural
+        ref: "¶28.1"
+        quote: >
+          And by invoking the Alien Enemies Act of 1798, I will direct our
+          Government to use the full and immense power of Federal and State law
+          enforcement to eliminate the presence of all foreign gangs and
+          criminal networks bringing devastating crime to U.S. soil, including
+          our cities and inner cities.
+    metric:
+      present: true
+      quantity: presence of foreign gangs / criminal networks (members removed or arrested)
+      record: DOJ/DHS gang-enforcement and removal statistics
+    threshold:
+      present: true
+      stated: eliminate the presence of all foreign gangs (to zero)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: invoke the Alien Enemies Act of 1798; Federal/State law enforcement
+    measurable: "partial"
+    notes: >
+      A named legal instrument and a to-zero threshold ("all foreign gangs"),
+      but the gang population has no agreed count, "eliminate the presence" is
+      effectively unverifiable, and there is no deadline — a sharp direction
+      attached to an unmeasurable base.
+
+  - id: trump-2024-energy-emergency
+    theme: energy
+    restatement: Declare a national energy emergency.
+    sources:
+      - in: inaugural
+        ref: "¶30.2"
+        quote: >
+          The inflation crisis was caused by massive overspending and escalating
+          energy prices, and that is why today I will also declare a national
+          energy emergency.
+    metric:
+      present: true
+      quantity: whether the emergency is declared (binary), not a trend
+      record: presidential proclamation / Federal Register
+    threshold:
+      present: true
+      stated: declare the emergency
+    deadline:
+      present: false
+      stated: today (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: national emergency declaration
+    measurable: "partial"
+    notes: >
+      A discrete executive act, measurable only as declared-or-not, with
+      "today" as urgency rather than a completion date. What the declaration
+      changes on the ground (production, permitting) is the disputed boundary,
+      not the declaration itself.
+
+  - id: trump-2024-spr-refill
+    theme: energy
+    restatement: Refill the Strategic Petroleum Reserve back to the top.
+    sources:
+      - in: inaugural
+        ref: "¶32.1"
+        quote: >
+          We will bring prices down, fill our strategic reserves up again right
+          to the top, and export American energy all over the world.
+    metric:
+      present: true
+      quantity: Strategic Petroleum Reserve inventory level
+      record: EIA / DOE weekly SPR crude stocks
+    threshold:
+      present: true
+      stated: right to the top (full capacity)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: purchase crude to refill the reserve
+    measurable: "partial"
+    notes: >
+      Unusually well-pinned: SPR stocks are reported weekly and "right to the
+      top" is a real target (authorized capacity ~714M barrels). Only the
+      deadline is missing — by-when to reach full is unstated — so it lands at
+      partial. The "bring prices down" and "export energy" clauses restate the
+      inflation/prices and energy-dominance promises (merge candidates), not
+      counted here.
+
+  - id: trump-2024-external-revenue-service
+    theme: trade
+    restatement: Establish an "External Revenue Service" to collect tariffs, duties, and revenues.
+    sources:
+      - in: inaugural
+        ref: "¶36.1"
+        quote: >
+          For this purpose, we are establishing the External Revenue Service to
+          collect all tariffs, duties, and revenues.
+    metric:
+      present: true
+      quantity: whether the agency is established (binary), not a trend
+      record: executive order / enabling legislation creating the agency
+    threshold:
+      present: true
+      stated: establish the agency
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: create a new Federal agency
+    measurable: "partial"
+    notes: >
+      A yes/no institutional creation with a clear record, but no deadline and
+      an undefined form — whether the "External Revenue Service" is a standalone
+      agency, a rebrand of existing customs collection, or a slogan is the
+      disputed boundary. Genuinely new to the term; distinct from the 2024
+      car-tariff promise.
+
+  - id: trump-2024-doge
+    theme: government
+    restatement: Establish the Department of Government Efficiency.
+    sources:
+      - in: inaugural
+        ref: "¶37.1"
+        quote: >
+          To restore competence and effectiveness to our Federal Government, my
+          administration will establish the brandnew Department of Government
+          Efficiency.
+    metric:
+      present: true
+      quantity: whether the entity is established (binary), not a trend
+      record: executive order establishing the entity
+    threshold:
+      present: true
+      stated: establish the entity
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: create a new government-efficiency body
+    measurable: "partial"
+    notes: >
+      A yes/no creation, measurable only as established-or-not, with no deadline
+      and no efficiency target attached in this sentence. What "Department"
+      means (a true department needs Congress) and what it must achieve are the
+      disputed boundaries.
+
+  - id: trump-2024-free-speech-eo
+    theme: civil-liberties
+    restatement: Sign an executive order to stop all government censorship and restore free speech.
+    sources:
+      - in: inaugural
+        ref: "¶38.1"
+        quote: >
+          After years and years of illegal and unconstitutional Federal efforts
+          to restrict free expression, I also will sign an Executive order to
+          immediately stop all Government censorship and bring back free speech
+          to America.
+    metric:
+      present: true
+      quantity: whether the order is signed (binary); government censorship activity
+      record: executive order / Federal Register
+    threshold:
+      present: true
+      stated: stop all Government censorship (to zero)
+    deadline:
+      present: false
+      stated: immediately (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: executive order
+    measurable: "partial"
+    notes: >
+      Signing the order is a clean yes/no act, but "stop all Government
+      censorship" describes a contested, hard-to-measure condition rather than
+      a tracked quantity, "immediately" is urgency not a date, and what counts
+      as "censorship" is the disputed boundary.
+
+  - id: trump-2024-end-dei
+    theme: culture
+    restatement: End the government policy of socially engineering race and gender into public and private life.
+    sources:
+      - in: inaugural
+        ref: "¶40.1"
+        quote: >
+          This week, I will also end the Government policy of trying to socially
+          engineer race and gender into every aspect of public and private life.
+    metric:
+      present: true
+      quantity: whether the DEI policies are rescinded (binary), not a trend
+      record: executive orders / agency policy rescissions (Federal Register)
+    threshold:
+      present: true
+      stated: end the policy
+    deadline:
+      present: false
+      stated: this week (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: executive/regulatory action ending the policies
+    measurable: "partial"
+    notes: >
+      A yes/no policy reversal rather than a measured quantity, with "this week"
+      as urgency, not a completion date. Which programs count as "socially
+      engineering race and gender," and reach into "private life," is the
+      disputed boundary.
+
+  - id: trump-2024-two-genders
+    theme: culture
+    restatement: Make it official US Government policy that there are only two genders (male and female).
+    sources:
+      - in: inaugural
+        ref: "¶40.3"
+        quote: >
+          As of today, it will henceforth be the official policy of the United
+          States Government that there are only two genders: male and female.
+    metric:
+      present: true
+      quantity: whether the policy is adopted (binary), not a trend
+      record: executive order / agency policy and forms
+    threshold:
+      present: true
+      stated: two genders as official policy
+    deadline:
+      present: false
+      stated: as of today (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: executive declaration of official policy
+    measurable: "partial"
+    notes: >
+      A declarative yes/no policy set "as of today" — measurable only as adopted
+      or not, not a quantity. How far the policy propagates across agencies,
+      documents, and law is the disputed boundary.
+
+  - id: trump-2024-reinstate-servicemembers
+    theme: defense
+    restatement: Reinstate servicemembers expelled over the COVID vaccine mandate, with full backpay.
+    sources:
+      - in: inaugural
+        ref: "¶41.1"
+        quote: >
+          This week, I will reinstate any servicemembers who were unjustly
+          expelled from our military for objecting to the COVID vaccine mandate
+          with full backpay.
+    metric:
+      present: true
+      quantity: number of expelled servicemembers reinstated with backpay
+      record: DoD personnel / separation and reinstatement records
+    threshold:
+      present: true
+      stated: reinstate any (all) unjustly expelled, with full backpay
+    deadline:
+      present: false
+      stated: this week (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: reinstatement order with backpay
+    measurable: "partial"
+    notes: >
+      A countable population and an all-of-them threshold with a concrete remedy
+      (full backpay), but no completion date and a contested set — how many were
+      "unjustly expelled," and how many choose to return, is the disputed
+      boundary.
+
+  - id: trump-2024-military-depoliticize
+    theme: defense
+    restatement: Sign an order barring radical political theories and social experiments in the military.
+    sources:
+      - in: inaugural
+        ref: "¶42.1-42.2"
+        quote: >
+          And I will sign an order to stop our warriors from being subjected to
+          radical political theories and social experiments while on duty. It's
+          going to end immediately.
+    metric:
+      present: true
+      quantity: whether the order is signed (binary), not a trend
+      record: executive order / DoD directive
+    threshold:
+      present: true
+      stated: stop / end (to zero)
+    deadline:
+      present: false
+      stated: immediately (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: signed order
+    measurable: "partial"
+    notes: >
+      Signing is a yes/no act; "radical political theories and social
+      experiments" names no tracked quantity, and "immediately" is urgency, not
+      a completion date. What programs the order actually reaches is the
+      disputed boundary.
+
+  - id: trump-2024-strongest-military
+    theme: defense
+    restatement: Build the strongest military the world has ever seen.
+    sources:
+      - in: inaugural
+        ref: "¶43.1"
+        quote: >
+          Like in 2017, we will again build the strongest military the world has
+          ever seen.
+    metric:
+      present: true
+      quantity: military capability / defense spending and force levels
+      record: DoD budget; force-structure and readiness reporting
+    threshold:
+      present: true
+      stated: strongest the world has ever seen (direction, no defined level)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: rebuild/expand the military
+    measurable: "partial"
+    notes: >
+      Defense spending and force levels are tracked, but "strongest the world
+      has ever seen" has no agreed measure or target, and no deadline is
+      attached — a superlative direction over a real but unpinned metric, in the
+      same family as the 2024 iron-dome promise.
+
+  - id: trump-2024-gulf-of-america
+    theme: culture
+    restatement: Rename the Gulf of Mexico to the Gulf of America.
+    sources:
+      - in: inaugural
+        ref: "¶46.1"
+        quote: >
+          A short time from now, we are going to be changing the name of the
+          Gulf of Mexico to the Gulf of America, and we will restore the name of
+          a great President, William McKinley, to Mount McKinley, where it
+          should be and where it belongs.
+    metric:
+      present: true
+      quantity: whether the feature is officially renamed (binary), not a trend
+      record: U.S. Board on Geographic Names / GNIS; official Federal usage
+    threshold:
+      present: true
+      stated: rename to the Gulf of America
+    deadline:
+      present: false
+      stated: a short time from now (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: executive action directing the renaming
+    measurable: "partial"
+    notes: >
+      A yes/no renaming in Federal usage, measurable as done-or-not with no
+      completion date. The disputed boundary is reach — the US can rename it in
+      its own records but cannot compel international adoption.
+
+  - id: trump-2024-mount-mckinley
+    theme: culture
+    restatement: Restore the name Mount McKinley to the mountain (from Denali).
+    sources:
+      - in: inaugural
+        ref: "¶46.1"
+        quote: >
+          A short time from now, we are going to be changing the name of the
+          Gulf of Mexico to the Gulf of America, and we will restore the name of
+          a great President, William McKinley, to Mount McKinley, where it
+          should be and where it belongs.
+    metric:
+      present: true
+      quantity: whether the peak is officially renamed (binary), not a trend
+      record: U.S. Board on Geographic Names / GNIS
+    threshold:
+      present: true
+      stated: restore the name Mount McKinley
+    deadline:
+      present: false
+      stated: a short time from now (urgency, not a completion date)
+    instrument:
+      present: true
+      stated: executive action directing the renaming
+    measurable: "partial"
+    notes: >
+      A clean yes/no renaming with an official record, no completion date. Split
+      from the Gulf of America renaming (same sentence) because each is
+      independently verifiable.
+
+  - id: trump-2024-panama-canal
+    theme: foreign-policy
+    restatement: Take back the Panama Canal from Panama.
+    sources:
+      - in: inaugural
+        ref: "¶49.1-49.3"
+        quote: >
+          And above all, China is operating the Panama Canal. And we didn't give
+          it to China. We gave it to Panama, and we're taking it back.
+    metric:
+      present: true
+      quantity: whether the US regains control of the canal (binary), not a trend
+      record: canal ownership / operating-control status; treaty instruments
+    threshold:
+      present: true
+      stated: taking it back (regain US control)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: asserts "we're taking it back" but names no mechanism — an outcome depending on Panama
+    measurable: "partial"
+    notes: >
+      Control of the canal is a knowable yes/no fact, but "taking it back" names
+      no instrument, carries no deadline, and depends on a sovereign foreign
+      nation — an outcome-only claim, with what "taking it back" even means
+      (ownership? operating rights? transit terms?) the disputed boundary.
+
+  - id: trump-2024-chronic-disease
+    theme: health
+    restatement: End the chronic disease epidemic and keep children healthy and disease-free.
+    sources:
+      - in: inaugural
+        ref: "¶51.3"
+        quote: >
+          Together, we will end the chronic disease epidemic and keep our
+          children safe, healthy, and disease-free.
+    metric:
+      present: true
+      quantity: chronic disease prevalence (esp. among children)
+      record: CDC chronic-disease surveillance / NHANES
+    threshold:
+      present: true
+      stated: end the epidemic (to zero, direction)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"together, we will\" — no named mechanism"
+    measurable: "partial"
+    notes: >
+      Chronic-disease rates are tracked and "end the epidemic" is a to-zero
+      direction, but no instrument is named, there is no deadline, and "chronic
+      disease" and "disease-free" set no measurable target — an aspiration
+      attached to a real but unpinned metric.
+
+  - id: trump-2024-mars
+    theme: space
+    restatement: Land American astronauts on Mars to plant the flag.
+    sources:
+      - in: inaugural
+        ref: "¶53.1"
+        quote: >
+          And we will pursue our manifest destiny into the stars, launching
+          American astronauts to plant the Stars and Stripes on the planet Mars.
+    metric:
+      present: true
+      quantity: whether US astronauts land on Mars (binary milestone)
+      record: NASA mission milestones
+    threshold:
+      present: true
+      stated: plant the flag on Mars (crewed landing)
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: launch American astronauts (NASA/commercial crewed program)
+    measurable: "partial"
+    notes: >
+      A crewed Mars landing is an unambiguous yes/no milestone with a clear
+      threshold and a named instrument, but no deadline — and the timeline for
+      such a mission far exceeds a single term, so "when" is exactly what the
+      promise leaves open.
