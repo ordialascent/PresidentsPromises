@@ -478,3 +478,128 @@ promises:
       Pure aspiration — no quantity, threshold, deadline, or instrument, and even
       the verb is a wish. Kept to anchor the aspirational end of the scale, the
       counterpart to the concrete tax-rate pledges above.
+
+  # --- Promises from the 2001 Inaugural Address (corpus/2001-2005 Bush/2001-inaugural.md) ---
+  # The inaugural is thematic and aspirational; most of its concrete pledges
+  # (schools, Social Security/Medicare reform, tax cuts, building up defense)
+  # restate the 2000 acceptance agenda and are tracked there. The entries below
+  # are the commitments genuinely new to, or first voiced in, the inaugural.
+
+  - id: bush-2000-inaugural-single-nation
+    theme: governance
+    restatement: Work to build a single nation of justice and opportunity.
+    sources:
+      - in: inaugural
+        ref: "¶8.2"
+        quote: >
+          And this is my solemn pledge: I will work to build a single nation of
+          justice and opportunity.
+    metric:
+      present: false
+      quantity: none
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"I will work to\" — an effort toward an ideal, with no named mechanism"
+    measurable: "no"
+    notes: >
+      The thesis of the address, cast explicitly as a "solemn pledge," but pure
+      aspiration — no quantity, threshold, deadline, or mechanism, and the verb
+      ("work to build") promises effort toward an ideal, not a result. The
+      inaugural counterpart to the acceptance speech's tone-of-Washington anchor.
+
+  - id: bush-2000-inaugural-wmd
+    theme: foreign-policy
+    restatement: Confront weapons of mass destruction to spare the new century new horrors.
+    sources:
+      - in: inaugural
+        ref: "¶15.2"
+        quote: >
+          We will confront weapons of mass destruction, so that a new century is
+          spared new horrors.
+    metric:
+      present: false
+      quantity: "\"weapons of mass destruction\" names a domain, not a tracked quantity, and no record is invoked"
+      record: null
+    threshold:
+      present: false
+      stated: "\"confront\" — a verb with no level or count"
+    deadline:
+      present: false
+      stated: "\"so that a new century is spared\" — a purpose, not a dated target"
+    instrument:
+      present: true
+      stated: confront / counter WMD proliferation
+    measurable: "no"
+    notes: >
+      Distinct from the acceptance speech's reduce-nuclear pledge (which cites
+      warhead counts) — this is a broad counter-proliferation commitment that
+      names no quantity, no level, and no date. A named direction of effort with
+      nothing measurable pinned to it.
+
+  - id: bush-2000-inaugural-faith-based
+    theme: welfare
+    restatement: Give religious and charitable organizations an honored place in federal policy and law.
+    sources:
+      - in: inaugural
+        ref: "¶19.4"
+        quote: >
+          Church and charity, synagogue and mosque lend our communities their
+          humanity, and they will have an honored place in our plans and in our
+          laws.
+    metric:
+      present: false
+      quantity: policy action (binary), not a quantity — did faith-based organizations gain a formal role?
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: give faith-based and community organizations a role "in our plans and in our laws"
+    measurable: "no"
+    notes: >
+      The seed of the faith-based initiative (later an executive office and
+      program). A named instrument with no metric, threshold, or date — measurable
+      at best as "did such a role get established?" Related to but distinct from
+      the acceptance speech's charitable-incentives pledge, which is about
+      donation incentives and program support rather than a place for religious
+      bodies in policy itself.
+
+  - id: bush-2000-inaugural-poverty-goal
+    theme: welfare
+    restatement: Commit the nation not to ignore those in poverty and suffering.
+    sources:
+      - in: inaugural
+        ref: "¶20.3"
+        quote: >
+          And I can pledge our Nation to a goal: When we see that wounded traveler
+          on the road to Jericho, we will not pass to the other side.
+    metric:
+      present: false
+      quantity: none — "the wounded traveler" is a parable, with no measure of poverty attached
+      record: null
+    threshold:
+      present: false
+      stated: "\"we will not pass to the other side\" — a direction of conscience, no level"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "a pledge to a goal, framed as a parable — no named mechanism"
+    measurable: "no"
+    notes: >
+      Explicitly a pledge ("I can pledge our Nation to a goal"), but the goal is
+      metaphorical (the Good Samaritan) and carries no quantity, target, deadline,
+      or mechanism. Aspirational — kept as the compassion-agenda counterpart to
+      the unity pledge above.

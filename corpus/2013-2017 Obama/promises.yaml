@@ -247,11 +247,20 @@ promises:
       on the bracket rate.
 
   - id: obama-2012-carbon-reduce
-    ref: "¶29.1"
     theme: energy
-    quote: >
-      And yes, my plan will continue to reduce the carbon pollution that is
-      heating our planet, because climate change is not a hoax.
+    sources:
+      - in: acceptance
+        ref: "¶29.1"
+        quote: >
+          And yes, my plan will continue to reduce the carbon
+          pollution that is heating our planet, because climate
+          change is not a hoax.
+      - in: inaugural
+        ref: "¶18.2"
+        quote: >
+          We will respond to the threat of climate change, knowing
+          that the failure to do so would betray our children and
+          future generations.
     restatement: Continue reducing US carbon pollution.
     metric:
       present: true
@@ -378,3 +387,131 @@ promises:
       framing — but the "war savings" are a contested accounting construct (much
       was borrowed, not banked), and there is no number or deadline on either
       half.
+
+  # --- Promises from the 2013 Inaugural Address (corpus/2013-2017 Obama/
+  # 2013-inaugural.md). An inaugural is thematic and aspirational, so these are
+  # goals set as the generation's "task" ("our journey is not complete until
+  # ...") rather than dated pledges — hence all partial/no. Commitments that
+  # merely restate a 2012 acceptance-speech promise (climate/carbon, the
+  # deficit, the cost of health care, tax-code reform) are NOT re-added here.
+
+  - id: obama-2012-equal-pay
+    theme: labor
+    restatement: Close the gender pay gap; women earning a living equal to their efforts.
+    sources:
+      - in: inaugural
+        ref: "¶24.2"
+        quote: >
+          For our journey is not complete until our wives, our mothers and
+          daughters can earn a living equal to their efforts.
+    metric:
+      present: true
+      quantity: gender pay gap (women's earnings relative to men's)
+      record: Census/BLS earnings by sex
+    threshold:
+      present: true
+      stated: "equal / parity (direction, no target level)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"our journey is not complete until\" — a generational goal, not a named action"
+    measurable: "partial"
+    notes: >
+      A real metric with a clean record and a clear direction, but no target
+      level, no deadline, and no named instrument — the same shape as the 2008
+      equal-pay aspiration, restated here as a collective task rather than a
+      pledge to act.
+
+  - id: obama-2012-lgbt-equality
+    theme: civil-rights
+    restatement: Equal treatment under the law for gay Americans.
+    sources:
+      - in: inaugural
+        ref: "¶24.3"
+        quote: >
+          Our journey is not complete until our gay brothers and sisters are
+          treated like anyone else under the law—for if we are truly created
+          equal, then surely the love we commit to one another must be equal as
+          well.
+    metric:
+      present: false
+      quantity: "\"treated like anyone else under the law\" spans all law — no single agreed record"
+      record: null
+    threshold:
+      present: true
+      stated: "equal treatment (direction)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: null
+    measurable: "no"
+    notes: >
+      A directional equality goal with no named quantity, deadline, or
+      instrument. Read narrowly as marriage equality it becomes a binary policy
+      metric (federal recognition of same-sex marriage), which would push it to
+      partial; but the sentence is broader than marriage, so there is no clean
+      measure — that boundary is the dispute.
+
+  - id: obama-2012-voting-access
+    theme: voting
+    restatement: End hours-long waits to vote.
+    sources:
+      - in: inaugural
+        ref: "¶24.4"
+        quote: >
+          Our journey is not complete until no citizen is forced to wait for
+          hours to exercise the right to vote.
+    metric:
+      present: true
+      quantity: polling-place wait times
+      record: "no single official series (MIT Election Lab / Survey of the Performance of American Elections)"
+    threshold:
+      present: true
+      stated: "no citizen waits for hours (toward zero hours-long waits)"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"our journey is not complete until\" — a goal; no named action (the election-administration commission came later)"
+    measurable: "partial"
+    notes: >
+      A near-measurable target — wait times are tracked in survey data — but
+      there is no authoritative federal record, no deadline, no named
+      instrument, and "hours" sets a fuzzy threshold. Elections are run by the
+      states, so this is largely an outcome he cannot directly control.
+
+  - id: obama-2012-immigration-reform
+    theme: immigration
+    restatement: Reform immigration to welcome immigrants and retain foreign students and engineers.
+    sources:
+      - in: inaugural
+        ref: "¶24.5"
+        quote: >
+          Our journey is not complete until we find a better way to welcome the
+          striving, hopeful immigrants who still see America as a land of
+          opportunity—until bright young students and engineers are enlisted in
+          our workforce rather than expelled from our country.
+    metric:
+      present: false
+      quantity: "no clean quantity (\"a better way to welcome\" names no specific policy or count)"
+      record: null
+    threshold:
+      present: false
+      stated: "\"a better way\" / \"enlisted... rather than expelled\" — directional imagery, no level"
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: null
+    measurable: "no"
+    notes: >
+      A concrete policy area (comprehensive immigration reform; keeping
+      high-skilled graduates) framed aspirationally — "find a better way" names
+      no policy, number, deadline, or instrument. Measurable at most as a yes/no
+      on whether reform was enacted, the widest possible boundary.

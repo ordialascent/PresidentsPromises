@@ -27,11 +27,18 @@
 
 promises:
   - id: biden-2020-virus-control
-    ref: "¶67.1"
     theme: health
-    quote: >
-      As president, the first step I will take will be to get control of the
-      virus that's ruined so many lives.
+    sources:
+      - in: acceptance
+        ref: "¶67.1"
+        quote: >
+          As president, the first step I will take will be to get
+          control of the virus that's ruined so many lives.
+      - in: inaugural
+        ref: "¶27.4"
+        quote: >
+          We must set aside politics and finally face this pandemic
+          as one Nation.
     restatement: Get control of the COVID-19 virus as the first priority in office.
     metric:
       present: true
@@ -505,3 +512,102 @@ promises:
       A stance-and-instrument promise with no quantity to track, no number, and
       no date — and largely an outcome he cannot fully control, since it depends
       on adversaries' conduct, not only on his response.
+
+  # --- Inaugural address (2021-01-20) ---------------------------------------
+  # Inaugural addresses are thematic and aspirational: this one centers on
+  # unity, democracy, and the pandemic, most of it values and vision rather
+  # than pinnable commitments. The genuinely forward, self-framed pledges below
+  # are all measurable: "no" — no metric, threshold, or deadline reaches the
+  # inaugural. The pandemic reappears here too, but as a restatement of the
+  # acceptance-speech promise biden-2020-virus-control, so it is not duplicated.
+
+  - id: biden-2020-alliances
+    theme: foreign-policy
+    restatement: Repair America's alliances and re-engage with the world.
+    sources:
+      - in: inaugural
+        ref: "¶28.4"
+        quote: >
+          We will repair our alliances and engage with the world once again, not
+          to meet yesterday's challenges, but today's and tomorrow's challenges.
+    metric:
+      present: false
+      quantity: "\"repair our alliances\" has no agreed series or measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: repair alliances and re-engage with the world (specific mechanism unnamed)
+    measurable: "no"
+    notes: >
+      New to the term — the acceptance speech's foreign-policy promise
+      (biden-2020-election-interference) was about Russian bounties and election
+      interference, not alliances, so this is not a merge. A named direction with
+      an instrument, but no quantity, no threshold, and no date; "repair" and
+      "engage" name no level of restored partnership, so it is gaugeable only as
+      a vague yes/no about re-engagement.
+
+  - id: biden-2020-president-for-all
+    theme: governance
+    restatement: Govern as a President for all Americans, fighting as hard for opponents as for supporters.
+    sources:
+      - in: inaugural
+        ref: "¶22.9-22.10"
+        quote: >
+          And I pledge this to you: I will be a President for all Americans—all
+          Americans. And I promise you, I will fight as hard for those who did
+          not support me as for those who did.
+    metric:
+      present: false
+      quantity: whether he governs even-handedly (a governance posture, not a quantity)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: govern on behalf of all Americans, including those who opposed him
+    measurable: "no"
+    notes: >
+      Explicitly self-framed ("I pledge this to you" / "I promise you"), which is
+      why it clears the vision bar — but it is a character-and-governance
+      commitment with no quantity, no threshold, and no date, measurable only as
+      a contested judgment about even-handed governing.
+
+  - id: biden-2020-level-with-you
+    theme: governance
+    restatement: Always level with the American people — be honest and transparent.
+    sources:
+      - in: inaugural
+        ref: "¶37.2"
+        quote: >
+          Before God and all of you I give you my word: I will always level with
+          you.
+    metric:
+      present: false
+      quantity: whether he communicates honestly (governance posture, not a quantity)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: always level with the public (speak truthfully)
+    measurable: "no"
+    notes: >
+      A transparency pledge given as "my word," so a genuine forward commitment
+      rather than the ceremonial oath lines that follow it ("I will defend the
+      Constitution / our democracy / America," ¶37.3-37.5, left out as oath, not
+      policy). No quantity, no threshold, no date — the zero-of-three end of the
+      scale, with an instrument under it.

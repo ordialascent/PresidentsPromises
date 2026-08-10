@@ -505,3 +505,105 @@ promises:
       The statement of the pre-emption doctrine — a forward commitment in force,
       but pure posture: no quantity, no threshold, no deadline, no named
       instrument. The zero-of-four anchor at the aspirational end of the scale.
+
+  # --- Promises from the 2005 inaugural address (2005-inaugural.md) ---
+  # The 2005 inaugural is famously an aspirational freedom/"ending tyranny"
+  # vision. Almost all of it is vision, gratitude, or history, not a forward
+  # commitment; the few genuine "we will"/"I will" pledges below are all
+  # aspirational (measurable: no). Refs are ¶paragraph.sentence into the
+  # inaugural. See the report/merge notes for inaugural passages that restate
+  # 2004 acceptance promises rather than adding new ones.
+
+  - id: bush-2004-relations-human-rights
+    theme: foreign-policy
+    restatement: Condition the success of US relations on other governments' decent treatment of their own people.
+    sources:
+      - in: inaugural
+        ref: "¶10.2"
+        quote: >
+          We will encourage reform in other governments by making clear that
+          success in our relations will require the decent treatment of their
+          own people.
+    metric:
+      present: false
+      quantity: no agreed measure ("decent treatment"; "success in our relations" is undefined)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"making clear that success in our relations will require...\" — conditioning bilateral relations on human-rights conduct"
+    measurable: "no"
+    notes: >
+      The most concrete of the inaugural's freedom-agenda lines: unlike the pure
+      vision of ¶7-8 ("ending tyranny"), this names an actual lever — tying the
+      standing of US relations to a government's treatment of its people. But
+      "decent treatment" and "success in our relations" have no metric, no
+      threshold, and no deadline, so it grades no despite the named instrument.
+
+  - id: bush-2004-ownership-society
+    theme: economy
+    restatement: Reform major institutions to build an "ownership society" and bring the highest standards to schools.
+    sources:
+      - in: inaugural
+        ref: "¶21.3-21.4"
+        quote: >
+          And now we will extend this vision by reforming great institutions to
+          serve the needs of our time. To give every American a stake in the
+          promise and future of our country, we will bring the highest standards
+          to our schools and build an ownership society.
+    metric:
+      present: false
+      quantity: "\"an ownership society\" and \"highest standards\" have no single agreed measure"
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: true
+      stated: "\"reforming great institutions\" — a named (if broad) legislative/administrative program"
+    measurable: "no"
+    notes: >
+      The inaugural's flagship domestic doctrine and the same shape as Obama's
+      "world-class education" pledge: a real named instrument (reforming great
+      institutions) under an aspirational goal with no metric, threshold, or
+      deadline. The concrete expansions in ¶21.5 ("widen the ownership of homes
+      and businesses, retirement savings, and health insurance") largely restate
+      the 2004 acceptance's homes-ownership and personal-accounts pledges and are
+      flagged as merge candidates, not folded in here, to avoid double-counting.
+
+  - id: bush-2004-heal-divisions
+    theme: unity
+    restatement: Strive in good faith to heal the nation's divisions.
+    sources:
+      - in: inaugural
+        ref: "¶25.2"
+        quote: >
+          We have known divisions, which must be healed to move forward in great
+          purposes, and I will strive in good faith to heal them.
+    metric:
+      present: false
+      quantity: none ("divisions" has no agreed measure)
+      record: null
+    threshold:
+      present: false
+      stated: null
+    deadline:
+      present: false
+      stated: null
+    instrument:
+      present: false
+      stated: "\"strive in good faith\" — effort, not a named action"
+    measurable: "no"
+    notes: >
+      A genuine "I will" forward commitment kept as an aspirational anchor (the
+      counterpart to Obama's "restore our moral standing"): no quantity, no
+      threshold, no deadline, and "strive in good faith" names effort rather than
+      a controllable instrument.

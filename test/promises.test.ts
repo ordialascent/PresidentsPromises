@@ -34,8 +34,8 @@ describe('promises overview aggregation', () => {
       }
     }
     expect(occ).toBe(CORPUS_OCCURRENCE_COUNT);
-    // today the corpus is acceptance-only, so it's one occurrence per promise
-    expect(CORPUS_OCCURRENCE_COUNT).toBe(CORPUS_PROMISE_COUNT);
+    // a promise recurs across sources, so occurrences >= distinct promises
+    expect(CORPUS_OCCURRENCE_COUNT).toBeGreaterThanOrEqual(CORPUS_PROMISE_COUNT);
   });
 
   it('per-term counts sum to the term total, and totals to the corpus count', () => {
@@ -48,11 +48,12 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the known extraction (12 / 91 / 21)', () => {
+  it('the corpus-wide tier split matches the current extraction (12 / 118 / 36)', () => {
+    // Snapshot anchor — update when the corpus grows. Acceptance + inaugural.
     const c = { full: 0, partial: 0, no: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ full: 12, partial: 91, no: 21 });
-    expect(c.full + c.partial + c.no).toBe(124);
+    expect(c).toEqual({ full: 12, partial: 118, no: 36 });
+    expect(c.full + c.partial + c.no).toBe(166);
   });
 
   it('shares are a proper distribution within each term', () => {
