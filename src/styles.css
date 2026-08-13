@@ -228,41 +228,49 @@ main {
   margin: 2px 0;
 }
 
-.veri {
+/* footer split into two side-by-side boxes; stacks on narrow screens */
+.colophon-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: stretch;
+}
+.colophon-box {
+  flex: 1 1 320px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
 }
+
 .veri-table {
   align-self: flex-start;
   border-collapse: collapse;
-  font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--dim);
 }
 .veri-table th,
 .veri-table td {
   border: 1px solid var(--border);
-  padding: 5px 14px;
+  padding: 5px 12px;
   text-align: center;
+  font-weight: 400;
 }
-.veri-table thead th {
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
-.veri-table tbody th {
-  text-align: left;
-  font-weight: 600;
-}
-.veri-table tbody th[data-q='full'] { color: var(--q-full); }
-.veri-table tbody th[data-q='partial'] { color: var(--ink); }
-.veri-table tbody th[data-q='no'] { color: var(--q-no-line); }
+/* category names and column headers use the plain footer text style */
+.veri-table thead th { color: var(--dim); }
+.veri-table tbody th { text-align: left; color: var(--dim); }
+/* the leading colour-key column takes the bar-chart tier fills */
+.veri-swatch-col,
+.veri-swatch { width: 16px; padding: 0; }
+.veri-swatch[data-q='full'] { background: var(--q-full); }
+.veri-swatch[data-q='partial'] { background: var(--q-partial); }
+.veri-swatch[data-q='no'] { background: var(--q-no); }
 .veri-yes { color: var(--ink); }
-.veri-no { color: var(--dim); }
+.veri-q { color: var(--dim); }
 
 .colophon a {
   color: var(--series);

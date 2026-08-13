@@ -125,12 +125,6 @@ export function TopicDonut({
           ))}
         </div>
       </div>
-
-      <p className="tp-hint">
-        {selected
-          ? `Bars below show only ${selected} promises, still split by measurability.`
-          : 'Click a topic to filter the bars below to just that topic.'}
-      </p>
     </div>
   );
 }

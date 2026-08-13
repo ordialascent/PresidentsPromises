@@ -320,9 +320,7 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
             ))}
           </ul>
         </div>
-      ) : (
-        <p className="pc-hint">Click any block to list its promises.</p>
-      )}
+      ) : null}
     </div>
   );
 }

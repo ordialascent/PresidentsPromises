@@ -47,50 +47,57 @@ export function PromisesPage() {
         <PromisesChart terms={terms} />
 
         <footer className="colophon">
-          <div className="veri">
-            <p>Verifiability is a property of the sentence, not of the president.</p>
-            <table className="veri-table">
-              <thead>
-                <tr>
-                  <th scope="col" aria-label="Verifiability tier" />
-                  <th scope="col">Metric</th>
-                  <th scope="col">Threshold</th>
-                  <th scope="col">Deadline</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row" data-q="full">Full</th>
-                  <td className="veri-yes">✓</td>
-                  <td className="veri-yes">✓</td>
-                  <td className="veri-yes">✓</td>
-                </tr>
-                <tr>
-                  <th scope="row" data-q="partial">Partial</th>
-                  <td className="veri-yes">✓</td>
-                  <td className="veri-no">–</td>
-                  <td className="veri-no">–</td>
-                </tr>
-                <tr>
-                  <th scope="row" data-q="no">None</th>
-                  <td className="veri-no">–</td>
-                  <td className="veri-no">–</td>
-                  <td className="veri-no">–</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>
-              A <em>partial</em> promise names a measurable quantity but leaves the threshold or the deadline missing or vague. Even a <em>full</em> promise can still be disputed on baseline or endpoint.
-            </p>
-          </div>
+          <div className="colophon-cols">
+            <section className="colophon-box">
+              <p>Verifiability judges the proposition, not the president.</p>
+              <table className="veri-table">
+                <thead>
+                  <tr>
+                    <th className="veri-swatch-col" aria-hidden="true" />
+                    <th scope="col" aria-label="Verifiability tier" />
+                    <th scope="col">Metric</th>
+                    <th scope="col">Threshold</th>
+                    <th scope="col">Deadline</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="veri-swatch" data-q="full" aria-hidden="true" />
+                    <th scope="row">Full</th>
+                    <td className="veri-yes">✓</td>
+                    <td className="veri-yes">✓</td>
+                    <td className="veri-yes">✓</td>
+                  </tr>
+                  <tr>
+                    <td className="veri-swatch" data-q="partial" aria-hidden="true" />
+                    <th scope="row">Partial</th>
+                    <td className="veri-yes">✓</td>
+                    <td className="veri-q">?</td>
+                    <td className="veri-q">?</td>
+                  </tr>
+                  <tr>
+                    <td className="veri-swatch" data-q="no" aria-hidden="true" />
+                    <th scope="row">None</th>
+                    <td className="veri-q">?</td>
+                    <td className="veri-q">?</td>
+                    <td className="veri-q">?</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                A <em>partial</em> promise names a measurable quantity but leaves the threshold or the deadline missing or vague. Even a <em>full</em> promise may be debatable.
+              </p>
+            </section>
 
-          <div>
-            <p>Sources currently in use:</p>
-            <ul>
-              <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
-              <li>Inaugural address from <em>The American Presidency Project</em></li>
-              <li>Final general-election debate from <em>The American Presidency Project</em></li>
-            </ul>
+            <section className="colophon-box">
+              <p>Sources currently in use:</p>
+              <ul>
+                <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
+                <li>Inaugural address from <em>The American Presidency Project</em></li>
+                <li>Final general-election debate from <em>The American Presidency Project</em></li>
+              </ul>
+              <p>All sources are treated identically.</p>
+            </section>
           </div>
         </footer>
       </main>
