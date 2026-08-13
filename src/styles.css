@@ -211,6 +211,53 @@ main {
   line-height: 1.55;
 }
 
+.colophon ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.colophon li {
+  margin: 2px 0;
+}
+
+.veri {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.veri-table {
+  align-self: flex-start;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--dim);
+}
+.veri-table th,
+.veri-table td {
+  border: 1px solid var(--border);
+  padding: 5px 14px;
+  text-align: center;
+}
+.veri-table thead th {
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.veri-table tbody th {
+  text-align: left;
+  font-weight: 600;
+}
+.veri-table tbody th[data-q='full'] { color: var(--q-full); }
+.veri-table tbody th[data-q='partial'] { color: var(--ink); }
+.veri-table tbody th[data-q='no'] { color: var(--q-no-line); }
+.veri-yes { color: var(--ink); }
+.veri-no { color: var(--dim); }
+
 .colophon a {
   color: var(--series);
   text-decoration: none;
@@ -254,6 +301,27 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  background: none;
+  border: 0;
+  margin: -2px -5px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 120ms ease, background-color 120ms ease;
+}
+.pc-legend-item:hover {
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+.pc-legend-item[data-on='false'] {
+  opacity: 0.4;
+}
+.pc-legend-item[data-on='false'] .pc-swatch {
+  filter: grayscale(0.8);
+}
+.pc-legend-item[data-on='false'] .pc-legend-n {
+  color: var(--dim);
 }
 .pc-swatch {
   width: 12px;

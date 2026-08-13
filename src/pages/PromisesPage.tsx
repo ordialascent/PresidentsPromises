@@ -27,7 +27,6 @@ export function PromisesPage() {
   return (
     <div className="page">
       <header className="masthead">
-        <div className="eyebrow">Presidents' Promises · What can be measured and what was achieved? · MVP</div>
         <h1>The Promises Presidents Make</h1>
         <p className="subtitle">
           A collection of promises from comparable and authoritative sources, starting in 2000, categorized by verifiability.
@@ -48,14 +47,45 @@ export function PromisesPage() {
         <PromisesChart terms={terms} />
 
         <footer className="colophon">
-          <p>
-            Verifiability is a property of the sentence, not of the president. A promise is <em>full</em> when it names a metric, a threshold, and a deadline; <em>partial</em> when one of those is missing or vague; <em>none</em> when it names no measurable quantity. Even a <em>full</em> promise can still be disputed on baseline or endpoint.
-          </p>
-          <p>
-            The colors are taken from the US flag and do not represent the parties. Nowhere does this site make a causal claim or compare parties.
-          </p>
+          <div className="veri">
+            <p>Verifiability is a property of the sentence, not of the president.</p>
+            <table className="veri-table">
+              <thead>
+                <tr>
+                  <th scope="col" aria-label="Verifiability tier" />
+                  <th scope="col">Metric</th>
+                  <th scope="col">Threshold</th>
+                  <th scope="col">Deadline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-q="full">Full</th>
+                  <td className="veri-yes">✓</td>
+                  <td className="veri-yes">✓</td>
+                  <td className="veri-yes">✓</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-q="partial">Partial</th>
+                  <td className="veri-yes">✓</td>
+                  <td className="veri-no">–</td>
+                  <td className="veri-no">–</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-q="no">None</th>
+                  <td className="veri-no">–</td>
+                  <td className="veri-no">–</td>
+                  <td className="veri-no">–</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              A <em>partial</em> promise names a measurable quantity but leaves the threshold or the deadline missing or vague. Even a <em>full</em> promise can still be disputed on baseline or endpoint.
+            </p>
+          </div>
+
           <div>
-            Sources currently in use:
+            <p>Sources currently in use:</p>
             <ul>
               <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
               <li>Inaugural address from <em>The American Presidency Project</em></li>
