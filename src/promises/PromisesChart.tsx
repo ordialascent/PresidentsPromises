@@ -124,6 +124,38 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
 
   return (
     <div className="pc">
+      <div className="pc-bar-top">
+        <div className="pc-legend" role="group" aria-label="Filter by tier">
+          {QUALITIES.map((q) => (
+            <button
+              key={q}
+              type="button"
+              className="pc-legend-item"
+              data-on={activeTiers.has(q)}
+              aria-pressed={activeTiers.has(q)}
+              onClick={() => toggleTier(q)}
+              title={`Show or hide ${QUALITY_META[q].label.toLowerCase()} promises`}
+            >
+              <span className="pc-swatch" data-q={q} />
+              {QUALITY_META[q].label}
+              <span className="pc-legend-n">{totals[q]}</span>
+            </button>
+          ))}
+        </div>
+        <div className="pc-toggle" role="group" aria-label="Chart scale">
+          {(['absolute', 'percent'] as Mode[]).map((m) => (
+            <button
+              key={m}
+              type="button"
+              data-on={mode === m}
+              onClick={() => setMode(m)}
+            >
+              {m === 'absolute' ? 'Count' : 'Percent'}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <svg
         className="pc-svg"
         viewBox={`0 0 ${VB_W} ${PAD_TOP + PLOT_H + PAD_BOTTOM}`}
@@ -205,38 +237,6 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
           </g>
         ))}
       </svg>
-
-      <div className="pc-bar-top">
-        <div className="pc-legend" role="group" aria-label="Filter by tier">
-          {QUALITIES.map((q) => (
-            <button
-              key={q}
-              type="button"
-              className="pc-legend-item"
-              data-on={activeTiers.has(q)}
-              aria-pressed={activeTiers.has(q)}
-              onClick={() => toggleTier(q)}
-              title={`Show or hide ${QUALITY_META[q].label.toLowerCase()} promises`}
-            >
-              <span className="pc-swatch" data-q={q} />
-              {QUALITY_META[q].label}
-              <span className="pc-legend-n">{totals[q]}</span>
-            </button>
-          ))}
-        </div>
-        <div className="pc-toggle" role="group" aria-label="Chart scale">
-          {(['absolute', 'percent'] as Mode[]).map((m) => (
-            <button
-              key={m}
-              type="button"
-              data-on={mode === m}
-              onClick={() => setMode(m)}
-            >
-              {m === 'absolute' ? 'Count' : 'Percent'}
-            </button>
-          ))}
-        </div>
-      </div>
 
       {openPromise && (
         <div className="pc-detail" data-q={openPromise.quality}>
