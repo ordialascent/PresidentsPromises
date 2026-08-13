@@ -31,20 +31,24 @@ export function PromisesPage() {
         <p className="subtitle">
           A collection of promises from comparable and authoritative sources, starting in 2000, categorized by verifiability.
         </p>
-        <p className="provenance">
-          {CORPUS_PROMISE_COUNT} promises · {CORPUS_TERMS.length} terms · sources verbatim
-        </p>
       </header>
 
       <main>
-        <TopicDonut
-          topics={topics}
-          total={CORPUS_PROMISE_COUNT}
-          selected={topic}
-          onSelect={setTopic}
-        />
+        <section className="board">
+          <TopicDonut
+            topics={topics}
+            total={CORPUS_PROMISE_COUNT}
+            selected={topic}
+            onSelect={setTopic}
+          />
 
-        <PromisesChart terms={terms} />
+          <hr className="board-rule" />
+
+          <div className="board-promises">
+            <span className="board-label">Promises</span>
+            <PromisesChart terms={terms} />
+          </div>
+        </section>
 
         <footer className="colophon">
           <div className="colophon-cols">

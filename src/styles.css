@@ -103,6 +103,36 @@ main {
   gap: 34px;
 }
 
+/* one white card holding both the topics section and the promises chart,
+   split by an inset divider */
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 22px;
+}
+.board-rule {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+.board-promises {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.board-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
 .readings {
   display: flex;
   flex-direction: column;
@@ -378,10 +408,6 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 6px;
   overflow: visible;
 }
 
@@ -576,10 +602,6 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px;
 }
 .tp-svg {
   width: 172px;
