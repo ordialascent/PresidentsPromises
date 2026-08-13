@@ -25,12 +25,21 @@
 
 promises:
   - id: obama-2008-oil-mideast
-    ref: "¶44.1"
     theme: energy
-    quote: >
-      And for the sake of our economy, our security, and the future of our
-      planet, I will set a clear goal as President: in ten years, we will
-      finally end our dependence on oil from the Middle East.
+    sources:
+      - in: acceptance
+        ref: "¶44.1"
+        quote: >
+          And for the sake of our economy, our security, and the
+          future of our planet, I will set a clear goal as
+          President: in ten years, we will finally end our
+          dependence on oil from the Middle East.
+      - in: debate
+        ref: "¶279.1"
+        quote: >
+          I think that in ten years, we can reduce our dependence so
+          that we no longer have to import oil from the Middle East
+          or Venezuela.
     restatement: End US dependence on Middle East oil within ten years.
     metric:
       present: true
@@ -70,6 +79,17 @@ promises:
         quote: >
           We will harness the sun and the winds and the soil to fuel
           our cars and run our factories.
+      - in: debate
+        ref: "¶302.1"
+        quote: >
+          If we can get that right, then we can move in a direction
+          not only of energy independence, but we can create 5
+          million new jobs all across America, including in the
+          heartland where we can retool some of these plants to make
+          these highly fuel-efficient cars and also to make wind
+          turbines and solar panels, the kinds of clean energy
+          approaches that should be the driver of our economy for
+          the next century.
     restatement: Invest $150B over ten years in renewable energy, yielding five million jobs.
     metric:
       present: true
@@ -91,10 +111,18 @@ promises:
       spending — split a compound promise into its measurable and outcome parts.
 
   - id: obama-2008-tax-cut-95
-    ref: "¶43.1"
     theme: taxes
-    quote: >
-      I will cut taxes – cut taxes – for 95% of all working families.
+    sources:
+      - in: acceptance
+        ref: "¶43.1"
+        quote: >
+          I will cut taxes – cut taxes – for 95% of all working
+          families.
+      - in: debate
+        ref: "¶45.1"
+        quote: >
+          What I've said is I want to provide a tax cut for 95
+          percent of working Americans, 95 percent.
     restatement: Cut taxes for 95% of working families.
     metric:
       present: true
@@ -140,12 +168,21 @@ promises:
       businesses and start-ups" is the disputed boundary.
 
   - id: obama-2008-offshoring-taxbreaks
-    ref: "¶41.1"
     theme: taxes
-    quote: >
-      Unlike John McCain, I will stop giving tax breaks to corporations that
-      ship jobs overseas, and I will start giving them to companies that create
-      good jobs right here in America.
+    sources:
+      - in: acceptance
+        ref: "¶41.1"
+        quote: >
+          Unlike John McCain, I will stop giving tax breaks to
+          corporations that ship jobs overseas, and I will start
+          giving them to companies that create good jobs right here
+          in America.
+      - in: debate
+        ref: "¶30.2"
+        quote: >
+          I want to end the tax breaks for companies that are
+          shipping jobs overseas and provide a tax credit for every
+          company that's creating a job right here in America.
     restatement: End tax breaks for offshoring; give them to domestic job creators.
     metric:
       present: false
@@ -180,6 +217,11 @@ promises:
           We will restore science to its rightful place and wield
           technology's wonders to raise health care's quality and
           lower its cost.
+      - in: debate
+        ref: "¶312.2"
+        quote: >
+          And we estimate we can cut the average family's premium by
+          about $2,500 per year.
     restatement: Affordable, accessible health care for every American; lower premiums for the insured.
     metric:
       present: true
@@ -221,6 +263,11 @@ promises:
           spend wisely, reform bad habits, and do our business in
           the light of day, because only then can we restore the
           vital trust between a people and their government.
+      - in: debate
+        ref: "¶81.2"
+        quote: >
+          And I want to go through the federal budget line by line,
+          page by page, programs that don't work, we should cut.
     restatement: Pay for every new dollar of spending; cut wasteful programs line by line.
     metric:
       present: true
@@ -368,6 +415,14 @@ promises:
         quote: >
           And we will transform our schools and colleges and
           universities to meet the demands of a new age.
+      - in: debate
+        ref: "¶420.1"
+        quote: >
+          I think it's going to be critically important for us to
+          recruit a generation of new teachers, an army of new
+          teachers, especially in math and science, give them higher
+          pay, give them more professional development and support
+          in exchange for higher standards and accountability.
     restatement: Provide every child a world-class education; invest in early education and teachers.
     metric:
       present: false
@@ -536,3 +591,81 @@ promises:
       An explicit pledge, but purely directional: no target, no deadline, no
       metric, and the aid instrument is named only in the broadest terms. New to
       this term (no development pledge in the acceptance speech).
+
+  - id: obama-2008-tuition-credit
+    theme: education
+    restatement: Give every student a $4,000-a-year college tuition credit in exchange for community or military service.
+    sources:
+      - in: debate
+        ref: "¶422.1"
+        quote: >
+          And that's why I've proposed a $4,000 tuition credit,
+          every student, every year, in exchange for some form of
+          community service, whether it's military service, whether
+          it's Peace Corps, whether it's working in a community.
+    metric:     { present: true, stated: $4,000 per student per year }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: a refundable tuition credit tied to service }
+    measurable: "partial"
+    notes: >
+      A stated dollar amount and a named instrument, but no deadline or
+      coverage target.
+
+  - id: obama-2008-oil-leases
+    theme: energy
+    restatement: Make oil companies drill the 68 million acres they have already leased or lose them.
+    sources:
+      - in: debate
+        ref: "¶282.1"
+        quote: >
+          Number one, we do need to expand domestic production and
+          that means, for example, telling the oil companies the 68
+          million acres that they currently have leased that they're
+          not drilling, use them or lose them.
+    metric:     { present: true, stated: 68 million leased acres }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: use-it-or-lose-it lease rules }
+    measurable: "partial"
+    notes: >
+      Names an acreage figure and a mechanism; no production target or
+      date.
+
+  - id: obama-2008-auto-fuel-efficiency
+    theme: energy
+    restatement: Give the automakers loan guarantees, conditioned on producing highly fuel-efficient cars.
+    sources:
+      - in: debate
+        ref: "¶300.1"
+        quote: >
+          That's why I think it's important for us to get loan
+          guarantees to the automakers, but we do have to hold them
+          responsible as well to start producing the highly
+          fuel-efficient cars of the future.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: loan guarantees tied to fuel-efficiency }
+    measurable: "partial"
+    notes: >
+      A named instrument with a condition, but no efficiency target or
+      deadline.
+
+  - id: obama-2008-charter-schools
+    theme: education
+    restatement: Support charter schools and pay-for-performance for teachers.
+    sources:
+      - in: debate
+        ref: "¶136.1"
+        quote: >
+          I support charter schools and pay for performance for
+          teachers.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: false }
+    measurable: "no"
+    notes: >
+      A statement of support for two policies, with no instrument he
+      commits to or measurable target.

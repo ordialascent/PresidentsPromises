@@ -48,12 +48,13 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the current extraction (12 / 118 / 36)', () => {
-    // Snapshot anchor — update when the corpus grows. Acceptance + inaugural.
+  it('the corpus-wide tier split matches the current extraction (16 / 141 / 38)', () => {
+    // Snapshot anchor — update when the corpus grows. Acceptance + inaugural +
+    // all seven final debates (2000–2024).
     const c = { full: 0, partial: 0, no: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ full: 12, partial: 118, no: 36 });
-    expect(c.full + c.partial + c.no).toBe(166);
+    expect(c).toEqual({ full: 16, partial: 141, no: 38 });
+    expect(c.full + c.partial + c.no).toBe(195);
   });
 
   it('shares are a proper distribution within each term', () => {

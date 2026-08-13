@@ -91,6 +91,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶42.2",
             "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.6",
+            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
           }
         ]
       },
@@ -137,6 +152,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶47.1",
             "quote": "For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶159.24",
+            "quote": "And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today."
           }
         ]
       },
@@ -159,7 +189,22 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶58.3",
-            "quote": "On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
+            "quote": "On principle, every family, every farmer and small- business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶107.16",
+            "quote": "I'm for getting rid of the death tax, completely getting rid of the death tax."
           }
         ]
       },
@@ -183,6 +228,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶59.1",
             "quote": "On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.4",
+            "quote": "Everybody that pays taxes is going to get tax relief."
           }
         ]
       },
@@ -252,6 +312,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶53.2-53.3",
             "quote": "When a school district receives federal funds to teach poor children, we expect them to learn. And if they don't, parents should get the money to make a different choice."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶39.15",
+            "quote": "And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school."
           }
         ]
       },
@@ -274,7 +349,22 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
+            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in- chief who earns their respect."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.9",
+            "quote": "I want to have the military keeping the peace."
           }
         ]
       },
@@ -344,6 +434,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶92.1",
             "quote": "We will give low-income Americans tax credits to buy the private health insurance they need and deserve."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶30.19",
+            "quote": "We need a $2,000 credit, rebate for people, working people that don't have insurance, they can get in the marketplace and start purchasing insurance."
           }
         ]
       },
@@ -390,6 +495,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶98.2",
             "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶117.13",
+            "quote": "I think that afterschool money ought to be available for faith-based programs and charitable programs that exist because somebody has heard the call to love a neighbor like you would like to be loved yourself."
           }
         ]
       },
@@ -413,6 +533,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶102.1",
             "quote": "We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶100.11",
+            "quote": "But I also believe strongly that we need to enforce laws on the books that the best way to make sure that we keep our society safe and secure is to hold people accountable for breaking the law."
           }
         ]
       },
@@ -459,6 +594,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶77.5",
             "quote": "I want to change the tone of Washington to one of civility and respect."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶126.5",
+            "quote": "And what I think needs to happen in order to encourage the young to become involved is to shoot straight, is to set aside the partisan differences, and set an agenda that will make sense."
           }
         ]
       },
@@ -551,6 +701,121 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶20.3",
             "quote": "And I can pledge our Nation to a goal: When we see that wounded traveler on the road to Jericho, we will not pass to the other side."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-patients-bill-rights",
+        "theme": "health",
+        "restatement": "Enact a national patients' bill of rights guaranteeing emergency-room care, no gag orders, direct OB/GYN access, and the right to sue an HMO.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶18.6-18.7",
+            "quote": "If I'm the president, we're going to have emergency room care, we're going have gag orders, we're going to have direct access to OB/GYN. People will be able to take their HMO insurance company to court."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-teacher-protection",
+        "theme": "education",
+        "restatement": "Ask Congress to pass a federal teacher-protection act shielding teachers who uphold classroom discipline from lawsuits.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶50.20",
+            "quote": "So I'm going to ask the Congress to pass a teacher protection act."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-fast-track",
+        "theme": "trade",
+        "restatement": "Seek fast-track trade-negotiating authority to open foreign markets to US farm exports.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶107.5",
+            "quote": "I want the next president to have fast track negotiating authority to open up markets around the world with the best and the most efficient farmers."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-food-embargo",
+        "theme": "trade",
+        "restatement": "Stop using food exports as a diplomatic weapon.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶107.6",
+            "quote": "I don't want to use food as a diplomatic weapon from this point forward."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-smallbiz-insurance",
+        "theme": "health",
+        "restatement": "Let small businesses buy health insurance across state lines through pooled association plans.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶30.20",
+            "quote": "We need to have -- allow small businesses to write insurance across jurisdictional lines so small business can afford health care, small restaurants can afford health care."
           }
         ]
       }
@@ -677,6 +942,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶17.4",
             "quote": "To create jobs, my plan will encourage investment and expansion by restraining Federal spending, reducing regulation, and making the tax relief permanent."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶145.4",
+            "quote": "It's to make sure we have fiscal sanity and keep taxes low."
           }
         ]
       },
@@ -746,6 +1026,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶22.1",
             "quote": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts and provide direct help for low-income Americans to purchase them."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶95.6-95.7",
+            "quote": "It's one of the reasons I'm a strong believer in what they call health savings accounts. These are accounts that allow somebody to buy a low-premium, high-deductible catastrophic plan and couple it with tax-free savings."
           }
         ]
       },
@@ -769,6 +1064,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶23.2",
             "quote": "To make health care more affordable and accessible, we must pass medical liability reform now."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶96.2",
+            "quote": "That's why I'm such a strong believer in medical liability reform."
           }
         ]
       },
@@ -838,6 +1148,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶27.4",
             "quote": "We must strengthen Social Security by allowing younger workers to save some of their taxes in a personal account, a nest egg you can call your own and Government can never take away."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶131.1",
+            "quote": "I believe that younger workers ought to be allowed to take some of their own money and put it in a personal savings account, because I understand that they need to get better rates of return than the rates of return being given in the current Social Security trust."
           }
         ]
       },
@@ -884,6 +1209,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶31.6",
             "quote": "By raising performance in our high schools and expanding Pell grants for low- and middle-income families, we will help more Americans start their career with a college diploma."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma."
           }
         ]
       },
@@ -953,6 +1293,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶38.4",
             "quote": "I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶174.2",
+            "quote": "I will pick judges who will interpret the Constitution, but I'll have no litmus test."
           }
         ]
       },
@@ -1022,6 +1377,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶21.3-21.4",
             "quote": "And now we will extend this vision by reforming great institutions to serve the needs of our time. To give every American a stake in the promise and future of our country, we will bring the highest standards to our schools and build an ownership society."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶221.2",
+            "quote": "I think—I believe part of a hopeful society is one in which somebody owns something."
           }
         ]
       },
@@ -1045,6 +1415,205 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶25.2",
             "quote": "We have known divisions, which must be healed to move forward in great purposes, and I will strive in good faith to heal them."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶241.1",
+            "quote": "I'll continue in the 4 years to continue to try to work to do so."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-deficit-half",
+        "theme": "fiscal",
+        "restatement": "Cut the federal budget deficit in half within five years.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶46.2-46.3",
+            "quote": "I sent up my budget man to the Congress, and he says, \"Here's how we're going to reduce the deficit in half by 5 years.\" It requires pro-growth policies that grow our economy and fiscal sanity in the Halls of Congress."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-iraqi-troops",
+        "theme": "foreign-policy",
+        "restatement": "Have 125,000 Iraqi security forces trained by the end of 2004.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶195.1-195.2",
+            "quote": "The best way to take the pressure off our troops is to succeed in Iraq, is to train Iraqis so they can do the hard work of democracy, is to give them a chance to defend their country, which is precisely what we're doing. We'll have 125,000 troops trained by the end of this year."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-marriage-amendment",
+        "theme": "marriage",
+        "restatement": "Amend the US Constitution to define marriage as between a man and a woman.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶76.1-76.3",
+            "quote": "I proposed a constitutional amendment. The reason I did so was because I was worried that activist judges are actually defining the definition of marriage. And the surest way to protect marriage between a man and woman is to amend the Constitution."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-temp-worker",
+        "theme": "immigration",
+        "restatement": "Create a temporary-worker card matching willing foreign workers with willing employers when no American will take the job.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶150.1",
+            "quote": "And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-border-security",
+        "theme": "immigration",
+        "restatement": "Keep increasing Border Patrol manpower and equipment, including unmanned aircraft, over the next four years.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶148.3-148.6",
+            "quote": "We're increasing the border security of the United States. We've got 1,000 more Border Patrol agents on the southern border. We're using new equipment. We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-health-it",
+        "theme": "health",
+        "restatement": "Push adoption of electronic medical records to cut errors and costs.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶97.6",
+            "quote": "We want there to be electronic medical records to cut down on error as well as to reduce costs."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-education-standards",
+        "theme": "education",
+        "restatement": "Keep insisting on excellence in every classroom by continuing to raise standards and measure results.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶261.2",
+            "quote": "Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-gun-prosecution",
+        "theme": "crime",
+        "restatement": "Protect citizens from gun crime chiefly by prosecuting those who commit crimes with guns.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶204.3",
+            "quote": "But the best way to protect our citizens from guns is to prosecute those who commit crimes with guns."
           }
         ]
       }
@@ -1079,6 +1648,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶44.1",
             "quote": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶279.1",
+            "quote": "I think that in ten years, we can reduce our dependence so that we no longer have to import oil from the Middle East or Venezuela."
           }
         ]
       },
@@ -1117,6 +1701,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶12.5",
             "quote": "We will harness the sun and the winds and the soil to fuel our cars and run our factories."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶302.1",
+            "quote": "If we can get that right, then we can move in a direction not only of energy independence, but we can create 5 million new jobs all across America, including in the heartland where we can retool some of these plants to make these highly fuel-efficient cars and also to make wind turbines and solar panels, the kinds of clean energy approaches that should be the driver of our economy for the next century."
           }
         ]
       },
@@ -1140,6 +1739,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶43.1",
             "quote": "I will cut taxes – cut taxes – for 95% of all working families."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶45.1",
+            "quote": "What I've said is I want to provide a tax cut for 95 percent of working Americans, 95 percent."
           }
         ]
       },
@@ -1186,6 +1800,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶41.1",
             "quote": "Unlike John McCain, I will stop giving tax breaks to corporations that ship jobs overseas, and I will start giving them to companies that create good jobs right here in America."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶30.2",
+            "quote": "I want to end the tax breaks for companies that are shipping jobs overseas and provide a tax credit for every company that's creating a job right here in America."
           }
         ]
       },
@@ -1224,6 +1853,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶12.4",
             "quote": "We will restore science to its rightful place and wield technology's wonders to raise health care's quality and lower its cost."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶312.2",
+            "quote": "And we estimate we can cut the average family's premium by about $2,500 per year."
           }
         ]
       },
@@ -1262,6 +1906,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶14.4-14.5",
             "quote": "Where the answer is no, programs will end. And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶81.2",
+            "quote": "And I want to go through the federal budget line by line, page by page, programs that don't work, we should cut."
           }
         ]
       },
@@ -1407,6 +2066,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶12.6",
             "quote": "And we will transform our schools and colleges and universities to meet the demands of a new age."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶420.1",
+            "quote": "I think it's going to be critically important for us to recruit a generation of new teachers, an army of new teachers, especially in math and science, give them higher pay, give them more professional development and support in exchange for higher standards and accountability."
           }
         ]
       },
@@ -1524,6 +2198,98 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "quote": "To the people of poor nations, we pledge to work alongside you to make your farms flourish and let clean waters flow, to nourish starved bodies and feed hungry minds."
           }
         ]
+      },
+      {
+        "id": "obama-2008-tuition-credit",
+        "theme": "education",
+        "restatement": "Give every student a $4,000-a-year college tuition credit in exchange for community or military service.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶422.1",
+            "quote": "And that's why I've proposed a $4,000 tuition credit, every student, every year, in exchange for some form of community service, whether it's military service, whether it's Peace Corps, whether it's working in a community."
+          }
+        ]
+      },
+      {
+        "id": "obama-2008-oil-leases",
+        "theme": "energy",
+        "restatement": "Make oil companies drill the 68 million acres they have already leased or lose them.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶282.1",
+            "quote": "Number one, we do need to expand domestic production and that means, for example, telling the oil companies the 68 million acres that they currently have leased that they're not drilling, use them or lose them."
+          }
+        ]
+      },
+      {
+        "id": "obama-2008-auto-fuel-efficiency",
+        "theme": "energy",
+        "restatement": "Give the automakers loan guarantees, conditioned on producing highly fuel-efficient cars.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶300.1",
+            "quote": "That's why I think it's important for us to get loan guarantees to the automakers, but we do have to hold them responsible as well to start producing the highly fuel-efficient cars of the future."
+          }
+        ]
+      },
+      {
+        "id": "obama-2008-charter-schools",
+        "theme": "education",
+        "restatement": "Support charter schools and pay-for-performance for teachers.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶136.1",
+            "quote": "I support charter schools and pay for performance for teachers."
+          }
+        ]
       }
     ]
   },
@@ -1556,6 +2322,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶25.2",
             "quote": "We can help big factories and small businesses double their exports, and if we choose this path, we can create a million new manufacturing jobs in the next 4 years."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶135.2",
+            "quote": "And that's what my plan does: making sure that we're bringing manufacturing back to our shores so that we're creating jobs here, as we've done with the auto industry, not rewarding companies that are shipping jobs overseas; making sure that we've got the best education system in the world, including retraining our workers for the jobs of tomorrow."
           }
         ]
       },
@@ -1579,6 +2360,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶28.2",
             "quote": "If you choose this path, we can cut our oil imports in half by 2020 and support more than 600,000 new jobs in natural gas alone."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶136.2",
+            "quote": "We've cut our oil imports to the lowest level in two decades because we've developed oil and natural gas, but we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020."
           }
         ]
       },
@@ -1602,6 +2398,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶34.2",
             "quote": "Help me recruit 100,000 math and science teachers within 10 years and improve early childhood education."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶150.5",
+            "quote": "And what I now want to do is to hire more teachers, especially in math and science, because we know that we've fallen behind when it comes to math and science."
           }
         ]
       },
@@ -1671,6 +2482,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶35.6",
             "quote": "We've blunted the Taliban's momentum in Afghanistan, and in 2014, our longest war will be over."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶291.4",
+            "quote": "We then started to build up Afghan forces, and we're now in a position where we can transition out, because there's no reason why Americans should die when Afghans are perfectly capable of defending their own country."
           }
         ]
       },
@@ -1694,6 +2520,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶43.2",
             "quote": "Independent experts say that my plan would cut our deficit by $4 trillion."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶379.2",
+            "quote": "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more so that we can invest in things like research and technology that are the key to a 21st-century economy."
           }
         ]
       },
@@ -1847,6 +2688,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶42.1",
             "quote": "I will use the money we're no longer spending on war to pay down our debt and put more people back to work rebuilding roads and bridges and schools and runways."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶293.2",
+            "quote": "And what we can now do is free up some resources to, for example, put Americans back to work—especially our veterans—rebuilding our roads, our bridges, our schools; making sure that our veterans are getting the care that they need when it comes to posttraumatic stress disorder and traumatic brain injury; making sure that the certifications that they need for good jobs of the future are in place."
           }
         ]
       },
@@ -1941,6 +2797,29 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "quote": "Our journey is not complete until we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country."
           }
         ]
+      },
+      {
+        "id": "obama-2012-iran-no-nuke",
+        "theme": "foreign-policy",
+        "restatement": "Prevent Iran from obtaining a nuclear weapon while he is President.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶216.1",
+            "quote": "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon."
+          }
+        ]
       }
     ]
   },
@@ -1973,6 +2852,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶77.1",
             "quote": "We are going to build a great border wall to stop illegal immigration, to stop the gangs and the violence, and to stop the drugs from pouring into our communities."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶72.1-72.2",
+            "quote": "Now, I want to build the wall. We need the wall."
           }
         ]
       },
@@ -2065,6 +2959,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶95.2",
             "quote": "While Hillary Clinton plans a massive -- and I mean massive -- tax increase, I have proposed the largest tax reduction of any candidate who has declared for the presidential race this year – Democrat or Republican."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶204.2-204.3",
+            "quote": "We are going to cut taxes massively. We're going to cut business taxes massively."
           }
         ]
       },
@@ -2134,6 +3043,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶99.3",
             "quote": "We will repeal and replace disastrous Obamacare."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶488.2",
+            "quote": "And one thing we have to do: Repeal and replace the disaster known as Obamacare."
           }
         ]
       },
@@ -2157,6 +3081,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶93.3-93.4",
             "quote": "Our horrible trade agreements with China and many others, will be totally renegotiated. That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶203.1-203.3",
+            "quote": "I am going to renegotiate NAFTA. And if I can't make a great deal—then we're going to terminate NAFTA and we're going to create new deals. We're going to have trade, but we're going—we're going to terminate it, we're going to make a great trade deal."
           }
         ]
       },
@@ -2218,6 +3157,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶18.2",
             "quote": "We will bring back our jobs."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶202.4",
+            "quote": "We're bringing our jobs back."
           }
         ]
       },
@@ -2241,6 +3195,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶102.1",
             "quote": "We will completely rebuild our depleted military, and the countries that we protect, at a massive loss, will be asked to pay their fair share."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶507.4-507.5",
+            "quote": "We have a depleted military. It has to be helped, has to be fixed."
           }
         ]
       },
@@ -2310,6 +3279,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶105.1",
             "quote": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶40.1-40.2",
+            "quote": "We are going to appoint justices—this is the best way to help the Second Amendment. We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment."
           }
         ]
       },
@@ -2333,6 +3317,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶54.4",
             "quote": "I have a message to every last person threatening the peace on our streets and the safety of our police: when I take the oath of office next year, I will restore law and order to our country."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶508.2",
+            "quote": "We need law and order, but we need justice, too."
           }
         ]
       },
@@ -2486,6 +3485,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶101.1",
             "quote": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people just starting out their adult lives."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶195.4-195.5",
+            "quote": "And I'm a big proponent. We're going to do a lot of things for college tuition."
           }
         ]
       },
@@ -2601,6 +3615,113 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶22.1",
             "quote": "We will reinforce old alliances and form new ones and unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶126.1",
+            "quote": "And you see, we are going to stop radical Islamic terrorism in this country."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-gdp-growth",
+        "theme": "economy",
+        "restatement": "Grow GDP from 1 percent up to 4 percent, and aim for 5 or 6 percent.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶463.3-463.5",
+            "quote": "But we're bringing it from 1 percent up to 4 percent. And I actually think we can go higher than 4 percent. I think you can go to 5 percent or 6 percent."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-repatriate-offshore",
+        "theme": "taxes",
+        "restatement": "Bring the $2.5 trillion held offshore back into the country.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶204.5",
+            "quote": "We're going to bring the $2.5 trillion..."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-deport-criminal-aliens",
+        "theme": "immigration",
+        "restatement": "As one of his first acts, deport the drug lords and bad people and secure the border.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶72.6-72.7",
+            "quote": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out; we're going to secure the border."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-expert-trade-negotiators",
+        "theme": "trade",
+        "restatement": "Use the country's greatest businesspeople, not political hacks, to negotiate trade deals.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶464.4-464.6",
+            "quote": "Those are the people—these are the greatest negotiators in the world. We have the greatest businesspeople in the world. We have to use them to negotiate our trade deals."
           }
         ]
       }
@@ -2650,6 +3771,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶27.4",
             "quote": "We must set aside politics and finally face this pandemic as one Nation."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶42.1",
+            "quote": "What I would say is I'm going to shut down the virus, not the country."
           }
         ]
       },
@@ -2673,6 +3809,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶78.1",
             "quote": "If I'm president on day one we'll implement the national strategy I've been laying out since March."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.16",
+            "quote": "And so folks, I will take care of this, I will end this, I will make sure we have a plan."
           }
         ]
       },
@@ -2696,6 +3847,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶79.1",
             "quote": "We'll develop and deploy rapid tests with results available immediately."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.13",
+            "quote": "I would make sure we move in the direction of rapid testing, investing in rapid testing."
           }
         ]
       },
@@ -2742,6 +3908,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶81.1",
             "quote": "We'll make sure our schools have the resources they need to be open, safe, and effective."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.14",
+            "quote": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe, and give them the wherewithal and financial resources to be able to do that."
           }
         ]
       },
@@ -2765,6 +3946,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶82.1",
             "quote": "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶15.1-15.2",
+            "quote": "Make sure it's totally transparent. Have the scientific world see, know, look at it, go through all the processes."
           }
         ]
       },
@@ -2788,6 +3984,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶83.1",
             "quote": "We'll have a national mandate to wear a mask-not as a burden, but to protect each other."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.12",
+            "quote": "What I would do is make sure we have everyone encouraged to wear a mask, all the time."
           }
         ]
       },
@@ -2834,6 +4045,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶108.1",
             "quote": "With a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act he's trying to rip away."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶150.4",
+            "quote": "Secondly, we're going to make sure we reduce the premiums and reduce drug prices by making sure that there's competition that doesn't exist now by allowing Medicare to negotiate drug prices with the insurance companies."
           }
         ]
       },
@@ -2972,6 +4198,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶111.1-111.3",
             "quote": "We can, and we will, deal with climate change. It's not only a crisis, it's an enormous opportunity. An opportunity for America to lead the world in clean energy and create millions of new good-paying jobs in the process."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶305.7",
+            "quote": "Because what it does, it will create millions of new, good-paying jobs."
           }
         ]
       },
@@ -3041,6 +4282,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶129.1-129.2",
             "quote": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers. Nor will I put up with foreign interference in our most sacred democratic exercise -- voting."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶70.3",
+            "quote": "I made it clear that any country, no matter who it is, that interferes in American elections will pay a price."
           }
         ]
       },
@@ -3064,6 +4320,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶28.4",
             "quote": "We will repair our alliances and engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶100.15",
+            "quote": "We need to be having the rest of our friends with us, saying to China, these are the rules."
           }
         ]
       },
@@ -3087,6 +4358,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶22.9-22.10",
             "quote": "And I pledge this to you: I will be a President for all Americans—all Americans. And I promise you, I will fight as hard for those who did not support me as for those who did."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.1-355.3",
+            "quote": "I will say, 'I'm the American president. I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented."
           }
         ]
       },
@@ -3110,6 +4396,121 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶37.2",
             "quote": "Before God and all of you I give you my word: I will always level with you."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-minimum-wage",
+        "theme": "labor",
+        "restatement": "Raise the federal minimum wage to $15 an hour.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶206.5",
+            "quote": "They deserve a minimum wage of $15."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-citizenship-path",
+        "theme": "immigration",
+        "restatement": "Send Congress a pathway to citizenship for over 11 million undocumented people within his first 100 days.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶226.5",
+            "quote": "And the fact is, and I've made it very clear, within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-public-option",
+        "theme": "health",
+        "restatement": "Pass a public option on top of the Affordable Care Act (Bidencare).",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶150.1",
+            "quote": "What I'm going to do is pass Obamacare with a public option -- become Bidencare."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-oil-transition",
+        "theme": "climate",
+        "restatement": "Transition away from the oil industry to renewable energy and end federal oil subsidies.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶333.1-333.2",
+            "quote": "I would transition from the oil industry. Yes."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-rejoin-paris",
+        "theme": "climate",
+        "restatement": "Rejoin the Paris Climate Accord and press China to meet its commitments.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶350.1",
+            "quote": "No, I'm going to rejoin the Paris Accord and get China to abide by what they agreed to"
           }
         ]
       }
@@ -3266,6 +4667,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶121.3",
             "quote": "And we will also reduce your taxes still further."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶21.11",
+            "quote": "Cut taxes very substantially."
           }
         ]
       },
@@ -3358,6 +4774,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶176.2-176.3",
             "quote": "That's why, to keep our family safe, the Republican platform promises to launch the largest deportation operation in the history of our country. Even larger than that of President Dwight D. Eisenhower, from many years ago."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶17.34-17.35",
+            "quote": "And we have to get 'em out. We have to get 'em out fast."
           }
         ]
       },
@@ -3457,6 +4888,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶127.2",
             "quote": "And if they don't agree with us, we'll put a tariff of approximately 100 to 200 percent on each car and they will be unsellable in the United States."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶229.8-229.9",
+            "quote": "But we're not going to let that. We'll put tariffs on those cars so they can't come into our country."
           }
         ]
       },
@@ -3518,6 +4964,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶64.4",
             "quote": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶146.33-146.35",
+            "quote": "I will get that settled and fast. And I'll get the war with Ukraine and Russia ended. If I'm President-Elect, I'll get it done before even becoming President."
           }
         ]
       },
@@ -3694,6 +5155,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶149.1",
             "quote": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶202.9-202.10",
+            "quote": "I built one of the greatest economies in the history of the world and I'm gonna build it again. It's going to be bigger, better and stronger."
           }
         ]
       },
@@ -4179,13 +5655,59 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "quote": "And we will pursue our manifest destiny into the stars, launching American astronauts to plant the Stars and Stripes on the planet Mars."
           }
         ]
+      },
+      {
+        "id": "trump-2024-tariffs-general",
+        "theme": "trade",
+        "restatement": "Impose substantial tariffs on other countries so they pay the US back.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶17.4-17.6",
+            "quote": "We're doing tariffs on other countries. Other countries are going to finally, after 75 years, pay us back for all that we've done for the world. And the tariff will be substantial in some cases."
+          }
+        ]
+      },
+      {
+        "id": "trump-2024-replace-obamacare",
+        "theme": "health",
+        "restatement": "Replace Obamacare with a plan that is cheaper and better if a superior one is developed.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶215.28-215.29",
+            "quote": "And what we will do is we're looking at different plans. If we can come up with a plan that's going to cost our people, our population, less money and be better health care than Obamacare, then I would absolutely do it."
+          }
+        ]
       }
     ]
   }
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 166;
+export const CORPUS_PROMISE_COUNT = 195;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 181;
+export const CORPUS_OCCURRENCE_COUNT = 267;

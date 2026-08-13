@@ -27,12 +27,24 @@
 
 promises:
   - id: obama-2012-manufacturing-jobs
-    ref: "¶25.2"
     theme: economy
-    quote: >
-      We can help big factories and small businesses double their exports, and
-      if we choose this path, we can create a million new manufacturing jobs in
-      the next 4 years.
+    sources:
+      - in: acceptance
+        ref: "¶25.2"
+        quote: >
+          We can help big factories and small businesses double
+          their exports, and if we choose this path, we can create a
+          million new manufacturing jobs in the next 4 years.
+      - in: debate
+        ref: "¶135.2"
+        quote: >
+          And that's what my plan does: making sure that we're
+          bringing manufacturing back to our shores so that we're
+          creating jobs here, as we've done with the auto industry,
+          not rewarding companies that are shipping jobs overseas;
+          making sure that we've got the best education system in
+          the world, including retraining our workers for the jobs
+          of tomorrow.
     restatement: Create a million new manufacturing jobs over the next four years.
     metric:
       present: true
@@ -55,11 +67,21 @@ promises:
       "double exports" half is a second, separately-trackable target.
 
   - id: obama-2012-oil-imports-half
-    ref: "¶28.2"
     theme: energy
-    quote: >
-      If you choose this path, we can cut our oil imports in half by 2020 and
-      support more than 600,000 new jobs in natural gas alone.
+    sources:
+      - in: acceptance
+        ref: "¶28.2"
+        quote: >
+          If you choose this path, we can cut our oil imports in
+          half by 2020 and support more than 600,000 new jobs in
+          natural gas alone.
+      - in: debate
+        ref: "¶136.2"
+        quote: >
+          We've cut our oil imports to the lowest level in two
+          decades because we've developed oil and natural gas, but
+          we also have to develop clean energy technologies that
+          will allow us to cut our exports in half by 2020.
     restatement: Cut US oil imports in half by 2020; support 600,000+ natural-gas jobs.
     metric:
       present: true
@@ -82,11 +104,19 @@ promises:
       pick decides whether it was met. A natural companion to the 2008 entry.
 
   - id: obama-2012-teachers-100k
-    ref: "¶34.2"
     theme: education
-    quote: >
-      Help me recruit 100,000 math and science teachers within 10 years and
-      improve early childhood education.
+    sources:
+      - in: acceptance
+        ref: "¶34.2"
+        quote: >
+          Help me recruit 100,000 math and science teachers within
+          10 years and improve early childhood education.
+      - in: debate
+        ref: "¶150.5"
+        quote: >
+          And what I now want to do is to hire more teachers,
+          especially in math and science, because we know that we've
+          fallen behind when it comes to math and science.
     restatement: Recruit 100,000 math and science teachers within ten years.
     metric:
       present: true
@@ -164,11 +194,20 @@ promises:
       an outcome set by thousands of institutions.
 
   - id: obama-2012-afghanistan-end
-    ref: "¶35.6"
     theme: foreign-policy
-    quote: >
-      We've blunted the Taliban's momentum in Afghanistan, and in 2014, our
-      longest war will be over.
+    sources:
+      - in: acceptance
+        ref: "¶35.6"
+        quote: >
+          We've blunted the Taliban's momentum in Afghanistan, and
+          in 2014, our longest war will be over.
+      - in: debate
+        ref: "¶291.4"
+        quote: >
+          We then started to build up Afghan forces, and we're now
+          in a position where we can transition out, because there's
+          no reason why Americans should die when Afghans are
+          perfectly capable of defending their own country.
     restatement: End the war in Afghanistan by 2014.
     metric:
       present: true
@@ -191,10 +230,21 @@ promises:
       entirely on how you define the endpoint.
 
   - id: obama-2012-deficit-4t
-    ref: "¶43.2"
     theme: fiscal
-    quote: >
-      Independent experts say that my plan would cut our deficit by $4 trillion.
+    sources:
+      - in: acceptance
+        ref: "¶43.2"
+        quote: >
+          Independent experts say that my plan would cut our deficit
+          by $4 trillion.
+      - in: debate
+        ref: "¶379.2"
+        quote: >
+          Yes, I want to reduce our deficit by cutting spending that
+          we don't need, but also by asking the wealthy to do a
+          little bit more so that we can invest in things like
+          research and technology that are the key to a 21st-century
+          economy.
     restatement: Cut the deficit by $4 trillion under his budget plan.
     metric:
       present: true
@@ -361,12 +411,25 @@ promises:
       "responsible steps" are left blank, so only the negative half is testable.
 
   - id: obama-2012-war-savings-infrastructure
-    ref: "¶42.1"
     theme: fiscal
-    quote: >
-      I will use the money we're no longer spending on war to pay down our debt
-      and put more people back to work rebuilding roads and bridges and schools
-      and runways.
+    sources:
+      - in: acceptance
+        ref: "¶42.1"
+        quote: >
+          I will use the money we're no longer spending on war to
+          pay down our debt and put more people back to work
+          rebuilding roads and bridges and schools and runways.
+      - in: debate
+        ref: "¶293.2"
+        quote: >
+          And what we can now do is free up some resources to, for
+          example, put Americans back to work—especially our
+          veterans—rebuilding our roads, our bridges, our schools;
+          making sure that our veterans are getting the care that
+          they need when it comes to posttraumatic stress disorder
+          and traumatic brain injury; making sure that the
+          certifications that they need for good jobs of the future
+          are in place.
     restatement: Redirect war savings to debt reduction and infrastructure jobs.
     metric:
       present: true
@@ -515,3 +578,22 @@ promises:
       high-skilled graduates) framed aspirationally — "find a better way" names
       no policy, number, deadline, or instrument. Measurable at most as a yes/no
       on whether reform was enacted, the widest possible boundary.
+
+  - id: obama-2012-iran-no-nuke
+    theme: foreign-policy
+    restatement: Prevent Iran from obtaining a nuclear weapon while he is President.
+    sources:
+      - in: debate
+        ref: "¶216.1"
+        quote: >
+          But to the issue of Iran, as long as I'm President of the
+          United States, Iran will not get a nuclear weapon.
+    metric:     { present: true, stated: whether Iran obtains a nuclear weapon (binary) }
+    threshold:  { present: true, stated: zero — Iran does not get one }
+    deadline:   { present: true, stated: for the duration of his presidency }
+    instrument: { present: true, stated: sanctions, diplomacy, and all options on the table }
+    measurable: "full"
+    notes: >
+      Binary outcome, bounded to his term, with a named instrument. The
+      endpoint is checkable, though it is a prevention rather than a
+      numeric target.

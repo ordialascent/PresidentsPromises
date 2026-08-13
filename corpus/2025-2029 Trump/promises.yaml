@@ -150,10 +150,16 @@ promises:
       against the goal.
 
   - id: trump-2024-taxes-cut
-    ref: "¶121.3"
     theme: taxes
-    quote: >
-      And we will also reduce your taxes still further.
+    sources:
+      - in: acceptance
+        ref: "¶121.3"
+        quote: >
+          And we will also reduce your taxes still further.
+      - in: debate
+        ref: "¶21.11"
+        quote: >
+          Cut taxes very substantially.
     restatement: Cut taxes further beyond the 2017 cuts.
     metric:
       present: true
@@ -255,13 +261,20 @@ promises:
       which carries no deadline.
 
   - id: trump-2024-deportation
-    ref: "¶176.2-176.3"
     theme: immigration
-    quote: >
-      That's why, to keep our family safe, the Republican platform promises to
-      launch the largest deportation operation in the history of our country.
-      Even larger than that of President Dwight D. Eisenhower, from many years
-      ago.
+    sources:
+      - in: acceptance
+        ref: "¶176.2-176.3"
+        quote: >
+          That's why, to keep our family safe, the Republican
+          platform promises to launch the largest deportation
+          operation in the history of our country. Even larger than
+          that of President Dwight D. Eisenhower, from many years
+          ago.
+      - in: debate
+        ref: "¶17.34-17.35"
+        quote: >
+          And we have to get 'em out. We have to get 'em out fast.
     restatement: Launch the largest deportation operation in US history.
     metric:
       present: true
@@ -353,12 +366,19 @@ promises:
       creation is an outcome he can't fully attribute to the policy.
 
   - id: trump-2024-car-tariff
-    ref: "¶127.2"
     theme: trade
-    quote: >
-      And if they don't agree with us, we'll put a tariff of approximately 100
-      to 200 percent on each car and they will be unsellable in the United
-      States.
+    sources:
+      - in: acceptance
+        ref: "¶127.2"
+        quote: >
+          And if they don't agree with us, we'll put a tariff of
+          approximately 100 to 200 percent on each car and they will
+          be unsellable in the United States.
+      - in: debate
+        ref: "¶229.8-229.9"
+        quote: >
+          But we're not going to let that. We'll put tariffs on
+          those cars so they can't come into our country.
     restatement: Impose a 100-200% tariff on cars built abroad (esp. China-in-Mexico plants).
     metric:
       present: true
@@ -420,6 +440,12 @@ promises:
           Our power will stop all wars and bring a new spirit of
           unity to a world that has been angry, violent, and totally
           unpredictable.
+      - in: debate
+        ref: "¶146.33-146.35"
+        quote: >
+          I will get that settled and fast. And I'll get the war
+          with Ukraine and Russia ended. If I'm President-Elect,
+          I'll get it done before even becoming President.
     restatement: End every international crisis, including the Russia-Ukraine war.
     metric:
       present: true
@@ -610,12 +636,21 @@ promises:
       already legally obligated — the accounting boundary is the dispute.
 
   - id: trump-2024-incomes-prosper
-    ref: "¶149.1"
     theme: economy
-    quote: >
-      Under my plan, incomes will skyrocket, inflation will vanish completely,
-      jobs will come roaring back, and the middle class will prosper like never,
-      ever before and we're going to do it very rapidly.
+    sources:
+      - in: acceptance
+        ref: "¶149.1"
+        quote: >
+          Under my plan, incomes will skyrocket, inflation will
+          vanish completely, jobs will come roaring back, and the
+          middle class will prosper like never, ever before and
+          we're going to do it very rapidly.
+      - in: debate
+        ref: "¶202.9-202.10"
+        quote: >
+          I built one of the greatest economies in the history of
+          the world and I'm gonna build it again. It's going to be
+          bigger, better and stronger.
     restatement: Incomes skyrocket, inflation vanishes completely, jobs return, middle class prospers.
     metric:
       present: true
@@ -1263,3 +1298,44 @@ promises:
       threshold and a named instrument, but no deadline — and the timeline for
       such a mission far exceeds a single term, so "when" is exactly what the
       promise leaves open.
+
+  - id: trump-2024-tariffs-general
+    theme: trade
+    restatement: Impose substantial tariffs on other countries so they pay the US back.
+    sources:
+      - in: debate
+        ref: "¶17.4-17.6"
+        quote: >
+          We're doing tariffs on other countries. Other countries
+          are going to finally, after 75 years, pay us back for all
+          that we've done for the world. And the tariff will be
+          substantial in some cases.
+    metric:     { present: true, stated: tariff revenue collected }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: tariffs on imports from other countries }
+    measurable: "partial"
+    notes: >
+      Names a clear instrument (tariffs) and points at revenue, but the
+      level is only "substantial" and no date is attached.
+
+  - id: trump-2024-replace-obamacare
+    theme: health
+    restatement: Replace Obamacare with a plan that is cheaper and better if a superior one is developed.
+    sources:
+      - in: debate
+        ref: "¶215.28-215.29"
+        quote: >
+          And what we will do is we're looking at different plans.
+          If we can come up with a plan that's going to cost our
+          people, our population, less money and be better health
+          care than Obamacare, then I would absolutely do it.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: false }
+    measurable: "no"
+    notes: >
+      A conditional commitment ("concepts of a plan") with no named
+      instrument, cost target, or date — the whole thing is contingent
+      on finding a better plan.
