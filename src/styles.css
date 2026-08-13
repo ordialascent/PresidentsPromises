@@ -1,27 +1,32 @@
 :root {
-  --bg: #0c1116;
-  --panel: #131b23;
-  --ink: #e6edf3;
-  --dim: #7d94a8;
-  --border: #22303c;
+  /* Parchment-and-ink theme: the page is the paper of the founding documents,
+     the type is iron-gall ink. The layout and typography stay modern. */
+  --bg: #ece1c8;
+  --panel: #f4ecd8;
+  --ink: #2b2117;
+  --dim: #7a6a4f;
+  --border: #d8c8a4;
   --met: #2fbf71;
   --missed: #e5484d;
   --decoupled: #c084fc;
-  --series: #38bec9;
+  --series: #123c6b;
   --target: #f0a202;
-  /* measurability tiers, in official U.S. flag colours (Old Glory Red /
-     Old Glory Blue / White). A quality axis applied identically to every
-     president — NOT kept/broken, NOT a party coding. `-line` variants are
-     lightened only so connectors/edges stay visible on the dark theme. */
-  --q-full: #b31942;
-  --q-partial: #ffffff;
-  --q-no: #0a3161;
-  --q-full-line: #e05c7e;
-  --q-partial-line: #ffffff;
-  --q-no-line: #6f8fc0;
+  /* Measurability tiers as a single-hue ladder in Old Glory Blue: full is the
+     full navy, partial is that navy mixed 50/50 with white, none is white. A
+     quality axis applied identically to every president — NOT kept/broken, NOT
+     a party coding. `-line`/`-ink` variants keep connectors and on-fill numbers
+     legible against the parchment. */
+  --q-full: #0a3161;
+  --q-partial: #8598b0;
+  --q-no: #ffffff;
+  --q-full-line: #0a3161;
+  --q-partial-line: #6f86a0;
+  --q-no-line: #9aa7b6;
   --q-full-ink: #ffffff;
-  --q-partial-ink: #0c1116;
-  --q-no-ink: #ffffff;
+  --q-partial-ink: #10243c;
+  --q-no-ink: #2b2117;
+  /* Topics are a single accent (Old Glory Red); selection turns a slice white. */
+  --topic: #b31942;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -33,10 +38,21 @@
 html,
 body {
   margin: 0;
-  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+/* a faint aged-paper wash: lighter at the top, warmer/darker toward the foot */
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bg) 84%, #ffffff) 0%,
+      var(--bg) 42%,
+      color-mix(in srgb, var(--bg) 90%, #4b3a1f) 100%
+    )
+    fixed;
 }
 
 .page {
@@ -328,7 +344,7 @@ main {
   height: 12px;
   border-radius: 3px;
   display: inline-block;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(43, 33, 23, 0.28);
 }
 .pc-swatch[data-q="full"] { background: var(--q-full); }
 .pc-swatch[data-q="partial"] { background: var(--q-partial); }
@@ -374,9 +390,9 @@ main {
 
 .pc-seg {
   cursor: pointer;
-  /* hairline edge so dark navy reads against the dark panel, and every block
-     is delineated from its neighbour regardless of fill */
-  stroke: rgba(255, 255, 255, 0.28);
+  /* hairline ink edge so the white (none) block reads against the parchment
+     panel, and every block is delineated from its neighbour regardless of fill */
+  stroke: rgba(43, 33, 23, 0.22);
   stroke-width: 1;
   transition: opacity 120ms ease;
 }
@@ -576,15 +592,19 @@ main {
 }
 .tp-slice {
   cursor: pointer;
+  fill: var(--topic);
   stroke: var(--panel);
   stroke-width: 1.5;
   transition: opacity 120ms ease, fill 120ms ease;
 }
-/* flag palette, alternating red / blue, going white on hover or selection */
-.tp-slice[data-parity="0"] { fill: var(--q-full); }
-.tp-slice[data-parity="1"] { fill: var(--q-no); }
+/* one accent for every slice; the hovered/selected one turns white (with an ink
+   edge so it reads on the parchment), the rest fade back */
 .tp-slice[data-dim="true"] { opacity: 0.32; }
-.tp-slice[data-active="true"] { fill: var(--q-partial); opacity: 1; }
+.tp-slice[data-active="true"] {
+  fill: #ffffff;
+  stroke: var(--ink);
+  opacity: 1;
+}
 
 .tp-center-n {
   fill: var(--ink);
