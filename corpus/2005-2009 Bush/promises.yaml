@@ -136,12 +136,19 @@ promises:
       tax-reform bill pass?", a yes/no, not a tracked quantity.
 
   - id: bush-2004-tax-relief-permanent
-    ref: "¶17.4"
     theme: taxes
-    quote: >
-      To create jobs, my plan will encourage investment and expansion by
-      restraining Federal spending, reducing regulation, and making the tax
-      relief permanent.
+    sources:
+      - in: acceptance
+        ref: "¶17.4"
+        quote: >
+          To create jobs, my plan will encourage investment and
+          expansion by restraining Federal spending, reducing
+          regulation, and making the tax relief permanent.
+      - in: debate
+        ref: "¶145.4"
+        quote: >
+          It's to make sure we have fiscal sanity and keep taxes
+          low.
     restatement: Restrain spending, cut regulation, and make the tax cuts permanent.
     metric:
       present: false
@@ -217,12 +224,22 @@ promises:
       disputed boundary is what qualifies as the promised pooling authority.
 
   - id: bush-2004-hsa-taxcredit
-    ref: "¶22.1"
     theme: health
-    quote: >
-      We will offer a tax credit to encourage small businesses and their
-      employees to set up health savings accounts and provide direct help for
-      low-income Americans to purchase them.
+    sources:
+      - in: acceptance
+        ref: "¶22.1"
+        quote: >
+          We will offer a tax credit to encourage small businesses
+          and their employees to set up health savings accounts and
+          provide direct help for low-income Americans to purchase
+          them.
+      - in: debate
+        ref: "¶95.6-95.7"
+        quote: >
+          It's one of the reasons I'm a strong believer in what they
+          call health savings accounts. These are accounts that
+          allow somebody to buy a low-premium, high-deductible
+          catastrophic plan and couple it with tax-free savings.
     restatement: Create a tax credit to spread health savings accounts, with help for low-income buyers.
     metric:
       present: true
@@ -243,11 +260,18 @@ promises:
       no deadline — "encourage" sets no level the promise can be held to.
 
   - id: bush-2004-medical-liability
-    ref: "¶23.2"
     theme: health
-    quote: >
-      To make health care more affordable and accessible, we must pass medical
-      liability reform now.
+    sources:
+      - in: acceptance
+        ref: "¶23.2"
+        quote: >
+          To make health care more affordable and accessible, we
+          must pass medical liability reform now.
+      - in: debate
+        ref: "¶96.2"
+        quote: >
+          That's why I'm such a strong believer in medical liability
+          reform.
     restatement: Pass medical liability (malpractice) reform.
     metric:
       present: false
@@ -323,12 +347,23 @@ promises:
       how many) is left entirely open.
 
   - id: bush-2004-ss-personal-accounts
-    ref: "¶27.4"
     theme: social-security
-    quote: >
-      We must strengthen Social Security by allowing younger workers to save
-      some of their taxes in a personal account, a nest egg you can call your own
-      and Government can never take away.
+    sources:
+      - in: acceptance
+        ref: "¶27.4"
+        quote: >
+          We must strengthen Social Security by allowing younger
+          workers to save some of their taxes in a personal account,
+          a nest egg you can call your own and Government can never
+          take away.
+      - in: debate
+        ref: "¶131.1"
+        quote: >
+          I believe that younger workers ought to be allowed to take
+          some of their own money and put it in a personal savings
+          account, because I understand that they need to get better
+          rates of return than the rates of return being given in
+          the current Social Security trust.
     restatement: Let younger workers divert some payroll taxes into personal Social Security accounts.
     metric:
       present: false
@@ -377,12 +412,24 @@ promises:
       no baseline, so the threshold is too soft to pin, holding it at partial.
 
   - id: bush-2004-pell-grants
-    ref: "¶31.6"
     theme: education
-    quote: >
-      By raising performance in our high schools and expanding Pell grants for
-      low- and middle-income families, we will help more Americans start their
-      career with a college diploma.
+    sources:
+      - in: acceptance
+        ref: "¶31.6"
+        quote: >
+          By raising performance in our high schools and expanding
+          Pell grants for low- and middle-income families, we will
+          help more Americans start their career with a college
+          diploma.
+      - in: debate
+        ref: "¶52.3"
+        quote: >
+          You got—4 more years, I've got more to do to continue to
+          raise standards, to continue to reward teachers and school
+          districts that are working, to emphasize math and science
+          in the classrooms, to continue to expand Pell grants, to
+          make sure that people have an opportunity to start their
+          career with a college diploma.
     restatement: Expand Pell grants to raise college completion.
     metric:
       present: true
@@ -455,11 +502,19 @@ promises:
       deadline.
 
   - id: bush-2004-strict-judges
-    ref: "¶38.4"
     theme: judiciary
-    quote: >
-      I will continue to appoint Federal judges who know the difference between
-      personal opinion and the strict interpretation of the law.
+    sources:
+      - in: acceptance
+        ref: "¶38.4"
+        quote: >
+          I will continue to appoint Federal judges who know the
+          difference between personal opinion and the strict
+          interpretation of the law.
+      - in: debate
+        ref: "¶174.2"
+        quote: >
+          I will pick judges who will interpret the Constitution,
+          but I'll have no litmus test.
     restatement: Keep appointing strict-constructionist federal judges.
     metric:
       present: false
@@ -556,6 +611,11 @@ promises:
           serve the needs of our time. To give every American a stake in the
           promise and future of our country, we will bring the highest standards
           to our schools and build an ownership society.
+      - in: debate
+        ref: "¶221.2"
+        quote: >
+          I think—I believe part of a hopeful society is one in
+          which somebody owns something.
     metric:
       present: false
       quantity: "\"an ownership society\" and \"highest standards\" have no single agreed measure"
@@ -588,6 +648,11 @@ promises:
         quote: >
           We have known divisions, which must be healed to move forward in great
           purposes, and I will strive in good faith to heal them.
+      - in: debate
+        ref: "¶241.1"
+        quote: >
+          I'll continue in the 4 years to continue to try to work to
+          do so.
     metric:
       present: false
       quantity: none ("divisions" has no agreed measure)
@@ -607,3 +672,165 @@ promises:
       counterpart to Obama's "restore our moral standing"): no quantity, no
       threshold, no deadline, and "strive in good faith" names effort rather than
       a controllable instrument.
+
+  - id: bush-2004-deficit-half
+    theme: fiscal
+    restatement: Cut the federal budget deficit in half within five years.
+    sources:
+      - in: debate
+        ref: "¶46.2-46.3"
+        quote: >
+          I sent up my budget man to the Congress, and he says,
+          "Here's how we're going to reduce the deficit in half by 5
+          years." It requires pro-growth policies that grow our
+          economy and fiscal sanity in the Halls of Congress.
+    metric:     { present: true, stated: the federal budget deficit }
+    threshold:  { present: true, stated: reduced by half }
+    deadline:   { present: true, stated: within five years }
+    instrument: { present: true, stated: pro-growth policies plus spending restraint }
+    measurable: "full"
+    notes: >
+      Metric, threshold, deadline and instrument are all present. Still
+      disputable on baseline (which projected deficit) and on how the
+      endpoint is dated.
+
+  - id: bush-2004-iraqi-troops
+    theme: foreign-policy
+    restatement: Have 125,000 Iraqi security forces trained by the end of 2004.
+    sources:
+      - in: debate
+        ref: "¶195.1-195.2"
+        quote: >
+          The best way to take the pressure off our troops is to
+          succeed in Iraq, is to train Iraqis so they can do the
+          hard work of democracy, is to give them a chance to defend
+          their country, which is precisely what we're doing. We'll
+          have 125,000 troops trained by the end of this year.
+    metric:     { present: true, stated: Iraqi security forces trained }
+    threshold:  { present: true, stated: 125,000 }
+    deadline:   { present: true, stated: by the end of 2004 }
+    instrument: { present: true, stated: US-led training mission }
+    measurable: "full"
+    notes: >
+      A rare fully specified debate promise: number, deadline and
+      instrument all stated. Verification turns on what counts as
+      'trained'.
+
+  - id: bush-2004-marriage-amendment
+    theme: marriage
+    restatement: Amend the US Constitution to define marriage as between a man and a woman.
+    sources:
+      - in: debate
+        ref: "¶76.1-76.3"
+        quote: >
+          I proposed a constitutional amendment. The reason I did so
+          was because I was worried that activist judges are
+          actually defining the definition of marriage. And the
+          surest way to protect marriage between a man and woman is
+          to amend the Constitution.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: a constitutional amendment }
+    measurable: "partial"
+    notes: >
+      Instrument is explicit; ratification is outside a president's
+      control and unbounded in time.
+
+  - id: bush-2004-temp-worker
+    theme: immigration
+    restatement: Create a temporary-worker card matching willing foreign workers with willing employers when no American will take the job.
+    sources:
+      - in: debate
+        ref: "¶150.1"
+        quote: >
+          And so, in order to take pressure off the border, in order
+          to make the borders more secure, I believe there ought to
+          be a temporary-worker card that allows a willing worker
+          and a willing employer to mate up—so long as there's not
+          an American willing to do the job—to join up in order to
+          be able to fulfill the employer's needs.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: a temporary-worker card program }
+    measurable: "partial"
+    notes: >
+      Named program, explicitly not amnesty; no numeric cap or date.
+
+  - id: bush-2004-border-security
+    theme: immigration
+    restatement: Keep increasing Border Patrol manpower and equipment, including unmanned aircraft, over the next four years.
+    sources:
+      - in: debate
+        ref: "¶148.3-148.6"
+        quote: >
+          We're increasing the border security of the United States.
+          We've got 1,000 more Border Patrol agents on the southern
+          border. We're using new equipment. We're using unmanned
+          vehicles to spot people coming across, and we'll continue
+          to do so over the next 4 years.
+    metric:     { present: true, stated: Border Patrol agents and equipment }
+    threshold:  { present: false }
+    deadline:   { present: true, stated: over the next four years }
+    instrument: { present: true, stated: more agents, new equipment, unmanned vehicles }
+    measurable: "partial"
+    notes: >
+      Direction and instruments are stated (he cites 1,000 more agents
+      already) but the future commitment sets no target level.
+
+  - id: bush-2004-health-it
+    theme: health
+    restatement: Push adoption of electronic medical records to cut errors and costs.
+    sources:
+      - in: debate
+        ref: "¶97.6"
+        quote: >
+          We want there to be electronic medical records to cut down
+          on error as well as to reduce costs.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: electronic medical records }
+    measurable: "partial"
+    notes: >
+      He cites a 20% cost saving others project, but the promise itself
+      sets no target he owns.
+
+  - id: bush-2004-education-standards
+    theme: education
+    restatement: Keep insisting on excellence in every classroom by continuing to raise standards and measure results.
+    sources:
+      - in: debate
+        ref: "¶261.2"
+        quote: >
+          Over the next 4 years, we'll continue to insist on
+          excellence in every classroom in America so that our
+          children have a chance to realize the great promise of
+          America.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: true, stated: over the next four years }
+    instrument: { present: true, stated: the raise-standards-and-measure regime (No Child Left Behind) }
+    measurable: "partial"
+    notes: >
+      A continuation commitment with a named instrument but no
+      measurable target.
+
+  - id: bush-2004-gun-prosecution
+    theme: crime
+    restatement: Protect citizens from gun crime chiefly by prosecuting those who commit crimes with guns.
+    sources:
+      - in: debate
+        ref: "¶204.3"
+        quote: >
+          But the best way to protect our citizens from guns is to
+          prosecute those who commit crimes with guns.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: federal prosecution task forces }
+    measurable: "partial"
+    notes: >
+      Instrument named (the task-force approach he cites); no target
+      level.

@@ -20,11 +20,20 @@
 
 promises:
   - id: bush-2000-medicare-drugs
-    ref: "¶42.2"
     theme: health
-    quote: >
-      We will set it on firm financial ground and make prescription drugs
-      available and affordable for every senior who needs them.
+    sources:
+      - in: acceptance
+        ref: "¶42.2"
+        quote: >
+          We will set it on firm financial ground and make
+          prescription drugs available and affordable for every
+          senior who needs them.
+      - in: debate
+        ref: "¶167.6"
+        quote: >
+          It's an agenda that says we're going to reform Medicare to
+          make sure seniors have got prescription drugs and to give
+          seniors different options from which they can choose.
     restatement: Put Medicare on firm financial ground and make prescription drugs available and affordable for every senior.
     metric:
       present: true
@@ -75,11 +84,21 @@ promises:
       the very boundary the personal-accounts pledge below actually contests.
 
   - id: bush-2000-socialsecurity-accounts
-    ref: "¶47.1"
     theme: fiscal
-    quote: >
-      For younger workers, we will give you the option, your choice, to put part
-      of your payroll taxes into sound, responsible investments.
+    sources:
+      - in: acceptance
+        ref: "¶47.1"
+        quote: >
+          For younger workers, we will give you the option, your
+          choice, to put part of your payroll taxes into sound,
+          responsible investments.
+      - in: debate
+        ref: "¶159.24"
+        quote: >
+          And you bet we're gonna take a trillion dollars of your
+          own money and let you invest it under safe guidelines so
+          you get a better rate of return on the money than the
+          paltry 2% that the federal government gets for you today.
     restatement: Let younger workers divert part of their payroll taxes into voluntary personal investment accounts.
     metric:
       present: true
@@ -102,12 +121,19 @@ promises:
       binary verdict, but not a measured trend.)
 
   - id: bush-2000-death-tax
-    ref: "¶58.3"
     theme: taxes
-    quote: >
-      On principle, every family, every farmer and small-business person should
-      be free to pass on their life's work to those they love, so we will abolish
-      the death tax.
+    sources:
+      - in: acceptance
+        ref: "¶58.3"
+        quote: >
+          On principle, every family, every farmer and small-
+          business person should be free to pass on their life's
+          work to those they love, so we will abolish the death tax.
+      - in: debate
+        ref: "¶107.16"
+        quote: >
+          I'm for getting rid of the death tax, completely getting
+          rid of the death tax.
     restatement: Abolish the estate ("death") tax.
     metric:
       present: true
@@ -130,12 +156,18 @@ promises:
       "abolish" versus "temporarily zero out" is the live dispute.
 
   - id: bush-2000-tax-rates-allbrackets
-    ref: "¶59.1"
     theme: taxes
-    quote: >
-      On principle, no one in America should have to pay more than a third of
-      their income to the federal government, so we will reduce tax rates for
-      everyone in every bracket.
+    sources:
+      - in: acceptance
+        ref: "¶59.1"
+        quote: >
+          On principle, no one in America should have to pay more
+          than a third of their income to the federal government, so
+          we will reduce tax rates for everyone in every bracket.
+      - in: debate
+        ref: "¶146.4"
+        quote: >
+          Everybody that pays taxes is going to get tax relief.
     restatement: Cut income-tax rates in every bracket, with no rate exceeding a third of income.
     metric:
       present: true
@@ -211,12 +243,21 @@ promises:
       reading goal ("teach all our children to read") is aspirational.
 
   - id: bush-2000-school-accountability
-    ref: "¶53.2-53.3"
     theme: education
-    quote: >
-      When a school district receives federal funds to teach poor children, we
-      expect them to learn. And if they don't, parents should get the money to
-      make a different choice.
+    sources:
+      - in: acceptance
+        ref: "¶53.2-53.3"
+        quote: >
+          When a school district receives federal funds to teach
+          poor children, we expect them to learn. And if they don't,
+          parents should get the money to make a different choice.
+      - in: debate
+        ref: "¶39.15"
+        quote: >
+          And the consequence is that federal portion or federal
+          money will go to the parent, so the parent can go to a
+          tutoring program or another public school or another
+          private school.
     restatement: Tie federal school funds to results; let parents redirect the money if schools fail.
     metric:
       present: true
@@ -239,12 +280,19 @@ promises:
       hedged ("should"), softening the instrument.
 
   - id: bush-2000-military-means
-    ref: "¶63.1"
     theme: defense
-    quote: >
-      We will give our military the means to keep the peace, and we will give it
-      one thing more: a commander-in-chief who respects our men and women in
-      uniform and a commander-in-chief who earns their respect.
+    sources:
+      - in: acceptance
+        ref: "¶63.1"
+        quote: >
+          We will give our military the means to keep the peace, and
+          we will give it one thing more: a commander-in-chief who
+          respects our men and women in uniform and a commander-in-
+          chief who earns their respect.
+      - in: debate
+        ref: "¶167.9"
+        quote: >
+          I want to have the military keeping the peace.
     restatement: Give the military the resources to keep the peace, plus respectful leadership.
     metric:
       present: false
@@ -320,11 +368,19 @@ promises:
       ground-based interceptors versus a full shield.
 
   - id: bush-2000-health-tax-credits
-    ref: "¶92.1"
     theme: health
-    quote: >
-      We will give low-income Americans tax credits to buy the private health
-      insurance they need and deserve.
+    sources:
+      - in: acceptance
+        ref: "¶92.1"
+        quote: >
+          We will give low-income Americans tax credits to buy the
+          private health insurance they need and deserve.
+      - in: debate
+        ref: "¶30.19"
+        quote: >
+          We need a $2,000 credit, rebate for people, working people
+          that don't have insurance, they can get in the marketplace
+          and start purchasing insurance.
     restatement: Give low-income Americans tax credits to buy private health insurance.
     metric:
       present: true
@@ -374,12 +430,22 @@ promises:
       success measure loose.
 
   - id: bush-2000-charitable-incentives
-    ref: "¶98.2"
     theme: welfare
-    quote: >
-      My administration will give taxpayers new incentives to donate to charity,
-      encourage after-school programs that build character, and support mentoring
-      groups that shape and save young lives.
+    sources:
+      - in: acceptance
+        ref: "¶98.2"
+        quote: >
+          My administration will give taxpayers new incentives to
+          donate to charity, encourage after-school programs that
+          build character, and support mentoring groups that shape
+          and save young lives.
+      - in: debate
+        ref: "¶117.13"
+        quote: >
+          I think that afterschool money ought to be available for
+          faith-based programs and charitable programs that exist
+          because somebody has heard the call to love a neighbor
+          like you would like to be loved yourself.
     restatement: Create new tax incentives for charitable giving and back after-school and mentoring programs.
     metric:
       present: false
@@ -401,11 +467,21 @@ promises:
       is the only cleanly binary element in the bundle.
 
   - id: bush-2000-gun-enforcement
-    ref: "¶102.1"
     theme: crime
-    quote: >
-      We must help protect our children in our schools and streets, and by
-      finally and strictly enforcing our nation's gun laws.
+    sources:
+      - in: acceptance
+        ref: "¶102.1"
+        quote: >
+          We must help protect our children in our schools and
+          streets, and by finally and strictly enforcing our
+          nation's gun laws.
+      - in: debate
+        ref: "¶100.11"
+        quote: >
+          But I also believe strongly that we need to enforce laws
+          on the books that the best way to make sure that we keep
+          our society safe and secure is to hold people accountable
+          for breaking the law.
     restatement: Protect children by strictly enforcing existing gun laws.
     metric:
       present: true
@@ -455,10 +531,20 @@ promises:
       just the timing, is out of his hands.
 
   - id: bush-2000-tone-of-washington
-    ref: "¶77.5"
     theme: governance
-    quote: >
-      I want to change the tone of Washington to one of civility and respect.
+    sources:
+      - in: acceptance
+        ref: "¶77.5"
+        quote: >
+          I want to change the tone of Washington to one of civility
+          and respect.
+      - in: debate
+        ref: "¶126.5"
+        quote: >
+          And what I think needs to happen in order to encourage the
+          young to become involved is to shoot straight, is to set
+          aside the partisan differences, and set an agenda that
+          will make sense.
     restatement: Change the tone of Washington to civility and respect.
     metric:
       present: false
@@ -603,3 +689,97 @@ promises:
       metaphorical (the Good Samaritan) and carries no quantity, target, deadline,
       or mechanism. Aspirational — kept as the compassion-agenda counterpart to
       the unity pledge above.
+
+  - id: bush-2000-patients-bill-rights
+    theme: health
+    restatement: Enact a national patients' bill of rights guaranteeing emergency-room care, no gag orders, direct OB/GYN access, and the right to sue an HMO.
+    sources:
+      - in: debate
+        ref: "¶18.6-18.7"
+        quote: >
+          If I'm the president, we're going to have emergency room
+          care, we're going have gag orders, we're going to have
+          direct access to OB/GYN. People will be able to take their
+          HMO insurance company to court.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: federal patients' bill of rights }
+    measurable: "partial"
+    notes: >
+      Modeled on the Texas law he cites; names guaranteed benefits and a
+      right of action but no numeric target or date.
+
+  - id: bush-2000-teacher-protection
+    theme: education
+    restatement: Ask Congress to pass a federal teacher-protection act shielding teachers who uphold classroom discipline from lawsuits.
+    sources:
+      - in: debate
+        ref: "¶50.20"
+        quote: >
+          So I'm going to ask the Congress to pass a teacher
+          protection act.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: federal teacher-protection act }
+    measurable: "partial"
+    notes: >
+      A named instrument (an act of Congress) but no measurable
+      threshold.
+
+  - id: bush-2000-fast-track
+    theme: trade
+    restatement: Seek fast-track trade-negotiating authority to open foreign markets to US farm exports.
+    sources:
+      - in: debate
+        ref: "¶107.5"
+        quote: >
+          I want the next president to have fast track negotiating
+          authority to open up markets around the world with the
+          best and the most efficient farmers.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: fast-track negotiating authority }
+    measurable: "partial"
+    notes: >
+      Instrument is specific; the market-opening goal has no quantity or
+      deadline.
+
+  - id: bush-2000-food-embargo
+    theme: trade
+    restatement: Stop using food exports as a diplomatic weapon.
+    sources:
+      - in: debate
+        ref: "¶107.6"
+        quote: >
+          I don't want to use food as a diplomatic weapon from this
+          point forward.
+    metric:     { present: false }
+    threshold:  { present: true, stated: no future food embargoes }
+    deadline:   { present: true, stated: from this point forward }
+    instrument: { present: false }
+    measurable: "partial"
+    notes: >
+      A clear directional commitment (end embargoes) but no metric and
+      no named instrument.
+
+  - id: bush-2000-smallbiz-insurance
+    theme: health
+    restatement: Let small businesses buy health insurance across state lines through pooled association plans.
+    sources:
+      - in: debate
+        ref: "¶30.20"
+        quote: >
+          We need to have -- allow small businesses to write
+          insurance across jurisdictional lines so small business
+          can afford health care, small restaurants can afford
+          health care.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: association health plans across jurisdictional lines }
+    measurable: "partial"
+    notes: >
+      Instrument named; affordability goal is unquantified.

@@ -59,6 +59,7 @@ export function PromisesPage() {
             <ul>
               <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
               <li>Inaugural address from <em>The American Presidency Project</em></li>
+              <li>Final general-election debate from <em>The American Presidency Project</em> (being added term by term)</li>
             </ul>
           </div>
         </footer>

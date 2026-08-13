@@ -48,12 +48,13 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the current extraction (12 / 118 / 36)', () => {
-    // Snapshot anchor — update when the corpus grows. Acceptance + inaugural.
+  it('the corpus-wide tier split matches the current extraction (14 / 129 / 36)', () => {
+    // Snapshot anchor — update when the corpus grows. Acceptance + inaugural +
+    // the two Bush final debates (2000, 2004).
     const c = { full: 0, partial: 0, no: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ full: 12, partial: 118, no: 36 });
-    expect(c.full + c.partial + c.no).toBe(166);
+    expect(c).toEqual({ full: 14, partial: 129, no: 36 });
+    expect(c.full + c.partial + c.no).toBe(179);
   });
 
   it('shares are a proper distribution within each term', () => {

@@ -91,6 +91,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶42.2",
             "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.6",
+            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
           }
         ]
       },
@@ -137,6 +152,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶47.1",
             "quote": "For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶159.24",
+            "quote": "And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today."
           }
         ]
       },
@@ -159,7 +189,22 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶58.3",
-            "quote": "On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
+            "quote": "On principle, every family, every farmer and small- business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶107.16",
+            "quote": "I'm for getting rid of the death tax, completely getting rid of the death tax."
           }
         ]
       },
@@ -183,6 +228,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶59.1",
             "quote": "On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.4",
+            "quote": "Everybody that pays taxes is going to get tax relief."
           }
         ]
       },
@@ -252,6 +312,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶53.2-53.3",
             "quote": "When a school district receives federal funds to teach poor children, we expect them to learn. And if they don't, parents should get the money to make a different choice."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶39.15",
+            "quote": "And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school."
           }
         ]
       },
@@ -274,7 +349,22 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
+            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in- chief who earns their respect."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.9",
+            "quote": "I want to have the military keeping the peace."
           }
         ]
       },
@@ -344,6 +434,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶92.1",
             "quote": "We will give low-income Americans tax credits to buy the private health insurance they need and deserve."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶30.19",
+            "quote": "We need a $2,000 credit, rebate for people, working people that don't have insurance, they can get in the marketplace and start purchasing insurance."
           }
         ]
       },
@@ -390,6 +495,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶98.2",
             "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶117.13",
+            "quote": "I think that afterschool money ought to be available for faith-based programs and charitable programs that exist because somebody has heard the call to love a neighbor like you would like to be loved yourself."
           }
         ]
       },
@@ -413,6 +533,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶102.1",
             "quote": "We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶100.11",
+            "quote": "But I also believe strongly that we need to enforce laws on the books that the best way to make sure that we keep our society safe and secure is to hold people accountable for breaking the law."
           }
         ]
       },
@@ -459,6 +594,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶77.5",
             "quote": "I want to change the tone of Washington to one of civility and respect."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶126.5",
+            "quote": "And what I think needs to happen in order to encourage the young to become involved is to shoot straight, is to set aside the partisan differences, and set an agenda that will make sense."
           }
         ]
       },
@@ -551,6 +701,121 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶20.3",
             "quote": "And I can pledge our Nation to a goal: When we see that wounded traveler on the road to Jericho, we will not pass to the other side."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-patients-bill-rights",
+        "theme": "health",
+        "restatement": "Enact a national patients' bill of rights guaranteeing emergency-room care, no gag orders, direct OB/GYN access, and the right to sue an HMO.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶18.6-18.7",
+            "quote": "If I'm the president, we're going to have emergency room care, we're going have gag orders, we're going to have direct access to OB/GYN. People will be able to take their HMO insurance company to court."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-teacher-protection",
+        "theme": "education",
+        "restatement": "Ask Congress to pass a federal teacher-protection act shielding teachers who uphold classroom discipline from lawsuits.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶50.20",
+            "quote": "So I'm going to ask the Congress to pass a teacher protection act."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-fast-track",
+        "theme": "trade",
+        "restatement": "Seek fast-track trade-negotiating authority to open foreign markets to US farm exports.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶107.5",
+            "quote": "I want the next president to have fast track negotiating authority to open up markets around the world with the best and the most efficient farmers."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-food-embargo",
+        "theme": "trade",
+        "restatement": "Stop using food exports as a diplomatic weapon.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶107.6",
+            "quote": "I don't want to use food as a diplomatic weapon from this point forward."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-smallbiz-insurance",
+        "theme": "health",
+        "restatement": "Let small businesses buy health insurance across state lines through pooled association plans.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶30.20",
+            "quote": "We need to have -- allow small businesses to write insurance across jurisdictional lines so small business can afford health care, small restaurants can afford health care."
           }
         ]
       }
@@ -677,6 +942,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶17.4",
             "quote": "To create jobs, my plan will encourage investment and expansion by restraining Federal spending, reducing regulation, and making the tax relief permanent."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶145.4",
+            "quote": "It's to make sure we have fiscal sanity and keep taxes low."
           }
         ]
       },
@@ -746,6 +1026,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶22.1",
             "quote": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts and provide direct help for low-income Americans to purchase them."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶95.6-95.7",
+            "quote": "It's one of the reasons I'm a strong believer in what they call health savings accounts. These are accounts that allow somebody to buy a low-premium, high-deductible catastrophic plan and couple it with tax-free savings."
           }
         ]
       },
@@ -769,6 +1064,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶23.2",
             "quote": "To make health care more affordable and accessible, we must pass medical liability reform now."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶96.2",
+            "quote": "That's why I'm such a strong believer in medical liability reform."
           }
         ]
       },
@@ -838,6 +1148,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶27.4",
             "quote": "We must strengthen Social Security by allowing younger workers to save some of their taxes in a personal account, a nest egg you can call your own and Government can never take away."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶131.1",
+            "quote": "I believe that younger workers ought to be allowed to take some of their own money and put it in a personal savings account, because I understand that they need to get better rates of return than the rates of return being given in the current Social Security trust."
           }
         ]
       },
@@ -884,6 +1209,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶31.6",
             "quote": "By raising performance in our high schools and expanding Pell grants for low- and middle-income families, we will help more Americans start their career with a college diploma."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma."
           }
         ]
       },
@@ -953,6 +1293,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶38.4",
             "quote": "I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶174.2",
+            "quote": "I will pick judges who will interpret the Constitution, but I'll have no litmus test."
           }
         ]
       },
@@ -1022,6 +1377,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶21.3-21.4",
             "quote": "And now we will extend this vision by reforming great institutions to serve the needs of our time. To give every American a stake in the promise and future of our country, we will bring the highest standards to our schools and build an ownership society."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶221.2",
+            "quote": "I think—I believe part of a hopeful society is one in which somebody owns something."
           }
         ]
       },
@@ -1045,6 +1415,205 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶25.2",
             "quote": "We have known divisions, which must be healed to move forward in great purposes, and I will strive in good faith to heal them."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶241.1",
+            "quote": "I'll continue in the 4 years to continue to try to work to do so."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-deficit-half",
+        "theme": "fiscal",
+        "restatement": "Cut the federal budget deficit in half within five years.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶46.2-46.3",
+            "quote": "I sent up my budget man to the Congress, and he says, \"Here's how we're going to reduce the deficit in half by 5 years.\" It requires pro-growth policies that grow our economy and fiscal sanity in the Halls of Congress."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-iraqi-troops",
+        "theme": "foreign-policy",
+        "restatement": "Have 125,000 Iraqi security forces trained by the end of 2004.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶195.1-195.2",
+            "quote": "The best way to take the pressure off our troops is to succeed in Iraq, is to train Iraqis so they can do the hard work of democracy, is to give them a chance to defend their country, which is precisely what we're doing. We'll have 125,000 troops trained by the end of this year."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-marriage-amendment",
+        "theme": "marriage",
+        "restatement": "Amend the US Constitution to define marriage as between a man and a woman.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶76.1-76.3",
+            "quote": "I proposed a constitutional amendment. The reason I did so was because I was worried that activist judges are actually defining the definition of marriage. And the surest way to protect marriage between a man and woman is to amend the Constitution."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-temp-worker",
+        "theme": "immigration",
+        "restatement": "Create a temporary-worker card matching willing foreign workers with willing employers when no American will take the job.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶150.1",
+            "quote": "And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-border-security",
+        "theme": "immigration",
+        "restatement": "Keep increasing Border Patrol manpower and equipment, including unmanned aircraft, over the next four years.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶148.3-148.6",
+            "quote": "We're increasing the border security of the United States. We've got 1,000 more Border Patrol agents on the southern border. We're using new equipment. We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-health-it",
+        "theme": "health",
+        "restatement": "Push adoption of electronic medical records to cut errors and costs.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶97.6",
+            "quote": "We want there to be electronic medical records to cut down on error as well as to reduce costs."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-education-standards",
+        "theme": "education",
+        "restatement": "Keep insisting on excellence in every classroom by continuing to raise standards and measure results.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶261.2",
+            "quote": "Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America."
+          }
+        ]
+      },
+      {
+        "id": "bush-2004-gun-prosecution",
+        "theme": "crime",
+        "restatement": "Protect citizens from gun crime chiefly by prosecuting those who commit crimes with guns.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶204.3",
+            "quote": "But the best way to protect our citizens from guns is to prosecute those who commit crimes with guns."
           }
         ]
       }
@@ -4185,7 +4754,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 166;
+export const CORPUS_PROMISE_COUNT = 179;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 181;
+export const CORPUS_OCCURRENCE_COUNT = 212;
