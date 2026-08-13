@@ -29,6 +29,10 @@
   --topic: #b31942;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* a period old-style serif for the masthead — Baskerville dates to the 1750s,
+     contemporary with the founding documents; degrades to other transitional
+     serifs, then Times, so no web font is loaded. */
+  --font-title: Baskerville, "Baskerville Old Face", "Libre Baskerville", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 * {
@@ -72,11 +76,11 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(24px, 4.4vw, 38px);
-  line-height: 1.12;
-  letter-spacing: -0.01em;
-  font-weight: 650;
-  max-width: 22ch;
+  font-family: var(--font-title);
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-weight: 600;
 }
 
 .subtitle {
@@ -228,12 +232,11 @@ main {
   margin: 2px 0;
 }
 
-/* footer split into two side-by-side boxes; stacks on narrow screens */
+/* footer split into two columns on the page background; stacks when narrow */
 .colophon-cols {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  align-items: stretch;
+  gap: 16px 40px;
 }
 .colophon-box {
   flex: 1 1 320px;
@@ -241,10 +244,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px 18px;
 }
 
 .veri-table {

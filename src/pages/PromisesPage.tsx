@@ -84,9 +84,7 @@ export function PromisesPage() {
                   </tr>
                 </tbody>
               </table>
-              <p>
-                A <em>partial</em> promise names a measurable quantity but leaves the threshold or the deadline missing or vague. Even a <em>full</em> promise may be debatable.
-              </p>
+              <p>Even a <em>full</em> promise may be debatable.</p>
             </section>
 
             <section className="colophon-box">
