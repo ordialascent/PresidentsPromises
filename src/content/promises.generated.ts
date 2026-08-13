@@ -1648,6 +1648,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶44.1",
             "quote": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶279.1",
+            "quote": "I think that in ten years, we can reduce our dependence so that we no longer have to import oil from the Middle East or Venezuela."
           }
         ]
       },
@@ -1686,6 +1701,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶12.5",
             "quote": "We will harness the sun and the winds and the soil to fuel our cars and run our factories."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶302.1",
+            "quote": "If we can get that right, then we can move in a direction not only of energy independence, but we can create 5 million new jobs all across America, including in the heartland where we can retool some of these plants to make these highly fuel-efficient cars and also to make wind turbines and solar panels, the kinds of clean energy approaches that should be the driver of our economy for the next century."
           }
         ]
       },
@@ -1709,6 +1739,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶43.1",
             "quote": "I will cut taxes – cut taxes – for 95% of all working families."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶45.1",
+            "quote": "What I've said is I want to provide a tax cut for 95 percent of working Americans, 95 percent."
           }
         ]
       },
@@ -1755,6 +1800,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶41.1",
             "quote": "Unlike John McCain, I will stop giving tax breaks to corporations that ship jobs overseas, and I will start giving them to companies that create good jobs right here in America."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶30.2",
+            "quote": "I want to end the tax breaks for companies that are shipping jobs overseas and provide a tax credit for every company that's creating a job right here in America."
           }
         ]
       },
@@ -1793,6 +1853,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶12.4",
             "quote": "We will restore science to its rightful place and wield technology's wonders to raise health care's quality and lower its cost."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶312.2",
+            "quote": "And we estimate we can cut the average family's premium by about $2,500 per year."
           }
         ]
       },
@@ -1831,6 +1906,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶14.4-14.5",
             "quote": "Where the answer is no, programs will end. And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶81.2",
+            "quote": "And I want to go through the federal budget line by line, page by page, programs that don't work, we should cut."
           }
         ]
       },
@@ -1976,6 +2066,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶12.6",
             "quote": "And we will transform our schools and colleges and universities to meet the demands of a new age."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶420.1",
+            "quote": "I think it's going to be critically important for us to recruit a generation of new teachers, an army of new teachers, especially in math and science, give them higher pay, give them more professional development and support in exchange for higher standards and accountability."
           }
         ]
       },
@@ -2093,6 +2198,98 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "quote": "To the people of poor nations, we pledge to work alongside you to make your farms flourish and let clean waters flow, to nourish starved bodies and feed hungry minds."
           }
         ]
+      },
+      {
+        "id": "obama-2008-tuition-credit",
+        "theme": "education",
+        "restatement": "Give every student a $4,000-a-year college tuition credit in exchange for community or military service.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶422.1",
+            "quote": "And that's why I've proposed a $4,000 tuition credit, every student, every year, in exchange for some form of community service, whether it's military service, whether it's Peace Corps, whether it's working in a community."
+          }
+        ]
+      },
+      {
+        "id": "obama-2008-oil-leases",
+        "theme": "energy",
+        "restatement": "Make oil companies drill the 68 million acres they have already leased or lose them.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶282.1",
+            "quote": "Number one, we do need to expand domestic production and that means, for example, telling the oil companies the 68 million acres that they currently have leased that they're not drilling, use them or lose them."
+          }
+        ]
+      },
+      {
+        "id": "obama-2008-auto-fuel-efficiency",
+        "theme": "energy",
+        "restatement": "Give the automakers loan guarantees, conditioned on producing highly fuel-efficient cars.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶300.1",
+            "quote": "That's why I think it's important for us to get loan guarantees to the automakers, but we do have to hold them responsible as well to start producing the highly fuel-efficient cars of the future."
+          }
+        ]
+      },
+      {
+        "id": "obama-2008-charter-schools",
+        "theme": "education",
+        "restatement": "Support charter schools and pay-for-performance for teachers.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶136.1",
+            "quote": "I support charter schools and pay for performance for teachers."
+          }
+        ]
       }
     ]
   },
@@ -2125,6 +2322,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶25.2",
             "quote": "We can help big factories and small businesses double their exports, and if we choose this path, we can create a million new manufacturing jobs in the next 4 years."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶135.2",
+            "quote": "And that's what my plan does: making sure that we're bringing manufacturing back to our shores so that we're creating jobs here, as we've done with the auto industry, not rewarding companies that are shipping jobs overseas; making sure that we've got the best education system in the world, including retraining our workers for the jobs of tomorrow."
           }
         ]
       },
@@ -2148,6 +2360,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶28.2",
             "quote": "If you choose this path, we can cut our oil imports in half by 2020 and support more than 600,000 new jobs in natural gas alone."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶136.2",
+            "quote": "We've cut our oil imports to the lowest level in two decades because we've developed oil and natural gas, but we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020."
           }
         ]
       },
@@ -2171,6 +2398,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶34.2",
             "quote": "Help me recruit 100,000 math and science teachers within 10 years and improve early childhood education."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶150.5",
+            "quote": "And what I now want to do is to hire more teachers, especially in math and science, because we know that we've fallen behind when it comes to math and science."
           }
         ]
       },
@@ -2240,6 +2482,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶35.6",
             "quote": "We've blunted the Taliban's momentum in Afghanistan, and in 2014, our longest war will be over."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶291.4",
+            "quote": "We then started to build up Afghan forces, and we're now in a position where we can transition out, because there's no reason why Americans should die when Afghans are perfectly capable of defending their own country."
           }
         ]
       },
@@ -2263,6 +2520,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶43.2",
             "quote": "Independent experts say that my plan would cut our deficit by $4 trillion."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶379.2",
+            "quote": "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more so that we can invest in things like research and technology that are the key to a 21st-century economy."
           }
         ]
       },
@@ -2416,6 +2688,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶42.1",
             "quote": "I will use the money we're no longer spending on war to pay down our debt and put more people back to work rebuilding roads and bridges and schools and runways."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶293.2",
+            "quote": "And what we can now do is free up some resources to, for example, put Americans back to work—especially our veterans—rebuilding our roads, our bridges, our schools; making sure that our veterans are getting the care that they need when it comes to posttraumatic stress disorder and traumatic brain injury; making sure that the certifications that they need for good jobs of the future are in place."
           }
         ]
       },
@@ -2508,6 +2795,29 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶24.5",
             "quote": "Our journey is not complete until we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country."
+          }
+        ]
+      },
+      {
+        "id": "obama-2012-iran-no-nuke",
+        "theme": "foreign-policy",
+        "restatement": "Prevent Iran from obtaining a nuclear weapon while he is President.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶216.1",
+            "quote": "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon."
           }
         ]
       }
@@ -4754,7 +5064,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 179;
+export const CORPUS_PROMISE_COUNT = 184;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 212;
+export const CORPUS_OCCURRENCE_COUNT = 230;
