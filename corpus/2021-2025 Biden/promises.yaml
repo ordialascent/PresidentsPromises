@@ -39,6 +39,11 @@ promises:
         quote: >
           We must set aside politics and finally face this pandemic
           as one Nation.
+      - in: debate
+        ref: "¶42.1"
+        quote: >
+          What I would say is I'm going to shut down the virus, not
+          the country.
     restatement: Get control of the COVID-19 virus as the first priority in office.
     metric:
       present: true
@@ -60,11 +65,18 @@ promises:
       promise pins neither a level nor a deadline to it.
 
   - id: biden-2020-covid-strategy
-    ref: "¶78.1"
     theme: health
-    quote: >
-      If I'm president on day one we'll implement the national strategy I've
-      been laying out since March.
+    sources:
+      - in: acceptance
+        ref: "¶78.1"
+        quote: >
+          If I'm president on day one we'll implement the national
+          strategy I've been laying out since March.
+      - in: debate
+        ref: "¶7.16"
+        quote: >
+          And so folks, I will take care of this, I will end this, I
+          will make sure we have a plan.
     restatement: Implement a national COVID-19 strategy on the first day in office.
     metric:
       present: false
@@ -86,10 +98,18 @@ promises:
       national strategy stood up?", with no target the strategy must hit.
 
   - id: biden-2020-rapid-tests
-    ref: "¶79.1"
     theme: health
-    quote: >
-      We'll develop and deploy rapid tests with results available immediately.
+    sources:
+      - in: acceptance
+        ref: "¶79.1"
+        quote: >
+          We'll develop and deploy rapid tests with results
+          available immediately.
+      - in: debate
+        ref: "¶7.13"
+        quote: >
+          I would make sure we move in the direction of rapid
+          testing, investing in rapid testing.
     restatement: Develop and deploy rapid COVID tests with immediate results.
     metric:
       present: true
@@ -139,11 +159,20 @@ promises:
       as a vague yes/no about domestic sourcing.
 
   - id: biden-2020-schools-reopen
-    ref: "¶81.1"
     theme: education
-    quote: >
-      We'll make sure our schools have the resources they need to be open, safe,
-      and effective.
+    sources:
+      - in: acceptance
+        ref: "¶81.1"
+        quote: >
+          We'll make sure our schools have the resources they need
+          to be open, safe, and effective.
+      - in: debate
+        ref: "¶7.14"
+        quote: >
+          I would make sure that we set up national standards as to
+          how to open up schools and open up businesses so they can
+          be safe, and give them the wherewithal and financial
+          resources to be able to do that.
     restatement: Give schools the resources to reopen safely and effectively.
     metric:
       present: false
@@ -165,11 +194,19 @@ promises:
       with a concrete action underneath.
 
   - id: biden-2020-experts-transparency
-    ref: "¶82.1"
     theme: health
-    quote: >
-      We'll put the politics aside and take the muzzle off our experts so the
-      public gets the information they need and deserve.
+    sources:
+      - in: acceptance
+        ref: "¶82.1"
+        quote: >
+          We'll put the politics aside and take the muzzle off our
+          experts so the public gets the information they need and
+          deserve.
+      - in: debate
+        ref: "¶15.1-15.2"
+        quote: >
+          Make sure it's totally transparent. Have the scientific
+          world see, know, look at it, go through all the processes.
     restatement: Let public-health experts speak freely so the public gets unvarnished information.
     metric:
       present: false
@@ -192,11 +229,18 @@ promises:
       a vague yes/no about whether experts were allowed to speak.
 
   - id: biden-2020-mask-mandate
-    ref: "¶83.1"
     theme: health
-    quote: >
-      We'll have a national mandate to wear a mask-not as a burden, but to
-      protect each other.
+    sources:
+      - in: acceptance
+        ref: "¶83.1"
+        quote: >
+          We'll have a national mandate to wear a mask-not as a
+          burden, but to protect each other.
+      - in: debate
+        ref: "¶7.12"
+        quote: >
+          What I would do is make sure we have everyone encouraged
+          to wear a mask, all the time.
     restatement: Institute a national mask mandate.
     metric:
       present: false
@@ -248,11 +292,21 @@ promises:
       control or cleanly attribute.
 
   - id: biden-2020-health-premiums
-    ref: "¶108.1"
     theme: health
-    quote: >
-      With a health care system that lowers premiums, deductibles, and drug
-      prices by building on the Affordable Care Act he's trying to rip away.
+    sources:
+      - in: acceptance
+        ref: "¶108.1"
+        quote: >
+          With a health care system that lowers premiums,
+          deductibles, and drug prices by building on the Affordable
+          Care Act he's trying to rip away.
+      - in: debate
+        ref: "¶150.4"
+        quote: >
+          Secondly, we're going to make sure we reduce the premiums
+          and reduce drug prices by making sure that there's
+          competition that doesn't exist now by allowing Medicare to
+          negotiate drug prices with the insurance companies.
     restatement: Lower premiums, deductibles, and drug prices by building on the ACA.
     metric:
       present: true
@@ -406,13 +460,21 @@ promises:
       the promise fixes none of the parameters.
 
   - id: biden-2020-clean-energy-jobs
-    ref: "¶111.1-111.3"
     theme: climate
-    quote: >
-      We can, and we will, deal with climate change. It's not only a crisis,
-      it's an enormous opportunity. An opportunity for America to lead the world
-      in clean energy and create millions of new good-paying jobs in the
-      process.
+    sources:
+      - in: acceptance
+        ref: "¶111.1-111.3"
+        quote: >
+          We can, and we will, deal with climate change. It's not
+          only a crisis, it's an enormous opportunity. An
+          opportunity for America to lead the world in clean energy
+          and create millions of new good-paying jobs in the
+          process.
+      - in: debate
+        ref: "¶305.7"
+        quote: >
+          Because what it does, it will create millions of new,
+          good-paying jobs.
     restatement: Address climate change and create millions of clean-energy jobs.
     metric:
       present: true
@@ -487,12 +549,20 @@ promises:
       Congress. Measurable only as a vague "were benefits cut on his watch?"
 
   - id: biden-2020-election-interference
-    ref: "¶129.1-129.2"
     theme: foreign-policy
-    quote: >
-      Under President Biden, America will not turn a blind eye to Russian
-      bounties on the heads of American soldiers. Nor will I put up with foreign
-      interference in our most sacred democratic exercise -- voting.
+    sources:
+      - in: acceptance
+        ref: "¶129.1-129.2"
+        quote: >
+          Under President Biden, America will not turn a blind eye
+          to Russian bounties on the heads of American soldiers. Nor
+          will I put up with foreign interference in our most sacred
+          democratic exercise -- voting.
+      - in: debate
+        ref: "¶70.3"
+        quote: >
+          I made it clear that any country, no matter who it is,
+          that interferes in American elections will pay a price.
     restatement: Confront Russian bounties on US troops and foreign election interference.
     metric:
       present: false
@@ -530,6 +600,11 @@ promises:
         quote: >
           We will repair our alliances and engage with the world once again, not
           to meet yesterday's challenges, but today's and tomorrow's challenges.
+      - in: debate
+        ref: "¶100.15"
+        quote: >
+          We need to be having the rest of our friends with us,
+          saying to China, these are the rules.
     metric:
       present: false
       quantity: "\"repair our alliances\" has no agreed series or measure"
@@ -562,6 +637,12 @@ promises:
           And I pledge this to you: I will be a President for all Americans—all
           Americans. And I promise you, I will fight as hard for those who did
           not support me as for those who did.
+      - in: debate
+        ref: "¶355.1-355.3"
+        quote: >
+          I will say, 'I'm the American president. I represent all
+          of you whether you voted for me or against me. And I'm
+          going to make sure that you're represented.
     metric:
       present: false
       quantity: whether he governs even-handedly (a governance posture, not a quantity)
@@ -611,3 +692,95 @@ promises:
       Constitution / our democracy / America," ¶37.3-37.5, left out as oath, not
       policy). No quantity, no threshold, no date — the zero-of-three end of the
       scale, with an instrument under it.
+
+  - id: biden-2020-minimum-wage
+    theme: labor
+    restatement: Raise the federal minimum wage to $15 an hour.
+    sources:
+      - in: debate
+        ref: "¶206.5"
+        quote: >
+          They deserve a minimum wage of $15.
+    metric:     { present: true, stated: $15-an-hour federal minimum wage }
+    threshold:  { present: true, stated: $15 an hour }
+    deadline:   { present: false }
+    instrument: { present: true, stated: a federal minimum-wage increase }
+    measurable: "partial"
+    notes: >
+      A named dollar level and a named instrument, but no deadline for
+      reaching it.
+
+  - id: biden-2020-citizenship-path
+    theme: immigration
+    restatement: Send Congress a pathway to citizenship for over 11 million undocumented people within his first 100 days.
+    sources:
+      - in: debate
+        ref: "¶226.5"
+        quote: >
+          And the fact is, and I've made it very clear, within 100
+          days, I'm going to send to the United States Congress a
+          pathway to citizenship for over 11 million undocumented
+          people.
+    metric:     { present: true, stated: over 11 million undocumented people }
+    threshold:  { present: true, stated: a pathway to citizenship for all of them }
+    deadline:   { present: true, stated: within his first 100 days }
+    instrument: { present: true, stated: legislation sent to the U.S. Congress }
+    measurable: "full"
+    notes: >
+      All four dimensions are named, though enactment depends on
+      Congress and the 100-day deadline binds only the sending of the
+      bill, not final passage.
+
+  - id: biden-2020-public-option
+    theme: health
+    restatement: Pass a public option on top of the Affordable Care Act (Bidencare).
+    sources:
+      - in: debate
+        ref: "¶150.1"
+        quote: >
+          What I'm going to do is pass Obamacare with a public
+          option -- become Bidencare.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: a public option added to the Affordable Care Act }
+    measurable: "partial"
+    notes: >
+      A named policy instrument with no coverage target or deadline; he
+      separately put its cost at over $750 billion over ten years.
+
+  - id: biden-2020-oil-transition
+    theme: climate
+    restatement: Transition away from the oil industry to renewable energy and end federal oil subsidies.
+    sources:
+      - in: debate
+        ref: "¶333.1-333.2"
+        quote: >
+          I would transition from the oil industry. Yes.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: ending federal oil subsidies and replacing oil with renewables }
+    measurable: "partial"
+    notes: >
+      Names the mechanism — ending subsidies and shifting to renewables
+      — but leaves the pace vague ('over time'), with no phase-out date
+      or volume target for oil itself.
+
+  - id: biden-2020-rejoin-paris
+    theme: climate
+    restatement: Rejoin the Paris Climate Accord and press China to meet its commitments.
+    sources:
+      - in: debate
+        ref: "¶350.1"
+        quote: >
+          No, I'm going to rejoin the Paris Accord and get China to
+          abide by what they agreed to
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: rejoining the Paris Climate Accord }
+    measurable: "partial"
+    notes: >
+      A concrete diplomatic action he controls, but with no metric,
+      threshold, or deadline attached.

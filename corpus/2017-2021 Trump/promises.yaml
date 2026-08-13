@@ -20,12 +20,18 @@
 
 promises:
   - id: trump-2016-border-wall
-    ref: "¶77.1"
     theme: immigration
-    quote: >
-      We are going to build a great border wall to stop illegal immigration,
-      to stop the gangs and the violence, and to stop the drugs from pouring
-      into our communities.
+    sources:
+      - in: acceptance
+        ref: "¶77.1"
+        quote: >
+          We are going to build a great border wall to stop illegal
+          immigration, to stop the gangs and the violence, and to
+          stop the drugs from pouring into our communities.
+      - in: debate
+        ref: "¶72.1-72.2"
+        quote: >
+          Now, I want to build the wall. We need the wall.
     restatement: Build a border wall to stop illegal immigration, gangs, and drugs.
     metric:
       present: true
@@ -129,12 +135,20 @@ promises:
       group's eradication.
 
   - id: trump-2016-largest-tax-reduction
-    ref: "¶95.2"
     theme: taxes
-    quote: >
-      While Hillary Clinton plans a massive -- and I mean massive -- tax
-      increase, I have proposed the largest tax reduction of any candidate who
-      has declared for the presidential race this year – Democrat or Republican.
+    sources:
+      - in: acceptance
+        ref: "¶95.2"
+        quote: >
+          While Hillary Clinton plans a massive -- and I mean
+          massive -- tax increase, I have proposed the largest tax
+          reduction of any candidate who has declared for the
+          presidential race this year – Democrat or Republican.
+      - in: debate
+        ref: "¶204.2-204.3"
+        quote: >
+          We are going to cut taxes massively. We're going to cut
+          business taxes massively.
     restatement: Enact the largest tax reduction proposed by any candidate this cycle.
     metric:
       present: true
@@ -210,10 +224,17 @@ promises:
       cannot be cleanly attributed to lifting restrictions.
 
   - id: trump-2016-repeal-obamacare
-    ref: "¶99.3"
     theme: health
-    quote: >
-      We will repeal and replace disastrous Obamacare.
+    sources:
+      - in: acceptance
+        ref: "¶99.3"
+        quote: >
+          We will repeal and replace disastrous Obamacare.
+      - in: debate
+        ref: "¶488.2"
+        quote: >
+          And one thing we have to do: Repeal and replace the
+          disaster known as Obamacare.
     restatement: Repeal and replace the Affordable Care Act.
     metric:
       present: true
@@ -235,12 +256,23 @@ promises:
       satisfy the second, and harder, half of the promise.
 
   - id: trump-2016-renegotiate-nafta
-    ref: "¶93.3-93.4"
     theme: trade
-    quote: >
-      Our horrible trade agreements with China and many others, will be totally
-      renegotiated. That includes renegotiating NAFTA to get a much better deal
-      for America – and we'll walk away if we don't get the deal that we want.
+    sources:
+      - in: acceptance
+        ref: "¶93.3-93.4"
+        quote: >
+          Our horrible trade agreements with China and many others,
+          will be totally renegotiated. That includes renegotiating
+          NAFTA to get a much better deal for America – and we'll
+          walk away if we don't get the deal that we want.
+      - in: debate
+        ref: "¶203.1-203.3"
+        quote: >
+          I am going to renegotiate NAFTA. And if I can't make a
+          great deal—then we're going to terminate NAFTA and we're
+          going to create new deals. We're going to have trade, but
+          we're going—we're going to terminate it, we're going to
+          make a great trade deal.
     restatement: Totally renegotiate NAFTA and other trade deals, or walk away.
     metric:
       present: true
@@ -302,6 +334,10 @@ promises:
         ref: "¶18.2"
         quote: >
           We will bring back our jobs.
+      - in: debate
+        ref: "¶202.4"
+        quote: >
+          We're bringing our jobs back.
     restatement: Bring jobs back to the industrial states and penalize companies that offshore.
     metric:
       present: true
@@ -323,11 +359,19 @@ promises:
       a specific policy. "Our jobs" and attribution to his actions are disputed.
 
   - id: trump-2016-rebuild-military
-    ref: "¶102.1"
     theme: foreign-policy
-    quote: >
-      We will completely rebuild our depleted military, and the countries that
-      we protect, at a massive loss, will be asked to pay their fair share.
+    sources:
+      - in: acceptance
+        ref: "¶102.1"
+        quote: >
+          We will completely rebuild our depleted military, and the
+          countries that we protect, at a massive loss, will be
+          asked to pay their fair share.
+      - in: debate
+        ref: "¶507.4-507.5"
+        quote: >
+          We have a depleted military. It has to be helped, has to
+          be fixed.
     restatement: Rebuild the military and make protected allies pay their fair share.
     metric:
       present: true
@@ -404,11 +448,22 @@ promises:
       measurable only as "were the lists produced?", not as spending reduced.
 
   - id: trump-2016-supreme-court
-    ref: "¶105.1"
     theme: judiciary
-    quote: >
-      We are also going to appoint justices to the United States Supreme Court
-      who will uphold our laws and our Constitution.
+    sources:
+      - in: acceptance
+        ref: "¶105.1"
+        quote: >
+          We are also going to appoint justices to the United States
+          Supreme Court who will uphold our laws and our
+          Constitution.
+      - in: debate
+        ref: "¶40.1-40.2"
+        quote: >
+          We are going to appoint justices—this is the best way to
+          help the Second Amendment. We are going to appoint
+          justices that will feel very strongly about the Second
+          Amendment, that will not do damage to the Second
+          Amendment.
     restatement: Appoint Supreme Court justices who will uphold the laws and Constitution.
     metric:
       present: true
@@ -430,12 +485,19 @@ promises:
       confirmation is an outcome he shares with the Senate.
 
   - id: trump-2016-restore-law-and-order
-    ref: "¶54.4"
     theme: crime
-    quote: >
-      I have a message to every last person threatening the peace on our streets
-      and the safety of our police: when I take the oath of office next year, I
-      will restore law and order to our country.
+    sources:
+      - in: acceptance
+        ref: "¶54.4"
+        quote: >
+          I have a message to every last person threatening the
+          peace on our streets and the safety of our police: when I
+          take the oath of office next year, I will restore law and
+          order to our country.
+      - in: debate
+        ref: "¶508.2"
+        quote: >
+          We need law and order, but we need justice, too.
     restatement: Restore law and order upon taking office.
     metric:
       present: true
@@ -596,12 +658,19 @@ promises:
       measurable only as a yes/no policy outcome.
 
   - id: trump-2016-student-debt
-    ref: "¶101.1"
     theme: education
-    quote: >
-      We are going to work with all of our students who are drowning in debt to
-      take the pressure off these young people just starting out their adult
-      lives.
+    sources:
+      - in: acceptance
+        ref: "¶101.1"
+        quote: >
+          We are going to work with all of our students who are
+          drowning in debt to take the pressure off these young
+          people just starting out their adult lives.
+      - in: debate
+        ref: "¶195.4-195.5"
+        quote: >
+          And I'm a big proponent. We're going to do a lot of things
+          for college tuition.
     restatement: Ease the burden of student debt on young people starting out.
     metric:
       present: true
@@ -744,6 +813,11 @@ promises:
           We will reinforce old alliances and form new ones and unite the
           civilized world against radical Islamic terrorism, which we will
           eradicate completely from the face of the Earth.
+      - in: debate
+        ref: "¶126.1"
+        quote: >
+          And you see, we are going to stop radical Islamic
+          terrorism in this country.
     metric:
       present: true
       quantity: radical-Islamic-terrorism activity (attacks / active groups)
@@ -765,3 +839,78 @@ promises:
       A to-zero threshold on a real phenomenon, but there is no agreed metric,
       no deadline, and eradicating a global phenomenon "completely" is an
       outcome largely outside his control.
+
+  - id: trump-2016-gdp-growth
+    theme: economy
+    restatement: Grow GDP from 1 percent up to 4 percent, and aim for 5 or 6 percent.
+    sources:
+      - in: debate
+        ref: "¶463.3-463.5"
+        quote: >
+          But we're bringing it from 1 percent up to 4 percent. And
+          I actually think we can go higher than 4 percent. I think
+          you can go to 5 percent or 6 percent.
+    metric:     { present: true, stated: annual GDP growth rate }
+    threshold:  { present: true, stated: up to 4 percent, reaching for 5 or 6 percent }
+    deadline:   { present: false }
+    instrument: { present: false }
+    measurable: "partial"
+    notes: >
+      A named metric with an explicit target level, but no deadline and
+      no instrument named in the claim itself.
+
+  - id: trump-2016-repatriate-offshore
+    theme: taxes
+    restatement: Bring the $2.5 trillion held offshore back into the country.
+    sources:
+      - in: debate
+        ref: "¶204.5"
+        quote: >
+          We're going to bring the $2.5 trillion...
+    metric:     { present: true, stated: dollars of offshore corporate cash repatriated }
+    threshold:  { present: true, stated: $2.5 trillion }
+    deadline:   { present: false }
+    instrument: { present: false }
+    measurable: "partial"
+    notes: >
+      A dollar figure to repatriate, but the mechanism (a tax change)
+      and any date are left unstated.
+
+  - id: trump-2016-deport-criminal-aliens
+    theme: immigration
+    restatement: As one of his first acts, deport the drug lords and bad people and secure the border.
+    sources:
+      - in: debate
+        ref: "¶72.6-72.7"
+        quote: >
+          One of my first acts will be to get all of the drug lords,
+          all of the bad ones—we have some bad, bad people in this
+          country that have to go out. We're going to get them out;
+          we're going to secure the border.
+    metric:     { present: true, stated: criminal aliens and drug lords removed }
+    threshold:  { present: false }
+    deadline:   { present: true, stated: among his first acts in office }
+    instrument: { present: true, stated: deportation and securing the border }
+    measurable: "partial"
+    notes: >
+      A named instrument and an early-term deadline, but the targeted
+      group is vague and no numeric threshold is set.
+
+  - id: trump-2016-expert-trade-negotiators
+    theme: trade
+    restatement: Use the country's greatest businesspeople, not political hacks, to negotiate trade deals.
+    sources:
+      - in: debate
+        ref: "¶464.4-464.6"
+        quote: >
+          Those are the people—these are the greatest negotiators in
+          the world. We have the greatest businesspeople in the
+          world. We have to use them to negotiate our trade deals.
+    metric:     { present: false }
+    threshold:  { present: false }
+    deadline:   { present: false }
+    instrument: { present: true, stated: appoint top businesspeople as trade negotiators }
+    measurable: "partial"
+    notes: >
+      A named instrument for who conducts trade talks, with no metric,
+      threshold, or deadline.

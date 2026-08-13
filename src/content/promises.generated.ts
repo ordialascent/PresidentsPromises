@@ -2852,6 +2852,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶77.1",
             "quote": "We are going to build a great border wall to stop illegal immigration, to stop the gangs and the violence, and to stop the drugs from pouring into our communities."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶72.1-72.2",
+            "quote": "Now, I want to build the wall. We need the wall."
           }
         ]
       },
@@ -2944,6 +2959,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶95.2",
             "quote": "While Hillary Clinton plans a massive -- and I mean massive -- tax increase, I have proposed the largest tax reduction of any candidate who has declared for the presidential race this year – Democrat or Republican."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶204.2-204.3",
+            "quote": "We are going to cut taxes massively. We're going to cut business taxes massively."
           }
         ]
       },
@@ -3013,6 +3043,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶99.3",
             "quote": "We will repeal and replace disastrous Obamacare."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶488.2",
+            "quote": "And one thing we have to do: Repeal and replace the disaster known as Obamacare."
           }
         ]
       },
@@ -3036,6 +3081,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶93.3-93.4",
             "quote": "Our horrible trade agreements with China and many others, will be totally renegotiated. That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶203.1-203.3",
+            "quote": "I am going to renegotiate NAFTA. And if I can't make a great deal—then we're going to terminate NAFTA and we're going to create new deals. We're going to have trade, but we're going—we're going to terminate it, we're going to make a great trade deal."
           }
         ]
       },
@@ -3097,6 +3157,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶18.2",
             "quote": "We will bring back our jobs."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶202.4",
+            "quote": "We're bringing our jobs back."
           }
         ]
       },
@@ -3120,6 +3195,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶102.1",
             "quote": "We will completely rebuild our depleted military, and the countries that we protect, at a massive loss, will be asked to pay their fair share."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶507.4-507.5",
+            "quote": "We have a depleted military. It has to be helped, has to be fixed."
           }
         ]
       },
@@ -3189,6 +3279,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶105.1",
             "quote": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶40.1-40.2",
+            "quote": "We are going to appoint justices—this is the best way to help the Second Amendment. We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment."
           }
         ]
       },
@@ -3212,6 +3317,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶54.4",
             "quote": "I have a message to every last person threatening the peace on our streets and the safety of our police: when I take the oath of office next year, I will restore law and order to our country."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶508.2",
+            "quote": "We need law and order, but we need justice, too."
           }
         ]
       },
@@ -3365,6 +3485,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶101.1",
             "quote": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people just starting out their adult lives."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶195.4-195.5",
+            "quote": "And I'm a big proponent. We're going to do a lot of things for college tuition."
           }
         ]
       },
@@ -3480,6 +3615,113 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶22.1",
             "quote": "We will reinforce old alliances and form new ones and unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶126.1",
+            "quote": "And you see, we are going to stop radical Islamic terrorism in this country."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-gdp-growth",
+        "theme": "economy",
+        "restatement": "Grow GDP from 1 percent up to 4 percent, and aim for 5 or 6 percent.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶463.3-463.5",
+            "quote": "But we're bringing it from 1 percent up to 4 percent. And I actually think we can go higher than 4 percent. I think you can go to 5 percent or 6 percent."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-repatriate-offshore",
+        "theme": "taxes",
+        "restatement": "Bring the $2.5 trillion held offshore back into the country.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶204.5",
+            "quote": "We're going to bring the $2.5 trillion..."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-deport-criminal-aliens",
+        "theme": "immigration",
+        "restatement": "As one of his first acts, deport the drug lords and bad people and secure the border.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶72.6-72.7",
+            "quote": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out; we're going to secure the border."
+          }
+        ]
+      },
+      {
+        "id": "trump-2016-expert-trade-negotiators",
+        "theme": "trade",
+        "restatement": "Use the country's greatest businesspeople, not political hacks, to negotiate trade deals.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶464.4-464.6",
+            "quote": "Those are the people—these are the greatest negotiators in the world. We have the greatest businesspeople in the world. We have to use them to negotiate our trade deals."
           }
         ]
       }
@@ -3529,6 +3771,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶27.4",
             "quote": "We must set aside politics and finally face this pandemic as one Nation."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶42.1",
+            "quote": "What I would say is I'm going to shut down the virus, not the country."
           }
         ]
       },
@@ -3552,6 +3809,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶78.1",
             "quote": "If I'm president on day one we'll implement the national strategy I've been laying out since March."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.16",
+            "quote": "And so folks, I will take care of this, I will end this, I will make sure we have a plan."
           }
         ]
       },
@@ -3575,6 +3847,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶79.1",
             "quote": "We'll develop and deploy rapid tests with results available immediately."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.13",
+            "quote": "I would make sure we move in the direction of rapid testing, investing in rapid testing."
           }
         ]
       },
@@ -3621,6 +3908,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶81.1",
             "quote": "We'll make sure our schools have the resources they need to be open, safe, and effective."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.14",
+            "quote": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe, and give them the wherewithal and financial resources to be able to do that."
           }
         ]
       },
@@ -3644,6 +3946,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶82.1",
             "quote": "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶15.1-15.2",
+            "quote": "Make sure it's totally transparent. Have the scientific world see, know, look at it, go through all the processes."
           }
         ]
       },
@@ -3667,6 +3984,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶83.1",
             "quote": "We'll have a national mandate to wear a mask-not as a burden, but to protect each other."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.12",
+            "quote": "What I would do is make sure we have everyone encouraged to wear a mask, all the time."
           }
         ]
       },
@@ -3713,6 +4045,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶108.1",
             "quote": "With a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act he's trying to rip away."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶150.4",
+            "quote": "Secondly, we're going to make sure we reduce the premiums and reduce drug prices by making sure that there's competition that doesn't exist now by allowing Medicare to negotiate drug prices with the insurance companies."
           }
         ]
       },
@@ -3851,6 +4198,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶111.1-111.3",
             "quote": "We can, and we will, deal with climate change. It's not only a crisis, it's an enormous opportunity. An opportunity for America to lead the world in clean energy and create millions of new good-paying jobs in the process."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶305.7",
+            "quote": "Because what it does, it will create millions of new, good-paying jobs."
           }
         ]
       },
@@ -3920,6 +4282,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶129.1-129.2",
             "quote": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers. Nor will I put up with foreign interference in our most sacred democratic exercise -- voting."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶70.3",
+            "quote": "I made it clear that any country, no matter who it is, that interferes in American elections will pay a price."
           }
         ]
       },
@@ -3943,6 +4320,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶28.4",
             "quote": "We will repair our alliances and engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶100.15",
+            "quote": "We need to be having the rest of our friends with us, saying to China, these are the rules."
           }
         ]
       },
@@ -3966,6 +4358,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶22.9-22.10",
             "quote": "And I pledge this to you: I will be a President for all Americans—all Americans. And I promise you, I will fight as hard for those who did not support me as for those who did."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.1-355.3",
+            "quote": "I will say, 'I'm the American president. I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented."
           }
         ]
       },
@@ -3989,6 +4396,121 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶37.2",
             "quote": "Before God and all of you I give you my word: I will always level with you."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-minimum-wage",
+        "theme": "labor",
+        "restatement": "Raise the federal minimum wage to $15 an hour.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶206.5",
+            "quote": "They deserve a minimum wage of $15."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-citizenship-path",
+        "theme": "immigration",
+        "restatement": "Send Congress a pathway to citizenship for over 11 million undocumented people within his first 100 days.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶226.5",
+            "quote": "And the fact is, and I've made it very clear, within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-public-option",
+        "theme": "health",
+        "restatement": "Pass a public option on top of the Affordable Care Act (Bidencare).",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶150.1",
+            "quote": "What I'm going to do is pass Obamacare with a public option -- become Bidencare."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-oil-transition",
+        "theme": "climate",
+        "restatement": "Transition away from the oil industry to renewable energy and end federal oil subsidies.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶333.1-333.2",
+            "quote": "I would transition from the oil industry. Yes."
+          }
+        ]
+      },
+      {
+        "id": "biden-2020-rejoin-paris",
+        "theme": "climate",
+        "restatement": "Rejoin the Paris Climate Accord and press China to meet its commitments.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶350.1",
+            "quote": "No, I'm going to rejoin the Paris Accord and get China to abide by what they agreed to"
           }
         ]
       }
@@ -4145,6 +4667,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶121.3",
             "quote": "And we will also reduce your taxes still further."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶21.11",
+            "quote": "Cut taxes very substantially."
           }
         ]
       },
@@ -4237,6 +4774,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶176.2-176.3",
             "quote": "That's why, to keep our family safe, the Republican platform promises to launch the largest deportation operation in the history of our country. Even larger than that of President Dwight D. Eisenhower, from many years ago."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶17.34-17.35",
+            "quote": "And we have to get 'em out. We have to get 'em out fast."
           }
         ]
       },
@@ -4336,6 +4888,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶127.2",
             "quote": "And if they don't agree with us, we'll put a tariff of approximately 100 to 200 percent on each car and they will be unsellable in the United States."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶229.8-229.9",
+            "quote": "But we're not going to let that. We'll put tariffs on those cars so they can't come into our country."
           }
         ]
       },
@@ -4397,6 +4964,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶64.4",
             "quote": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶146.33-146.35",
+            "quote": "I will get that settled and fast. And I'll get the war with Ukraine and Russia ended. If I'm President-Elect, I'll get it done before even becoming President."
           }
         ]
       },
@@ -4573,6 +5155,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶149.1",
             "quote": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶202.9-202.10",
+            "quote": "I built one of the greatest economies in the history of the world and I'm gonna build it again. It's going to be bigger, better and stronger."
           }
         ]
       },
@@ -5058,13 +5655,59 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "quote": "And we will pursue our manifest destiny into the stars, launching American astronauts to plant the Stars and Stripes on the planet Mars."
           }
         ]
+      },
+      {
+        "id": "trump-2024-tariffs-general",
+        "theme": "trade",
+        "restatement": "Impose substantial tariffs on other countries so they pay the US back.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶17.4-17.6",
+            "quote": "We're doing tariffs on other countries. Other countries are going to finally, after 75 years, pay us back for all that we've done for the world. And the tariff will be substantial in some cases."
+          }
+        ]
+      },
+      {
+        "id": "trump-2024-replace-obamacare",
+        "theme": "health",
+        "restatement": "Replace Obamacare with a plan that is cheaper and better if a superior one is developed.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶215.28-215.29",
+            "quote": "And what we will do is we're looking at different plans. If we can come up with a plan that's going to cost our people, our population, less money and be better health care than Obamacare, then I would absolutely do it."
+          }
+        ]
       }
     ]
   }
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 184;
+export const CORPUS_PROMISE_COUNT = 195;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 230;
+export const CORPUS_OCCURRENCE_COUNT = 267;
