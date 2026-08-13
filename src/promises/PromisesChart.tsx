@@ -74,6 +74,7 @@ interface Selection {
 
 export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
   const [mode, setMode] = useState<Mode>('absolute');
+  const [activeTiers, setActiveTiers] = useState<Set<Quality>>(() => new Set(QUALITIES));
   const [selected, setSelected] = useState<Selection | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
 
@@ -84,13 +85,35 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
     setOpenId(null);
   }, [terms]);
 
-  const summaries = useMemo(() => summarize(terms), [terms]);
-  const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
+  // Toggling a tier off in the legend hides it from the bars; keep any block
+  // selection only while its tier is still shown.
+  useEffect(() => {
+    setSelected((cur) => (cur && activeTiers.has(cur.quality) ? cur : null));
+  }, [activeTiers]);
+
+  const toggleTier = (q: Quality) =>
+    setActiveTiers((cur) => {
+      const next = new Set(cur);
+      if (next.has(q)) next.delete(q);
+      else next.add(q);
+      // never leave the chart empty — clicking the last active tier shows all again
+      return next.size ? next : new Set(QUALITIES);
+    });
+
+  // Legend counts are the tier totals (unfiltered by tier) so a hidden tier can
+  // always be toggled back on; the bars themselves show only the active tiers.
   const totals = useMemo(() => {
     const c: Record<Quality, number> = { full: 0, partial: 0, no: 0 };
-    for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
+    for (const t of terms) for (const p of t.promises) c[p.quality] += 1;
     return c;
-  }, [summaries]);
+  }, [terms]);
+
+  const shownTerms = useMemo(
+    () => terms.map((t) => ({ ...t, promises: t.promises.filter((p) => activeTiers.has(p.quality)) })),
+    [terms, activeTiers],
+  );
+  const summaries = useMemo(() => summarize(shownTerms), [shownTerms]);
+  const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
 
   const selectedBar = selected && bars.find((b) => b.summary.key === selected.termKey);
   const selectedList =
@@ -102,13 +125,21 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
   return (
     <div className="pc">
       <div className="pc-bar-top">
-        <div className="pc-legend">
+        <div className="pc-legend" role="group" aria-label="Filter by tier">
           {QUALITIES.map((q) => (
-            <span key={q} className="pc-legend-item">
+            <button
+              key={q}
+              type="button"
+              className="pc-legend-item"
+              data-on={activeTiers.has(q)}
+              aria-pressed={activeTiers.has(q)}
+              onClick={() => toggleTier(q)}
+              title={`Show or hide ${QUALITY_META[q].label.toLowerCase()} promises`}
+            >
               <span className="pc-swatch" data-q={q} />
               {QUALITY_META[q].label}
               <span className="pc-legend-n">{totals[q]}</span>
-            </span>
+            </button>
           ))}
         </div>
         <div className="pc-toggle" role="group" aria-label="Chart scale">
@@ -289,12 +320,7 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
             ))}
           </ul>
         </div>
-      ) : (
-        <p className="pc-hint">
-          Click any block to list its promises. Connecting lines show the tier-by-tier change
-          from one president to the next ({mode === 'percent' ? 'percentage points' : 'count'}).
-        </p>
-      )}
+      ) : null}
     </div>
   );
 }

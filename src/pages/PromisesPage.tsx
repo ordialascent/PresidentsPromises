@@ -27,40 +27,79 @@ export function PromisesPage() {
   return (
     <div className="page">
       <header className="masthead">
-        <div className="eyebrow">Presidents' Promises · What can be measured and what was achieved? · MVP</div>
         <h1>The Promises Presidents Make</h1>
         <p className="subtitle">
           A collection of promises from comparable and authoritative sources, starting in 2000, categorized by verifiability.
         </p>
-        <p className="provenance">
-          {CORPUS_PROMISE_COUNT} promises · {CORPUS_TERMS.length} terms · sources verbatim
-        </p>
       </header>
 
       <main>
-        <TopicDonut
-          topics={topics}
-          total={CORPUS_PROMISE_COUNT}
-          selected={topic}
-          onSelect={setTopic}
-        />
+        <section className="board">
+          <TopicDonut
+            topics={topics}
+            total={CORPUS_PROMISE_COUNT}
+            selected={topic}
+            onSelect={setTopic}
+          />
 
-        <PromisesChart terms={terms} />
+          <hr className="board-rule" />
+
+          <div className="board-promises">
+            <span className="board-label">Promises</span>
+            <PromisesChart terms={terms} />
+          </div>
+        </section>
 
         <footer className="colophon">
-          <p>
-            Verifiability is a property of the sentence, not of the president. A promise is <em>full</em> when it names a metric, a threshold, and a deadline; <em>partial</em> when one of those is missing or vague; <em>none</em> when it names no measurable quantity. Even a <em>full</em> promise can still be disputed on baseline or endpoint.
-          </p>
-          <p>
-            The colors are taken from the US flag and do not represent the parties. Nowhere does this site make a causal claim or compare parties.
-          </p>
-          <div>
-            Sources currently in use:
-            <ul>
-              <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
-              <li>Inaugural address from <em>The American Presidency Project</em></li>
-              <li>Final general-election debate from <em>The American Presidency Project</em></li>
-            </ul>
+          <div className="colophon-cols">
+            <section className="colophon-box">
+              <p>Verifiability judges the proposition, not the president.</p>
+              <table className="veri-table">
+                <thead>
+                  <tr>
+                    <th className="veri-swatch-col" aria-hidden="true" />
+                    <th scope="col" aria-label="Verifiability tier" />
+                    <th scope="col">Metric</th>
+                    <th scope="col">Threshold</th>
+                    <th scope="col">Deadline</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="veri-swatch" data-q="full" aria-hidden="true" />
+                    <th scope="row">Full</th>
+                    <td className="veri-yes">✓</td>
+                    <td className="veri-yes">✓</td>
+                    <td className="veri-yes">✓</td>
+                  </tr>
+                  <tr>
+                    <td className="veri-swatch" data-q="partial" aria-hidden="true" />
+                    <th scope="row">Partial</th>
+                    <td className="veri-yes">✓</td>
+                    <td className="veri-q">?</td>
+                    <td className="veri-q">?</td>
+                  </tr>
+                  <tr>
+                    <td className="veri-swatch" data-q="no" aria-hidden="true" />
+                    <th scope="row">None</th>
+                    <td className="veri-q">?</td>
+                    <td className="veri-q">?</td>
+                    <td className="veri-q">?</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Even a <em>full</em> promise may be debatable.</p>
+            </section>
+
+            <section className="colophon-box">
+              <p>Sources currently in use:</p>
+              <ul>
+                <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
+                <li>Inaugural address from <em>The American Presidency Project</em></li>
+                <li>Final general-election debate from <em>The American Presidency Project</em></li>
+              </ul>
+              <p>All sources are treated identically.</p>
+            </section>
           </div>
         </footer>
       </main>

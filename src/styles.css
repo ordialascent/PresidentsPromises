@@ -1,29 +1,38 @@
 :root {
-  --bg: #0c1116;
-  --panel: #131b23;
-  --ink: #e6edf3;
-  --dim: #7d94a8;
-  --border: #22303c;
+  /* Light theme: a near-white page (5% black) with white cards and dark ink.
+     The flag colours — the navy tier ladder and the red topics — carry meaning. */
+  --bg: #f2f2f2;
+  --panel: #ffffff;
+  --ink: #2b2117;
+  --dim: #6b6b6b;
+  --border: #dcdcdc;
   --met: #2fbf71;
   --missed: #e5484d;
   --decoupled: #c084fc;
-  --series: #38bec9;
+  --series: #123c6b;
   --target: #f0a202;
-  /* measurability tiers, in official U.S. flag colours (Old Glory Red /
-     Old Glory Blue / White). A quality axis applied identically to every
-     president — NOT kept/broken, NOT a party coding. `-line` variants are
-     lightened only so connectors/edges stay visible on the dark theme. */
-  --q-full: #b31942;
-  --q-partial: #ffffff;
-  --q-no: #0a3161;
-  --q-full-line: #e05c7e;
-  --q-partial-line: #ffffff;
-  --q-no-line: #6f8fc0;
+  /* Measurability tiers as a single-hue ladder in Old Glory Blue: full is the
+     full navy, partial is that navy mixed 50/50 with white, none is white. A
+     quality axis applied identically to every president — NOT kept/broken, NOT
+     a party coding. `-line`/`-ink` variants keep connectors and on-fill numbers
+     legible against the parchment. */
+  --q-full: #0a3161;
+  --q-partial: #8598b0;
+  --q-no: #ffffff;
+  --q-full-line: #0a3161;
+  --q-partial-line: #6f86a0;
+  --q-no-line: #9aa7b6;
   --q-full-ink: #ffffff;
-  --q-partial-ink: #0c1116;
-  --q-no-ink: #ffffff;
+  --q-partial-ink: #10243c;
+  --q-no-ink: #2b2117;
+  /* Topics are a single accent (Old Glory Red); selection turns a slice white. */
+  --topic: #b31942;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* a period old-style serif for the masthead — Baskerville dates to the 1750s,
+     contemporary with the founding documents; degrades to other transitional
+     serifs, then Times, so no web font is loaded. */
+  --font-title: Baskerville, "Baskerville Old Face", "Libre Baskerville", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 * {
@@ -33,10 +42,13 @@
 html,
 body {
   margin: 0;
-  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+body {
+  min-height: 100vh;
+  background: var(--bg);
 }
 
 .page {
@@ -64,16 +76,15 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(24px, 4.4vw, 38px);
-  line-height: 1.12;
-  letter-spacing: -0.01em;
-  font-weight: 650;
-  max-width: 22ch;
+  font-family: var(--font-title);
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-weight: 600;
 }
 
 .subtitle {
   margin: 0;
-  max-width: 62ch;
   color: var(--dim);
   font-size: 15.5px;
   line-height: 1.55;
@@ -90,6 +101,36 @@ main {
   display: flex;
   flex-direction: column;
   gap: 34px;
+}
+
+/* one white card holding both the topics section and the promises chart,
+   split by an inset divider */
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 22px;
+}
+.board-rule {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+.board-promises {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.board-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
 }
 
 .readings {
@@ -205,11 +246,60 @@ main {
 
 .colophon p {
   margin: 0;
-  max-width: 68ch;
   color: var(--dim);
   font-size: 13px;
   line-height: 1.55;
 }
+
+.colophon ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.colophon li {
+  margin: 2px 0;
+}
+
+/* footer split into two columns on the page background; stacks when narrow */
+.colophon-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+}
+.colophon-box {
+  flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.veri-table {
+  align-self: flex-start;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: var(--dim);
+}
+.veri-table th,
+.veri-table td {
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  text-align: center;
+  font-weight: 400;
+}
+/* category names and column headers use the plain footer text style */
+.veri-table thead th { color: var(--dim); }
+.veri-table tbody th { text-align: left; color: var(--dim); }
+/* the leading colour-key column takes the bar-chart tier fills */
+.veri-swatch-col,
+.veri-swatch { width: 16px; padding: 0; }
+.veri-swatch[data-q='full'] { background: var(--q-full); }
+.veri-swatch[data-q='partial'] { background: var(--q-partial); }
+.veri-swatch[data-q='no'] { background: var(--q-no); }
+.veri-yes { color: var(--ink); }
+.veri-q { color: var(--dim); }
 
 .colophon a {
   color: var(--series);
@@ -254,13 +344,34 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  background: none;
+  border: 0;
+  margin: -2px -5px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 120ms ease, background-color 120ms ease;
+}
+.pc-legend-item:hover {
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+.pc-legend-item[data-on='false'] {
+  opacity: 0.4;
+}
+.pc-legend-item[data-on='false'] .pc-swatch {
+  filter: grayscale(0.8);
+}
+.pc-legend-item[data-on='false'] .pc-legend-n {
+  color: var(--dim);
 }
 .pc-swatch {
   width: 12px;
   height: 12px;
   border-radius: 3px;
   display: inline-block;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(43, 33, 23, 0.28);
 }
 .pc-swatch[data-q="full"] { background: var(--q-full); }
 .pc-swatch[data-q="partial"] { background: var(--q-partial); }
@@ -297,18 +408,14 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 6px;
   overflow: visible;
 }
 
 .pc-seg {
   cursor: pointer;
-  /* hairline edge so dark navy reads against the dark panel, and every block
-     is delineated from its neighbour regardless of fill */
-  stroke: rgba(255, 255, 255, 0.28);
+  /* hairline ink edge so the white (none) block reads against the parchment
+     panel, and every block is delineated from its neighbour regardless of fill */
+  stroke: rgba(43, 33, 23, 0.22);
   stroke-width: 1;
   transition: opacity 120ms ease;
 }
@@ -380,7 +487,6 @@ main {
   color: var(--dim);
   font-size: 13px;
   line-height: 1.5;
-  max-width: 66ch;
 }
 
 .pc-list {
@@ -496,10 +602,6 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px;
 }
 .tp-svg {
   width: 172px;
@@ -508,15 +610,19 @@ main {
 }
 .tp-slice {
   cursor: pointer;
+  fill: var(--topic);
   stroke: var(--panel);
   stroke-width: 1.5;
   transition: opacity 120ms ease, fill 120ms ease;
 }
-/* flag palette, alternating red / blue, going white on hover or selection */
-.tp-slice[data-parity="0"] { fill: var(--q-full); }
-.tp-slice[data-parity="1"] { fill: var(--q-no); }
+/* one accent for every slice; the hovered/selected one turns white (with an ink
+   edge so it reads on the parchment), the rest fade back */
 .tp-slice[data-dim="true"] { opacity: 0.32; }
-.tp-slice[data-active="true"] { fill: var(--q-partial); opacity: 1; }
+.tp-slice[data-active="true"] {
+  fill: #ffffff;
+  stroke: var(--ink);
+  opacity: 1;
+}
 
 .tp-center-n {
   fill: var(--ink);
