@@ -1,11 +1,11 @@
 :root {
-  /* Parchment-and-ink theme: the page is the paper of the founding documents,
-     the type is iron-gall ink. The layout and typography stay modern. */
-  --bg: #ece1c8;
-  --panel: #f4ecd8;
+  /* Light theme: a near-white page (5% black) with white cards and dark ink.
+     The flag colours — the navy tier ladder and the red topics — carry meaning. */
+  --bg: #f2f2f2;
+  --panel: #ffffff;
   --ink: #2b2117;
-  --dim: #7a6a4f;
-  --border: #d8c8a4;
+  --dim: #6b6b6b;
+  --border: #dcdcdc;
   --met: #2fbf71;
   --missed: #e5484d;
   --decoupled: #c084fc;
@@ -42,17 +42,9 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
-/* a faint aged-paper wash: lighter at the top, warmer/darker toward the foot */
 body {
   min-height: 100vh;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--bg) 84%, #ffffff) 0%,
-      var(--bg) 42%,
-      color-mix(in srgb, var(--bg) 90%, #4b3a1f) 100%
-    )
-    fixed;
+  background: var(--bg);
 }
 
 .page {
@@ -89,7 +81,6 @@ h1 {
 
 .subtitle {
   margin: 0;
-  max-width: 62ch;
   color: var(--dim);
   font-size: 15.5px;
   line-height: 1.55;
@@ -221,7 +212,6 @@ main {
 
 .colophon p {
   margin: 0;
-  max-width: 68ch;
   color: var(--dim);
   font-size: 13px;
   line-height: 1.55;
@@ -464,7 +454,6 @@ main {
   color: var(--dim);
   font-size: 13px;
   line-height: 1.5;
-  max-width: 66ch;
 }
 
 .pc-list {
