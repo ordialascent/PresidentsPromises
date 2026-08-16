@@ -29,7 +29,9 @@ function arcPath(a0: number, a1: number): string {
  *
  * `topics` and `total` are whatever the parent's tier filter leaves, so hiding
  * a tier re-proportions the donut; `scope` names the tiers being counted when
- * they are not all of them.
+ * they are not all of them. The list arrives complete and in a fixed order,
+ * including topics the filter has emptied — those hold their place at zero,
+ * greyed and unpickable, so the legend never reflows under the reader.
  */
 export function TopicDonut({
   topics,
@@ -46,15 +48,20 @@ export function TopicDonut({
 }) {
   const [hovered, setHovered] = useState<string | null>(null);
 
-  // precompute slice angles, starting at 12 o'clock
+  // precompute slice angles, starting at 12 o'clock. A topic the tier filter has
+  // emptied is still in `topics` (at zero, so the legend holds its shape) but has
+  // no arc to draw — dropping it here keeps a degenerate path from painting a
+  // hairline on the ring.
   const whole = Math.max(1, total);
   let cursor = -Math.PI / 2;
-  const slices = topics.map((t) => {
-    const a0 = cursor;
-    const a1 = a0 + (t.count / whole) * Math.PI * 2;
-    cursor = a1;
-    return { ...t, a0, a1 };
-  });
+  const slices = topics
+    .filter((t) => t.count > 0)
+    .map((t) => {
+      const a0 = cursor;
+      const a1 = a0 + (t.count / whole) * Math.PI * 2;
+      cursor = a1;
+      return { ...t, a0, a1 };
+    });
 
   // The centre reads out whatever is lit: a hovered slice previews itself, else
   // the selection sums, else the whole donut.
@@ -118,25 +125,37 @@ export function TopicDonut({
           </text>
         </svg>
 
-        {scope && <span className="tp-scope">{scope} only</span>}
+        {/* the caption keeps its line even when there is nothing to say, so
+            toggling a tier doesn't shift the legend by a row */}
+        <span className="tp-scope" data-on={scope != null}>
+          {scope ? `${scope} only` : ' '}
+        </span>
 
         <div className="tp-legend">
-          {topics.map((t) => (
-            <button
-              key={t.theme}
-              type="button"
-              className="tp-chip"
-              aria-pressed={selected.has(t.theme)}
-              data-active={hovered === t.theme || selected.has(t.theme)}
-              data-selected={selected.has(t.theme)}
-              onMouseEnter={() => setHovered(t.theme)}
-              onMouseLeave={() => setHovered(null)}
-              onClick={() => onToggle(t.theme)}
-            >
-              {t.theme}
-              <span className="tp-chip-n">{t.count}</span>
-            </button>
-          ))}
+          {topics.map((t) => {
+            // nothing to filter to in the shown tiers: hold the chip's place in
+            // the row, greyed and unpickable, rather than reflowing the legend
+            const empty = t.count === 0;
+            return (
+              <button
+                key={t.theme}
+                type="button"
+                className="tp-chip"
+                disabled={empty}
+                data-empty={empty}
+                aria-pressed={selected.has(t.theme)}
+                data-active={hovered === t.theme || selected.has(t.theme)}
+                data-selected={selected.has(t.theme)}
+                onMouseEnter={() => !empty && setHovered(t.theme)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => onToggle(t.theme)}
+                title={empty ? `no ${scope ? `${scope} ` : ''}promises on ${t.theme}` : undefined}
+              >
+                {t.theme}
+                <span className="tp-chip-n">{t.count}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>

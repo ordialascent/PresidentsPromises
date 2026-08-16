@@ -12,6 +12,7 @@ import {
   share,
   summarize,
   topicCounts,
+  topicCountsIn,
 } from '../src/promises/model.js';
 
 /**
@@ -150,6 +151,25 @@ describe('promises overview aggregation', () => {
     expect([...perTopic.entries()].sort()).toEqual(
       all.map((t) => [t.theme, t.count] as [string, number]).sort(),
     );
+  });
+
+  it('the topic legend keeps every topic, and its order, as the tier filter moves', () => {
+    const order = topicCounts(CORPUS_TERMS).map((t) => t.theme);
+    for (const q of QUALITIES) {
+      const listed = topicCountsIn(filterByTiers(CORPUS_TERMS, new Set([q])), order);
+      // same topics, same positions — only the numbers move, so nothing reflows
+      expect(listed.map((t) => t.theme)).toEqual(order);
+      // the ones this tier has nothing for are present at zero, not missing
+      const live = new Set(
+        topicCounts(filterByTiers(CORPUS_TERMS, new Set([q]))).map((t) => t.theme),
+      );
+      for (const t of listed) expect(t.count === 0).toBe(!live.has(t.theme));
+      expect(listed.reduce((n, t) => n + t.count, 0)).toBe(
+        CORPUS_TERMS.flatMap((x) => x.promises).filter((p) => p.quality === q).length,
+      );
+    }
+    // with every tier shown it is exactly the unfiltered list again
+    expect(topicCountsIn(CORPUS_TERMS, order)).toEqual(topicCounts(CORPUS_TERMS));
   });
 
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {

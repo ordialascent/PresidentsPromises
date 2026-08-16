@@ -7,9 +7,18 @@ import {
   filterByTiers,
   filterByTopics,
   topicCounts,
+  topicCountsIn,
   type Quality,
 } from '../promises/model.js';
 import { CORPUS_TERMS } from '../content/promises.generated.js';
+
+/**
+ * Every topic in the corpus, ordered once by its unfiltered size. The legend is
+ * drawn from this fixed list so that hiding a tier only ever changes the numbers
+ * on the chips — it never removes one or re-sorts the rows, which would shove
+ * the whole page around under the reader's cursor.
+ */
+const TOPIC_ORDER = topicCounts(CORPUS_TERMS).map((t) => t.theme);
 
 /**
  * Front page: every nomination-acceptance promise since 2000, one stacked bar
@@ -28,9 +37,10 @@ export function PromisesPage() {
   const [activeTiers, setActiveTiers] = useState<ReadonlySet<Quality>>(() => new Set(QUALITIES));
 
   // Topics as counted over the shown tiers only: deselect "partial" and "none"
-  // and the donut is the topic mix of the full promises alone.
+  // and the donut is the topic mix of the full promises alone. Topics with
+  // nothing left stay in the list at zero — greyed out, not gone.
   const topics = useMemo(
-    () => topicCounts(filterByTiers(CORPUS_TERMS, activeTiers)),
+    () => topicCountsIn(filterByTiers(CORPUS_TERMS, activeTiers), TOPIC_ORDER),
     [activeTiers],
   );
   const topicTotal = useMemo(() => topics.reduce((n, t) => n + t.count, 0), [topics]);
@@ -53,8 +63,9 @@ export function PromisesPage() {
     // never leave the chart empty — clicking the last active tier shows all again
     const shown = next.size ? next : new Set(QUALITIES);
     setActiveTiers(shown);
-    // topics with nothing left in the shown tiers drop out of the selection;
-    // if that empties it, the bars widen back to every topic on their own
+    // topics with nothing left in the shown tiers drop out of the selection —
+    // their chip stays put, just greyed and unpickable — and if that empties the
+    // selection, the bars widen back to every topic on their own
     const surviving = new Set(topicCounts(filterByTiers(CORPUS_TERMS, shown)).map((t) => t.theme));
     const kept = new Set([...selectedTopics].filter((t) => surviving.has(t)));
     if (kept.size !== selectedTopics.size) setSelectedTopics(kept);
