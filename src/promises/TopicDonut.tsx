@@ -50,11 +50,11 @@ export function TopicDonut({
   // precompute slice angles, starting at 12 o'clock
   const whole = Math.max(1, total);
   let cursor = -Math.PI / 2;
-  const slices = topics.map((t, i) => {
+  const slices = topics.map((t) => {
     const a0 = cursor;
     const a1 = a0 + (t.count / whole) * Math.PI * 2;
     cursor = a1;
-    return { ...t, a0, a1, i };
+    return { ...t, a0, a1 };
   });
 
   const shown = active ? topics.find((t) => t.theme === active) : null;
@@ -68,12 +68,6 @@ export function TopicDonut({
     <div className="tp">
       <div className="tp-head">
         <span className="tp-eyebrow">Topics</span>
-        {scope && <span className="tp-scope">{scope} only</span>}
-        {selected && (
-          <button type="button" className="tp-clear" onClick={() => onSelect(null)}>
-            showing “{selected}” · clear ✕
-          </button>
-        )}
       </div>
 
       <div className="tp-body">
@@ -90,7 +84,6 @@ export function TopicDonut({
               <path
                 key={s.theme}
                 className="tp-slice"
-                data-parity={s.i % 2}
                 data-active={isActive}
                 data-dim={dim}
                 d={arcPath(s.a0, s.a1)}
@@ -104,7 +97,7 @@ export function TopicDonut({
               </path>
             );
           })}
-          <text className="tp-center-n" x={C} y={C - 4}>
+          <text className="tp-center-n" data-active={active != null} x={C} y={C - 4}>
             {centerCount}
           </text>
           <text className="tp-center-l" x={C} y={C + 14}>
@@ -114,6 +107,8 @@ export function TopicDonut({
             {centerPct}%
           </text>
         </svg>
+
+        {scope && <span className="tp-scope">{scope} only</span>}
 
         <div className="tp-legend">
           {topics.map((t) => (
