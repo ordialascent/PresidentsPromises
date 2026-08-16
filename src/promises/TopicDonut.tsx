@@ -36,12 +36,15 @@ function arcPath(a0: number, a1: number): string {
 export function TopicDonut({
   topics,
   total,
+  countWidth,
   scope,
   selected,
   onToggle,
 }: {
   topics: TopicCount[];
   total: number;
+  /** Digits to pad each chip's count to, so a chip's width never changes. */
+  countWidth: number;
   scope: string | null;
   selected: ReadonlySet<string>;
   onToggle: (theme: string) => void;
@@ -152,7 +155,9 @@ export function TopicDonut({
                 title={empty ? `no ${scope ? `${scope} ` : ''}promises on ${t.theme}` : undefined}
               >
                 {t.theme}
-                <span className="tp-chip-n">{t.count}</span>
+                <span className="tp-chip-n">
+                  {String(t.count).padStart(countWidth, '0')}
+                </span>
               </button>
             );
           })}

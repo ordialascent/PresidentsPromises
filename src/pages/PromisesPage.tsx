@@ -18,7 +18,16 @@ import { CORPUS_TERMS } from '../content/promises.generated.js';
  * on the chips — it never removes one or re-sorts the rows, which would shove
  * the whole page around under the reader's cursor.
  */
-const TOPIC_ORDER = topicCounts(CORPUS_TERMS).map((t) => t.theme);
+const CORPUS_TOPICS = topicCounts(CORPUS_TERMS);
+const TOPIC_ORDER = CORPUS_TOPICS.map((t) => t.theme);
+
+/**
+ * Digits to pad every chip's count to, fixed by the largest count in the corpus.
+ * Without it a count falling from 25 to 1 narrows its chip by a character, the
+ * row fits one more, and the legend repacks — the same jump the fixed list was
+ * meant to remove, arriving one layer down.
+ */
+const COUNT_WIDTH = String(Math.max(...CORPUS_TOPICS.map((t) => t.count))).length;
 
 /**
  * Front page: every nomination-acceptance promise since 2000, one stacked bar
@@ -93,6 +102,7 @@ export function PromisesPage() {
           <TopicDonut
             topics={topics}
             total={topicTotal}
+            countWidth={COUNT_WIDTH}
             scope={scope}
             selected={selectedTopics}
             onToggle={toggleTopic}
