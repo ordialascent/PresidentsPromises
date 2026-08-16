@@ -44,10 +44,14 @@ export function filterByTiers(terms: CorpusTerm[], tiers: ReadonlySet<Quality>):
   return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => tiers.has(p.quality)) }));
 }
 
-/** Terms carrying only the promises on `theme` (all of them when it is null). */
-export function filterByTopic(terms: CorpusTerm[], theme: string | null): CorpusTerm[] {
-  if (theme == null) return terms;
-  return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => p.theme === theme) }));
+/**
+ * Terms carrying only the promises on the selected `themes`. An empty selection
+ * is no filter at all: picking topics narrows, and un-picking the last one is
+ * how you get back to everything.
+ */
+export function filterByTopics(terms: CorpusTerm[], themes: ReadonlySet<string>): CorpusTerm[] {
+  if (themes.size === 0) return terms;
+  return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => themes.has(p.theme)) }));
 }
 
 /** Promise count per topic across all terms, largest first (ties alphabetical). */

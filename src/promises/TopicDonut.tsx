@@ -21,11 +21,11 @@ function arcPath(a0: number, a1: number): string {
 }
 
 /**
- * Topic proportions as a donut plus a synced clickable legend. Selecting a
- * topic is a filter the parent applies to the bar chart; the donut and chips
- * are two views of the same selection. Slices carry no topic-specific colour
- * (topics aren't a coloured dimension here) — meaning is arc length + the
- * highlight on hover/selection.
+ * Topic proportions as a donut plus a synced clickable legend. Topics are
+ * multi-select — every lit slice is in the filter the parent applies to the bar
+ * chart, and an empty selection means all of them. The donut and the chips are
+ * two views of the same set. Slices carry no topic-specific colour (topics
+ * aren't a coloured dimension here) — meaning is arc length + the highlight.
  *
  * `topics` and `total` are whatever the parent's tier filter leaves, so hiding
  * a tier re-proportions the donut; `scope` names the tiers being counted when
@@ -36,16 +36,15 @@ export function TopicDonut({
   total,
   scope,
   selected,
-  onSelect,
+  onToggle,
 }: {
   topics: TopicCount[];
   total: number;
   scope: string | null;
-  selected: string | null;
-  onSelect: (theme: string | null) => void;
+  selected: ReadonlySet<string>;
+  onToggle: (theme: string) => void;
 }) {
   const [hovered, setHovered] = useState<string | null>(null);
-  const active = hovered ?? selected;
 
   // precompute slice angles, starting at 12 o'clock
   const whole = Math.max(1, total);
@@ -57,12 +56,24 @@ export function TopicDonut({
     return { ...t, a0, a1 };
   });
 
-  const shown = active ? topics.find((t) => t.theme === active) : null;
-  const centerLabel = shown ? shown.theme : selected ? selected : 'All topics';
-  const centerCount = shown ? shown.count : total;
+  // The centre reads out whatever is lit: a hovered slice previews itself, else
+  // the selection sums, else the whole donut.
+  const picked = topics.filter((t) => selected.has(t.theme));
+  const peek = hovered != null ? topics.find((t) => t.theme === hovered) : undefined;
+  const centerLabel = peek
+    ? peek.theme
+    : picked.length === 0
+      ? 'All topics'
+      : picked.length === 1
+        ? picked[0]!.theme
+        : `${picked.length} topics`;
+  const centerCount = peek
+    ? peek.count
+    : picked.length === 0
+      ? total
+      : picked.reduce((n, t) => n + t.count, 0);
   const centerPct = Math.round((centerCount / whole) * 100);
-
-  const toggle = (theme: string) => onSelect(theme === selected ? null : theme);
+  const lit = hovered != null || picked.length > 0;
 
   return (
     <div className="tp">
@@ -78,18 +89,17 @@ export function TopicDonut({
           aria-label="Promise share by topic"
         >
           {slices.map((s) => {
-            const isActive = active === s.theme;
-            const dim = active != null && !isActive;
+            const isActive = hovered === s.theme || selected.has(s.theme);
             return (
               <path
                 key={s.theme}
                 className="tp-slice"
                 data-active={isActive}
-                data-dim={dim}
+                data-dim={lit && !isActive}
                 d={arcPath(s.a0, s.a1)}
                 onMouseEnter={() => setHovered(s.theme)}
                 onMouseLeave={() => setHovered(null)}
-                onClick={() => toggle(s.theme)}
+                onClick={() => onToggle(s.theme)}
               >
                 <title>
                   {s.theme}: {s.count} ({Math.round((s.count / whole) * 100)}%)
@@ -97,7 +107,7 @@ export function TopicDonut({
               </path>
             );
           })}
-          <text className="tp-center-n" data-active={active != null} x={C} y={C - 4}>
+          <text className="tp-center-n" data-active={lit} x={C} y={C - 4}>
             {centerCount}
           </text>
           <text className="tp-center-l" x={C} y={C + 14}>
@@ -116,11 +126,12 @@ export function TopicDonut({
               key={t.theme}
               type="button"
               className="tp-chip"
-              data-active={active === t.theme}
-              data-selected={selected === t.theme}
+              aria-pressed={selected.has(t.theme)}
+              data-active={hovered === t.theme || selected.has(t.theme)}
+              data-selected={selected.has(t.theme)}
               onMouseEnter={() => setHovered(t.theme)}
               onMouseLeave={() => setHovered(null)}
-              onClick={() => toggle(t.theme)}
+              onClick={() => onToggle(t.theme)}
             >
               {t.theme}
               <span className="tp-chip-n">{t.count}</span>
