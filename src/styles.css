@@ -25,7 +25,8 @@
   --q-full-ink: #ffffff;
   --q-partial-ink: #10243c;
   --q-no-ink: #2b2117;
-  /* Topics are a single accent (Old Glory Red); selection turns a slice white. */
+  /* Topics are a single accent (Old Glory Red); the selected slice holds it at
+     full strength and the rest wash back to a tint. */
   --topic: #b31942;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -585,17 +586,16 @@ main {
   text-transform: uppercase;
   color: var(--dim);
 }
-.tp-clear {
+/* caption under the donut: which tiers the topic counts are drawn from, shown
+   only when they aren't all of them. The selected topic needs no such label —
+   its slice and chip are lit, and clicking either one clears it. */
+.tp-scope {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--series);
-  background: transparent;
-  border: 1px solid color-mix(in srgb, var(--series) 40%, transparent);
-  border-radius: 999px;
-  padding: 3px 10px;
-  cursor: pointer;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin-top: -6px;
 }
-.tp-clear:hover { border-color: var(--series); }
 
 .tp-body {
   display: flex;
@@ -615,13 +615,13 @@ main {
   stroke-width: 1.5;
   transition: opacity 120ms ease, fill 120ms ease;
 }
-/* one accent for every slice; the hovered/selected one turns white (with an ink
-   edge so it reads on the parchment), the rest fade back */
-.tp-slice[data-dim="true"] { opacity: 0.32; }
+/* one accent for every slice: the hovered/selected one holds the full flag red,
+   the rest wash out to a tint of it */
+.tp-slice[data-dim="true"] { opacity: 0.26; }
 .tp-slice[data-active="true"] {
-  fill: #ffffff;
-  stroke: var(--ink);
   opacity: 1;
+  stroke: var(--panel);
+  stroke-width: 2.5;
 }
 
 .tp-center-n {
@@ -632,6 +632,8 @@ main {
   text-anchor: middle;
   font-variant-numeric: tabular-nums;
 }
+/* the centre reads out the lit slice, so it takes the accent with it */
+.tp-center-n[data-active="true"] { fill: var(--topic); }
 .tp-center-l {
   fill: var(--ink);
   font-family: var(--font-sans);
@@ -666,15 +668,17 @@ main {
   cursor: pointer;
   transition: color 120ms ease, border-color 120ms ease;
 }
+/* the chips carry the same accent as the slices, so "selected" reads the same
+   in both views of the selection */
 .tp-chip:hover,
 .tp-chip[data-active="true"] {
   color: var(--ink);
-  border-color: var(--series);
+  border-color: var(--topic);
 }
 .tp-chip[data-selected="true"] {
   color: var(--ink);
-  border-color: var(--series);
-  background: color-mix(in srgb, var(--series) 14%, transparent);
+  border-color: var(--topic);
+  background: color-mix(in srgb, var(--topic) 14%, transparent);
 }
 .tp-chip-n {
   color: var(--ink);

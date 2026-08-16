@@ -39,6 +39,17 @@ export interface TopicCount {
   count: number;
 }
 
+/** Terms carrying only the promises whose tier is in `tiers`. */
+export function filterByTiers(terms: CorpusTerm[], tiers: ReadonlySet<Quality>): CorpusTerm[] {
+  return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => tiers.has(p.quality)) }));
+}
+
+/** Terms carrying only the promises on `theme` (all of them when it is null). */
+export function filterByTopic(terms: CorpusTerm[], theme: string | null): CorpusTerm[] {
+  if (theme == null) return terms;
+  return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => p.theme === theme) }));
+}
+
 /** Promise count per topic across all terms, largest first (ties alphabetical). */
 export function topicCounts(terms: CorpusTerm[]): TopicCount[] {
   const m = new Map<string, number>();

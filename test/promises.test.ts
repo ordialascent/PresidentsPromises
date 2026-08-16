@@ -4,7 +4,15 @@ import {
   CORPUS_PROMISE_COUNT,
   CORPUS_OCCURRENCE_COUNT,
 } from '../src/content/promises.generated.js';
-import { QUALITIES, deltaBetween, share, summarize, topicCounts } from '../src/promises/model.js';
+import {
+  QUALITIES,
+  deltaBetween,
+  filterByTiers,
+  filterByTopic,
+  share,
+  summarize,
+  topicCounts,
+} from '../src/promises/model.js';
 
 /**
  * The overview aggregation, pinned against the generated corpus. Totals are the
@@ -80,14 +88,51 @@ describe('promises overview aggregation', () => {
   });
 
   it('filtering terms to one topic keeps only that topic and preserves tiers', () => {
-    const filtered = CORPUS_TERMS.map((t) => ({
-      ...t,
-      promises: t.promises.filter((p) => p.theme === 'taxes'),
-    }));
+    const filtered = filterByTopic(CORPUS_TERMS, 'taxes');
     const s = summarize(filtered);
     const total = s.reduce((n, x) => n + x.total, 0);
     expect(total).toBe(topicCounts(CORPUS_TERMS).find((t) => t.theme === 'taxes')!.count);
     for (const term of filtered) for (const p of term.promises) expect(p.theme).toBe('taxes');
+  });
+
+  it('topic counts follow the tier filter, and the tiers still sum to the whole', () => {
+    // What the page draws when only "full" is left selected in the chart legend.
+    const full = topicCounts(filterByTiers(CORPUS_TERMS, new Set(['full'] as const)));
+    expect(full.reduce((n, t) => n + t.count, 0)).toBe(16);
+    for (const t of full) {
+      const manual = CORPUS_TERMS.flatMap((x) => x.promises).filter(
+        (p) => p.theme === t.theme && p.quality === 'full',
+      ).length;
+      expect(t.count).toBe(manual);
+    }
+    // a topic with no full promises drops out of the donut entirely
+    const all = topicCounts(CORPUS_TERMS);
+    expect(full.length).toBeLessThanOrEqual(all.length);
+    for (const t of full) expect(all.some((a) => a.theme === t.theme)).toBe(true);
+
+    // splitting the corpus by tier partitions it: the per-tier topic counts add
+    // back up to the unfiltered ones, so no promise is double-counted or lost.
+    const perTopic = new Map<string, number>();
+    for (const q of QUALITIES) {
+      for (const t of topicCounts(filterByTiers(CORPUS_TERMS, new Set([q])))) {
+        perTopic.set(t.theme, (perTopic.get(t.theme) ?? 0) + t.count);
+      }
+    }
+    expect([...perTopic.entries()].sort()).toEqual(
+      all.map((t) => [t.theme, t.count] as [string, number]).sort(),
+    );
+  });
+
+  it('the two filters commute — topic then tier is the same set as tier then topic', () => {
+    const tiers = new Set(['full', 'partial'] as const);
+    const a = summarize(filterByTiers(filterByTopic(CORPUS_TERMS, 'health'), tiers));
+    const b = summarize(filterByTopic(filterByTiers(CORPUS_TERMS, tiers), 'health'));
+    expect(a).toEqual(b);
+    const total = a.reduce((n, s) => n + s.total, 0);
+    expect(total).toBe(
+      topicCounts(filterByTiers(CORPUS_TERMS, tiers)).find((t) => t.theme === 'health')!.count,
+    );
+    for (const term of a) expect(term.counts.no).toBe(0);
   });
 
   it('deltas are the difference between adjacent terms, both count and points', () => {
