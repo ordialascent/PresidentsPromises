@@ -8,7 +8,7 @@ import {
   QUALITIES,
   deltaBetween,
   filterByTiers,
-  filterByTopic,
+  filterByTopics,
   share,
   summarize,
   topicCounts,
@@ -88,11 +88,40 @@ describe('promises overview aggregation', () => {
   });
 
   it('filtering terms to one topic keeps only that topic and preserves tiers', () => {
-    const filtered = filterByTopic(CORPUS_TERMS, 'taxes');
+    const filtered = filterByTopics(CORPUS_TERMS, new Set(['taxes']));
     const s = summarize(filtered);
     const total = s.reduce((n, x) => n + x.total, 0);
     expect(total).toBe(topicCounts(CORPUS_TERMS).find((t) => t.theme === 'taxes')!.count);
     for (const term of filtered) for (const p of term.promises) expect(p.theme).toBe('taxes');
+  });
+
+  it('a multi-topic selection is the union of its topics, and an empty one is everything', () => {
+    const counts = topicCounts(CORPUS_TERMS);
+    const of = (theme: string) => counts.find((t) => t.theme === theme)!.count;
+
+    const picked = new Set(['taxes', 'energy', 'health']);
+    const filtered = filterByTopics(CORPUS_TERMS, picked);
+    const total = summarize(filtered).reduce((n, s) => n + s.total, 0);
+    expect(total).toBe(of('taxes') + of('energy') + of('health'));
+    for (const term of filtered) for (const p of term.promises) expect(picked.has(p.theme)).toBe(true);
+
+    // picking two topics is the sum of picking each — a union, never an
+    // intersection, so a second pick can't empty out the first one's bars
+    const taxes = summarize(filterByTopics(CORPUS_TERMS, new Set(['taxes'])));
+    const energy = summarize(filterByTopics(CORPUS_TERMS, new Set(['energy'])));
+    const both = summarize(filterByTopics(CORPUS_TERMS, new Set(['taxes', 'energy'])));
+    for (let i = 0; i < both.length; i += 1) {
+      expect(both[i]!.total).toBe(taxes[i]!.total + energy[i]!.total);
+      for (const q of QUALITIES) {
+        expect(both[i]!.counts[q]).toBe(taxes[i]!.counts[q] + energy[i]!.counts[q]);
+      }
+    }
+
+    // no selection is no filter: same terms, untouched
+    expect(filterByTopics(CORPUS_TERMS, new Set())).toBe(CORPUS_TERMS);
+    // selecting every topic is the same as selecting none
+    const allPicked = filterByTopics(CORPUS_TERMS, new Set(counts.map((t) => t.theme)));
+    expect(summarize(allPicked)).toEqual(summarize(CORPUS_TERMS));
   });
 
   it('topic counts follow the tier filter, and the tiers still sum to the whole', () => {
@@ -125,8 +154,9 @@ describe('promises overview aggregation', () => {
 
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {
     const tiers = new Set(['full', 'partial'] as const);
-    const a = summarize(filterByTiers(filterByTopic(CORPUS_TERMS, 'health'), tiers));
-    const b = summarize(filterByTopic(filterByTiers(CORPUS_TERMS, tiers), 'health'));
+    const picked = new Set(['health']);
+    const a = summarize(filterByTiers(filterByTopics(CORPUS_TERMS, picked), tiers));
+    const b = summarize(filterByTopics(filterByTiers(CORPUS_TERMS, tiers), picked));
     expect(a).toEqual(b);
     const total = a.reduce((n, s) => n + s.total, 0);
     expect(total).toBe(

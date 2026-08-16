@@ -5,7 +5,7 @@ import {
   QUALITIES,
   QUALITY_META,
   filterByTiers,
-  filterByTopic,
+  filterByTopics,
   topicCounts,
   type Quality,
 } from '../promises/model.js';
@@ -22,7 +22,9 @@ import { CORPUS_TERMS } from '../content/promises.generated.js';
  * filter narrows its own counts, or a click would erase the way back.
  */
 export function PromisesPage() {
-  const [topic, setTopic] = useState<string | null>(null);
+  // Topics are multi-select and additive: an empty selection means every topic,
+  // so un-picking the last one is the way back to the whole corpus.
+  const [selectedTopics, setSelectedTopics] = useState<ReadonlySet<string>>(() => new Set());
   const [activeTiers, setActiveTiers] = useState<ReadonlySet<Quality>>(() => new Set(QUALITIES));
 
   // Topics as counted over the shown tiers only: deselect "partial" and "none"
@@ -35,7 +37,14 @@ export function PromisesPage() {
 
   // The bars get the topic filter; the chart applies the tier filter itself, so
   // its legend can still count (and re-show) a tier it is currently hiding.
-  const terms = useMemo(() => filterByTopic(CORPUS_TERMS, topic), [topic]);
+  const terms = useMemo(() => filterByTopics(CORPUS_TERMS, selectedTopics), [selectedTopics]);
+
+  const toggleTopic = (theme: string) => {
+    const next = new Set(selectedTopics);
+    if (next.has(theme)) next.delete(theme);
+    else next.add(theme);
+    setSelectedTopics(next);
+  };
 
   const toggleTier = (q: Quality) => {
     const next = new Set(activeTiers);
@@ -44,9 +53,11 @@ export function PromisesPage() {
     // never leave the chart empty — clicking the last active tier shows all again
     const shown = next.size ? next : new Set(QUALITIES);
     setActiveTiers(shown);
-    // a topic with nothing left in the shown tiers can't stay selected
-    const surviving = topicCounts(filterByTiers(CORPUS_TERMS, shown));
-    if (topic != null && !surviving.some((t) => t.theme === topic)) setTopic(null);
+    // topics with nothing left in the shown tiers drop out of the selection;
+    // if that empties it, the bars widen back to every topic on their own
+    const surviving = new Set(topicCounts(filterByTiers(CORPUS_TERMS, shown)).map((t) => t.theme));
+    const kept = new Set([...selectedTopics].filter((t) => surviving.has(t)));
+    if (kept.size !== selectedTopics.size) setSelectedTopics(kept);
   };
 
   // Which tiers the topic counts are drawn from, when it isn't all of them.
@@ -72,8 +83,8 @@ export function PromisesPage() {
             topics={topics}
             total={topicTotal}
             scope={scope}
-            selected={topic}
-            onSelect={setTopic}
+            selected={selectedTopics}
+            onToggle={toggleTopic}
           />
 
           <hr className="board-rule" />
