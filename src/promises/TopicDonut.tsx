@@ -26,15 +26,21 @@ function arcPath(a0: number, a1: number): string {
  * are two views of the same selection. Slices carry no topic-specific colour
  * (topics aren't a coloured dimension here) — meaning is arc length + the
  * highlight on hover/selection.
+ *
+ * `topics` and `total` are whatever the parent's tier filter leaves, so hiding
+ * a tier re-proportions the donut; `scope` names the tiers being counted when
+ * they are not all of them.
  */
 export function TopicDonut({
   topics,
   total,
+  scope,
   selected,
   onSelect,
 }: {
   topics: TopicCount[];
   total: number;
+  scope: string | null;
   selected: string | null;
   onSelect: (theme: string | null) => void;
 }) {
@@ -42,10 +48,11 @@ export function TopicDonut({
   const active = hovered ?? selected;
 
   // precompute slice angles, starting at 12 o'clock
+  const whole = Math.max(1, total);
   let cursor = -Math.PI / 2;
   const slices = topics.map((t, i) => {
     const a0 = cursor;
-    const a1 = a0 + (t.count / total) * Math.PI * 2;
+    const a1 = a0 + (t.count / whole) * Math.PI * 2;
     cursor = a1;
     return { ...t, a0, a1, i };
   });
@@ -53,7 +60,7 @@ export function TopicDonut({
   const shown = active ? topics.find((t) => t.theme === active) : null;
   const centerLabel = shown ? shown.theme : selected ? selected : 'All topics';
   const centerCount = shown ? shown.count : total;
-  const centerPct = Math.round((centerCount / total) * 100);
+  const centerPct = Math.round((centerCount / whole) * 100);
 
   const toggle = (theme: string) => onSelect(theme === selected ? null : theme);
 
@@ -61,6 +68,7 @@ export function TopicDonut({
     <div className="tp">
       <div className="tp-head">
         <span className="tp-eyebrow">Topics</span>
+        {scope && <span className="tp-scope">{scope} only</span>}
         {selected && (
           <button type="button" className="tp-clear" onClick={() => onSelect(null)}>
             showing “{selected}” · clear ✕
@@ -91,7 +99,7 @@ export function TopicDonut({
                 onClick={() => toggle(s.theme)}
               >
                 <title>
-                  {s.theme}: {s.count} ({Math.round((s.count / total) * 100)}%)
+                  {s.theme}: {s.count} ({Math.round((s.count / whole) * 100)}%)
                 </title>
               </path>
             );

@@ -596,6 +596,12 @@ main {
   cursor: pointer;
 }
 .tp-clear:hover { border-color: var(--series); }
+/* names the tiers the topic counts are drawn from, when they aren't all of them */
+.tp-scope {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
+}
 
 .tp-body {
   display: flex;

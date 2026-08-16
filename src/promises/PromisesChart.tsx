@@ -3,6 +3,7 @@ import {
   QUALITIES,
   QUALITY_META,
   deltaBetween,
+  filterByTiers,
   summarize,
   type CorpusTerm,
   type Quality,
@@ -72,9 +73,20 @@ interface Selection {
   quality: Quality;
 }
 
-export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
+/**
+ * The tier filter is owned by the page, not by this chart: the topic donut
+ * counts the same promises, so both views have to read one shared set.
+ */
+export function PromisesChart({
+  terms,
+  activeTiers,
+  onToggleTier,
+}: {
+  terms: CorpusTerm[];
+  activeTiers: ReadonlySet<Quality>;
+  onToggleTier: (quality: Quality) => void;
+}) {
   const [mode, setMode] = useState<Mode>('absolute');
-  const [activeTiers, setActiveTiers] = useState<Set<Quality>>(() => new Set(QUALITIES));
   const [selected, setSelected] = useState<Selection | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
 
@@ -91,15 +103,6 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
     setSelected((cur) => (cur && activeTiers.has(cur.quality) ? cur : null));
   }, [activeTiers]);
 
-  const toggleTier = (q: Quality) =>
-    setActiveTiers((cur) => {
-      const next = new Set(cur);
-      if (next.has(q)) next.delete(q);
-      else next.add(q);
-      // never leave the chart empty — clicking the last active tier shows all again
-      return next.size ? next : new Set(QUALITIES);
-    });
-
   // Legend counts are the tier totals (unfiltered by tier) so a hidden tier can
   // always be toggled back on; the bars themselves show only the active tiers.
   const totals = useMemo(() => {
@@ -108,10 +111,7 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
     return c;
   }, [terms]);
 
-  const shownTerms = useMemo(
-    () => terms.map((t) => ({ ...t, promises: t.promises.filter((p) => activeTiers.has(p.quality)) })),
-    [terms, activeTiers],
-  );
+  const shownTerms = useMemo(() => filterByTiers(terms, activeTiers), [terms, activeTiers]);
   const summaries = useMemo(() => summarize(shownTerms), [shownTerms]);
   const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
 
@@ -133,7 +133,7 @@ export function PromisesChart({ terms }: { terms: CorpusTerm[] }) {
               className="pc-legend-item"
               data-on={activeTiers.has(q)}
               aria-pressed={activeTiers.has(q)}
-              onClick={() => toggleTier(q)}
+              onClick={() => onToggleTier(q)}
               title={`Show or hide ${QUALITY_META[q].label.toLowerCase()} promises`}
             >
               <span className="pc-swatch" data-q={q} />
