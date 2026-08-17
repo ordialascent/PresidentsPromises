@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   QUALITIES,
   QUALITY_META,
+  VERDICT_PLACEHOLDER,
   deltaBetween,
   filterByTiers,
   summarize,
@@ -121,6 +122,15 @@ export function PromisesChart({
       ? selectedBar.summary.promises.filter((p) => p.quality === selected.quality)
       : [];
   const openPromise = selectedList.find((p) => p.id === openId) ?? null;
+  const verdict = openPromise ? VERDICT_PLACEHOLDER[openPromise.quality] : null;
+
+  // The detail now opens *below* the list, so on a long list it can land past
+  // the fold with nothing on screen to say a click did anything. Bring its top
+  // edge into view — `nearest` so an already-visible panel doesn't jump.
+  const detailRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (openId) detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, [openId]);
 
   return (
     <div className="pc">
@@ -238,8 +248,45 @@ export function PromisesChart({
         ))}
       </svg>
 
-      {openPromise && (
-        <div className="pc-detail" data-q={openPromise.quality}>
+      {selected && selectedBar ? (
+        <div className="pc-list">
+          <div className="pc-list-head">
+            <span>
+              <strong>{selectedBar.summary.label}</strong> ·{' '}
+              <span className="pc-list-q" data-q={selected.quality}>
+                {QUALITY_META[selected.quality].label}
+              </span>{' '}
+              <span className="pc-list-sub">{QUALITY_META[selected.quality].blurb}</span>
+            </span>
+            <button type="button" className="pc-list-close" onClick={() => setSelected(null)}>
+              ✕
+            </button>
+          </div>
+          <ul>
+            {selectedList.map((p) => (
+              <li key={p.id}>
+                <button
+                  type="button"
+                  className="pc-promise"
+                  data-open={openId === p.id}
+                  onClick={() => setOpenId((cur) => (cur === p.id ? null : p.id))}
+                >
+                  <span className="pc-promise-theme">{p.theme}</span>
+                  <span className="pc-promise-text">
+                    {p.restatement}
+                    {p.occurrences.length > 1 && (
+                      <span className="pc-promise-src">promised {p.occurrences.length}×</span>
+                    )}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+
+      {openPromise && verdict && (
+        <div className="pc-detail" data-q={openPromise.quality} ref={detailRef}>
           <div className="pc-detail-top">
             <span className="pc-detail-tier" data-q={openPromise.quality}>
               {QUALITY_META[openPromise.quality].label}
@@ -282,45 +329,21 @@ export function PromisesChart({
               )}
             </div>
           ))}
+
+          {/* Kept-or-broken lives here once the scoring pass exists; for now the
+              tier decides whether there is anything to wait for. */}
+          <hr className="pc-detail-rule" />
+          <div className="pc-verdict" data-q={openPromise.quality}>
+            <div className="pc-verdict-head">
+              <span className="pc-verdict-mark" data-q={openPromise.quality} aria-hidden="true">
+                {verdict.mark}
+              </span>
+              <span className="pc-verdict-label">{verdict.label}</span>
+            </div>
+            <p className="pc-verdict-note">{verdict.note}</p>
+          </div>
         </div>
       )}
-
-      {selected && selectedBar ? (
-        <div className="pc-list">
-          <div className="pc-list-head">
-            <span>
-              <strong>{selectedBar.summary.label}</strong> ·{' '}
-              <span className="pc-list-q" data-q={selected.quality}>
-                {QUALITY_META[selected.quality].label}
-              </span>{' '}
-              <span className="pc-list-sub">{QUALITY_META[selected.quality].blurb}</span>
-            </span>
-            <button type="button" className="pc-list-close" onClick={() => setSelected(null)}>
-              ✕
-            </button>
-          </div>
-          <ul>
-            {selectedList.map((p) => (
-              <li key={p.id}>
-                <button
-                  type="button"
-                  className="pc-promise"
-                  data-open={openId === p.id}
-                  onClick={() => setOpenId((cur) => (cur === p.id ? null : p.id))}
-                >
-                  <span className="pc-promise-theme">{p.theme}</span>
-                  <span className="pc-promise-text">
-                    {p.restatement}
-                    {p.occurrences.length > 1 && (
-                      <span className="pc-promise-src">promised {p.occurrences.length}×</span>
-                    )}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
     </div>
   );
 }

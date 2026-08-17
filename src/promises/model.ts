@@ -22,6 +22,40 @@ export const QUALITY_META: Record<Quality, QualityMeta> = {
   no: { key: 'no', label: 'None', blurb: 'aspirational — no measurable quantity' },
 };
 
+export interface VerdictPlaceholder {
+  /** Short status word, shown next to the mark. */
+  label: string;
+  /** One line saying why that status, in the reader's terms. */
+  note: string;
+  /** Stand-in for the eventual pass/fail glyph. */
+  mark: string;
+}
+
+/**
+ * What the detail panel says under the quotes until the scoring pass exists.
+ * The split is the point: only a *full* promise carries a metric, a threshold
+ * and a deadline, so it is the only tier that can ever be scored against the
+ * record. The other two say so plainly rather than promising an analysis that
+ * is not coming. Replace `full` here when the first verdicts land.
+ */
+export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
+  full: {
+    label: 'Verdict pending',
+    mark: '?',
+    note: 'Metric, threshold and deadline are all on the record, so this promise can be scored against it. That analysis is coming soon.',
+  },
+  partial: {
+    label: 'Not yet in scope',
+    mark: '–',
+    note: 'Scoring starts with the fully verifiable promises. This one is missing a threshold or a deadline, so there is no unambiguous test to run against it.',
+  },
+  no: {
+    label: 'Not in scope',
+    mark: '–',
+    note: 'Nothing here is measurable — no metric, no threshold, no deadline — so there is no record to check it against.',
+  },
+};
+
 /** One term with its promises rolled up by tier. */
 export interface TermSummary {
   key: string;

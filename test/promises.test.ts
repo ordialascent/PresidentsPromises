@@ -6,6 +6,7 @@ import {
 } from '../src/content/promises.generated.js';
 import {
   QUALITIES,
+  VERDICT_PLACEHOLDER,
   deltaBetween,
   filterByTiers,
   filterByTopics,
@@ -198,5 +199,18 @@ describe('promises overview aggregation', () => {
       const totalCountDelta = QUALITIES.reduce((n, q) => n + d[q].count, 0);
       expect(totalCountDelta).toBe(curr.total - prev.total);
     }
+  });
+
+  it('every tier has verification copy, and only full is waiting on a verdict', () => {
+    for (const q of QUALITIES) {
+      const v = VERDICT_PLACEHOLDER[q];
+      expect(v.label).toBeTruthy();
+      expect(v.note).toBeTruthy();
+      expect(v.mark).toBeTruthy();
+    }
+    // the scoring pass starts (and for now, stops) at the fully verifiable tier
+    expect(VERDICT_PLACEHOLDER.full.label).toMatch(/pending/i);
+    expect(VERDICT_PLACEHOLDER.partial.label).toMatch(/scope/i);
+    expect(VERDICT_PLACEHOLDER.no.label).toMatch(/scope/i);
   });
 });
