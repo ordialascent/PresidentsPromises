@@ -22,6 +22,41 @@ export const QUALITY_META: Record<Quality, QualityMeta> = {
   no: { key: 'no', label: 'None', blurb: 'aspirational — no measurable quantity' },
 };
 
+export interface VerdictPlaceholder {
+  /** Short status word, shown next to the mark. */
+  label: string;
+  /** One line saying why that status, in the reader's terms. */
+  note: string;
+  /** Stand-in for the eventual pass/fail glyph. */
+  mark: string;
+}
+
+/**
+ * What the detail panel says under the quotes until the scoring pass exists.
+ * The three differ in kind, not in degree: a *full* promise carries a metric, a
+ * threshold and a deadline, so a verdict is only waiting to be done. A *partial*
+ * one could be scored, but only by supplying the terms it left out — deferred,
+ * not impossible. A promise with *no* measurable quantity has nothing to score
+ * at all. Replace `full` here when the first verdicts land.
+ */
+export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
+  full: {
+    label: 'Verdict pending',
+    mark: '?',
+    note: 'Metric, threshold and deadline are all on the record, so this promise can be scored against it. That analysis is coming soon.',
+  },
+  partial: {
+    label: 'Verdict out of scope (MVP)',
+    mark: '–',
+    note: 'The metric is on the record, but at least one of the threshold and deadline is missing or too vague. Supplying it is a judgement call, and out of scope for the MVP.',
+  },
+  no: {
+    label: 'Verdict infeasible',
+    mark: '–',
+    note: 'Due to the lack of specificity (metric, threshold, deadline), a verdict would require too many assumptions.',
+  },
+};
+
 /** One term with its promises rolled up by tier. */
 export interface TermSummary {
   key: string;

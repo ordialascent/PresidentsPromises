@@ -505,10 +505,13 @@ main {
   border-bottom: 1px solid var(--border);
   font-size: 14px;
 }
+/* Same treatment as the detail's tier chip: the fill colours for partial and
+   none are a light grey and a white, both illegible as text on the panel, so
+   those two borrow the line colours instead. */
 .pc-list-q { font-weight: 600; }
 .pc-list-q[data-q="full"] { color: var(--q-full); }
-.pc-list-q[data-q="partial"] { color: var(--q-partial); }
-.pc-list-q[data-q="no"] { color: var(--q-no); }
+.pc-list-q[data-q="partial"] { color: var(--ink); }
+.pc-list-q[data-q="no"] { color: var(--q-no-line); }
 .pc-list-sub {
   color: var(--dim);
   font-family: var(--font-mono);
@@ -707,7 +710,7 @@ main {
   line-height: 1.5;
 }
 
-/* ---- Promise detail (opens between the chart and the list) ----------- */
+/* ---- Promise detail (opens underneath the promise list) -------------- */
 
 .pc-detail {
   border: 1px solid var(--border);
@@ -833,4 +836,58 @@ main {
 .pc-detail-occ + .pc-detail-occ {
   padding-top: 10px;
   border-top: 1px dashed var(--border);
+}
+
+/* ---- Verification block (below the quotes, inside the detail) -------- */
+
+.pc-detail-rule {
+  width: 100%;
+  margin: 2px 0 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.pc-verdict {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pc-verdict-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.pc-verdict-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--dim);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+/* A full promise is the only one with a verdict on the way, so its mark is the
+   only one that carries the tier colour. */
+.pc-verdict-mark[data-q="full"] {
+  color: var(--q-full);
+  border-color: color-mix(in srgb, var(--q-full) 55%, transparent);
+}
+.pc-verdict-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.pc-verdict-note {
+  margin: 0;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1.5;
 }
