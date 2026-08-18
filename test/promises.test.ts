@@ -208,9 +208,10 @@ describe('promises overview aggregation', () => {
       expect(v.note).toBeTruthy();
       expect(v.mark).toBeTruthy();
     }
-    // the scoring pass starts (and for now, stops) at the fully verifiable tier
+    // the scoring pass starts (and for now, stops) at the fully verifiable tier,
+    // and the two it skips are skipped for different reasons
     expect(VERDICT_PLACEHOLDER.full.label).toMatch(/pending/i);
     expect(VERDICT_PLACEHOLDER.partial.label).toMatch(/scope/i);
-    expect(VERDICT_PLACEHOLDER.no.label).toMatch(/scope/i);
+    expect(VERDICT_PLACEHOLDER.no.label).toMatch(/infeasible/i);
   });
 });

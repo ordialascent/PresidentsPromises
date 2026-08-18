@@ -33,10 +33,11 @@ export interface VerdictPlaceholder {
 
 /**
  * What the detail panel says under the quotes until the scoring pass exists.
- * The split is the point: only a *full* promise carries a metric, a threshold
- * and a deadline, so it is the only tier that can ever be scored against the
- * record. The other two say so plainly rather than promising an analysis that
- * is not coming. Replace `full` here when the first verdicts land.
+ * The three differ in kind, not in degree: a *full* promise carries a metric, a
+ * threshold and a deadline, so a verdict is only waiting to be done. A *partial*
+ * one could be scored, but only by supplying the terms it left out — deferred,
+ * not impossible. A promise with *no* measurable quantity has nothing to score
+ * at all. Replace `full` here when the first verdicts land.
  */
 export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
   full: {
@@ -45,14 +46,14 @@ export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
     note: 'Metric, threshold and deadline are all on the record, so this promise can be scored against it. That analysis is coming soon.',
   },
   partial: {
-    label: 'Not yet in scope',
+    label: 'Verdict out of scope (MVP)',
     mark: '–',
-    note: 'Scoring starts with the fully verifiable promises. This one is missing a threshold or a deadline, so there is no unambiguous test to run against it.',
+    note: 'The metric is on the record, but at least one of the threshold and deadline is missing or too vague. Supplying it is a judgement call, and out of scope for the MVP.',
   },
   no: {
-    label: 'Not in scope',
+    label: 'Verdict infeasible',
     mark: '–',
-    note: 'Nothing here is measurable — no metric, no threshold, no deadline — so there is no record to check it against.',
+    note: 'Due to the lack of specificity (metric, threshold, deadline), a verdict would require too many assumptions.',
   },
 };
 
