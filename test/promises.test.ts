@@ -13,6 +13,7 @@ import {
   share,
   summarize,
   topicCounts,
+  topicCountsIn,
 } from '../src/promises/model.js';
 
 /**
@@ -153,22 +154,35 @@ describe('promises overview aggregation', () => {
     );
   });
 
-  it('the topic legend is the whole corpus, whatever the levels below it do', () => {
-    // Topics sit at the top of the filter hierarchy: the tier legend counts what
-    // the topics leave, never the other way round. So the donut a reader picks
-    // from is fixed — same topics, same order, same numbers, always — and no
-    // click further down can move a chip out from under the cursor.
-    const all = topicCounts(CORPUS_TERMS);
+  it('the topic legend keeps every topic, and its order, as the category filter moves', () => {
+    const order = topicCounts(CORPUS_TERMS).map((t) => t.theme);
     for (const q of QUALITIES) {
-      const narrowed = filterByTiers(CORPUS_TERMS, new Set([q]));
-      // the tier filter changes what the *bars* draw…
-      expect(summarize(narrowed).reduce((n, s) => n + s.total, 0)).toBeLessThan(
-        CORPUS_PROMISE_COUNT,
+      const listed = topicCountsIn(filterByTiers(CORPUS_TERMS, new Set([q])), order);
+      // same topics, same positions — only the numbers move, so nothing reflows
+      expect(listed.map((t) => t.theme)).toEqual(order);
+      // the ones this tier has nothing for are present at zero, not missing
+      const live = new Set(
+        topicCounts(filterByTiers(CORPUS_TERMS, new Set([q]))).map((t) => t.theme),
       );
-      // …and leaves the topic list the page renders untouched
-      expect(topicCounts(CORPUS_TERMS)).toEqual(all);
+      for (const t of listed) expect(t.count === 0).toBe(!live.has(t.theme));
+      expect(listed.reduce((n, t) => n + t.count, 0)).toBe(
+        CORPUS_TERMS.flatMap((x) => x.promises).filter((p) => p.quality === q).length,
+      );
     }
-    expect(all.reduce((n, t) => n + t.count, 0)).toBe(CORPUS_PROMISE_COUNT);
+    // with every tier shown it is exactly the unfiltered list again
+    expect(topicCountsIn(CORPUS_TERMS, order)).toEqual(topicCounts(CORPUS_TERMS));
+
+    // Why a greyed chip must not stay in the topic selection: it has nothing to
+    // filter to, so the two filters together would leave the reader an empty
+    // board with a chip they can no longer click off. The page drops such a
+    // topic from the selection as the category filter empties it.
+    for (const q of QUALITIES) {
+      const tier = filterByTiers(CORPUS_TERMS, new Set([q]));
+      for (const t of topicCountsIn(tier, order).filter((x) => x.count === 0)) {
+        const both = summarize(filterByTopics(tier, new Set([t.theme])));
+        expect(both.reduce((n, s) => n + s.total, 0)).toBe(0);
+      }
+    }
   });
 
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {

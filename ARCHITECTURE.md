@@ -50,41 +50,55 @@ and checks the indeterminate path.
 - The site reads the committed snapshot at build time; it does not fetch a
   verdict-bearing figure live at render time. Git history is the as-of log.
 
-## One filter state, four views, one direction
+## One filter state, four views
 
-The board's page owns every filter — selected topics, shown tiers, the picked
-bar block, the search text — and the donut, the tier legend, the chart and the
-promise list are all renderings of it. None of them filters itself.
+The board's page owns every filter — selected topics, picked categories, the
+picked bar block, the search text — and the donut, the category legend, the
+chart and the promise list are all renderings of it. None of them filters
+itself.
 
-The filters are a **hierarchy**, and it only ever runs downward:
+They narrow in this order:
 
 ```
 topics  →  categories (tiers)  →  bar blocks  →  search
 ```
 
-Each level counts what the levels above it leave, and is blind to the levels
-below. The donut is always the whole corpus by topic; the category legend counts
-the selected topics; the bars draw those promises in the picked categories; the
-search box narrows the list and nothing else. So no filter can change the numbers
-a reader chose it by, and the way back is always where they left it. (An earlier
-version had topics and tiers cross-filtering each other — each re-counted by the
-other — which meant a click could move the chip you were about to click next.)
+The first two **count each other**, and that is deliberate: a category with no
+promises on a topic should not offer that topic, and a topic with none in a
+category should not offer that category. So the donut counts what the category
+filter leaves — picking "full" re-proportions the ring and greys the topics that
+tier has nothing for — while the legend counts what the topic filter leaves.
 
-Every level also filters the *same way round*: a click narrows to what you
-clicked, clicking it again releases it, and an empty selection means all of it.
-Topics and categories are then the same gesture with the same way back. (The
-category legend used to be the odd one out, inherited from when the chart was
-the whole feature: it was a visibility toggle, so clicking "Partial" showed
-everything *except* partial.)
+The rule that keeps this from eating itself: **a view never narrows its own
+counts.** The donut is counted over categories only, the legend over topics
+only. Narrow your own counts and the click that got you there disappears, so
+there is no way back.
+
+Two things follow, and both are load-bearing:
+
+- The legend's *shape* is fixed against the movement — a topic the categories
+  have emptied stays in place at zero, greyed and unpickable, and every count is
+  padded to the corpus's widest, so only the numbers ever change. A chip must
+  never move out from under the cursor that is about to click it.
+- A greyed chip must never still be filtering. When a category empties a topic
+  that is currently picked, the page drops it from the selection — otherwise the
+  reader is left with an unclickable control holding the board empty.
+
+The last two levels only ever narrow downward. A bar block picks one president's
+share of what the filters above leave, and the search box narrows the list
+alone: it is the reader's own question, not a claim about the corpus, so it must
+not re-proportion the donut or re-scale the bars behind it.
 
 The list underneath the chart is the standing view: it starts with **every**
-promise and the levels above narrow it. That is the inversion of the earlier
+promise and everything above narrows it. That is the inversion of the earlier
 flow, where the promises existed only inside a bar block and a click was the
 only way to see any of them.
 
-The one exception runs upward, and only to keep the state honest: a bar block
-the levels above it have emptied is no longer drawn, so the page drops that
-selection rather than leave a filter with no visible switch.
+Every control also filters the *same way round*: a click narrows to what you
+clicked, clicking it again releases it, and an empty selection means all of it.
+(The category legend used to be the odd one out, inherited from when the chart
+was the whole feature: it was a visibility toggle, so clicking "Partial" showed
+everything *except* partial.)
 
 ## The content model (shallow on purpose)
 
@@ -120,6 +134,8 @@ benefit at this stage. Revisit if and when a second consumer actually appears.
   promises to justify one.
 - Picking a default knob position that presents one reading as *the* answer. The
   readings are shown together precisely so no single cell carries that weight.
-- Letting a filter re-count a level above it in the board's hierarchy. It reads
-  as helpful ("show me the topic mix of what's left") and costs the reader the
-  fixed frame they were navigating by.
+- Letting one of the board's views narrow its own counts. Topics and categories
+  count each other so that neither offers a dead end; the moment either one also
+  counts itself, the chip you clicked reads zero and the way back is gone.
+- Letting the legend reflow — re-sorting it, dropping an emptied chip, or
+  letting a count's width change — while a filter moves.

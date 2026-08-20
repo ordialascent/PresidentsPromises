@@ -698,6 +698,22 @@ main {
   text-transform: uppercase;
   color: var(--dim);
 }
+/* caption under the donut: which categories the topic counts are drawn from,
+   shown only when they aren't all of them. It keeps its line when empty
+   (visibility, not display) so the legend below never shifts. */
+.tp-scope {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
+  margin-top: -6px;
+  /* Fixed box, not min-height: an empty caption's line box is 1em, a filled
+     one's is line-height, and the 2px between them nudged the whole legend
+     down as the caption appeared. */
+  line-height: 14px;
+  height: 14px;
+}
+.tp-scope[data-on='false'] { visibility: hidden; }
+
 .tp-body {
   display: flex;
   flex-direction: column;
@@ -780,6 +796,17 @@ main {
   color: var(--ink);
   border-color: var(--topic);
   background: color-mix(in srgb, var(--topic) 14%, transparent);
+}
+/* emptied by the category filter: still there, holding its place in the row,
+   but plainly out of play — nothing to filter to */
+.tp-chip[data-empty="true"],
+.tp-chip[data-empty="true"] .tp-chip-n {
+  color: color-mix(in srgb, var(--dim) 45%, var(--panel));
+}
+.tp-chip[data-empty="true"] {
+  border-color: color-mix(in srgb, var(--border) 55%, var(--panel));
+  background: transparent;
+  cursor: default;
 }
 .tp-chip-n {
   color: var(--ink);
