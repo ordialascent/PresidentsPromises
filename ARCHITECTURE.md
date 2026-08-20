@@ -16,6 +16,10 @@ src/
   content/      the domain. types.ts (Topic, PromiseSpec, Term), one file per
                 topic (deficit.ts), and index.ts as a plain registry.
   data/         snapshot.ts parses the committed append-only CSV.
+  promises/     the front-page board: the donut, the stacked chart, and the
+                searchable list of every promise. fuzzy.ts is a domain-neutral
+                string matcher; search.ts is the policy that ranks promises
+                with it.
   components/   app-specific views (the reading grid).
   App.tsx       renders one topic and one of its promises.
 data/           the append-only snapshot + its provenance docs.
@@ -45,6 +49,19 @@ and checks the indeterminate path.
   `retrieved_at`, `retrieval_method` are columns, not facts about the file).
 - The site reads the committed snapshot at build time; it does not fetch a
   verdict-bearing figure live at render time. Git history is the as-of log.
+
+## One filter state, four views
+
+The board's page owns every filter — selected topics, shown tiers, the picked
+bar block, the search text — and the donut, the tier legend, the chart and the
+promise list are all renderings of it. None of them filters itself.
+
+The list underneath the chart is the standing view: it starts with **every**
+promise and the others narrow it. That is the inversion of the earlier flow,
+where the promises existed only inside a bar block and a click was the only way
+to see any of them. The search box narrows the list alone — it is the reader's
+question, not a claim about the corpus, so it must not silently re-proportion
+the donut or re-scale the bars behind it.
 
 ## The content model (shallow on purpose)
 

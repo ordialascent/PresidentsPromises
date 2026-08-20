@@ -74,6 +74,49 @@ export interface TopicCount {
   count: number;
 }
 
+/**
+ * One promise carrying the term it was made in. The chart reads promises
+ * *grouped* by term (that grouping is the bars); the list reads them flat, one
+ * row per promise across every president, so each row has to say whose it is.
+ */
+export interface PromiseRow {
+  promise: CorpusPromise;
+  termKey: string;
+  /** Bar label, e.g. "Obama 2008". */
+  termLabel: string;
+  surname: string;
+  speechYear: number | null;
+}
+
+/**
+ * Every promise in `terms` as a flat list, in corpus order — terms are
+ * chronological, so the list reads oldest-first with no further sorting. This is
+ * the shape the searchable list wants, and it is derived, never stored: the
+ * grouped corpus stays the one representation.
+ */
+export function flattenPromises(terms: CorpusTerm[]): PromiseRow[] {
+  return terms.flatMap((t) =>
+    t.promises.map((promise) => ({
+      promise,
+      termKey: t.key,
+      termLabel: t.label,
+      surname: t.surname,
+      speechYear: t.speechYear,
+    })),
+  );
+}
+
+/** The promises of one president in one tier — what clicking a bar block means. */
+export function filterBySegment(
+  rows: PromiseRow[],
+  segment: { termKey: string; quality: Quality } | null,
+): PromiseRow[] {
+  if (!segment) return rows;
+  return rows.filter(
+    (r) => r.termKey === segment.termKey && r.promise.quality === segment.quality,
+  );
+}
+
 /** Terms carrying only the promises whose tier is in `tiers`. */
 export function filterByTiers(terms: CorpusTerm[], tiers: ReadonlySet<Quality>): CorpusTerm[] {
   return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => tiers.has(p.quality)) }));

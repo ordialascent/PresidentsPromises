@@ -490,53 +490,138 @@ main {
   line-height: 1.5;
 }
 
-.pc-list {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--panel);
-  overflow: hidden;
+/* ---- Promise list (the standing view: every promise, searchable) ----- */
+
+.pl {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.pc-list-head {
+
+.pl-search {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--border);
-  font-size: 14px;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: 0 10px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
 }
-/* Same treatment as the detail's tier chip: the fill colours for partial and
-   none are a light grey and a white, both illegible as text on the panel, so
-   those two borrow the line colours instead. */
-.pc-list-q { font-weight: 600; }
-.pc-list-q[data-q="full"] { color: var(--q-full); }
-.pc-list-q[data-q="partial"] { color: var(--ink); }
-.pc-list-q[data-q="no"] { color: var(--q-no-line); }
-.pc-list-sub {
+.pl-search:focus-within {
+  border-color: var(--series);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--series) 12%, transparent);
+}
+.pl-search-icon {
   color: var(--dim);
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 17px;
+  line-height: 1;
 }
-.pc-list-close {
-  background: transparent;
+.pl-search-input {
+  flex: 1;
+  min-width: 0;
   border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  padding: 11px 0;
+}
+.pl-search-input::placeholder {
+  color: var(--dim);
+  opacity: 0.85;
+}
+/* the browser's own search affordance duplicates the clear button */
+.pl-search-input::-webkit-search-cancel-button { display: none; }
+.pl-search-clear {
+  border: 0;
+  background: transparent;
   color: var(--dim);
   cursor: pointer;
-  font-size: 14px;
-  padding: 2px 6px;
+  font-size: 13px;
+  padding: 4px 2px;
 }
-.pc-list ul {
+.pl-search-clear:hover { color: var(--ink); }
+
+.pl-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--dim);
+}
+.pl-count { font-variant-numeric: tabular-nums; }
+.pl-count strong { color: var(--ink); }
+/* a filter switched on in another view, and its off switch */
+.pl-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--topic) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--topic) 55%, transparent);
+  border-radius: 999px;
+  padding: 3px 9px;
+  cursor: pointer;
+}
+.pl-filter:hover { border-color: var(--topic); }
+.pl-filter-x { color: var(--dim); }
+.pl-filter:hover .pl-filter-x { color: var(--topic); }
+.pl-reset {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  cursor: pointer;
+  padding: 3px 2px;
+}
+.pl-reset:hover { text-decoration: underline; }
+
+.pl-empty {
   margin: 0;
-  padding: 6px;
+  padding: 22px 4px;
+  color: var(--dim);
+  font-size: 14px;
+  text-align: center;
+}
+.pl-link {
+  border: 0;
+  background: transparent;
+  color: var(--series);
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* Long by design — it holds the whole corpus — so it scrolls in place and the
+   search box above it stays put while the reader types. */
+.pl-rows {
+  margin: 0;
+  padding: 4px;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2px;
+  max-height: 62vh;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
 }
-.pc-promise {
+.pl-item { display: flex; flex-direction: column; gap: 6px; }
+
+.pl-row {
   width: 100%;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: baseline;
   padding: 9px 10px;
   background: transparent;
@@ -546,29 +631,65 @@ main {
   cursor: pointer;
   text-align: left;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.45;
 }
-.pc-promise:hover {
+.pl-row:hover {
   background: color-mix(in srgb, var(--series) 10%, transparent);
 }
-.pc-promise-theme {
+.pl-row[data-open="true"] {
+  background: color-mix(in srgb, var(--series) 14%, transparent);
+}
+/* the tier as a swatch, so the row carries the same colour coding as its bar */
+.pl-row-tier {
   flex: 0 0 auto;
+  align-self: center;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(43, 33, 23, 0.28);
+}
+.pl-row-tier[data-q="full"] { background: var(--q-full); }
+.pl-row-tier[data-q="partial"] { background: var(--q-partial); }
+.pl-row-tier[data-q="no"] { background: var(--q-no); }
+.pl-row-who {
+  flex: 0 0 auto;
+  min-width: 96px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+.pl-row-theme {
+  flex: 0 0 auto;
+  min-width: 88px;
   font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--dim);
-  min-width: 92px;
 }
-.pc-promise-text { flex: 1; }
-
-.pc-promise-src {
-  display: block;
+.pl-row-text { flex: 1; min-width: 0; }
+.pl-row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 2px;
   font-family: var(--font-mono);
   font-size: 10.5px;
   color: var(--dim);
 }
+.pl-row-q[data-q="full"] { color: var(--q-full); }
+.pl-row-q[data-q="partial"] { color: var(--q-partial-line); }
+.pl-row-q[data-q="no"] { color: var(--q-no-line); }
+.pl-row-n { opacity: 0.9; }
+/* what the fuzzy match actually landed on */
+.pl-row mark {
+  background: color-mix(in srgb, var(--target) 42%, transparent);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.pl-detail { padding: 0 10px 8px; }
 
 /* ---- Topic donut ---------------------------------------------------- */
 
@@ -812,11 +933,6 @@ main {
   border-bottom: 1px solid color-mix(in srgb, var(--series) 40%, transparent);
 }
 .pc-detail-cite a:hover { border-bottom-color: var(--series); }
-
-.pc-promise[data-open="true"] {
-  background: color-mix(in srgb, var(--series) 16%, transparent);
-  box-shadow: inset 2px 0 0 var(--series);
-}
 
 .pc-detail-count {
   font-family: var(--font-mono);
