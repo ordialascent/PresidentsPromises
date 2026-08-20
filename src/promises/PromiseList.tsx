@@ -35,6 +35,11 @@ function Marked({ text, indices }: { text: string; indices: readonly number[] })
  * standing view — it starts complete — and the chart, the donut and the tier
  * legend are ways of narrowing it. Nothing here filters anything; the board
  * owns every filter, so the same click means the same thing in all three views.
+ *
+ * Opening a promise opens one panel underneath the whole list, not a panel
+ * between the rows: an expander shoves every promise below it down the page,
+ * and the list is the thing the reader is scanning. The open row keeps a marker
+ * so it stays tied to the panel it belongs to.
  */
 export function PromiseList({
   hits,
@@ -54,13 +59,18 @@ export function PromiseList({
 }) {
   const [openId, setOpenId] = useState<string | null>(null);
 
-  // The detail opens *under* its row, so on a long list it can land below the
-  // fold with nothing on screen to say the click did anything. Bring its top
-  // edge in — `nearest`, so an already-visible panel doesn't jump.
+  // The open promise, resolved against what the filters currently leave: filter
+  // it away and its detail closes with it, rather than describing a promise the
+  // list no longer shows.
+  const openPromise = hits.find((h) => h.row.promise.id === openId)?.row.promise ?? null;
+
+  // The detail sits under the whole list, so it can open well past the fold
+  // with nothing on screen to say the click did anything. Bring its top edge in
+  // — `nearest`, so an already-visible panel doesn't jump.
   const detailRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    if (openId) detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, [openId]);
+    if (openPromise) detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, [openPromise]);
 
   const filtered = filters.length > 0 || query.trim() !== '';
 
@@ -137,7 +147,7 @@ export function PromiseList({
             const p = hit.row.promise;
             const open = openId === p.id;
             return (
-              <li key={p.id} className="pl-item">
+              <li key={p.id}>
                 <button
                   type="button"
                   className="pl-row"
@@ -171,15 +181,16 @@ export function PromiseList({
                     </span>
                   </span>
                 </button>
-                {open && (
-                  <div className="pl-detail" ref={detailRef}>
-                    <PromiseDetail promise={p} onClose={() => setOpenId(null)} />
-                  </div>
-                )}
               </li>
             );
           })}
         </ul>
+      )}
+
+      {openPromise && (
+        <div className="pl-detail" ref={detailRef}>
+          <PromiseDetail promise={openPromise} onClose={() => setOpenId(null)} />
+        </div>
       )}
     </div>
   );

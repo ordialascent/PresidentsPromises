@@ -601,22 +601,17 @@ main {
   text-decoration: underline;
 }
 
-/* Long by design — it holds the whole corpus — so it scrolls in place and the
-   search box above it stays put while the reader types. */
+/* The whole corpus, running down the page — no inner box and no scroller of its
+   own. The board is already a card; a second bordered, scrolling panel inside it
+   pens the promises in and puts a second scrollbar in the reader's way. */
 .pl-rows {
   margin: 0;
-  padding: 4px;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  max-height: 62vh;
-  overflow-y: auto;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--panel);
 }
-.pl-item { display: flex; flex-direction: column; gap: 6px; }
 
 .pl-row {
   width: 100%;
@@ -636,8 +631,12 @@ main {
 .pl-row:hover {
   background: color-mix(in srgb, var(--series) 10%, transparent);
 }
+/* the panel is at the foot of the list, so the open row has to hold its own
+   marker — otherwise, once you have scrolled to the detail, nothing says which
+   promise it belongs to */
 .pl-row[data-open="true"] {
-  background: color-mix(in srgb, var(--series) 14%, transparent);
+  background: color-mix(in srgb, var(--series) 16%, transparent);
+  box-shadow: inset 2px 0 0 var(--series);
 }
 .pl-row-who {
   flex: 0 0 auto;
@@ -677,7 +676,8 @@ main {
   border-radius: 2px;
   padding: 0 1px;
 }
-.pl-detail { padding: 0 10px 8px; }
+/* one panel under the whole list, never between the rows */
+.pl-detail { scroll-margin-top: 12px; }
 
 /* ---- Topic donut ---------------------------------------------------- */
 
