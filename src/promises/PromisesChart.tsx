@@ -68,6 +68,19 @@ function fmtDelta(value: number, mode: Mode): string {
   return `${value > 0 ? '+' : value < 0 ? '−' : '±'}${Math.abs(value)}`;
 }
 
+/**
+ * What clicking a legend category will do from here. The categories filter *to*
+ * what you click, like every other control on the board — so the hint has to say
+ * which way the next click moves, given that all three lit means "no category
+ * picked" rather than "all three picked".
+ */
+function legendHint(q: Quality, active: ReadonlySet<Quality>): string {
+  const name = QUALITY_META[q].label.toLowerCase();
+  if (active.size === QUALITIES.length) return `Show only ${name} promises`;
+  if (!active.has(q)) return `Add ${name} promises`;
+  return active.size === 1 ? 'Show every category again' : `Remove ${name} promises`;
+}
+
 /** One bar block: one president's promises in one tier. */
 export interface Segment {
   termKey: string;
@@ -95,8 +108,9 @@ export function PromisesChart({
 }) {
   const [mode, setMode] = useState<Mode>('absolute');
 
-  // Legend counts are the tier totals (unfiltered by tier) so a hidden tier can
-  // always be toggled back on; the bars themselves show only the active tiers.
+  // Legend counts are the tier totals over the topics above, never narrowed by
+  // the category selection itself — so a category left out of the filter still
+  // shows what picking it would get you, and can always be picked back.
   const totals = useMemo(() => {
     const c: Record<Quality, number> = { full: 0, partial: 0, no: 0 };
     for (const t of terms) for (const p of t.promises) c[p.quality] += 1;
@@ -119,7 +133,7 @@ export function PromisesChart({
               data-on={activeTiers.has(q)}
               aria-pressed={activeTiers.has(q)}
               onClick={() => onToggleTier(q)}
-              title={`Show or hide ${QUALITY_META[q].label.toLowerCase()} promises`}
+              title={legendHint(q, activeTiers)}
             >
               <span className="pc-swatch" data-q={q} />
               {QUALITY_META[q].label}

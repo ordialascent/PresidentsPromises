@@ -43,9 +43,9 @@ const COUNT_WIDTH = String(Math.max(...CORPUS_TOPICS.map((t) => t.count))).lengt
  * what the levels below it do:
  *
  * - the donut always shows the whole corpus by topic;
- * - the tier legend counts the promises on the selected topics;
- * - the bars draw those promises in the shown tiers, and a block picks one
- *   president's share of them;
+ * - the category legend counts the promises on the selected topics;
+ * - the bars draw those promises in the picked categories, and a block picks
+ *   one president's share of them;
  * - the search box narrows the list alone, and nothing else.
  *
  * So a click only ever moves the levels underneath it. That is what makes the
@@ -57,16 +57,23 @@ export function PromisesPage() {
   // Topics are multi-select and additive: an empty selection means every topic,
   // so un-picking the last one is the way back to the whole corpus.
   const [selectedTopics, setSelectedTopics] = useState<ReadonlySet<string>>(() => new Set());
-  const [activeTiers, setActiveTiers] = useState<ReadonlySet<Quality>>(() => new Set(QUALITIES));
+  // Tiers work exactly like topics — a click picks that category, and an empty
+  // selection means all of them. `activeTiers` is what the chart draws, so the
+  // legend still lights all three at rest.
+  const [selectedTiers, setSelectedTiers] = useState<ReadonlySet<Quality>>(() => new Set());
+  const activeTiers = useMemo<ReadonlySet<Quality>>(
+    () => (selectedTiers.size ? selectedTiers : new Set(QUALITIES)),
+    [selectedTiers],
+  );
   // One bar block — a president crossed with a tier. Single-select: it is a
   // pointer at one cell of the chart, so a second click elsewhere moves it.
   const [segment, setSegment] = useState<Segment | null>(null);
   const [query, setQuery] = useState('');
 
   // Level 2 — the promises on the selected topics. The chart takes these and
-  // applies the tier filter itself, so its legend can still count (and re-show)
-  // a tier it is currently hiding: a level narrows what is below it, never the
-  // switch that got you there.
+  // applies the category filter itself, so its legend still counts what picking
+  // a category *would* get you, even one currently left out: a level narrows
+  // what is below it, never the switch that got you there.
   const terms = useMemo(() => filterByTopics(CORPUS_TERMS, selectedTopics), [selectedTopics]);
 
   // Levels 3 and 4 — the shown tiers, then the picked block, then ranked against
@@ -97,11 +104,12 @@ export function PromisesPage() {
   };
 
   const toggleTier = (q: Quality) => {
-    const next = new Set(activeTiers);
+    const next = new Set(selectedTiers);
     if (next.has(q)) next.delete(q);
     else next.add(q);
-    // never leave the chart empty — clicking the last active tier shows all again
-    setActiveTiers(next.size ? next : new Set(QUALITIES));
+    // picking every category is the same as picking none: both mean all of
+    // them, so the chart is never left empty and there is always a way back
+    setSelectedTiers(next.size === QUALITIES.length ? new Set() : next);
     // the topic selection is a level above, and is left exactly as it was
   };
 
@@ -119,13 +127,13 @@ export function PromisesPage() {
         onClear: () => toggleTopic(theme),
       });
     }
-    if (activeTiers.size !== QUALITIES.length) {
+    if (selectedTiers.size > 0) {
       chips.push({
         key: 'tiers',
-        label: `${QUALITIES.filter((q) => activeTiers.has(q))
+        label: `${QUALITIES.filter((q) => selectedTiers.has(q))
           .map((q) => QUALITY_META[q].label.toLowerCase())
           .join(' + ')} only`,
-        onClear: () => setActiveTiers(new Set(QUALITIES)),
+        onClear: () => setSelectedTiers(new Set()),
       });
     }
     if (segment) {
@@ -137,11 +145,11 @@ export function PromisesPage() {
       });
     }
     return chips;
-  }, [selectedTopics, activeTiers, segment]);
+  }, [selectedTopics, selectedTiers, segment]);
 
   const clearAll = () => {
     setSelectedTopics(new Set());
-    setActiveTiers(new Set(QUALITIES));
+    setSelectedTiers(new Set());
     setSegment(null);
     setQuery('');
   };

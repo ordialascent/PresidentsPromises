@@ -63,12 +63,19 @@ topics  →  categories (tiers)  →  bar blocks  →  search
 ```
 
 Each level counts what the levels above it leave, and is blind to the levels
-below. The donut is always the whole corpus by topic; the tier legend counts the
-selected topics; the bars draw those promises in the shown tiers; the search box
-narrows the list and nothing else. So no filter can change the numbers a reader
-chose it by, and the way back is always where they left it. (An earlier version
-had topics and tiers cross-filtering each other — each re-counted by the other —
-which meant a click could move the chip you were about to click next.)
+below. The donut is always the whole corpus by topic; the category legend counts
+the selected topics; the bars draw those promises in the picked categories; the
+search box narrows the list and nothing else. So no filter can change the numbers
+a reader chose it by, and the way back is always where they left it. (An earlier
+version had topics and tiers cross-filtering each other — each re-counted by the
+other — which meant a click could move the chip you were about to click next.)
+
+Every level also filters the *same way round*: a click narrows to what you
+clicked, clicking it again releases it, and an empty selection means all of it.
+Topics and categories are then the same gesture with the same way back. (The
+category legend used to be the odd one out, inherited from when the chart was
+the whole feature: it was a visibility toggle, so clicking "Partial" showed
+everything *except* partial.)
 
 The list underneath the chart is the standing view: it starts with **every**
 promise and the levels above narrow it. That is the inversion of the earlier
