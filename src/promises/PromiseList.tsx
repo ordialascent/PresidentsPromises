@@ -74,7 +74,7 @@ export function PromiseList({
           className="pl-search-input"
           type="search"
           value={query}
-          placeholder="Search every promise — topic, wording, president, or a phrase from the speech"
+          placeholder="Search"
           aria-label="Search promises"
           autoComplete="off"
           spellCheck={false}
@@ -145,7 +145,6 @@ export function PromiseList({
                   aria-expanded={open}
                   onClick={() => setOpenId((cur) => (cur === p.id ? null : p.id))}
                 >
-                  <span className="pl-row-tier" data-q={p.quality} aria-hidden="true" />
                   <span className="pl-row-who">
                     <Marked
                       text={

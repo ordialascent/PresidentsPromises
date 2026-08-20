@@ -11,16 +11,15 @@ import {
   filterByTopics,
   flattenPromises,
   topicCounts,
-  topicCountsIn,
   type Quality,
 } from '../promises/model.js';
 import { CORPUS_PROMISE_COUNT, CORPUS_TERMS } from '../content/promises.generated.js';
 
 /**
- * Every topic in the corpus, ordered once by its unfiltered size. The legend is
- * drawn from this fixed list so that hiding a tier only ever changes the numbers
- * on the chips — it never removes one or re-sorts the rows, which would shove
- * the whole page around under the reader's cursor.
+ * Every topic in the corpus, counted and ordered once. Topics sit at the top of
+ * the filter hierarchy, so nothing below them may re-count or re-order this
+ * list: the donut and its legend are the same shape on every render, and a chip
+ * never moves out from under the reader's cursor.
  */
 const CORPUS_TOPICS = topicCounts(CORPUS_TERMS);
 const TOPIC_ORDER = CORPUS_TOPICS.map((t) => t.theme);
@@ -38,13 +37,21 @@ const COUNT_WIDTH = String(Math.max(...CORPUS_TOPICS.map((t) => t.count))).lengt
  * per president, split by how measurable each promise is. The point is not a
  * scorecard — it is how much of what candidates promise can even be checked.
  *
- * Every filter — topic, tier, bar block, search text — lives here, because all
- * four views read the same promises. Two consequences the layout depends on:
- * the donut and the legend cross-filter (each counts what the *other* leaves,
- * and neither narrows its own counts, or a click would erase the way back), and
- * the list below the chart is what all of them narrow. The promises are no
- * longer hidden inside a bar block waiting for a click — they are the standing
- * view, and the chart is one way of pointing at part of it.
+ * Every filter lives here, because all four views read the same promises, and
+ * they form a hierarchy — **topics, then categories (tiers), then bar blocks,
+ * then search**. Each level counts what the levels *above* it leave, and never
+ * what the levels below it do:
+ *
+ * - the donut always shows the whole corpus by topic;
+ * - the tier legend counts the promises on the selected topics;
+ * - the bars draw those promises in the shown tiers, and a block picks one
+ *   president's share of them;
+ * - the search box narrows the list alone, and nothing else.
+ *
+ * So a click only ever moves the levels underneath it. That is what makes the
+ * way back obvious: no filter can quietly change the numbers you chose it by,
+ * and the promises are no longer hidden inside a bar block waiting for a click
+ * — they are the standing view, and every level above is a way to narrow it.
  */
 export function PromisesPage() {
   // Topics are multi-select and additive: an empty selection means every topic,
@@ -56,23 +63,16 @@ export function PromisesPage() {
   const [segment, setSegment] = useState<Segment | null>(null);
   const [query, setQuery] = useState('');
 
-  // Topics as counted over the shown tiers only: deselect "partial" and "none"
-  // and the donut is the topic mix of the full promises alone. Topics with
-  // nothing left stay in the list at zero — greyed out, not gone.
-  const topics = useMemo(
-    () => topicCountsIn(filterByTiers(CORPUS_TERMS, activeTiers), TOPIC_ORDER),
-    [activeTiers],
-  );
-  const topicTotal = useMemo(() => topics.reduce((n, t) => n + t.count, 0), [topics]);
-
-  // The bars get the topic filter; the chart applies the tier filter itself, so
-  // its legend can still count (and re-show) a tier it is currently hiding.
+  // Level 2 — the promises on the selected topics. The chart takes these and
+  // applies the tier filter itself, so its legend can still count (and re-show)
+  // a tier it is currently hiding: a level narrows what is below it, never the
+  // switch that got you there.
   const terms = useMemo(() => filterByTopics(CORPUS_TERMS, selectedTopics), [selectedTopics]);
 
-  // What the list draws from: both filters applied, then the picked bar block,
-  // then ranked against the search box. The search is last and narrows only the
-  // list — it is the reader's own question, not a claim about the corpus, so it
-  // must not silently re-proportion the donut or re-scale the bars behind it.
+  // Levels 3 and 4 — the shown tiers, then the picked block, then ranked against
+  // the search box. Search sits at the bottom on purpose: it is the reader's own
+  // question, not a claim about the corpus, so it narrows the list and nothing
+  // else — it must not re-proportion the donut or re-scale the bars above it.
   const shownTerms = useMemo(() => filterByTiers(terms, activeTiers), [terms, activeTiers]);
   const rows = useMemo(
     () => filterBySegment(flattenPromises(shownTerms), segment),
@@ -101,14 +101,8 @@ export function PromisesPage() {
     if (next.has(q)) next.delete(q);
     else next.add(q);
     // never leave the chart empty — clicking the last active tier shows all again
-    const shown = next.size ? next : new Set(QUALITIES);
-    setActiveTiers(shown);
-    // topics with nothing left in the shown tiers drop out of the selection —
-    // their chip stays put, just greyed and unpickable — and if that empties the
-    // selection, the bars widen back to every topic on their own
-    const surviving = new Set(topicCounts(filterByTiers(CORPUS_TERMS, shown)).map((t) => t.theme));
-    const kept = new Set([...selectedTopics].filter((t) => surviving.has(t)));
-    if (kept.size !== selectedTopics.size) setSelectedTopics(kept);
+    setActiveTiers(next.size ? next : new Set(QUALITIES));
+    // the topic selection is a level above, and is left exactly as it was
   };
 
   // Every narrowing currently in force, said in words above the list. The chart
@@ -152,14 +146,6 @@ export function PromisesPage() {
     setQuery('');
   };
 
-  // Which tiers the topic counts are drawn from, when it isn't all of them.
-  const scope =
-    activeTiers.size === QUALITIES.length
-      ? null
-      : QUALITIES.filter((q) => activeTiers.has(q))
-          .map((q) => QUALITY_META[q].label.toLowerCase())
-          .join(' + ');
-
   return (
     <div className="page">
       <header className="masthead">
@@ -172,10 +158,9 @@ export function PromisesPage() {
       <main>
         <section className="board">
           <TopicDonut
-            topics={topics}
-            total={topicTotal}
+            topics={CORPUS_TOPICS}
+            total={CORPUS_PROMISE_COUNT}
             countWidth={COUNT_WIDTH}
-            scope={scope}
             selected={selectedTopics}
             onToggle={toggleTopic}
           />

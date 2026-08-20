@@ -621,7 +621,7 @@ main {
 .pl-row {
   width: 100%;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: baseline;
   padding: 9px 10px;
   background: transparent;
@@ -639,18 +639,6 @@ main {
 .pl-row[data-open="true"] {
   background: color-mix(in srgb, var(--series) 14%, transparent);
 }
-/* the tier as a swatch, so the row carries the same colour coding as its bar */
-.pl-row-tier {
-  flex: 0 0 auto;
-  align-self: center;
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  border: 1px solid rgba(43, 33, 23, 0.28);
-}
-.pl-row-tier[data-q="full"] { background: var(--q-full); }
-.pl-row-tier[data-q="partial"] { background: var(--q-partial); }
-.pl-row-tier[data-q="no"] { background: var(--q-no); }
 .pl-row-who {
   flex: 0 0 auto;
   min-width: 96px;
@@ -710,20 +698,6 @@ main {
   text-transform: uppercase;
   color: var(--dim);
 }
-/* caption under the donut: which tiers the topic counts are drawn from, shown
-   only when they aren't all of them. The selected topic needs no such label —
-   its slice and chip are lit, and clicking either one clears it. It keeps its
-   line when empty (visibility, not display) so the legend below never shifts. */
-.tp-scope {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--dim);
-  margin-top: -6px;
-  min-height: 1em;
-}
-.tp-scope[data-on='false'] { visibility: hidden; }
-
 .tp-body {
   display: flex;
   flex-direction: column;
@@ -812,17 +786,6 @@ main {
   font-variant-numeric: tabular-nums;
 }
 .tp-chip[data-active="false"] .tp-chip-n { color: var(--dim); }
-/* emptied by the tier filter: still there, holding its place in the row, but
-   plainly out of play — nothing to filter to */
-.tp-chip[data-empty="true"],
-.tp-chip[data-empty="true"] .tp-chip-n {
-  color: color-mix(in srgb, var(--dim) 45%, var(--panel));
-}
-.tp-chip[data-empty="true"] {
-  border-color: color-mix(in srgb, var(--border) 55%, var(--panel));
-  background: transparent;
-  cursor: default;
-}
 
 .tp-hint {
   margin: 0;

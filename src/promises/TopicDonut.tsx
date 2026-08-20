@@ -22,22 +22,20 @@ function arcPath(a0: number, a1: number): string {
 
 /**
  * Topic proportions as a donut plus a synced clickable legend. Topics are
- * multi-select — every lit slice is in the filter the parent applies to the bar
- * chart, and an empty selection means all of them. The donut and the chips are
- * two views of the same set. Slices carry no topic-specific colour (topics
- * aren't a coloured dimension here) — meaning is arc length + the highlight.
+ * multi-select — every lit slice is in the filter the parent applies to
+ * everything below it, and an empty selection means all of them. The donut and
+ * the chips are two views of the same set. Slices carry no topic-specific
+ * colour (topics aren't a coloured dimension here) — meaning is arc length +
+ * the highlight.
  *
- * `topics` and `total` are whatever the parent's tier filter leaves, so hiding
- * a tier re-proportions the donut; `scope` names the tiers being counted when
- * they are not all of them. The list arrives complete and in a fixed order,
- * including topics the filter has emptied — those hold their place at zero,
- * greyed and unpickable, so the legend never reflows under the reader.
+ * `topics` is the whole corpus, always: topics are the top of the filter
+ * hierarchy, so no tier, block or search below can re-count or re-order them.
+ * The donut a reader picks from is the donut they keep.
  */
 export function TopicDonut({
   topics,
   total,
   countWidth,
-  scope,
   selected,
   onToggle,
 }: {
@@ -45,16 +43,12 @@ export function TopicDonut({
   total: number;
   /** Digits to pad each chip's count to, so a chip's width never changes. */
   countWidth: number;
-  scope: string | null;
   selected: ReadonlySet<string>;
   onToggle: (theme: string) => void;
 }) {
   const [hovered, setHovered] = useState<string | null>(null);
 
-  // precompute slice angles, starting at 12 o'clock. A topic the tier filter has
-  // emptied is still in `topics` (at zero, so the legend holds its shape) but has
-  // no arc to draw — dropping it here keeps a degenerate path from painting a
-  // hairline on the ring.
+  // precompute slice angles, starting at 12 o'clock
   const whole = Math.max(1, total);
   let cursor = -Math.PI / 2;
   const slices = topics
@@ -128,39 +122,23 @@ export function TopicDonut({
           </text>
         </svg>
 
-        {/* the caption keeps its line even when there is nothing to say, so
-            toggling a tier doesn't shift the legend by a row */}
-        <span className="tp-scope" data-on={scope != null}>
-          {scope ? `${scope} only` : ' '}
-        </span>
-
         <div className="tp-legend">
-          {topics.map((t) => {
-            // nothing to filter to in the shown tiers: hold the chip's place in
-            // the row, greyed and unpickable, rather than reflowing the legend
-            const empty = t.count === 0;
-            return (
-              <button
-                key={t.theme}
-                type="button"
-                className="tp-chip"
-                disabled={empty}
-                data-empty={empty}
-                aria-pressed={selected.has(t.theme)}
-                data-active={hovered === t.theme || selected.has(t.theme)}
-                data-selected={selected.has(t.theme)}
-                onMouseEnter={() => !empty && setHovered(t.theme)}
-                onMouseLeave={() => setHovered(null)}
-                onClick={() => onToggle(t.theme)}
-                title={empty ? `no ${scope ? `${scope} ` : ''}promises on ${t.theme}` : undefined}
-              >
-                {t.theme}
-                <span className="tp-chip-n">
-                  {String(t.count).padStart(countWidth, '0')}
-                </span>
-              </button>
-            );
-          })}
+          {topics.map((t) => (
+            <button
+              key={t.theme}
+              type="button"
+              className="tp-chip"
+              aria-pressed={selected.has(t.theme)}
+              data-active={hovered === t.theme || selected.has(t.theme)}
+              data-selected={selected.has(t.theme)}
+              onMouseEnter={() => setHovered(t.theme)}
+              onMouseLeave={() => setHovered(null)}
+              onClick={() => onToggle(t.theme)}
+            >
+              {t.theme}
+              <span className="tp-chip-n">{String(t.count).padStart(countWidth, '0')}</span>
+            </button>
+          ))}
         </div>
       </div>
     </div>

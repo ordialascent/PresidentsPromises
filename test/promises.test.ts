@@ -13,7 +13,6 @@ import {
   share,
   summarize,
   topicCounts,
-  topicCountsIn,
 } from '../src/promises/model.js';
 
 /**
@@ -154,23 +153,22 @@ describe('promises overview aggregation', () => {
     );
   });
 
-  it('the topic legend keeps every topic, and its order, as the tier filter moves', () => {
-    const order = topicCounts(CORPUS_TERMS).map((t) => t.theme);
+  it('the topic legend is the whole corpus, whatever the levels below it do', () => {
+    // Topics sit at the top of the filter hierarchy: the tier legend counts what
+    // the topics leave, never the other way round. So the donut a reader picks
+    // from is fixed — same topics, same order, same numbers, always — and no
+    // click further down can move a chip out from under the cursor.
+    const all = topicCounts(CORPUS_TERMS);
     for (const q of QUALITIES) {
-      const listed = topicCountsIn(filterByTiers(CORPUS_TERMS, new Set([q])), order);
-      // same topics, same positions — only the numbers move, so nothing reflows
-      expect(listed.map((t) => t.theme)).toEqual(order);
-      // the ones this tier has nothing for are present at zero, not missing
-      const live = new Set(
-        topicCounts(filterByTiers(CORPUS_TERMS, new Set([q]))).map((t) => t.theme),
+      const narrowed = filterByTiers(CORPUS_TERMS, new Set([q]));
+      // the tier filter changes what the *bars* draw…
+      expect(summarize(narrowed).reduce((n, s) => n + s.total, 0)).toBeLessThan(
+        CORPUS_PROMISE_COUNT,
       );
-      for (const t of listed) expect(t.count === 0).toBe(!live.has(t.theme));
-      expect(listed.reduce((n, t) => n + t.count, 0)).toBe(
-        CORPUS_TERMS.flatMap((x) => x.promises).filter((p) => p.quality === q).length,
-      );
+      // …and leaves the topic list the page renders untouched
+      expect(topicCounts(CORPUS_TERMS)).toEqual(all);
     }
-    // with every tier shown it is exactly the unfiltered list again
-    expect(topicCountsIn(CORPUS_TERMS, order)).toEqual(topicCounts(CORPUS_TERMS));
+    expect(all.reduce((n, t) => n + t.count, 0)).toBe(CORPUS_PROMISE_COUNT);
   });
 
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {

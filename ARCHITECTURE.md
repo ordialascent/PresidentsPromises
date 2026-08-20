@@ -50,18 +50,34 @@ and checks the indeterminate path.
 - The site reads the committed snapshot at build time; it does not fetch a
   verdict-bearing figure live at render time. Git history is the as-of log.
 
-## One filter state, four views
+## One filter state, four views, one direction
 
 The board's page owns every filter — selected topics, shown tiers, the picked
 bar block, the search text — and the donut, the tier legend, the chart and the
 promise list are all renderings of it. None of them filters itself.
 
+The filters are a **hierarchy**, and it only ever runs downward:
+
+```
+topics  →  categories (tiers)  →  bar blocks  →  search
+```
+
+Each level counts what the levels above it leave, and is blind to the levels
+below. The donut is always the whole corpus by topic; the tier legend counts the
+selected topics; the bars draw those promises in the shown tiers; the search box
+narrows the list and nothing else. So no filter can change the numbers a reader
+chose it by, and the way back is always where they left it. (An earlier version
+had topics and tiers cross-filtering each other — each re-counted by the other —
+which meant a click could move the chip you were about to click next.)
+
 The list underneath the chart is the standing view: it starts with **every**
-promise and the others narrow it. That is the inversion of the earlier flow,
-where the promises existed only inside a bar block and a click was the only way
-to see any of them. The search box narrows the list alone — it is the reader's
-question, not a claim about the corpus, so it must not silently re-proportion
-the donut or re-scale the bars behind it.
+promise and the levels above narrow it. That is the inversion of the earlier
+flow, where the promises existed only inside a bar block and a click was the
+only way to see any of them.
+
+The one exception runs upward, and only to keep the state honest: a bar block
+the levels above it have emptied is no longer drawn, so the page drops that
+selection rather than leave a filter with no visible switch.
 
 ## The content model (shallow on purpose)
 
@@ -97,3 +113,6 @@ benefit at this stage. Revisit if and when a second consumer actually appears.
   promises to justify one.
 - Picking a default knob position that presents one reading as *the* answer. The
   readings are shown together precisely so no single cell carries that weight.
+- Letting a filter re-count a level above it in the board's hierarchy. It reads
+  as helpful ("show me the topic mix of what's left") and costs the reader the
+  fixed frame they were navigating by.

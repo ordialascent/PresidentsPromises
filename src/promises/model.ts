@@ -132,16 +132,6 @@ export function filterByTopics(terms: CorpusTerm[], themes: ReadonlySet<string>)
   return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => themes.has(p.theme)) }));
 }
 
-/**
- * Promise count per topic over `terms`, listed in `order` and zero-filled:
- * a topic the filters have emptied comes back as 0 rather than vanishing, so
- * the legend keeps both its shape and its ordering while the filters move.
- */
-export function topicCountsIn(terms: CorpusTerm[], order: readonly string[]): TopicCount[] {
-  const counted = new Map(topicCounts(terms).map((t) => [t.theme, t.count]));
-  return order.map((theme) => ({ theme, count: counted.get(theme) ?? 0 }));
-}
-
 /** Promise count per topic across all terms, largest first (ties alphabetical). */
 export function topicCounts(terms: CorpusTerm[]): TopicCount[] {
   const m = new Map<string, number>();
