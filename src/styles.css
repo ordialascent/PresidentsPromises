@@ -554,6 +554,18 @@ main {
   color: var(--dim);
 }
 .pl-count { font-variant-numeric: tabular-nums; }
+/* takes the count's place while a promise is open: the list is collapsed around
+   that one row, so the number of promises behind it has to stay on offer */
+.pl-back {
+  border: 0;
+  background: transparent;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  cursor: pointer;
+  padding: 3px 2px;
+}
+.pl-back:hover { text-decoration: underline; }
 .pl-count strong { color: var(--ink); }
 /* a filter switched on in another view, and its off switch */
 .pl-filter {
@@ -612,6 +624,9 @@ main {
   flex-direction: column;
   gap: 2px;
 }
+/* the open row is scrolled to the top of the screen — leave it a little air so
+   it doesn't sit flush against the edge */
+.pl-rows li { scroll-margin-top: 14px; }
 
 .pl-row {
   width: 100%;

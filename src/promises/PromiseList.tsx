@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { PromiseDetail } from './PromiseDetail.js';
 import { toSpans } from './fuzzy.js';
 import { QUALITY_META } from './model.js';
@@ -36,10 +36,12 @@ function Marked({ text, indices }: { text: string; indices: readonly number[] })
  * legend are ways of narrowing it. Nothing here filters anything; the board
  * owns every filter, so the same click means the same thing in all three views.
  *
- * Opening a promise opens one panel underneath the whole list, not a panel
- * between the rows: an expander shoves every promise below it down the page,
- * and the list is the thing the reader is scanning. The open row keeps a marker
- * so it stays tied to the panel it belongs to.
+ * Opening a promise makes it the subject: the row goes to the top of the
+ * screen, the rest of the list gets out of the way, and the detail opens
+ * directly underneath it. Clicking it again puts the list back — including the
+ * reader's place in it, which is why the scroll offset is saved on the way in.
+ * The alternative, an expander between the rows, shoves every promise below it
+ * down the page while the reader is still scanning them.
  */
 export function PromiseList({
   hits,
@@ -59,18 +61,45 @@ export function PromiseList({
 }) {
   const [openId, setOpenId] = useState<string | null>(null);
 
-  // The open promise, resolved against what the filters currently leave: filter
-  // it away and its detail closes with it, rather than describing a promise the
-  // list no longer shows.
-  const openPromise = hits.find((h) => h.row.promise.id === openId)?.row.promise ?? null;
+  // The open promise, resolved against what the filters currently leave. While
+  // one is open it is the *only* row rendered, so the list can't be scrolled or
+  // clicked past it — the way out is the same row again, or the panel's ✕.
+  const openHit = hits.find((h) => h.row.promise.id === openId) ?? null;
+  const shown = openHit ? [openHit] : hits;
 
-  // The detail sits under the whole list, so it can open well past the fold
-  // with nothing on screen to say the click did anything. Bring its top edge in
-  // — `nearest`, so an already-visible panel doesn't jump.
-  const detailRef = useRef<HTMLDivElement | null>(null);
+  const rowRef = useRef<HTMLLIElement | null>(null);
+  // Where the reader was before the list collapsed, so closing gives it back.
+  const restore = useRef<number | null>(null);
+
+  const toggle = (id: string) => {
+    setOpenId((cur) => {
+      if (cur === id) return null;
+      restore.current = window.scrollY;
+      return id;
+    });
+  };
+
+  // A filter can take the open promise out from under the reader. Close it —
+  // but don't restore the old offset, because they moved the ground themselves.
   useEffect(() => {
-    if (openPromise) detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, [openPromise]);
+    if (openId && !hits.some((h) => h.row.promise.id === openId)) {
+      restore.current = null;
+      setOpenId(null);
+    }
+  }, [hits, openId]);
+
+  // Both moves are jumps, not glides, and deliberately so: hiding the list
+  // collapses the page from the whole corpus to one row, so the browser has
+  // already clamped the scroll before we get here. Animating from there reads
+  // as a stutter — two movements for one click — where a jump reads as one.
+  useLayoutEffect(() => {
+    if (openId) {
+      rowRef.current?.scrollIntoView({ block: 'start' });
+    } else if (restore.current != null) {
+      window.scrollTo({ top: restore.current });
+      restore.current = null;
+    }
+  }, [openId]);
 
   const filtered = filters.length > 0 || query.trim() !== '';
 
@@ -109,9 +138,15 @@ export function PromiseList({
       </div>
 
       <div className="pl-status">
-        <span className="pl-count">
-          <strong>{hits.length}</strong> of {total} promises
-        </span>
+        {openHit ? (
+          <button type="button" className="pl-back" onClick={() => setOpenId(null)}>
+            ← all {hits.length} promises
+          </button>
+        ) : (
+          <span className="pl-count">
+            <strong>{hits.length}</strong> of {total} promises
+          </span>
+        )}
         {filters.map((f) => (
           <button
             key={f.key}
@@ -143,17 +178,17 @@ export function PromiseList({
         </p>
       ) : (
         <ul className="pl-rows">
-          {hits.map((hit) => {
+          {shown.map((hit) => {
             const p = hit.row.promise;
             const open = openId === p.id;
             return (
-              <li key={p.id}>
+              <li key={p.id} ref={open ? rowRef : undefined}>
                 <button
                   type="button"
                   className="pl-row"
                   data-open={open}
                   aria-expanded={open}
-                  onClick={() => setOpenId((cur) => (cur === p.id ? null : p.id))}
+                  onClick={() => toggle(p.id)}
                 >
                   <span className="pl-row-who">
                     <Marked
@@ -187,9 +222,9 @@ export function PromiseList({
         </ul>
       )}
 
-      {openPromise && (
-        <div className="pl-detail" ref={detailRef}>
-          <PromiseDetail promise={openPromise} onClose={() => setOpenId(null)} />
+      {openHit && (
+        <div className="pl-detail">
+          <PromiseDetail promise={openHit.row.promise} onClose={() => setOpenId(null)} />
         </div>
       )}
     </div>
