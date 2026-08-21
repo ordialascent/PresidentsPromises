@@ -1,8 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   QUALITIES,
   QUALITY_META,
-  VERDICT_PLACEHOLDER,
   deltaBetween,
   filterByTiers,
   summarize,
@@ -69,43 +68,49 @@ function fmtDelta(value: number, mode: Mode): string {
   return `${value > 0 ? '+' : value < 0 ? '−' : '±'}${Math.abs(value)}`;
 }
 
-interface Selection {
+/**
+ * What clicking a legend category will do from here. The categories filter *to*
+ * what you click, like every other control on the board — so the hint has to say
+ * which way the next click moves, given that all three lit means "no category
+ * picked" rather than "all three picked".
+ */
+function legendHint(q: Quality, active: ReadonlySet<Quality>): string {
+  const name = QUALITY_META[q].label.toLowerCase();
+  if (active.size === QUALITIES.length) return `Show only ${name} promises`;
+  if (!active.has(q)) return `Add ${name} promises`;
+  return active.size === 1 ? 'Show every category again' : `Remove ${name} promises`;
+}
+
+/** One bar block: one president's promises in one tier. */
+export interface Segment {
   termKey: string;
   quality: Quality;
 }
 
 /**
- * The tier filter is owned by the page, not by this chart: the topic donut
- * counts the same promises, so both views have to read one shared set.
+ * Neither filter is owned by this chart. The tier legend, the topic donut and
+ * the promise list all count the same promises, so every filter lives on the
+ * board above and each view is a rendering of that one state — clicking a block
+ * here narrows the list below exactly as clicking a topic chip does.
  */
 export function PromisesChart({
   terms,
   activeTiers,
   onToggleTier,
+  selected,
+  onSelect,
 }: {
   terms: CorpusTerm[];
   activeTiers: ReadonlySet<Quality>;
   onToggleTier: (quality: Quality) => void;
+  selected: Segment | null;
+  onSelect: (segment: Segment | null) => void;
 }) {
   const [mode, setMode] = useState<Mode>('absolute');
-  const [selected, setSelected] = useState<Selection | null>(null);
-  const [openId, setOpenId] = useState<string | null>(null);
 
-  // A change of `terms` means the topic filter changed — drop the block
-  // selection (so the list can't point at a now-empty tier) and the open promise.
-  useEffect(() => {
-    setSelected(null);
-    setOpenId(null);
-  }, [terms]);
-
-  // Toggling a tier off in the legend hides it from the bars; keep any block
-  // selection only while its tier is still shown.
-  useEffect(() => {
-    setSelected((cur) => (cur && activeTiers.has(cur.quality) ? cur : null));
-  }, [activeTiers]);
-
-  // Legend counts are the tier totals (unfiltered by tier) so a hidden tier can
-  // always be toggled back on; the bars themselves show only the active tiers.
+  // Legend counts are the tier totals over the topics above, never narrowed by
+  // the category selection itself — so a category left out of the filter still
+  // shows what picking it would get you, and can always be picked back.
   const totals = useMemo(() => {
     const c: Record<Quality, number> = { full: 0, partial: 0, no: 0 };
     for (const t of terms) for (const p of t.promises) c[p.quality] += 1;
@@ -115,22 +120,6 @@ export function PromisesChart({
   const shownTerms = useMemo(() => filterByTiers(terms, activeTiers), [terms, activeTiers]);
   const summaries = useMemo(() => summarize(shownTerms), [shownTerms]);
   const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
-
-  const selectedBar = selected && bars.find((b) => b.summary.key === selected.termKey);
-  const selectedList =
-    selectedBar && selected
-      ? selectedBar.summary.promises.filter((p) => p.quality === selected.quality)
-      : [];
-  const openPromise = selectedList.find((p) => p.id === openId) ?? null;
-  const verdict = openPromise ? VERDICT_PLACEHOLDER[openPromise.quality] : null;
-
-  // The detail now opens *below* the list, so on a long list it can land past
-  // the fold with nothing on screen to say a click did anything. Bring its top
-  // edge into view — `nearest` so an already-visible panel doesn't jump.
-  const detailRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    if (openId) detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, [openId]);
 
   return (
     <div className="pc">
@@ -144,7 +133,7 @@ export function PromisesChart({
               data-on={activeTiers.has(q)}
               aria-pressed={activeTiers.has(q)}
               onClick={() => onToggleTier(q)}
-              title={`Show or hide ${QUALITY_META[q].label.toLowerCase()} promises`}
+              title={legendHint(q, activeTiers)}
             >
               <span className="pc-swatch" data-q={q} />
               {QUALITY_META[q].label}
@@ -214,11 +203,9 @@ export function PromisesChart({
                     y={s.y}
                     width={s.w}
                     height={s.h}
-                    onClick={() => {
-                      // clicking a block resets any open promise detail
-                      setOpenId(null);
-                      setSelected(on ? null : { termKey: bar.summary.key, quality: s.quality });
-                    }}
+                    onClick={() =>
+                      onSelect(on ? null : { termKey: bar.summary.key, quality: s.quality })
+                    }
                   >
                     <title>
                       {bar.summary.label} · {QUALITY_META[s.quality].label}: {s.count}
@@ -247,103 +234,6 @@ export function PromisesChart({
           </g>
         ))}
       </svg>
-
-      {selected && selectedBar ? (
-        <div className="pc-list">
-          <div className="pc-list-head">
-            <span>
-              <strong>{selectedBar.summary.label}</strong> ·{' '}
-              <span className="pc-list-q" data-q={selected.quality}>
-                {QUALITY_META[selected.quality].label}
-              </span>{' '}
-              <span className="pc-list-sub">{QUALITY_META[selected.quality].blurb}</span>
-            </span>
-            <button type="button" className="pc-list-close" onClick={() => setSelected(null)}>
-              ✕
-            </button>
-          </div>
-          <ul>
-            {selectedList.map((p) => (
-              <li key={p.id}>
-                <button
-                  type="button"
-                  className="pc-promise"
-                  data-open={openId === p.id}
-                  onClick={() => setOpenId((cur) => (cur === p.id ? null : p.id))}
-                >
-                  <span className="pc-promise-theme">{p.theme}</span>
-                  <span className="pc-promise-text">
-                    {p.restatement}
-                    {p.occurrences.length > 1 && (
-                      <span className="pc-promise-src">promised {p.occurrences.length}×</span>
-                    )}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
-
-      {openPromise && verdict && (
-        <div className="pc-detail" data-q={openPromise.quality} ref={detailRef}>
-          <div className="pc-detail-top">
-            <span className="pc-detail-tier" data-q={openPromise.quality}>
-              {QUALITY_META[openPromise.quality].label}
-            </span>
-            <span className="pc-detail-theme">{openPromise.theme}</span>
-            {openPromise.occurrences.length > 1 && (
-              <span className="pc-detail-count">
-                promised {openPromise.occurrences.length}×
-              </span>
-            )}
-            <button type="button" className="pc-detail-close" onClick={() => setOpenId(null)}>
-              ✕
-            </button>
-          </div>
-          <div className="pc-detail-title">{openPromise.restatement}</div>
-          {openPromise.occurrences.map((o, k) => (
-            <div className="pc-detail-occ" key={`${o.source.kind}-${k}`}>
-              <blockquote className="pc-detail-quote">“{o.quote}”</blockquote>
-              <div className="pc-detail-context">
-                <span className="pc-detail-speaker">{o.source.speaker}</span>
-                {o.source.year != null && (
-                  <>
-                    <span className="pc-detail-dot">·</span>
-                    <span>{o.source.year}</span>
-                  </>
-                )}
-                <span className="pc-detail-dot">·</span>
-                <span className="pc-detail-event">{o.source.event}</span>
-                <span className="pc-detail-medium">{o.source.medium}</span>
-              </div>
-              {(o.ref || o.source.url) && (
-                <div className="pc-detail-cite">
-                  {o.ref && <span className="pc-detail-ref">{o.ref}</span>}
-                  {o.source.url && (
-                    <a href={o.source.url} target="_blank" rel="noreferrer">
-                      {o.source.publisher || 'source'} ↗
-                    </a>
-                  )}
-                </div>
-              )}
-            </div>
-          ))}
-
-          {/* Kept-or-broken lives here once the scoring pass exists; for now the
-              tier decides whether there is anything to wait for. */}
-          <hr className="pc-detail-rule" />
-          <div className="pc-verdict" data-q={openPromise.quality}>
-            <div className="pc-verdict-head">
-              <span className="pc-verdict-mark" data-q={openPromise.quality} aria-hidden="true">
-                {verdict.mark}
-              </span>
-              <span className="pc-verdict-label">{verdict.label}</span>
-            </div>
-            <p className="pc-verdict-note">{verdict.note}</p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

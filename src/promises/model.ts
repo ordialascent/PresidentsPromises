@@ -25,6 +25,12 @@ export const QUALITY_META: Record<Quality, QualityMeta> = {
 export interface VerdictPlaceholder {
   /** Short status word, shown next to the mark. */
   label: string;
+  /**
+   * The same status as one lower-case word for the list row's tag. Every tier's
+   * tag is grey today because none of them is a reading — when the scoring pass
+   * lands, kept/broken take this slot and the colour becomes a traffic light.
+   */
+  tag: string;
   /** One line saying why that status, in the reader's terms. */
   note: string;
   /** Stand-in for the eventual pass/fail glyph. */
@@ -42,16 +48,19 @@ export interface VerdictPlaceholder {
 export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
   full: {
     label: 'Verdict pending',
+    tag: 'pending',
     mark: '?',
     note: 'Metric, threshold and deadline are all on the record, so this promise can be scored against it. That analysis is coming soon.',
   },
   partial: {
     label: 'Verdict out of scope (MVP)',
+    tag: 'out of scope',
     mark: '–',
     note: 'The metric is on the record, but at least one of the threshold and deadline is missing or too vague. Supplying it is a judgement call, and out of scope for the MVP.',
   },
   no: {
     label: 'Verdict infeasible',
+    tag: 'infeasible',
     mark: '–',
     note: 'Due to the lack of specificity (metric, threshold, deadline), a verdict would require too many assumptions.',
   },
@@ -74,6 +83,49 @@ export interface TopicCount {
   count: number;
 }
 
+/**
+ * One promise carrying the term it was made in. The chart reads promises
+ * *grouped* by term (that grouping is the bars); the list reads them flat, one
+ * row per promise across every president, so each row has to say whose it is.
+ */
+export interface PromiseRow {
+  promise: CorpusPromise;
+  termKey: string;
+  /** Bar label, e.g. "Obama 2008". */
+  termLabel: string;
+  surname: string;
+  speechYear: number | null;
+}
+
+/**
+ * Every promise in `terms` as a flat list, in corpus order — terms are
+ * chronological, so the list reads oldest-first with no further sorting. This is
+ * the shape the searchable list wants, and it is derived, never stored: the
+ * grouped corpus stays the one representation.
+ */
+export function flattenPromises(terms: CorpusTerm[]): PromiseRow[] {
+  return terms.flatMap((t) =>
+    t.promises.map((promise) => ({
+      promise,
+      termKey: t.key,
+      termLabel: t.label,
+      surname: t.surname,
+      speechYear: t.speechYear,
+    })),
+  );
+}
+
+/** The promises of one president in one tier — what clicking a bar block means. */
+export function filterBySegment(
+  rows: PromiseRow[],
+  segment: { termKey: string; quality: Quality } | null,
+): PromiseRow[] {
+  if (!segment) return rows;
+  return rows.filter(
+    (r) => r.termKey === segment.termKey && r.promise.quality === segment.quality,
+  );
+}
+
 /** Terms carrying only the promises whose tier is in `tiers`. */
 export function filterByTiers(terms: CorpusTerm[], tiers: ReadonlySet<Quality>): CorpusTerm[] {
   return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => tiers.has(p.quality)) }));
@@ -90,9 +142,10 @@ export function filterByTopics(terms: CorpusTerm[], themes: ReadonlySet<string>)
 }
 
 /**
- * Promise count per topic over `terms`, listed in `order` and zero-filled:
- * a topic the filters have emptied comes back as 0 rather than vanishing, so
- * the legend keeps both its shape and its ordering while the filters move.
+ * Promise count per topic over `terms`, listed in `order` and zero-filled: a
+ * topic the category filter has emptied comes back as 0 rather than vanishing,
+ * so the legend keeps both its shape and its ordering while the filter moves.
+ * Only the numbers change — never which chips exist, or where they sit.
  */
 export function topicCountsIn(terms: CorpusTerm[], order: readonly string[]): TopicCount[] {
   const counted = new Map(topicCounts(terms).map((t) => [t.theme, t.count]));

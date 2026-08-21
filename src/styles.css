@@ -490,85 +490,271 @@ main {
   line-height: 1.5;
 }
 
-.pc-list {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--panel);
-  overflow: hidden;
+/* ---- Promise list (the standing view: every promise, searchable) ----- */
+
+.pl {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.pc-list-head {
+
+.pl-search {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--border);
-  font-size: 14px;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: 0 10px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
 }
-/* Same treatment as the detail's tier chip: the fill colours for partial and
-   none are a light grey and a white, both illegible as text on the panel, so
-   those two borrow the line colours instead. */
-.pc-list-q { font-weight: 600; }
-.pc-list-q[data-q="full"] { color: var(--q-full); }
-.pc-list-q[data-q="partial"] { color: var(--ink); }
-.pc-list-q[data-q="no"] { color: var(--q-no-line); }
-.pc-list-sub {
+.pl-search:focus-within {
+  border-color: var(--series);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--series) 12%, transparent);
+}
+.pl-search-icon {
   color: var(--dim);
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 17px;
+  line-height: 1;
 }
-.pc-list-close {
-  background: transparent;
+.pl-search-input {
+  flex: 1;
+  min-width: 0;
   border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  padding: 11px 0;
+}
+.pl-search-input::placeholder {
+  color: var(--dim);
+  opacity: 0.85;
+}
+/* the browser's own search affordance duplicates the clear button */
+.pl-search-input::-webkit-search-cancel-button { display: none; }
+.pl-search-clear {
+  border: 0;
+  background: transparent;
   color: var(--dim);
   cursor: pointer;
-  font-size: 14px;
-  padding: 2px 6px;
+  font-size: 13px;
+  padding: 4px 2px;
 }
-.pc-list ul {
+.pl-search-clear:hover { color: var(--ink); }
+
+.pl-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--dim);
+}
+.pl-count { font-variant-numeric: tabular-nums; }
+/* takes the count's place while a promise is open: the list is collapsed around
+   that one row, so the number of promises behind it has to stay on offer */
+.pl-back {
+  border: 0;
+  background: transparent;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  cursor: pointer;
+  padding: 3px 2px;
+}
+.pl-back:hover { text-decoration: underline; }
+.pl-count strong { color: var(--ink); }
+/* a filter switched on in another view, and its off switch */
+.pl-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--topic) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--topic) 55%, transparent);
+  border-radius: 999px;
+  padding: 3px 9px;
+  cursor: pointer;
+}
+.pl-filter:hover { border-color: var(--topic); }
+.pl-filter-x { color: var(--dim); }
+.pl-filter:hover .pl-filter-x { color: var(--topic); }
+.pl-reset {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  cursor: pointer;
+  padding: 3px 2px;
+}
+.pl-reset:hover { text-decoration: underline; }
+
+.pl-empty {
   margin: 0;
-  padding: 6px;
+  padding: 22px 4px;
+  color: var(--dim);
+  font-size: 14px;
+  text-align: center;
+}
+.pl-link {
+  border: 0;
+  background: transparent;
+  color: var(--series);
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* The whole corpus, running down the page — no inner box and no scroller of its
+   own. The board is already a card; a second bordered, scrolling panel inside it
+   pens the promises in and puts a second scrollbar in the reader's way. */
+.pl-rows {
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
-.pc-promise {
+/* a rule between promises rather than a gap: the rows are three lines tall now,
+   and without a divider a long list reads as one undifferentiated column */
+.pl-rows li + li { border-top: 1px solid var(--border); }
+/* the open row is scrolled to the top of the screen — leave it a little air so
+   it doesn't sit flush against the edge */
+.pl-rows li { scroll-margin-top: 14px; }
+
+/* Three stacked rows, not three columns: who + topic, then the promise across
+   the full width, then the tags. Columns meant the promise text — the thing
+   being read — got whatever a phone had left after two fixed labels, which was
+   about three words a line. */
+.pl-row {
   width: 100%;
   display: flex;
-  gap: 12px;
-  align-items: baseline;
-  padding: 9px 10px;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
   background: transparent;
   border: 0;
-  border-radius: 8px;
   color: var(--ink);
   cursor: pointer;
   text-align: left;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.45;
 }
-.pc-promise:hover {
+.pl-row:hover {
   background: color-mix(in srgb, var(--series) 10%, transparent);
 }
-.pc-promise-theme {
-  flex: 0 0 auto;
+/* the panel is at the foot of the list, so the open row has to hold its own
+   marker — otherwise, once you have scrolled to the detail, nothing says which
+   promise it belongs to */
+.pl-row[data-open="true"] {
+  background: color-mix(in srgb, var(--series) 16%, transparent);
+  box-shadow: inset 2px 0 0 var(--series);
+}
+
+/* two columns, hard against the outer edges: president left, topic right. Both
+   are short labels, so an even split would leave a canyon between them. */
+.pl-row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
   font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
+}
+.pl-row-who {
+  font-variant-numeric: tabular-nums;
+}
+.pl-row-theme {
   font-size: 10.5px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--dim);
-  min-width: 92px;
+  text-align: right;
 }
-.pc-promise-text { flex: 1; }
-
-.pc-promise-src {
+.pl-row-text {
   display: block;
-  margin-top: 2px;
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+
+.pl-row-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 10.5px;
   color: var(--dim);
 }
+.pl-row-n { opacity: 0.9; }
+
+.pl-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  /* All caps, so the line box's descender space is never used and the text
+     rides a pixel high inside the pill. Pin the line box to the em box and pay
+     the difference back as one extra pixel of padding above. */
+  line-height: 1;
+  padding: 5px 8px 4px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dim);
+  white-space: nowrap;
+}
+/* the measurability tier, in the same ladder the bars use. Partial and none
+   are a light grey and a white — illegible as text — so those two borrow the
+   line colours instead, as the detail's chip does. */
+.pl-tag[data-q="full"] { color: var(--q-full); border-color: var(--q-full); }
+.pl-tag[data-q="partial"] { color: var(--q-partial-line); border-color: var(--q-partial-line); }
+.pl-tag[data-q="no"] { color: var(--q-no-line); border-color: var(--q-no-line); }
+.pl-tag-n {
+  color: var(--dim);
+  border-color: var(--border);
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+/* The verdict opens the row, so the readings line up in a column of their own
+   down the left of the list. Grey for every tier while none of them is a
+   reading; when scoring lands, this is the one selector that turns into a
+   traffic light — the markup already carries the tier. */
+.pl-tag-verdict,
+.pl-tag-verdict[data-q="full"],
+.pl-tag-verdict[data-q="partial"],
+.pl-tag-verdict[data-q="no"] {
+  color: var(--dim);
+  border-color: var(--border);
+  background: color-mix(in srgb, var(--dim) 8%, transparent);
+}
+/* tier and recurrence travel together at the right end */
+.pl-row-kind {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* what the fuzzy match actually landed on */
+.pl-row mark {
+  background: color-mix(in srgb, var(--target) 42%, transparent);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+/* one panel under the whole list, never between the rows */
+.pl-detail { scroll-margin-top: 12px; }
 
 /* ---- Topic donut ---------------------------------------------------- */
 
@@ -589,17 +775,19 @@ main {
   text-transform: uppercase;
   color: var(--dim);
 }
-/* caption under the donut: which tiers the topic counts are drawn from, shown
-   only when they aren't all of them. The selected topic needs no such label —
-   its slice and chip are lit, and clicking either one clears it. It keeps its
-   line when empty (visibility, not display) so the legend below never shifts. */
+/* caption under the donut: which categories the topic counts are drawn from,
+   shown only when they aren't all of them. It keeps its line when empty
+   (visibility, not display) so the legend below never shifts. */
 .tp-scope {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.08em;
   color: var(--dim);
   margin-top: -6px;
-  min-height: 1em;
+  /* Fixed box, not min-height: an empty caption's line box is 1em, a filled
+     one's is line-height, and the 2px between them nudged the whole legend
+     down as the caption appeared. */
+  line-height: 14px;
+  height: 14px;
 }
 .tp-scope[data-on='false'] { visibility: hidden; }
 
@@ -686,13 +874,8 @@ main {
   border-color: var(--topic);
   background: color-mix(in srgb, var(--topic) 14%, transparent);
 }
-.tp-chip-n {
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-}
-.tp-chip[data-active="false"] .tp-chip-n { color: var(--dim); }
-/* emptied by the tier filter: still there, holding its place in the row, but
-   plainly out of play — nothing to filter to */
+/* emptied by the category filter: still there, holding its place in the row,
+   but plainly out of play — nothing to filter to */
 .tp-chip[data-empty="true"],
 .tp-chip[data-empty="true"] .tp-chip-n {
   color: color-mix(in srgb, var(--dim) 45%, var(--panel));
@@ -702,6 +885,11 @@ main {
   background: transparent;
   cursor: default;
 }
+.tp-chip-n {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.tp-chip[data-active="false"] .tp-chip-n { color: var(--dim); }
 
 .tp-hint {
   margin: 0;
@@ -713,6 +901,7 @@ main {
 /* ---- Promise detail (opens underneath the promise list) -------------- */
 
 .pc-detail {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--panel);
@@ -725,10 +914,13 @@ main {
 .pc-detail[data-q="partial"] { box-shadow: inset 3px 0 0 var(--q-partial); }
 .pc-detail[data-q="no"] { box-shadow: inset 3px 0 0 var(--q-no); }
 
+/* The close control is all that is left up here, so it comes out of the flow
+   and sits in the corner — in the flow it held a whole empty band above the
+   promise. */
 .pc-detail-top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
 }
 .pc-detail-tier {
   font-family: var(--font-mono);
@@ -761,6 +953,7 @@ main {
 }
 
 .pc-detail-title {
+  padding-right: 26px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.3;
@@ -812,11 +1005,6 @@ main {
   border-bottom: 1px solid color-mix(in srgb, var(--series) 40%, transparent);
 }
 .pc-detail-cite a:hover { border-bottom-color: var(--series); }
-
-.pc-promise[data-open="true"] {
-  background: color-mix(in srgb, var(--series) 16%, transparent);
-  box-shadow: inset 2px 0 0 var(--series);
-}
 
 .pc-detail-count {
   font-family: var(--font-mono);

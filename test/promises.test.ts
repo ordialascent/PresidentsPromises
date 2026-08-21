@@ -154,7 +154,7 @@ describe('promises overview aggregation', () => {
     );
   });
 
-  it('the topic legend keeps every topic, and its order, as the tier filter moves', () => {
+  it('the topic legend keeps every topic, and its order, as the category filter moves', () => {
     const order = topicCounts(CORPUS_TERMS).map((t) => t.theme);
     for (const q of QUALITIES) {
       const listed = topicCountsIn(filterByTiers(CORPUS_TERMS, new Set([q])), order);
@@ -171,6 +171,18 @@ describe('promises overview aggregation', () => {
     }
     // with every tier shown it is exactly the unfiltered list again
     expect(topicCountsIn(CORPUS_TERMS, order)).toEqual(topicCounts(CORPUS_TERMS));
+
+    // Why a greyed chip must not stay in the topic selection: it has nothing to
+    // filter to, so the two filters together would leave the reader an empty
+    // board with a chip they can no longer click off. The page drops such a
+    // topic from the selection as the category filter empties it.
+    for (const q of QUALITIES) {
+      const tier = filterByTiers(CORPUS_TERMS, new Set([q]));
+      for (const t of topicCountsIn(tier, order).filter((x) => x.count === 0)) {
+        const both = summarize(filterByTopics(tier, new Set([t.theme])));
+        expect(both.reduce((n, s) => n + s.total, 0)).toBe(0);
+      }
+    }
   });
 
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {
@@ -213,5 +225,15 @@ describe('promises overview aggregation', () => {
     expect(VERDICT_PLACEHOLDER.full.label).toMatch(/pending/i);
     expect(VERDICT_PLACEHOLDER.partial.label).toMatch(/scope/i);
     expect(VERDICT_PLACEHOLDER.no.label).toMatch(/infeasible/i);
+
+    // the list row shows the same status in one lower-case phrase; it must say
+    // the same thing as the panel, or a promise reads one way in the list and
+    // another when opened
+    for (const q of QUALITIES) {
+      const v = VERDICT_PLACEHOLDER[q];
+      expect(v.tag).toBe(v.tag.toLowerCase());
+      expect(v.label.toLowerCase()).toContain(v.tag);
+    }
+    expect(new Set(QUALITIES.map((q) => VERDICT_PLACEHOLDER[q].tag)).size).toBe(QUALITIES.length);
   });
 });

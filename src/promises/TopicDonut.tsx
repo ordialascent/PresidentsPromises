@@ -22,16 +22,19 @@ function arcPath(a0: number, a1: number): string {
 
 /**
  * Topic proportions as a donut plus a synced clickable legend. Topics are
- * multi-select — every lit slice is in the filter the parent applies to the bar
- * chart, and an empty selection means all of them. The donut and the chips are
- * two views of the same set. Slices carry no topic-specific colour (topics
- * aren't a coloured dimension here) — meaning is arc length + the highlight.
+ * multi-select — every lit slice is in the filter the parent applies to
+ * everything below it, and an empty selection means all of them. The donut and
+ * the chips are two views of the same set. Slices carry no topic-specific
+ * colour (topics aren't a coloured dimension here) — meaning is arc length +
+ * the highlight.
  *
- * `topics` and `total` are whatever the parent's tier filter leaves, so hiding
- * a tier re-proportions the donut; `scope` names the tiers being counted when
- * they are not all of them. The list arrives complete and in a fixed order,
- * including topics the filter has emptied — those hold their place at zero,
- * greyed and unpickable, so the legend never reflows under the reader.
+ * `topics` and `total` are whatever the category filter leaves, so picking a
+ * category re-proportions the donut and re-counts the chips: only the topics
+ * that category actually contains are pickable. The list still arrives complete
+ * and in the corpus-wide order, including the topics the category has emptied —
+ * those hold their place at zero, greyed and unpickable, so the legend never
+ * reflows and a chip never moves out from under the reader's cursor. `scope`
+ * names the categories being counted when they are not all of them.
  */
 export function TopicDonut({
   topics,
@@ -51,10 +54,10 @@ export function TopicDonut({
 }) {
   const [hovered, setHovered] = useState<string | null>(null);
 
-  // precompute slice angles, starting at 12 o'clock. A topic the tier filter has
-  // emptied is still in `topics` (at zero, so the legend holds its shape) but has
-  // no arc to draw — dropping it here keeps a degenerate path from painting a
-  // hairline on the ring.
+  // precompute slice angles, starting at 12 o'clock. A topic the category filter
+  // has emptied is still in `topics` (at zero, so the legend holds its shape) but
+  // has no arc to draw — dropping it here keeps a degenerate path from painting
+  // a hairline on the ring.
   const whole = Math.max(1, total);
   let cursor = -Math.PI / 2;
   const slices = topics
@@ -129,15 +132,17 @@ export function TopicDonut({
         </svg>
 
         {/* the caption keeps its line even when there is nothing to say, so
-            toggling a tier doesn't shift the legend by a row */}
+            picking a category doesn't shift the legend by a row */}
         <span className="tp-scope" data-on={scope != null}>
-          {scope ? `${scope} only` : ' '}
+          {scope ? `${scope} only` : ' '}
         </span>
 
         <div className="tp-legend">
           {topics.map((t) => {
-            // nothing to filter to in the shown tiers: hold the chip's place in
-            // the row, greyed and unpickable, rather than reflowing the legend
+            // nothing to filter to inside the picked categories: hold the chip's
+            // place in the row, greyed and unpickable, rather than reflowing the
+            // legend. The page drops such a topic from the selection as it
+            // empties, so a greyed chip is never one the reader still needs.
             const empty = t.count === 0;
             return (
               <button
@@ -155,9 +160,7 @@ export function TopicDonut({
                 title={empty ? `no ${scope ? `${scope} ` : ''}promises on ${t.theme}` : undefined}
               >
                 {t.theme}
-                <span className="tp-chip-n">
-                  {String(t.count).padStart(countWidth, '0')}
-                </span>
+                <span className="tp-chip-n">{String(t.count).padStart(countWidth, '0')}</span>
               </button>
             );
           })}
