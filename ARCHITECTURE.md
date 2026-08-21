@@ -52,7 +52,7 @@ and checks the indeterminate path.
 
 ## One filter state, four views
 
-The board's page owns every filter — selected topics, picked categories, the
+The board's page owns every filter — selected topics, shown categories, the
 picked bar block, the search text — and the donut, the category legend, the
 chart and the promise list are all renderings of it. None of them filters
 itself.
@@ -66,8 +66,9 @@ topics  →  categories (tiers)  →  bar blocks  →  search
 The first two **count each other**, and that is deliberate: a category with no
 promises on a topic should not offer that topic, and a topic with none in a
 category should not offer that category. So the donut counts what the category
-filter leaves — picking "full" re-proportions the ring and greys the topics that
-tier has nothing for — while the legend counts what the topic filter leaves.
+filter leaves — leaving only "full" re-proportions the ring and greys the topics
+that tier has nothing for — while the legend counts what the topic filter
+leaves.
 
 The rule that keeps this from eating itself: **a view never narrows its own
 counts.** The donut is counted over categories only, the legend over topics
@@ -94,11 +95,22 @@ promise and everything above narrows it. That is the inversion of the earlier
 flow, where the promises existed only inside a bar block and a click was the
 only way to see any of them.
 
-Every control also filters the *same way round*: a click narrows to what you
-clicked, clicking it again releases it, and an empty selection means all of it.
-(The category legend used to be the odd one out, inherited from when the chart
-was the whole feature: it was a visibility toggle, so clicking "Partial" showed
-everything *except* partial.)
+Two of the controls answer different questions, so they behave differently under
+the click:
+
+- **Topics are picked.** There are thirty of them and no reader wants all but
+  one, so none selected means all of them and a click adds one.
+- **Categories are shown.** There are three, they partition the corpus, and they
+  double as the chart's colour key — the question is "which of these am I
+  looking at?", not "which one do I want?". So all three start lit and a click
+  hides one.
+
+Neither has a dead end: un-picking the last topic returns to every topic, and
+hiding the last lit category shows all three again.
+
+(These were briefly unified — a category click selecting that category the way a
+topic chip does. It read as confusing against a legend whose three swatches are
+also the chart's key, so the legend went back to hiding.)
 
 ## The content model (shallow on purpose)
 

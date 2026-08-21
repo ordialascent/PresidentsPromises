@@ -69,16 +69,14 @@ function fmtDelta(value: number, mode: Mode): string {
 }
 
 /**
- * What clicking a legend category will do from here. The categories filter *to*
- * what you click, like every other control on the board — so the hint has to say
- * which way the next click moves, given that all three lit means "no category
- * picked" rather than "all three picked".
+ * What the next click on this category does. All three start shown, so the
+ * legend hides rather than picks — and hiding the last one shown brings them
+ * all back, which is worth saying before the click rather than after.
  */
 function legendHint(q: Quality, active: ReadonlySet<Quality>): string {
   const name = QUALITY_META[q].label.toLowerCase();
-  if (active.size === QUALITIES.length) return `Show only ${name} promises`;
-  if (!active.has(q)) return `Add ${name} promises`;
-  return active.size === 1 ? 'Show every category again' : `Remove ${name} promises`;
+  if (!active.has(q)) return `Show ${name} promises again`;
+  return active.size === 1 ? 'Show every category again' : `Hide ${name} promises`;
 }
 
 /** One bar block: one president's promises in one tier. */

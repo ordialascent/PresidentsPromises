@@ -42,7 +42,7 @@ const COUNT_WIDTH = String(Math.max(...CORPUS_TOPICS.map((t) => t.count))).lengt
  * they narrow in this order — **topics, then categories (tiers), then bar
  * blocks, then search**:
  *
- * - the donut counts the promises in the picked categories, by topic;
+ * - the donut counts the promises in the shown categories, by topic;
  * - the category legend counts the promises on the selected topics;
  * - the bars draw what both leave, and a block picks one president's share;
  * - the search box narrows the list alone, and nothing else.
@@ -54,6 +54,13 @@ const COUNT_WIDTH = String(Math.max(...CORPUS_TOPICS.map((t) => t.count))).lengt
  * back. The legend's shape is fixed against that movement — same chips, same
  * order, only the numbers change — so nothing reflows mid-click.
  *
+ * The two behave differently under the click, though, and deliberately. Topics
+ * are *picked*: none selected means all of them, and a click adds one. The
+ * three categories are *shown*: they partition the corpus and double as the
+ * chart's colour key, so all three start lit and a click hides one — asking
+ * "which of these am I looking at?" rather than "which one do I want?". Hiding
+ * the last one lit shows them all again, so neither control has a dead end.
+ *
  * Search stays out of it entirely. It is the reader's own question, not a claim
  * about the corpus, so it must not re-proportion the donut or re-scale the bars
  * behind it. And the promises are no longer hidden inside a bar block waiting
@@ -63,14 +70,10 @@ export function PromisesPage() {
   // Topics are multi-select and additive: an empty selection means every topic,
   // so un-picking the last one is the way back to the whole corpus.
   const [selectedTopics, setSelectedTopics] = useState<ReadonlySet<string>>(() => new Set());
-  // Tiers work exactly like topics — a click picks that category, and an empty
-  // selection means all of them. `activeTiers` is what the chart draws, so the
-  // legend still lights all three at rest.
-  const [selectedTiers, setSelectedTiers] = useState<ReadonlySet<Quality>>(() => new Set());
-  const activeTiers = useMemo<ReadonlySet<Quality>>(
-    () => (selectedTiers.size ? selectedTiers : new Set(QUALITIES)),
-    [selectedTiers],
-  );
+  // The categories are a complete partition of the corpus and double as the
+  // chart's colour key, so they are shown, not picked: all three start lit, a
+  // click hides one, and hiding the last one lit shows them all again.
+  const [activeTiers, setActiveTiers] = useState<ReadonlySet<Quality>>(() => new Set(QUALITIES));
 
   // Topics as counted inside the picked categories: pick "full" and the donut is
   // the topic mix of the fully measurable promises alone. Topics with nothing
@@ -116,30 +119,30 @@ export function PromisesPage() {
   };
 
   const toggleTier = (q: Quality) => {
-    const next = new Set(selectedTiers);
+    const next = new Set(activeTiers);
     if (next.has(q)) next.delete(q);
     else next.add(q);
-    // picking every category is the same as picking none: both mean all of
-    // them, so the chart is never left empty and there is always a way back
-    const picked = next.size === QUALITIES.length ? new Set<Quality>() : next;
-    setSelectedTiers(picked);
-    // topics with nothing left inside the picked categories drop out of the
+    // hiding the last one shown is the way back to all of them, so the chart is
+    // never left empty and no click is a dead end
+    const shown = next.size ? next : new Set(QUALITIES);
+    setActiveTiers(shown);
+    // topics with nothing left in the shown categories drop out of the
     // selection — their chip stays put, just greyed and unpickable — and if that
     // empties the selection, the bars widen back to every topic on their own.
     // Without this a greyed chip could still be filtering, with no way to click
     // it off.
-    const shown = picked.size ? picked : new Set(QUALITIES);
     const surviving = new Set(topicCounts(filterByTiers(CORPUS_TERMS, shown)).map((t) => t.theme));
     const kept = new Set([...selectedTopics].filter((t) => surviving.has(t)));
     if (kept.size !== selectedTopics.size) setSelectedTopics(kept);
   };
 
   // Which categories the topic counts are drawn from, when it isn't all of them.
-  const scope = selectedTiers.size
-    ? QUALITIES.filter((q) => selectedTiers.has(q))
-        .map((q) => QUALITY_META[q].label.toLowerCase())
-        .join(' + ')
-    : null;
+  const scope =
+    activeTiers.size === QUALITIES.length
+      ? null
+      : QUALITIES.filter((q) => activeTiers.has(q))
+          .map((q) => QUALITY_META[q].label.toLowerCase())
+          .join(' + ');
 
   // Every narrowing currently in force, said in words above the list. The chart
   // and the donut already show their own state, but a filter set three views ago
@@ -155,13 +158,13 @@ export function PromisesPage() {
         onClear: () => toggleTopic(theme),
       });
     }
-    if (selectedTiers.size > 0) {
+    if (activeTiers.size !== QUALITIES.length) {
       chips.push({
         key: 'tiers',
-        label: `${QUALITIES.filter((q) => selectedTiers.has(q))
+        label: `${QUALITIES.filter((q) => activeTiers.has(q))
           .map((q) => QUALITY_META[q].label.toLowerCase())
           .join(' + ')} only`,
-        onClear: () => setSelectedTiers(new Set()),
+        onClear: () => setActiveTiers(new Set(QUALITIES)),
       });
     }
     if (segment) {
@@ -173,11 +176,11 @@ export function PromisesPage() {
       });
     }
     return chips;
-  }, [selectedTopics, selectedTiers, segment]);
+  }, [selectedTopics, activeTiers, segment]);
 
   const clearAll = () => {
     setSelectedTopics(new Set());
-    setSelectedTiers(new Set());
+    setActiveTiers(new Set(QUALITIES));
     setSegment(null);
     setQuery('');
   };

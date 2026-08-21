@@ -185,6 +185,29 @@ describe('promises overview aggregation', () => {
     }
   });
 
+  it('no category selection can empty the board — hiding the last one shows all', () => {
+    // The legend hides rather than picks, so the reachable states are every
+    // non-empty subset of the three. Each leaves promises to draw; the empty set
+    // is not a state the page can be in, because hiding the last one shown
+    // resets to all three.
+    const subsets = [
+      ['full'], ['partial'], ['no'],
+      ['full', 'partial'], ['full', 'no'], ['partial', 'no'],
+      ['full', 'partial', 'no'],
+    ] as const;
+    for (const shown of subsets) {
+      const total = summarize(filterByTiers(CORPUS_TERMS, new Set(shown))).reduce(
+        (n, s) => n + s.total,
+        0,
+      );
+      expect(total).toBeGreaterThan(0);
+    }
+    // and the reset state is the whole corpus again
+    expect(
+      summarize(filterByTiers(CORPUS_TERMS, new Set(QUALITIES))).reduce((n, s) => n + s.total, 0),
+    ).toBe(CORPUS_PROMISE_COUNT);
+  });
+
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {
     const tiers = new Set(['full', 'partial'] as const);
     const picked = new Set(['health']);
