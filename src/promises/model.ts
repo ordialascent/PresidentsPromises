@@ -25,6 +25,12 @@ export const QUALITY_META: Record<Quality, QualityMeta> = {
 export interface VerdictPlaceholder {
   /** Short status word, shown next to the mark. */
   label: string;
+  /**
+   * The same status as one lower-case word for the list row's tag. Every tier's
+   * tag is grey today because none of them is a reading — when the scoring pass
+   * lands, kept/broken take this slot and the colour becomes a traffic light.
+   */
+  tag: string;
   /** One line saying why that status, in the reader's terms. */
   note: string;
   /** Stand-in for the eventual pass/fail glyph. */
@@ -42,16 +48,19 @@ export interface VerdictPlaceholder {
 export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
   full: {
     label: 'Verdict pending',
+    tag: 'pending',
     mark: '?',
     note: 'Metric, threshold and deadline are all on the record, so this promise can be scored against it. That analysis is coming soon.',
   },
   partial: {
     label: 'Verdict out of scope (MVP)',
+    tag: 'out of scope',
     mark: '–',
     note: 'The metric is on the record, but at least one of the threshold and deadline is missing or too vague. Supplying it is a judgement call, and out of scope for the MVP.',
   },
   no: {
     label: 'Verdict infeasible',
+    tag: 'infeasible',
     mark: '–',
     note: 'Due to the lack of specificity (metric, threshold, deadline), a verdict would require too many assumptions.',
   },

@@ -225,5 +225,15 @@ describe('promises overview aggregation', () => {
     expect(VERDICT_PLACEHOLDER.full.label).toMatch(/pending/i);
     expect(VERDICT_PLACEHOLDER.partial.label).toMatch(/scope/i);
     expect(VERDICT_PLACEHOLDER.no.label).toMatch(/infeasible/i);
+
+    // the list row shows the same status in one lower-case phrase; it must say
+    // the same thing as the panel, or a promise reads one way in the list and
+    // another when opened
+    for (const q of QUALITIES) {
+      const v = VERDICT_PLACEHOLDER[q];
+      expect(v.tag).toBe(v.tag.toLowerCase());
+      expect(v.label.toLowerCase()).toContain(v.tag);
+    }
+    expect(new Set(QUALITIES.map((q) => VERDICT_PLACEHOLDER[q].tag)).size).toBe(QUALITIES.length);
   });
 });

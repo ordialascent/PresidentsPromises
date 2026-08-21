@@ -628,12 +628,16 @@ main {
    it doesn't sit flush against the edge */
 .pl-rows li { scroll-margin-top: 14px; }
 
+/* Three stacked rows, not three columns: who + topic, then the promise across
+   the full width, then the tags. Columns meant the promise text — the thing
+   being read — got whatever a phone had left after two fixed labels, which was
+   about three words a line. */
 .pl-row {
   width: 100%;
   display: flex;
-  gap: 12px;
-  align-items: baseline;
-  padding: 9px 10px;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
   background: transparent;
   border: 0;
   border-radius: 8px;
@@ -653,37 +657,84 @@ main {
   background: color-mix(in srgb, var(--series) 16%, transparent);
   box-shadow: inset 2px 0 0 var(--series);
 }
-.pl-row-who {
-  flex: 0 0 auto;
-  min-width: 96px;
+
+.pl-row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--dim);
+}
+/* the president holds a column down the list, so the topics line up under each
+   other while the promise below runs the full width regardless */
+.pl-row-who {
+  min-width: 92px;
   font-variant-numeric: tabular-nums;
 }
 .pl-row-theme {
-  flex: 0 0 auto;
-  min-width: 88px;
-  font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--dim);
 }
-.pl-row-text { flex: 1; min-width: 0; }
-.pl-row-meta {
+.pl-row-text {
+  display: block;
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+
+.pl-row-foot {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 2px;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 10.5px;
   color: var(--dim);
 }
-.pl-row-q[data-q="full"] { color: var(--q-full); }
-.pl-row-q[data-q="partial"] { color: var(--q-partial-line); }
-.pl-row-q[data-q="no"] { color: var(--q-no-line); }
 .pl-row-n { opacity: 0.9; }
+
+.pl-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dim);
+  white-space: nowrap;
+}
+/* the measurability tier, in the same ladder the bars use. Partial and none
+   are a light grey and a white — illegible as text — so those two borrow the
+   line colours instead, as the detail's chip does. */
+.pl-tag[data-q="full"] { color: var(--q-full); border-color: var(--q-full); }
+.pl-tag[data-q="partial"] { color: var(--q-partial-line); border-color: var(--q-partial-line); }
+.pl-tag[data-q="no"] { color: var(--q-no-line); border-color: var(--q-no-line); }
+.pl-tag-n {
+  color: var(--dim);
+  border-color: var(--border);
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+/* The verdict holds the right end of the row, so the readings line up in a
+   column of their own down the list. Grey for every tier while none of them is
+   a reading; when scoring lands, this is the one selector that turns into a
+   traffic light — the markup already carries the tier. */
+.pl-tag-verdict,
+.pl-tag-verdict[data-q="full"],
+.pl-tag-verdict[data-q="partial"],
+.pl-tag-verdict[data-q="no"] {
+  margin-left: auto;
+  color: var(--dim);
+  border-color: var(--border);
+  background: color-mix(in srgb, var(--dim) 8%, transparent);
+}
+
 /* what the fuzzy match actually landed on */
 .pl-row mark {
   background: color-mix(in srgb, var(--target) 42%, transparent);
@@ -839,6 +890,7 @@ main {
 /* ---- Promise detail (opens underneath the promise list) -------------- */
 
 .pc-detail {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--panel);
@@ -851,10 +903,13 @@ main {
 .pc-detail[data-q="partial"] { box-shadow: inset 3px 0 0 var(--q-partial); }
 .pc-detail[data-q="no"] { box-shadow: inset 3px 0 0 var(--q-no); }
 
+/* The close control is all that is left up here, so it comes out of the flow
+   and sits in the corner — in the flow it held a whole empty band above the
+   promise. */
 .pc-detail-top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
 }
 .pc-detail-tier {
   font-family: var(--font-mono);
@@ -887,6 +942,7 @@ main {
 }
 
 .pc-detail-title {
+  padding-right: 26px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.3;

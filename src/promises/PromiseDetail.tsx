@@ -1,8 +1,12 @@
-import { QUALITY_META, VERDICT_PLACEHOLDER, type CorpusPromise } from './model.js';
+import { VERDICT_PLACEHOLDER, type CorpusPromise } from './model.js';
 
 /**
  * One promise opened up: every time it was made, quoted and cited, and what can
- * (or cannot) be said about keeping it. Opens inline under its row in the list.
+ * (or cannot) be said about keeping it.
+ *
+ * It only ever opens directly beneath its own row, and that row carries the
+ * tier, the topic and the recurrence as tags — so this panel does not repeat
+ * them. It starts at the promise and goes straight to the evidence.
  */
 export function PromiseDetail({
   promise,
@@ -16,13 +20,6 @@ export function PromiseDetail({
   return (
     <div className="pc-detail" data-q={promise.quality}>
       <div className="pc-detail-top">
-        <span className="pc-detail-tier" data-q={promise.quality}>
-          {QUALITY_META[promise.quality].label}
-        </span>
-        <span className="pc-detail-theme">{promise.theme}</span>
-        {promise.occurrences.length > 1 && (
-          <span className="pc-detail-count">promised {promise.occurrences.length}×</span>
-        )}
         <button
           type="button"
           className="pc-detail-close"

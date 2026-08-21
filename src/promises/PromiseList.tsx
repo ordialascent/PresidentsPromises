@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { PromiseDetail } from './PromiseDetail.js';
 import { toSpans } from './fuzzy.js';
-import { QUALITY_META } from './model.js';
+import { QUALITY_META, VERDICT_PLACEHOLDER } from './model.js';
 import type { PromiseHit } from './search.js';
 
 /** A filter the reader switched on elsewhere on the board, and can switch off here. */
@@ -190,29 +190,41 @@ export function PromiseList({
                   aria-expanded={open}
                   onClick={() => toggle(p.id)}
                 >
-                  <span className="pl-row-who">
-                    <Marked
-                      text={
-                        hit.row.speechYear == null
-                          ? hit.row.surname
-                          : `${hit.row.surname} ${hit.row.speechYear}`
-                      }
-                      indices={hit.who}
-                    />
+                  <span className="pl-row-head">
+                    <span className="pl-row-who">
+                      <Marked
+                        text={
+                          hit.row.speechYear == null
+                            ? hit.row.surname
+                            : `${hit.row.surname} ${hit.row.speechYear}`
+                        }
+                        indices={hit.who}
+                      />
+                    </span>
+                    <span className="pl-row-theme">
+                      <Marked text={p.theme} indices={hit.theme} />
+                    </span>
                   </span>
-                  <span className="pl-row-theme">
-                    <Marked text={p.theme} indices={hit.theme} />
-                  </span>
+
                   <span className="pl-row-text">
                     <Marked text={p.restatement} indices={hit.restatement} />
-                    <span className="pl-row-meta">
-                      <span className="pl-row-q" data-q={p.quality}>
-                        {QUALITY_META[p.quality].label}
+                  </span>
+
+                  <span className="pl-row-foot">
+                    <span className="pl-tag" data-q={p.quality}>
+                      {QUALITY_META[p.quality].label}
+                    </span>
+                    {p.occurrences.length > 1 && (
+                      <span className="pl-tag pl-tag-n" title={`promised ${p.occurrences.length}×`}>
+                        ×{p.occurrences.length}
                       </span>
-                      {p.occurrences.length > 1 && (
-                        <span className="pl-row-n">promised {p.occurrences.length}×</span>
-                      )}
-                      {hit.quoteOnly && <span className="pl-row-n">matched in the quote</span>}
+                    )}
+                    {hit.quoteOnly && <span className="pl-row-n">matched in the quote</span>}
+                    {/* The reading, once there is one. Grey for every tier today
+                        because none of these is a verdict — only a statement of
+                        whether one can be reached. */}
+                    <span className="pl-tag pl-tag-verdict" data-q={p.quality}>
+                      {VERDICT_PLACEHOLDER[p.quality].tag}
                     </span>
                   </span>
                 </button>
