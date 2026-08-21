@@ -726,18 +726,24 @@ main {
   letter-spacing: 0.04em;
   font-variant-numeric: tabular-nums;
 }
-/* The verdict holds the right end of the row, so the readings line up in a
-   column of their own down the list. Grey for every tier while none of them is
-   a reading; when scoring lands, this is the one selector that turns into a
+/* The verdict opens the row, so the readings line up in a column of their own
+   down the left of the list. Grey for every tier while none of them is a
+   reading; when scoring lands, this is the one selector that turns into a
    traffic light — the markup already carries the tier. */
 .pl-tag-verdict,
 .pl-tag-verdict[data-q="full"],
 .pl-tag-verdict[data-q="partial"],
 .pl-tag-verdict[data-q="no"] {
-  margin-left: auto;
   color: var(--dim);
   border-color: var(--border);
   background: color-mix(in srgb, var(--dim) 8%, transparent);
+}
+/* tier and recurrence travel together at the right end */
+.pl-row-kind {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* what the fuzzy match actually landed on */

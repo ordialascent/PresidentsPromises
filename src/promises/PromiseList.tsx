@@ -211,20 +211,27 @@ export function PromiseList({
                   </span>
 
                   <span className="pl-row-foot">
-                    <span className="pl-tag" data-q={p.quality}>
-                      {QUALITY_META[p.quality].label}
-                    </span>
-                    {p.occurrences.length > 1 && (
-                      <span className="pl-tag pl-tag-n" title={`promised ${p.occurrences.length}×`}>
-                        ×{p.occurrences.length}
-                      </span>
-                    )}
-                    {hit.quoteOnly && <span className="pl-row-n">matched in the quote</span>}
-                    {/* The reading, once there is one. Grey for every tier today
-                        because none of these is a verdict — only a statement of
-                        whether one can be reached. */}
+                    {/* The reading leads the row, once there is one. Grey for
+                        every tier today because none of these is a verdict —
+                        only a statement of whether one can be reached. */}
                     <span className="pl-tag pl-tag-verdict" data-q={p.quality}>
                       {VERDICT_PLACEHOLDER[p.quality].tag}
+                    </span>
+                    {hit.quoteOnly && <span className="pl-row-n">matched in the quote</span>}
+                    {/* What kind of promise it is, held together at the right
+                        end so the two never separate across a wrap */}
+                    <span className="pl-row-kind">
+                      <span className="pl-tag" data-q={p.quality}>
+                        {QUALITY_META[p.quality].label}
+                      </span>
+                      {p.occurrences.length > 1 && (
+                        <span
+                          className="pl-tag pl-tag-n"
+                          title={`promised ${p.occurrences.length}×`}
+                        >
+                          ×{p.occurrences.length}
+                        </span>
+                      )}
                     </span>
                   </span>
                 </button>
