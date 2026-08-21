@@ -622,8 +622,10 @@ main {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
+/* a rule between promises rather than a gap: the rows are three lines tall now,
+   and without a divider a long list reads as one undifferentiated column */
+.pl-rows li + li { border-top: 1px solid var(--border); }
 /* the open row is scrolled to the top of the screen — leave it a little air so
    it doesn't sit flush against the edge */
 .pl-rows li { scroll-margin-top: 14px; }
@@ -637,10 +639,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 10px 12px;
+  padding: 12px;
   background: transparent;
   border: 0;
-  border-radius: 8px;
   color: var(--ink);
   cursor: pointer;
   text-align: left;
@@ -658,25 +659,25 @@ main {
   box-shadow: inset 2px 0 0 var(--series);
 }
 
+/* two columns, hard against the outer edges: president left, topic right. Both
+   are short labels, so an even split would leave a canyon between them. */
 .pl-row-head {
   display: flex;
-  flex-wrap: wrap;
   align-items: baseline;
-  gap: 4px 12px;
+  justify-content: space-between;
+  gap: 12px;
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--dim);
 }
-/* the president holds a column down the list, so the topics line up under each
-   other while the promise below runs the full width regardless */
 .pl-row-who {
-  min-width: 92px;
   font-variant-numeric: tabular-nums;
 }
 .pl-row-theme {
   font-size: 10.5px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: right;
 }
 .pl-row-text {
   display: block;
@@ -701,7 +702,11 @@ main {
   gap: 4px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 2px 8px;
+  /* All caps, so the line box's descender space is never used and the text
+     rides a pixel high inside the pill. Pin the line box to the em box and pay
+     the difference back as one extra pixel of padding above. */
+  line-height: 1;
+  padding: 5px 8px 4px;
   font-size: 10px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
