@@ -701,58 +701,59 @@ main {
 }
 .pl-row-n { opacity: 0.9; }
 
-/* Square, deliberately: the pill shape is now the board's word for "click me to
-   filter" — the topic chips, the category chips and the filter chips above the
-   list all wear it. These say what a promise *is*; nothing here is clickable
-   except the row as a whole. */
-.pl-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  /* All caps, so the line box's descender space is never used and the text
-     rides a pixel high inside the pill. Pin the line box to the em box and pay
-     the difference back as one extra pixel of padding above. */
-  line-height: 1;
-  padding: 5px 8px 4px;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--dim);
-  white-space: nowrap;
-}
-/* the measurability tier, in the same ladder the bars use. Partial and none
-   are a light grey and a white — illegible as text — so those two borrow the
-   line colours instead, as the detail's chip does. */
-.pl-tag[data-q="full"] { color: var(--q-full); border-color: var(--q-full); }
-.pl-tag[data-q="partial"] { color: var(--q-partial-line); border-color: var(--q-partial-line); }
-.pl-tag[data-q="no"] { color: var(--q-no-line); border-color: var(--q-no-line); }
-.pl-tag-n {
-  color: var(--dim);
-  border-color: var(--border);
-  text-transform: none;
-  letter-spacing: 0.04em;
-  font-variant-numeric: tabular-nums;
-}
-/* The verdict opens the row, so the readings line up in a column of their own
-   down the left of the list. Grey for every tier while none of them is a
-   reading; when scoring lands, this is the one selector that turns into a
-   traffic light — the markup already carries the tier. */
-.pl-tag-verdict,
-.pl-tag-verdict[data-q="full"],
-.pl-tag-verdict[data-q="partial"],
-.pl-tag-verdict[data-q="no"] {
-  color: var(--dim);
-  border-color: var(--border);
-  background: color-mix(in srgb, var(--dim) 8%, transparent);
-}
 /* tier and recurrence travel together at the right end */
 .pl-row-kind {
   margin-left: auto;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+/* The reading is a filled block; the tier and the recurrence are plain text.
+   None of them is a pill, which the board now uses to mean "click me to
+   filter", and none is a circle either — what a promise IS should not look
+   like something you can do. */
+.pl-verdict,
+.pl-tier,
+.pl-mult {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* The reading: a filled block, no outline. It is the one that will carry a
+   colour when scoring lands, so it is the one built to be filled — the tier is
+   already on the element, and this becomes the traffic light. */
+.pl-verdict {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2px;
+  /* the extra pixel above is the all-caps correction: the line box's descender
+     space is never used, so the text rides high without it */
+  padding: 5px 8px 4px;
+  color: var(--dim);
+  background: color-mix(in srgb, var(--dim) 11%, transparent);
+}
+
+/* The tier: text alone, carrying the ladder's colour. Partial and none are a
+   light grey and a white in the bars — illegible as type — so those two take
+   the line colours instead. */
+.pl-tier {
+  font-weight: 600;
+}
+.pl-tier[data-q="full"] { color: var(--q-full); }
+.pl-tier[data-q="partial"] { color: var(--q-partial-line); }
+.pl-tier[data-q="no"] { color: var(--q-no-line); }
+
+/* The recurrence: text too. A circle read as a control the moment it sat next
+   to the tier — round things on this board are clickable. */
+.pl-mult {
+  color: var(--dim);
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
 }
 
 /* what the fuzzy match actually landed on */
