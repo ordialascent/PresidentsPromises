@@ -52,7 +52,7 @@ and checks the indeterminate path.
 
 ## One filter state, four views
 
-The board's page owns every filter — selected topics, shown categories, the
+The board's page owns every filter — picked topics, picked categories, the
 picked bar block, the search text — and the donut, the category legend, the
 chart and the promise list are all renderings of it. None of them filters
 itself.
@@ -95,22 +95,20 @@ promise and everything above narrows it. That is the inversion of the earlier
 flow, where the promises existed only inside a bar block and a click was the
 only way to see any of them.
 
-Two of the controls answer different questions, so they behave differently under
-the click:
+Both filters are **picked**, and identically: nothing picked means all of them,
+a click picks one, clicking it again releases it, and picking every one is the
+same as picking none. No click is a dead end in either, and neither needs a rule
+the other doesn't have.
 
-- **Topics are picked.** There are thirty of them and no reader wants all but
-  one, so none selected means all of them and a click adds one.
-- **Categories are shown.** There are three, they partition the corpus, and they
-  double as the chart's colour key — the question is "which of these am I
-  looking at?", not "which one do I want?". So all three start lit and a click
-  hides one.
+Their chips look the same for the same reason, and each is lit in the colour of
+the thing it filters — topics in the red of their donut slices, categories in
+the navy the bars are drawn in. A category chip keeps its swatch, because that
+is the only thing tying it to the colour of the blocks it draws in the chart.
 
-Neither has a dead end: un-picking the last topic returns to every topic, and
-hiding the last lit category shows all three again.
-
-(These were briefly unified — a category click selecting that category the way a
-topic chip does. It read as confusing against a legend whose three swatches are
-also the chart's key, so the legend went back to hiding.)
+(The category legend was briefly a visibility toggle — all three lit, a click
+hiding one — inherited from when the chart was the whole feature. Two controls,
+side by side, that answered a click in opposite directions was the confusing
+part, not either rule on its own.)
 
 ## The content model (shallow on purpose)
 

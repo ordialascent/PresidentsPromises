@@ -185,11 +185,10 @@ describe('promises overview aggregation', () => {
     }
   });
 
-  it('no category selection can empty the board — hiding the last one shows all', () => {
-    // The legend hides rather than picks, so the reachable states are every
-    // non-empty subset of the three. Each leaves promises to draw; the empty set
-    // is not a state the page can be in, because hiding the last one shown
-    // resets to all three.
+  it('no category selection can empty the board — picking none means all of them', () => {
+    // Categories are picked like topics, so the *selection* can be empty — and
+    // an empty selection is read as all three. Every subset the page can turn
+    // into a filter therefore leaves promises to draw.
     const subsets = [
       ['full'], ['partial'], ['no'],
       ['full', 'partial'], ['full', 'no'], ['partial', 'no'],

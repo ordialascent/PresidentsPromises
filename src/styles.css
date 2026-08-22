@@ -333,10 +333,15 @@ main {
   justify-content: space-between;
 }
 
+/* The categories read as chips, not as a colour key you can dim: they are
+   picked exactly as the topic chips are, so they take the topic chips' shape —
+   neutral at rest, lit when picked. The accent is the navy the bars are drawn
+   in, where topics take the red of their slices, so each control is lit in the
+   colour of the thing it filters. */
 .pc-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--dim);
@@ -345,31 +350,30 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: none;
-  border: 0;
-  margin: -2px -5px;
-  padding: 2px 5px;
-  border-radius: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
   font: inherit;
-  color: inherit;
+  font-size: 11px;
+  color: var(--dim);
   cursor: pointer;
-  transition: opacity 120ms ease, background-color 120ms ease;
+  transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
 }
 .pc-legend-item:hover {
-  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  color: var(--ink);
+  border-color: var(--series);
 }
-.pc-legend-item[data-on='false'] {
-  opacity: 0.4;
+.pc-legend-item[data-picked='true'] {
+  color: var(--ink);
+  border-color: var(--series);
+  background: color-mix(in srgb, var(--series) 14%, transparent);
 }
-.pc-legend-item[data-on='false'] .pc-swatch {
-  filter: grayscale(0.8);
-}
-.pc-legend-item[data-on='false'] .pc-legend-n {
-  color: var(--dim);
-}
+/* the swatch stays: it is the only thing tying a category to the colour of the
+   blocks it draws in the chart, and picking is shown by the chip around it */
 .pc-swatch {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 3px;
   display: inline-block;
   box-shadow: inset 0 0 0 1px rgba(43, 33, 23, 0.28);
@@ -381,6 +385,7 @@ main {
   color: var(--ink);
   font-variant-numeric: tabular-nums;
 }
+.pc-legend-item[data-picked='false'] .pc-legend-n { color: var(--dim); }
 
 .pc-toggle {
   display: inline-flex;

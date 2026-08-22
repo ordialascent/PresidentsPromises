@@ -69,14 +69,17 @@ function fmtDelta(value: number, mode: Mode): string {
 }
 
 /**
- * What the next click on this category does. All three start shown, so the
- * legend hides rather than picks — and hiding the last one shown brings them
- * all back, which is worth saying before the click rather than after.
+ * What the next click on this category does. Nothing picked means all of them,
+ * so the first click narrows to one and a later click adds to the set — and
+ * releasing the last one picked returns to all, which is worth saying before
+ * the click rather than after.
  */
-function legendHint(q: Quality, active: ReadonlySet<Quality>): string {
+function legendHint(q: Quality, picked: ReadonlySet<Quality>): string {
   const name = QUALITY_META[q].label.toLowerCase();
-  if (!active.has(q)) return `Show ${name} promises again`;
-  return active.size === 1 ? 'Show every category again' : `Hide ${name} promises`;
+  if (!picked.has(q)) {
+    return picked.size === 0 ? `Show only ${name} promises` : `Add ${name} promises`;
+  }
+  return picked.size === 1 ? 'Show every category again' : `Remove ${name} promises`;
 }
 
 /** One bar block: one president's promises in one tier. */
@@ -94,12 +97,16 @@ export interface Segment {
 export function PromisesChart({
   terms,
   activeTiers,
+  pickedTiers,
   onToggleTier,
   selected,
   onSelect,
 }: {
   terms: CorpusTerm[];
+  /** The categories the bars draw — every one of them when none is picked. */
   activeTiers: ReadonlySet<Quality>;
+  /** The categories the reader actually picked, which is what the legend lights. */
+  pickedTiers: ReadonlySet<Quality>;
   onToggleTier: (quality: Quality) => void;
   selected: Segment | null;
   onSelect: (segment: Segment | null) => void;
@@ -128,10 +135,10 @@ export function PromisesChart({
               key={q}
               type="button"
               className="pc-legend-item"
-              data-on={activeTiers.has(q)}
-              aria-pressed={activeTiers.has(q)}
+              data-picked={pickedTiers.has(q)}
+              aria-pressed={pickedTiers.has(q)}
               onClick={() => onToggleTier(q)}
-              title={legendHint(q, activeTiers)}
+              title={legendHint(q, pickedTiers)}
             >
               <span className="pc-swatch" data-q={q} />
               {QUALITY_META[q].label}
