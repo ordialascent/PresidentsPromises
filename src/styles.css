@@ -701,12 +701,16 @@ main {
 }
 .pl-row-n { opacity: 0.9; }
 
+/* Square, deliberately: the pill shape is now the board's word for "click me to
+   filter" — the topic chips, the category chips and the filter chips above the
+   list all wear it. These say what a promise *is*; nothing here is clickable
+   except the row as a whole. */
 .pl-tag {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 2px;
   /* All caps, so the line box's descender space is never used and the text
      rides a pixel high inside the pill. Pin the line box to the em box and pay
      the difference back as one extra pixel of padding above. */
@@ -927,19 +931,6 @@ main {
   top: 8px;
   right: 10px;
 }
-.pc-detail-tier {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-}
-.pc-detail-tier[data-q="full"] { color: var(--q-full); border-color: var(--q-full); }
-.pc-detail-tier[data-q="partial"] { color: var(--ink); border-color: var(--q-partial); }
-.pc-detail-tier[data-q="no"] { color: var(--q-no-line); border-color: var(--q-no-line); }
 .pc-detail-theme {
   font-family: var(--font-mono);
   font-size: 10.5px;
@@ -985,6 +976,7 @@ main {
 .pc-detail-speaker { color: var(--ink); font-weight: 600; }
 .pc-detail-dot { opacity: 0.5; }
 .pc-detail-event { font-style: italic; }
+/* a label, not a control — square for the same reason the row's tags are */
 .pc-detail-medium {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -992,7 +984,7 @@ main {
   text-transform: uppercase;
   color: var(--dim);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 2px;
   padding: 1px 7px;
 }
 
@@ -1011,16 +1003,6 @@ main {
 }
 .pc-detail-cite a:hover { border-bottom-color: var(--series); }
 
-.pc-detail-count {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--series);
-  border: 1px solid color-mix(in srgb, var(--series) 45%, transparent);
-  border-radius: 999px;
-  padding: 2px 8px;
-}
 .pc-detail-occ {
   display: flex;
   flex-direction: column;
