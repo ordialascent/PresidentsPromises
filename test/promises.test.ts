@@ -185,6 +185,28 @@ describe('promises overview aggregation', () => {
     }
   });
 
+  it('no category selection can empty the board — picking none means all of them', () => {
+    // Categories are picked like topics, so the *selection* can be empty — and
+    // an empty selection is read as all three. Every subset the page can turn
+    // into a filter therefore leaves promises to draw.
+    const subsets = [
+      ['full'], ['partial'], ['no'],
+      ['full', 'partial'], ['full', 'no'], ['partial', 'no'],
+      ['full', 'partial', 'no'],
+    ] as const;
+    for (const shown of subsets) {
+      const total = summarize(filterByTiers(CORPUS_TERMS, new Set(shown))).reduce(
+        (n, s) => n + s.total,
+        0,
+      );
+      expect(total).toBeGreaterThan(0);
+    }
+    // and the reset state is the whole corpus again
+    expect(
+      summarize(filterByTiers(CORPUS_TERMS, new Set(QUALITIES))).reduce((n, s) => n + s.total, 0),
+    ).toBe(CORPUS_PROMISE_COUNT);
+  });
+
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {
     const tiers = new Set(['full', 'partial'] as const);
     const picked = new Set(['health']);

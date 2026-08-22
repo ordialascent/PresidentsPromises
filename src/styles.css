@@ -333,10 +333,15 @@ main {
   justify-content: space-between;
 }
 
+/* The categories read as chips, not as a colour key you can dim: they are
+   picked exactly as the topic chips are, so they take the topic chips' shape —
+   neutral at rest, lit when picked. The accent is the navy the bars are drawn
+   in, where topics take the red of their slices, so each control is lit in the
+   colour of the thing it filters. */
 .pc-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--dim);
@@ -345,31 +350,30 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: none;
-  border: 0;
-  margin: -2px -5px;
-  padding: 2px 5px;
-  border-radius: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
   font: inherit;
-  color: inherit;
+  font-size: 11px;
+  color: var(--dim);
   cursor: pointer;
-  transition: opacity 120ms ease, background-color 120ms ease;
+  transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
 }
 .pc-legend-item:hover {
-  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  color: var(--ink);
+  border-color: var(--series);
 }
-.pc-legend-item[data-on='false'] {
-  opacity: 0.4;
+.pc-legend-item[data-picked='true'] {
+  color: var(--ink);
+  border-color: var(--series);
+  background: color-mix(in srgb, var(--series) 14%, transparent);
 }
-.pc-legend-item[data-on='false'] .pc-swatch {
-  filter: grayscale(0.8);
-}
-.pc-legend-item[data-on='false'] .pc-legend-n {
-  color: var(--dim);
-}
+/* the swatch stays: it is the only thing tying a category to the colour of the
+   blocks it draws in the chart, and picking is shown by the chip around it */
 .pc-swatch {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 3px;
   display: inline-block;
   box-shadow: inset 0 0 0 1px rgba(43, 33, 23, 0.28);
@@ -381,6 +385,7 @@ main {
   color: var(--ink);
   font-variant-numeric: tabular-nums;
 }
+.pc-legend-item[data-picked='false'] .pc-legend-n { color: var(--dim); }
 
 .pc-toggle {
   display: inline-flex;
@@ -696,54 +701,59 @@ main {
 }
 .pl-row-n { opacity: 0.9; }
 
-.pl-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  /* All caps, so the line box's descender space is never used and the text
-     rides a pixel high inside the pill. Pin the line box to the em box and pay
-     the difference back as one extra pixel of padding above. */
-  line-height: 1;
-  padding: 5px 8px 4px;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--dim);
-  white-space: nowrap;
-}
-/* the measurability tier, in the same ladder the bars use. Partial and none
-   are a light grey and a white — illegible as text — so those two borrow the
-   line colours instead, as the detail's chip does. */
-.pl-tag[data-q="full"] { color: var(--q-full); border-color: var(--q-full); }
-.pl-tag[data-q="partial"] { color: var(--q-partial-line); border-color: var(--q-partial-line); }
-.pl-tag[data-q="no"] { color: var(--q-no-line); border-color: var(--q-no-line); }
-.pl-tag-n {
-  color: var(--dim);
-  border-color: var(--border);
-  text-transform: none;
-  letter-spacing: 0.04em;
-  font-variant-numeric: tabular-nums;
-}
-/* The verdict opens the row, so the readings line up in a column of their own
-   down the left of the list. Grey for every tier while none of them is a
-   reading; when scoring lands, this is the one selector that turns into a
-   traffic light — the markup already carries the tier. */
-.pl-tag-verdict,
-.pl-tag-verdict[data-q="full"],
-.pl-tag-verdict[data-q="partial"],
-.pl-tag-verdict[data-q="no"] {
-  color: var(--dim);
-  border-color: var(--border);
-  background: color-mix(in srgb, var(--dim) 8%, transparent);
-}
 /* tier and recurrence travel together at the right end */
 .pl-row-kind {
   margin-left: auto;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+/* The reading is a filled block; the tier and the recurrence are plain text.
+   None of them is a pill, which the board now uses to mean "click me to
+   filter", and none is a circle either — what a promise IS should not look
+   like something you can do. */
+.pl-verdict,
+.pl-tier,
+.pl-mult {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* The reading: a filled block, no outline. It is the one that will carry a
+   colour when scoring lands, so it is the one built to be filled — the tier is
+   already on the element, and this becomes the traffic light. */
+.pl-verdict {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2px;
+  /* the extra pixel above is the all-caps correction: the line box's descender
+     space is never used, so the text rides high without it */
+  padding: 5px 8px 4px;
+  color: var(--dim);
+  background: color-mix(in srgb, var(--dim) 11%, transparent);
+}
+
+/* The tier: text alone, carrying the ladder's colour. Partial and none are a
+   light grey and a white in the bars — illegible as type — so those two take
+   the line colours instead. */
+.pl-tier {
+  font-weight: 600;
+}
+.pl-tier[data-q="full"] { color: var(--q-full); }
+.pl-tier[data-q="partial"] { color: var(--q-partial-line); }
+.pl-tier[data-q="no"] { color: var(--q-no-line); }
+
+/* The recurrence: text too. A circle read as a control the moment it sat next
+   to the tier — round things on this board are clickable. */
+.pl-mult {
+  color: var(--dim);
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
 }
 
 /* what the fuzzy match actually landed on */
@@ -922,19 +932,6 @@ main {
   top: 8px;
   right: 10px;
 }
-.pc-detail-tier {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-}
-.pc-detail-tier[data-q="full"] { color: var(--q-full); border-color: var(--q-full); }
-.pc-detail-tier[data-q="partial"] { color: var(--ink); border-color: var(--q-partial); }
-.pc-detail-tier[data-q="no"] { color: var(--q-no-line); border-color: var(--q-no-line); }
 .pc-detail-theme {
   font-family: var(--font-mono);
   font-size: 10.5px;
@@ -980,6 +977,7 @@ main {
 .pc-detail-speaker { color: var(--ink); font-weight: 600; }
 .pc-detail-dot { opacity: 0.5; }
 .pc-detail-event { font-style: italic; }
+/* a label, not a control — square for the same reason the row's tags are */
 .pc-detail-medium {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -987,7 +985,7 @@ main {
   text-transform: uppercase;
   color: var(--dim);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 2px;
   padding: 1px 7px;
 }
 
@@ -1006,16 +1004,6 @@ main {
 }
 .pc-detail-cite a:hover { border-bottom-color: var(--series); }
 
-.pc-detail-count {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--series);
-  border: 1px solid color-mix(in srgb, var(--series) 45%, transparent);
-  border-radius: 999px;
-  padding: 2px 8px;
-}
 .pc-detail-occ {
   display: flex;
   flex-direction: column;
