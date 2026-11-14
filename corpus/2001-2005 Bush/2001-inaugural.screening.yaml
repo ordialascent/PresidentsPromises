@@ -1,0 +1,53 @@
+# Screening ledger for 2001-inaugural.md (protocol v1, pilot).
+# Every trigger-matched sentence has a row; rows marked `added` were not
+# matched by the lexicon but read as commitments.
+# Included rows list the promise ids they produce. Those promises are written
+# to promises.yaml when this term is re-extracted.
+source: 2001-inaugural
+protocol: 1
+rows:
+  - { ref: "¶3.2", decision: describe }
+  - { ref: "¶5.2", decision: soft }
+  - ref: "¶7.4"
+    decision: include
+    promises: [bush-2000-not-allow-division]
+    note: '"it" refers back to ¶7.2-7.3 (failing schools, prejudice, division); scope contested.'
+  - { ref: "¶8.2", decision: include, promises: [bush-2000-single-nation] }
+  - ref: "¶10.1"
+    decision: include
+    promises: [bush-2000-civility-commitment]
+    note: Present-tense "affirm a new commitment" about future conduct; firmness contested.
+  - { ref: "¶10.2", decision: describe }
+  - { ref: "¶11.4", decision: conditional }
+  - { ref: "¶12.1", decision: soft }
+  - { ref: "¶12.3", decision: describe }
+  - { ref: "¶13.3", decision: soft }
+  - { ref: "¶13.4", decision: soft }
+  - { ref: "¶14.1", decision: include, promises: [bush-2000-reclaim-schools] }
+  - ref: "¶14.2"
+    decision: include
+    promises: [bush-2000-reform-socialsecurity, bush-2000-reform-medicare]
+  - { ref: "¶14.3", decision: include, promises: [bush-2000-reduce-taxes] }
+  - { ref: "¶15.1", decision: include, promises: [bush-2000-defenses] }
+  - { ref: "¶15.2", decision: include, promises: [bush-2000-confront-wmd] }
+  - { ref: "¶16.1", decision: include, promises: [bush-2000-defend-allies] }
+  - { ref: "¶16.2", decision: include, promises: [bush-2000-purpose-not-arrogance] }
+  - { ref: "¶16.3", decision: include, promises: [bush-2000-meet-aggression] }
+  - { ref: "¶16.4", decision: include, promises: [bush-2000-speak-for-values] }
+  - { ref: "¶19.4", decision: include, added: true, promises: [bush-2000-faith-based] }
+  - { ref: "¶20.3", decision: include, promises: [bush-2000-poverty-goal] }
+  - { ref: "¶24.1-24.2", decision: include, promises: [bush-2000-lead-by-principles] }
+  - { ref: "¶25.2", decision: others }
+  - { ref: "¶25.3", decision: others }
+
+# Pilot result, for review of the protocol:
+#   included 15 rows → 16 promises (¶14.2 splits in two)
+#   verifiability: high 1 (¶14.3 reduce taxes)
+#                  medium 4 (¶14.2 Social Security, ¶14.2 Medicare,
+#                            ¶15.1 defenses, ¶19.4 faith-based)
+#                  low 11
+#   excluded: soft 4, describe 3, conditional 1, others 2
+#   The current promises.yaml takes 4 promises from this source (¶8.2, ¶15.2,
+#   ¶19.4, ¶20.3) and misses the tax, Social Security, Medicare and defence
+#   commitments in ¶14-15, which also appear in the 2000 acceptance speech and
+#   should be extra occurrences of those promises.
