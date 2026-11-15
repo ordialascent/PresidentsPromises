@@ -1,916 +1,2155 @@
-# Promises extracted from Donald J. Trump's 2016 nomination acceptance speech
-# (corpus/2017-2021 Trump/2016-acceptance.md). Refs are paragraph.sentence, per
-# corpus/README.md.
+# Promises and ambitions of Donald J. Trump's 2017-2021 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 2016 acceptance
+# speech, the 2016 final debate (Trump's turns) and the 2017 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
 #
-# Each promise is scored on four dimensions — the ingredients that decide
-# whether "was it kept?" can even be asked as a *measured* question:
-#
-#   metric     — is there a named quantity, AND a record that tracks it?
-#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
-#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
-#   instrument — does he name what HE will DO, or only what WILL happen?
-#
-# measurable:
-#   full     — metric + threshold + deadline all present (even if parametrically
-#              disputed — that dispute is the product, not a disqualifier)
-#   partial  — at least one of the three is missing or too vague to pin down
-#   no       — aspirational; no measurable quantity at all
-# (instrument sharpens accountability: an outcome-only promise is one he can't
-#  fully control. A promise can still be measurable without it.)
+# 88 promises (high 6, medium 41, low 41)
+# 9 ambitions (high 0, medium 3, low 6)
+# Deadlines default to the end of the term (2021-01-20).
 
+protocol: 1
 promises:
-  - id: trump-2016-border-wall
-    theme: immigration
+
+  - id: trump-2016-safety-prosperity-peace
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶77.1"
-        quote: >
-          We are going to build a great border wall to stop illegal
-          immigration, to stop the gangs and the violence, and to
-          stop the drugs from pouring into our communities.
-      - in: debate
-        ref: "¶72.1-72.2"
-        quote: >
-          Now, I want to build the wall. We need the wall.
-    restatement: Build a border wall to stop illegal immigration, gangs, and drugs.
-    metric:
-      present: true
-      quantity: miles of new border barrier built; illegal border crossings
-      record: CBP border wall system status; Border Patrol apprehension data
-    threshold:
-      present: true
-      stated: "\"stop\" / a \"great\" wall (direction; no mileage target)"
+    - in: acceptance
+      ref: "\u00b63.1"
+      quote: "we will lead our country back to safety, prosperity, and peace"
+    restatement: "Lead the country back to safety, prosperity and peace."
+    type: outcome
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: build a physical border wall
-    measurable: "partial"
-    notes: >
-      The signature pledge — a named instrument with trackable proxies, but the
-      speech attaches no wall length, no funding, and no date. The disputed
-      boundary is what counts as "a great wall" and whether "stop" means any
-      measurable drop in crossings or literally zero.
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2016-suspend-terror-immigration
-    ref: "¶70.1"
-    theme: immigration
-    quote: >
-      Lastly, and very importantly, we must immediately suspend immigration
-      from any nation that has been compromised by terrorism until such time as
-      proven vetting mechanisms have been put in place.
-    restatement: Suspend immigration from terror-compromised nations until vetting is proven.
-    metric:
-      present: true
-      quantity: whether such a suspension is enacted (binary policy action)
-      record: enacted executive orders / entry restrictions
-    threshold:
-      present: true
-      stated: "suspend / to zero (from the named nations)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: executive suspension of immigration from named nations
-    measurable: "partial"
-    notes: >
-      Measurable only as a yes/no policy act, not a tracked trend. "Immediately"
-      supplies urgency but no bounded period, and "any nation compromised by
-      terrorism" is the undefined boundary that decides who is covered.
-
-  - id: trump-2016-end-catch-and-release
-    ref: "¶78.1"
-    theme: immigration
-    quote: >
-      By ending catch-and-release on the border, we will stop the cycle of
-      human smuggling and violence.
-    restatement: End catch-and-release to stop human smuggling and border violence.
-    metric:
-      present: true
-      quantity: illegal border crossings; whether catch-and-release is ended (binary)
-      record: CBP apprehensions / releases data
-    threshold:
-      present: true
-      stated: "end catch-and-release; \"stop\" (direction)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: end the catch-and-release policy
-    measurable: "partial"
-    notes: >
-      A named policy lever with a real record, but no number and no deadline.
-      "Stop the cycle of human smuggling" is an outcome he only partly controls,
-      so the measurable core is really the binary "did catch-and-release end?"
-
-  - id: trump-2016-defeat-isis
-    ref: "¶60.1"
-    theme: foreign-policy
-    quote: >
-      To make life safe in America, we must also address the growing threats we
-      face from outside the country: We are going to defeat the barbarians of
-      ISIS, and we are going to defeat them fast.
-    restatement: Defeat ISIS, and do it fast.
-    metric:
-      present: true
-      quantity: ISIS territorial control / operational capacity
-      record: territory-held tracking (e.g., IHS/ISW caliphate maps)
-    threshold:
-      present: true
-      stated: "defeat / to zero"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: "military defeat of ISIS (an outcome partly outside his control)"
-    measurable: "partial"
-    notes: >
-      Clear metric and a to-zero threshold, but "fast" is not a bounded period
-      and the outcome depends on coalition partners and events abroad. The
-      disputed boundary is whether "defeat" means loss of territory or the
-      group's eradication.
-
-  - id: trump-2016-largest-tax-reduction
-    theme: taxes
+  - id: trump-2016-generosity-warmth
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶95.2"
-        quote: >
-          While Hillary Clinton plans a massive -- and I mean
-          massive -- tax increase, I have proposed the largest tax
-          reduction of any candidate who has declared for the
-          presidential race this year – Democrat or Republican.
-      - in: debate
-        ref: "¶204.2-204.3"
-        quote: >
-          We are going to cut taxes massively. We're going to cut
-          business taxes massively.
-    restatement: Enact the largest tax reduction proposed by any candidate this cycle.
-    metric:
-      present: true
-      quantity: size of the tax cut relative to other candidates' plans
-      record: JCT / Tax Policy Center scoring of enacted and proposed plans
-    threshold:
-      present: true
-      stated: "\"largest of any candidate\" (a relative superlative, not a number)"
+    - in: acceptance
+      ref: "\u00b63.2"
+      quote: "We will be a country of generosity and warmth."
+    restatement: "Be a country of generosity and warmth."
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: tax reform / rate reduction legislation
-    measurable: "partial"
-    notes: >
-      The benchmark is other candidates' proposals, not an enacted policy
-      metric, so the claim is about the *plan he proposed*, not a delivered
-      outcome. No deadline and a moving comparison set are the disputed edges.
-
-  - id: trump-2016-end-regulation
-    ref: "¶96.5"
-    theme: regulation
-    quote: >
-      Excessive regulation is costing our country as much as $2 trillion a year,
-      and we will end it very very quickly.
-    restatement: End the excessive regulation he says costs $2 trillion a year.
-    metric:
-      present: true
-      quantity: cost of federal regulation
-      record: no agreed series (contested estimates, e.g., NAM / OMB)
-    threshold:
-      present: true
-      stated: "\"end it\" (to zero of the cited $2 trillion)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: deregulation
-    measurable: "partial"
-    notes: >
-      "$2 trillion a year" is a vivid figure but there is no consensus record of
-      regulatory cost, and "end it" as a literal to-zero is implausible. The
-      metric itself is the disputed boundary; "very very quickly" gives no date.
-
-  - id: trump-2016-lift-energy-restrictions
-    ref: "¶96.6-96.7"
-    theme: energy
-    quote: >
-      We are going to lift the restrictions on the production of American
-      energy. This will produce more than $20 trillion in job creating economic
-      activity over the next four decades.
-    restatement: Lift restrictions on US energy production, generating $20T of activity over 40 years.
-    metric:
-      present: true
-      quantity: American energy production; economic activity generated
-      record: EIA production data (activity attribution is contested)
-    threshold:
-      present: true
-      stated: "more than $20 trillion"
-    deadline:
-      present: true
-      stated: over the next four decades
-    instrument:
-      present: true
-      stated: lift restrictions on domestic energy production
-    measurable: "full"
-    notes: >
-      The one fully-shaped promise here — metric, a $20 trillion threshold, and a
-      four-decade window all present. But like Obama's renewable-jobs pledge, the
-      "$20 trillion in activity" half is an outcome he cannot fully control and
-      cannot be cleanly attributed to lifting restrictions.
-
-  - id: trump-2016-repeal-obamacare
-    theme: health
-    sources:
-      - in: acceptance
-        ref: "¶99.3"
-        quote: >
-          We will repeal and replace disastrous Obamacare.
-      - in: debate
-        ref: "¶488.2"
-        quote: >
-          And one thing we have to do: Repeal and replace the
-          disaster known as Obamacare.
-    restatement: Repeal and replace the Affordable Care Act.
-    metric:
-      present: true
-      quantity: whether the ACA is repealed and replaced (binary)
-      record: enacted health-care law
-    threshold:
-      present: true
-      stated: "repeal and replace (full)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: repeal-and-replace legislation
-    measurable: "partial"
-    notes: >
-      Measurable as a yes/no policy outcome, not a quantity over time, and with
-      no deadline. "Replace" is the disputed boundary — repeal alone would not
-      satisfy the second, and harder, half of the promise.
-
-  - id: trump-2016-renegotiate-nafta
-    theme: trade
-    sources:
-      - in: acceptance
-        ref: "¶93.3-93.4"
-        quote: >
-          Our horrible trade agreements with China and many others,
-          will be totally renegotiated. That includes renegotiating
-          NAFTA to get a much better deal for America – and we'll
-          walk away if we don't get the deal that we want.
-      - in: debate
-        ref: "¶203.1-203.3"
-        quote: >
-          I am going to renegotiate NAFTA. And if I can't make a
-          great deal—then we're going to terminate NAFTA and we're
-          going to create new deals. We're going to have trade, but
-          we're going—we're going to terminate it, we're going to
-          make a great trade deal.
-    restatement: Totally renegotiate NAFTA and other trade deals, or walk away.
-    metric:
-      present: true
-      quantity: whether the named agreements are renegotiated (binary)
-      record: enacted trade agreements (e.g., the NAFTA successor)
-    threshold:
-      present: true
-      stated: "\"totally renegotiated\" (or walk away)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: renegotiate the agreements; withdraw if terms are unmet
-    measurable: "partial"
-    notes: >
-      A clear instrument and a binary "was it renegotiated?" record, but "totally"
-      and "a much better deal" have no metric, and there is no deadline. The
-      disputed boundary is how much change counts as "totally renegotiated."
-
-  - id: trump-2016-no-bad-trade-deals
-    ref: "¶91.5-91.6"
-    theme: trade
-    quote: >
-      I pledge to never sign any trade agreement that hurts our workers, or that
-      diminishes our freedom and independence. I will never, ever sign bad trade
-      deals.
-    restatement: Never sign a trade deal that hurts American workers.
-    metric:
-      present: false
-      quantity: no clean quantity ("hurts our workers" has no agreed measure)
-      record: null
-    threshold:
-      present: true
-      stated: "never / zero (direction)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: refuse to sign disfavored agreements
-    measurable: "partial"
-    notes: >
-      A "never" pledge with a sharp direction but no metric — "hurts our workers"
-      is undefined — and no deadline. Like Obama's offshoring pledge, it is an
-      instrument with a direction attached to no agreed quantity.
-
-  - id: trump-2016-bring-jobs-back
-    theme: labor
-    sources:
-      - in: acceptance
-        ref: "¶89.1"
-        quote: >
-          I am going to bring our jobs back to Ohio and Pennsylvania
-          and New York and Michigan and all of America – and I am
-          not going to let companies move to other countries, firing
-          their employees along the way, without consequences.
-      - in: inaugural
-        ref: "¶18.2"
-        quote: >
-          We will bring back our jobs.
-      - in: debate
-        ref: "¶202.4"
-        quote: >
-          We're bringing our jobs back.
-    restatement: Bring jobs back to the industrial states and penalize companies that offshore.
-    metric:
-      present: true
-      quantity: manufacturing / total employment in the named states
-      record: BLS state and manufacturing employment series
-    threshold:
-      present: true
-      stated: "\"bring back\" (direction; no number)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: impose "consequences" on companies that move jobs abroad
-    measurable: "partial"
-    notes: >
-      Real, trackable metrics for the named states, but the promise pins no
-      number and no date to them, and "without consequences" names an intent, not
-      a specific policy. "Our jobs" and attribution to his actions are disputed.
-
-  - id: trump-2016-rebuild-military
-    theme: foreign-policy
-    sources:
-      - in: acceptance
-        ref: "¶102.1"
-        quote: >
-          We will completely rebuild our depleted military, and the
-          countries that we protect, at a massive loss, will be
-          asked to pay their fair share.
-      - in: debate
-        ref: "¶507.4-507.5"
-        quote: >
-          We have a depleted military. It has to be helped, has to
-          be fixed.
-    restatement: Rebuild the military and make protected allies pay their fair share.
-    metric:
-      present: true
-      quantity: defense spending / force levels; allied burden-sharing
-      record: DoD budget; NATO defense-spending shares
-    threshold:
-      present: true
-      stated: "\"completely rebuild\"; \"fair share\" (direction; no number)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: increase military funding; demand allied contributions
-    measurable: "partial"
-    notes: >
-      Both halves have real records, but neither "completely rebuild" nor "fair
-      share" is quantified, there is no deadline, and allied payments are an
-      outcome he cannot unilaterally control.
-
-  - id: trump-2016-veterans-choice
-    ref: "¶103.1-103.3"
-    theme: veterans
-    quote: >
-      We will take care of our great veterans like they have never been taken
-      care of before. [...] We will guarantee those who serve this country will
-      be able to visit the doctor or hospital of their choice without waiting
-      five days in line and dying.
-    restatement: Guarantee veterans can see the doctor of their choice without long waits.
-    metric:
-      present: true
-      quantity: VA appointment wait times / access to care
-      record: VA wait-time and access reporting
-    threshold:
-      present: true
-      stated: "choice of any doctor; \"without waiting five days in line\""
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: guarantee choice of provider / VA reform
-    measurable: "partial"
-    notes: >
-      Wait times are cleanly measurable, but "like they have never been taken
-      care of before" is unmeasurable and "five days" is rhetorical, not a
-      standard. No deadline. The measurable core is the choice-of-provider
-      guarantee.
-
-  - id: trump-2016-wasteful-spending-100-days
-    ref: "¶104.2"
-    theme: fiscal
-    quote: >
-      We are going to ask every Department Head in government to provide a list
-      of wasteful spending projects that we can eliminate in my first 100 days.
-    restatement: Have every department head list wasteful spending to cut in the first 100 days.
-    metric:
-      present: false
-      quantity: no tracked quantity (a process — lists produced — not a spending target)
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: true
-      stated: in my first 100 days
-    instrument:
-      present: true
-      stated: direct every department head to submit a list
-    measurable: "partial"
-    notes: >
-      Unusually, the deadline is the sharp part ("first 100 days") while the
-      metric and threshold are absent — no dollar target, only a process. It is
-      measurable only as "were the lists produced?", not as spending reduced.
-
-  - id: trump-2016-supreme-court
-    theme: judiciary
-    sources:
-      - in: acceptance
-        ref: "¶105.1"
-        quote: >
-          We are also going to appoint justices to the United States
-          Supreme Court who will uphold our laws and our
-          Constitution.
-      - in: debate
-        ref: "¶40.1-40.2"
-        quote: >
-          We are going to appoint justices—this is the best way to
-          help the Second Amendment. We are going to appoint
-          justices that will feel very strongly about the Second
-          Amendment, that will not do damage to the Second
-          Amendment.
-    restatement: Appoint Supreme Court justices who will uphold the laws and Constitution.
-    metric:
-      present: true
-      quantity: whether such justices are appointed (binary / count)
-      record: confirmed Supreme Court appointments
-    threshold:
-      present: true
-      stated: "appoint (qualitative criterion, no number)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: nominate justices (confirmation depends on the Senate)
-    measurable: "partial"
-    notes: >
-      The act of appointing is trackable, but "who will uphold our laws and our
-      Constitution" is a judgment, not a measure, there is no deadline, and
-      confirmation is an outcome he shares with the Senate.
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2016-restore-law-and-order
-    theme: crime
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶54.4"
-        quote: >
-          I have a message to every last person threatening the
-          peace on our streets and the safety of our police: when I
-          take the oath of office next year, I will restore law and
-          order to our country.
-      - in: debate
-        ref: "¶508.2"
-        quote: >
-          We need law and order, but we need justice, too.
-    restatement: Restore law and order upon taking office.
-    metric:
-      present: true
-      quantity: crime and violence rates
-      record: FBI UCR / homicide statistics
-    threshold:
-      present: true
-      stated: "\"restore\" (direction; no number)"
+    - in: acceptance
+      ref: "\u00b63.3"
+      quote: "But we will also be a country of law and order."
+    - in: acceptance
+      ref: "\u00b66.1-7.1"
+      quote: "the crime and violence that today afflicts our nation will soon \u2013 and I mean very soon \u2013 come to an end"
+    - in: acceptance
+      ref: "\u00b652.4"
+      quote: "The first task for our new Administration will be to liberate our citizens from the crime and terrorism and lawlessness that threatens their communities."
+    - in: acceptance
+      ref: "\u00b654.4"
+      quote: "when I take the oath of office next year, I will restore law and order to our country"
+    restatement: "Restore law and order; end the crime and violence afflicting the country."
+    type: outcome
+    theme: crime-justice
     deadline:
-      present: true
-      stated: when I take the oath of office next year (Jan 2017)
-    instrument:
-      present: true
-      stated: "restore law and order (a goal, not a specific action)"
-    measurable: "partial"
-    notes: >
-      Metric and a dated starting point are present, but "law and order" has no
-      numeric target and "restore" no baseline, so the promise names when it
-      begins without saying what level counts as success.
+      stated: "when I take the oath of office next year; very soon; beginning on January 20th of 2017"
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "violent crime in the United States"
+      record: "FBI Uniform Crime Reporting (violent crime and homicide rates); BJS National Crime Victimization Survey"
+      criterion: "the violent crime rate is lower at the end of the term than in 2016"
+      ambiguity: "\"Law and order\" and \"come to an end\" are not defined; the reading is a fall in the national violent crime rate from its 2016 level."
+    uncertainty:
+      extraction: probable
+      note: "The timing words mark when the effort starts, not a date by which crime can be measured, so the applied deadline is the end of the term (as with \"immediately\")."
+    links: []
 
-  - id: trump-2016-crime-end
-    ref: "¶6.1"
-    theme: crime
-    quote: >
-      I have a message for all of you: the crime and violence that today
-      afflicts our nation will soon – and I mean very soon – come to an end.
-    restatement: Crime and violence will soon come to an end.
-    metric:
-      present: true
-      quantity: crime and violence rates
-      record: FBI UCR / homicide statistics
-    threshold:
-      present: true
-      stated: "\"come to an end\" (to zero)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: false
-      stated: null
-    measurable: "partial"
-    notes: >
-      A real metric and a to-zero threshold, but no named instrument (it "will
-      come to an end", stated as an outcome) and "very soon" is not a bounded
-      period. Measurable in principle yet almost entirely outside his control.
-
-  - id: trump-2016-repeal-johnson-amendment
-    ref: "¶108.1"
-    theme: religion
-    quote: >
-      I am going to work very hard to repeal that language and protect free
-      speech for all Americans.
-    restatement: Repeal the Johnson Amendment language restricting churches' political speech.
-    metric:
-      present: true
-      quantity: whether the Johnson Amendment language is repealed (binary)
-      record: enacted tax-code amendments
-    threshold:
-      present: true
-      stated: "repeal (the language)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: "\"work very hard to repeal\" — legislative effort, not a controlled outcome"
-    measurable: "partial"
-    notes: >
-      Measurable as a yes/no legislative outcome, but "work very hard to repeal"
-      commits to effort rather than result, and there is no deadline. Whether an
-      administrative or partial change counts as repeal is the disputed edge.
-
-  - id: trump-2016-enforce-trade-tariffs
-    ref: "¶92.2"
+  - id: trump-2016-fix-trade-deficit
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b622.2-22.3"
+      quote: "our trade deficit reached nearly $800 billion last year alone. We're going to fix that."
+    restatement: "Fix the nearly $800 billion trade deficit in goods."
+    type: outcome
     theme: trade
-    quote: >
-      We are going to enforce all trade violations against any country including
-      through the use of taxes and tariffs, against any country that cheats.
-    restatement: Enforce trade violations against cheating countries, including through taxes and tariffs.
-    metric:
-      present: true
-      quantity: trade-enforcement actions; tariffs/duties imposed
-      record: USTR / Commerce trade actions; USITC tariff data
-    threshold:
-      present: true
-      stated: "\"all trade violations\" (direction; no number)"
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: impose taxes and tariffs on countries that cheat
-    measurable: "partial"
-    notes: >
-      A named instrument — tariffs and taxes — with a trackable record, but "all
-      trade violations" and "any country that cheats" set no number, and the
-      promise carries no deadline. The disputed boundary is what counts as a
-      "violation" and as "cheating."
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "US trade deficit in goods"
+      record: "Census Bureau / BEA international trade data (FT-900)"
+      criterion: "the annual goods trade deficit is smaller in the last full year of the term than in 2015"
+      ambiguity: "\"Fix\" sets no target; the reading is a shrinking goods deficit."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2016-rebuild-infrastructure
-    theme: infrastructure
+  - id: trump-2016-america-first
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶98.1"
-        quote: >
-          We will build the roads, highways, bridges, tunnels,
-          airports, and the railways of tomorrow.
-      - in: inaugural
-        ref: "¶19.1"
-        quote: >
-          We will build new roads and highways and bridges and
-          airports and tunnels and railways all across our wonderful
-          Nation.
-    restatement: Build new roads, highways, bridges, tunnels, airports, and railways.
-    metric:
-      present: true
-      quantity: infrastructure investment / projects built
-      record: federal infrastructure outlays; DOT project data
-    threshold:
-      present: true
-      stated: "\"build\" the infrastructure \"of tomorrow\" (direction; no number)"
+    - in: acceptance
+      ref: "\u00b635.1-35.2"
+      quote: "our plan will put America First. Americanism, not globalism, will be our credo."
+    - in: inaugural
+      ref: "\u00b615.2-16.1"
+      quote: "Every decision on trade, on taxes, on immigration, on foreign affairs, will be made to benefit American workers and American families."
+    restatement: "Put America first: make every decision on trade, taxes, immigration and foreign affairs to benefit American workers and families."
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: federal infrastructure construction
-    measurable: "partial"
-    notes: >
-      A broad build-it commitment with a trackable spending record, but no dollar
-      figure, no mileage or project count, and no deadline. "Of tomorrow" is
-      rhetorical, not a standard.
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2016-school-choice
-    ref: "¶98.3"
-    theme: education
-    quote: >
-      We will rescue kids from failing schools by helping their parents send
-      them to a safe school of their choice.
-    restatement: Expand school choice so parents can move children out of failing schools.
-    metric:
-      present: false
-      quantity: policy action (binary), not a tracked quantity
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: school-choice policy (help parents choose a safe school)
-    measurable: "no"
-    notes: >
-      A named instrument — school choice — but no number, no deadline, and no
-      metric beyond "did such a policy advance?" Like Obama's paid-leave pledge,
-      measurable only as a yes/no policy outcome.
-
-  - id: trump-2016-student-debt
-    theme: education
+  - id: trump-2016-forgotten-no-longer
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶101.1"
-        quote: >
-          We are going to work with all of our students who are
-          drowning in debt to take the pressure off these young
-          people just starting out their adult lives.
-      - in: debate
-        ref: "¶195.4-195.5"
-        quote: >
-          And I'm a big proponent. We're going to do a lot of things
-          for college tuition.
-    restatement: Ease the burden of student debt on young people starting out.
-    metric:
-      present: true
-      quantity: student-debt burden (balances / repayment pressure)
-      record: Federal Reserve and Dept. of Education student-loan data
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: "\u00b640.3"
+      quote: "And they are forgotten, but they're not going to be forgotten long."
+    - in: inaugural
+      ref: "\u00b67.3"
+      quote: "The forgotten men and women of our country will be forgotten no longer."
+    - in: inaugural
+      ref: "\u00b630.1"
+      quote: "You will never be ignored again."
+    restatement: "The forgotten men and women will be forgotten no longer."
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: "\"work with\" students to ease debt — effort, not a specified action"
-    measurable: "partial"
-    notes: >
-      Student debt is trackable, but the promise attaches no target and no
-      deadline and names only a vague instrument ("work with ... to take the
-      pressure off"), so the metric exists while the commitment does not pin it.
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2016-visa-overstays
-    ref: "¶78.7"
-    theme: immigration
-    quote: >
-      By enforcing the rules for the millions who overstay their visas, our laws
-      will finally receive the respect they deserve.
-    restatement: Enforce the rules against the millions who overstay their visas.
-    metric:
-      present: true
-      quantity: visa-overstay rate / enforcement actions
-      record: DHS Entry/Exit Overstay Reports
-    threshold:
-      present: true
-      stated: "\"enforcing the rules\" (direction; no number)"
+  - id: trump-2016-not-look-away
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b646.1"
+      quote: "I am not able to look the other way, and I won't look the other way."
+    restatement: "Not look the other way when laws go unenforced."
+    type: ongoing
+    theme: crime-justice
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: enforce existing visa-overstay rules
-    measurable: "partial"
-    notes: >
-      Distinct from the border-crossing pledges: this targets visa overstays,
-      which DHS tracks. But "enforcing the rules" sets no numeric target and the
-      promise carries no deadline.
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-better-trade-deals
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b651.1"
+      quote: "we will fix his biggest single issue: trade deals that strip us of our jobs, and strip us of our wealth as a country"
+    - in: acceptance
+      ref: "\u00b686.2"
+      quote: "I am going to turn our bad trade agreements into great trade agreements"
+    - in: debate
+      ref: "\u00b684.4"
+      quote: "We will be doing very much better with Mexico on trade deals."
+    - in: debate
+      ref: "\u00b6483.1"
+      quote: "And frankly, now we're going to do it right."
+    restatement: "Turn bad trade deals into great ones."
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Debate \u00b6483.1 \"do it right\" is read as being tougher on trade (\u00b6481.3)."
+    links: []
+
+  - id: trump-2016-fix-the-system
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b651.2"
+      quote: "we are going to fix the system so it works justly for each and every American"
+    restatement: "Fix the system so it works justly for every American."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-indiana-success
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b652.1"
+      quote: "We will bring the same economic success to America that Mike brought to Indiana"
+    restatement: "Bring Indiana's economic success to America."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-appoint-best-prosecutors
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b655.1"
+      quote: "I will work with, and appoint, the best and prosecutors and law enforcement officials to get the job properly done."
+    restatement: "Work with and appoint the best prosecutors and law-enforcement officials."
+    type: action
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-kids-treated-equally
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b658.1"
+      quote: "When I am President, I will work to ensure that all of our kids are treated equally, and protected equally."
+    restatement: "Work to ensure all children are treated and protected equally."
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-inner-city-test
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b659.1"
+      quote: "Every action I take, I will ask myself: does this make better for young Americans in Baltimore, in Chicago, in Detroit, in Ferguson"
+    restatement: "Judge every action by whether it improves life for young Americans in the inner cities."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-defeat-isis
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b660.1"
+      quote: "We are going to defeat the barbarians of ISIS, and we are going to defeat them fast."
+    - in: acceptance
+      ref: "\u00b667.4-67.5"
+      quote: "We're going to win. We're going to win fast."
+    restatement: "Defeat ISIS, and fast."
+    type: outcome
+    theme: defense
+    deadline:
+      stated: "fast"
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "ISIS"
+      record: "Combined Joint Task Force\u2013Operation Inherent Resolve and DoD reports on territory held by ISIS"
+      criterion: "ISIS no longer holds territory in Iraq and Syria by the end of the term"
+      ambiguity: "\"Defeat\" is not defined; the reading is the loss of all territory ISIS held, not the end of the group. \"Fast\" gives no date."
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2016-protect-lgbtq
-    ref: "¶64.1"
-    theme: civil-rights
-    quote: >
-      As your President, I will do everything in my power to protect our LGBTQ
-      citizens from the violence and oppression of a hateful foreign ideology –
-      believe me.
-    restatement: Protect LGBTQ citizens from terrorist violence and oppression.
-    metric:
-      present: false
-      quantity: no clean quantity ("do everything in my power" to protect from a "foreign ideology")
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: "\"do everything in my power\" — an effort commitment, not a controlled outcome"
-    measurable: "no"
-    notes: >
-      A genuine commitment but an aspirational one: "do everything in my power"
-      pledges effort, and "protect ... from a hateful foreign ideology" has no
-      metric, no target level, and no deadline. Instrument-only, on the
-      aspirational end of the scale.
-
-  - id: trump-2016-buy-american-hire-american
-    theme: trade
-    restatement: Adopt "Buy American and hire American" as governing rules.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶20.2"
-        quote: >
-          We will follow two simple rules: Buy American and hire American.
-    metric:
-      present: true
-      quantity: whether Buy-American / Hire-American rules are adopted (binary policy action); federal procurement domestic-content share
-      record: executive orders (e.g., Buy American, Hire American); federal procurement data (no single agreed series)
-    threshold:
-      present: true
-      stated: "\"Buy American and hire American\" (adopt / direction; no number)"
+    - in: acceptance
+      ref: "\u00b663.2"
+      quote: "no good and we're going to stop it"
+    - in: acceptance
+      ref: "\u00b664.1"
+      quote: "As your President, I will do everything in my power to protect our LGBTQ citizens from the violence and oppression of a hateful foreign ideology"
+    restatement: "Protect LGBTQ citizens from the violence of a hateful foreign ideology."
+    type: ongoing
+    theme: rights
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: impose Buy-American procurement and Hire-American rules
-    measurable: "partial"
-    notes: >
-      A named policy rule measurable chiefly as a yes/no — were such rules
-      adopted and enforced? — not as a tracked quantity. There is no domestic-
-      content target, no hiring number, and no deadline. "Buy American" and
-      "hire American" are the undefined boundaries (which contracts, which
-      visas count).
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "In \u00b663.2 \"it\" is read as the terrorist targeting of the LGBTQ community named in the same sentence."
+    links: []
 
-  - id: trump-2016-welfare-to-work
-    theme: labor
-    restatement: Move people off welfare and back to work.
+  - id: trump-2016-best-intelligence
+    kind: ambition
     sources:
-      - in: inaugural
-        ref: "¶20.1"
-        quote: >
-          We will get our people off of welfare and back to work, rebuilding
-          our country with American hands and American labor.
-    metric:
-      present: true
-      quantity: welfare-program enrollment; employment
-      record: SNAP/TANF enrollment; BLS employment series
-    threshold:
-      present: true
-      stated: "\"off of welfare and back to work\" (direction; no number)"
+    - in: acceptance
+      ref: "\u00b667.1"
+      quote: "We must have the best intelligence gathering operation in the world."
+    restatement: "Have the best intelligence-gathering operation in the world."
+    group: trump-2016-counterterror-plan
+    type: ongoing
+    theme: defense
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: "\"rebuilding our country with American hands and American labor\" — a goal, not a specified action"
-    measurable: "partial"
-    notes: >
-      Welfare rolls and employment are cleanly trackable, but the promise pins
-      no target level and no date, and names only a vague instrument, so the
-      metric exists while the commitment does not fix it. "Our people" and
-      attribution to his actions are the disputed edges.
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2016-eradicate-radical-islamic-terrorism
+  - id: trump-2016-end-nation-building
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "\u00b667.2"
+      quote: "We must abandon the failed policy of nation building and regime change"
+    restatement: "Abandon nation building and regime change."
+    group: trump-2016-counterterror-plan
+    type: ongoing
     theme: foreign-policy
-    restatement: Eradicate radical Islamic terrorism completely from the Earth.
-    sources:
-      - in: inaugural
-        ref: "¶22.1"
-        quote: >
-          We will reinforce old alliances and form new ones and unite the
-          civilized world against radical Islamic terrorism, which we will
-          eradicate completely from the face of the Earth.
-      - in: debate
-        ref: "¶126.1"
-        quote: >
-          And you see, we are going to stop radical Islamic
-          terrorism in this country.
-    metric:
-      present: true
-      quantity: radical-Islamic-terrorism activity (attacks / active groups)
-      record: no single agreed series (e.g., Global Terrorism Database; State Dept. country reports)
-    threshold:
-      present: true
-      stated: "\"eradicate completely from the face of the Earth\" (to zero)"
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: "unite the civilized world against it — a coalition outcome he cannot unilaterally control"
-    measurable: "partial"
-    notes: >
-      Broader than the acceptance speech's defeat-ISIS pledge (this targets
-      radical Islamic terrorism as a whole, not one named group), so it is
-      kept as its own commitment rather than a source of trump-2016-defeat-isis.
-      A to-zero threshold on a real phenomenon, but there is no agreed metric,
-      no deadline, and eradicating a global phenomenon "completely" is an
-      outcome largely outside his control.
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "US use of force and aid for regime change or nation building"
+      record: "war powers reports to Congress; DoD deployments; National Security Strategy"
+      criterion: "no new US intervention aimed at regime change or nation building is started during the term"
+      ambiguity: "What counts as nation building is a judgement; the reading is a new intervention whose stated aim is to replace a government or build a state."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2016-gdp-growth
+  - id: trump-2016-allies-against-isis
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "\u00b667.3"
+      quote: "we must work with all of our allies who share our goal of destroying ISIS and stamping out Islamic terrorism"
+    restatement: "Work with all allies who share the goal of destroying ISIS."
+    group: trump-2016-counterterror-plan
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-suspend-terror-immigration
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "\u00b670.1"
+      quote: "we must immediately suspend immigration from any nation that has been compromised by terrorism until such time as proven vetting mechanisms have been put in place"
+    restatement: "Suspend immigration from nations compromised by terrorism until proven vetting is in place."
+    type: action
+    theme: immigration
+    deadline:
+      stated: "immediately"
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "entry of immigrants from countries linked to terrorism"
+      record: "presidential proclamations and executive orders (Federal Register); State Department visa statistics"
+      criterion: "entry of immigrants from countries designated as compromised by terrorism is suspended by executive or legislative action"
+      ambiguity: "Which nations are \"compromised by terrorism\" is not said; any suspension covering countries the government itself designates on terrorism grounds counts."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-immigration-system-works
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b673.2"
+      quote: "We are going to have an immigration system that works, but one that works for the American people."
+    restatement: "Have an immigration system that works for the American people."
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-solve-border-violence
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "\u00b674.3-74.4"
+      quote: "violence spilling across our border, which we can solve. We have to solve it."
+    restatement: "Solve the violence spilling across the border."
+    group: trump-2016-border
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-save-families
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b676.3"
+      quote: "we will save countless more families from suffering and the same awful fate"
+    restatement: "Save countless families from losing children to crime by illegal immigrants."
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-border-wall
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b677.1"
+      quote: "We are going to build a great border wall to stop illegal immigration, to stop the gangs and the violence, and to stop the drugs from pouring into our communities."
+    - in: debate
+      ref: "\u00b672.1"
+      quote: "Now, I want to build the wall."
+    restatement: "Build a great wall on the southern border."
+    group: trump-2016-border
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "a wall on the US\u2013Mexico border"
+      record: "CBP border wall status reports (miles of primary and secondary barrier)"
+      criterion: "a wall is built along the southern border where none stood"
+      ambiguity: "No length is stated; the reading is new barrier along the length of the border not already fenced, not replacement of existing fencing."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-work-with-border-patrol
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b677.2"
+      quote: "will work directly with them to protect the integrity of our lawful, lawful, lawful immigration system"
+    restatement: "Work directly with Border Patrol agents to protect the lawful immigration system."
+    type: ongoing
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-end-catch-and-release
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b678.1"
+      quote: "By ending catch-and-release on the border, we will stop the cycle of human smuggling and violence."
+    restatement: "End catch-and-release on the border."
+    group: trump-2016-catch-and-release
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "release of apprehended migrants pending their hearings"
+      record: "DHS and ICE detention and release statistics; executive orders and DHS memoranda"
+      criterion: "migrants apprehended at the border are no longer released into the country pending their hearings"
+      ambiguity: "Whether partial measures (e.g. returning some asylum seekers to Mexico) count as ending the practice is a judgement; the reading is that release pending hearings stops as a general practice."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-stop-smuggling-cycle
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b678.1"
+      quote: "we will stop the cycle of human smuggling and violence"
+    restatement: "Stop the cycle of human smuggling and violence."
+    group: trump-2016-catch-and-release
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-illegal-crossings-down
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b678.2-78.4"
+      quote: "Illegal border crossings will go down. We will stop it. It won't be happening very much anymore."
+    restatement: "Illegal border crossings will go down."
+    group: trump-2016-border
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: high
+      object: "illegal crossings of the southern border"
+      record: "CBP southwest border apprehension statistics"
+      criterion: "southwest border apprehensions are lower in the last full fiscal year of the term than in FY2016"
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: trump-2016-secure-border
+
+  - id: trump-2016-visa-overstays
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b678.7"
+      quote: "By enforcing the rules for the millions who overstay their visas, our laws will finally receive the respect they deserve."
+    restatement: "Enforce the rules for people who overstay their visas."
+    type: ongoing
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "visa overstays"
+      record: "DHS Entry/Exit Overstay Reports"
+      criterion: "the suspected in-country overstay rate falls over the term"
+      ambiguity: "\"Enforcing the rules\" is not defined; the reading uses DHS's own overstay rate as the measure of enforcement."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-enforce-laws-day-one
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b680.1"
+      quote: "On January 20th of 2017, the day I take the oath of office, Americans will finally wake up in a country where the laws of the United States are enforced."
+    restatement: "From the day he takes office, the laws of the United States will be enforced."
+    type: ongoing
+    theme: immigration
+    deadline:
+      stated: "On January 20th of 2017"
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-compassionate
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b680.2"
+      quote: "We are going to be considerate and compassionate to everyone."
+    restatement: "Be considerate and compassionate to everyone."
+    type: ongoing
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-fair-trade-policy
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b685.2-85.3"
+      quote: "it will be a signature feature of my presidency from the moment I take the oath of office"
+    restatement: "Make a fair trade policy that protects jobs and stands up to cheating countries a signature of his presidency."
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-make-country-rich
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b686.1"
+      quote: "now I'm going to make our country rich again"
+    - in: inaugural
+      ref: "\u00b618.4"
+      quote: "We will bring back our wealth."
+    restatement: "Make the country rich again."
+    type: outcome
     theme: economy
-    restatement: Grow GDP from 1 percent up to 4 percent, and aim for 5 or 6 percent.
-    sources:
-      - in: debate
-        ref: "¶463.3-463.5"
-        quote: >
-          But we're bringing it from 1 percent up to 4 percent. And
-          I actually think we can go higher than 4 percent. I think
-          you can go to 5 percent or 6 percent.
-    metric:     { present: true, stated: annual GDP growth rate }
-    threshold:  { present: true, stated: up to 4 percent, reaching for 5 or 6 percent }
-    deadline:   { present: false }
-    instrument: { present: false }
-    measurable: "partial"
-    notes: >
-      A named metric with an explicit target level, but no deadline and
-      no instrument named in the claim itself.
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2016-repatriate-offshore
-    theme: taxes
-    restatement: Bring the $2.5 trillion held offshore back into the country.
+  - id: trump-2016-bring-jobs-back
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶204.5"
-        quote: >
-          We're going to bring the $2.5 trillion...
-    metric:     { present: true, stated: dollars of offshore corporate cash repatriated }
-    threshold:  { present: true, stated: $2.5 trillion }
-    deadline:   { present: false }
-    instrument: { present: false }
-    measurable: "partial"
-    notes: >
-      A dollar figure to repatriate, but the mechanism (a tax change)
-      and any date are left unstated.
+    - in: acceptance
+      ref: "\u00b689.1"
+      quote: "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America"
+    - in: debate
+      ref: "\u00b6202.4"
+      quote: "We're bringing our jobs back."
+    - in: inaugural
+      ref: "\u00b618.2"
+      quote: "We will bring back our jobs."
+    restatement: "Bring jobs back to Ohio, Pennsylvania, New York, Michigan and all of America."
+    group: trump-2016-jobs-offshoring
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "manufacturing jobs lost abroad"
+      record: "BLS Current Employment Statistics (manufacturing payrolls)"
+      criterion: "manufacturing payroll employment is higher at the end of the term than in January 2017"
+      ambiguity: "\"Our jobs\" is not defined; in context (factories, trade deals) the reading is manufacturing jobs."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-offshoring-consequences
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b689.1"
+      quote: "I am not going to let companies move to other countries, firing their employees along the way, without consequences"
+    restatement: "Impose consequences on companies that move abroad and fire their workers."
+    group: trump-2016-jobs-offshoring
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "penalties on companies that move production abroad"
+      record: "enacted legislation (Congress.gov); tariff and tax rules"
+      criterion: "a law or rule penalizes companies for moving jobs abroad"
+      ambiguity: "No consequence is named; any measure aimed at companies that relocate jobs abroad counts."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-no-tpp
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b691.3-91.4"
+      quote: "The TPP will not only destroy our manufacturing, but it will make America subject to the rulings of foreign governments. And it's not going to happen."
+    restatement: "The US will not join the Trans-Pacific Partnership."
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: high
+      object: "the Trans-Pacific Partnership"
+      record: "USTR; Congress.gov (ratification); presidential memoranda"
+      criterion: "the United States does not ratify TPP and withdraws its signature"
+    uncertainty:
+      extraction: probable
+      note: "\"It\" may refer to TPP or to America being subject to foreign rulings; either way the commitment is that TPP will not bind the US."
+    links: []
+
+  - id: trump-2016-no-bad-trade-deals
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b691.5-91.6"
+      quote: "I pledge to never sign any trade agreement that hurts our workers, or that diminishes our freedom and independence. I will never, ever sign bad trade deals."
+    restatement: "Never sign a trade agreement that hurts workers or diminishes US independence."
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-bilateral-deals
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b691.9-92.1"
+      quote: "Instead, I will make individual deals with individual countries. No longer will we enter into these massive transactions, with many countries"
+    restatement: "Make individual deals with individual countries instead of large multilateral agreements."
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "new US trade agreements"
+      record: "USTR agreement list"
+      criterion: "every new trade agreement signed during the term is bilateral"
+      ambiguity: "Whether renegotiating an existing multilateral agreement (NAFTA) counts as entering a new one is a judgement; the reading counts only agreements with new partners or new scope."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-enforce-trade-tariffs
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b692.2"
+      quote: "We are going to enforce all trade violations against any country including through the use of taxes and tariffs, against any country that cheats."
+    restatement: "Enforce trade violations, using taxes and tariffs against countries that cheat."
+    group: trump-2016-trade-enforcement
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "US trade enforcement actions"
+      record: "USTR Section 301 actions; Commerce Section 232 actions; WTO dispute filings; antidumping and countervailing duty orders"
+      criterion: "tariffs or duties are imposed on countries found to violate trade rules"
+      ambiguity: "\"All trade violations\" cannot be counted; the reading is whether tariffs were used as an enforcement tool against countries found to break rules."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-china-ip-theft
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b693.1"
+      quote: "This includes stopping China's outrageous theft of intellectual property"
+    restatement: "Stop China's theft of intellectual property."
+    group: trump-2016-trade-enforcement
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "Chinese theft of US intellectual property"
+      record: "USTR Section 301 investigation and Special 301 reports"
+      criterion: "USTR no longer reports China as engaging in systematic IP theft by the end of the term"
+      ambiguity: "\"Stopping\" is read against USTR's own findings; a reduction short of an end is a judgement call."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered; continues \u00b692.2's \"We are going to enforce\"."
+    links: []
+
+  - id: trump-2016-china-dumping
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b693.1"
+      quote: "along with their illegal product dumping"
+    restatement: "Stop China's illegal product dumping."
+    group: trump-2016-trade-enforcement
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "dumping of Chinese products in the US market"
+      record: "US International Trade Commission antidumping orders"
+      criterion: "antidumping duties are in force against Chinese products found to be dumped"
+      ambiguity: "\"Stopping\" dumping is read as duties against dumped goods, since dumping itself is not measured."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered; continues \u00b692.2's \"We are going to enforce\"."
+    links: []
+
+  - id: trump-2016-china-currency
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b693.1"
+      quote: "and their devastating currency manipulation"
+    restatement: "Stop China's currency manipulation."
+    group: trump-2016-trade-enforcement
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "China's exchange-rate policy"
+      record: "Treasury semiannual report on foreign exchange policies"
+      criterion: "Treasury acts against China as a currency manipulator, and China's intervention to weaken its currency ends"
+      ambiguity: "Whether China manipulated its currency during the term is contested; the reading relies on Treasury's own reports."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered; continues \u00b692.2's \"We are going to enforce\"."
+    links:
+    - kind: shared
+      to: obama-2008-china-currency
+
+  - id: trump-2016-renegotiate-trade-deals
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b693.3"
+      quote: "Our horrible trade agreements with China and many others, will be totally renegotiated."
+    - in: debate
+      ref: "\u00b6201.1"
+      quote: "So my plan\u2014we're going to renegotiate trade deals."
+    restatement: "Totally renegotiate trade agreements with China and many others."
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "US trade agreements"
+      record: "USTR agreement texts; Congress.gov implementing legislation"
+      criterion: "existing US trade agreements, including one with China, are renegotiated and new terms signed"
+      ambiguity: "The US had no trade agreement with China; a signed trade deal with China (and renegotiation of existing agreements) is read as meeting \"renegotiated\"."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: trump-2016-better-trade-deals
+
+  - id: trump-2016-renegotiate-nafta
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b693.4"
+      quote: "That includes renegotiating NAFTA to get a much better deal for America \u2013 and we'll walk away if we don't get the deal that we want."
+    - in: debate
+      ref: "\u00b6203.1-204.1"
+      quote: "I am going to renegotiate NAFTA. And if I can't make a great deal\u2014then we're going to terminate NAFTA and we're going to create new deals."
+    restatement: "Renegotiate NAFTA, or walk away from it."
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: high
+      object: "the North American Free Trade Agreement"
+      record: "USTR; signed and enacted successor agreement or notice of withdrawal"
+      criterion: "NAFTA is renegotiated into a new signed agreement, or the US gives notice of withdrawal"
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: trump-2016-renegotiate-trade-deals
+
+  - id: trump-2016-making-things-again
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b694.1"
+      quote: "We are going to start building and making things again."
+    - in: debate
+      ref: "\u00b6463.11"
+      quote: "But I'm going to create a\u2014the kind of a country that we were from the standpoint of industry."
+    restatement: "Start building and making things again."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "US manufacturing output"
+      record: "Federal Reserve industrial production index (manufacturing)"
+      criterion: "manufacturing output is higher at the end of the term than in 2016"
+      ambiguity: "\"Start making things again\" sets no level; the reading is growth in manufacturing output."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-middle-income-tax-relief
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b695.3"
+      quote: "Middle-income Americans and businesses will experience profound relief"
+    restatement: "Give middle-income Americans and businesses profound tax relief."
+    group: trump-2016-taxes
+    type: outcome
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal taxes paid by middle-income households"
+      record: "Tax Policy Center / JCT distributional analyses; IRS statistics of income"
+      criterion: "average federal tax paid by middle-income households falls under the tax law enacted"
+      ambiguity: "\"Profound\" sets no size; the reading is a clear average cut for the middle quintile."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered; read as describing the effect of his tax plan (\u00b695.2)."
+    links: []
+
+  - id: trump-2016-simplify-taxes
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b695.3"
+      quote: "taxes will be greatly simplified for everyone, and I mean everyone"
+    restatement: "Greatly simplify taxes for everyone."
+    group: trump-2016-taxes
+    type: outcome
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "complexity of federal tax filing"
+      record: "IRS statistics of income (share of returns that itemize); IRS burden estimates"
+      criterion: "the share of filers who itemize, and the IRS's estimated filing burden, fall"
+      ambiguity: "\"Greatly simplified\" is not defined; the reading uses itemizing and filing-burden measures."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered; read as describing the effect of his tax plan (\u00b695.2)."
+    links: []
+
+  - id: trump-2016-end-regulation
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b696.4-96.5"
+      quote: "Then we are going to deal with the issue of regulation, one of the greatest job-killers of them all. Excessive regulation is costing our country as much as $2 trillion a year, and we will end it very very quickly."
+    restatement: "End excessive regulation, very quickly."
+    type: action
+    theme: economy
+    deadline:
+      stated: "very very quickly"
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal regulation"
+      record: "OIRA regulatory reports (cost of new and repealed rules); Federal Register"
+      criterion: "the net cost of federal regulation falls over the term"
+      ambiguity: "Which regulation is \"excessive\" is a judgement; the reading is a net fall in regulatory costs as OIRA counts them."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-lift-energy-restrictions
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b696.6"
+      quote: "We are going to lift the restrictions on the production of American energy."
+    restatement: "Lift restrictions on producing American energy."
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal restrictions on energy production"
+      record: "executive orders and rules (Federal Register); Interior leasing decisions"
+      criterion: "major federal limits on oil, gas and coal production are lifted"
+      ambiguity: "No restriction is named; the reading covers federal rules that limit fossil-fuel production (leasing moratoria, the Clean Power Plan, drilling limits)."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-miners-steelworkers-back
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b697.1-97.2"
+      quote: "that will never happen with Donald Trump as President. Our steelworkers and our miners are going back to work again."
+    restatement: "Put steelworkers and miners back to work."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: high
+      object: "employment in coal mining and steel"
+      record: "BLS Current Employment Statistics (coal mining; iron and steel mills)"
+      criterion: "coal-mining and steel-mill employment are both higher at the end of the term than in January 2017"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-rebuild-infrastructure
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b698.1"
+      quote: "We will build the roads, highways, bridges, tunnels, airports, and the railways of tomorrow."
+    - in: inaugural
+      ref: "\u00b619.1"
+      quote: "We will build new roads and highways and bridges and airports and tunnels and railways all across our wonderful Nation."
+    restatement: "Build new roads, highways, bridges, tunnels, airports and railways."
+    type: action
+    theme: infrastructure
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal infrastructure investment"
+      record: "enacted legislation (Congress.gov); BEA public construction spending"
+      criterion: "a major infrastructure law is enacted, or real federal infrastructure spending rises over the term"
+      ambiguity: "No scale is stated; the reading is a major federal infrastructure programme."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: obama-2012-war-savings-infrastructure
+
+  - id: trump-2016-school-choice
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b698.3"
+      quote: "We will rescue kids from failing schools by helping their parents send them to a safe school of their choice."
+    restatement: "Help parents send children in failing schools to a school of their choice."
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal support for school choice"
+      record: "enacted legislation (Congress.gov); Department of Education programmes and budget"
+      criterion: "a federal law or programme funds parents' choice of school for children in failing schools"
+      ambiguity: "\"Helping\" is not defined; the reading is new federal money or tax benefits that follow the child."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-repeal-obamacare
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b699.3"
+      quote: "We will repeal and replace disastrous Obamacare."
+    - in: debate
+      ref: "\u00b6488.2"
+      quote: "Repeal and replace the disaster known as Obamacare."
+    - in: debate
+      ref: "\u00b6488.5"
+      quote: "We have to repeal and replace Obamacare."
+    - in: debate
+      ref: "\u00b6490.3"
+      quote: "We have to repeal and replace Obamacare."
+    restatement: "Repeal Obamacare."
+    group: trump-2016-obamacare
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: high
+      object: "the Affordable Care Act"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law repealing the Affordable Care Act is enacted"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-replace-obamacare
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b699.3"
+      quote: "We will repeal and replace disastrous Obamacare."
+    - in: debate
+      ref: "\u00b6488.2"
+      quote: "Repeal and replace the disaster known as Obamacare."
+    - in: debate
+      ref: "\u00b6488.5"
+      quote: "We have to repeal and replace Obamacare."
+    - in: debate
+      ref: "\u00b6490.3"
+      quote: "We have to repeal and replace Obamacare."
+    restatement: "Replace Obamacare."
+    group: trump-2016-obamacare
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "a replacement health-care law"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law replacing the Affordable Care Act's coverage system is enacted"
+      ambiguity: "No replacement is described; any enacted law that substitutes a new system for the ACA's marketplaces and subsidies counts."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-choose-your-doctor
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b699.4"
+      quote: "You will be able to choose your own doctor again."
+    restatement: "People will be able to choose their own doctor again."
+    group: trump-2016-obamacare
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-fix-tsa
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b699.5"
+      quote: "And we will fix TSA at the airports which is a total disaster!"
+    restatement: "Fix the TSA at airports."
+    type: action
+    theme: government
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-student-debt
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6101.1"
+      quote: "We are going to work with all of our students who are drowning in debt to take the pressure off these young people"
+    restatement: "Work with students drowning in debt to take the pressure off."
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-rebuild-military
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6102.1"
+      quote: "We will completely rebuild our depleted military"
+    restatement: "Completely rebuild the military."
+    group: trump-2016-military
+    type: action
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "US military funding and readiness"
+      record: "DoD budget (National Defense Authorization and appropriations acts); service readiness reports"
+      criterion: "real defense spending is higher in each year of the term than in FY2016"
+      ambiguity: "\"Completely rebuild\" is not defined; the reading is a sustained real increase in the defense budget."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: obama-2008-rebuild-military
+
+  - id: trump-2016-allies-pay-fair-share
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6102.1"
+      quote: "the countries that we protect, at a massive loss, will be asked to pay their fair share"
+    - in: debate
+      ref: "\u00b6175.1"
+      quote: "we have to renegotiate these agreements, because our country cannot afford to defend Saudi Arabia, Japan, Germany, South Korea, and many other places"
+    - in: debate
+      ref: "\u00b6200.1"
+      quote: "We have to tell Japan in a very nice way, we have to tell Germany, all of these countries, South Korea, we have to say, you have to help us out."
+    restatement: "Make the countries the US protects pay their fair share."
+    group: trump-2016-military
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "allied defense spending and host-nation support"
+      record: "NATO defence expenditure reports; host-nation cost-sharing agreements (e.g. US\u2013South Korea Special Measures Agreement)"
+      criterion: "NATO allies' defense spending as a share of GDP rises over the term, and host-nation payments rise in renewed cost-sharing agreements"
+      ambiguity: "\"Fair share\" is not defined; NATO's 2%-of-GDP guideline and cost-sharing agreements are the usual yardsticks. \"Will be asked\" is read as a commitment to the result, as the debate restates it."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-veterans-care
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6103.1"
+      quote: "We will take care of our great veterans like they have never been taken care of before."
+    restatement: "Take care of veterans as never before."
+    type: ongoing
+    theme: veterans
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: obama-2012-serve-veterans
+
+  - id: trump-2016-veterans-choice
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6103.3"
+      quote: "We will guarantee those who serve this country will be able to visit the doctor or hospital of their choice without waiting five days in line and dying."
+    restatement: "Guarantee veterans can see the doctor or hospital of their choice without long waits."
+    type: action
+    theme: veterans
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "veterans' access to private doctors and hospitals"
+      record: "enacted legislation (Congress.gov); VA community-care rules and wait-time data"
+      criterion: "a law or rule lets veterans see a doctor or hospital of their choice when VA care would mean a wait"
+      ambiguity: "\"Of their choice\" could mean unrestricted choice; the reading accepts access subject to wait-time or distance standards."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: trump-2016-veterans-care
+
+  - id: trump-2016-wasteful-spending-100-days
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6104.2-104.3"
+      quote: "We are going to ask every Department Head in government to provide a list of wasteful spending projects that we can eliminate in my first 100 days. The politicians have talked about it, I'm going to do it."
+    restatement: "Ask every department head for a list of wasteful spending to eliminate in the first 100 days."
+    type: action
+    theme: budget
+    deadline:
+      stated: "in my first 100 days"
+      applied: 2017-04-30
+    verifiability:
+      level: medium
+      object: "a government-wide request for wasteful spending"
+      record: "executive orders and OMB memoranda; the President's budget"
+      criterion: "within 100 days every department is directed to list wasteful projects for elimination"
+      ambiguity: "Whether the 100 days applies to the request or to eliminating the projects is unclear; the reading is the request."
+    uncertainty:
+      extraction: probable
+      note: "\"In my first 100 days\" may attach to \"ask\" or to \"eliminate\"; read as the request."
+    links: []
+
+  - id: trump-2016-originalist-justices
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6105.1"
+      quote: "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution."
+    - in: debate
+      ref: "\u00b622.2"
+      quote: "They will have a conservative bent."
+    - in: debate
+      ref: "\u00b622.5"
+      quote: "They will interpret the Constitution the way the founders wanted it interpreted."
+    - in: debate
+      ref: "\u00b623.1-23.3"
+      quote: "And those are the people that I will appoint."
+    restatement: "Appoint conservative justices who interpret the Constitution as the founders intended."
+    group: trump-2016-supreme-court
+    type: action
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-supreme-court-scalia
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6106.1"
+      quote: "The replacement for our beloved Justice Scalia will be a person of similar views and judicial philosophies."
+    restatement: "Replace Justice Scalia with a justice of similar views and philosophy."
+    group: trump-2016-supreme-court
+    type: action
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "the nominee for Justice Scalia's seat"
+      record: "Senate confirmation record; the justice's opinions"
+      criterion: "the justice confirmed to Scalia's seat is an originalist conservative"
+      ambiguity: "\"Similar views\" is a judgement; the reading is a nominee with a textualist/originalist record."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-protect-second-amendment
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6106.5"
+      quote: "and will protect the right of all Americans to keep their families safe"
+    restatement: "Protect the right of all Americans to keep their families safe (the Second Amendment)."
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "The sentence names the NRA and follows \"abolish the 2nd amendment\"; the right is read as the right to bear arms."
+    links: []
+
+  - id: trump-2016-repeal-johnson-amendment
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6108.1"
+      quote: "I am going to work very hard to repeal that language and protect free speech for all Americans."
+    restatement: "Work to repeal the Johnson Amendment's limits on political speech by churches."
+    type: action
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "the Johnson Amendment (Internal Revenue Code \u00a7501(c)(3))"
+      record: "enacted legislation (Congress.gov); Internal Revenue Code"
+      criterion: "the Johnson Amendment's ban on political campaigning by tax-exempt organizations is repealed by law"
+      ambiguity: "He promises to \"work very hard\" to repeal; whether an executive order limiting enforcement counts is a judgement. The reading is repeal by law."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-start-winning
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6113.3"
+      quote: "we are going to start winning again"
+    - in: inaugural
+      ref: "\u00b618.1"
+      quote: "America will start winning again, winning like never before."
+    restatement: "America will start winning again."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-end-petty-politics
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "\u00b6113.4"
+      quote: "we must break free from the petty politics of the past"
+    restatement: "Break free from the petty politics of the past."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-fight-for-you
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6121.1"
+      quote: "I'm With You, and I will fight for you, and I will win for you."
+    - in: inaugural
+      ref: "\u00b617.3"
+      quote: "I will fight for you with every breath in my body, and I will never, ever let you down."
+    restatement: "Fight for Americans and never let them down."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-make-america-great-again
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "\u00b6122.1-126.1"
+      quote: "We Will Make America Strong Again. We Will Make America Proud Again. We Will Make America Safe Again. And We Will Make America Great Again."
+    - in: debate
+      ref: "\u00b6507.3"
+      quote: "We're going to make America great."
+    - in: debate
+      ref: "\u00b6509.2"
+      quote: "We are going to make America strong again, and we are going to make America great again, and it has to start now."
+    - in: inaugural
+      ref: "\u00b631.1-32.1"
+      quote: "Together, we will make America strong again. We will make America wealthy again. We will make America proud again. We will make America safe again. And, yes, together, we will make America great again."
+    restatement: "Make America strong, proud, safe, wealthy and great again."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-pro-life-justices
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b622.1"
+      quote: "the justices that I'm going to appoint will be pro-life"
+    - in: debate
+      ref: "\u00b644.1"
+      quote: "because I am pro-life, and I will be appointing pro-life judges"
+    restatement: "Appoint pro-life justices."
+    group: trump-2016-supreme-court
+    type: action
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "his Supreme Court appointments"
+      record: "Senate confirmation records; the justices' votes in abortion cases"
+      criterion: "the justices he appoints vote to restrict or overturn the constitutional right to abortion when the issue comes before them"
+      ambiguity: "Whether a justice is \"pro-life\" is judged by later votes, which may fall after the term."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-second-amendment-justices
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b622.3"
+      quote: "They will be protecting the Second Amendment."
+    - in: debate
+      ref: "\u00b640.1-40.2"
+      quote: "We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment."
+    restatement: "Appoint justices who will protect the Second Amendment."
+    group: trump-2016-supreme-court
+    type: action
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "his Supreme Court appointments"
+      record: "Senate confirmation records; the justices' votes in gun-rights cases"
+      criterion: "the justices he appoints vote to uphold or widen gun rights when the issue comes before them"
+      ambiguity: "Judged by later votes, which may fall after the term."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-secure-border
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b672.6-72.7"
+      quote: "we're going to secure the border"
+    - in: debate
+      ref: "\u00b671.6"
+      quote: "We have to have strong borders."
+    - in: inaugural
+      ref: "\u00b618.3"
+      quote: "We will bring back our borders."
+    restatement: "Secure the border."
+    group: trump-2016-border
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "security of the southern border"
+      record: "CBP southwest border apprehensions and estimated got-aways"
+      criterion: "estimated unlawful entries across the southern border fall over the term"
+      ambiguity: "\"Secure\" is not defined; the reading uses CBP's own measures of unlawful entry."
+    uncertainty:
+      extraction: probable
+      note: "\"Bring back our borders\" (inaugural) is read as the same commitment."
+    links: []
+
+  - id: trump-2016-keep-drugs-out
+    kind: ambition
+    sources:
+    - in: debate
+      ref: "\u00b671.7"
+      quote: "We have to keep the drugs out of our country."
+    restatement: "Keep drugs out of the country."
+    group: trump-2016-border
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2016-deport-criminal-aliens
-    theme: immigration
-    restatement: As one of his first acts, deport the drug lords and bad people and secure the border.
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶72.6-72.7"
-        quote: >
-          One of my first acts will be to get all of the drug lords,
-          all of the bad ones—we have some bad, bad people in this
-          country that have to go out. We're going to get them out;
-          we're going to secure the border.
-    metric:     { present: true, stated: criminal aliens and drug lords removed }
-    threshold:  { present: false }
-    deadline:   { present: true, stated: among his first acts in office }
-    instrument: { present: true, stated: deportation and securing the border }
-    measurable: "partial"
-    notes: >
-      A named instrument and an early-term deadline, but the targeted
-      group is vague and no numeric threshold is set.
+    - in: debate
+      ref: "\u00b672.6-72.7"
+      quote: "One of my first acts will be to get all of the drug lords, all of the bad ones\u2014we have some bad, bad people in this country that have to go out. We're going to get them out"
+    - in: debate
+      ref: "\u00b672.9"
+      quote: "But we have some bad hombres here, and we're going to get them out."
+    restatement: "As one of his first acts, remove drug lords and other dangerous people in the country illegally."
+    type: action
+    theme: immigration
+    deadline:
+      stated: "One of my first acts"
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "removal of noncitizens with criminal records"
+      record: "ICE Enforcement and Removal Operations annual reports (removals of convicted criminals)"
+      criterion: "ICE removals of noncitizens with criminal convictions rise above the FY2016 level"
+      ambiguity: "\"All of the bad ones\" cannot be counted; the reading is a rise in removals of convicted criminal noncitizens."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-speed-up-legal-immigration
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6101.6"
+      quote: "We're going to speed up the process, big league, because it's very inefficient."
+    restatement: "Speed up the process for people waiting in line to immigrate legally."
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "processing time for legal immigration"
+      record: "USCIS historical processing times (naturalization N-400, green card I-485)"
+      criterion: "median processing times are shorter at the end of the term than in 2016"
+      ambiguity: "\"The process\" is not named; the reading covers naturalization and green-card processing, the line he describes."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-stop-terrorism-at-home
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6126.1"
+      quote: "we are going to stop radical Islamic terrorism in this country"
+    restatement: "Stop radical Islamic terrorism in the United States."
+    group: trump-2016-islamic-terrorism
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "jihadist terrorist attacks in the United States"
+      record: "Global Terrorism Database; New America terrorism-in-America database"
+      criterion: "no deadly jihadist attack takes place in the United States during the term"
+      ambiguity: "\"Stop\" is read as no deadly attack; which attacks count as \"radical Islamic terrorism\" follows the databases' own coding."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-college-tuition
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6195.5"
+      quote: "We're going to do a lot of things for college tuition."
+    restatement: "Do a lot for college tuition."
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-more-free-trade
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6201.2-201.3"
+      quote: "We're going to have a lot of free trade. We're going to have free trade, more free trade than we have right now."
+    restatement: "Have more free trade than now."
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "openness of US trade"
+      record: "WTO / World Bank average applied US tariff rates; USITC tariff data"
+      criterion: "the average US tariff rate is lower at the end of the term than in 2016"
+      ambiguity: "\"Free trade\" is not defined; the reading uses tariff levels as the measure."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-cut-taxes
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6204.2"
+      quote: "We are going to cut taxes massively."
+    restatement: "Cut taxes massively."
+    group: trump-2016-taxes
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal taxes"
+      record: "enacted legislation (Congress.gov); Joint Committee on Taxation revenue estimates"
+      criterion: "a tax-cut law is enacted that reduces federal revenue substantially"
+      ambiguity: "\"Massively\" sets no size; the reading is a broad tax cut that JCT scores as a large revenue loss."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: bush-2000-reduce-taxes
+
+  - id: trump-2016-cut-business-taxes
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6204.3"
+      quote: "We're going to cut business taxes massively."
+    restatement: "Cut business taxes massively."
+    group: trump-2016-taxes
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal business taxes"
+      record: "enacted legislation (Congress.gov); Internal Revenue Code"
+      criterion: "a law substantially lowers the corporate income tax rate"
+      ambiguity: "\"Massively\" sets no size; the reading is a large cut in the statutory corporate rate."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: trump-2016-cut-taxes
+
+  - id: trump-2016-repatriate-offshore
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6204.5"
+      quote: "We're going to bring the $2.5 trillion..."
+    - in: debate
+      ref: "\u00b6206.1"
+      quote: "that's offshore back into the country"
+    restatement: "Bring the $2.5 trillion held offshore back into the country."
+    group: trump-2016-taxes
+    type: outcome
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: high
+      object: "US corporate earnings held abroad"
+      record: "BEA international transactions (repatriated dividends of US multinationals)"
+      criterion: "repatriated earnings over the term total about $2.5 trillion"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-economic-machine
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6206.2"
+      quote: "We are going to start the engine rolling again"
+    - in: debate
+      ref: "\u00b6463.7"
+      quote: "We will have created a tremendous economic machine once again."
+    - in: debate
+      ref: "\u00b6466.1-466.3"
+      quote: "we will create an economic machine the likes of which we haven't seen in many decades."
+    restatement: "Create an economic machine not seen in decades."
+    group: trump-2016-growth
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-create-jobs
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6463.1"
+      quote: "I'm going to create tremendous jobs."
+    restatement: "Create tremendous numbers of jobs."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-gdp-growth
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6463.2-463.3"
+      quote: "And we're bringing GDP from, really, 1 percent, which is what it is now, and if she got in, it will be less than zero. But we're bringing it from 1 percent up to 4 percent."
+    restatement: "Raise GDP growth from about 1 percent to 4 percent."
+    group: trump-2016-growth
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "real GDP growth"
+      record: "BEA National Income and Product Accounts"
+      criterion: "annual real GDP growth reaches 4 percent"
+      ambiguity: "No year or averaging is stated; the reading is annual real growth of 4 percent in at least one calendar year of the term."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered (\"we're bringing\"); read as a commitment because it is stated as the result of his plan."
+    links: []
+
+  - id: trump-2016-stop-job-raids
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6463.9"
+      quote: "We're not going to let our companies be raided by other countries where we lose all our jobs, we don't make our product anymore."
+    restatement: "Not let other countries raid US companies and jobs."
+    group: trump-2016-jobs-offshoring
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2016-expert-trade-negotiators
-    theme: trade
-    restatement: Use the country's greatest businesspeople, not political hacks, to negotiate trade deals.
+    kind: ambition
     sources:
-      - in: debate
-        ref: "¶464.4-464.6"
-        quote: >
-          Those are the people—these are the greatest negotiators in
-          the world. We have the greatest businesspeople in the
-          world. We have to use them to negotiate our trade deals.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: appoint top businesspeople as trade negotiators }
-    measurable: "partial"
-    notes: >
-      A named instrument for who conducts trade talks, with no metric,
-      threshold, or deadline.
+    - in: debate
+      ref: "\u00b6464.6"
+      quote: "We have to use them to negotiate our trade deals."
+    - in: debate
+      ref: "\u00b6465.3"
+      quote: "So we have to use our great people."
+    restatement: "Use top business people, not political appointees, to negotiate trade deals."
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "appointment of US trade negotiators"
+      record: "USTR and Commerce appointments (Senate confirmations)"
+      criterion: "the lead trade negotiators appointed come from business rather than politics"
+      ambiguity: "Whether an appointee counts as one of \"the greatest businesspeople\" is a judgement."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-record-growth
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6486.2-486.3"
+      quote: "We're going to grow the economy. It's going to grow at a record rate of growth."
+    restatement: "Grow the economy at a record rate."
+    group: trump-2016-growth
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-more-for-minorities
+    kind: promise
+    sources:
+    - in: debate
+      ref: "\u00b6508.7"
+      quote: "I will do more for African-Americans and Latinos than she can ever do in 10 lifetimes."
+    restatement: "Do more for African-Americans and Latinos than his opponent could."
+    type: outcome
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-trade-protection
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: "\u00b617.1"
+      quote: "We must protect our borders from the ravages of other countries making our products, stealing our companies, and destroying our jobs."
+    restatement: "Protect the country from other countries making its products and taking its companies and jobs."
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-bring-back-dreams
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b618.5"
+      quote: "And we will bring back our dreams."
+    restatement: "Bring back our dreams."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-welfare-to-work
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b620.1"
+      quote: "We will get our people off of welfare and back to work"
+    restatement: "Get people off welfare and back to work."
+    type: outcome
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "welfare caseloads"
+      record: "HHS TANF and USDA SNAP caseload data"
+      criterion: "TANF and SNAP caseloads are lower at the end of the term than in January 2017"
+      ambiguity: "\"Welfare\" is not defined; the reading covers the main cash and food assistance programmes."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-buy-american-hire-american
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b620.2"
+      quote: "We will follow two simple rules: Buy American and hire American."
+    restatement: "Follow two rules: buy American and hire American."
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "federal procurement and work-visa policy"
+      record: "executive orders (Federal Register); FPDS procurement data; USCIS H-1B statistics"
+      criterion: "federal rules are changed to favor US-made goods in procurement and US workers in visa decisions"
+      ambiguity: "\"Follow\" a rule is a stance; the reading is rule changes in procurement and work-visa policy."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-seek-friendship
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b621.1"
+      quote: "We will seek friendship and good will with the nations of the world"
+    restatement: "Seek friendship and good will with the nations of the world."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-lead-by-example
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b621.2"
+      quote: "We do not seek to impose our way of life on anyone, but rather to let it shine as an example\u2014we will shine\u2014for everyone to follow."
+    restatement: "Not impose the American way of life on anyone; let it shine as an example."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-eradicate-radical-islamic-terrorism
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b622.1"
+      quote: "unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth"
+    restatement: "Eradicate radical Islamic terrorism completely from the face of the Earth."
+    group: trump-2016-islamic-terrorism
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "jihadist terrorism worldwide"
+      record: "Global Terrorism Database; State Department Country Reports on Terrorism"
+      criterion: "no jihadist terrorist attacks are recorded anywhere in the world in the last year of the term"
+      ambiguity: "The criterion is stated (\"completely\"); the judgement is which groups and attacks count as \"radical Islamic terrorism\"."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-alliances
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b622.1"
+      quote: "We will reinforce old alliances and form new ones"
+    restatement: "Reinforce old alliances and form new ones."
+    group: trump-2016-islamic-terrorism
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2016-unite-against-terrorism
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "\u00b622.1"
+      quote: "unite the civilized world against radical Islamic terrorism"
+    restatement: "Unite the civilized world against radical Islamic terrorism."
+    group: trump-2016-islamic-terrorism
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2021-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []

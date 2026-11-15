@@ -1,0 +1,77 @@
+# Screening ledger for 2017-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2017-inaugural
+protocol: 1
+rows:
+  - ref: "\u00b62.2"
+    decision: describe
+    note: "\"We, the citizens\" (\u00b62.1); rhetoric."
+  - ref: "\u00b62.3"
+    decision: describe
+    note: "Rhetoric; \"the job\" is the national effort of \u00b62.1, with citizens as subject."
+  - ref: "\u00b67.3"
+    decision: include
+    added: true
+    promises: [trump-2016-forgotten-no-longer]
+    note: "Untriggered; future-tense commitment."
+  - ref: "\u00b615.2-16.1"
+    decision: include
+    added: true
+    promises: [trump-2016-america-first]
+    note: "Untriggered; \"will be made to benefit\"."
+  - { ref: "\u00b617.1", decision: include, promises: [trump-2016-trade-protection] }
+  - { ref: "\u00b617.3", decision: include, promises: [trump-2016-fight-for-you] }
+  - ref: "\u00b618.1"
+    decision: include
+    added: true
+    promises: [trump-2016-start-winning]
+    note: "Untriggered; future-tense, opens the list of \u00b618."
+  - { ref: "\u00b618.2", decision: include, promises: [trump-2016-bring-jobs-back] }
+  - ref: "\u00b618.3"
+    decision: include
+    promises: [trump-2016-secure-border]
+    note: "\"Bring back our borders\" read as securing the border."
+  - { ref: "\u00b618.4", decision: include, promises: [trump-2016-make-country-rich] }
+  - { ref: "\u00b618.5", decision: include, promises: [trump-2016-bring-back-dreams] }
+  - { ref: "\u00b619.1", decision: include, promises: [trump-2016-rebuild-infrastructure] }
+  - { ref: "\u00b620.1", decision: include, promises: [trump-2016-welfare-to-work] }
+  - { ref: "\u00b620.2", decision: include, promises: [trump-2016-buy-american-hire-american] }
+  - { ref: "\u00b621.1", decision: include, promises: [trump-2016-seek-friendship] }
+  - { ref: "\u00b621.2", decision: include, promises: [trump-2016-lead-by-example] }
+  - ref: "\u00b622.1"
+    decision: include
+    promises: [trump-2016-eradicate-radical-islamic-terrorism, trump-2016-alliances, trump-2016-unite-against-terrorism]
+    note: "Three objects; split."
+  - ref: "\u00b623.1"
+    decision: describe
+    note: "Rhetoric about national loyalty."
+  - ref: "\u00b623.4"
+    decision: others
+    note: "Call on citizens."
+  - ref: "\u00b623.6"
+    decision: describe
+    note: "Reassurance; no object."
+  - ref: "\u00b623.7"
+    decision: describe
+    note: "Reassurance; no object."
+  - ref: "\u00b624.1"
+    decision: describe
+    note: "Call to think big; no object."
+  - ref: "\u00b625.1"
+    decision: others
+    note: "Stance of the people toward politicians."
+  - ref: "\u00b626.3"
+    decision: describe
+    note: "Rhetoric (\"We will not fail\")."
+  - ref: "\u00b630.1"
+    decision: include
+    added: true
+    promises: [trump-2016-forgotten-no-longer]
+    note: "Untriggered; future-tense commitment."
+  - ref: "\u00b631.1-32.1"
+    decision: include
+    promises: [trump-2016-make-america-great-again]
+    note: "A list of low outcomes, kept as one promise."

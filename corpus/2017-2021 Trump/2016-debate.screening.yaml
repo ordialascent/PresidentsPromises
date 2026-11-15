@@ -1,0 +1,198 @@
+# Screening ledger for 2016-debate.md (protocol v1).
+# Every trigger-matched sentence in the president's turns has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2016-debate
+protocol: 1
+rows:
+  - ref: "\u00b621.2"
+    decision: attack
+    note: "About the opponent winning."
+  - { ref: "\u00b622.1", decision: include, promises: [trump-2016-pro-life-justices] }
+  - ref: "\u00b622.2"
+    decision: include
+    added: true
+    promises: [trump-2016-originalist-justices]
+    note: "Untriggered; continues \u00b622.1 about his appointees."
+  - ref: "\u00b622.3"
+    decision: include
+    added: true
+    promises: [trump-2016-second-amendment-justices]
+    note: "Untriggered; continues \u00b622.1 about his appointees."
+  - ref: "\u00b622.5"
+    decision: include
+    added: true
+    promises: [trump-2016-originalist-justices]
+    note: "Untriggered; continues \u00b622.1 about his appointees."
+  - ref: "\u00b623.1-23.3"
+    decision: include
+    promises: [trump-2016-originalist-justices]
+    note: "Range: \u00b623.3's \"those\" are the justices of \u00b623.1-23.2."
+  - { ref: "\u00b640.1-40.2", decision: include, promises: [trump-2016-second-amendment-justices] }
+  - { ref: "\u00b644.1", decision: include, promises: [trump-2016-pro-life-justices] }
+  - ref: "\u00b648.3"
+    decision: describe
+    note: "Prediction that abortion law would return to the states if Roe were overturned; no commitment. His commitment (pro-life justices) is in \u00b622.1 and \u00b644.1."
+  - ref: "\u00b670.9"
+    decision: others
+    note: "The Border Patrol's view."
+  - ref: "\u00b671.6"
+    decision: include
+    promises: [trump-2016-secure-border]
+    note: "Soft restatement of a firm promise; an occurrence of it."
+  - { ref: "\u00b671.7", decision: include, promises: [trump-2016-keep-drugs-out] }
+  - ref: "\u00b672.1"
+    decision: include
+    promises: [trump-2016-border-wall]
+    note: "Soft restatement of the firm acceptance promise; an occurrence of it."
+  - ref: "\u00b672.6-72.7"
+    decision: include
+    promises: [trump-2016-secure-border, trump-2016-deport-criminal-aliens]
+    note: "\u00b672.6 is untriggered (\"one of my first acts will be\"); joined with \u00b672.7. Two objects; split."
+  - ref: "\u00b672.8"
+    decision: describe
+    note: "Defers a decision; commits to nothing about its content."
+  - { ref: "\u00b672.9", decision: include, promises: [trump-2016-deport-criminal-aliens] }
+  - ref: "\u00b684.4"
+    decision: include
+    promises: [trump-2016-better-trade-deals]
+    note: "Read as better trade deals (here with Mexico)."
+  - { ref: "\u00b6101.6", decision: include, promises: [trump-2016-speed-up-legal-immigration] }
+  - { ref: "\u00b6126.1", decision: include, promises: [trump-2016-stop-terrorism-at-home] }
+  - ref: "\u00b6128.3"
+    decision: describe
+    note: "\"I'll tell you what\"; description."
+  - ref: "\u00b6175.1"
+    decision: include
+    promises: [trump-2016-allies-pay-fair-share]
+    note: "Soft; read as a restatement of allies paying their share (\"we cannot continue to afford\")."
+  - { ref: "\u00b6195.5", decision: include, promises: [trump-2016-college-tuition] }
+  - ref: "\u00b6195.7"
+    decision: attack
+    note: "Opponent's plan."
+  - ref: "\u00b6196.1"
+    decision: describe
+    note: "\"I'd like to start off\"."
+  - ref: "\u00b6200.1"
+    decision: include
+    promises: [trump-2016-allies-pay-fair-share]
+    note: "Soft restatement of allies paying their share."
+  - { ref: "\u00b6201.1", decision: include, promises: [trump-2016-renegotiate-trade-deals] }
+  - ref: "\u00b6201.2-201.3"
+    decision: include
+    promises: [trump-2016-more-free-trade]
+    note: "Joined: \u00b6201.3 restates \u00b6201.2."
+  - ref: "\u00b6202.4"
+    decision: include
+    added: true
+    promises: [trump-2016-bring-jobs-back]
+    note: "Untriggered; present progressive about his plan."
+  - ref: "\u00b6203.1-204.1"
+    decision: include
+    promises: [trump-2016-renegotiate-nafta]
+    note: "Range: renegotiate, else terminate; \u00b6204.1 completes the condition."
+  - { ref: "\u00b6204.2", decision: include, promises: [trump-2016-cut-taxes] }
+  - { ref: "\u00b6204.3", decision: include, promises: [trump-2016-cut-business-taxes] }
+  - ref: "\u00b6204.5"
+    decision: include
+    promises: [trump-2016-repatriate-offshore]
+    note: "Sentence is cut off; it continues in \u00b6206.1 after a moderator turn."
+  - ref: "\u00b6206.1"
+    decision: include
+    added: true
+    promises: [trump-2016-repatriate-offshore]
+    note: "Untriggered; completes \u00b6204.5."
+  - ref: "\u00b6206.2"
+    decision: include
+    promises: [trump-2016-economic-machine]
+    note: "Read as the same commitment as \u00b6463.7 and \u00b6466.1."
+  - ref: "\u00b6258.5"
+    decision: past
+    note: "About the Iraq war."
+  - ref: "\u00b6266.1"
+    decision: describe
+    note: "\"I'll tell you what\"."
+  - ref: "\u00b6284.2"
+    decision: attack
+    note: "Opponent's e-mails."
+  - ref: "\u00b6319.1"
+    decision: attack
+    note: "Question to the opponent."
+  - ref: "\u00b6320.4"
+    decision: attack
+    note: "About the opponent."
+  - ref: "\u00b6328.1"
+    decision: describe
+    note: "\"I'd like to mention\"."
+  - ref: "\u00b6353.1"
+    decision: describe
+    note: "\"I will tell you\"; description."
+  - ref: "\u00b6358.1"
+    decision: describe
+    note: "On accepting the election result; before the term, no commitment."
+  - ref: "\u00b6358.3"
+    decision: describe
+    note: "On accepting the election result; before the term, no commitment."
+  - ref: "\u00b6360.3"
+    decision: describe
+    note: "About election day."
+  - ref: "\u00b6368.1"
+    decision: describe
+    note: "On accepting the election result; before the term, no commitment."
+  - ref: "\u00b6368.2"
+    decision: describe
+    note: "On accepting the election result; before the term, no commitment."
+  - ref: "\u00b6393.2"
+    decision: describe
+    note: "Prediction about the current Mosul offensive, before his term."
+  - ref: "\u00b6457.2"
+    decision: past
+    note: "About ISIS's rise."
+  - ref: "\u00b6459.1"
+    decision: past
+    note: "About the Syrian cease-fire."
+  - { ref: "\u00b6463.1", decision: include, promises: [trump-2016-create-jobs] }
+  - ref: "\u00b6463.2-463.3"
+    decision: include
+    added: true
+    promises: [trump-2016-gdp-growth]
+    note: "Untriggered (\"we're bringing\"). \u00b6463.4-463.5 (5-6%) are hopes, not commitments."
+  - { ref: "\u00b6463.7", decision: include, promises: [trump-2016-economic-machine] }
+  - { ref: "\u00b6463.9", decision: include, promises: [trump-2016-stop-job-raids] }
+  - ref: "\u00b6463.11"
+    decision: include
+    promises: [trump-2016-making-things-again]
+    note: "Read as restoring industry (manufacturing)."
+  - { ref: "\u00b6464.6", decision: include, promises: [trump-2016-expert-trade-negotiators] }
+  - { ref: "\u00b6465.3", decision: include, promises: [trump-2016-expert-trade-negotiators] }
+  - ref: "\u00b6466.1-466.3"
+    decision: include
+    promises: [trump-2016-economic-machine]
+    note: "\u00b6466.2-466.3 describe the machine's effects; joined."
+  - ref: "\u00b6481.3"
+    decision: past
+    note: "About the Reagan years."
+  - { ref: "\u00b6483.1", decision: include, promises: [trump-2016-better-trade-deals] }
+  - ref: "\u00b6486.2-486.3"
+    decision: include
+    promises: [trump-2016-record-growth]
+    note: "Joined: \u00b6486.3 states the criterion of \u00b6486.2."
+  - ref: "\u00b6488.2"
+    decision: include
+    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    note: "Soft (\"one thing we have to do\"); a restatement of the firm acceptance promise. Two acts; split."
+  - ref: "\u00b6488.5"
+    decision: include
+    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    note: "Soft restatement. Two acts; split."
+  - ref: "\u00b6490.3"
+    decision: include
+    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    note: "Soft restatement. Two acts; split."
+  - { ref: "\u00b6507.3", decision: include, promises: [trump-2016-make-america-great-again] }
+  - { ref: "\u00b6508.7", decision: include, promises: [trump-2016-more-for-minorities] }
+  - ref: "\u00b6509.1"
+    decision: attack
+    note: "Quotes what politicians tell voters."
+  - { ref: "\u00b6509.2", decision: include, promises: [trump-2016-make-america-great-again] }
