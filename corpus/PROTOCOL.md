@@ -40,21 +40,27 @@ screened.
 
 ## 2. Include or exclude
 
-A candidate is **included** when all four hold:
+A candidate is **included** when the first three tests hold. The fourth
+decides its **kind**:
 
 | Test | Holds when |
 |------|------------|
 | **Speaker** | The president says it in their own voice. Not a quote of someone else, not a paraphrase of an opponent. |
 | **Committer** | The subject is the speaker, their administration, or a "we" that includes the government they will lead. |
 | **Future** | It refers to something to be done or brought about after the speech. |
-| **Firm** | It uses firm commitment language (firm group above, or an equivalent like "X will be repealed under my administration"). |
+| **Firm** | Firm commitment language (firm group above, or an equivalent like "X will be repealed under my administration") → kind `promise`. Obligation, wish or intention (soft group, or an equivalent) → kind `ambition`. |
+
+A **promise** says the president will do it. An **ambition** says the
+president wants it or thinks it must happen. Ambitions are not promises and
+never get a kept/broken verdict, but they state a direction, so they are
+recorded, described and linked the same way. Later they can be read for
+movement in that direction.
 
 Everything else is **excluded** with one code:
 
 | Code | Meaning | Example |
 |------|---------|---------|
-| `soft` | Obligation, wish or intention without a firm commitment | "We must live up to the calling we share." |
-| `others` | Commitment asked of someone else (citizens, Congress, other countries) | "I ask you to be citizens." |
+| `others` | Commitment or obligation placed on someone else (citizens, Congress, other countries) | "I ask you to be citizens." |
 | `past` | Record, accomplishment, or past action | "We cut taxes for every family." |
 | `describe` | Description, prediction or rhetoric with no commitment | "The story goes on." |
 | `conditional` | Hinges on a hypothetical outside the speaker's term | "If our country does not lead the cause of freedom, it will not be led." |
@@ -64,11 +70,12 @@ Everything else is **excluded** with one code:
 Notes:
 
 - **Vagueness is not a reason to exclude.** "We will defend our allies" is a
-  promise, rated `low` in step 4. Showing how much of a president's language is
-  vague is part of the goal.
-- **Soft language is excluded uniformly.** "We must reform Social Security" is
-  not a promise; "We will reform Social Security" is. The ledger keeps the soft
-  rows, so the share of soft language can be shown per president.
+  promise, rated `low` (uncheckable) in step 4. Showing how much of a
+  president's language is vague is part of the goal.
+- **Soft language is an ambition, never a promise.** "We will reform Social
+  Security" is a promise; "We must reform Social Security" is an ambition. The
+  line is drawn by the words alone, the same for every president, so the
+  share of firm versus soft language can be compared.
 - **Conditionals tied to the election** ("If I'm elected, I will …") count as firm.
 - A purpose clause ("…to recover the momentum of our economy") belongs to its
   promise; it is not a separate promise unless stated as its own commitment.
@@ -128,8 +135,10 @@ Three questions, the same for every type:
 | `low` | Object or record missing, or the criterion would need more than one judgement call. |
 
 Only `high` and `medium` promises get verdicts later. `low` promises are kept
-and shown: they measure how much of a president's language cannot be held to
-account.
+and shown as uncheckable: they measure how much of a president's language
+cannot be held to account. Ambitions get the same rating but never a verdict.
+Where the line between `medium` and `low` falls is reviewed once several terms
+are re-extracted.
 
 ### Theme
 
@@ -170,15 +179,19 @@ rows:
     decision: include
     promises: [bush-2000-reform-socialsecurity, bush-2000-reform-medicare]
   - ref: "¶12.1"
-    decision: soft
+    decision: include
+    promises: [bush-2000-live-up-to-calling]   # an ambition
   - ref: "¶25.2"
     decision: others
 ```
 
-### Promise (`promises.yaml`, protocol 1)
+### Promise or ambition (`promises.yaml`, protocol 1)
+
+Both kinds share one record shape and one file; `kind` tells them apart.
 
 ```yaml
   - id: bush-2000-reform-socialsecurity
+    kind: promise                       # promise | ambition
     sources:
       - in: inaugural
         ref: "¶14.2"

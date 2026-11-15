@@ -1,13 +1,14 @@
 # Screening ledger for 2001-inaugural.md (protocol v1, pilot).
 # Every trigger-matched sentence has a row; rows marked `added` were not
 # matched by the lexicon but read as commitments.
-# Included rows list the promise ids they produce. Those promises are written
+# Included rows list the ids they produce; ¶5.2, ¶12.1 and ¶13.4 are
+# ambitions (soft language), the rest promises. They are written
 # to promises.yaml when this term is re-extracted.
 source: 2001-inaugural
 protocol: 1
 rows:
   - { ref: "¶3.2", decision: describe }
-  - { ref: "¶5.2", decision: soft }
+  - { ref: "¶5.2", decision: include, promises: [bush-2000-follow-no-other-course] }
   - ref: "¶7.4"
     decision: include
     promises: [bush-2000-not-allow-division]
@@ -19,10 +20,10 @@ rows:
     note: Present-tense "affirm a new commitment" about future conduct; firmness contested.
   - { ref: "¶10.2", decision: describe }
   - { ref: "¶11.4", decision: conditional }
-  - { ref: "¶12.1", decision: soft }
+  - { ref: "¶12.1", decision: include, promises: [bush-2000-live-up-to-calling] }
   - { ref: "¶12.3", decision: describe }
-  - { ref: "¶13.3", decision: soft }
-  - { ref: "¶13.4", decision: soft }
+  - { ref: "¶13.3", decision: describe }
+  - { ref: "¶13.4", decision: include, promises: [bush-2000-confront-problems] }
   - { ref: "¶14.1", decision: include, promises: [bush-2000-reclaim-schools] }
   - ref: "¶14.2"
     decision: include
@@ -41,12 +42,12 @@ rows:
   - { ref: "¶25.3", decision: others }
 
 # Pilot result, for review of the protocol:
-#   included 15 rows → 16 promises (¶14.2 splits in two)
+#   included 18 rows → 16 promises (¶14.2 splits in two) + 3 ambitions
 #   verifiability: high 1 (¶14.3 reduce taxes)
 #                  medium 4 (¶14.2 Social Security, ¶14.2 Medicare,
 #                            ¶15.1 defenses, ¶19.4 faith-based)
-#                  low 11
-#   excluded: soft 4, describe 3, conditional 1, others 2
+#                  low 11 (uncheckable); ambitions all low
+#   excluded: describe 4, conditional 1, others 2
 #   The current promises.yaml takes 4 promises from this source (¶8.2, ¶15.2,
 #   ¶19.4, ¶20.3) and misses the tax, Social Security, Medicare and defence
 #   commitments in ¶14-15, which also appear in the 2000 acceptance speech and
