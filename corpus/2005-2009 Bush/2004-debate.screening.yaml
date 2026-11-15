@@ -1,0 +1,99 @@
+# Screening ledger for 2004-debate.md (protocol v1).
+# Every trigger-matched sentence in the president's turns has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1). Ids shared with other ledgers are
+# further occurrences of the same promise.
+source: 2004-debate
+protocol: 1
+rows:
+  - { ref: "¶13.2", decision: ceremony }
+  - { ref: "¶16.1", decision: include, promises: [bush-2004-protect-homeland] }
+  - ref: "¶25.4"
+    decision: describe
+    note: "Personal choice not to get a flu shot; not a policy commitment."
+  - ref: "¶32.2"
+    decision: describe
+    note: "Introduces criticism of the opponent's plan."
+  - { ref: "¶44.6", decision: attack }
+  - ref: "¶46.2"
+    decision: include
+    promises: [bush-2004-deficit-half]
+    note: "He relays his budget director's plan; extraction probable."
+  - { ref: "¶49.4", decision: include, promises: [bush-2004-pay-for-skills] }
+  - ref: "¶52.3"
+    decision: include
+    added: true
+    promises: [bush-2004-math-science, bush-2004-pell-grants, bush-2004-raise-standards, bush-2004-reward-teachers]
+    note: "Untriggered; \"4 more years, I've got more to do to …\" read as conditioned on re-election. Four objects."
+  - { ref: "¶66.10", decision: attack }
+  - ref: "¶77.6"
+    decision: describe
+    note: "Prediction about courts."
+  - { ref: "¶92.2", decision: include, promises: [bush-2004-abstinence] }
+  - { ref: "¶97.6", decision: include, promises: [bush-2004-health-it] }
+  - ref: "¶126.7"
+    decision: include
+    added: true
+    promises: [bush-2004-veterans-care]
+    note: "Untriggered future statement about veterans' care in the next four years."
+  - ref: "¶129.3"
+    decision: include
+    added: true
+    promises: [bush-2004-ss-keep-promise]
+    note: "Untriggered future statement (\"they will continue to get their checks\")."
+  - ref: "¶130.2"
+    decision: describe
+    note: "No object of its own; leads into ¶130.3."
+  - ref: "¶130.3"
+    decision: include
+    promises: [bush-2004-ss-keep-promise, bush-2004-ss-personal-accounts]
+    note: "Splits: honour the commitment to seniors (promise) and a different strategy for the young (soft, joins the personal-accounts ambition)."
+  - { ref: "¶132.1", decision: include, promises: [bush-2004-ss-bipartisan] }
+  - { ref: "¶132.4", decision: include, promises: [bush-2004-ss-bipartisan] }
+  - ref: "¶132.5"
+    decision: describe
+    note: "Warning about the cost of inaction."
+  - { ref: "¶148.6", decision: include, promises: [bush-2004-border-uavs] }
+  - { ref: "¶150.1", decision: include, promises: [bush-2004-temp-worker] }
+  - { ref: "¶152.1-152.2", decision: include, promises: [bush-2004-no-amnesty] }
+  - { ref: "¶160.6", decision: include, promises: [bush-2004-protect-borders] }
+  - { ref: "¶160.7", decision: include, promises: [bush-2004-border-manpower, bush-2004-border-equipment] }
+  - ref: "¶170.3"
+    decision: describe
+    note: "Paraphrases what the enacted No Child Left Behind Act says."
+  - ref: "¶170.4"
+    decision: describe
+    note: "Paraphrases what the enacted No Child Left Behind Act says."
+  - { ref: "¶174.1", decision: include, promises: [bush-2004-no-litmus-test] }
+  - { ref: "¶174.2", decision: include, promises: [bush-2004-strict-judges, bush-2004-no-litmus-test] }
+  - { ref: "¶195.2", decision: include, promises: [bush-2004-iraqi-troops-125k] }
+  - ref: "¶197.3"
+    decision: attack
+    note: "Paraphrases the opponent's \"global test\"."
+  - { ref: "¶197.7", decision: include, promises: [bush-2004-build-coalitions] }
+  - { ref: "¶197.8", decision: include, promises: [bush-2004-no-foreign-veto] }
+  - { ref: "¶197.9-197.10", decision: include, promises: [bush-2004-war-on-terror] }
+  - ref: "¶203.2"
+    decision: past
+    note: "A past view on extending the expired assault weapons ban."
+  - { ref: "¶219.1", decision: include, promises: [bush-2004-no-quotas] }
+  - { ref: "¶219.2", decision: include, promises: [bush-2004-educate-access] }
+  - ref: "¶225.9"
+    decision: describe
+    note: "Personal belief with no policy object."
+  - { ref: "¶241.1", decision: include, promises: [bush-2004-heal-divisions] }
+  - ref: "¶242.2"
+    decision: describe
+    note: "Reports John McCain's view of his Iraq plan."
+  - { ref: "¶260.4", decision: include, promises: [bush-2004-economy-grows] }
+  - { ref: "¶261.2", decision: include, promises: [bush-2004-excellence-classroom] }
+  - { ref: "¶262.1", decision: include, promises: [bush-2004-health-affordable] }
+  - { ref: "¶262.2", decision: include, promises: [bush-2004-armies-compassion] }
+  - ref: "¶263.1"
+    decision: describe
+    note: "Stated as optimism, a forecast rather than a commitment."
+  - { ref: "¶263.2", decision: include, promises: [bush-2004-never-waver] }
+  - { ref: "¶263.3", decision: include, promises: [bush-2004-extend-freedom] }
+  - { ref: "¶264.1", decision: ceremony }
+
+#   47 rows: 31 include (3 of them added), 16 excluded (attack 3, ceremony 2, describe 10, past 1)

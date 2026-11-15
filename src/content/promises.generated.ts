@@ -5693,15 +5693,15 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2005–2009",
     "speechYear": 2004,
     "label": "Bush 2004",
-    "method": "legacy",
+    "method": "protocol",
     "promises": [
       {
-        "id": "bush-2004-homes-ownership",
+        "id": "bush-2004-safer-world",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "housing",
-        "restatement": "Add 7 million more affordable homes over the next ten years.",
-        "quality": "full",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Build a safer world, by promoting liberty abroad.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -5715,18 +5715,53 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶26.2",
-            "quote": "Tonight we set a new goal: 7 million more affordable homes in the next 10 years so more American families will be able to open the door and say, \"Welcome to my home.\""
+            "ref": "¶3.4",
+            "quote": "We will build a safer world"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶66.4",
+            "quote": "By promoting liberty abroad, we will build a safer world."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-health-centers",
+        "id": "bush-2004-hopeful-america",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Give every poor county a community or rural health center within the term.",
-        "quality": "full",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Build a more hopeful America, by encouraging liberty at home.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -5740,17 +5775,247 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶22.4",
-            "quote": "In a new term, I will ensure every poor county in America has a community or rural health center."
+            "ref": "¶3.4",
+            "quote": "a more hopeful America"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶66.5",
+            "quote": "By encouraging liberty at home, we will build a more hopeful America."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-job-training-double",
+        "id": "bush-2004-extend-freedom",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Double the number served by the principal job-training program in a new term.",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Extend the frontiers of freedom, abroad and at home.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶14.2",
+            "quote": "Our Nation's founding commitment is still our deepest commitment: In our world and here at home, we will extend the frontiers of freedom."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶263.3",
+            "quote": "And as we pursue the enemy wherever it exists, we'll also spread freedom and liberty."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-transform-systems",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Transform the tax code, health coverage, pension plans and worker training for a changed economy.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶16.4",
+            "quote": "We will transform these systems so that all citizens are equipped, prepared—and thus truly free—to make your own choices and pursue your own dreams."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-restrain-spending",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Restrain federal spending.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶17.4",
+            "quote": "my plan will encourage investment and expansion by restraining Federal spending"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-jobs-plan",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal outlays",
+            "record": "OMB historical tables; enacted appropriations",
+            "criterion": "federal spending grows more slowly than it did in the first term",
+            "ambiguity": "\"Restraining\" sets no number; the reading here compares spending growth with the 2001-2005 term."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-reduce-regulation",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Reduce regulation.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶17.4",
+            "quote": "reducing regulation"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-jobs-plan",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal regulation",
+            "record": "Federal Register; OMB reports on the costs of federal regulation",
+            "criterion": "the burden of new federal regulation falls over the term",
+            "ambiguity": "No measure of \"regulation\" is named; one proxy (pages, rule counts or estimated costs) has to be chosen."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-tax-relief-permanent",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Make the 2001 and 2003 tax cuts permanent.",
         "quality": "full",
         "occurrences": [
           {
@@ -5765,17 +6030,172 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶19.1-19.3",
-            "quote": "Another priority in a new term will be to help workers take advantage of the expanding economy to find better and higher paying jobs. [...] So we will double the number of people served by our principal job training program and increase funding for our community colleges."
+            "ref": "¶17.4",
+            "quote": "making the tax relief permanent"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "bush-2004-jobs-plan",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "the 2001 and 2003 tax cuts (EGTRRA, JGTRRA)",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law removes the sunset of the 2001 and 2003 tax cuts",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-energy-imports",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Make the country less dependent on foreign energy.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶17.5",
+            "quote": "To create jobs, we will make our country less dependent on foreign sources of energy."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US dependence on imported energy",
+            "record": "EIA petroleum net import share of consumption",
+            "criterion": "the net import share is lower at the end of the term than in 2004",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-expand-trade",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Expand trade.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶17.6",
+            "quote": "we will expand trade"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-trade",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US trade agreements and exports",
+            "record": "USTR agreements in force; Census trade statistics",
+            "criterion": "new trade agreements take effect and exports grow",
+            "ambiguity": "\"Expand trade\" could mean new agreements or higher trade volume; both are read here."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-level-field",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Level the playing field for American exports.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶17.6",
+            "quote": "level the playing field to sell American goods and services across the globe"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "bush-2004-trade",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "bush-2004-tax-reform",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "taxes",
-        "restatement": "Lead a bipartisan effort to reform and simplify the tax code.",
+        "restatement": "Lead a bipartisan effort to reform and simplify the federal tax code.",
         "quality": "partial",
         "occurrences": [
           {
@@ -5793,54 +6213,79 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶18.3",
             "quote": "In a new term, I will lead a bipartisan effort to reform and simplify the Federal Tax Code."
           }
-        ]
-      },
-      {
-        "id": "bush-2004-tax-relief-permanent",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "taxes",
-        "restatement": "Restrain spending, cut regulation, and make the tax cuts permanent.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
-              "year": 2004,
-              "date": "2004-09-02",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
-              "label": "2004 acceptance speech"
-            },
-            "ref": "¶17.4",
-            "quote": "To create jobs, my plan will encourage investment and expansion by restraining Federal spending, reducing regulation, and making the tax relief permanent."
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶145.4",
-            "quote": "It's to make sure we have fiscal sanity and keep taxes low."
-          }
-        ]
+          "verifiability": {
+            "level": "medium",
+            "object": "federal tax code",
+            "record": "enacted legislation; presidential commissions and proposals",
+            "criterion": "a tax reform and simplification is enacted",
+            "ambiguity": "\"Lead an effort\" could be met by proposing reform; the reading here requires an enacted simplification."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-energy-imports",
+        "id": "bush-2004-job-training-double",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "energy",
-        "restatement": "Reduce US dependence on foreign energy.",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Double the number of people served by the main federal job training programme.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶19.3",
+            "quote": "we will double the number of people served by our principal job training program"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-job-training",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Workforce Investment Act training participants",
+            "record": "Department of Labor WIA programme data",
+            "criterion": "the number served at least doubles from the 2004 level by the end of the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-community-colleges",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Increase federal funding for community colleges.",
         "quality": "partial",
         "occurrences": [
           {
@@ -5855,18 +6300,38 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶17.5",
-            "quote": "To create jobs, we will make our country less dependent on foreign sources of energy."
+            "ref": "¶19.3",
+            "quote": "increase funding for our community colleges"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-job-training",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal funding for community colleges",
+            "record": "enacted appropriations",
+            "criterion": "federal funding for community colleges rises over the term",
+            "ambiguity": "No funding line is named; the community-college job training grants are the closest match."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-small-biz-health",
+        "id": "bush-2004-opportunity-zones",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Let small firms pool to buy insurance at large-employer discounts.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Create \"American opportunity zones\" with tax relief and incentives in communities that lost jobs.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -5880,18 +6345,38 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶21.3",
-            "quote": "In a new term, we must allow small firms to join together to purchase insurance at the discounts available to big companies."
+            "ref": "¶20.2-20.3",
+            "quote": "To stand with workers in poor communities and those that have lost manufacturing, textile, and other jobs, we will create American opportunity zones. In these areas, we will provide tax relief and other incentives to attract new business and improve housing and job training to bring hope and work throughout all of America."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "American opportunity zones",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law creates the zones with tax relief for businesses in them",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "bush-2004-hsa-taxcredit",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Create a tax credit to spread health savings accounts, with help for low-income buyers.",
-        "quality": "partial",
+        "restatement": "A tax credit for small businesses and their employees to set up health savings accounts.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -5906,32 +6391,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶22.1",
-            "quote": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts and provide direct help for low-income Americans to purchase them."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶95.6-95.7",
-            "quote": "It's one of the reasons I'm a strong believer in what they call health savings accounts. These are accounts that allow somebody to buy a low-premium, high-deductible catastrophic plan and couple it with tax-free savings."
+            "quote": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "bush-2004-hsa",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "tax credit for health savings accounts",
+            "record": "enacted legislation; Internal Revenue Code",
+            "criterion": "a law creates the tax credit",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-medical-liability",
+        "id": "bush-2004-hsa-low-income",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Pass medical liability (malpractice) reform.",
-        "quality": "partial",
+        "restatement": "Direct help for low-income Americans to buy health savings accounts.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -5945,33 +6435,178 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶23.2",
-            "quote": "To make health care more affordable and accessible, we must pass medical liability reform now."
+            "ref": "¶22.1",
+            "quote": "provide direct help for low-income Americans to purchase them"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "bush-2004-hsa",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
           },
+          "verifiability": {
+            "level": "high",
+            "object": "federal subsidy for health savings accounts",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law funds direct help for low-income people to buy HSA-linked coverage",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-health-access-poor",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Better access to health care for low-income Americans.",
+        "quality": "no",
+        "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "acceptance",
+              "medium": "speech",
               "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
               "year": 2004,
-              "date": "2004-10-13",
+              "date": "2004-09-02",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
             },
-            "ref": "¶96.2",
-            "quote": "That's why I'm such a strong believer in medical liability reform."
+            "ref": "¶22.3",
+            "quote": "We will provide low-income Americans with better access to health care."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-health-centers",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "A community or rural health centre in every poor county.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶22.4",
+            "quote": "In a new term, I will ensure every poor county in America has a community or rural health center."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "community and rural health centres",
+            "record": "HRSA health centre programme data",
+            "criterion": "every poor county has a health centre by the end of the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "bush-2000-community-clinics"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bush-2004-doctors-decide",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Keep health decisions with doctors and patients, not Washington.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶23.3",
+            "quote": "And in all we do to improve health care in America, we will make sure that health decisions are made by doctors and patients, not by bureaucrats in Washington, DC."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "bush-2004-comptime-flextime",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Change labor law to allow comp-time and flex-time.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Change labour laws to allow comp-time and flex-time.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -5988,14 +6623,94 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶24.2",
             "quote": "In a new term, we will change outdated labor laws to offer comp-time and flex-time."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Fair Labor Standards Act",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law lets employers offer comp-time and flex-time",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-opportunity-zones",
+        "id": "bush-2004-ownership-society",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "economy",
-        "restatement": "Create \"American opportunity zones\" with tax relief and incentives for distressed areas.",
+        "restatement": "Build an ownership society.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶25.1",
+            "quote": "Another priority for a new term is to build an ownership society, because ownership brings security and dignity and independence."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.4",
+            "quote": "build an ownership society"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-ss-keep-promise",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Keep Social Security benefits for older workers and current retirees.",
         "quality": "partial",
         "occurrences": [
           {
@@ -6010,18 +6725,2625 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶20.2-20.3",
-            "quote": "To stand with workers in poor communities and those that have lost manufacturing, textile, and other jobs, we will create American opportunity zones. In these areas, we will provide tax relief and other incentives [...]"
+            "ref": "¶27.2",
+            "quote": "We'll always keep the promise of Social Security for our older workers."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶129.3",
+            "quote": "they will continue to get their checks"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶130.3",
+            "quote": "We'll honor our commitment to our seniors"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Social Security benefits",
+            "record": "SSA benefit rules; enacted legislation",
+            "criterion": "no law cuts scheduled benefits for retirees and workers near retirement",
+            "ambiguity": "\"Older workers\" has no age line."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "bush-2000-socialsecurity-preserve"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bush-2004-no-child-left-behind",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Leave no child behind.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶30.8-30.9",
+            "quote": "And that is the spirit of our education reform and the commitment of our country: No dejaremos a ningun nino atras. We will leave no child behind."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "bush-2000-no-child-left-behind"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bush-2004-hs-intervention",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Fund early intervention programmes for at-risk high school students.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶31.3",
+            "quote": "In our high schools, we will fund early intervention programs to help students at risk."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal high school intervention funding",
+            "record": "enacted appropriations",
+            "criterion": "Congress funds a high school intervention programme",
+            "ambiguity": "No programme is named; any new federal funding line for at-risk high schoolers counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-math-science",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "A new focus on maths and science.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶31.4",
+            "quote": "We will place a new focus on math and science."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "to emphasize math and science in the classrooms"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal maths and science education programmes",
+            "record": "enacted legislation and appropriations",
+            "criterion": "new federal maths and science education programmes are funded",
+            "ambiguity": "What counts as a \"new focus\" is a judgement; new or expanded funded programmes are read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-hs-exit-exam",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Require a rigorous exam before high school graduation.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶31.5",
+            "quote": "As we make progress, we will require a rigorous exam before graduation."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "As we make progress",
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "high school exit exams",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a federal requirement for an exam before graduation is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-pell-grants",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Expand Pell grants for low- and middle-income families.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶31.6",
+            "quote": "expanding Pell grants for low- and middle-income families"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "to continue to expand Pell grants"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-college",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Pell grant programme",
+            "record": "Department of Education Pell grant data",
+            "criterion": "the maximum award or the number of recipients rises over the term",
+            "ambiguity": "\"Expand\" could mean more recipients or larger grants; either is read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-college-diploma",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Help more Americans start their careers with a college diploma.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶31.6",
+            "quote": "we will help more Americans start their career with a college diploma"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-college",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "college degrees",
+            "record": "NCES degrees conferred",
+            "criterion": "more degrees are conferred at the end of the term than in 2004",
+            "ambiguity": "\"Help more\" is an outcome the government only partly controls; the count of degrees is used as the measure."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-child-health-enroll",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Enrol millions of eligible poor children in government health insurance.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶32.2-32.3",
+            "quote": "In a new term, we will lead an aggressive effort to enroll millions of poor children who are eligible but not signed up for the Government's health insurance programs. We will not allow a lack of attention or information to stand between these children and the health care they need."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Medicaid and SCHIP enrolment of eligible children",
+            "record": "CMS enrolment data",
+            "criterion": "child enrolment rises by at least 2 million over the term",
+            "ambiguity": "\"Millions\" is read as at least 2 million."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-strict-judges",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Appoint federal judges who interpret the law strictly.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶38.4",
+            "quote": "I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶174.2",
+            "quote": "I will pick judges who will interpret the Constitution"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal judicial nominations",
+            "record": "Senate confirmation record",
+            "criterion": "nominees are judges known for a textualist or originalist approach",
+            "ambiguity": "Whether a nominee practises \"strict interpretation\" is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-defend-america",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Never relent in defending America, whatever it takes.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶40.6",
+            "quote": "I will never relent in defending America, whatever it takes."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶45.7",
+            "quote": "Faced with that choice, I will defend America every time."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-prevail",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Prevail against the terrorists.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶41.7",
+            "quote": "And we will prevail."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-confront-threats",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Confront threats to America before it is too late.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶44.6",
+            "quote": "We must and we will confront threats to America before it is too late."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-train-armies",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Help the new leaders of Afghanistan and Iraq train their armies.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶47.4",
+            "quote": "We will help new leaders to train their armies"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-afghan-iraq-mission",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Afghan and Iraqi security forces",
+            "record": "Department of Defense reports to Congress",
+            "criterion": "trained Afghan and Iraqi forces grow over the term",
+            "ambiguity": "No target size is stated in this speech."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-afghan-iraq-elections",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Help Afghanistan and Iraq move toward elections.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶47.4",
+            "quote": "move toward elections"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-afghan-iraq-mission",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "national elections in Afghanistan and Iraq",
+            "record": "election records (UN, national electoral commissions)",
+            "criterion": "both countries hold national elections during the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-afghan-iraq-democracy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Put Afghanistan and Iraq on the path of stability and democracy.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶47.4",
+            "quote": "get on the path of stability and democracy as quickly as possible"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-afghan-iraq-mission",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-troops-return",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Bring US troops home from Afghanistan and Iraq once local forces are trained.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶47.5",
+            "quote": "And then our troops will return home with the honor they have earned."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US troop levels in Afghanistan and Iraq",
+            "record": "Department of Defense troop data",
+            "criterion": "US troops are withdrawn by the end of the term",
+            "ambiguity": "\"And then\" gives no date; the end of the term is applied, as for every promise without one."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered future statement (\"our troops will return home\"), read as a commitment of his plan."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-troops-resources",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Give the troops all the resources, tools and support they need for victory.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶49.9",
+            "quote": "We will give you all the resources, all the tools, and all the support you need for victory."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-protect-homeland",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Do everything possible to protect the homeland.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶16.1",
+            "quote": "At home, we'll do everything we can to protect the homeland."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-deficit-half",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Cut the deficit in half in five years.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶46.2",
+            "quote": "I sent up my budget man to the Congress, and he says, \"Here's how we're going to reduce the deficit in half by 5 years.\""
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "by 5 years",
+            "applied": "2009-09-30"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal budget deficit",
+            "record": "OMB historical tables; CBO",
+            "criterion": "the FY2009 deficit is at most half the deficit projected for FY2004",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "He relays his budget director (\"Here's how we're going to …\"); the base year and measure are those of the FY2005 budget, not stated in the debate."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-raise-standards",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Keep raising school standards.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "to continue to raise standards"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; \"4 more years, I've got more to do to …\" is read as conditioned on re-election."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-reward-teachers",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Reward teachers and school districts that succeed.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "to continue to reward teachers and school districts that are working"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal teacher incentive funding",
+            "record": "enacted appropriations",
+            "criterion": "a federal programme rewards successful teachers or districts",
+            "ambiguity": "\"Reward\" is not defined; a funded incentive programme (e.g. a teacher incentive fund) is read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; \"4 more years, I've got more to do to …\" is read as conditioned on re-election."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-abstinence",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Continue to promote abstinence programmes.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶92.2",
+            "quote": "I will continue to promote abstinence programs."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal abstinence education funding",
+            "record": "enacted appropriations",
+            "criterion": "federal abstinence education funding continues through the term",
+            "ambiguity": "\"Promote\" is read as keeping the programmes funded."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-veterans-care",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "veterans",
+        "restatement": "Veterans keep getting very good health care for four more years.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶126.7",
+            "quote": "Veterans are getting very good health care under my administration, and they will continue to do so during the next 4 years."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered future statement (\"they will continue to do so during the next 4 years\")."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-ss-bipartisan",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Bring Republicans and Democrats together on Social Security.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶132.1",
+            "quote": "I will work with Republicans and Democrats."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶132.4",
+            "quote": "And so I'll bring Republicans and Democrats together, and we're of course going to have to consider the costs."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-border-uavs",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Keep using unmanned aircraft to watch the border.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶148.6",
+            "quote": "We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "bush-2004-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "border surveillance drones",
+            "record": "Customs and Border Protection records",
+            "criterion": "unmanned aircraft remain in use on the border through the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-protect-borders",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Keep protecting the borders.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶160.6",
+            "quote": "And we'll continue to protect our borders."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "bush-2004-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-border-manpower",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Keep increasing Border Patrol manpower.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶160.7",
+            "quote": "We'll continue to increase manpower"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Border Patrol agents",
+            "record": "CBP staffing statistics",
+            "criterion": "there are more Border Patrol agents at the end of the term than in 2004",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-border-equipment",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Keep increasing border equipment.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶160.7",
+            "quote": "equipment"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "border security equipment",
+            "record": "CBP budgets and procurement records",
+            "criterion": "spending on border technology and equipment rises over the term",
+            "ambiguity": "\"Equipment\" has no measure; spending is used as the proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-no-litmus-test",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "No litmus test for judicial nominees.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶174.1",
+            "quote": "I will not have a litmus test"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶174.2",
+            "quote": "but I'll have no litmus test"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-iraqi-troops-125k",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "125,000 Iraqi troops trained by the end of 2004.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶195.2",
+            "quote": "We'll have 125,000 troops trained by the end of this year."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-afghan-iraq-mission",
+          "deadline": {
+            "stated": "by the end of this year",
+            "applied": "2004-12-31"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "trained Iraqi security forces",
+            "record": "Department of Defense reports to Congress (Iraq status reports)",
+            "criterion": "at least 125,000 Iraqi troops are trained by 31 December 2004",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "bush-2004-train-armies"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bush-2004-build-coalitions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Keep building strong coalitions.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶197.7",
+            "quote": "We'll continue to build strong coalitions."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-no-foreign-veto",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Never hand national security decisions to other countries' leaders.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶197.8",
+            "quote": "But I will never turn over our national security decisions to leaders of other countries."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-war-on-terror",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Be resolute and strong, and wage a comprehensive war against the terrorists.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶197.9-197.10",
+            "quote": "We'll be resolute. We'll be strong, and we will wage a comprehensive war against the terrorists."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-heal-divisions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Work in good faith to heal the country's partisan divisions.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶25.2",
+            "quote": "I will strive in good faith to heal them"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶241.1",
+            "quote": "I'll continue in the 4 years to continue to try to work to do so."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "bush-2000-bring-parties-together"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bush-2004-economy-grows",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Keep the economy growing for four years.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶260.4",
+            "quote": "Over the next 4 years, we'll make sure the economy continues to grow."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US economic output",
+            "record": "BEA real GDP",
+            "criterion": "real GDP grows in every year of the term",
+            "ambiguity": "\"Continues to grow\" could mean every year or over the term as a whole; every year is read here."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-excellence-classroom",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Keep insisting on excellence in every classroom.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶261.2",
+            "quote": "Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-health-affordable",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Work to make health care available and affordable.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶262.1",
+            "quote": "Over the next 4 years, we'll continue to work to make sure health care is available and affordable."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-armies-compassion",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Keep rallying faith-based and community groups (\"armies of compassion\").",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶262.2",
+            "quote": "Over the next 4 years, we'll continue to rally the armies of compassion to help heal the hurt that exists in some of our country's neighborhoods."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-defend-by-arms",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Defend the US and its friends by force of arms when necessary.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶7.2",
+            "quote": "we will defend ourselves and our friends by force of arms when necessary"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-no-imposed-government",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Not impose the American style of government on the unwilling.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶7.5",
+            "quote": "America will not impose our own style of government on the unwilling."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; \"America will not …\" is read as a commitment of the government he leads."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-influence-for-freedom",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Use America's influence confidently for freedom.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶8.3",
+            "quote": "we will use it confidently in freedom's cause"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-clarify-choice",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Press every ruler with the moral choice between oppression and freedom.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶9.3",
+            "quote": "We will persistently clarify the choice before every ruler and every nation, the moral choice between oppression, which is always wrong, and freedom, which is eternally right."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-relations-human-rights",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Make good relations with other governments depend on how they treat their people.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶10.2",
+            "quote": "We will encourage reform in other governments by making clear that success in our relations will require the decent treatment of their own people."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-stand-with-oppressed",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Not ignore oppression; stand with those who stand for their liberty.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶12.2-12.3",
+            "quote": "All who live in tyranny and hopelessness can know: The United States will not ignore your oppression or excuse your oppressors. When you stand for your liberty, we will stand with you."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-reform-institutions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Reform great institutions to serve the needs of the time.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.3",
+            "quote": "And now we will extend this vision by reforming great institutions to serve the needs of our time."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-school-standards",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Bring the highest standards to schools.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.4",
+            "quote": "we will bring the highest standards to our schools"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-own-homes",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Widen home ownership.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.5",
+            "quote": "We will widen the ownership of homes"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-widen-ownership",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "home ownership",
+            "record": "Census Housing Vacancy Survey homeownership rate",
+            "criterion": "the homeownership rate is higher at the end of the term than in January 2005",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-own-businesses",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Widen business ownership.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.5",
+            "quote": "businesses"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-widen-ownership",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "business ownership",
+            "record": "Census business statistics; BLS self-employment",
+            "criterion": "the share of Americans owning a business rises over the term",
+            "ambiguity": "No measure is named; self-employment or business counts must be chosen."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-own-retirement",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Widen ownership of retirement savings.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.5",
+            "quote": "retirement savings"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-widen-ownership",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "retirement accounts",
+            "record": "Federal Reserve Survey of Consumer Finances",
+            "criterion": "the share of families with retirement accounts rises over the term",
+            "ambiguity": "Whether \"ownership\" means account holding or account balances."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-own-health-insurance",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Widen ownership of health insurance.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.5",
+            "quote": "and health insurance"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "bush-2004-widen-ownership",
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "health insurance coverage",
+            "record": "Census Current Population Survey; HSA enrolment data",
+            "criterion": "the share of people who own their own coverage (individual plans or HSAs) rises over the term",
+            "ambiguity": "\"Ownership\" of health insurance could mean any coverage or individually owned plans; the latter is read here."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-freedom-from-want",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Give Americans greater freedom from want and fear and a more prosperous, just and equal society.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2005,
+              "date": "2005-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
+              "label": "2005 inaugural address"
+            },
+            "ref": "¶21.6",
+            "quote": "By making every citizen an agent of his or her own destiny, we will give our fellow Americans greater freedom from want and fear and make our society more prosperous and just and equal."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      }
+    ],
+    "ambitions": [
+      {
+        "id": "bush-2004-lawsuit-reform",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Protect small businesses and workers from frivolous lawsuits.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶17.7",
+            "quote": "And we must protect small-business owners and workers from the explosion of frivolous lawsuits that threaten jobs across our country."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal civil litigation rules",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a federal law limiting lawsuits against businesses is enacted",
+            "ambiguity": "Which reform counts as protection from \"frivolous\" lawsuits is not stated."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-small-biz-health",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Let small firms join together to buy health insurance at big-company discounts.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶21.3",
+            "quote": "In a new term, we must allow small firms to join together to purchase insurance at the discounts available to big companies."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "association health plans",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law lets small businesses pool to buy insurance",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-medical-liability",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Pass medical liability reform.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶23.2",
+            "quote": "To make health care more affordable and accessible, we must pass medical liability reform now."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal medical liability law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a federal medical liability reform law is enacted",
+            "ambiguity": "The speech does not say what the reform contains (e.g. damage caps)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-affordable-homes",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "7 million more affordable homes in ten years.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
+            },
+            "ref": "¶26.2",
+            "quote": "Tonight we set a new goal: 7 million more affordable homes in the next 10 years so more American families will be able to open the door and say, \"Welcome to my home.\""
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "in the next 10 years",
+            "applied": "2014-09-02"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "affordable homes / homeowners",
+            "record": "Census Housing Vacancy Survey (homeowner households)",
+            "criterion": "7 million more homes are owned by 2014",
+            "ambiguity": "\"Affordable homes\" is undefined; the reading here counts additional owner households."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Stated as a goal (\"we set a new goal\"), so recorded as an ambition; the deadline runs past the term."
+          },
+          "links": []
+        }
       },
       {
         "id": "bush-2004-ss-personal-accounts",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "social-security",
-        "restatement": "Let younger workers divert some payroll taxes into personal Social Security accounts.",
-        "quality": "partial",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Strengthen Social Security by letting younger workers put part of their taxes in personal accounts.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -6050,172 +9372,42 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
               "label": "2004 debate"
             },
-            "ref": "¶131.1",
-            "quote": "I believe that younger workers ought to be allowed to take some of their own money and put it in a personal savings account, because I understand that they need to get better rates of return than the rates of return being given in the current Social Security trust."
+            "ref": "¶130.3",
+            "quote": "for our children and our grandchildren, we need to have a different strategy"
           }
-        ]
-      },
-      {
-        "id": "bush-2004-child-health-enroll",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Enroll millions of eligible-but-unenrolled poor children in public health insurance.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
-              "year": 2004,
-              "date": "2004-09-02",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
-              "label": "2004 acceptance speech"
-            },
-            "ref": "¶32.2",
-            "quote": "In a new term, we will lead an aggressive effort to enroll millions of poor children who are eligible but not signed up for the Government's health insurance programs."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-pell-grants",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Expand Pell grants to raise college completion.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
-              "year": 2004,
-              "date": "2004-09-02",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
-              "label": "2004 acceptance speech"
-            },
-            "ref": "¶31.6",
-            "quote": "By raising performance in our high schools and expanding Pell grants for low- and middle-income families, we will help more Americans start their career with a college diploma."
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶52.3",
-            "quote": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-hs-graduation-exam",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Require a rigorous exam before high-school graduation.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
-              "year": 2004,
-              "date": "2004-09-02",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
-              "label": "2004 acceptance speech"
-            },
-            "ref": "¶31.5",
-            "quote": "As we make progress, we will require a rigorous exam before graduation."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-troops-return",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Bring the troops home once Afghanistan and Iraq reach stability.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
-              "year": 2004,
-              "date": "2004-09-02",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
-              "label": "2004 acceptance speech"
-            },
-            "ref": "¶47.5",
-            "quote": "And then our troops will return home with the honor they have earned."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-strict-judges",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "judiciary",
-        "restatement": "Keep appointing strict-constructionist federal judges.",
-        "quality": "no",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
-              "year": 2004,
-              "date": "2004-09-02",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
-              "label": "2004 acceptance speech"
-            },
-            "ref": "¶38.4",
-            "quote": "I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law."
+          "verifiability": {
+            "level": "high",
+            "object": "Social Security personal accounts",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law lets younger workers divert part of their payroll tax into personal accounts",
+            "ambiguity": null
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶174.2",
-            "quote": "I will pick judges who will interpret the Constitution, but I'll have no litmus test."
-          }
-        ]
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The debate occurrence says only \"a different strategy\"; the next sentences (¶131.1) name personal accounts."
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "bush-2000-socialsecurity-accounts"
+            }
+          ]
+        }
       },
       {
-        "id": "bush-2004-preempt-threats",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Confront threats pre-emptively, before they materialize.",
+        "id": "bush-2004-help-children",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Help children reach as far as their vision and character take them.",
         "quality": "no",
         "occurrences": [
           {
@@ -6230,247 +9422,127 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
               "label": "2004 acceptance speech"
             },
-            "ref": "¶44.6",
-            "quote": "We must and we will confront threats to America before it is too late."
+            "ref": "¶29.2",
+            "quote": "To build a more hopeful America, we must help our children reach as far as their vision and character can take them."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-relations-human-rights",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Condition the success of US relations on other governments' decent treatment of their own people.",
+        "id": "bush-2004-unborn",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Make a place for the unborn child.",
         "quality": "no",
         "occurrences": [
           {
             "source": {
-              "kind": "inaugural",
+              "kind": "acceptance",
               "medium": "speech",
               "speaker": "George W. Bush",
-              "event": "Inaugural Address",
-              "year": 2005,
-              "date": "2005-01-20",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in New York City",
+              "year": 2004,
+              "date": "2004-09-02",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
-              "label": "2005 inaugural address"
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-new-york",
+              "label": "2004 acceptance speech"
             },
-            "ref": "¶10.2",
-            "quote": "We will encourage reform in other governments by making clear that success in our relations will require the decent treatment of their own people."
+            "ref": "¶38.2",
+            "quote": "Because a caring society will value its weakest members, we must make a place for the unborn child."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-ownership-society",
-        "kind": "promise",
-        "method": "legacy",
+        "id": "bush-2004-pay-for-skills",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "economy",
-        "restatement": "Reform major institutions to build an \"ownership society\" and bring the highest standards to schools.",
+        "restatement": "Help pay for workers to gain the skills for 21st-century jobs.",
         "quality": "no",
         "occurrences": [
           {
             "source": {
-              "kind": "inaugural",
-              "medium": "speech",
+              "kind": "debate",
+              "medium": "debate",
               "speaker": "George W. Bush",
-              "event": "Inaugural Address",
-              "year": 2005,
-              "date": "2005-01-20",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
-              "label": "2005 inaugural address"
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
             },
-            "ref": "¶21.3-21.4",
-            "quote": "And now we will extend this vision by reforming great institutions to serve the needs of our time. To give every American a stake in the promise and future of our country, we will bring the highest standards to our schools and build an ownership society."
+            "ref": "¶49.4",
+            "quote": "We want to help pay for you to gain the skills necessary to fill the jobs of the 21st century.\""
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶221.2",
-            "quote": "I think—I believe part of a hopeful society is one in which somebody owns something."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-heal-divisions",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "unity",
-        "restatement": "Strive in good faith to heal the nation's divisions.",
-        "quality": "no",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Inaugural Address",
-              "year": 2005,
-              "date": "2005-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-13",
-              "label": "2005 inaugural address"
-            },
-            "ref": "¶25.2",
-            "quote": "We have known divisions, which must be healed to move forward in great purposes, and I will strive in good faith to heal them."
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶241.1",
-            "quote": "I'll continue in the 4 years to continue to try to work to do so."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-deficit-half",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Cut the federal budget deficit in half within five years.",
-        "quality": "full",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶46.2-46.3",
-            "quote": "I sent up my budget man to the Congress, and he says, \"Here's how we're going to reduce the deficit in half by 5 years.\" It requires pro-growth policies that grow our economy and fiscal sanity in the Halls of Congress."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-iraqi-troops",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Have 125,000 Iraqi security forces trained by the end of 2004.",
-        "quality": "full",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶195.1-195.2",
-            "quote": "The best way to take the pressure off our troops is to succeed in Iraq, is to train Iraqis so they can do the hard work of democracy, is to give them a chance to defend their country, which is precisely what we're doing. We'll have 125,000 troops trained by the end of this year."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-marriage-amendment",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "marriage",
-        "restatement": "Amend the US Constitution to define marriage as between a man and a woman.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶76.1-76.3",
-            "quote": "I proposed a constitutional amendment. The reason I did so was because I was worried that activist judges are actually defining the definition of marriage. And the surest way to protect marriage between a man and woman is to amend the Constitution."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-temp-worker",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "Create a temporary-worker card matching willing foreign workers with willing employers when no American will take the job.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶150.1",
-            "quote": "And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs."
-          }
-        ]
-      },
-      {
-        "id": "bush-2004-border-security",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "Keep increasing Border Patrol manpower and equipment, including unmanned aircraft, over the next four years.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶148.3-148.6",
-            "quote": "We're increasing the border security of the United States. We've got 1,000 more Border Patrol agents on the southern border. We're using new equipment. We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years."
-          }
-        ]
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "bush-2004-health-it",
-        "kind": "promise",
-        "method": "legacy",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Push adoption of electronic medical records to cut errors and costs.",
+        "restatement": "Electronic medical records, to cut errors and costs.",
         "quality": "partial",
         "occurrences": [
           {
@@ -6488,15 +9560,170 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶97.6",
             "quote": "We want there to be electronic medical records to cut down on error as well as to reduce costs."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "electronic health record adoption",
+            "record": "ONC / CDC physician surveys",
+            "criterion": "EHR adoption rises over the term",
+            "ambiguity": "No target share is stated."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-education-standards",
-        "kind": "promise",
-        "method": "legacy",
+        "id": "bush-2004-temp-worker",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "A temporary-worker card matching willing workers with employers when no American wants the job.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶150.1",
+            "quote": "And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "temporary worker programme",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law creates the temporary worker programme",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-no-amnesty",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "No amnesty; do not reward illegal immigration.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶152.1-152.2",
+            "quote": "Now, it's very important for our citizens to also know that I don't believe we ought to have amnesty. I don't think we ought to reward illegal behavior."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "legal status for unauthorised immigrants",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "no law grants legal status to unauthorised immigrants without a path through the normal line",
+            "ambiguity": "What counts as \"amnesty\" is disputed; the reading here is legal status that jumps the line (¶152.3)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-no-quotas",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "No racial quotas.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶219.1",
+            "quote": "And secondly, like my opponent, I don't agree we ought to have quotas—I agree, we shouldn't have quotas."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "bush-2004-educate-access",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "education",
-        "restatement": "Keep insisting on excellence in every classroom by continuing to raise standards and measure results.",
-        "quality": "partial",
+        "restatement": "An aggressive effort to educate people and make Pell grants available after high school.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -6510,18 +9737,38 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
               "label": "2004 debate"
             },
-            "ref": "¶261.2",
-            "quote": "Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America."
+            "ref": "¶219.2",
+            "quote": "But we ought to have an aggressive effort to make sure people are educated, to make sure when they get out of high school there's Pell grants available for them, which is what we've done."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "bush-2004-gun-prosecution",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "crime",
-        "restatement": "Protect citizens from gun crime chiefly by prosecuting those who commit crimes with guns.",
-        "quality": "partial",
+        "id": "bush-2004-never-waver",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Never waver in the face of the terrorists.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -6535,13 +9782,32 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
               "label": "2004 debate"
             },
-            "ref": "¶204.3",
-            "quote": "But the best way to protect our citizens from guns is to prosecute those who commit crimes with guns."
+            "ref": "¶263.2",
+            "quote": "We must never waver in the face of this enemy that—these ideologues of hate."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2009-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       }
-    ],
-    "ambitions": []
+    ]
   },
   {
     "key": "2009-2013 Obama",
@@ -10921,10 +14187,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 238;
+export const CORPUS_PROMISE_COUNT = 281;
 
 /** Total ambitions across the corpus (re-extracted terms only). */
-export const CORPUS_AMBITION_COUNT = 43;
+export const CORPUS_AMBITION_COUNT = 57;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 322;
+export const CORPUS_OCCURRENCE_COUNT = 370;
