@@ -190,10 +190,10 @@ speaker later said the promise meant.
 | Verdict | When |
 |---------|------|
 | `kept` | The criterion was met by the applied deadline. For `ongoing`, it held for the whole term. |
-| `partly` | The criterion was met only in part: some of the object, a smaller amount, or a temporary or delayed form that was not in force by the deadline. The note says which part is missing. |
+| `partly` | The criterion was met only in part: some of the object, a smaller amount, or only for a limited time (a measure that expires). The summary says which part is missing. |
 | `broken` | The criterion was not met by the deadline, or the opposite was done. |
 | `pending` | The deadline has not passed and the criterion is not yet met. |
-| `indeterminate` | The record does not settle it: the evidence is missing or conflicts. The note says what is missing. |
+| `indeterminate` | The record does not settle it: the evidence is missing or conflicts. The summary says what is missing. |
 
 Rules, the same for every president:
 
@@ -207,9 +207,11 @@ Rules, the same for every president:
   is `kept`; one not yet met is `pending`. A `pending` verdict is reviewed when
   its deadline passes.
 - **Conditional promises** ("when Congress sends me a bill, I will sign it") are
-  judged on the condition: if it never arose, the verdict is `indeterminate`.
+  judged only if the condition arose; if it never did, the verdict is
+  `indeterminate`.
 - **An `action` counts once done.** Signing, enacting, ordering or deploying is
-  enough; the act's later effects are not part of the verdict.
+  enough; the act's later effects are not part of the verdict. A law counts
+  when it is enacted, even if it takes effect after the deadline.
 - **An `outcome`** is judged on the official figure for the deadline (the last
   full year or month before it), with the series named in the evidence.
 - **Partial delivery** is `partly`, not `kept`, even if the gap looks small.

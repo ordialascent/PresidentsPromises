@@ -1,7 +1,7 @@
 # Verdicts for George W. Bush's 2001-2005 term, judged under corpus/PROTOCOL.md §6.
 # One record per high or medium promise in promises.yaml. Deadline: 2005-01-20.
 #
-# Progress: high 17/17, medium 0/14.
+# Complete: high 17/17, medium 14/14.
 
 protocol: 1
 verdicts:
@@ -252,3 +252,189 @@ verdicts:
         date: 2001-05-02
     uncertainty:
       verdict: clear
+
+  # ---- medium --------------------------------------------------------------
+
+  - promise: bush-2000-reform-socialsecurity
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No law changed Social Security's benefits or financing during the term. The president appointed a commission in 2001; the push for legislation began only in 2005, after the deadline.
+    attempt: initiated
+    evidence:
+      - what: Executive Order 13210, establishing the President's Commission to Strengthen Social Security (2 May 2001)
+        url: https://www.presidency.ucsb.edu/documents/executive-order-13210-presidents-commission-strengthen-social-security
+        publisher: The American Presidency Project (UCSB)
+        date: 2001-05-02
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-reform-medicare
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2003 Medicare law added a drug benefit, renamed and widened the private-plan option, and changed how Medicare is financed and paid.
+    evidence:
+      - what: Medicare Prescription Drug, Improvement, and Modernization Act of 2003 (Pub. L. 108-173)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ173/html/PLAW-108publ173.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-12-08
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-medicare-solvency
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The projected exhaustion of Medicare's hospital trust fund moved earlier, from 2029 in the 2001 Trustees Report to 2019 in the 2004 report, the last before the deadline. The 2003 Medicare law moved it about two years earlier, by the Trustees' estimate.
+    attempt: none
+    evidence:
+      - what: 2001 Annual Report of the Board of Trustees of the Federal Hospital Insurance Trust Fund (House Document 107-54), projecting exhaustion in 2029
+        url: https://www.govinfo.gov/content/pkg/CDOC-107hdoc54/html/CDOC-107hdoc54.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-03-19
+      - what: 2004 Annual Report of the Medicare Boards of Trustees, projecting exhaustion in 2019, "7 years earlier than estimated in last year's report"
+        url: https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/ReportsTrustFunds/downloads/tr2004.pdf
+        publisher: Centers for Medicare & Medicaid Services
+        date: 2004-03-23
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-medicare-drugs
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2003 Medicare law created a drug benefit open to every senior (Part D, from 2006) and a drug discount card for 2004-2005.
+    evidence:
+      - what: Medicare Prescription Drug, Improvement, and Modernization Act of 2003 (Pub. L. 108-173), Title I
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ173/html/PLAW-108publ173.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-12-08
+    uncertainty:
+      verdict: probable
+      note: The full benefit began in 2006, after the deadline. Under §6 a law counts when it is enacted; a reader who requires the benefit to be in force would say partly.
+
+  - promise: bush-2000-reduce-nuclear
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2002 Moscow Treaty committed the US and Russia to cut deployed strategic warheads to 1,700-2,200 each by 2012.
+    evidence:
+      - what: Treaty on Strategic Offensive Reductions (Moscow Treaty), signed 24 May 2002
+        url: https://2009-2017.state.gov/t/avc/trty/127129.htm
+        publisher: U.S. Department of State (archived)
+        date: 2002-05-24
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-housing-ownership
+    verdict: partly
+    as_of: 2026-11-15
+    summary: Using a rental voucher toward a mortgage was already allowed by a rule from 2000. In 2002 HUD added a one-time down-payment grant from voucher funds, but the rule bars its use until HUD publishes a notice, and it was not in use by the deadline.
+    evidence:
+      - what: 24 CFR 982.643, Homeownership option, downpayment assistance grants (67 FR 64494, 18 Oct 2002), paragraph (f)
+        url: https://www.govinfo.gov/content/pkg/CFR-2010-title24-vol4/pdf/CFR-2010-title24-vol4-sec982-643.pdf
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2002-10-18
+    uncertainty:
+      verdict: contested
+      note: A reader who counts the existing homeownership option would say kept; one who counts only the new grant, never put into use, would say broken.
+
+  - promise: bush-2000-support-charities
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The Compassion Capital Fund, first funded in January 2002, gives federal grants to help faith-based and community groups serving people in need.
+    evidence:
+      - what: About the Compassion Capital Fund (created 2002)
+        url: https://webarchive.library.unt.edu/web/20090109030640/http://www.acf.hhs.gov/programs/ccf/about_ccf/index.html
+        publisher: HHS Administration for Children and Families (archived)
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-mentoring
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The Mentoring Children of Prisoners programme was created by law in January 2002 and funded from 2003.
+    evidence:
+      - what: Promoting Safe and Stable Families Amendments of 2001 (Pub. L. 107-133), Title I Subtitle B, Mentoring Children of Prisoners
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ133/html/PLAW-107publ133.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2002-01-17
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-defenses
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Discretionary defence outlays rose from $295.0 billion in FY2000 to $401.9 billion in FY2004 in FY2000 dollars, a real increase of 36%.
+    evidence:
+      - what: Budget of the U.S. Government FY2006, Historical Tables, Table 8.2 (outlays by category in constant FY2000 dollars)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2006-TAB/pdf/BUDGET-2006-TAB.pdf
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2005-02-07
+    uncertainty:
+      verdict: probable
+      note: Spending is the only proxy measured; much of the rise paid for the wars in Afghanistan and Iraq, and readiness was not measured.
+
+  - promise: bush-2000-faith-based
+    verdict: kept
+    as_of: 2026-11-15
+    summary: In his first weeks the president created the White House Office of Faith-Based and Community Initiatives by executive order, and in 2002 ordered equal treatment of faith-based groups in federal grants. The faith-based bill (Community Solutions Act) passed the House but never became law.
+    evidence:
+      - what: Executive Order 13199, establishing the White House Office of Faith-Based and Community Initiatives
+        url: https://georgewbush-whitehouse.archives.gov/news/releases/2001/01/20010129-2.html
+        publisher: The White House (archived)
+        date: 2001-01-29
+    uncertainty:
+      verdict: contested
+      note: The promise says "in our laws"; the channel was created by executive order, not by law. A reader who requires a law would say partly.
+
+  - promise: bush-2000-patients-bill-rights
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The House and the Senate each passed a patients' bill of rights in 2001, but the versions differed on the right to sue and no law was enacted.
+    attempt: passed-chamber
+    evidence:
+      - what: Bipartisan Patient Protection Act (H.R. 2563), passed by the House on 2 August 2001
+        url: https://www.congress.gov/bill/107th-congress/house-bill/2563
+        publisher: Congress.gov
+        date: 2001-08-02
+      - what: Bipartisan Patient Protection Act (S. 1052), passed by the Senate on 29 June 2001
+        url: https://www.congress.gov/bill/107th-congress/senate-bill/1052
+        publisher: Congress.gov
+        date: 2001-06-29
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-medicare-choices
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2003 Medicare law created Medicare Advantage, with regional private plans meant to reach every senior, and private drug plans to choose from.
+    evidence:
+      - what: Medicare Prescription Drug, Improvement, and Modernization Act of 2003 (Pub. L. 108-173), Title II (Medicare Advantage)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ173/html/PLAW-108publ173.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-12-08
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-relief-all-taxpayers
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2001 tax law lowered the rate on the first dollars of taxable income for everyone with income tax liability, and paid a rebate of up to $300 per person in 2001.
+    evidence:
+      - what: Economic Growth and Tax Relief Reconciliation Act of 2001 (Pub. L. 107-16), Sec. 101 (10% bracket, rate reductions) and Sec. 6428 (2001 rebate)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ16/html/PLAW-107publ16.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-06-07
+    uncertainty:
+      verdict: probable
+      note: Some taxpayers caught by the alternative minimum tax gained less or nothing; the law raised the AMT exemption only temporarily.
+
+  - promise: bush-2000-enforce-gun-laws
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Federal firearms prosecutions rose 68% from FY2000 to FY2003, to over 10,500 cases, under the Project Safe Neighborhoods programme.
+    evidence:
+      - what: Justice Department release on record gun crime prosecutions (FY2000-FY2003)
+        url: https://www.justice.gov/archive/opa/pr/2004/June/04_ag_403.htm
+        publisher: U.S. Department of Justice (archived)
+        date: 2004-06-15
+    uncertainty:
+      verdict: probable
+      note: The figures come from the department's own release; the BJS-funded Urban Institute series confirms a rise over the period.
