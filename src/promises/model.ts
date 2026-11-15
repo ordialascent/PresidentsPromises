@@ -1,6 +1,12 @@
-import type { CorpusPromise, CorpusTerm, Quality } from '../content/promises.generated.js';
+import type {
+  CorpusPromise,
+  CorpusTerm,
+  Kind,
+  Method,
+  Quality,
+} from '../content/promises.generated.js';
 
-export type { CorpusPromise, CorpusTerm, Quality };
+export type { CorpusPromise, CorpusTerm, Kind, Method, Quality };
 
 /**
  * The three measurability tiers, in stack order **bottom → top**: the most
@@ -16,11 +22,42 @@ export interface QualityMeta {
   blurb: string;
 }
 
+/**
+ * The tiers are named by the protocol's verifiability levels. Terms still on
+ * the legacy extraction fill the same slots from their old rubric (full /
+ * partial / none), and the board labels those terms wherever they appear.
+ */
 export const QUALITY_META: Record<Quality, QualityMeta> = {
-  full: { key: 'full', label: 'Full', blurb: 'metric + threshold + deadline all present' },
-  partial: { key: 'partial', label: 'Partial', blurb: 'at least one is missing or too vague' },
-  no: { key: 'no', label: 'None', blurb: 'aspirational — no measurable quantity' },
+  full: { key: 'full', label: 'High', blurb: 'object, public record and criterion all fixed by the words' },
+  partial: { key: 'partial', label: 'Medium', blurb: 'needs one stated judgement call' },
+  no: { key: 'no', label: 'Low', blurb: 'object or record missing, or several judgement calls' },
 };
+
+/** How a term's records were extracted, in the reader's words. */
+export const METHOD_META: Record<Method, { label: string; note: string }> = {
+  protocol: {
+    label: 're-extracted',
+    note: 'Extracted sentence by sentence under the current protocol.',
+  },
+  legacy: {
+    label: 'legacy',
+    note: 'Earlier extraction, rated by an older rubric (metric, threshold, deadline). Not yet re-extracted; its tiers are not strictly comparable.',
+  },
+};
+
+export const KIND_META: Record<Kind, { label: string; plural: string }> = {
+  promise: { label: 'promise', plural: 'Promises' },
+  ambition: { label: 'ambition', plural: 'Ambitions' },
+};
+
+/**
+ * The corpus as one kind of record: promises (firm language) or ambitions
+ * (wishes and obligations). The board shows one kind at a time, so every view
+ * reads the `promises` slot and this swaps what is in it.
+ */
+export function termsOfKind(terms: CorpusTerm[], kind: Kind): CorpusTerm[] {
+  return kind === 'promise' ? terms : terms.map((t) => ({ ...t, promises: t.ambitions }));
+}
 
 export interface VerdictPlaceholder {
   /** Short status word, shown next to the mark. */
@@ -38,7 +75,7 @@ export interface VerdictPlaceholder {
 }
 
 /**
- * What the detail panel says under the quotes until the scoring pass exists.
+ * Legacy terms: what the detail panel says under the quotes until the scoring pass exists.
  * The three differ in kind, not in degree: a *full* promise carries a metric, a
  * threshold and a deadline, so a verdict is only waiting to be done. A *partial*
  * one could be scored, but only by supplying the terms it left out — deferred,
@@ -66,10 +103,50 @@ export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
   },
 };
 
+/**
+ * What can be said about keeping this record, until verdicts exist. Ambitions
+ * never get one. Re-extracted promises follow the protocol (high and medium are
+ * checkable); legacy promises keep the old rubric's wording.
+ */
+export function verdictFor(p: CorpusPromise): VerdictPlaceholder {
+  if (p.kind === 'ambition') return AMBITION_PLACEHOLDER;
+  if (p.method === 'protocol') return PROTOCOL_PLACEHOLDER[p.quality];
+  return VERDICT_PLACEHOLDER[p.quality];
+}
+
+const AMBITION_PLACEHOLDER: VerdictPlaceholder = {
+  label: 'No verdict (ambition)',
+  tag: 'ambition',
+  mark: '–',
+  note: 'Said as a wish or an obligation ("we must", "I want"), not as a commitment. Ambitions are recorded and rated like promises, but never get a kept/broken verdict.',
+};
+
+const PROTOCOL_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
+  full: {
+    label: 'Verdict pending',
+    tag: 'pending',
+    mark: '?',
+    note: 'The words fix what the promise is about, a public record shows what happened, and the words say what counts as kept. That check is coming soon.',
+  },
+  partial: {
+    label: 'Verdict pending',
+    tag: 'pending',
+    mark: '?',
+    note: 'Checkable against a public record once one judgement call is made; the call is stated above. That check is coming soon.',
+  },
+  no: {
+    label: 'Verdict infeasible',
+    tag: 'infeasible',
+    mark: '–',
+    note: 'The words leave open what it is about or where it would show, or would need more than one judgement call to check.',
+  },
+};
+
 /** One term with its promises rolled up by tier. */
 export interface TermSummary {
   key: string;
   label: string;
+  method: Method;
   surname: string;
   termLabel: string;
   speechYear: number | null;
@@ -95,6 +172,7 @@ export interface PromiseRow {
   termLabel: string;
   surname: string;
   speechYear: number | null;
+  method: Method;
 }
 
 /**
@@ -111,6 +189,7 @@ export function flattenPromises(terms: CorpusTerm[]): PromiseRow[] {
       termLabel: t.label,
       surname: t.surname,
       speechYear: t.speechYear,
+      method: t.method,
     })),
   );
 }
@@ -168,6 +247,7 @@ export function summarize(terms: CorpusTerm[]): TermSummary[] {
     return {
       key: t.key,
       label: t.label,
+      method: t.method,
       surname: t.surname,
       termLabel: t.termLabel,
       speechYear: t.speechYear,

@@ -50,6 +50,18 @@ and checks the indeterminate path.
 - The site reads the committed snapshot at build time; it does not fetch a
   verdict-bearing figure live at render time. Git history is the as-of log.
 
+## Kind and method
+
+Every record is a `promise` (firm language) or an `ambition` (wishes and
+obligations, see `corpus/PROTOCOL.md`). The board shows one kind at a time: the
+kind switch swaps what sits in each term's `promises` slot (`termsOfKind`), and
+every view below reads that slot unchanged. Only promises can get a verdict.
+
+Every term also carries the `method` that produced it: `protocol` (re-extracted
+under the protocol) or `legacy` (earlier hand curation, older rubric). Both fill
+the same three tiers so they share one chart, but legacy bars are faded and
+labelled, and no delta is drawn across a method boundary.
+
 ## One filter state, four views
 
 The board's page owns every filter — picked topics, picked categories, the
