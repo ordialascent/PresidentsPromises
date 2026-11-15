@@ -9817,71 +9817,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2009–2013",
     "speechYear": 2008,
     "label": "Obama 2008",
-    "method": "legacy",
+    "method": "protocol",
     "promises": [
       {
-        "id": "obama-2008-oil-mideast",
+        "id": "obama-2008-create-jobs",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "energy",
-        "restatement": "End US dependence on Middle East oil within ten years.",
-        "quality": "full",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Act to create new jobs.",
+        "quality": "partial",
         "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
-              "year": 2008,
-              "date": "2008-08-28",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
-              "label": "2008 acceptance speech"
-            },
-            "ref": "¶44.1",
-            "quote": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Barack Obama",
-              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
-              "year": 2008,
-              "date": "2008-10-15",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
-              "label": "2008 debate"
-            },
-            "ref": "¶279.1",
-            "quote": "I think that in ten years, we can reduce our dependence so that we no longer have to import oil from the Middle East or Venezuela."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-energy-invest",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "energy",
-        "restatement": "Invest $150B over ten years in renewable energy, yielding five million jobs.",
-        "quality": "full",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
-              "year": 2008,
-              "date": "2008-08-28",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
-              "label": "2008 acceptance speech"
-            },
-            "ref": "¶47.4",
-            "quote": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy – wind power and solar power and the next generation of biofuels; an investment that will lead to new industries and five million new jobs that pay well and can't ever be outsourced."
-          },
           {
             "source": {
               "kind": "inaugural",
@@ -9894,8 +9839,98 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
               "label": "2009 inaugural address"
             },
-            "ref": "¶12.5",
-            "quote": "We will harness the sun and the winds and the soil to fuel our cars and run our factories."
+            "ref": "¶12.2",
+            "quote": "we will act not only to create new jobs"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2008-new-foundation",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "payroll employment",
+            "record": "BLS Current Employment Statistics",
+            "criterion": "nonfarm payroll employment is higher at the end of the term than at its start",
+            "ambiguity": "No number is given; net job growth over the term is the reading here, though \"act to create\" could also be met by the act alone."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-foundation-growth",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Lay a new foundation for economic growth.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.2",
+            "quote": "but to lay a new foundation for growth"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2008-new-foundation",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-end-offshoring-tax-breaks",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "End tax breaks for corporations that ship jobs overseas.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶41.1",
+            "quote": "I will stop giving tax breaks to corporations that ship jobs overseas"
           },
           {
             "source": {
@@ -9909,18 +9944,143 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
               "label": "2008 debate"
             },
-            "ref": "¶302.1",
-            "quote": "If we can get that right, then we can move in a direction not only of energy independence, but we can create 5 million new jobs all across America, including in the heartland where we can retool some of these plants to make these highly fuel-efficient cars and also to make wind turbines and solar panels, the kinds of clean energy approaches that should be the driver of our economy for the next century."
+            "ref": "¶30.2",
+            "quote": "I want to end the tax breaks for companies that are shipping jobs overseas"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-jobs-tax-breaks",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "tax treatment of income from jobs moved abroad",
+            "record": "enacted legislation (Congress.gov); Internal Revenue Code",
+            "criterion": "a law removes a tax benefit that rewards moving jobs abroad",
+            "ambiguity": "The speeches name no provision; deferral of tax on foreign earnings and the deduction for relocation costs are the usual readings."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-tax-credit-us-jobs",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Give tax breaks to companies that create jobs in America.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶41.1",
+            "quote": "I will start giving them to companies that create good jobs right here in America"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶30.2",
+            "quote": "provide a tax credit for every company that's creating a job right here in America"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-jobs-tax-breaks",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "tax credit for domestic job creation",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a tax credit or break for companies that add jobs in the US is enacted",
+            "ambiguity": "Whether a broad credit for new hires counts, or only one tied to jobs kept from moving abroad, is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-capgains-smallbiz",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Eliminate capital gains taxes for small businesses and start-ups.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶42.1",
+            "quote": "I will eliminate capital gains taxes for the small businesses and the start-ups that will create the high-wage, high-tech jobs of tomorrow."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "capital gains tax on small-business and start-up investment",
+            "record": "enacted legislation (Congress.gov); Internal Revenue Code §1202",
+            "criterion": "a law sets the capital gains tax on small-business and start-up investment to zero",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "obama-2008-tax-cut-95",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "taxes",
         "restatement": "Cut taxes for 95% of working families.",
-        "quality": "partial",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -9950,57 +10110,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶45.1",
-            "quote": "What I've said is I want to provide a tax cut for 95 percent of working Americans, 95 percent."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-capgains-smallbiz",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "taxes",
-        "restatement": "Eliminate capital gains taxes for small businesses and start-ups.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
-              "year": 2008,
-              "date": "2008-08-28",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
-              "label": "2008 acceptance speech"
-            },
-            "ref": "¶42.1",
-            "quote": "I will eliminate capital gains taxes for the small businesses and the start-ups that will create the high-wage, high-tech jobs of tomorrow."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-offshoring-taxbreaks",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "taxes",
-        "restatement": "End tax breaks for offshoring; give them to domestic job creators.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
-              "year": 2008,
-              "date": "2008-08-28",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
-              "label": "2008 acceptance speech"
-            },
-            "ref": "¶41.1",
-            "quote": "Unlike John McCain, I will stop giving tax breaks to corporations that ship jobs overseas, and I will start giving them to companies that create good jobs right here in America."
+            "quote": "I want to provide a tax cut for 95 percent of working Americans"
           },
           {
             "source": {
@@ -10014,48 +10124,8 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
               "label": "2008 debate"
             },
-            "ref": "¶30.2",
-            "quote": "I want to end the tax breaks for companies that are shipping jobs overseas and provide a tax credit for every company that's creating a job right here in America."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-healthcare-universal",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Affordable, accessible health care for every American; lower premiums for the insured.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
-              "year": 2008,
-              "date": "2008-08-28",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
-              "label": "2008 acceptance speech"
-            },
-            "ref": "¶50.1-50.2",
-            "quote": "Now is the time to finally keep the promise of affordable, accessible health care for every single American. If you have health care, my plan will lower your premiums."
-          },
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Inaugural Address",
-              "year": 2009,
-              "date": "2009-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
-              "label": "2009 inaugural address"
-            },
-            "ref": "¶12.4",
-            "quote": "We will restore science to its rightful place and wield technology's wonders to raise health care's quality and lower its cost."
+            "ref": "¶46.1",
+            "quote": "And 95 percent of working families, 95 percent of you out there, will get a tax cut."
           },
           {
             "source": {
@@ -10069,17 +10139,202 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
               "label": "2008 debate"
             },
-            "ref": "¶312.2",
-            "quote": "And we estimate we can cut the average family's premium by about $2,500 per year."
+            "ref": "¶48.1",
+            "quote": "I want to give them a tax break now"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶57.2",
+            "quote": "Number one, I want to cut taxes for 95 percent of Americans."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶240.1",
+            "quote": "give tax cuts not to the wealthiest corporations, but give them to small businesses and give them to individuals who are struggling right now"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶486.1",
+            "quote": "we're going to have to invest in the American people again, in tax cuts for the middle class"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal taxes of working families",
+            "record": "enacted legislation (Congress.gov); Tax Policy Center distribution tables",
+            "criterion": "a tax cut reaching about 95% of working households is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-fiscal-payfor",
+        "id": "obama-2008-no-tax-rise-under-250k",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Pay for every new dollar of spending; cut wasteful programs line by line.",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "No income, capital gains or payroll tax increase for anyone making less than $250,000.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶45.2",
+            "quote": "If you make more -- if you make less than a quarter million dollars a year, then you will not see your income tax go up, your capital gains tax go up, your payroll tax."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶45.3",
+            "quote": "Not one dime."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶43.2",
+            "quote": "Because in an economy like this, the last thing we should do is raise taxes on the middle-class."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "income, capital gains and payroll tax rates for people under $250,000",
+            "record": "enacted legislation (Congress.gov); Internal Revenue Code",
+            "criterion": "no law signed in the term raises these three taxes for people making under $250,000",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-tarp-repaid",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Structure the $750 billion rescue so taxpayers get their money back.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶75.1",
+            "quote": "as president, I will make sure it's structured properly, means that ultimately taxpayers get their money back"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "ultimately",
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Troubled Asset Relief Program",
+            "record": "Treasury TARP reports; CBO",
+            "criterion": "TARP disbursements are recovered in full",
+            "ambiguity": "\"Ultimately\" sets no date; recovery is read at the end of the term, and whether the figure is net of TARP housing programmes is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-pay-for-every-dime",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Pay for every dime of his new plans.",
         "quality": "partial",
         "occurrences": [
           {
@@ -10094,8 +10349,98 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
               "label": "2008 acceptance speech"
             },
-            "ref": "¶54.1-54.2",
-            "quote": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime – by closing corporate loopholes and tax havens that don't help America grow. But I will also go through the federal budget, line by line, eliminating programs that no longer work and making the ones we do need work better and cost less – because we cannot meet twenty-first century challenges with a twentieth century bureaucracy."
+            "ref": "¶54.1",
+            "quote": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2008-pay-for",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "cost of the new programmes he proposed",
+            "record": "CBO cost estimates of enacted laws",
+            "criterion": "his signature new programmes are offset by savings or revenue in CBO scoring",
+            "ambiguity": "Which plans count as \"these plans\" is a judgement call; the reading here is the acceptance speech agenda."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-close-loopholes-havens",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Close corporate loopholes and tax havens.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶54.1",
+            "quote": "by closing corporate loopholes and tax havens that don't help America grow"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-pay-for",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "corporate tax loopholes and tax havens",
+            "record": "enacted legislation (Congress.gov); Internal Revenue Code",
+            "criterion": "a law closes corporate loopholes or tax-haven provisions",
+            "ambiguity": "No provision is named; any enacted measure against offshore tax avoidance (e.g. reporting rules) is read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-budget-line-by-line",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Go through the federal budget line by line and eliminate programs that no longer work.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶54.2",
+            "quote": "But I will also go through the federal budget, line by line, eliminating programs that no longer work"
           },
           {
             "source": {
@@ -10109,8 +10454,23 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
               "label": "2009 inaugural address"
             },
-            "ref": "¶14.4-14.5",
-            "quote": "Where the answer is no, programs will end. And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government."
+            "ref": "¶14.4",
+            "quote": "Where the answer is no, programs will end."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶81.1",
+            "quote": "We need to eliminate a whole host of programs that don't work."
           },
           {
             "source": {
@@ -10125,41 +10485,51 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶81.2",
-            "quote": "And I want to go through the federal budget line by line, page by page, programs that don't work, we should cut."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-equal-pay",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Equal pay for equal work.",
-        "quality": "partial",
-        "occurrences": [
+            "quote": "I want to go through the federal budget line by line, page by page, programs that don't work, we should cut."
+          },
           {
             "source": {
-              "kind": "acceptance",
-              "medium": "speech",
+              "kind": "debate",
+              "medium": "debate",
               "speaker": "Barack Obama",
-              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
               "year": 2008,
-              "date": "2008-08-28",
+              "date": "2008-10-15",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
-              "label": "2008 acceptance speech"
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
             },
-            "ref": "¶53.1",
-            "quote": "And now is the time to keep the promise of equal pay for an equal day's work, because I want my daughters to have exactly the same opportunities as your sons."
+            "ref": "¶113.3",
+            "quote": "And I want to make sure that we are focused on those programs that work."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal programmes",
+            "record": "President's budget \"Terminations, Reductions and Savings\" volumes; appropriations",
+            "criterion": "programmes are terminated after a published review",
+            "ambiguity": "Which programmes \"no longer work\" is his judgement; terminations he proposed and Congress enacted are read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-paid-leave",
+        "id": "obama-2008-programs-work-better",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Guarantee paid sick days and better family leave.",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Make the programmes we need work better and cost less.",
         "quality": "no",
         "occurrences": [
           {
@@ -10174,17 +10544,1567 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
               "label": "2008 acceptance speech"
             },
-            "ref": "¶51.1",
-            "quote": "Now is the time to help families with paid sick days and better family leave, because nobody in America should have to choose between keeping their jobs and caring for a sick child or ailing parent."
+            "ref": "¶54.2",
+            "quote": "making the ones we do need work better and cost less"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶81.3",
+            "quote": "Programs that we need, we should make them work better."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-iraq-end",
+        "id": "obama-2008-end-mideast-oil",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "End the Iraq war responsibly; finish the fight in Afghanistan.",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Set a goal and, in ten years, end dependence on oil from the Middle East.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶44.1",
+            "quote": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "in ten years",
+            "applied": "2018-08-28"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US crude oil imports from the Middle East",
+            "record": "EIA petroleum imports by country of origin",
+            "criterion": "imports from Persian Gulf countries end, or fall to a negligible share, within ten years",
+            "ambiguity": "\"End our dependence\" may mean zero imports or only no reliance; the debate reads it as \"no longer have to import\"."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2004-energy-imports"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2008-tap-natural-gas",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Tap natural gas reserves.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶47.1",
+            "quote": "As President, I will tap our natural gas reserves"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2008-energy-supply",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US natural gas production",
+            "record": "EIA natural gas production",
+            "criterion": "US natural gas production rises over the term",
+            "ambiguity": "\"Tap\" sets no amount; any rise in production is read as kept, whatever its cause."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-clean-coal",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Invest in clean coal technology.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶47.1",
+            "quote": "invest in clean coal technology"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-energy-supply",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal clean coal (carbon capture) funding",
+            "record": "DOE budget; appropriations",
+            "criterion": "federal funding for clean coal technology is provided",
+            "ambiguity": "No amount is given; any dedicated new federal funding is read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-nuclear-power",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Find ways to safely harness nuclear power.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶47.1",
+            "quote": "find ways to safely harness nuclear power"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2008-energy-supply",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-auto-retool",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Help auto companies re-tool to build fuel-efficient cars in America.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶47.2",
+            "quote": "I'll help our auto companies re-tool, so that the fuel-efficient cars of the future are built right here in America."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶285.1",
+            "quote": "We invented the auto industry and the fact that we have fallen so far behind is something that we have to work on."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal support for auto plant retooling",
+            "record": "DOE Advanced Technology Vehicles Manufacturing loans; appropriations",
+            "criterion": "federal aid for automakers to retool for fuel-efficient cars is provided",
+            "ambiguity": "No amount or vehicle is named; loans under an existing programme count as help."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-afford-efficient-cars",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Make fuel-efficient cars easier for Americans to afford.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶47.3",
+            "quote": "I'll make it easier for the American people to afford these new cars."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "consumer incentives for fuel-efficient cars",
+            "record": "enacted legislation (Congress.gov); IRS vehicle credits",
+            "criterion": "a federal incentive for buying fuel-efficient cars is enacted",
+            "ambiguity": "No instrument is named; a tax credit or rebate for efficient vehicles is read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-renewables-150b",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Invest $150 billion over ten years in renewable energy.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶47.4",
+            "quote": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-renewables",
+          "deadline": {
+            "stated": "over the next decade",
+            "applied": "2018-08-28"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal investment in renewable energy",
+            "record": "appropriations; DOE and Treasury programme data; CBO",
+            "criterion": "federal spending and tax expenditure for renewable energy reach $150 billion over ten years (about $60 billion by the end of the term)",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-green-jobs-5m",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Create five million new jobs through the renewable energy investment.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶47.4",
+            "quote": "an investment that will lead to new industries and five million new jobs"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2008-renewables",
+          "deadline": {
+            "stated": "over the next decade",
+            "applied": "2018-08-28"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "clean-energy jobs",
+            "record": "BLS Green Goods and Services survey",
+            "criterion": "five million new jobs in clean energy within ten years",
+            "ambiguity": "What counts as a clean-energy job is a definitional choice; BLS measured green jobs only from 2010 to 2011."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Stated as the result of the investment (\"will lead to\"); read as part of the promise, not a forecast."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-harness-renewables",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Harness the sun, wind and soil to fuel cars and run factories.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.5",
+            "quote": "We will harness the sun and the winds and the soil to fuel our cars and run our factories."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "solar, wind and biofuel energy",
+            "record": "EIA renewable energy production",
+            "criterion": "solar, wind and biofuel production rise over the term",
+            "ambiguity": "No amount is given; any rise is read as kept."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "obama-2008-renewables-150b"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2008-lower-premiums",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Lower premiums for people who already have health insurance.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶50.2",
+            "quote": "If you have health care, my plan will lower your premiums."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶312.1",
+            "quote": "The only thing we're going to try to do is lower costs so that those cost savings are passed onto you."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶365.1",
+            "quote": "All I want to do, if you've already got health care, is lower your costs."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "health insurance premiums",
+            "record": "KFF Employer Health Benefits Survey; MEPS",
+            "criterion": "average family premiums are lower at the end of the term than at its start",
+            "ambiguity": "An absolute fall versus slower growth than otherwise is a judgement call. The debate adds an estimate (\"about $2,500 per year\", ¶312.2) stated as a forecast, not a promise."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-congress-style-coverage",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Let the uninsured buy coverage like that of members of Congress.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶50.3",
+            "quote": "If you don't, you'll be able to get the same kind of coverage that members of Congress give themselves."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶313.1",
+            "quote": "If you don't have health insurance, then what we're going to do is to provide you the option of buying into the same kind of federal pool that both Sen. McCain and I enjoy as federal employees, which will give you high-quality care, choice of doctors, at lower costs, because so many people are part of this insured group."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a federal coverage option for the uninsured",
+            "record": "enacted legislation (Congress.gov); HHS",
+            "criterion": "a law lets the uninsured buy into a federally organised pool of private plans",
+            "ambiguity": "How close to the federal employees' plan the option must be is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-preexisting-conditions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Stop insurers discriminating against the sick (pre-existing conditions).",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶50.4",
+            "quote": "I will make certain those companies stop discriminating against those who are sick and need care the most"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶314.1",
+            "quote": "We're going to make sure that insurance companies can't discriminate on the basis of pre-existing conditions."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "insurer rules on pre-existing conditions",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law bars insurers from denying or pricing coverage by pre-existing conditions",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-drug-price-negotiation",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Negotiate with drug companies for the cheapest drug prices.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶314.2",
+            "quote": "We'll negotiate with the drug companies for the cheapest available price on drugs."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal drug price negotiation",
+            "record": "enacted legislation (Congress.gov); CMS",
+            "criterion": "the federal government negotiates drug prices with manufacturers",
+            "ambiguity": "The programme is not named; Medicare Part D negotiation is the usual reading. A voluntary industry deal is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-health-it",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Invest in health information technology to cut bureaucracy, raise quality and lower cost.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶315.1",
+            "quote": "We are going to invest in information technology to eliminate bureaucracy and make the system more efficient."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.4",
+            "quote": "wield technology's wonders to raise health care's quality and lower its cost"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal health IT funding",
+            "record": "enacted legislation (Congress.gov); ONC",
+            "criterion": "federal funding for health information technology is enacted",
+            "ambiguity": "No amount is given; the effects on quality and cost are purposes, not the criterion."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2004-health-it"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2008-chronic-illness",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Manage chronic illnesses that could be prevented.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶316.1",
+            "quote": "And we are going to make sure that we manage chronic illnesses, like diabetes and heart disease, that cost a huge amount, but could be prevented."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-small-biz-health-credit",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Give small businesses a 50% credit to provide health insurance.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶341.3",
+            "quote": "we'll give you a 50 percent credit so that you will actually be able to afford it"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "small-business health insurance tax credit",
+            "record": "enacted legislation (Congress.gov); IRS",
+            "criterion": "a credit of up to 50% of premiums for small businesses is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-education-chance",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Not settle for an America where some kids lack the chance at an education.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶49.3",
+            "quote": "And I will not settle for an America where some kids don't have that chance."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-early-childhood",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Invest in early childhood education.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶49.4",
+            "quote": "I'll invest in early childhood education."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶419.1-419.2",
+            "quote": "In some cases, we are going to have to invest. Early childhood education, which closes the achievement gap, so that every child is prepared for school, every dollar we invest in that, we end up getting huge benefits with improved reading scores, reduced dropout rates, reduced delinquency rates."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶438.1",
+            "quote": "what I want to do is focus on early childhood education"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal early childhood funding",
+            "record": "appropriations (Head Start, Early Head Start, Race to the Top-Early Learning)",
+            "criterion": "federal early childhood education funding rises over the term",
+            "ambiguity": "No amount is given; any sustained increase is read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-recruit-teachers",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Recruit an army of new teachers.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶49.5",
+            "quote": "I'll recruit an army of new teachers"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-teachers",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal teacher recruitment",
+            "record": "appropriations; Department of Education programme data",
+            "criterion": "a federal programme to recruit new teachers is funded",
+            "ambiguity": "\"An army\" sets no number."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-teacher-pay-support",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Pay teachers higher salaries and give them more support.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶49.5",
+            "quote": "and pay them higher salaries and give them more support"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶438.1",
+            "quote": "providing teachers higher salaries in exchange for more support"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2008-teachers",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Teacher pay is set by states and districts; the federal part of the promise is unclear."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-teacher-accountability",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "In exchange, ask for higher standards and more accountability.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶49.6",
+            "quote": "And in exchange, I'll ask for higher standards and more accountability."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-teachers",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-service-college",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Make sure young Americans who serve their community or country can afford college.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶49.7",
+            "quote": "And we will keep our promise to every young American – if you commit to serving your community or your country, we will make sure you can afford a college education."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "college aid tied to service",
+            "record": "enacted legislation (Congress.gov); Corporation for National and Community Service",
+            "criterion": "a federal college benefit for national or community service is expanded",
+            "ambiguity": "\"Afford\" is not defined; the debate names a $4,000 credit for service (¶422.1), but as a proposal, not a pledge."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-transform-schools",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Transform schools, colleges and universities for a new age.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.6",
+            "quote": "And we will transform our schools and colleges and universities to meet the demands of a new age."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-roads-bridges",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Build roads and bridges.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.3",
+            "quote": "We will build the roads and bridges"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-build",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "roads and bridges",
+            "record": "appropriations; agency programme data (DOT, DOE, NTIA/RUS)",
+            "criterion": "new federal funding for roads and bridges is enacted",
+            "ambiguity": "No amount is given; \"build\" is read as funding new construction or upgrades."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-electric-grid",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Build electric grids.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.3",
+            "quote": "the electric grids"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-build",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the electric grid",
+            "record": "appropriations; agency programme data (DOT, DOE, NTIA/RUS)",
+            "criterion": "new federal funding for the electric grid is enacted",
+            "ambiguity": "No amount is given; \"build\" is read as funding new construction or upgrades."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-broadband",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Build digital lines (broadband).",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.3",
+            "quote": "digital lines"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-build",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "broadband networks",
+            "record": "appropriations; agency programme data (DOT, DOE, NTIA/RUS)",
+            "criterion": "new federal funding for broadband networks is enacted",
+            "ambiguity": "No amount is given; \"build\" is read as funding new construction or upgrades."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-restore-science",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Restore science to its rightful place.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶12.4",
+            "quote": "We will restore science to its rightful place"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-accountable-spending",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Be held to account to spend wisely, reform bad habits and work in the open.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶14.5",
+            "quote": "And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-work-tirelessly",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Work every day, tirelessly, on the people's behalf.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶489.2",
+            "quote": "I will work every single day, tirelessly, on your behalf and on the behalf of the future of our children"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-judges",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Look for judges with an outstanding record, intellect and a sense of real-world lives.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶383.2",
+            "quote": "I will look for those judges who have an outstanding judicial record, who have the intellect, and who hopefully have a sense of what real-world folks are going through."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶387.2",
+            "quote": "And that's the kind of judge that I want."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-end-iraq-war",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "End the war in Iraq responsibly.",
         "quality": "partial",
         "occurrences": [
           {
@@ -10200,7 +12120,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.1",
-            "quote": "I will end this war in Iraq responsibly, and finish the fight against al Qaeda and the Taliban in Afghanistan."
+            "quote": "I will end this war in Iraq responsibly"
           },
           {
             "source": {
@@ -10215,16 +12135,370 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.3",
-            "quote": "We will begin to responsibly leave Iraq to its people and forge a hard-earned peace in Afghanistan."
+            "quote": "We will begin to responsibly leave Iraq to its people"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US troop presence in Iraq",
+            "record": "DoD troop levels; US-Iraq agreements",
+            "criterion": "US combat troops leave Iraq by the end of the term",
+            "ambiguity": "\"Responsibly\" adds a judgement no record settles; \"end the war\" is read as US troops leaving."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-iran-nukes",
+        "id": "obama-2008-afghanistan-fight",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Finish the fight against al Qaeda and the Taliban in Afghanistan.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶64.1",
+            "quote": "finish the fight against al Qaeda and the Taliban in Afghanistan"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-afghanistan-peace",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "foreign-policy",
-        "restatement": "Prevent Iran from obtaining nuclear weapons through diplomacy.",
+        "restatement": "Forge a hard-earned peace in Afghanistan.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶18.3",
+            "quote": "forge a hard-earned peace in Afghanistan"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-rebuild-military",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Rebuild the military to meet future conflicts.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶64.2",
+            "quote": "I will rebuild our military to meet future conflicts."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2000-defenses"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2008-defend-nation",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Never hesitate to defend the nation.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶63.1",
+            "quote": "As Commander-in-Chief, I will never hesitate to defend this nation"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2008-commander",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-clear-mission",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Send troops into harm's way only with a clear mission.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶63.1",
+            "quote": "I will only send our troops into harm's way with a clear mission"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2008-commander",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-troop-equipment",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Give troops the equipment they need in battle.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶63.1",
+            "quote": "a sacred commitment to give them the equipment they need in battle"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2008-commander",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2000-military-equipment"
+            },
+            {
+              "kind": "shared",
+              "to": "bush-2004-troops-resources"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2008-veterans-care",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "veterans",
+        "restatement": "Give returning troops the care and benefits they deserve.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶63.1",
+            "quote": "the care and benefits they deserve when they come home"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2008-commander",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2004-veterans-care"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2008-iran-diplomacy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Renew tough, direct diplomacy to prevent Iran from obtaining nuclear weapons.",
         "quality": "partial",
         "occurrences": [
           {
@@ -10240,16 +12514,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.3",
-            "quote": "But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons and curb Russian aggression."
+            "quote": "But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-diplomacy",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US diplomacy with Iran; Iran's nuclear status",
+            "record": "State Department records; IAEA reports",
+            "criterion": "direct US talks with Iran take place and Iran has no nuclear weapon at the end of the term",
+            "ambiguity": "The words promise the diplomacy; its purpose (prevention) is read as part of the criterion."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-education-worldclass",
+        "id": "obama-2008-curb-russia",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Provide every child a world-class education; invest in early education and teachers.",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Curb Russian aggression through diplomacy.",
         "quality": "no",
         "occurrences": [
           {
@@ -10264,47 +12558,82 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
               "label": "2008 acceptance speech"
             },
-            "ref": "¶49.1-49.5",
-            "quote": "Now is the time to finally meet our moral obligation to provide every child a world-class education, because it will take nothing less to compete in the global economy. [...] I'll invest in early childhood education. I'll recruit an army of new teachers, and pay them higher salaries and give them more support."
+            "ref": "¶64.3",
+            "quote": "curb Russian aggression"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2008-diplomacy",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
           },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-new-partnerships",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Build new partnerships against terrorism, proliferation, poverty, genocide, climate change and disease.",
+        "quality": "no",
+        "occurrences": [
           {
             "source": {
-              "kind": "inaugural",
+              "kind": "acceptance",
               "medium": "speech",
               "speaker": "Barack Obama",
-              "event": "Inaugural Address",
-              "year": 2009,
-              "date": "2009-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
-              "label": "2009 inaugural address"
-            },
-            "ref": "¶12.6",
-            "quote": "And we will transform our schools and colleges and universities to meet the demands of a new age."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Barack Obama",
-              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
               "year": 2008,
-              "date": "2008-10-15",
+              "date": "2008-08-28",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
-              "label": "2008 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
             },
-            "ref": "¶420.1",
-            "quote": "I think it's going to be critically important for us to recruit a generation of new teachers, an army of new teachers, especially in math and science, give them higher pay, give them more professional development and support in exchange for higher standards and accountability."
+            "ref": "¶64.4",
+            "quote": "I will build new partnerships to defeat the threats of the 21st century: terrorism and nuclear proliferation; poverty and genocide; climate change and disease."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Kept as one promise: the object is the partnerships; the list names their purposes (§2 purpose clause)."
+          },
+          "links": []
+        }
       },
       {
         "id": "obama-2008-moral-standing",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "foreign-policy",
-        "restatement": "Restore America's moral standing in the world.",
+        "restatement": "Restore America's moral standing.",
         "quality": "no",
         "occurrences": [
           {
@@ -10322,64 +12651,34 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶64.5",
             "quote": "And I will restore our moral standing, so that America is once again that last, best hope for all who are called to the cause of freedom, who long for lives of peace, and who yearn for a better future."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-economy-jobs",
+        "id": "obama-2008-lessen-nuclear-threat",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "economy",
-        "restatement": "Act boldly to create new jobs and lay a new foundation for growth.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Inaugural Address",
-              "year": 2009,
-              "date": "2009-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
-              "label": "2009 inaugural address"
-            },
-            "ref": "¶12.2",
-            "quote": "The state of the economy calls for action, bold and swift, and we will act not only to create new jobs but to lay a new foundation for growth."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-infrastructure",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "infrastructure",
-        "restatement": "Build roads, bridges, electric grids, and digital lines.",
-        "quality": "no",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Inaugural Address",
-              "year": 2009,
-              "date": "2009-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
-              "label": "2009 inaugural address"
-            },
-            "ref": "¶12.3",
-            "quote": "We will build the roads and bridges, the electric grids and digital lines that feed our commerce and bind us together."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-climate-nuclear",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "climate",
-        "restatement": "Work to lessen the nuclear threat and reverse a warming planet.",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Work with old friends and former foes to lessen the nuclear threat.",
         "quality": "no",
         "occurrences": [
           {
@@ -10395,16 +12694,261 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.4",
-            "quote": "With old friends and former foes, we will work tirelessly to lessen the nuclear threat and roll back the specter of a warming planet."
+            "quote": "With old friends and former foes, we will work tirelessly to lessen the nuclear threat"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-poor-nations",
+        "id": "obama-2008-warming-planet",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Work with other nations to roll back global warming.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶18.4",
+            "quote": "roll back the specter of a warming planet"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-defend-way-of-life",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Not apologise for, nor waver in defending, the American way of life.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶18.5",
+            "quote": "We will not apologize for our way of life, nor will we waver in its defense."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-defeat-terrorists",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Defeat those who seek their aims through terror.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶18.7",
+            "quote": "You cannot outlast us, and we will defeat you."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-ideals-not-expedience",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Not give up the nation's founding ideals for the sake of safety or expedience.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶16.3",
+            "quote": "we will not give them up for expedience's sake"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-extend-hand",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "foreign-policy",
-        "restatement": "Help poor nations grow food, gain clean water, and feed their people.",
+        "restatement": "Extend a hand to repressive governments willing to unclench their fist.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
+            },
+            "ref": "¶20.3",
+            "quote": "we will extend a hand if you are willing to unclench your fist"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Conditional on the other government acting first; the condition falls inside the term, so it is included."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-help-poor-nations",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Work alongside poor nations on farms, clean water, hunger and education.",
         "quality": "no",
         "occurrences": [
           {
@@ -10422,39 +12966,81 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶21.1",
             "quote": "To the people of poor nations, we pledge to work alongside you to make your farms flourish and let clean waters flow, to nourish starved bodies and feed hungry minds."
           }
-        ]
-      },
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      }
+    ],
+    "ambitions": [
       {
-        "id": "obama-2008-tuition-credit",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Give every student a $4,000-a-year college tuition credit in exchange for community or military service.",
-        "quality": "partial",
+        "id": "obama-2008-remake-america",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Begin the work of remaking America.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "inaugural",
+              "medium": "speech",
               "speaker": "Barack Obama",
-              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
-              "year": 2008,
-              "date": "2008-10-15",
+              "event": "Inaugural Address",
+              "year": 2009,
+              "date": "2009-01-20",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
-              "label": "2008 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+              "label": "2009 inaugural address"
             },
-            "ref": "¶422.1",
-            "quote": "And that's why I've proposed a $4,000 tuition credit, every student, every year, in exchange for some form of community service, whether it's military service, whether it's Peace Corps, whether it's working in a community."
+            "ref": "¶11.8",
+            "quote": "Starting today, we must pick ourselves up, dust ourselves off, and begin again the work of remaking America."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-oil-leases",
-        "kind": "promise",
-        "method": "legacy",
+        "id": "obama-2008-offshore-drilling",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "energy",
-        "restatement": "Make oil companies drill the 68 million acres they have already leased or lose them.",
+        "restatement": "Look at offshore drilling and implement it to get additional oil.",
         "quality": "partial",
         "occurrences": [
           {
@@ -10469,42 +13055,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
               "label": "2008 debate"
             },
-            "ref": "¶282.1",
-            "quote": "Number one, we do need to expand domestic production and that means, for example, telling the oil companies the 68 million acres that they currently have leased that they're not drilling, use them or lose them."
+            "ref": "¶283.1",
+            "quote": "And I think that we should look at offshore drilling and implement it in a way that allows us to get some additional oil."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "offshore oil leasing",
+            "record": "Interior Department (BOEM) lease sales",
+            "criterion": "new offshore areas are opened for leasing",
+            "ambiguity": "\"Look at\" and \"implement\" are loose; new lease sales in previously closed areas are the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2008-auto-fuel-efficiency",
-        "kind": "promise",
-        "method": "legacy",
+        "id": "obama-2008-energy-independence",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "energy",
-        "restatement": "Give the automakers loan guarantees, conditioned on producing highly fuel-efficient cars.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Barack Obama",
-              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
-              "year": 2008,
-              "date": "2008-10-15",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
-              "label": "2008 debate"
-            },
-            "ref": "¶300.1",
-            "quote": "That's why I think it's important for us to get loan guarantees to the automakers, but we do have to hold them responsible as well to start producing the highly fuel-efficient cars of the future."
-          }
-        ]
-      },
-      {
-        "id": "obama-2008-charter-schools",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Support charter schools and pay-for-performance for teachers.",
+        "restatement": "Get serious about energy independence.",
         "quality": "no",
         "occurrences": [
           {
@@ -10519,13 +13100,1052 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
               "label": "2008 debate"
             },
-            "ref": "¶136.1",
-            "quote": "I support charter schools and pay for performance for teachers."
+            "ref": "¶240.1",
+            "quote": "make sure that we finally get serious about energy independence"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-health-care-all",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Affordable, accessible health care for every American.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶50.1",
+            "quote": "Now is the time to finally keep the promise of affordable, accessible health care for every single American."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶486.1",
+            "quote": "in health care for all Americans"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "health insurance coverage",
+            "record": "Census Bureau (CPS/ACS) uninsured rate",
+            "criterion": "the share of Americans without coverage approaches zero",
+            "ambiguity": "\"Affordable\" and \"accessible\" are not defined; coverage is the proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-paid-sick-days",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Help families with paid sick days.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶51.1",
+            "quote": "Now is the time to help families with paid sick days"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-family-leave",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "paid sick leave",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a federal paid sick days law is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-family-leave",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Better family leave.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶51.1",
+            "quote": "better family leave"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-family-leave",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "family leave law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "family leave rights are expanded by law",
+            "ambiguity": "\"Better\" is not defined: wider coverage or paid leave both count."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-reduce-unintended-pregnancies",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Try to prevent unintended pregnancies.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶403.1",
+            "quote": "But there surely is some common ground when both those who believe in choice and those who are opposed to abortion can come together and say, \"We should try to prevent unintended pregnancies by providing appropriate education to our youth, communicating that sexuality is sacred and that they should not be engaged in cavalier activity, and providing options for adoption, and helping single mothers if they want to choose to keep the baby.\""
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶405.1",
+            "quote": "We should try to reduce these circumstances."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Phrased as common ground that both sides \"can come together and say\"; read as his own aim."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-special-needs-funding",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Fund research on autism and other special needs.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶254.1",
+            "quote": "I do want to just point out that autism, for example, or other special needs will require some additional funding, if we're going to get serious in terms of research."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶255.2",
+            "quote": "That's an example of, I think, the kind of use of the scalpel that we want to make sure that we're funding some of those programs."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-world-class-education",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Provide every child a world-class education.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶49.1",
+            "quote": "Now is the time to finally meet our moral obligation to provide every child a world-class education, because it will take nothing less to compete in the global economy."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-remove-bad-teachers",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Move on from bad teachers who cannot improve.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶440.1",
+            "quote": "And we also agree on the need for making sure that if we have bad teachers that they are swiftly -- after given an opportunity to prove themselves, if they can't hack it, then we need to move on because our kids have to have their best future."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-college-for-all",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "College for every young person who wants to go.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶240.1",
+            "quote": "make sure that our kids get a great education and can afford to go to college"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶486.1",
+            "quote": "and college for every young person who wants to go"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-tackle-education",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Tackle education reform head-on as President.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶461.1-461.2",
+            "quote": "So if we are going to be serious about this issue, we've got to have a president who is going to tackle it head-on. And that's what I intend to do as president."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-keep-american-promise",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Keep the American promise alive as President.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶32.4",
+            "quote": "And it is on their behalf that I intend to win this election and keep our promise alive as President of the United States."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶39.1",
+            "quote": "That's the promise we need to keep."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-civil-politics",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Change the politics where disagreement means attacking character and patriotism.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶66.2",
+            "quote": "Because one of the things that we have to change in our politics is the idea that people cannot disagree without challenging each other's character and patriotism."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-common-purpose",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Restore a sense of common purpose.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶69.5",
+            "quote": "And that's what we have to restore."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-work-together",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Work together across parties on the key problems.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶210.1",
+            "quote": "What I think is most important is that we recognize that to solve the key problems that we're facing, if we're going to solve two wars, the worst financial crisis since the Great Depression, if we can -- if we're going to focus on lifting wages that have declined over the last eight years and create jobs here in America, then Democrats, independents and Republicans, we're going to have to be able to work together."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-fundamental-change",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Bring fundamental change.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶483.1",
+            "quote": "We need fundamental change in this country, and that's what I'd like to bring."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-ladders-young-men",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Provide more ladders to success for young men who fall into crime and despair.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶55.4",
+            "quote": "Yes, we must provide more ladders to success for young men who fall into lives of crime and despair."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-bankruptcy-pensions",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Change bankruptcy law so pensions are protected ahead of CEO bonuses.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶52.1",
+            "quote": "Now is the time to change our bankruptcy laws, so that your pensions are protected ahead of CEO bonuses"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2008-retirement",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "priority of pensions in bankruptcy",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law puts pension claims ahead of executive bonuses in bankruptcy",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-protect-social-security",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Protect Social Security for future generations.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶52.1",
+            "quote": "the time to protect Social Security for future generations"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2008-retirement",
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-equal-pay",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Keep the promise of equal pay for equal work.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in Denver: \"The American Promise\"",
+              "year": 2008,
+              "date": "2008-08-28",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-denver",
+              "label": "2008 acceptance speech"
+            },
+            "ref": "¶53.1",
+            "quote": "And now is the time to keep the promise of equal pay for an equal day's work, because I want my daughters to have exactly the same opportunities as your sons."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "equal pay law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law strengthening equal pay protection is enacted",
+            "ambiguity": "Which law counts is not stated; a law easing pay-discrimination claims is read as meeting it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-nafta-labor-environment",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Include enforceable labor and environmental standards in NAFTA.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶287.1",
+            "quote": "And what I said was we should include those and make them enforceable."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "NAFTA labor and environmental provisions",
+            "record": "USTR; treaty texts",
+            "criterion": "NAFTA is amended to make labor and environmental standards enforceable",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-china-currency",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Enforce rules against China manipulating its currency.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶287.2",
+            "quote": "In the same way that we should enforce rules against China manipulating its currency to make our exports more expensive and their exports to us cheaper."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "China's exchange-rate practice",
+            "record": "Treasury foreign exchange reports; WTO filings",
+            "criterion": "the US takes formal enforcement action on China's currency",
+            "ambiguity": "What counts as enforcement (designation, a trade case, tariffs) is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2008-colombia-labor",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Stand for human rights and protect organising workers (Colombia trade).",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Hofstra University in Hempstead, New York",
+              "year": 2008,
+              "date": "2008-10-15",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-hofstra-university-hempstead-new-york",
+              "label": "2008 debate"
+            },
+            "ref": "¶297.1",
+            "quote": "we have to stand for human rights and we have to make sure that violence isn't being perpetrated against workers who are just trying to organize for their rights"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2013-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       }
-    ],
-    "ambitions": []
+    ]
   },
   {
     "key": "2013-2017 Obama",
@@ -14187,10 +17807,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 281;
+export const CORPUS_PROMISE_COUNT = 321;
 
 /** Total ambitions across the corpus (re-extracted terms only). */
-export const CORPUS_AMBITION_COUNT = 57;
+export const CORPUS_AMBITION_COUNT = 81;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 370;
+export const CORPUS_OCCURRENCE_COUNT = 424;

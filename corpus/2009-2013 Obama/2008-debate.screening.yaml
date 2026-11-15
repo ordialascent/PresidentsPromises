@@ -1,0 +1,140 @@
+# Screening ledger for 2008-debate.md (protocol v1).
+# Every trigger-matched sentence in the president's turns has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) what "now is the time" to do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2008-debate
+protocol: 1
+rows:
+  - { ref: "¶27.1", decision: ceremony }
+  - { ref: "¶30.2", decision: include, promises: [obama-2008-end-offshoring-tax-breaks, obama-2008-tax-credit-us-jobs] }
+  - ref: "¶34.1"
+    decision: describe
+    note: "Lead-in (\"Last point I want to make\")."
+  - ref: "¶43.4"
+    decision: describe
+    note: "Contrasts both candidates' tax plans."
+  - { ref: "¶45.1", decision: include, promises: [obama-2008-tax-cut-95] }
+  - ref: "¶45.2"
+    decision: include
+    added: true
+    promises: [obama-2008-no-tax-rise-under-250k]
+    note: "Untriggered future statement (\"you will not see your income tax go up\")."
+  - { ref: "¶45.3", decision: include, promises: [obama-2008-no-tax-rise-under-250k] }
+  - ref: "¶46.1"
+    decision: include
+    added: true
+    promises: [obama-2008-tax-cut-95]
+    note: "Untriggered future statement of his plan (\"will get a tax cut\")."
+  - { ref: "¶48.1", decision: include, promises: [obama-2008-tax-cut-95] }
+  - ref: "¶49.1"
+    decision: describe
+    note: "Lead-in."
+  - { ref: "¶57.2", decision: include, promises: [obama-2008-tax-cut-95] }
+  - { ref: "¶75.1", decision: include, promises: [obama-2008-tarp-repaid] }
+  - ref: "¶76.1"
+    decision: describe
+    note: "\"Make some adjustments\"; no object."
+  - ref: "¶79.3"
+    decision: past
+    note: "His record on pay-as-you-go."
+  - { ref: "¶81.1", decision: include, promises: [obama-2008-budget-line-by-line] }
+  - { ref: "¶81.2", decision: include, promises: [obama-2008-budget-line-by-line] }
+  - { ref: "¶81.3", decision: include, promises: [obama-2008-programs-work-better] }
+  - ref: "¶86.1"
+    decision: describe
+    note: "Prediction (\"we're not going to be able to go back\")."
+  - ref: "¶87.1"
+    decision: others
+    note: "Responsibility of \"all of us\": corporations, government and individuals."
+  - { ref: "¶113.3", decision: include, promises: [obama-2008-budget-line-by-line] }
+  - ref: "¶116.1"
+    decision: describe
+    note: "Lead-in."
+  - ref: "¶119.1"
+    decision: attack
+    note: "The last eight years' policies."
+  - ref: "¶140.2"
+    decision: describe
+    note: "\"Move in a new direction\"; no object."
+  - { ref: "¶171.1", decision: attack }
+  - { ref: "¶181.1", decision: attack }
+  - ref: "¶182.1"
+    decision: describe
+    note: "Relays Congressman Lewis's point."
+  - ref: "¶209.3"
+    decision: describe
+    note: "Prediction about the debate."
+  - { ref: "¶210.1", decision: include, promises: [obama-2008-work-together] }
+  - ref: "¶217.1"
+    decision: describe
+    note: "Lead-in."
+  - { ref: "¶240.1", decision: include, promises: [obama-2008-tax-cut-95, obama-2008-energy-independence, obama-2008-college-for-all] }
+  - { ref: "¶254.1", decision: include, promises: [obama-2008-special-needs-funding] }
+  - ref: "¶255.1"
+    decision: attack
+    note: "Effect of the opponent's spending freeze."
+  - { ref: "¶255.2", decision: include, promises: [obama-2008-special-needs-funding] }
+  - ref: "¶281.1"
+    decision: describe
+    note: "Lead-in to ¶282-284."
+  - { ref: "¶283.1", decision: include, promises: [obama-2008-offshore-drilling] }
+  - ref: "¶285.1"
+    decision: include
+    promises: [obama-2008-auto-retool]
+    note: "Soft restatement about the auto industry falling behind."
+  - { ref: "¶287.1", decision: include, promises: [obama-2008-nafta-labor-environment] }
+  - { ref: "¶287.2", decision: include, promises: [obama-2008-china-currency] }
+  - { ref: "¶297.1", decision: include, promises: [obama-2008-colombia-labor] }
+  - ref: "¶299.1"
+    decision: describe
+    note: "Lead-in."
+  - { ref: "¶312.1", decision: include, promises: [obama-2008-lower-premiums] }
+  - { ref: "¶313.1", decision: include, promises: [obama-2008-congress-style-coverage] }
+  - { ref: "¶314.1", decision: include, promises: [obama-2008-preexisting-conditions] }
+  - { ref: "¶314.2", decision: include, promises: [obama-2008-drug-price-negotiation] }
+  - { ref: "¶315.1", decision: include, promises: [obama-2008-health-it] }
+  - { ref: "¶316.1", decision: include, promises: [obama-2008-chronic-illness] }
+  - ref: "¶317.1"
+    decision: describe
+    note: "Prediction of the plan's costs and savings."
+  - ref: "¶337.1"
+    decision: describe
+    note: "Present-tense design of his plan (\"I exempt small businesses\"), §1."
+  - { ref: "¶341.3", decision: include, promises: [obama-2008-small-biz-health-credit] }
+  - { ref: "¶365.1", decision: include, promises: [obama-2008-lower-premiums] }
+  - { ref: "¶383.2", decision: include, promises: [obama-2008-judges] }
+  - ref: "¶384.1"
+    decision: describe
+    note: "Lead-in."
+  - { ref: "¶387.2", decision: include, promises: [obama-2008-judges] }
+  - ref: "¶402.1"
+    decision: describe
+    note: "Lead-in."
+  - { ref: "¶403.1", decision: include, promises: [obama-2008-reduce-unintended-pregnancies] }
+  - { ref: "¶405.1", decision: include, promises: [obama-2008-reduce-unintended-pregnancies] }
+  - { ref: "¶419.1-419.2", decision: include, promises: [obama-2008-early-childhood] }
+  - { ref: "¶438.1", decision: include, promises: [obama-2008-early-childhood, obama-2008-teacher-pay-support] }
+  - { ref: "¶440.1", decision: include, promises: [obama-2008-remove-bad-teachers] }
+  - ref: "¶443.2"
+    decision: describe
+    note: "\"We are going to have to prioritize\"; no object."
+  - ref: "¶443.3"
+    decision: describe
+    note: "On paying for proposals in general."
+  - ref: "¶444.1"
+    decision: describe
+    note: "On paying for proposals in general."
+  - ref: "¶455.1"
+    decision: describe
+    note: "Lead-in."
+  - { ref: "¶461.1-461.2", decision: include, promises: [obama-2008-tackle-education] }
+  - { ref: "¶480.1", decision: ceremony }
+  - { ref: "¶483.1", decision: include, promises: [obama-2008-fundamental-change] }
+  - { ref: "¶486.1", decision: include, promises: [obama-2008-tax-cut-95, obama-2008-health-care-all, obama-2008-college-for-all] }
+  - ref: "¶487.2"
+    decision: describe
+    note: "Summary of ¶486."
+  - { ref: "¶489.2", decision: include, promises: [obama-2008-work-tirelessly] }
+
+#   69 rows: 40 include (2 of them added), 29 excluded (attack 4, ceremony 2, describe 21, others 1, past 1)

@@ -1,0 +1,43 @@
+# Screening ledger for 2009-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) what "now is the time" to do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2009-inaugural
+protocol: 1
+rows:
+  - { ref: "¶11.8", decision: include, promises: [obama-2008-remake-america] }
+  - { ref: "¶12.2", decision: include, promises: [obama-2008-create-jobs, obama-2008-foundation-growth] }
+  - { ref: "¶12.3", decision: include, promises: [obama-2008-roads-bridges, obama-2008-electric-grid, obama-2008-broadband] }
+  - { ref: "¶12.4", decision: include, promises: [obama-2008-health-it, obama-2008-restore-science] }
+  - { ref: "¶12.5", decision: include, promises: [obama-2008-harness-renewables] }
+  - { ref: "¶12.6", decision: include, promises: [obama-2008-transform-schools] }
+  - ref: "¶12.8"
+    decision: describe
+    note: "Restates ¶12.2-12.6 (\"All this we will do\"); no new object."
+  - ref: "¶14.4"
+    decision: include
+    added: true
+    promises: [obama-2008-budget-line-by-line]
+    note: "Untriggered future statement (\"programs will end\")."
+  - ref: "¶14.5"
+    decision: include
+    added: true
+    promises: [obama-2008-accountable-spending]
+    note: "Untriggered future statement (\"will be held to account\")."
+  - { ref: "¶16.3", decision: include, promises: [obama-2008-ideals-not-expedience] }
+  - { ref: "¶18.3", decision: include, promises: [obama-2008-end-iraq-war, obama-2008-afghanistan-peace] }
+  - { ref: "¶18.4", decision: include, promises: [obama-2008-lessen-nuclear-threat, obama-2008-warming-planet] }
+  - { ref: "¶18.5", decision: include, promises: [obama-2008-defend-way-of-life] }
+  - { ref: "¶18.7", decision: include, promises: [obama-2008-defeat-terrorists] }
+  - { ref: "¶20.3", decision: include, promises: [obama-2008-extend-hand] }
+  - ref: "¶21.1"
+    decision: include
+    added: true
+    promises: [obama-2008-help-poor-nations]
+    note: "\"We pledge\" is not in the lexicon; firm pledge to other peoples."
+  - ref: "¶21.2"
+    decision: describe
+    note: "General call to change (\"we must change with it\"); no object beyond ¶21.1."
+
+#   17 rows: 15 include (3 of them added), 2 excluded (describe 2)
