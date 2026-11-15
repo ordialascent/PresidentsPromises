@@ -20,8 +20,7 @@ src/
                 searchable list of every promise. fuzzy.ts is a domain-neutral
                 string matcher; search.ts is the policy that ranks promises
                 with it.
-  components/   app-specific views (the reading grid).
-  App.tsx       renders one topic and one of its promises.
+  App.tsx       renders the promises board.
 data/           the append-only snapshot + its provenance docs.
 scripts/        the insert-only refresh job.
 ```
@@ -32,8 +31,8 @@ scripts/        the insert-only refresh job.
 baseline, deadline, targetRule, comparator)` in `src/chart/logic`, and nowhere
 else. No prop, type, or code path lets a caller hand a reading in. The whole
 product is the claim that "was it kept?" is underdetermined; the moment a result
-can be passed in, that claim is a lie. `test/grid.test.ts` pins the derived grid
-and checks the indeterminate path.
+can be passed in, that claim is a lie. `test/grid.test.ts` pins the engine on a
+synthetic fixture and checks the indeterminate path.
 
 ## Invariant 2 — the data snapshot is append-only
 
@@ -132,7 +131,9 @@ the chart consumes.
 
 This is the seam the product is bending toward: **comparing presidents on a
 topic is iterating that topic's promises against the one series** — a data
-addition, not an architectural change. There is no plugin system, no per-promise
+addition, not an architectural change. A topic's promises come only from the
+corpus (the shared source types), never hand-entered from another occasion; the
+deficit topic is empty until verdicts exist. There is no plugin system, no per-promise
 component, no registry framework, because none of that is needed yet.
 
 The sign/units transform (deficit = −FYFSD, into billions) lives in

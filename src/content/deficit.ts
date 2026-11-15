@@ -16,15 +16,6 @@ import type { PromiseSpec, Term, Topic } from './types.js';
 // "deficit at or below the target".
 export const toDeficitBillions = (valueRawMusd: number): number => -valueRawMusd / 1000;
 
-const recordedFY2009 = currentRows.find((r) => r.fy === 2009);
-export const RECORDED_FY2009_BILLIONS = recordedFY2009
-  ? toDeficitBillions(recordedFY2009.valueRawMusd)
-  : 1412.688;
-
-// A figure Obama stated aloud; it appears nowhere in the data. That is the
-// point of the "stated / decoupled" baseline, not an edge case.
-export const STATED_BASELINE_BILLIONS = 1300;
-
 const usd = (n: number): string => {
   const a = Math.abs(n);
   const sign = n < 0 ? '−' : '';
@@ -59,33 +50,8 @@ const terms: Term[] = [
   { label: 'Obama II', from: 2013, to: 2017 },
   { label: 'Trump I', from: 2017, to: 2021 },
   { label: 'Biden', from: 2021, to: 2025 },
+  { label: 'Trump II', from: 2025, to: 2029 },
 ];
-
-const obamaDeficit2009: PromiseSpec = {
-  id: 'obama-deficit-2009',
-  who: 'Barack Obama',
-  quote: 'cut the deficit we inherited in half by the end of my first term.',
-  occasion: 'Fiscal Responsibility Summit',
-  date: '23 February 2009',
-  baselineCandidates: [
-    { label: 'recorded FY2009', value: RECORDED_FY2009_BILLIONS, x: 2009, source: 'inherited deficit', stated: false },
-    { label: 'stated $1.30T', value: STATED_BASELINE_BILLIONS, source: '2009 remarks', stated: true },
-  ],
-  deadlineCandidates: [
-    { label: 'FY2012', x: 2012, source: 'end of term' },
-    { label: 'FY2013', x: 2013, source: 'term ended' },
-  ],
-  targetRule: { kind: 'halve' },
-  baselineAnchorX: 2009,
-  // Symmetric with the deadline: two defensible baseline years. FY2009 is the
-  // FY he took office (his stated ~$1.3T referred to it); FY2008 is the last
-  // full FY before the term. Halving from FY2008 (~$459B) is a much harsher
-  // target he never stated — which is exactly how much the year choice matters.
-  startMarks: [
-    { x: 2008, label: 'year before term' },
-    { x: 2009, label: 'took office' },
-  ],
-};
 
 export const deficitTopic: Topic = {
   id: 'deficit',
@@ -95,17 +61,17 @@ export const deficitTopic: Topic = {
   series,
   terms,
   valueBounds: { min: 400, max: 2000 },
-  scopePresets: [
-    { label: 'SCOPED · TERM ±1Y', xMin: 2007, xMax: 2014 },
-    { label: 'OPEN · full range', xMin: 1997, xMax: 2025 },
-  ],
+  scopePresets: [{ label: 'OPEN · full range', xMin: 1997, xMax: 2026 }],
   yScaleMode: 'locked',
   periodNote:
     'Term bands run inauguration to inauguration (about a third into the fiscal year) and deliberately do not align to fiscal-year boundaries. Attributing a fiscal year to a president is itself an ambiguity, not a fact.',
   formatValue: usd,
   formatX: fy,
   provenance: { dataAsOf, publisher, seriesId, sourceUrl, isBootstrap },
-  promises: [obamaDeficit2009],
+  // Filled from the corpus once verdicts exist: only promises extracted from
+  // the shared source types (acceptance, final debate, inaugural) belong here,
+  // and every president's deficit promises are read against this one series.
+  promises: [],
 };
 
 /** Build a chart claim from a topic and one of its promises. */

@@ -1,14 +1,14 @@
 # Data
 
-`deficit_fyfsd.csv` — the federal surplus/deficit series that the seed claim is
-measured against.
+`deficit_fyfsd.csv` — the federal surplus/deficit series that deficit promises
+are measured against.
 
 ## Source
 
 FRED series **FYFSD** — *Federal Surplus or Deficit [-]*, by fiscal year, in
 millions of USD, produced by the U.S. Office of Management and Budget and
 distributed by the Federal Reserve Bank of St. Louis (FRED). It reaches back
-decades and so can express a claim about FY2009–FY2013.
+decades, so every term in the corpus is covered by the same series.
 
 We chose FYFSD deliberately. The Treasury *Fiscal Data* API's MTS dataset only
 begins at FY2015 and cannot express a 2009 claim at all.
