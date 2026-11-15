@@ -1,0 +1,192 @@
+# Screening ledger for 2000-debate.md (protocol v1).
+# Only Bush's turns (speaker_label BUSH) are screened. Every trigger-matched
+# sentence has a row; rows marked `added` were not matched by the lexicon but
+# state in the future tense what he or his plan will do (PROTOCOL.md §1).
+# Ids shared with the other two ledgers are further occurrences of the same
+# promise (same object, same success criterion).
+source: 2000-debate
+protocol: 1
+rows:
+  - { ref: "¶7.20", decision: include, promises: [bush-2000-pbr-cover-all] }
+  - ref: "¶7.21"
+    decision: include
+    promises: [bush-2000-pbr-state-laws]
+    note: A federal patients' bill of rights should not override stronger state laws such as Texas's.
+  - ref: "¶18.6-18.7"
+    decision: include
+    promises: [bush-2000-patients-bill-rights]
+    note: >-
+      ¶18.7 is untriggered but continues the list. Kept as one promise: the four
+      items are named as the contents of one bill (¶18.3), so one law decides
+      them together. "Gag orders" means a ban on HMO gag orders (¶7.10-7.11).
+  - ref: "¶18.8"
+    decision: include
+    promises: [bush-2000-bring-parties-together]
+    note: The "leadership style" is bringing both parties together (¶7.5-7.7).
+  - ref: "¶21.6"
+    decision: include
+    promises: [bush-2000-drugs-low-income, bush-2000-medicare-drugs]
+    note: Framed as a call on Congress, but "we'll pay for the poor seniors, we'll help all seniors" is firm; extraction probable.
+  - { ref: "¶30.2", decision: describe, note: Statement of philosophy; no object of its own. }
+  - { ref: "¶30.8", decision: describe, note: Repeats ¶30.2. }
+  - { ref: "¶30.15", decision: describe, note: Asserts a safety net already exists; no change committed. }
+  - { ref: "¶30.16", decision: include, promises: [bush-2000-community-clinics] }
+  - { ref: "¶30.20", decision: include, promises: [bush-2000-smallbiz-insurance] }
+  - { ref: "¶30.22", decision: describe, note: Principle introducing ¶30.23; no object of its own. }
+  - { ref: "¶30.23", decision: include, promises: [bush-2000-medicare-choices] }
+  - ref: "¶30.26"
+    decision: include
+    promises: [bush-2000-choices-for-all]
+    note: '"That" points back to choices like federal employees get (¶30.23-30.25); whether "all people" means health insurance generally is contested.'
+  - { ref: "¶35.4", decision: include, promises: [bush-2000-remind-love-children] }
+  - { ref: "¶35.6", decision: describe, note: '"I want" is inside an imagined parent''s words.' }
+  - { ref: "¶35.10", decision: include, promises: [bush-2000-annual-testing] }
+  - { ref: "¶35.18-35.19", decision: include, promises: [bush-2000-school-exit-funds] }
+  - { ref: "¶39.10", decision: include, promises: [bush-2000-school-accountability] }
+  - { ref: "¶39.13", decision: include, promises: [bush-2000-praise-school-success] }
+  - { ref: "¶39.14", decision: include, promises: [bush-2000-school-exit-funds] }
+  - ref: "¶39.15"
+    decision: include
+    added: true
+    promises: [bush-2000-school-funds-to-parents]
+    note: Firm version of the ambition bush-2000-school-exit-funds, naming the mechanism; link refines.
+  - { ref: "¶39.16", decision: include, promises: [bush-2000-school-exit-funds] }
+  - { ref: "¶50.9", decision: include, promises: [bush-2000-local-control] }
+  - { ref: "¶50.13", decision: include, promises: [bush-2000-school-accountability] }
+  - { ref: "¶50.15", decision: include, promises: [bush-2000-school-accountability] }
+  - { ref: "¶50.20", decision: include, promises: [bush-2000-teacher-protection] }
+  - { ref: "¶50.22", decision: include, promises: [bush-2000-teacher-funds-flexibility] }
+  - ref: "¶62.2-62.3"
+    decision: include
+    added: true
+    promises: [bush-2000-relief-all-taxpayers]
+  - ref: "¶64.8"
+    decision: include
+    promises: [bush-2000-low-income-marginal-rate]
+    note: '"That" is the higher marginal rate on low earners (¶64.6-64.7).'
+  - { ref: "¶78.7", decision: include, promises: [bush-2000-stand-by-israel] }
+  - { ref: "¶78.8-78.9", decision: include, promises: [bush-2000-reach-arab-nations] }
+  - ref: "¶89.2"
+    decision: include
+    promises: [bush-2000-not-grow-government]
+    note: The criterion is relative ("like he is"), measured against the opponent's proposals.
+  - { ref: "¶89.11-89.12", decision: include, added: true, promises: [bush-2000-military-mission] }
+  - { ref: "¶89.15", decision: include, promises: [bush-2000-military-equipment] }
+  - { ref: "¶89.18", decision: include, promises: [bush-2000-keep-peace] }
+  - { ref: "¶89.21", decision: include, promises: [bush-2000-defense-review] }
+  - { ref: "¶100.7", decision: include, promises: [bush-2000-guns-from-prohibited] }
+  - { ref: "¶100.10", decision: include, promises: [bush-2000-juvenile-gun-age] }
+  - { ref: "¶100.11", decision: include, promises: [bush-2000-gun-enforcement] }
+  - { ref: "¶100.12-100.13", decision: include, promises: [bush-2000-gun-enforcement] }
+  - ref: "¶100.20-100.21"
+    decision: include
+    added: true
+    promises: [bush-2000-enforce-gun-laws]
+    note: Firm version of the ambition bush-2000-gun-enforcement; link refines. "That" may also cover "a safe society" (¶100.19); extraction probable.
+  - { ref: "¶107.1-107.2", decision: include, promises: [bush-2000-farmers-feed-world] }
+  - { ref: "¶107.3", decision: include, promises: [bush-2000-open-markets] }
+  - { ref: "¶107.5", decision: include, promises: [bush-2000-fast-track] }
+  - ref: "¶107.6"
+    decision: include
+    promises: [bush-2000-food-embargo]
+    note: '"From this point forward" is read as the whole term.'
+  - ref: "¶107.22"
+    decision: include
+    promises: [bush-2000-open-markets]
+    note: The sentence breaks off; only "I want to open up markets" is a commitment.
+  - ref: "¶113.9"
+    decision: include
+    added: true
+    promises: [bush-2000-death-tax]
+    note: '"It" is eliminating the death tax (¶111.1); "100% will get it" means full repeal.'
+  - { ref: "¶117.8", decision: include, promises: [bush-2000-internet-filters] }
+  - { ref: "¶117.9", decision: include, promises: [bush-2000-character-education] }
+  - { ref: "¶117.11", decision: include, added: true, promises: [bush-2000-character-education] }
+  - { ref: "¶117.17", decision: include, promises: [bush-2000-talk-to-hollywood] }
+  - { ref: "¶117.18", decision: include, promises: [bush-2000-clear-ratings] }
+  - { ref: "¶117.20", decision: include, promises: [bush-2000-remind-parents] }
+  - { ref: "¶126.4", decision: describe, note: Voices what young people say. }
+  - { ref: "¶130.2", decision: include, promises: [bush-2000-appoint-servants] }
+  - { ref: "¶130.3", decision: include, promises: [bush-2000-diverse-administration] }
+  - { ref: "¶130.20", decision: include, promises: [bush-2000-administration-proud] }
+  - ref: "¶146.2-146.4"
+    decision: include
+    added: true
+    promises: [bush-2000-relief-all-taxpayers]
+  - { ref: "¶146.5", decision: include, added: true, promises: [bush-2000-caregiver-exemption] }
+  - ref: "¶146.7"
+    decision: include
+    added: true
+    promises: [bush-2000-medicare-drugs, bush-2000-medicare-choices]
+  - { ref: "¶146.11", decision: include, added: true, promises: [bush-2000-medicare-choices] }
+  - ref: "¶146.12-146.13"
+    decision: include
+    promises: [bush-2000-foreign-policy-clarity]
+    note: ¶146.12 ("a peaceful world") is the stated purpose of ¶146.13.
+  - ref: "¶159.20"
+    decision: include
+    promises: [bush-2000-reform-socialsecurity, bush-2000-ss-trillion-accounts]
+  - ref: "¶159.24"
+    decision: include
+    promises: [bush-2000-ss-trillion-accounts]
+    note: Sharper version of bush-2000-socialsecurity-accounts (a $1 trillion size); link refines.
+  - { ref: "¶159.30", decision: include, promises: [bush-2000-bring-parties-together] }
+  - { ref: "¶163.5", decision: include, promises: [bush-2000-worker-ownership] }
+  - { ref: "¶167.1", decision: ceremony }
+  - { ref: "¶167.5", decision: describe, note: Lead-in to the agenda in ¶167.6-167.11. }
+  - ref: "¶167.6"
+    decision: include
+    promises: [bush-2000-reform-medicare, bush-2000-medicare-drugs, bush-2000-medicare-choices]
+  - ref: "¶167.7"
+    decision: include
+    promises: [bush-2000-reform-socialsecurity, bush-2000-socialsecurity-preserve]
+  - { ref: "¶167.8", decision: include, added: true, promises: [bush-2000-keep-promises] }
+  - { ref: "¶167.9", decision: include, promises: [bush-2000-keep-peace] }
+  - { ref: "¶167.10", decision: include, promises: [bush-2000-no-child-left-behind] }
+  - { ref: "¶167.11", decision: include, promises: [bush-2000-return-surplus] }
+  - { ref: "¶167.20", decision: describe, note: Lead-in to ¶167.21. }
+  - { ref: "¶167.21", decision: include, promises: [bush-2000-honor-office] }
+
+# Result:
+#   76 rows: 67 include (11 of them added), 9 excluded (describe 8, ceremony 1)
+#   include → 56 ids: 26 promises (high 8, medium 7, low 11) + 30 ambitions
+#   (high 7, medium 8, low 15). Spoken debate language is softer than the
+#   written speeches: more ambitions than promises.
+#
+# Decisions for promises.yaml (kind · type · verifiability). Ids new in this
+# ledger unless marked (=), which repeat an acceptance or inaugural id.
+#
+#   promises
+#     high     teacher-protection(=legacy), defense-review, caregiver-exemption,
+#              ss-trillion-accounts (refines socialsecurity-accounts),
+#              school-funds-to-parents (refines school-exit-funds),
+#              drugs-low-income (refines medicare-drugs), death-tax(=),
+#              socialsecurity-preserve(=)
+#     medium   patients-bill-rights(=legacy), medicare-choices ("choices like
+#              federal employees"), relief-all-taxpayers ("everybody"),
+#              enforce-gun-laws (refines gun-enforcement), reform-medicare(=),
+#              reform-socialsecurity(=), medicare-drugs(=)
+#     low      bring-parties-together, praise-school-success, stand-by-israel,
+#              not-grow-government, military-mission, appoint-servants,
+#              administration-proud, foreign-policy-clarity, remind-parents,
+#              keep-promises, honor-office(=)
+#   ambitions
+#     high     annual-testing, teacher-funds-flexibility, juvenile-gun-age,
+#              fast-track(=legacy), food-embargo(=legacy), internet-filters,
+#              return-surplus
+#     medium   pbr-cover-all, pbr-state-laws, community-clinics,
+#              smallbiz-insurance(=legacy), low-income-marginal-rate,
+#              open-markets, character-education, diverse-administration
+#     low      choices-for-all, remind-love-children, reach-arab-nations,
+#              military-equipment, keep-peace, guns-from-prohibited,
+#              farmers-feed-world, talk-to-hollywood, clear-ratings,
+#              worker-ownership, no-child-left-behind; school-exit-funds(=),
+#              school-accountability(=), local-control(=), gun-enforcement(=)
+#
+# The legacy promises.yaml cites 15 debate refs. Under the protocol: ¶30.19
+# ($2,000 health credit, "we need a") and ¶117.13 (after-school money for
+# faith-based groups, "ought to be available") match no trigger and state no
+# future, so they are not candidates; ¶126.5 is a general prescription, not a
+# commitment. ¶167.9 moves from military-means to keep-peace (soft language),
+# ¶146.4 from tax-rates-allbrackets to relief-all-taxpayers (different
+# criterion), ¶117.13 no longer counts as charitable-incentives.

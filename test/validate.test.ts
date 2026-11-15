@@ -134,6 +134,14 @@ describe('trigger lexicon', () => {
     expect(triggerOf('Their commitments matter.')).toBeNull();
     expect(triggerOf('The story goes on.')).toBeNull();
   });
+
+  it('matches spoken negations, contractions and wishes with an object', () => {
+    expect(triggerOf("I'm not going to grow the government.")).toBe("I'm not going to");
+    expect(triggerOf("And you bet we're gonna take a trillion dollars.")).toBe("we're gonna");
+    expect(triggerOf('But I want a diverse administration.')).toBe('I want');
+    expect(triggerOf('There ought to be filters in public libraries.')).toBe('There ought to be');
+    expect(triggerOf('I support a bill of rights.')).toBeNull();
+  });
 });
 
 describe('validateTerm', () => {

@@ -27,8 +27,21 @@ even without a trigger word.
 
 | Group  | Patterns |
 |--------|----------|
-| firm   | `I will`, `I'll`, `we will`, `we'll`, `I am / I'm going to`, `we are / we're going to`, `I shall`, `we shall`, `my administration will`, `my plan will`, `as president, I`, `on day one`, `I pledge`, `I promise`, `I commit`, `I vow`, `my pledge`, `my promise`, `commitment` |
-| soft   | `we must`, `we need to`, `we have to`, `we should`, `I want to`, `I hope to`, `I intend to`, `I plan to`, `I'd like to` |
+| firm   | `I will`, `I'll`, `we will`, `we'll`, `I am / I'm going to`, `we are / we're going to`, `I am / I'm not going to`, `we are / we're not going to`, `I won't`, `we won't`, `I'm / we're gonna`, `I shall`, `we shall`, `my administration will`, `my plan will`, `as president, I`, `on day one`, `I pledge`, `I promise`, `I commit`, `I vow`, `my pledge`, `my promise`, `commitment` |
+| soft   | `we must`, `we need to`, `we have to`, `we should`, `we ought to`, `I want (to)`, `we want`, `I don't want`, `I hope to`, `I intend to`, `I plan to`, `I'd like to`, `I would like`, `there needs to be`, `there ought to be`, `there has to be` |
+
+Spoken sources (debates) use negations, contractions and wishes with an
+object ("I want a diverse administration") more than written speeches; the
+lexicon covers them so the same rule reaches both.
+
+A sentence **without** a trigger is added as a candidate only when it states,
+in the future tense or conditioned on the election, what the speaker, their
+administration or their plan will do or bring about ("People will be able to
+take their HMO to court"; "that's what is going to happen should I earn your
+confidence"). Stated positions without a future ("I'm for trigger locks", "I
+support a patient's bill of rights", "I believe in local control") and
+present-tense descriptions of a proposal's design ("under my plan the top 1%
+pay a third") are not candidates. Added rows carry `added: true`.
 
 Every trigger-matched sentence gets a ledger row. This makes recall
 mechanically checkable: the validator re-runs the lexicon and fails if a

@@ -39,10 +39,14 @@ export const TRIGGERS = {
     'we are going to', "we're going to", 'I shall', 'we shall',
     'my administration will', 'my plan will', 'as president, I', 'on day one',
     'I pledge', 'I promise', 'I commit', 'I vow', 'my pledge', 'my promise', 'commitment',
+    "I'm not going to", 'I am not going to', "we're not going to", 'we are not going to',
+    "I won't", "we won't", "I'm gonna", "we're gonna",
   ],
   soft: [
     'we must', 'we need to', 'we have to', 'we should', 'I want to', 'I hope to',
     'I intend to', 'I plan to', "I'd like to",
+    'I want', 'we want', "I don't want", 'I would like', 'we ought to',
+    'there needs to be', 'there ought to be', 'there has to be',
   ],
 };
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
