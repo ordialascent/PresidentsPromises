@@ -343,6 +343,9 @@ export function PromisesPage() {
                 <em>Object:</em> what it is about. <em>Record:</em> where the outcome shows.{' '}
                 <em>Criterion:</em> what counts as kept. A <em>call</em> is a stated judgement.
               </p>
+              <p>
+                <a href="#method">How promises are chosen and rated</a>
+              </p>
             </section>
 
             <section className="colophon-box">

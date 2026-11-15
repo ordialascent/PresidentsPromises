@@ -65,6 +65,9 @@ export interface CorpusPromise {
   protocol: ProtocolFields;
 }
 
+/** A screening-ledger decision: include, or the reason a candidate was left out. */
+export type Decision = 'include' | 'others' | 'past' | 'describe' | 'conditional' | 'attack' | 'ceremony';
+
 export interface CorpusTerm {
   /** Corpus directory name, e.g. "2009-2013 Obama". Stable key. */
   key: string;
@@ -79,6 +82,10 @@ export interface CorpusTerm {
   speechYear: number | null;
   /** Short bar label, e.g. "Obama 2008". */
   label: string;
+  /** Screened candidate sentences by decision, over all of the term's sources. */
+  screening: Record<Decision, number>;
+  /** How many of those were added by reading, without a trigger word. */
+  screenedAdded: number;
   /** Firm commitments: the chart's subject. */
   promises: CorpusPromise[];
   /** Soft commitments: wishes and obligations. Never get a verdict. */
@@ -95,6 +102,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2001–2005",
     "speechYear": 2000,
     "label": "Bush 2000",
+    "screening": {
+      "include": 133,
+      "others": 2,
+      "past": 0,
+      "describe": 16,
+      "conditional": 1,
+      "attack": 0,
+      "ceremony": 3
+    },
+    "screenedAdded": 17,
     "promises": [
       {
         "id": "bush-2000-renew-purpose",
@@ -5576,6 +5593,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2005–2009",
     "speechYear": 2004,
     "label": "Bush 2004",
+    "screening": {
+      "include": 81,
+      "others": 0,
+      "past": 1,
+      "describe": 17,
+      "conditional": 0,
+      "attack": 3,
+      "ceremony": 3
+    },
+    "screenedAdded": 7,
     "promises": [
       {
         "id": "bush-2004-safer-world",
@@ -9613,6 +9640,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2009–2013",
     "speechYear": 2008,
     "label": "Obama 2008",
+    "screening": {
+      "include": 90,
+      "others": 3,
+      "past": 2,
+      "describe": 30,
+      "conditional": 0,
+      "attack": 4,
+      "ceremony": 2
+    },
+    "screenedAdded": 10,
     "promises": [
       {
         "id": "obama-2008-create-jobs",
@@ -13865,6 +13902,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2013–2017",
     "speechYear": 2012,
     "label": "Obama 2012",
+    "screening": {
+      "include": 79,
+      "others": 0,
+      "past": 1,
+      "describe": 29,
+      "conditional": 0,
+      "attack": 10,
+      "ceremony": 1
+    },
+    "screenedAdded": 26,
     "promises": [
       {
         "id": "obama-2012-open-more-acres",
@@ -18210,6 +18257,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2017–2021",
     "speechYear": 2016,
     "label": "Trump 2016",
+    "screening": {
+      "include": 128,
+      "others": 4,
+      "past": 4,
+      "describe": 33,
+      "conditional": 0,
+      "attack": 6,
+      "ceremony": 2
+    },
+    "screenedAdded": 26,
     "promises": [
       {
         "id": "trump-2016-safety-prosperity-peace",
@@ -23201,6 +23258,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2021–2025",
     "speechYear": 2020,
     "label": "Biden 2020",
+    "screening": {
+      "include": 85,
+      "others": 4,
+      "past": 5,
+      "describe": 42,
+      "conditional": 0,
+      "attack": 6,
+      "ceremony": 1
+    },
+    "screenedAdded": 27,
     "promises": [
       {
         "id": "biden-2020-best-of-us",
@@ -27101,6 +27168,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2025–2029",
     "speechYear": 2024,
     "label": "Trump 2024",
+    "screening": {
+      "include": 159,
+      "others": 2,
+      "past": 9,
+      "describe": 53,
+      "conditional": 1,
+      "attack": 14,
+      "ceremony": 4
+    },
+    "screenedAdded": 26,
     "promises": [
       {
         "id": "trump-2024-safety-prosperity-freedom",

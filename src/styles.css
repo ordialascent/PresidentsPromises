@@ -477,6 +477,18 @@ main {
   padding: 3px 2px;
 }
 .pl-reset:hover { text-decoration: underline; }
+/* the way to the methodology page sits at the right end of the status row;
+   when "Show all" is there it takes the push, and this follows it */
+.pl-method {
+  margin-left: auto;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-decoration: none;
+  padding: 3px 2px;
+}
+.pl-reset + .pl-method { margin-left: 12px; }
+.pl-method:hover { text-decoration: underline; }
 
 .pl-empty {
   margin: 0;
@@ -944,6 +956,14 @@ main {
   font-size: 13px;
   line-height: 1.5;
 }
+.pc-detail-method {
+  align-self: flex-start;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-decoration: none;
+}
+.pc-detail-method:hover { text-decoration: underline; }
 
 /* ---- Kind switch, protocol facts -------------------- */
 
@@ -1024,4 +1044,105 @@ main {
 }
 @media (max-width: 520px) {
   .pc-facts-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* ---- Methodology page ------------------------------------------------ */
+
+.method-back {
+  align-self: flex-start;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-decoration: none;
+}
+.method-back:hover { text-decoration: underline; }
+.method .subtitle a,
+.method-body a {
+  color: var(--series);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--series) 40%, transparent);
+}
+.method .subtitle a:hover,
+.method-body a:hover { border-bottom-color: var(--series); }
+
+.method-body {
+  gap: 30px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.method-body section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.method-body h2 {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.method-body p { margin: 0; }
+.method-body ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.method-table {
+  border-collapse: collapse;
+  font-size: 13.5px;
+  line-height: 1.45;
+  background: var(--panel);
+}
+.method-table th,
+.method-table td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.method-table thead th {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--dim);
+}
+.method-table tbody th {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.method-example { color: var(--dim); font-style: italic; }
+.method-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  vertical-align: -1px;
+  border: 1px solid var(--q-low-line);
+}
+.method-themes {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--dim);
+}
+.method-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.method-counts td { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.method-note { font-size: 13px; color: var(--dim); }
+
+@media (max-width: 560px) {
+  .method-table th,
+  .method-table td { padding: 5px 7px; }
+  .method-table tbody th { white-space: normal; }
 }

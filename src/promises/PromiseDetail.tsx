@@ -137,6 +137,9 @@ export function PromiseDetail({
         </div>
         <p className="pc-verdict-note">{verdict.note}</p>
       </div>
+      <a className="pc-detail-method" href="#method">
+        How this was extracted and rated →
+      </a>
     </div>
   );
 }

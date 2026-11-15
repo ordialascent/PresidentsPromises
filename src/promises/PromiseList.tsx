@@ -7,7 +7,7 @@ import type { PromiseHit } from './search.js';
 /** A filter the reader switched on elsewhere on the board, and can switch off here. */
 export interface FilterChip {
   key: string;
-  /** What the chip reads, e.g. "topic: health" or "Obama 2008 · Partial". */
+  /** What the chip reads, e.g. "topic: health" or "Obama 2008 · Medium". */
   label: string;
   onClear: () => void;
 }
@@ -169,6 +169,9 @@ export function PromiseList({
             Show all
           </button>
         )}
+        <a className="pl-method" href="#method">
+          How promises are chosen and rated
+        </a>
       </div>
 
       {hits.length === 0 ? (

@@ -233,3 +233,39 @@ export function deltaBetween(prev: TermSummary, curr: TermSummary): Record<Quali
   }
   return out;
 }
+
+/** One term's line in the methodology page's table: how screening went, and what came out. */
+export interface MethodRow {
+  key: string;
+  label: string;
+  /** Candidate sentences with a recorded decision, over all of the term's sources. */
+  screened: number;
+  included: number;
+  excluded: number;
+  /** Exclusion reasons with their counts, in protocol order, zeros dropped. */
+  excludedBy: [string, number][];
+  promises: number;
+  tiers: Record<Quality, number>;
+  ambitions: number;
+}
+
+export function methodRows(terms: CorpusTerm[]): MethodRow[] {
+  return terms.map((t) => {
+    const entries = Object.entries(t.screening) as [string, number][];
+    const screened = entries.reduce((n, [, c]) => n + c, 0);
+    const included = t.screening.include;
+    const tiers: Record<Quality, number> = { high: 0, medium: 0, low: 0 };
+    for (const p of t.promises) tiers[p.quality] += 1;
+    return {
+      key: t.key,
+      label: t.label,
+      screened,
+      included,
+      excluded: screened - included,
+      excludedBy: entries.filter(([d, c]) => d !== 'include' && c > 0),
+      promises: t.promises.length,
+      tiers,
+      ambitions: t.ambitions.length,
+    };
+  });
+}

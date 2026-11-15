@@ -29,6 +29,8 @@ const CORPUS = join(ROOT, 'corpus');
 const OUT = join(ROOT, 'src', 'content', 'promises.generated.ts');
 
 const QUALITIES = ['high', 'medium', 'low'];
+/** Screening decisions (corpus/PROTOCOL.md §2), in the order the methodology page lists them. */
+const DECISIONS = ['include', 'others', 'past', 'describe', 'conditional', 'attack', 'ceremony'];
 const KIND_LABEL = {
   acceptance: 'acceptance speech',
   inaugural: 'inaugural address',
@@ -125,6 +127,18 @@ for (const name of readdirSync(CORPUS)) {
       protocol: protocolFields(p),
     };
   });
+  // How every screened sentence was decided, summed over the term's ledgers:
+  // the methodology page shows this so recall can be read, not just trusted.
+  const screening = Object.fromEntries(DECISIONS.map((d) => [d, 0]));
+  let added = 0;
+  for (const f of files.filter((x) => x.endsWith('.screening.yaml')).sort()) {
+    for (const row of parseYaml(readFileSync(join(dir, f), 'utf8'))?.rows ?? []) {
+      if (!(row.decision in screening)) throw new Error(`${name}/${f} ${row.ref}: bad decision ${row.decision}`);
+      screening[row.decision] += 1;
+      if (row.added) added += 1;
+    }
+  }
+
   const promises = all.filter((p) => p.kind === 'promise');
   const ambitions = all.filter((p) => p.kind === 'ambition');
 
@@ -137,6 +151,8 @@ for (const name of readdirSync(CORPUS)) {
     termLabel: `${fromStr}–${toStr}`,
     speechYear,
     label: speechYear ? `${surname} ${speechYear}` : surname,
+    screening,
+    screenedAdded: added,
     promises,
     ambitions,
   });
@@ -216,6 +232,9 @@ export interface CorpusPromise {
   protocol: ProtocolFields;
 }
 
+/** A screening-ledger decision: include, or the reason a candidate was left out. */
+export type Decision = ${DECISIONS.map((d) => `'${d}'`).join(' | ')};
+
 export interface CorpusTerm {
   /** Corpus directory name, e.g. "2009-2013 Obama". Stable key. */
   key: string;
@@ -230,6 +249,10 @@ export interface CorpusTerm {
   speechYear: number | null;
   /** Short bar label, e.g. "Obama 2008". */
   label: string;
+  /** Screened candidate sentences by decision, over all of the term's sources. */
+  screening: Record<Decision, number>;
+  /** How many of those were added by reading, without a trigger word. */
+  screenedAdded: number;
   /** Firm commitments: the chart's subject. */
   promises: CorpusPromise[];
   /** Soft commitments: wishes and obligations. Never get a verdict. */
