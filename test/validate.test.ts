@@ -207,6 +207,55 @@ describe('validateTerm', () => {
   });
 });
 
+describe('verdicts (PROTOCOL.md §6)', () => {
+  // t-cut-taxes becomes a high promise; the other fixtures stay low.
+  const highPromises = promises.replace(
+    'level: low',
+    'level: high\n      object: taxes\n      record: tax law\n      criterion: a tax cut is enacted',
+  );
+  const verdicts = `protocol: 1
+verdicts:
+  - promise: t-cut-taxes
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No tax cut was enacted.
+    attempt: initiated
+    evidence:
+      - { what: Budget proposal, url: "https://example.org/budget", publisher: Treasury }
+    uncertainty: { verdict: clear }
+`;
+  const v = (from: string | RegExp = '', to = '') =>
+    term({ 'promises.yaml': highPromises, 'verdicts.yaml': verdicts.replace(from, to) });
+
+  it('passes a complete, consistent verdict file', () => {
+    expect(v()).toEqual({ errors: [], warnings: [] });
+  });
+
+  it('warns about verifiable promises without a verdict', () => {
+    const r = term({ 'promises.yaml': highPromises, 'verdicts.yaml': 'protocol: 1\nverdicts: []\n' });
+    expect(r.errors).toEqual([]);
+    expect(r.warnings.join()).toMatch(/1 high\/medium promises have no verdict/);
+  });
+
+  it('judges only high and medium promises, once each', () => {
+    expect(v('promise: t-cut-taxes', 'promise: t-build-roads').errors.join()).toMatch(/only high and medium/);
+    expect(v('promise: t-cut-taxes', 'promise: t-reform-schools').errors.join()).toMatch(/ambitions never/);
+    expect(v('promise: t-cut-taxes', 'promise: t-nope').errors.join()).toMatch(/names no promise/);
+    const twice = verdicts + verdicts.split('verdicts:\n')[1];
+    expect(term({ 'promises.yaml': highPromises, 'verdicts.yaml': twice }).errors.join()).toMatch(/second verdict/);
+  });
+
+  it('enforces the verdict record', () => {
+    const e = (from: string | RegExp, to: string) => v(from, to).errors.join('\n');
+    expect(e('verdict: broken', 'verdict: meh')).toMatch(/verdict must be one of/);
+    expect(e('    attempt: initiated\n', '')).toMatch(/broken verdict needs attempt/);
+    expect(e('https://example.org/budget', 'example.org')).toMatch(/needs an https url/);
+    expect(e(/ {4}evidence:\n.*\n/, '')).toMatch(/needs evidence/);
+    expect(e('{ verdict: clear }', '{ verdict: probable }')).toMatch(/needs a note/);
+    expect(e('verdict: broken', 'verdict: pending')).toMatch(/pending, but the deadline 2005-01-20 has passed/);
+  });
+});
+
 describe('the corpus', () => {
   it('passes the validator', () => {
     const r = validateCorpus(decodeURIComponent(new URL('../corpus', import.meta.url).pathname));

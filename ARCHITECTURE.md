@@ -34,6 +34,11 @@ product is the claim that "was it kept?" is underdetermined; the moment a result
 can be passed in, that claim is a lie. `test/grid.test.ts` pins the engine on a
 synthetic fixture and checks the indeterminate path.
 
+Kept/broken verdicts on corpus promises (`corpus/*/verdicts.yaml`) are a
+different thing: they are judged by a reader under `corpus/PROTOCOL.md` §6,
+and every one cites its evidence. The invariant above is about the chart
+engine: a reading drawn from a series is always computed from the series.
+
 ## Invariant 2 — the data snapshot is append-only
 
 `data/deficit_fyfsd.csv` is the audit trail. The refresh job

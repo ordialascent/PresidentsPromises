@@ -8,7 +8,9 @@
  *     every trigger-matched sentence has a row (recall is checkable), debate
  *     rows stay inside the president's turns;
  *   - promises.yaml, which must declare `protocol: 1`: the full record schema,
- *     refs, exact quotes, links, and the ledger <-> promise cross-check.
+ *     refs, exact quotes, links, and the ledger <-> promise cross-check;
+ *   - verdicts.yaml (optional, PROTOCOL.md §6): one verdict per high/medium
+ *     promise, each with evidence links.
  *
  * Usage:  npm run validate         (exit 1 on any error; warnings are printed)
  */
@@ -28,6 +30,8 @@ export const TYPES = ['action', 'outcome', 'ongoing'];
 export const LEVELS = ['high', 'medium', 'low'];
 export const EXTRACTION = ['clear', 'probable', 'contested'];
 export const LINK_KINDS = ['repeats', 'refines', 'shared'];
+export const VERDICTS = ['kept', 'partly', 'broken', 'pending', 'indeterminate'];
+export const ATTEMPTS = ['none', 'initiated', 'passed-chamber'];
 export const DECISIONS = ['include', 'others', 'past', 'describe', 'conditional', 'attack', 'ceremony'];
 
 /** The trigger lexicon from PROTOCOL.md §1, as whole-word, case-insensitive patterns. */
@@ -338,7 +342,71 @@ export function validateTerm(termName, files, allIds = new Set()) {
       }
     }
   }
+  validateVerdicts(files['verdicts.yaml'], byId, err, warn);
   return { errors, warnings };
+}
+
+const toIso = (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : String(v));
+
+/** PROTOCOL.md §6: verdicts.yaml against the term's promises. */
+function validateVerdicts(text, byId, err, warn) {
+  const eligible = [...byId.values()].filter(
+    (p) => p.kind === 'promise' && (p.verifiability?.level === 'high' || p.verifiability?.level === 'medium'),
+  );
+  if (text === undefined) return;
+  let doc;
+  try {
+    doc = parseYaml(text);
+  } catch (e) {
+    err('verdicts.yaml', `YAML: ${e.message.split('\n')[0]}`);
+    return;
+  }
+  if (doc?.protocol !== 1) err('verdicts.yaml', '"protocol" must be 1');
+  const verdicts = Array.isArray(doc?.verdicts) ? doc.verdicts : [];
+  const judged = new Set();
+  for (const v of verdicts) {
+    const id = v?.promise;
+    const where = `verdicts.yaml ${id ?? '(no promise)'}`;
+    const p = byId.get(id);
+    if (!p) {
+      err(where, 'names no promise of this term');
+      continue;
+    }
+    if (p.kind !== 'promise') err(where, 'ambitions never get a verdict');
+    else if (!eligible.includes(p)) err(where, 'only high and medium promises get a verdict');
+    if (judged.has(id)) err(where, 'second verdict for this promise');
+    judged.add(id);
+    if (!VERDICTS.includes(v.verdict)) err(where, `verdict must be one of ${VERDICTS.join('/')}`);
+    if (!isDate(v.as_of)) err(where, 'as_of must be a YYYY-MM-DD date');
+    if (!nonEmpty(v.summary)) err(where, 'missing summary');
+    if (v.verdict === 'broken' && !ATTEMPTS.includes(v.attempt)) {
+      err(where, `a broken verdict needs attempt: ${ATTEMPTS.join('/')}`);
+    } else if (v.attempt !== undefined && !ATTEMPTS.includes(v.attempt)) {
+      err(where, `attempt must be one of ${ATTEMPTS.join('/')}`);
+    }
+    if (v.verdict === 'pending' && isDate(v.as_of) && isDate(p.deadline?.applied)
+      && toIso(p.deadline.applied) < toIso(v.as_of)) {
+      err(where, `pending, but the deadline ${toIso(p.deadline.applied)} has passed`);
+    }
+    const ev = Array.isArray(v.evidence) ? v.evidence : [];
+    if (!ev.length) err(where, 'a verdict needs evidence');
+    ev.forEach((e, i) => {
+      if (!nonEmpty(e?.what)) err(where, `evidence ${i + 1} has no "what"`);
+      if (!/^https:\/\/\S+$/.test(e?.url ?? '')) err(where, `evidence ${i + 1} needs an https url`);
+      if (!nonEmpty(e?.publisher)) err(where, `evidence ${i + 1} has no publisher`);
+      if (e?.secondary !== undefined && typeof e.secondary !== 'boolean') {
+        err(where, `evidence ${i + 1}: secondary must be true or false`);
+      }
+    });
+    const u = v.uncertainty ?? {};
+    if (!EXTRACTION.includes(u.verdict)) {
+      err(where, `uncertainty.verdict must be one of ${EXTRACTION.join('/')}`);
+    } else if (u.verdict !== 'clear' && !nonEmpty(u.note)) {
+      err(where, `uncertainty "${u.verdict}" needs a note`);
+    }
+  }
+  const missing = eligible.filter((p) => !judged.has(p.id));
+  if (missing.length) warn('verdicts.yaml', `${missing.length} high/medium promises have no verdict yet`);
 }
 
 /** Read every term directory under `corpusDir` and validate it. */
