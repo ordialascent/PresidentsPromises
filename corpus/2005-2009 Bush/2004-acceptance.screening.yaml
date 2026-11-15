@@ -1,0 +1,79 @@
+# Screening ledger for 2004-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1). Ids shared with other ledgers are
+# further occurrences of the same promise.
+source: 2004-acceptance
+protocol: 1
+rows:
+  - { ref: "¶3.4", decision: include, promises: [bush-2004-safer-world, bush-2004-hopeful-america] }
+  - ref: "¶4.1"
+    decision: describe
+    note: "Mentions \"the work we will do\" while praising the Vice President."
+  - ref: "¶6.3"
+    decision: describe
+    note: "Personal statement about his parents."
+  - ref: "¶8.3"
+    decision: describe
+    note: "About the speech itself."
+  - ref: "¶13.3"
+    decision: describe
+    note: "Prediction about the election."
+  - { ref: "¶14.2", decision: include, promises: [bush-2004-extend-freedom] }
+  - { ref: "¶16.4", decision: include, promises: [bush-2004-transform-systems] }
+  - { ref: "¶17.4", decision: include, promises: [bush-2004-restrain-spending, bush-2004-reduce-regulation, bush-2004-tax-relief-permanent] }
+  - { ref: "¶17.5", decision: include, promises: [bush-2004-energy-imports] }
+  - { ref: "¶17.6", decision: include, promises: [bush-2004-expand-trade, bush-2004-level-field] }
+  - { ref: "¶17.7", decision: include, promises: [bush-2004-lawsuit-reform] }
+  - { ref: "¶18.3", decision: include, promises: [bush-2004-tax-reform] }
+  - { ref: "¶19.3", decision: include, promises: [bush-2004-job-training-double, bush-2004-community-colleges] }
+  - { ref: "¶20.2-20.3", decision: include, promises: [bush-2004-opportunity-zones] }
+  - { ref: "¶21.3", decision: include, promises: [bush-2004-small-biz-health] }
+  - { ref: "¶22.1", decision: include, promises: [bush-2004-hsa-taxcredit, bush-2004-hsa-low-income] }
+  - { ref: "¶22.3", decision: include, promises: [bush-2004-health-access-poor] }
+  - { ref: "¶22.4", decision: include, promises: [bush-2004-health-centers] }
+  - { ref: "¶23.2", decision: include, promises: [bush-2004-medical-liability] }
+  - { ref: "¶23.3", decision: include, promises: [bush-2004-doctors-decide] }
+  - { ref: "¶24.2", decision: include, promises: [bush-2004-comptime-flextime] }
+  - ref: "¶25.1"
+    decision: include
+    added: true
+    promises: [bush-2004-ownership-society]
+    note: "Untriggered; \"another priority for a new term\" is conditioned on re-election."
+  - ref: "¶26.2"
+    decision: include
+    added: true
+    promises: [bush-2004-affordable-homes]
+    note: "Untriggered; a goal set for the next ten years, recorded as an ambition."
+  - { ref: "¶27.2", decision: include, promises: [bush-2004-ss-keep-promise] }
+  - { ref: "¶27.4", decision: include, promises: [bush-2004-ss-personal-accounts] }
+  - { ref: "¶29.2", decision: include, promises: [bush-2004-help-children] }
+  - { ref: "¶30.8-30.9", decision: include, promises: [bush-2004-no-child-left-behind] }
+  - { ref: "¶31.3", decision: include, promises: [bush-2004-hs-intervention] }
+  - { ref: "¶31.4", decision: include, promises: [bush-2004-math-science] }
+  - { ref: "¶31.5", decision: include, promises: [bush-2004-hs-exit-exam] }
+  - { ref: "¶31.6", decision: include, promises: [bush-2004-pell-grants, bush-2004-college-diploma] }
+  - { ref: "¶32.2-32.3", decision: include, promises: [bush-2004-child-health-enroll] }
+  - ref: "¶37.2"
+    decision: describe
+    note: "\"Family commitment\" as a value; no commitment made."
+  - { ref: "¶38.2", decision: include, promises: [bush-2004-unborn] }
+  - { ref: "¶38.4", decision: include, promises: [bush-2004-strict-judges] }
+  - { ref: "¶40.6", decision: include, promises: [bush-2004-defend-america] }
+  - { ref: "¶41.7", decision: include, promises: [bush-2004-prevail] }
+  - { ref: "¶44.6", decision: include, promises: [bush-2004-confront-threats] }
+  - { ref: "¶45.7", decision: include, promises: [bush-2004-defend-america] }
+  - { ref: "¶47.4", decision: include, promises: [bush-2004-train-armies, bush-2004-afghan-iraq-elections, bush-2004-afghan-iraq-democracy] }
+  - ref: "¶47.5"
+    decision: include
+    added: true
+    promises: [bush-2004-troops-return]
+    note: "Untriggered future statement about his plan."
+  - ref: "¶49.3"
+    decision: describe
+    note: "Introduces an address to the troops."
+  - { ref: "¶49.9", decision: include, promises: [bush-2004-troops-resources] }
+  - { ref: "¶66.4", decision: include, promises: [bush-2004-safer-world] }
+  - { ref: "¶66.5", decision: include, promises: [bush-2004-hopeful-america] }
+
+#   45 rows: 39 include (3 of them added), 6 excluded (describe 6)

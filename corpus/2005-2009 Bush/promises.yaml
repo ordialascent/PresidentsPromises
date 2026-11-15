@@ -1,836 +1,1803 @@
-# Promises extracted from George W. Bush's 2004 nomination acceptance speech
-# (corpus/2005-2009 Bush/2004-acceptance.md). Refs are paragraph.sentence, per
-# corpus/README.md.
+# Promises and ambitions of George W. Bush's 2005-2009 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 2004 acceptance
+# speech, the 2004 final debate (Bush's turns) and the 2005 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
 #
-# Each promise is scored on four dimensions — the ingredients that decide
-# whether "was it kept?" can even be asked as a *measured* question:
-#
-#   metric     — is there a named quantity, AND a record that tracks it?
-#   threshold  — a number or an explicit direction ("double", "to zero", "every")?
-#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
-#   instrument — does he name what HE will DO, or only what WILL happen?
-#
-# measurable:
-#   full     — metric + threshold + deadline all present (even if parametrically
-#              disputed — that dispute is the product, not a disqualifier)
-#   partial  — at least one of the three is missing or too vague to pin down
-#   no       — aspirational; no measurable quantity at all
-# (instrument sharpens accountability: an outcome-only promise is one he can't
-#  fully control. A promise can still be measurable without it.)
-#
-# NOTE: this speech recurrently frames domestic pledges "in a new term" — a
-# bounded period that counts as a deadline ("by end of term"), so several
-# otherwise-vague pledges carry a real time bound even where no number does.
+# 72 promises (high 15, medium 21, low 36)
+# 14 ambitions (high 3, medium 5, low 6)
+# Deadlines default to the end of the term (2009-01-20).
 
+protocol: 1
 promises:
-  - id: bush-2004-homes-ownership
-    ref: "¶26.2"
-    theme: housing
-    quote: >
-      Tonight we set a new goal: 7 million more affordable homes in the next 10
-      years so more American families will be able to open the door and say,
-      "Welcome to my home."
-    restatement: Add 7 million more affordable homes over the next ten years.
-    metric:
-      present: true
-      quantity: number of affordable / owner-occupied homes added
-      record: Census homeownership & housing-unit series; HUD affordable-housing counts
-    threshold:
-      present: true
-      stated: 7 million more
-    deadline:
-      present: true
-      stated: in the next 10 years (2004 -> ~2014)
-    instrument:
-      present: true
-      stated: "\"we set a new goal\" — a national goal, no specific federal program named"
-    measurable: "full"
-    notes: >
-      The one cleanly-shaped promise here, and exactly the Obama oil-import
-      shape: a number and a decade, all four ingredients nominally present — but
-      "affordable homes" has no agreed definition (units built? net homeownership
-      gain? added to which baseline?), so the boundary you pick swings the
-      verdict, and the instrument is only a stated goal, not a named mechanism.
 
-  - id: bush-2004-health-centers
-    ref: "¶22.4"
-    theme: health
-    quote: >
-      In a new term, I will ensure every poor county in America has a community
-      or rural health center.
-    restatement: Give every poor county a community or rural health center within the term.
-    metric:
-      present: true
-      quantity: number of poor counties lacking a community/rural health center
-      record: HRSA health-center program site/coverage data
-    threshold:
-      present: true
-      stated: every poor county (to zero without)
+  - id: bush-2004-safer-world
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶3.4
+      quote: We will build a safer world
+    - in: acceptance
+      ref: ¶66.4
+      quote: By promoting liberty abroad, we will build a safer world.
+    restatement: Build a safer world, by promoting liberty abroad.
+    type: outcome
+    theme: foreign-policy
     deadline:
-      present: true
-      stated: in a new term (by end of term, ~Jan 2009)
-    instrument:
-      present: true
-      stated: "\"I will ensure\" — federal health-center funding/expansion"
-    measurable: "full"
-    notes: >
-      Metric, an absolute threshold, and a term-bounded deadline all present.
-      The disputed boundary is entirely in the definitions — what counts as a
-      "poor county" and what counts as a qualifying "community or rural health
-      center" (a full site, an access point, a subsidized clinic?).
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-job-training-double
-    ref: "¶19.1-19.3"
-    theme: labor
-    quote: >
-      Another priority in a new term will be to help workers take advantage of
-      the expanding economy to find better and higher paying jobs. [...] So we
-      will double the number of people served by our principal job training
-      program and increase funding for our community colleges.
-    restatement: Double the number served by the principal job-training program in a new term.
-    metric:
-      present: true
-      quantity: people served by the principal federal job-training program
-      record: DoL/ETA WIA (Workforce Investment Act) participant counts
-    threshold:
-      present: true
-      stated: double (100% increase)
+  - id: bush-2004-hopeful-america
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶3.4
+      quote: a more hopeful America
+    - in: acceptance
+      ref: ¶66.5
+      quote: By encouraging liberty at home, we will build a more hopeful America.
+    restatement: Build a more hopeful America, by encouraging liberty at home.
+    type: outcome
+    theme: government
     deadline:
-      present: true
-      stated: in a new term (from the ¶19.1 framing)
-    instrument:
-      present: true
-      stated: increased federal training funding
-    measurable: "full"
-    notes: >
-      "Double" is a clean directional threshold and the deadline rides in on the
-      paragraph's "in a new term" framing, so it grades full — but the baseline
-      year the doubling is measured from, and which program counts as "our
-      principal job training program," are the open parameters. The community-
-      college half is only "increase funding" (direction, no number).
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-tax-reform
-    ref: "¶18.3"
-    theme: taxes
-    quote: >
-      In a new term, I will lead a bipartisan effort to reform and simplify the
-      Federal Tax Code.
-    restatement: Lead a bipartisan effort to reform and simplify the tax code.
-    metric:
-      present: false
-      quantity: no clean quantity ("simpler, fairer, progrowth" has no agreed measure)
-      record: null
-    threshold:
-      present: true
-      stated: simpler / fairer (direction only, no number)
+  - id: bush-2004-extend-freedom
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶14.2
+      quote: 'Our Nation''s founding commitment is still our deepest commitment: In our world and here at home, we will extend the frontiers of freedom.'
+    - in: debate
+      ref: ¶263.3
+      quote: And as we pursue the enemy wherever it exists, we'll also spread freedom and liberty.
+    restatement: Extend the frontiers of freedom, abroad and at home.
+    type: ongoing
+    theme: foreign-policy
     deadline:
-      present: true
-      stated: in a new term
-    instrument:
-      present: true
-      stated: "\"lead a bipartisan effort\" — legislative push"
-    measurable: "partial"
-    notes: >
-      A term-bounded deadline and a named instrument, but "reform and simplify"
-      is a direction with no metric and no threshold — measurable only as "did a
-      tax-reform bill pass?", a yes/no, not a tracked quantity.
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-transform-systems
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶16.4
+      quote: We will transform these systems so that all citizens are equipped, prepared—and thus truly free—to make your own choices and pursue your own dreams.
+    restatement: Transform the tax code, health coverage, pension plans and worker training for a changed economy.
+    type: action
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-restrain-spending
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶17.4
+      quote: my plan will encourage investment and expansion by restraining Federal spending
+    restatement: Restrain federal spending.
+    group: bush-2004-jobs-plan
+    type: outcome
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal outlays
+      record: OMB historical tables; enacted appropriations
+      criterion: federal spending grows more slowly than it did in the first term
+      ambiguity: '"Restraining" sets no number; the reading here compares spending growth with the 2001-2005 term.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-reduce-regulation
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶17.4
+      quote: reducing regulation
+    restatement: Reduce regulation.
+    group: bush-2004-jobs-plan
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal regulation
+      record: Federal Register; OMB reports on the costs of federal regulation
+      criterion: the burden of new federal regulation falls over the term
+      ambiguity: No measure of "regulation" is named; one proxy (pages, rule counts or estimated costs) has to be chosen.
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2004-tax-relief-permanent
-    theme: taxes
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶17.4"
-        quote: >
-          To create jobs, my plan will encourage investment and
-          expansion by restraining Federal spending, reducing
-          regulation, and making the tax relief permanent.
-      - in: debate
-        ref: "¶145.4"
-        quote: >
-          It's to make sure we have fiscal sanity and keep taxes
-          low.
-    restatement: Restrain spending, cut regulation, and make the tax cuts permanent.
-    metric:
-      present: false
-      quantity: three bundled aims, no single quantity (spending, regulation, tax permanence)
-      record: null
-    threshold:
-      present: true
-      stated: restrain / reduce / make permanent (directions, no numbers)
+    - in: acceptance
+      ref: ¶17.4
+      quote: making the tax relief permanent
+    restatement: Make the 2001 and 2003 tax cuts permanent.
+    group: bush-2004-jobs-plan
+    type: action
+    theme: taxes
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: his fiscal/legislative plan
-    measurable: "partial"
-    notes: >
-      A compound of three directional aims with a named instrument but no number
-      and no deadline. "Making the tax relief permanent" is a clean yes/no; the
-      spending-restraint half has a record (outlays) but no target the promise
-      pins it to.
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: the 2001 and 2003 tax cuts (EGTRRA, JGTRRA)
+      record: enacted legislation (Congress.gov)
+      criterion: a law removes the sunset of the 2001 and 2003 tax cuts
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2004-energy-imports
-    ref: "¶17.5"
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶17.5
+      quote: To create jobs, we will make our country less dependent on foreign sources of energy.
+    restatement: Make the country less dependent on foreign energy.
+    type: outcome
     theme: energy
-    quote: >
-      To create jobs, we will make our country less dependent on foreign sources
-      of energy.
-    restatement: Reduce US dependence on foreign energy.
-    metric:
-      present: true
-      quantity: energy / oil imports as a share of consumption
-      record: EIA imports and net-import-share series
-    threshold:
-      present: true
-      stated: "\"less dependent\" — direction only, no number"
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: "\"we will make\" — no named mechanism"
-    measurable: "partial"
-    notes: >
-      The instructive contrast with Obama's fully-shaped "end our dependence on
-      oil from the Middle East in ten years": same metric and record, but here
-      only a direction ("less"), no number, no deadline, and no instrument —
-      the same subject stripped of everything that would make it gradable.
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: US dependence on imported energy
+      record: EIA petroleum net import share of consumption
+      criterion: the net import share is lower at the end of the term than in 2004
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-small-biz-health
-    ref: "¶21.3"
-    theme: health
-    quote: >
-      In a new term, we must allow small firms to join together to purchase
-      insurance at the discounts available to big companies.
-    restatement: Let small firms pool to buy insurance at large-employer discounts.
-    metric:
-      present: false
-      quantity: policy action (association health plans enacted), not a quantity
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: true
-      stated: in a new term
-    instrument:
-      present: true
-      stated: change law to permit association health plans
-    measurable: "partial"
-    notes: >
-      A named instrument with a term deadline, but no metric and no threshold —
-      measurable only as "did association-health-plan legislation pass?" The
-      disputed boundary is what qualifies as the promised pooling authority.
-
-  - id: bush-2004-hsa-taxcredit
-    theme: health
+  - id: bush-2004-expand-trade
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶22.1"
-        quote: >
-          We will offer a tax credit to encourage small businesses
-          and their employees to set up health savings accounts and
-          provide direct help for low-income Americans to purchase
-          them.
-      - in: debate
-        ref: "¶95.6-95.7"
-        quote: >
-          It's one of the reasons I'm a strong believer in what they
-          call health savings accounts. These are accounts that
-          allow somebody to buy a low-premium, high-deductible
-          catastrophic plan and couple it with tax-free savings.
-    restatement: Create a tax credit to spread health savings accounts, with help for low-income buyers.
-    metric:
-      present: true
-      quantity: HSA enrollment / accounts opened (uptake)
-      record: Treasury/IRS HSA data; industry HSA census
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: ¶17.6
+      quote: we will expand trade
+    restatement: Expand trade.
+    group: bush-2004-trade
+    type: outcome
+    theme: trade
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: a new tax credit plus direct subsidies
-    measurable: "partial"
-    notes: >
-      A clear instrument and a trackable uptake metric, but no target number and
-      no deadline — "encourage" sets no level the promise can be held to.
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: US trade agreements and exports
+      record: USTR agreements in force; Census trade statistics
+      criterion: new trade agreements take effect and exports grow
+      ambiguity: '"Expand trade" could mean new agreements or higher trade volume; both are read here.'
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-medical-liability
-    theme: health
+  - id: bush-2004-level-field
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶23.2"
-        quote: >
-          To make health care more affordable and accessible, we
-          must pass medical liability reform now.
-      - in: debate
-        ref: "¶96.2"
-        quote: >
-          That's why I'm such a strong believer in medical liability
-          reform.
-    restatement: Pass medical liability (malpractice) reform.
-    metric:
-      present: false
-      quantity: policy action (federal malpractice reform enacted), not a quantity
-      record: null
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: ¶17.6
+      quote: level the playing field to sell American goods and services across the globe
+    restatement: Level the playing field for American exports.
+    group: bush-2004-trade
+    type: ongoing
+    theme: trade
     deadline:
-      present: false
-      stated: "\"now\" is urgency, not a bounded deadline"
-    instrument:
-      present: true
-      stated: pass federal liability-reform legislation
-    measurable: "partial"
-    notes: >
-      "Now" reads as a deadline but functions like Obama's "immediately/soon" —
-      urgency, not a date — so it does not count. A yes/no policy outcome with no
-      quantity behind it.
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-comptime-flextime
-    ref: "¶24.2"
-    theme: labor
-    quote: >
-      In a new term, we will change outdated labor laws to offer comp-time and
-      flex-time.
-    restatement: Change labor law to allow comp-time and flex-time.
-    metric:
-      present: false
-      quantity: policy action (labor-law change), not a quantity
-      record: null
-    threshold:
-      present: false
-      stated: null
+  - id: bush-2004-lawsuit-reform
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶17.7
+      quote: And we must protect small-business owners and workers from the explosion of frivolous lawsuits that threaten jobs across our country.
+    restatement: Protect small businesses and workers from frivolous lawsuits.
+    type: action
+    theme: crime-justice
     deadline:
-      present: true
-      stated: in a new term
-    instrument:
-      present: true
-      stated: amend federal labor law
-    measurable: "partial"
-    notes: >
-      Named instrument and a term deadline, but no metric and no threshold — a
-      binary "did the law change?" The scope of "comp-time and flex-time" is the
-      only thing to adjudicate.
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal civil litigation rules
+      record: enacted legislation (Congress.gov)
+      criterion: a federal law limiting lawsuits against businesses is enacted
+      ambiguity: Which reform counts as protection from "frivolous" lawsuits is not stated.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-tax-reform
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶18.3
+      quote: In a new term, I will lead a bipartisan effort to reform and simplify the Federal Tax Code.
+    restatement: Lead a bipartisan effort to reform and simplify the federal tax code.
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal tax code
+      record: enacted legislation; presidential commissions and proposals
+      criterion: a tax reform and simplification is enacted
+      ambiguity: '"Lead an effort" could be met by proposing reform; the reading here requires an enacted simplification.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-job-training-double
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶19.3
+      quote: we will double the number of people served by our principal job training program
+    restatement: Double the number of people served by the main federal job training programme.
+    group: bush-2004-job-training
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: Workforce Investment Act training participants
+      record: Department of Labor WIA programme data
+      criterion: the number served at least doubles from the 2004 level by the end of the term
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-community-colleges
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶19.3
+      quote: increase funding for our community colleges
+    restatement: Increase federal funding for community colleges.
+    group: bush-2004-job-training
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal funding for community colleges
+      record: enacted appropriations
+      criterion: federal funding for community colleges rises over the term
+      ambiguity: No funding line is named; the community-college job training grants are the closest match.
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2004-opportunity-zones
-    ref: "¶20.2-20.3"
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶20.2-20.3
+      quote: To stand with workers in poor communities and those that have lost manufacturing, textile, and other jobs, we will create American opportunity zones. In these areas, we will provide tax relief and other incentives to attract new business and improve housing and job training to bring hope and work throughout all of America.
+    restatement: Create "American opportunity zones" with tax relief and incentives in communities that lost jobs.
+    type: action
     theme: economy
-    quote: >
-      To stand with workers in poor communities and those that have lost
-      manufacturing, textile, and other jobs, we will create American
-      opportunity zones. In these areas, we will provide tax relief and other
-      incentives [...]
-    restatement: Create "American opportunity zones" with tax relief and incentives for distressed areas.
-    metric:
-      present: false
-      quantity: policy action (zones created), not a tracked quantity
-      record: null
-    threshold:
-      present: false
-      stated: null
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: create zones offering tax relief and incentives
-    measurable: "partial"
-    notes: >
-      A concrete instrument but no number, no deadline, and no metric — gradable
-      only as "were the zones created?" What counts as an "opportunity zone" (and
-      how many) is left entirely open.
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: American opportunity zones
+      record: enacted legislation (Congress.gov)
+      criterion: a law creates the zones with tax relief for businesses in them
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-ss-personal-accounts
-    theme: social-security
+  - id: bush-2004-small-biz-health
+    kind: ambition
     sources:
-      - in: acceptance
-        ref: "¶27.4"
-        quote: >
-          We must strengthen Social Security by allowing younger
-          workers to save some of their taxes in a personal account,
-          a nest egg you can call your own and Government can never
-          take away.
-      - in: debate
-        ref: "¶131.1"
-        quote: >
-          I believe that younger workers ought to be allowed to take
-          some of their own money and put it in a personal savings
-          account, because I understand that they need to get better
-          rates of return than the rates of return being given in
-          the current Social Security trust.
-    restatement: Let younger workers divert some payroll taxes into personal Social Security accounts.
-    metric:
-      present: false
-      quantity: policy action (private-account law enacted), not a quantity
-      record: null
-    threshold:
-      present: true
-      stated: "\"some of their taxes\" — a direction with no magnitude"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: create personal retirement accounts within Social Security
-    measurable: "partial"
-    notes: >
-      A named instrument, but "some of their taxes" fixes no share and there is
-      no deadline — the yes/no of whether private accounts were ever enacted (they
-      were not) is all that can be measured.
-
-  - id: bush-2004-child-health-enroll
-    ref: "¶32.2"
+    - in: acceptance
+      ref: ¶21.3
+      quote: In a new term, we must allow small firms to join together to purchase insurance at the discounts available to big companies.
+    restatement: Let small firms join together to buy health insurance at big-company discounts.
+    type: action
     theme: health
-    quote: >
-      In a new term, we will lead an aggressive effort to enroll millions of poor
-      children who are eligible but not signed up for the Government's health
-      insurance programs.
-    restatement: Enroll millions of eligible-but-unenrolled poor children in public health insurance.
-    metric:
-      present: true
-      quantity: children newly enrolled in Medicaid/SCHIP
-      record: CMS Medicaid/SCHIP enrollment data
-    threshold:
-      present: true
-      stated: "\"millions\" — a soft number, no precise target or baseline"
     deadline:
-      present: true
-      stated: in a new term
-    instrument:
-      present: true
-      stated: "\"an aggressive effort\" — federal enrollment/outreach push"
-    measurable: "partial"
-    notes: >
-      Metric, deadline, and instrument are all present, so this comes closest of
-      the domestic pledges to full — but "millions" is an unquantified target with
-      no baseline, so the threshold is too soft to pin, holding it at partial.
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: association health plans
+      record: enacted legislation (Congress.gov)
+      criterion: a law lets small businesses pool to buy insurance
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-pell-grants
-    theme: education
+  - id: bush-2004-hsa-taxcredit
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶31.6"
-        quote: >
-          By raising performance in our high schools and expanding
-          Pell grants for low- and middle-income families, we will
-          help more Americans start their career with a college
-          diploma.
-      - in: debate
-        ref: "¶52.3"
-        quote: >
-          You got—4 more years, I've got more to do to continue to
-          raise standards, to continue to reward teachers and school
-          districts that are working, to emphasize math and science
-          in the classrooms, to continue to expand Pell grants, to
-          make sure that people have an opportunity to start their
-          career with a college diploma.
-    restatement: Expand Pell grants to raise college completion.
-    metric:
-      present: true
-      quantity: Pell grant recipients / maximum award; college completion
-      record: Dept. of Education Federal Pell Grant program data
-    threshold:
-      present: true
-      stated: "\"expanding\" / \"more\" — direction only"
+    - in: acceptance
+      ref: ¶22.1
+      quote: We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts
+    restatement: A tax credit for small businesses and their employees to set up health savings accounts.
+    group: bush-2004-hsa
+    type: action
+    theme: health
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: increase Pell grant funding/eligibility
-    measurable: "partial"
-    notes: >
-      Real metric and record, but only a direction ("expanding", "more") and no
-      deadline. The college-diploma half is an outcome he can't fully control and
-      can't cleanly attribute to the Pell change.
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: tax credit for health savings accounts
+      record: enacted legislation; Internal Revenue Code
+      criterion: a law creates the tax credit
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-hs-graduation-exam
-    ref: "¶31.5"
-    theme: education
-    quote: >
-      As we make progress, we will require a rigorous exam before graduation.
-    restatement: Require a rigorous exam before high-school graduation.
-    metric:
-      present: false
-      quantity: policy action (a required exam), not a quantity
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: a federal graduation-exam requirement
-    measurable: "partial"
-    notes: >
-      A named instrument with no number and no deadline. Beyond that, high-school
-      graduation exams sit largely with the states, so "we will require" names an
-      action whose federal reach is itself contestable — a yes/no at best.
-
-  - id: bush-2004-troops-return
-    ref: "¶47.5"
-    theme: foreign-policy
-    quote: >
-      And then our troops will return home with the honor they have earned.
-    restatement: Bring the troops home once Afghanistan and Iraq reach stability.
-    metric:
-      present: true
-      quantity: US troop levels in Iraq/Afghanistan
-      record: DoD troop-strength reports
-    threshold:
-      present: false
-      stated: "\"return home\" implies to zero, but no level or count is stated"
-    deadline:
-      present: false
-      stated: "\"then\" — conditioned on stability, not dated"
-    instrument:
-      present: false
-      stated: "outcome-framed (\"our troops will return\"), no action he names"
-    measurable: "partial"
-    notes: >
-      The same shape as Obama's Iraq pledge: troop levels are perfectly
-      measurable, but the promise attaches no number and no date — withdrawal is
-      made contingent on "stability and democracy" ("then"), an outcome, not a
-      deadline.
-
-  - id: bush-2004-strict-judges
-    theme: judiciary
+  - id: bush-2004-hsa-low-income
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶38.4"
-        quote: >
-          I will continue to appoint Federal judges who know the
-          difference between personal opinion and the strict
-          interpretation of the law.
-      - in: debate
-        ref: "¶174.2"
-        quote: >
-          I will pick judges who will interpret the Constitution,
-          but I'll have no litmus test.
-    restatement: Keep appointing strict-constructionist federal judges.
-    metric:
-      present: false
-      quantity: judicial philosophy has no agreed measure
-      record: null
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: ¶22.1
+      quote: provide direct help for low-income Americans to purchase them
+    restatement: Direct help for low-income Americans to buy health savings accounts.
+    group: bush-2004-hsa
+    type: action
+    theme: health
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: judicial nominations/appointments (a named action)
-    measurable: "no"
-    notes: >
-      A named instrument he genuinely controls, but the standard — judges who
-      "know the difference between personal opinion and the strict interpretation
-      of the law" — is a value judgment with no metric, number, or deadline. Like
-      Obama's paid-leave pledge: a real action attached to no measurable quantity.
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: federal subsidy for health savings accounts
+      record: enacted legislation (Congress.gov)
+      criterion: a law funds direct help for low-income people to buy HSA-linked coverage
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-preempt-threats
-    ref: "¶44.6"
-    theme: foreign-policy
-    quote: >
-      We must and we will confront threats to America before it is too late.
-    restatement: Confront threats pre-emptively, before they materialize.
-    metric:
-      present: false
-      quantity: none
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: false
-      stated: null
-    measurable: "no"
-    notes: >
-      The statement of the pre-emption doctrine — a forward commitment in force,
-      but pure posture: no quantity, no threshold, no deadline, no named
-      instrument. The zero-of-four anchor at the aspirational end of the scale.
-
-  # --- Promises from the 2005 inaugural address (2005-inaugural.md) ---
-  # The 2005 inaugural is famously an aspirational freedom/"ending tyranny"
-  # vision. Almost all of it is vision, gratitude, or history, not a forward
-  # commitment; the few genuine "we will"/"I will" pledges below are all
-  # aspirational (measurable: no). Refs are ¶paragraph.sentence into the
-  # inaugural. See the report/merge notes for inaugural passages that restate
-  # 2004 acceptance promises rather than adding new ones.
-
-  - id: bush-2004-relations-human-rights
-    theme: foreign-policy
-    restatement: Condition the success of US relations on other governments' decent treatment of their own people.
+  - id: bush-2004-health-access-poor
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶10.2"
-        quote: >
-          We will encourage reform in other governments by making clear that
-          success in our relations will require the decent treatment of their
-          own people.
-    metric:
-      present: false
-      quantity: no agreed measure ("decent treatment"; "success in our relations" is undefined)
-      record: null
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: ¶22.3
+      quote: We will provide low-income Americans with better access to health care.
+    restatement: Better access to health care for low-income Americans.
+    type: outcome
+    theme: health
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: "\"making clear that success in our relations will require...\" — conditioning bilateral relations on human-rights conduct"
-    measurable: "no"
-    notes: >
-      The most concrete of the inaugural's freedom-agenda lines: unlike the pure
-      vision of ¶7-8 ("ending tyranny"), this names an actual lever — tying the
-      standing of US relations to a government's treatment of its people. But
-      "decent treatment" and "success in our relations" have no metric, no
-      threshold, and no deadline, so it grades no despite the named instrument.
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-health-centers
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶22.4
+      quote: In a new term, I will ensure every poor county in America has a community or rural health center.
+    restatement: A community or rural health centre in every poor county.
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: community and rural health centres
+      record: HRSA health centre programme data
+      criterion: every poor county has a health centre by the end of the term
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: bush-2000-community-clinics
+
+  - id: bush-2004-medical-liability
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶23.2
+      quote: To make health care more affordable and accessible, we must pass medical liability reform now.
+    restatement: Pass medical liability reform.
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal medical liability law
+      record: enacted legislation (Congress.gov)
+      criterion: a federal medical liability reform law is enacted
+      ambiguity: The speech does not say what the reform contains (e.g. damage caps).
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-doctors-decide
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶23.3
+      quote: And in all we do to improve health care in America, we will make sure that health decisions are made by doctors and patients, not by bureaucrats in Washington, DC.
+    restatement: Keep health decisions with doctors and patients, not Washington.
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-comptime-flextime
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶24.2
+      quote: In a new term, we will change outdated labor laws to offer comp-time and flex-time.
+    restatement: Change labour laws to allow comp-time and flex-time.
+    type: action
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: Fair Labor Standards Act
+      record: enacted legislation (Congress.gov)
+      criterion: a law lets employers offer comp-time and flex-time
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2004-ownership-society
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶25.1
+      quote: Another priority for a new term is to build an ownership society, because ownership brings security and dignity and independence.
+    - in: inaugural
+      ref: ¶21.4
+      quote: build an ownership society
+    restatement: Build an ownership society.
+    type: outcome
     theme: economy
-    restatement: Reform major institutions to build an "ownership society" and bring the highest standards to schools.
-    sources:
-      - in: inaugural
-        ref: "¶21.3-21.4"
-        quote: >
-          And now we will extend this vision by reforming great institutions to
-          serve the needs of our time. To give every American a stake in the
-          promise and future of our country, we will bring the highest standards
-          to our schools and build an ownership society.
-      - in: debate
-        ref: "¶221.2"
-        quote: >
-          I think—I believe part of a hopeful society is one in
-          which somebody owns something.
-    metric:
-      present: false
-      quantity: "\"an ownership society\" and \"highest standards\" have no single agreed measure"
-      record: null
-    threshold:
-      present: false
-      stated: null
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: "\"reforming great institutions\" — a named (if broad) legislative/administrative program"
-    measurable: "no"
-    notes: >
-      The inaugural's flagship domestic doctrine and the same shape as Obama's
-      "world-class education" pledge: a real named instrument (reforming great
-      institutions) under an aspirational goal with no metric, threshold, or
-      deadline. The concrete expansions in ¶21.5 ("widen the ownership of homes
-      and businesses, retirement savings, and health insurance") largely restate
-      the 2004 acceptance's homes-ownership and personal-accounts pledges and are
-      flagged as merge candidates, not folded in here, to avoid double-counting.
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-heal-divisions
-    theme: unity
-    restatement: Strive in good faith to heal the nation's divisions.
+  - id: bush-2004-affordable-homes
+    kind: ambition
     sources:
-      - in: inaugural
-        ref: "¶25.2"
-        quote: >
-          We have known divisions, which must be healed to move forward in great
-          purposes, and I will strive in good faith to heal them.
-      - in: debate
-        ref: "¶241.1"
-        quote: >
-          I'll continue in the 4 years to continue to try to work to
-          do so.
-    metric:
-      present: false
-      quantity: none ("divisions" has no agreed measure)
-      record: null
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: ¶26.2
+      quote: 'Tonight we set a new goal: 7 million more affordable homes in the next 10 years so more American families will be able to open the door and say, "Welcome to my home."'
+    restatement: 7 million more affordable homes in ten years.
+    type: outcome
+    theme: welfare
     deadline:
-      present: false
+      stated: in the next 10 years
+      applied: 2014-09-02
+    verifiability:
+      level: medium
+      object: affordable homes / homeowners
+      record: Census Housing Vacancy Survey (homeowner households)
+      criterion: 7 million more homes are owned by 2014
+      ambiguity: '"Affordable homes" is undefined; the reading here counts additional owner households.'
+    uncertainty:
+      extraction: probable
+      note: Stated as a goal ("we set a new goal"), so recorded as an ambition; the deadline runs past the term.
+    links: []
+
+  - id: bush-2004-ss-keep-promise
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶27.2
+      quote: We'll always keep the promise of Social Security for our older workers.
+    - in: debate
+      ref: ¶129.3
+      quote: they will continue to get their checks
+    - in: debate
+      ref: ¶130.3
+      quote: We'll honor our commitment to our seniors
+    restatement: Keep Social Security benefits for older workers and current retirees.
+    type: ongoing
+    theme: retirement
+    deadline:
       stated: null
-    instrument:
-      present: false
-      stated: "\"strive in good faith\" — effort, not a named action"
-    measurable: "no"
-    notes: >
-      A genuine "I will" forward commitment kept as an aspirational anchor (the
-      counterpart to Obama's "restore our moral standing"): no quantity, no
-      threshold, no deadline, and "strive in good faith" names effort rather than
-      a controllable instrument.
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: Social Security benefits
+      record: SSA benefit rules; enacted legislation
+      criterion: no law cuts scheduled benefits for retirees and workers near retirement
+      ambiguity: '"Older workers" has no age line.'
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: bush-2000-socialsecurity-preserve
+
+  - id: bush-2004-ss-personal-accounts
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶27.4
+      quote: We must strengthen Social Security by allowing younger workers to save some of their taxes in a personal account, a nest egg you can call your own and Government can never take away.
+    - in: debate
+      ref: ¶130.3
+      quote: for our children and our grandchildren, we need to have a different strategy
+    restatement: Strengthen Social Security by letting younger workers put part of their taxes in personal accounts.
+    type: action
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: Social Security personal accounts
+      record: enacted legislation (Congress.gov)
+      criterion: a law lets younger workers divert part of their payroll tax into personal accounts
+    uncertainty:
+      extraction: probable
+      note: The debate occurrence says only "a different strategy"; the next sentences (¶131.1) name personal accounts.
+    links:
+    - kind: repeats
+      to: bush-2000-socialsecurity-accounts
+
+  - id: bush-2004-help-children
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶29.2
+      quote: To build a more hopeful America, we must help our children reach as far as their vision and character can take them.
+    restatement: Help children reach as far as their vision and character take them.
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-no-child-left-behind
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶30.8-30.9
+      quote: 'And that is the spirit of our education reform and the commitment of our country: No dejaremos a ningun nino atras. We will leave no child behind.'
+    restatement: Leave no child behind.
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: bush-2000-no-child-left-behind
+
+  - id: bush-2004-hs-intervention
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.3
+      quote: In our high schools, we will fund early intervention programs to help students at risk.
+    restatement: Fund early intervention programmes for at-risk high school students.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal high school intervention funding
+      record: enacted appropriations
+      criterion: Congress funds a high school intervention programme
+      ambiguity: No programme is named; any new federal funding line for at-risk high schoolers counts.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-math-science
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.4
+      quote: We will place a new focus on math and science.
+    - in: debate
+      ref: ¶52.3
+      quote: to emphasize math and science in the classrooms
+    restatement: A new focus on maths and science.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal maths and science education programmes
+      record: enacted legislation and appropriations
+      criterion: new federal maths and science education programmes are funded
+      ambiguity: What counts as a "new focus" is a judgement; new or expanded funded programmes are read as meeting it.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-hs-exit-exam
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.5
+      quote: As we make progress, we will require a rigorous exam before graduation.
+    restatement: Require a rigorous exam before high school graduation.
+    type: action
+    theme: education
+    deadline:
+      stated: As we make progress
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: high school exit exams
+      record: enacted legislation (Congress.gov)
+      criterion: a federal requirement for an exam before graduation is enacted
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-pell-grants
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.6
+      quote: expanding Pell grants for low- and middle-income families
+    - in: debate
+      ref: ¶52.3
+      quote: to continue to expand Pell grants
+    restatement: Expand Pell grants for low- and middle-income families.
+    group: bush-2004-college
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: Pell grant programme
+      record: Department of Education Pell grant data
+      criterion: the maximum award or the number of recipients rises over the term
+      ambiguity: '"Expand" could mean more recipients or larger grants; either is read as meeting it.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-college-diploma
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.6
+      quote: we will help more Americans start their career with a college diploma
+    restatement: Help more Americans start their careers with a college diploma.
+    group: bush-2004-college
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: college degrees
+      record: NCES degrees conferred
+      criterion: more degrees are conferred at the end of the term than in 2004
+      ambiguity: '"Help more" is an outcome the government only partly controls; the count of degrees is used as the measure.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-child-health-enroll
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶32.2-32.3
+      quote: In a new term, we will lead an aggressive effort to enroll millions of poor children who are eligible but not signed up for the Government's health insurance programs. We will not allow a lack of attention or information to stand between these children and the health care they need.
+    restatement: Enrol millions of eligible poor children in government health insurance.
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: Medicaid and SCHIP enrolment of eligible children
+      record: CMS enrolment data
+      criterion: child enrolment rises by at least 2 million over the term
+      ambiguity: '"Millions" is read as at least 2 million.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-unborn
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶38.2
+      quote: Because a caring society will value its weakest members, we must make a place for the unborn child.
+    restatement: Make a place for the unborn child.
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-strict-judges
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶38.4
+      quote: I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law
+    - in: debate
+      ref: ¶174.2
+      quote: I will pick judges who will interpret the Constitution
+    restatement: Appoint federal judges who interpret the law strictly.
+    type: ongoing
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal judicial nominations
+      record: Senate confirmation record
+      criterion: nominees are judges known for a textualist or originalist approach
+      ambiguity: Whether a nominee practises "strict interpretation" is a judgement call.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-defend-america
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶40.6
+      quote: I will never relent in defending America, whatever it takes.
+    - in: acceptance
+      ref: ¶45.7
+      quote: Faced with that choice, I will defend America every time.
+    restatement: Never relent in defending America, whatever it takes.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-prevail
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶41.7
+      quote: And we will prevail.
+    restatement: Prevail against the terrorists.
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-confront-threats
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶44.6
+      quote: We must and we will confront threats to America before it is too late.
+    restatement: Confront threats to America before it is too late.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-train-armies
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶47.4
+      quote: We will help new leaders to train their armies
+    restatement: Help the new leaders of Afghanistan and Iraq train their armies.
+    group: bush-2004-afghan-iraq-mission
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: Afghan and Iraqi security forces
+      record: Department of Defense reports to Congress
+      criterion: trained Afghan and Iraqi forces grow over the term
+      ambiguity: No target size is stated in this speech.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-afghan-iraq-elections
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶47.4
+      quote: move toward elections
+    restatement: Help Afghanistan and Iraq move toward elections.
+    group: bush-2004-afghan-iraq-mission
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: national elections in Afghanistan and Iraq
+      record: election records (UN, national electoral commissions)
+      criterion: both countries hold national elections during the term
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-afghan-iraq-democracy
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶47.4
+      quote: get on the path of stability and democracy as quickly as possible
+    restatement: Put Afghanistan and Iraq on the path of stability and democracy.
+    group: bush-2004-afghan-iraq-mission
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-troops-return
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶47.5
+      quote: And then our troops will return home with the honor they have earned.
+    restatement: Bring US troops home from Afghanistan and Iraq once local forces are trained.
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: US troop levels in Afghanistan and Iraq
+      record: Department of Defense troop data
+      criterion: US troops are withdrawn by the end of the term
+      ambiguity: '"And then" gives no date; the end of the term is applied, as for every promise without one.'
+    uncertainty:
+      extraction: probable
+      note: Untriggered future statement ("our troops will return home"), read as a commitment of his plan.
+    links: []
+
+  - id: bush-2004-troops-resources
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶49.9
+      quote: We will give you all the resources, all the tools, and all the support you need for victory.
+    restatement: Give the troops all the resources, tools and support they need for victory.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-protect-homeland
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶16.1
+      quote: At home, we'll do everything we can to protect the homeland.
+    restatement: Do everything possible to protect the homeland.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2004-deficit-half
-    theme: fiscal
-    restatement: Cut the federal budget deficit in half within five years.
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶46.2-46.3"
-        quote: >
-          I sent up my budget man to the Congress, and he says,
-          "Here's how we're going to reduce the deficit in half by 5
-          years." It requires pro-growth policies that grow our
-          economy and fiscal sanity in the Halls of Congress.
-    metric:     { present: true, stated: the federal budget deficit }
-    threshold:  { present: true, stated: reduced by half }
-    deadline:   { present: true, stated: within five years }
-    instrument: { present: true, stated: pro-growth policies plus spending restraint }
-    measurable: "full"
-    notes: >
-      Metric, threshold, deadline and instrument are all present. Still
-      disputable on baseline (which projected deficit) and on how the
-      endpoint is dated.
+    - in: debate
+      ref: ¶46.2
+      quote: I sent up my budget man to the Congress, and he says, "Here's how we're going to reduce the deficit in half by 5 years."
+    restatement: Cut the deficit in half in five years.
+    type: outcome
+    theme: budget
+    deadline:
+      stated: by 5 years
+      applied: 2009-09-30
+    verifiability:
+      level: high
+      object: federal budget deficit
+      record: OMB historical tables; CBO
+      criterion: the FY2009 deficit is at most half the deficit projected for FY2004
+    uncertainty:
+      extraction: probable
+      note: He relays his budget director ("Here's how we're going to …"); the base year and measure are those of the FY2005 budget, not stated in the debate.
+    links: []
 
-  - id: bush-2004-iraqi-troops
-    theme: foreign-policy
-    restatement: Have 125,000 Iraqi security forces trained by the end of 2004.
+  - id: bush-2004-pay-for-skills
+    kind: ambition
     sources:
-      - in: debate
-        ref: "¶195.1-195.2"
-        quote: >
-          The best way to take the pressure off our troops is to
-          succeed in Iraq, is to train Iraqis so they can do the
-          hard work of democracy, is to give them a chance to defend
-          their country, which is precisely what we're doing. We'll
-          have 125,000 troops trained by the end of this year.
-    metric:     { present: true, stated: Iraqi security forces trained }
-    threshold:  { present: true, stated: 125,000 }
-    deadline:   { present: true, stated: by the end of 2004 }
-    instrument: { present: true, stated: US-led training mission }
-    measurable: "full"
-    notes: >
-      A rare fully specified debate promise: number, deadline and
-      instrument all stated. Verification turns on what counts as
-      'trained'.
+    - in: debate
+      ref: ¶49.4
+      quote: We want to help pay for you to gain the skills necessary to fill the jobs of the 21st century."
+    restatement: Help pay for workers to gain the skills for 21st-century jobs.
+    type: ongoing
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-marriage-amendment
-    theme: marriage
-    restatement: Amend the US Constitution to define marriage as between a man and a woman.
+  - id: bush-2004-raise-standards
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶76.1-76.3"
-        quote: >
-          I proposed a constitutional amendment. The reason I did so
-          was because I was worried that activist judges are
-          actually defining the definition of marriage. And the
-          surest way to protect marriage between a man and woman is
-          to amend the Constitution.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: a constitutional amendment }
-    measurable: "partial"
-    notes: >
-      Instrument is explicit; ratification is outside a president's
-      control and unbounded in time.
+    - in: debate
+      ref: ¶52.3
+      quote: to continue to raise standards
+    restatement: Keep raising school standards.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: Untriggered; "4 more years, I've got more to do to …" is read as conditioned on re-election.
+    links: []
 
-  - id: bush-2004-temp-worker
-    theme: immigration
-    restatement: Create a temporary-worker card matching willing foreign workers with willing employers when no American will take the job.
+  - id: bush-2004-reward-teachers
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶150.1"
-        quote: >
-          And so, in order to take pressure off the border, in order
-          to make the borders more secure, I believe there ought to
-          be a temporary-worker card that allows a willing worker
-          and a willing employer to mate up—so long as there's not
-          an American willing to do the job—to join up in order to
-          be able to fulfill the employer's needs.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: a temporary-worker card program }
-    measurable: "partial"
-    notes: >
-      Named program, explicitly not amnesty; no numeric cap or date.
+    - in: debate
+      ref: ¶52.3
+      quote: to continue to reward teachers and school districts that are working
+    restatement: Reward teachers and school districts that succeed.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal teacher incentive funding
+      record: enacted appropriations
+      criterion: a federal programme rewards successful teachers or districts
+      ambiguity: '"Reward" is not defined; a funded incentive programme (e.g. a teacher incentive fund) is read as meeting it.'
+    uncertainty:
+      extraction: probable
+      note: Untriggered; "4 more years, I've got more to do to …" is read as conditioned on re-election.
+    links: []
 
-  - id: bush-2004-border-security
-    theme: immigration
-    restatement: Keep increasing Border Patrol manpower and equipment, including unmanned aircraft, over the next four years.
+  - id: bush-2004-abstinence
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶148.3-148.6"
-        quote: >
-          We're increasing the border security of the United States.
-          We've got 1,000 more Border Patrol agents on the southern
-          border. We're using new equipment. We're using unmanned
-          vehicles to spot people coming across, and we'll continue
-          to do so over the next 4 years.
-    metric:     { present: true, stated: Border Patrol agents and equipment }
-    threshold:  { present: false }
-    deadline:   { present: true, stated: over the next four years }
-    instrument: { present: true, stated: more agents, new equipment, unmanned vehicles }
-    measurable: "partial"
-    notes: >
-      Direction and instruments are stated (he cites 1,000 more agents
-      already) but the future commitment sets no target level.
+    - in: debate
+      ref: ¶92.2
+      quote: I will continue to promote abstinence programs.
+    restatement: Continue to promote abstinence programmes.
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: federal abstinence education funding
+      record: enacted appropriations
+      criterion: federal abstinence education funding continues through the term
+      ambiguity: '"Promote" is read as keeping the programmes funded.'
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2004-health-it
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶97.6
+      quote: We want there to be electronic medical records to cut down on error as well as to reduce costs.
+    restatement: Electronic medical records, to cut errors and costs.
+    type: outcome
     theme: health
-    restatement: Push adoption of electronic medical records to cut errors and costs.
-    sources:
-      - in: debate
-        ref: "¶97.6"
-        quote: >
-          We want there to be electronic medical records to cut down
-          on error as well as to reduce costs.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: electronic medical records }
-    measurable: "partial"
-    notes: >
-      He cites a 20% cost saving others project, but the promise itself
-      sets no target he owns.
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: electronic health record adoption
+      record: ONC / CDC physician surveys
+      criterion: EHR adoption rises over the term
+      ambiguity: No target share is stated.
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-education-standards
+  - id: bush-2004-veterans-care
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶126.7
+      quote: Veterans are getting very good health care under my administration, and they will continue to do so during the next 4 years.
+    restatement: Veterans keep getting very good health care for four more years.
+    type: ongoing
+    theme: veterans
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: Untriggered future statement ("they will continue to do so during the next 4 years").
+    links: []
+
+  - id: bush-2004-ss-bipartisan
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶132.1
+      quote: I will work with Republicans and Democrats.
+    - in: debate
+      ref: ¶132.4
+      quote: And so I'll bring Republicans and Democrats together, and we're of course going to have to consider the costs.
+    restatement: Bring Republicans and Democrats together on Social Security.
+    type: ongoing
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-border-uavs
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶148.6
+      quote: We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years.
+    restatement: Keep using unmanned aircraft to watch the border.
+    group: bush-2004-border
+    type: ongoing
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: border surveillance drones
+      record: Customs and Border Protection records
+      criterion: unmanned aircraft remain in use on the border through the term
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-protect-borders
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶160.6
+      quote: And we'll continue to protect our borders.
+    restatement: Keep protecting the borders.
+    group: bush-2004-border
+    type: ongoing
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-border-manpower
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶160.7
+      quote: We'll continue to increase manpower
+    restatement: Keep increasing Border Patrol manpower.
+    group: bush-2004-border
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: Border Patrol agents
+      record: CBP staffing statistics
+      criterion: there are more Border Patrol agents at the end of the term than in 2004
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-border-equipment
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶160.7
+      quote: equipment
+    restatement: Keep increasing border equipment.
+    group: bush-2004-border
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: border security equipment
+      record: CBP budgets and procurement records
+      criterion: spending on border technology and equipment rises over the term
+      ambiguity: '"Equipment" has no measure; spending is used as the proxy.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-temp-worker
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶150.1
+      quote: And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs.
+    restatement: A temporary-worker card matching willing workers with employers when no American wants the job.
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: temporary worker programme
+      record: enacted legislation (Congress.gov)
+      criterion: a law creates the temporary worker programme
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-no-amnesty
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶152.1-152.2
+      quote: Now, it's very important for our citizens to also know that I don't believe we ought to have amnesty. I don't think we ought to reward illegal behavior.
+    restatement: No amnesty; do not reward illegal immigration.
+    type: ongoing
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: legal status for unauthorised immigrants
+      record: enacted legislation (Congress.gov)
+      criterion: no law grants legal status to unauthorised immigrants without a path through the normal line
+      ambiguity: What counts as "amnesty" is disputed; the reading here is legal status that jumps the line (¶152.3).
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-no-litmus-test
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶174.1
+      quote: I will not have a litmus test
+    - in: debate
+      ref: ¶174.2
+      quote: but I'll have no litmus test
+    restatement: No litmus test for judicial nominees.
+    type: ongoing
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-iraqi-troops-125k
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶195.2
+      quote: We'll have 125,000 troops trained by the end of this year.
+    restatement: 125,000 Iraqi troops trained by the end of 2004.
+    group: bush-2004-afghan-iraq-mission
+    type: outcome
+    theme: defense
+    deadline:
+      stated: by the end of this year
+      applied: 2004-12-31
+    verifiability:
+      level: high
+      object: trained Iraqi security forces
+      record: Department of Defense reports to Congress (Iraq status reports)
+      criterion: at least 125,000 Iraqi troops are trained by 31 December 2004
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: bush-2004-train-armies
+
+  - id: bush-2004-build-coalitions
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶197.7
+      quote: We'll continue to build strong coalitions.
+    restatement: Keep building strong coalitions.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-no-foreign-veto
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶197.8
+      quote: But I will never turn over our national security decisions to leaders of other countries.
+    restatement: Never hand national security decisions to other countries' leaders.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-war-on-terror
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶197.9-197.10
+      quote: We'll be resolute. We'll be strong, and we will wage a comprehensive war against the terrorists.
+    restatement: Be resolute and strong, and wage a comprehensive war against the terrorists.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-no-quotas
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶219.1
+      quote: And secondly, like my opponent, I don't agree we ought to have quotas—I agree, we shouldn't have quotas.
+    restatement: No racial quotas.
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-educate-access
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶219.2
+      quote: But we ought to have an aggressive effort to make sure people are educated, to make sure when they get out of high school there's Pell grants available for them, which is what we've done.
+    restatement: An aggressive effort to educate people and make Pell grants available after high school.
+    type: ongoing
     theme: education
-    restatement: Keep insisting on excellence in every classroom by continuing to raise standards and measure results.
-    sources:
-      - in: debate
-        ref: "¶261.2"
-        quote: >
-          Over the next 4 years, we'll continue to insist on
-          excellence in every classroom in America so that our
-          children have a chance to realize the great promise of
-          America.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: true, stated: over the next four years }
-    instrument: { present: true, stated: the raise-standards-and-measure regime (No Child Left Behind) }
-    measurable: "partial"
-    notes: >
-      A continuation commitment with a named instrument but no
-      measurable target.
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2004-gun-prosecution
-    theme: crime
-    restatement: Protect citizens from gun crime chiefly by prosecuting those who commit crimes with guns.
+  - id: bush-2004-heal-divisions
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶204.3"
-        quote: >
-          But the best way to protect our citizens from guns is to
-          prosecute those who commit crimes with guns.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: federal prosecution task forces }
-    measurable: "partial"
-    notes: >
-      Instrument named (the task-force approach he cites); no target
-      level.
+    - in: inaugural
+      ref: ¶25.2
+      quote: I will strive in good faith to heal them
+    - in: debate
+      ref: ¶241.1
+      quote: I'll continue in the 4 years to continue to try to work to do so.
+    restatement: Work in good faith to heal the country's partisan divisions.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: bush-2000-bring-parties-together
+
+  - id: bush-2004-economy-grows
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶260.4
+      quote: Over the next 4 years, we'll make sure the economy continues to grow.
+    restatement: Keep the economy growing for four years.
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: US economic output
+      record: BEA real GDP
+      criterion: real GDP grows in every year of the term
+      ambiguity: '"Continues to grow" could mean every year or over the term as a whole; every year is read here.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-excellence-classroom
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶261.2
+      quote: Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America.
+    restatement: Keep insisting on excellence in every classroom.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-health-affordable
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶262.1
+      quote: Over the next 4 years, we'll continue to work to make sure health care is available and affordable.
+    restatement: Work to make health care available and affordable.
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-armies-compassion
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶262.2
+      quote: Over the next 4 years, we'll continue to rally the armies of compassion to help heal the hurt that exists in some of our country's neighborhoods.
+    restatement: Keep rallying faith-based and community groups ("armies of compassion").
+    type: ongoing
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-never-waver
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶263.2
+      quote: We must never waver in the face of this enemy that—these ideologues of hate.
+    restatement: Never waver in the face of the terrorists.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-defend-by-arms
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶7.2
+      quote: we will defend ourselves and our friends by force of arms when necessary
+    restatement: Defend the US and its friends by force of arms when necessary.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-no-imposed-government
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶7.5
+      quote: America will not impose our own style of government on the unwilling.
+    restatement: Not impose the American style of government on the unwilling.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: Untriggered; "America will not …" is read as a commitment of the government he leads.
+    links: []
+
+  - id: bush-2004-influence-for-freedom
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶8.3
+      quote: we will use it confidently in freedom's cause
+    restatement: Use America's influence confidently for freedom.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-clarify-choice
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶9.3
+      quote: We will persistently clarify the choice before every ruler and every nation, the moral choice between oppression, which is always wrong, and freedom, which is eternally right.
+    restatement: Press every ruler with the moral choice between oppression and freedom.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-relations-human-rights
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶10.2
+      quote: We will encourage reform in other governments by making clear that success in our relations will require the decent treatment of their own people.
+    restatement: Make good relations with other governments depend on how they treat their people.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-stand-with-oppressed
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶12.2-12.3
+      quote: 'All who live in tyranny and hopelessness can know: The United States will not ignore your oppression or excuse your oppressors. When you stand for your liberty, we will stand with you.'
+    restatement: Not ignore oppression; stand with those who stand for their liberty.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-reform-institutions
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.3
+      quote: And now we will extend this vision by reforming great institutions to serve the needs of our time.
+    restatement: Reform great institutions to serve the needs of the time.
+    type: action
+    theme: government
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-school-standards
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.4
+      quote: we will bring the highest standards to our schools
+    restatement: Bring the highest standards to schools.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-own-homes
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.5
+      quote: We will widen the ownership of homes
+    restatement: Widen home ownership.
+    group: bush-2004-widen-ownership
+    type: outcome
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: high
+      object: home ownership
+      record: Census Housing Vacancy Survey homeownership rate
+      criterion: the homeownership rate is higher at the end of the term than in January 2005
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-own-businesses
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.5
+      quote: businesses
+    restatement: Widen business ownership.
+    group: bush-2004-widen-ownership
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: business ownership
+      record: Census business statistics; BLS self-employment
+      criterion: the share of Americans owning a business rises over the term
+      ambiguity: No measure is named; self-employment or business counts must be chosen.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-own-retirement
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.5
+      quote: retirement savings
+    restatement: Widen ownership of retirement savings.
+    group: bush-2004-widen-ownership
+    type: outcome
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: retirement accounts
+      record: Federal Reserve Survey of Consumer Finances
+      criterion: the share of families with retirement accounts rises over the term
+      ambiguity: Whether "ownership" means account holding or account balances.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-own-health-insurance
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.5
+      quote: and health insurance
+    restatement: Widen ownership of health insurance.
+    group: bush-2004-widen-ownership
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: medium
+      object: health insurance coverage
+      record: Census Current Population Survey; HSA enrolment data
+      criterion: the share of people who own their own coverage (individual plans or HSAs) rises over the term
+      ambiguity: '"Ownership" of health insurance could mean any coverage or individually owned plans; the latter is read here.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2004-freedom-from-want
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.6
+      quote: By making every citizen an agent of his or her own destiny, we will give our fellow Americans greater freedom from want and fear and make our society more prosperous and just and equal.
+    restatement: Give Americans greater freedom from want and fear and a more prosperous, just and equal society.
+    type: outcome
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2009-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []

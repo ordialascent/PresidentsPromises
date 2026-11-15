@@ -1,0 +1,31 @@
+# Screening ledger for 2005-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1). Ids shared with other ledgers are
+# further occurrences of the same promise.
+source: 2005-inaugural
+protocol: 1
+rows:
+  - ref: "¶2.1"
+    decision: describe
+    note: "\"Deep commitments\" of the country; no commitment made."
+  - { ref: "¶7.2", decision: include, promises: [bush-2004-defend-by-arms] }
+  - ref: "¶7.5"
+    decision: include
+    added: true
+    promises: [bush-2004-no-imposed-government]
+    note: "Untriggered; \"America will not\" read as a commitment of the government he leads."
+  - { ref: "¶8.3", decision: include, promises: [bush-2004-influence-for-freedom] }
+  - { ref: "¶9.3", decision: include, promises: [bush-2004-clarify-choice] }
+  - { ref: "¶10.2", decision: include, promises: [bush-2004-relations-human-rights] }
+  - { ref: "¶12.2-12.3", decision: include, promises: [bush-2004-stand-with-oppressed] }
+  - ref: "¶18.2"
+    decision: ceremony
+    note: "Honours the fallen."
+  - { ref: "¶21.3", decision: include, promises: [bush-2004-reform-institutions] }
+  - { ref: "¶21.4", decision: include, promises: [bush-2004-ownership-society, bush-2004-school-standards] }
+  - { ref: "¶21.5", decision: include, promises: [bush-2004-own-homes, bush-2004-own-businesses, bush-2004-own-retirement, bush-2004-own-health-insurance] }
+  - { ref: "¶21.6", decision: include, promises: [bush-2004-freedom-from-want] }
+  - { ref: "¶25.2", decision: include, promises: [bush-2004-heal-divisions] }
+
+#   13 rows: 11 include (1 of them added), 2 excluded (ceremony 1, describe 1)
