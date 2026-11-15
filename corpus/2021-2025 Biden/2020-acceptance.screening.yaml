@@ -1,0 +1,157 @@
+# Screening ledger for 2020-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) goals he set for the term (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2020-acceptance
+protocol: 1
+rows:
+  - ref: "¶6.1-6.2"
+    decision: include
+    promises: [biden-2020-best-of-us]
+    note: "One commitment in two sentences; joined."
+  - { ref: "¶8.3", decision: include, promises: [biden-2020-hope-over-fear] }
+  - ref: "¶9.1"
+    decision: describe
+    note: "About the campaign, before the term."
+  - { ref: "¶10.1", decision: include, promises: [biden-2020-president-for-all] }
+  - { ref: "¶10.2", decision: include, promises: [biden-2020-work-for-all] }
+  - ref: "¶24.2"
+    decision: describe
+    note: "Rhetoric about readiness; no commitment."
+  - ref: "¶31.1"
+    decision: describe
+    note: "\"We must be\" ready; no object."
+  - ref: "¶40.3"
+    decision: describe
+    note: "Rhetoric (\"who we want to be\")."
+  - { ref: "¶67.1", decision: include, promises: [biden-2020-control-virus] }
+  - ref: "¶69.1"
+    decision: describe
+    note: "Reasoning for ¶67.1; no further commitment."
+  - { ref: "¶78.1", decision: include, promises: [biden-2020-covid-strategy] }
+  - { ref: "¶79.1", decision: include, promises: [biden-2020-rapid-tests] }
+  - ref: "¶80.1-80.3"
+    decision: include
+    promises: [biden-2020-domestic-ppe]
+    note: "¶80.3 is the purpose clause."
+  - { ref: "¶81.1", decision: include, promises: [biden-2020-schools-resources] }
+  - { ref: "¶82.1", decision: include, promises: [biden-2020-free-experts] }
+  - { ref: "¶83.1", decision: include, promises: [biden-2020-mask-mandate] }
+  - ref: "¶85.1"
+    decision: describe
+    note: "Sums up ¶78.1-83.1."
+  - ref: "¶90.1-90.2"
+    decision: include
+    promises: [biden-2020-protect-america]
+    note: "One commitment in two sentences; joined."
+  - ref: "¶106.2-106.3"
+    decision: include
+    promises: [biden-2020-build-back-better]
+    note: "One commitment in two sentences; joined."
+  - ref: "¶107.1"
+    decision: include
+    added: true
+    promises: [biden-2020-modern-infrastructure]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3)."
+  - ref: "¶107.2"
+    decision: include
+    added: true
+    promises: [biden-2020-clean-water-pipes]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3)."
+  - ref: "¶107.3"
+    decision: include
+    added: true
+    promises: [biden-2020-manufacturing-tech-jobs-5m]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3)."
+  - ref: "¶108.1"
+    decision: include
+    added: true
+    promises: [biden-2020-lower-premiums, biden-2020-lower-deductibles, biden-2020-lower-drug-prices]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3). Three objects; split."
+  - ref: "¶109.1"
+    decision: include
+    added: true
+    promises: [biden-2020-job-training, biden-2020-college-cost, biden-2020-student-debt]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3). Three objects; split."
+  - ref: "¶110.1"
+    decision: include
+    added: true
+    promises: [biden-2020-child-care, biden-2020-elder-care]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3). Two objects; split."
+  - ref: "¶110.2"
+    decision: include
+    added: true
+    promises: [biden-2020-immigration-system]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3)."
+  - ref: "¶110.3"
+    decision: include
+    added: true
+    promises: [biden-2020-empower-unions]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3)."
+  - ref: "¶110.4"
+    decision: include
+    added: true
+    promises: [biden-2020-equal-pay]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3)."
+  - ref: "¶110.5"
+    decision: include
+    added: true
+    promises: [biden-2020-rising-wages]
+    note: "Untriggered fragment completing \"we'll build it back better\" (¶106.3)."
+  - ref: "¶110.6-110.7"
+    decision: include
+    promises: [biden-2020-pay-essential-workers]
+    note: "¶110.7 \"we're finally going to\" completes ¶110.6; joined."
+  - { ref: "¶111.1", decision: include, promises: [biden-2020-deal-climate] }
+  - ref: "¶112.1"
+    decision: include
+    added: true
+    promises: [biden-2020-tax-wealthy, biden-2020-tax-corporations]
+    note: "Untriggered; \"we can pay for these investments by …\" names the means. Two objects, recorded as ambitions."
+  - ref: "¶113.4"
+    decision: include
+    added: true
+    promises: [biden-2020-tax-wealthy, biden-2020-tax-corporations]
+    note: "Untriggered; \"it's long past time\" read like \"now is the time to\". Two objects, recorded as ambitions."
+  - ref: "¶115.1"
+    decision: include
+    promises: [biden-2020-keep-payroll-tax]
+    note: "\"It\" is eliminating the tax that funds Social Security (¶114.3)."
+  - ref: "¶115.2"
+    decision: include
+    promises: [biden-2020-protect-social-security, biden-2020-protect-medicare]
+    note: "Two objects; split."
+  - ref: "¶118.1"
+    decision: describe
+    note: "About his running mate."
+  - ref: "¶118.2"
+    decision: describe
+    note: "About his running mate."
+  - ref: "¶124.1"
+    decision: describe
+    note: "About his family."
+  - { ref: "¶128.1", decision: include, promises: [biden-2020-stand-with-allies] }
+  - { ref: "¶128.2", decision: include, promises: [biden-2020-no-cozying-dictators] }
+  - ref: "¶129.1"
+    decision: include
+    added: true
+    promises: [biden-2020-russia-bounties]
+    note: "Untriggered future statement (\"Under President Biden, America will not …\")."
+  - ref: "¶129.2"
+    decision: include
+    added: true
+    promises: [biden-2020-punish-election-interference]
+    note: "Untriggered (\"Nor will I\"), continuing ¶129.1."
+  - ref: "¶130.1-130.2"
+    decision: include
+    promises: [biden-2020-human-rights-peace]
+    note: "Two manner-only low commitments, kept as one."
+  - ref: "¶146.1"
+    decision: describe
+    note: "Memory (\"I'll never forget\")."
+  - ref: "¶178.1"
+    decision: describe
+    note: "Affirms ¶177.1, that the campaign's battle will be won."
+
+#   45 rows: 34 include (14 of them added), 11 excluded (describe 11)

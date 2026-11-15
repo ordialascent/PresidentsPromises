@@ -23681,14 +23681,524 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2021–2025",
     "speechYear": 2020,
     "label": "Biden 2020",
-    "method": "legacy",
+    "method": "protocol",
     "promises": [
       {
-        "id": "biden-2020-virus-control",
+        "id": "biden-2020-best-of-us",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Get control of the COVID-19 virus as the first priority in office.",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Draw on the best of the country, not the worst; be an ally of the light.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶6.1-6.2",
+            "quote": "I will draw on the best of us not the worst. I will be an ally of the light not of the darkness."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-hope-over-fear",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Choose hope over fear, facts and science over fiction, fairness over privilege.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶8.3",
+            "quote": "We will choose hope over fear, facts over fiction, fairness over privilege."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.4",
+            "quote": "I'm going to give you hope."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.6-355.7",
+            "quote": "We're going to choose science over fiction. We're going to choose hope over fear."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-president-for-all",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Be a president for all Americans, not only for his party or his voters.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶10.1",
+            "quote": "while I will be a Democratic candidate, I will be an American president."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶22.9",
+            "quote": "I will be a President for all Americans—all Americans."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶194.1",
+            "quote": "I'm running as a proud Democrat, but I'm gonna be an American president."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.1-355.3",
+            "quote": "I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-work-for-all",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Work as hard for those who did not support him as for those who did.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶10.2",
+            "quote": "I will work as hard for those who didn't support me as I will for those who did."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶22.10",
+            "quote": "I will fight as hard for those who did not support me as for those who did."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-level-with-you",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Always level with the public.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶37.2",
+            "quote": "I will always level with you."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-defend-constitution-democracy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Defend the Constitution and democracy.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶37.3-37.4",
+            "quote": "I will defend the Constitution. I will defend our democracy."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-serve-public-good",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Give everything in public service, for the public good rather than power or personal interest.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶37.6",
+            "quote": "thinking not of power, but of possibilities; not of personal interest, but of the public good."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-decency-even-chance",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Make sure people get decency, honour, respect, dignity and an even chance.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.14-355.19",
+            "quote": "Now, I'm going to make sure you get that."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That\" is the list in ¶355.14-355.18 (decency, honor, respect, dignity, an even chance)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-racial-justice",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Deliver racial justice and deal with systemic racism.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶6.5",
+            "quote": "The dream of justice for all will be deferred no longer."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.9-355.12",
+            "quote": "We can deal with a systemic racism."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Inaugural ¶6.5 is untriggered and impersonal (\"will be deferred no longer\"). In the debate, \"that's what we're going to do\" (¶355.12) points back to ¶355.9-355.11."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-equal-pay",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Equal pay for women.",
         "quality": "partial",
         "occurrences": [
           {
@@ -23703,9 +24213,44 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
               "label": "2020 acceptance speech"
             },
-            "ref": "¶67.1",
-            "quote": "As president, the first step I will take will be to get control of the virus that's ruined so many lives."
+            "ref": "¶110.4",
+            "quote": "With equal pay for women."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
           },
+          "verifiability": {
+            "level": "medium",
+            "object": "pay gap between women and men",
+            "record": "enacted legislation (Congress.gov); BLS and Census earnings data",
+            "criterion": "a pay-equity law is enacted, or the gender pay gap narrows over the term",
+            "ambiguity": "The words name the goal, not the means; either a law or a narrower gap is read as progress, full equality as kept."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2012-equal-pay"
+            }
+          ]
+        }
+      },
+      {
+        "id": "biden-2020-defeat-domestic-extremism",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Confront and defeat political extremism, white supremacy and domestic terrorism.",
+        "quality": "no",
+        "occurrences": [
           {
             "source": {
               "kind": "inaugural",
@@ -23718,8 +24263,143 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
               "label": "2021 inaugural address"
             },
-            "ref": "¶27.4",
-            "quote": "We must set aside politics and finally face this pandemic as one Nation."
+            "ref": "¶6.7",
+            "quote": "a rise of political extremism, White supremacy, domestic terrorism that we must confront and we will defeat."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-state-sentencing-fund",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Offer states $20 billion to repeal mandatory minimums and set up drug courts.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶251.13",
+            "quote": "I'm offering $20 billion to states to change their state laws to eliminate minimum mandatories and set up drug courts."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "$20 billion federal grant programme for states",
+            "record": "appropriations (Congress.gov)",
+            "criterion": "a $20 billion programme for state sentencing reform and drug courts is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-change-justice-system",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Fundamentally change the criminal justice system.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶251.16",
+            "quote": "We should fundamentally change the system and that's what I'm going to do."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-treatment-not-jail",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Send people with a pure drug offence to treatment, not jail.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶288.4",
+            "quote": "we should not send anyone to jail for a pure drug offense."
           },
           {
             "source": {
@@ -23733,17 +24413,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
               "label": "2020 debate"
             },
-            "ref": "¶42.1",
-            "quote": "What I would say is I'm going to shut down the virus, not the country."
+            "ref": "¶288.12",
+            "quote": "That's what I'm going to get done"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "incarceration for drug use",
+            "record": "federal sentencing law (Congress.gov); Bureau of Prisons data",
+            "criterion": "federal law no longer sends people to prison for drug use or possession alone",
+            "ambiguity": "\"Pure drug offense\" is read as possession for personal use; only federal law is in his power."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That\" in ¶288.12 is treatment instead of jail (¶288.4-288.10)."
+          },
+          "links": []
+        }
       },
       {
         "id": "biden-2020-covid-strategy",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Implement a national COVID-19 strategy on the first day in office.",
+        "restatement": "Implement a national COVID-19 strategy on day one.",
         "quality": "partial",
         "occurrences": [
           {
@@ -23774,16 +24474,216 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.16",
-            "quote": "And so folks, I will take care of this, I will end this, I will make sure we have a plan."
+            "quote": "I will make sure we have a plan."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "on day one",
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "national COVID-19 strategy",
+            "record": "executive orders (Federal Register); the published national strategy",
+            "criterion": "a national COVID-19 strategy is issued and put into effect on the first day",
+            "ambiguity": "\"Implement\" is read as issuing the strategy and starting it on day one, not completing every part."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The debate occurrence has no date; it is read as the same commitment."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-control-virus",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Get control of the virus, as the first step.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶67.1",
+            "quote": "As president, the first step I will take will be to get control of the virus that's ruined so many lives."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶42.1",
+            "quote": "I'm going to shut down the virus"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-virus-not-country",
+          "deadline": {
+            "stated": "the first step I will take",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "spread of COVID-19",
+            "record": "CDC case, hospitalisation and death data",
+            "criterion": "cases and deaths fall and stay well below their level at the start of the term",
+            "ambiguity": "\"Control\" is not defined; it is read as a sustained fall in cases and deaths."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-no-national-lockdown",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Do not shut down the country.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶42.1",
+            "quote": "not the country."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶44.1",
+            "quote": "I'm not shutting down the nation"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "biden-2020-virus-not-country",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "nationwide shutdown order",
+            "record": "executive orders (Federal Register)",
+            "criterion": "no nationwide shutdown order is issued in the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-end-pandemic",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "End the pandemic.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.16",
+            "quote": "I will take care of this, I will end this"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶27.7",
+            "quote": "We will get through this, together—together."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "COVID-19 pandemic in the US",
+            "record": "HHS public health emergency declarations; CDC death data",
+            "criterion": "the COVID-19 public health emergency ends within the term",
+            "ambiguity": "The end of the emergency declaration is read as the end; a lasting level of deaths could also be read as not ended."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"This\" in debate ¶7.16 is the pandemic (¶7.1-7.15). Inaugural ¶27.7 \"get through this\" is a softer restatement."
+          },
+          "links": []
+        }
       },
       {
         "id": "biden-2020-rapid-tests",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Develop and deploy rapid COVID tests with immediate results.",
+        "restatement": "Develop and deploy rapid tests with immediate results.",
         "quality": "partial",
         "occurrences": [
           {
@@ -23816,15 +24716,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶7.13",
             "quote": "I would make sure we move in the direction of rapid testing, investing in rapid testing."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "rapid COVID-19 tests",
+            "record": "FDA authorisations; HHS procurement and distribution records",
+            "criterion": "rapid tests with near-immediate results are federally funded and distributed widely",
+            "ambiguity": "No quantity is stated; read as wide federal deployment."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶7.13 uses \"would\" in answer to what he would do as president; read as conditioned on the election."
+          },
+          "links": []
+        }
       },
       {
         "id": "biden-2020-domestic-ppe",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "trade",
-        "restatement": "Manufacture medical supplies and PPE domestically to end reliance on China.",
-        "quality": "no",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Make the medical supplies and protective equipment the country needs in America.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -23839,17 +24759,97 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶80.1-80.3",
-            "quote": "We'll make the medical supplies and protective equipment our country needs. And we'll make them here in America. So we will never again be at the mercy of China and other foreign countries in order to protect our own people."
+            "quote": "We'll make the medical supplies and protective equipment our country needs. And we'll make them here in America."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "production of medical supplies and protective equipment",
+            "record": "HHS and Defense Production Act contracts; Census trade data on PPE imports",
+            "criterion": "the medical supplies and PPE the country needs are produced in the US",
+            "ambiguity": "No share of domestic production is stated; a clear shift to US production is read as kept."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-schools-reopen",
+        "id": "biden-2020-reopening-standards",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Set national standards for safely opening schools and businesses.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶7.14",
+            "quote": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶52.8",
+            "quote": "we're going to make sure that we open safely."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-reopen-safely",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "national reopening guidance",
+            "record": "CDC guidance documents",
+            "criterion": "national standards for safely opening schools and businesses are issued",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶7.14 uses \"would\" in answer to what he would do as president; read as conditioned on the election. ¶52.8 is a softer restatement."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-schools-resources",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "education",
-        "restatement": "Give schools the resources to reopen safely and effectively.",
-        "quality": "no",
+        "restatement": "Make sure schools have the resources to be open, safe and effective.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -23879,16 +24879,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.14",
-            "quote": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe, and give them the wherewithal and financial resources to be able to do that."
+            "quote": "give them the wherewithal and financial resources to be able to do that."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-reopen-safely",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal funding for safe school reopening",
+            "record": "appropriations (Congress.gov); Education Department relief-fund data",
+            "criterion": "federal funds for safely reopening schools are enacted",
+            "ambiguity": "\"The resources they need\" is not quantified."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "In debate ¶7.14 \"them\" covers schools and businesses; the school part is this promise."
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-experts-transparency",
+        "id": "biden-2020-free-experts",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Let public-health experts speak freely so the public gets unvarnished information.",
+        "restatement": "Take the muzzle off public health experts so the public gets the information it needs.",
         "quality": "no",
         "occurrences": [
           {
@@ -23905,31 +24925,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶82.1",
             "quote": "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
-              "year": 2020,
-              "date": "2020-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
-              "label": "2020 debate"
-            },
-            "ref": "¶15.1-15.2",
-            "quote": "Make sure it's totally transparent. Have the scientific world see, know, look at it, go through all the processes."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "biden-2020-mask-mandate",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Institute a national mask mandate.",
-        "quality": "no",
+        "restatement": "Issue a national mask mandate.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -23945,7 +24970,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶83.1",
             "quote": "We'll have a national mandate to wear a mask-not as a burden, but to protect each other."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
           },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal mask mandate",
+            "record": "executive orders (Federal Register)",
+            "criterion": "a mask-wearing mandate is issued by the federal government",
+            "ambiguity": "A president can order masks only on federal property and in interstate transport; whether such an order counts as \"national\" is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-encourage-masks",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Encourage everyone to wear a mask.",
+        "quality": "no",
+        "occurrences": [
           {
             "source": {
               "kind": "debate",
@@ -23960,56 +25015,6 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶7.12",
             "quote": "What I would do is make sure we have everyone encouraged to wear a mask, all the time."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-infrastructure-jobs",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "economy",
-        "restatement": "Rebuild infrastructure and create five million manufacturing and technology jobs.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
-              "year": 2020,
-              "date": "2020-08-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
-              "label": "2020 acceptance speech"
-            },
-            "ref": "¶106.3-107.3",
-            "quote": "And when we do, we'll not only build it back, we'll build it back better. With modern roads, bridges, highways, broadband, ports and airports as a new foundation for economic growth. With pipes that transport clean water to every community. With 5 million new manufacturing and technology jobs so the future is made in America."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-health-premiums",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Lower premiums, deductibles, and drug prices by building on the ACA.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
-              "year": 2020,
-              "date": "2020-08-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
-              "label": "2020 acceptance speech"
-            },
-            "ref": "¶108.1",
-            "quote": "With a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act he's trying to rip away."
           },
           {
             "source": {
@@ -24023,42 +25028,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
               "label": "2020 debate"
             },
-            "ref": "¶150.4",
-            "quote": "Secondly, we're going to make sure we reduce the premiums and reduce drug prices by making sure that there's competition that doesn't exist now by allowing Medicare to negotiate drug prices with the insurance companies."
+            "ref": "¶56.7",
+            "quote": "what we have to do is say, wear these masks"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶7.12 uses \"would\" in answer to what he would do as president; read as conditioned on the election. ¶56.7 is a softer restatement."
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-college-cost",
+        "id": "biden-2020-build-back-better",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Make college affordable so cost and student debt aren't barriers.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
-              "year": 2020,
-              "date": "2020-08-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
-              "label": "2020 acceptance speech"
-            },
-            "ref": "¶109.1",
-            "quote": "With an education system that trains our people for the best jobs of the 21st century, where cost doesn't prevent young people from going to college, and student debt doesn't crush them when they get out."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-care-economy",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Provide child care and elder care so parents can work and the elderly can age at home.",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Rebuild the economy and build it back better.",
         "quality": "no",
         "occurrences": [
           {
@@ -24073,42 +25073,52 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
               "label": "2020 acceptance speech"
             },
-            "ref": "¶110.1",
-            "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-immigration",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "Reform the immigration system to power the economy and reflect American values.",
-        "quality": "no",
-        "occurrences": [
+            "ref": "¶106.2-106.3",
+            "quote": "Together, we can, and we will, rebuild our economy. And when we do, we'll not only build it back, we'll build it back better."
+          },
           {
             "source": {
-              "kind": "acceptance",
-              "medium": "speech",
+              "kind": "debate",
+              "medium": "debate",
               "speaker": "Joseph R. Biden, Jr.",
-              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
               "year": 2020,
-              "date": "2020-08-20",
+              "date": "2020-10-22",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
-              "label": "2020 acceptance speech"
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
             },
-            "ref": "¶110.2",
-            "quote": "With an immigration system that powers our economy and reflects our values."
+            "ref": "¶355.9-355.12",
+            "quote": "We can grow this economy."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-labor",
+        "id": "biden-2020-modern-infrastructure",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Empower unions, guarantee equal pay for women, and raise wages.",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Build modern roads, bridges, highways, broadband, ports and airports.",
         "quality": "partial",
         "occurrences": [
           {
@@ -24123,17 +25133,222 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
               "label": "2020 acceptance speech"
             },
-            "ref": "¶110.3-110.5",
-            "quote": "With newly empowered labor unions. With equal pay for women. With rising wages you can raise a family on."
+            "ref": "¶107.1",
+            "quote": "With modern roads, bridges, highways, broadband, ports and airports as a new foundation for economic growth."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal infrastructure investment",
+            "record": "enacted legislation (Congress.gov); BEA public construction spending",
+            "criterion": "a major infrastructure law covering roads, bridges, broadband, ports and airports is enacted",
+            "ambiguity": "No scale is stated; the reading is a major federal infrastructure programme."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "trump-2016-rebuild-infrastructure"
+            }
+          ]
+        }
       },
       {
-        "id": "biden-2020-essential-workers-pay",
+        "id": "biden-2020-clean-water-pipes",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Raise the pay of essential workers.",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Pipes that bring clean water to every community.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶107.2",
+            "quote": "With pipes that transport clean water to every community."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "drinking-water pipes",
+            "record": "appropriations (Congress.gov); EPA drinking-water and lead-service-line data",
+            "criterion": "federal funding to bring safe water pipes to every community is enacted",
+            "ambiguity": "\"Every community\" is read as nationwide funding to replace unsafe (lead) pipes; partial funding needs a judgement."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-manufacturing-tech-jobs-5m",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Create 5 million new manufacturing and technology jobs.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶107.3",
+            "quote": "With 5 million new manufacturing and technology jobs so the future is made in America."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "manufacturing and technology employment",
+            "record": "BLS Current Employment Statistics",
+            "criterion": "5 million more manufacturing and technology jobs at the end of the term than at its start",
+            "ambiguity": "Which BLS series count as \"technology jobs\" is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-empower-unions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Empower labor unions.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶110.3",
+            "quote": "With newly empowered labor unions."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "workers' right to organise",
+            "record": "enacted legislation (Congress.gov); NLRB rules",
+            "criterion": "a law or rule that strengthens the right to organise is enacted",
+            "ambiguity": "\"Empowered\" is not defined; any law or rule that strengthens organising is read as kept."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-rising-wages",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Rising wages a family can live on.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶110.5",
+            "quote": "With rising wages you can raise a family on."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "wages",
+            "record": "BLS real average hourly earnings",
+            "criterion": "real wages rise over the term",
+            "ambiguity": "\"You can raise a family on\" is not quantified; rising real wages are read as kept."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-pay-essential-workers",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Pay essential workers, not just praise them.",
         "quality": "partial",
         "occurrences": [
           {
@@ -24151,55 +25366,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶110.6-110.7",
             "quote": "Yes, we're going to do more than praise our essential workers. We're finally going to pay them."
           }
-        ]
-      },
-      {
-        "id": "biden-2020-clean-energy-jobs",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "climate",
-        "restatement": "Address climate change and create millions of clean-energy jobs.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
-              "year": 2020,
-              "date": "2020-08-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
-              "label": "2020 acceptance speech"
-            },
-            "ref": "¶111.1-111.3",
-            "quote": "We can, and we will, deal with climate change. It's not only a crisis, it's an enormous opportunity. An opportunity for America to lead the world in clean energy and create millions of new good-paying jobs in the process."
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
-              "year": 2020,
-              "date": "2020-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
-              "label": "2020 debate"
-            },
-            "ref": "¶305.7",
-            "quote": "Because what it does, it will create millions of new, good-paying jobs."
-          }
-        ]
+          "verifiability": {
+            "level": "medium",
+            "object": "pay for essential workers",
+            "record": "appropriations (Congress.gov); Treasury relief-fund guidance",
+            "criterion": "federal premium or hazard pay for essential workers is enacted",
+            "ambiguity": "\"Pay them\" is read as premium or hazard pay; higher wages in general would be a looser reading."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We're finally going to\" (¶110.7) is the lexicon's \"we're going to\" with \"finally\" inserted; ¶110.6-110.7 joined."
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-tax-fair-share",
+        "id": "biden-2020-keep-payroll-tax",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "taxes",
-        "restatement": "Pay for the agenda by ending loopholes and repealing the $1.3T tax cut for the top 1% and corporations.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Do not let the payroll tax that funds Social Security be eliminated.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -24213,18 +25408,38 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
               "label": "2020 acceptance speech"
             },
-            "ref": "¶112.1",
-            "quote": "And we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent and the biggest, most profitable corporations, some of which pay no tax at all."
+            "ref": "¶115.1",
+            "quote": "I will not let it happen."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "payroll tax funding Social Security",
+            "record": "Internal Revenue Code (Congress.gov)",
+            "criterion": "the Social Security payroll tax is not eliminated in the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"It\" is the president's proposal to eliminate the tax that funds Social Security (¶114.2-114.3)."
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-social-security-medicare",
+        "id": "biden-2020-protect-social-security",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Protect Social Security and Medicare from cuts.",
-        "quality": "no",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Protect Social Security.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -24241,15 +25456,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶115.2",
             "quote": "If I'm your president, we're going to protect Social Security and Medicare."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "biden-2020-protect-ss-medicare",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Social Security benefits",
+            "record": "Social Security Act amendments (Congress.gov); SSA programme rules",
+            "criterion": "no cut to Social Security benefits is enacted",
+            "ambiguity": "\"Protect\" is read as no enacted benefit cuts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-election-interference",
+        "id": "biden-2020-protect-medicare",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Confront Russian bounties on US troops and foreign election interference.",
-        "quality": "no",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Protect Medicare.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -24263,188 +25498,38 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
               "label": "2020 acceptance speech"
             },
-            "ref": "¶129.1-129.2",
-            "quote": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers. Nor will I put up with foreign interference in our most sacred democratic exercise -- voting."
+            "ref": "¶115.2",
+            "quote": "If I'm your president, we're going to protect Social Security and Medicare."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "biden-2020-protect-ss-medicare",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
-              "year": 2020,
-              "date": "2020-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
-              "label": "2020 debate"
-            },
-            "ref": "¶70.3",
-            "quote": "I made it clear that any country, no matter who it is, that interferes in American elections will pay a price."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-alliances",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Repair America's alliances and re-engage with the world.",
-        "quality": "no",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Inaugural Address",
-              "year": 2021,
-              "date": "2021-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
-              "label": "2021 inaugural address"
-            },
-            "ref": "¶28.4",
-            "quote": "We will repair our alliances and engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges."
+          "verifiability": {
+            "level": "medium",
+            "object": "Medicare benefits",
+            "record": "Medicare law (Congress.gov); CMS programme rules",
+            "criterion": "no cut to Medicare benefits is enacted",
+            "ambiguity": "\"Protect\" is read as no enacted benefit cuts."
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
-              "year": 2020,
-              "date": "2020-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
-              "label": "2020 debate"
-            },
-            "ref": "¶100.15",
-            "quote": "We need to be having the rest of our friends with us, saying to China, these are the rules."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-president-for-all",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "governance",
-        "restatement": "Govern as a President for all Americans, fighting as hard for opponents as for supporters.",
-        "quality": "no",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Inaugural Address",
-              "year": 2021,
-              "date": "2021-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
-              "label": "2021 inaugural address"
-            },
-            "ref": "¶22.9-22.10",
-            "quote": "And I pledge this to you: I will be a President for all Americans—all Americans. And I promise you, I will fight as hard for those who did not support me as for those who did."
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
-              "year": 2020,
-              "date": "2020-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
-              "label": "2020 debate"
-            },
-            "ref": "¶355.1-355.3",
-            "quote": "I will say, 'I'm the American president. I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-level-with-you",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "governance",
-        "restatement": "Always level with the American people — be honest and transparent.",
-        "quality": "no",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Inaugural Address",
-              "year": 2021,
-              "date": "2021-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
-              "label": "2021 inaugural address"
-            },
-            "ref": "¶37.2",
-            "quote": "Before God and all of you I give you my word: I will always level with you."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-minimum-wage",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Raise the federal minimum wage to $15 an hour.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
-              "year": 2020,
-              "date": "2020-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
-              "label": "2020 debate"
-            },
-            "ref": "¶206.5",
-            "quote": "They deserve a minimum wage of $15."
-          }
-        ]
-      },
-      {
-        "id": "biden-2020-citizenship-path",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "Send Congress a pathway to citizenship for over 11 million undocumented people within his first 100 days.",
-        "quality": "full",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Joseph R. Biden, Jr.",
-              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
-              "year": 2020,
-              "date": "2020-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
-              "label": "2020 debate"
-            },
-            "ref": "¶226.5",
-            "quote": "And the fact is, and I've made it very clear, within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people."
-          }
-        ]
+          "links": []
+        }
       },
       {
         "id": "biden-2020-public-option",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Pass a public option on top of the Affordable Care Act (Bidencare).",
-        "quality": "partial",
+        "restatement": "Pass a public health insurance option on top of the Affordable Care Act.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -24461,14 +25546,269 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶150.1",
             "quote": "What I'm going to do is pass Obamacare with a public option -- become Bidencare."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "public health insurance option",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law creating a public insurance option is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "biden-2020-oil-transition",
+        "id": "biden-2020-medicare-negotiation",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "climate",
-        "restatement": "Transition away from the oil industry to renewable energy and end federal oil subsidies.",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Let Medicare negotiate drug prices.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶150.4",
+            "quote": "by allowing Medicare to negotiate drug prices"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Medicare drug-price negotiation",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law lets Medicare negotiate drug prices",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2008-drug-price-negotiation"
+            }
+          ]
+        }
+      },
+      {
+        "id": "biden-2020-lower-premiums",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Lower health insurance premiums.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶108.1",
+            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶150.4",
+            "quote": "we're going to make sure we reduce the premiums"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶152.10",
+            "quote": "We have to provide health insurance for people at an affordable rate, and that's what I do."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-health-costs",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "health insurance premiums",
+            "record": "KFF Employer Health Benefits Survey; CMS marketplace premium data",
+            "criterion": "premiums paid by consumers fall over the term",
+            "ambiguity": "Which premiums (employer, marketplace, before or after subsidies) is not stated."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise. Debate ¶152.10 is a softer restatement."
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2008-lower-premiums"
+            }
+          ]
+        }
+      },
+      {
+        "id": "biden-2020-lower-deductibles",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Lower health insurance deductibles.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶108.1",
+            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-health-costs",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "health insurance deductibles",
+            "record": "KFF Employer Health Benefits Survey; CMS marketplace plan data",
+            "criterion": "average deductibles fall over the term",
+            "ambiguity": "Which plans are meant is not stated."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-lower-drug-prices",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Lower prescription drug prices.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶108.1",
+            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶150.4",
+            "quote": "reduce drug prices"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-health-costs",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "prescription drug prices",
+            "record": "BLS consumer price index for prescription drugs; CMS drug spending data",
+            "criterion": "prescription drug prices fall over the term",
+            "ambiguity": "List or net prices, and which index, is not stated."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-pre-existing-conditions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Protect people with pre-existing conditions.",
         "quality": "partial",
         "occurrences": [
           {
@@ -24483,18 +25823,1008 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
               "label": "2020 debate"
             },
-            "ref": "¶333.1-333.2",
-            "quote": "I would transition from the oil industry. Yes."
+            "ref": "¶150.8",
+            "quote": "we're going to make sure we're in a situation that we've actually protect pre existing"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "insurance protections for pre-existing conditions",
+            "record": "Affordable Care Act (Congress.gov); court rulings",
+            "criterion": "the protections for pre-existing conditions stay in force through the term",
+            "ambiguity": "\"Protect\" is read as keeping the ACA protections in force."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The sentence breaks off; read with ¶150.14 (people with pre-existing conditions)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-job-training",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "An education system that trains people for the best jobs of the 21st century.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶109.1",
+            "quote": "With an education system that trains our people for the best jobs of the 21st century"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-education",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-college-cost",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Cost should not prevent young people from going to college.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶109.1",
+            "quote": "where cost doesn't prevent young people from going to college"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-education",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "cost of college",
+            "record": "enacted legislation (Congress.gov); NCES net-price and enrolment data",
+            "criterion": "a federal programme makes college free or affordable for students who could not otherwise pay",
+            "ambiguity": "\"Cost doesn't prevent\" is not quantified; read as a federal programme for tuition-free or affordable college."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-student-debt",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Student debt should not crush graduates.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶109.1",
+            "quote": "student debt doesn't crush them when they get out"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-education",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "student loan debt",
+            "record": "Education Department loan portfolio data",
+            "criterion": "federal relief reduces student-debt burdens",
+            "ambiguity": "\"Doesn't crush\" is not quantified."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-child-care",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Child care that makes it possible for parents to work.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶110.1",
+            "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-care",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal child-care support",
+            "record": "enacted legislation (Congress.gov); HHS child-care programme data",
+            "criterion": "a law expanding affordable child care is enacted",
+            "ambiguity": "No scale is stated."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-elder-care",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Elder care that lets older people stay in their homes.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶110.1",
+            "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-care",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal home and elder care support",
+            "record": "enacted legislation (Congress.gov); CMS home and community-based services data",
+            "criterion": "a law expanding home and elder care is enacted",
+            "ambiguity": "No scale is stated."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-immigration-system",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "An immigration system that powers the economy and reflects American values.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶110.2",
+            "quote": "With an immigration system that powers our economy and reflects our values."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-citizenship-bill-100-days",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Within 100 days, send Congress a bill with a path to citizenship for 11 million undocumented people.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶226.5",
+            "quote": "within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "within 100 days",
+            "applied": "2021-04-30"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "immigration bill",
+            "record": "Congress.gov bill records",
+            "criterion": "a bill with a path to citizenship for about 11 million people is sent to Congress within 100 days",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-restore-daca",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Restore legal status for Dreamers (DACA recipients).",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶226.6",
+            "quote": "they're going to be legally certified again, to be able to stay in this country"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-dreamers",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "DACA protection",
+            "record": "DHS rules and memoranda (Federal Register)",
+            "criterion": "DACA protection is reinstated",
+            "ambiguity": "\"Legally certified\" is read as restoring DACA status."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered (\"they're going to be\"); the future of his plan for Dreamers."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-dreamers-citizenship",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Put Dreamers on a path to citizenship.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶226.6",
+            "quote": "and put on a path to citizenship."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-dreamers",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "path to citizenship for Dreamers",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law gives Dreamers a path to citizenship",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered (\"they're going to be\"); the future of his plan for Dreamers."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-protect-america",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Protect America and defend it from every attack.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶90.1-90.2",
+            "quote": "I will protect America. I will defend us from every attack."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶37.5",
+            "quote": "I will defend America."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-stand-with-allies",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Stand with allies and friends.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶128.1",
+            "quote": "I will be a president who will stand with our allies and friends."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2012-alliances"
+            }
+          ]
+        }
+      },
+      {
+        "id": "biden-2020-repair-alliances",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Repair America's alliances.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶28.4",
+            "quote": "We will repair our alliances"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-world",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-engage-world",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Engage with the world again on today's and tomorrow's challenges.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶28.4",
+            "quote": "engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "biden-2020-world",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-lead-by-example",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Lead by the power of example; be a strong and trusted partner.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶28.5-28.6",
+            "quote": "And we'll lead not merely by the example of our power, but by the power of our example. We will be a strong and trusted partner for peace, progress, and security."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-no-cozying-dictators",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Make clear to adversaries that the days of cozying up to dictators are over.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶128.2",
+            "quote": "I will make it clear to our adversaries the days of cozying up to dictators are over."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-russia-bounties",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Do not turn a blind eye to Russian bounties on American soldiers.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶129.1",
+            "quote": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-punish-election-interference",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Make any country that interferes in US elections pay a price.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶129.2",
+            "quote": "Nor will I put up with foreign interference in our most sacred democratic exercise -- voting."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶70.7",
+            "quote": "They will pay a price if I'm elected."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶70.28",
+            "quote": "Any country that interferes with us will, in fact, pay a price"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "foreign election interference",
+            "record": "Treasury sanctions designations; executive orders (Federal Register)",
+            "criterion": "countries that interfered (named: Russia, China, Iran) face sanctions or comparable measures",
+            "ambiguity": "\"Pay a price\" is not defined; sanctions or comparable measures are read as kept."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-human-rights-peace",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Stand for human rights and work for a more secure, peaceful and prosperous world.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶130.1-130.2",
+            "quote": "I will stand always for our values of human rights and dignity. And I will work in common purpose for a more secure, peaceful, and prosperous world."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-china-rules",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Make China play by international rules, together with allies.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶100.1",
+            "quote": "What I'd make China do is play by the international rules"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶100.15-100.17",
+            "quote": "We need to be having the rest of our friends with us, saying to China, these are the rules."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶100.1 uses \"I'd\" (would) in answer to what he would do; ¶100.17 (\"that's the way I will run it\") points back to ¶100.15-100.16."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-deal-climate",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Deal with climate change.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶111.1",
+            "quote": "We can, and we will, deal with climate change."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2012-climate-respond"
+            }
+          ]
+        }
       },
       {
         "id": "biden-2020-rejoin-paris",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "climate",
-        "restatement": "Rejoin the Paris Climate Accord and press China to meet its commitments.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Rejoin the Paris climate agreement.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -24509,12 +26839,818 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶350.1",
-            "quote": "No, I'm going to rejoin the Paris Accord and get China to abide by what they agreed to"
+            "quote": "I'm going to rejoin the Paris Accord"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-paris",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Paris Agreement",
+            "record": "UN treaty records",
+            "criterion": "the US rejoins the Paris Agreement",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-china-paris",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Get China to abide by its Paris commitments.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶350.1",
+            "quote": "get China to abide by what they agreed to"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "biden-2020-paris",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-ev-charging-50k",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Invest in 50,000 electric-car charging stations on highways.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶305.8",
+            "quote": "We're going to invest in, for example, 500,000-- 50,000, excuse me, 50,000 charging stations on our highways"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "public EV charging stations",
+            "record": "DOE Alternative Fuels Data Center; federal charging-programme data",
+            "criterion": "federal investment funds at least 50,000 highway charging stations",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "He corrects himself from 500,000 to 50,000; his written plan said 500,000. The number as finally said is rated."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-retrofit-buildings",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Retrofit 4 million existing buildings to save energy.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶305.10",
+            "quote": "take 4 million existing billion, buildings"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-retrofits",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "energy retrofits of buildings",
+            "record": "DOE programme data",
+            "criterion": "4 million existing buildings are retrofitted",
+            "ambiguity": "No single public record counts building retrofits; federal programme counts are a proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-retrofit-homes",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Retrofit 2 million existing homes to save energy.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶305.10",
+            "quote": "2 million existing homes and retrofit them so they don't leak as much energy"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-retrofits",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "energy retrofits of homes",
+            "record": "DOE Weatherization Assistance Program data",
+            "criterion": "2 million existing homes are retrofitted",
+            "ambiguity": "No single public record counts home retrofits; federal programme counts are a proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-capture-fracking-emissions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Capture the emissions from fracking.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶323.2",
+            "quote": "What I will do with fracking over time is make sure that we can capture the emissions from the fracking."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "methane and other emissions from oil and gas production",
+            "record": "EPA rules (Federal Register)",
+            "criterion": "a federal rule requires capture of emissions from fracked wells",
+            "ambiguity": "\"Capture the emissions\" is read as rules that cut methane from gas production."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-transition-from-oil",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Transition away from the oil industry to renewable energy over time.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶333.1",
+            "quote": "I would transition from the oil industry."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶339.1",
+            "quote": "it has to be replaced by renewable energy over time."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶333.1 uses \"would\" in answer to what he would do as president; read as conditioned on the election."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-end-oil-subsidies",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Stop federal subsidies to the oil industry.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶339.3",
+            "quote": "I'd stop giving them federal subsidies."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal tax subsidies for oil",
+            "record": "Internal Revenue Code (Congress.gov)",
+            "criterion": "the oil industry's federal tax subsidies are repealed",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Uses \"I'd\" (would) in answer to what he would do as president; read as conditioned on the election."
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2012-end-oil-subsidies"
+            }
+          ]
+        }
+      },
+      {
+        "id": "biden-2020-clean-energy-jobs",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "An economy run on clean energy, creating millions of new jobs.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶355.9-355.12",
+            "quote": "we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That's what we're going to do\" (¶355.12) points back to ¶355.9-355.11."
+          },
+          "links": []
+        }
       }
     ],
-    "ambitions": []
+    "ambitions": [
+      {
+        "id": "biden-2020-end-uncivil-war",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "End the 'uncivil war' between red and blue, rural and urban, conservative and liberal.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Inaugural Address",
+              "year": 2021,
+              "date": "2021-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+              "label": "2021 inaugural address"
+            },
+            "ref": "¶25.8",
+            "quote": "We must end this uncivil war that pits red against blue, rural versus urban, conservative versus liberal."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-black-opportunity",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Provide Black Americans with economic opportunity, better education, health care and access to credit.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶247.18",
+            "quote": "We have to provide for economic opportunity, better education, better health care, better access to schooling, better access to opportunity to borrow money to start businesses."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Said in answer on race and policing (¶247.1-247.16); read as aimed at Black Americans. A list of low objects, kept as one."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-end-mandatory-minimums",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Remove mandatory minimum sentences from the law.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶251.12",
+            "quote": "there should be no, no minimum mandatories in the law."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal mandatory minimum sentences",
+            "record": "United States Code (Congress.gov)",
+            "criterion": "federal mandatory minimum sentences are repealed",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-small-business-aid",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Bail out small businesses.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶56.7",
+            "quote": "make sure we get the help that the businesses need."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶196.1-196.2",
+            "quote": "we're gonna have to bail them out, too. We should be bailing them out now, those small businesses."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal aid to small businesses",
+            "record": "appropriations (Congress.gov); SBA programme data",
+            "criterion": "new federal relief for small businesses is enacted",
+            "ambiguity": "\"Bail out\" is not quantified."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We're gonna have to\" states an obligation, so this is an ambition."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-tax-wealthy",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "End the tax cuts and loopholes for the wealthiest 1 percent.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶112.1",
+            "quote": "we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶113.4",
+            "quote": "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-fair-share",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "taxes on the highest earners",
+            "record": "enacted tax law (Congress.gov); IRS Statistics of Income",
+            "criterion": "taxes on the top 1 percent are raised by law",
+            "ambiguity": "\"Fair share\" is not quantified; any enacted increase is read as movement."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered. \"We can pay … by\" (¶112.1) and \"long past time\" (¶113.4) are read like \"now is the time to\": ambitions."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-tax-corporations",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Make the biggest corporations pay their fair share of tax.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶112.1",
+            "quote": "the biggest, most profitable corporations, some of which pay no tax at all."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Address Accepting the Democratic Presidential Nomination in Wilmington, Delaware",
+              "year": 2020,
+              "date": "2020-08-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-democratic-presidential-nomination-wilmington-delaware",
+              "label": "2020 acceptance speech"
+            },
+            "ref": "¶113.4",
+            "quote": "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "biden-2020-fair-share",
+          "deadline": {
+            "stated": null,
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "corporate taxes",
+            "record": "enacted tax law (Congress.gov); IRS Statistics of Income",
+            "criterion": "taxes on large corporations are raised by law",
+            "ambiguity": "\"Fair share\" is not quantified; any enacted increase is read as movement."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered. \"We can pay … by\" (¶112.1) and \"long past time\" (¶113.4) are read like \"now is the time to\": ambitions."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-net-zero-power",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Net-zero emissions from energy production by 2025.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶346.1-346.3",
+            "quote": "The first place to do that by the year 2025 is in energy production."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "by the year 2025",
+            "applied": "2025-01-01"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "power-sector emissions",
+            "record": "EIA electricity data; EPA greenhouse gas inventory",
+            "criterion": "net-zero emissions from electricity production by 2025",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "contested",
+            "note": "He says 2025 here and in ¶323.1; his written plan set 2035. The words as said are recorded."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "biden-2020-net-zero-2050",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Net-zero emissions economy-wide by 2050.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Joseph R. Biden, Jr.",
+              "event": "Presidential Debate at Belmont University in Nashville, Tennessee",
+              "year": 2020,
+              "date": "2020-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0",
+              "label": "2020 debate"
+            },
+            "ref": "¶346.1-346.3",
+            "quote": "By 2050, totally."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "By 2050",
+            "applied": "2050-01-01"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US net greenhouse gas emissions",
+            "record": "EPA greenhouse gas inventory",
+            "criterion": "net-zero emissions by 2050",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      }
+    ]
   },
   {
     "key": "2025-2029 Trump",
@@ -25797,10 +28933,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 403;
+export const CORPUS_PROMISE_COUNT = 447;
 
 /** Total ambitions across the corpus (re-extracted terms only). */
-export const CORPUS_AMBITION_COUNT = 138;
+export const CORPUS_AMBITION_COUNT = 146;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 537;
+export const CORPUS_OCCURRENCE_COUNT = 594;

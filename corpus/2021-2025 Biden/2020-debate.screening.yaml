@@ -1,0 +1,235 @@
+# Screening ledger for 2020-debate.md (protocol v1).
+# Every trigger-matched sentence in the president's turns has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) goals he set for the term (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2020-debate
+protocol: 1
+rows:
+  - ref: "¶7.8"
+    decision: describe
+    note: "Forecast of deaths."
+  - ref: "¶7.12"
+    decision: include
+    added: true
+    promises: [biden-2020-encourage-masks]
+    note: "Untriggered; \"what I would do\" answers what he would do as president."
+  - ref: "¶7.13"
+    decision: include
+    added: true
+    promises: [biden-2020-rapid-tests]
+    note: "Untriggered; \"I would\" answers what he would do as president."
+  - ref: "¶7.14"
+    decision: include
+    added: true
+    promises: [biden-2020-reopening-standards, biden-2020-schools-resources]
+    note: "Untriggered; \"I would\" answers what he would do as president. Two objects; split."
+  - ref: "¶7.16"
+    decision: include
+    promises: [biden-2020-covid-strategy, biden-2020-end-pandemic]
+    note: "Two objects (ending the pandemic, a plan); split."
+  - ref: "¶15.4"
+    decision: attack
+    note: "About the president's past claims."
+  - ref: "¶19.7"
+    decision: attack
+    note: "Paraphrases the president's praise of China's leader."
+  - ref: "¶42.1"
+    decision: include
+    promises: [biden-2020-control-virus, biden-2020-no-national-lockdown]
+    note: "Two objects; split."
+  - ref: "¶44.1"
+    decision: include
+    added: true
+    promises: [biden-2020-no-national-lockdown]
+    note: "Untriggered; present progressive restating ¶42.1 (\"I'm not shutting down the nation\")."
+  - ref: "¶52.2"
+    decision: describe
+    note: "Rhetoric (\"walk and chew gum\")."
+  - ref: "¶52.3"
+    decision: describe
+    note: "Argument that reopening needs resources; the commitment is in ¶52.8."
+  - ref: "¶52.8"
+    decision: include
+    promises: [biden-2020-reopening-standards]
+    note: "Softer restatement of safe reopening."
+  - ref: "¶56.7"
+    decision: include
+    promises: [biden-2020-encourage-masks, biden-2020-small-business-aid]
+    note: "Soft. Two objects; split."
+  - ref: "¶70.5"
+    decision: describe
+    note: "Aside (\"I won't even get into the last one\")."
+  - ref: "¶70.7"
+    decision: include
+    added: true
+    promises: [biden-2020-punish-election-interference]
+    note: "Untriggered future statement (\"They will pay a price if I'm elected\")."
+  - ref: "¶70.19"
+    decision: describe
+    note: "Aside (\"I will\") inside a remark about the president's lawyer."
+  - ref: "¶70.28"
+    decision: include
+    added: true
+    promises: [biden-2020-punish-election-interference]
+    note: "Untriggered future statement (\"will, in fact, pay a price\")."
+  - ref: "¶82.1"
+    decision: describe
+    note: "Debate procedure."
+  - ref: "¶100.1"
+    decision: include
+    added: true
+    promises: [biden-2020-china-rules]
+    note: "Untriggered; \"what I'd make China do\" answers what he would do as president."
+  - ref: "¶100.8"
+    decision: past
+    note: "Quotes what he told China's leader as Vice President."
+  - ref: "¶100.10"
+    decision: past
+    note: "Quotes what he told China's leader as Vice President."
+  - ref: "¶100.15-100.17"
+    decision: include
+    promises: [biden-2020-china-rules]
+    note: "¶100.17 (\"that's the way I will run it\") points back to ¶100.15-100.16; joined."
+  - ref: "¶119.8"
+    decision: describe
+    note: "Voices a family's choices."
+  - ref: "¶119.13"
+    decision: attack
+    note: "About the president's choice of topics."
+  - ref: "¶131.6"
+    decision: past
+    note: "Quotes what he told China as Vice President."
+  - ref: "¶131.7"
+    decision: past
+    note: "Quotes what he told China as Vice President."
+  - ref: "¶141.3"
+    decision: past
+    note: "President Obama's past position."
+  - { ref: "¶150.1", decision: include, promises: [biden-2020-public-option] }
+  - ref: "¶150.4"
+    decision: include
+    promises: [biden-2020-medicare-negotiation, biden-2020-lower-premiums, biden-2020-lower-drug-prices]
+    note: "Three objects (premiums, drug prices, Medicare negotiation); split."
+  - ref: "¶150.5"
+    decision: describe
+    note: "Rebuts a claim; states support for private insurance."
+  - { ref: "¶150.8", decision: include, promises: [biden-2020-pre-existing-conditions] }
+  - ref: "¶150.12"
+    decision: attack
+    note: "Sarcasm about the president's plans."
+  - ref: "¶152.10"
+    decision: include
+    promises: [biden-2020-lower-premiums]
+    note: "Soft restatement of lower premiums."
+  - ref: "¶160.4"
+    decision: describe
+    note: "Cost of his health plan; no further commitment."
+  - { ref: "¶194.1", decision: include, promises: [biden-2020-president-for-all] }
+  - ref: "¶196.1-196.2"
+    decision: include
+    promises: [biden-2020-small-business-aid]
+    note: "\"Them\" is small businesses (¶196.2); \"gonna have to\" and \"should\" state obligations."
+  - ref: "¶226.4"
+    decision: describe
+    note: "Answer about the Obama administration's record; no object."
+  - { ref: "¶226.5", decision: include, promises: [biden-2020-citizenship-bill-100-days] }
+  - ref: "¶226.6"
+    decision: include
+    added: true
+    promises: [biden-2020-restore-daca, biden-2020-dreamers-citizenship]
+    note: "Untriggered future statement (\"they're going to be\"). Two objects; split."
+  - ref: "¶247.17"
+    decision: attack
+    note: "Read as paraphrasing the president's stance (\"says that's the end of that\")."
+  - { ref: "¶247.18", decision: include, promises: [biden-2020-black-opportunity] }
+  - { ref: "¶251.12", decision: include, promises: [biden-2020-end-mandatory-minimums] }
+  - ref: "¶251.13"
+    decision: include
+    added: true
+    promises: [biden-2020-state-sentencing-fund]
+    note: "Untriggered; present progressive about his plan."
+  - { ref: "¶251.16", decision: include, promises: [biden-2020-change-justice-system] }
+  - ref: "¶258.1"
+    decision: describe
+    note: "Lead-in (\"I'll tell you what\")."
+  - { ref: "¶288.4", decision: include, promises: [biden-2020-treatment-not-jail] }
+  - ref: "¶288.6"
+    decision: describe
+    note: "Argument for ¶288.4 (spend on treatment); no separate commitment."
+  - ref: "¶288.12"
+    decision: include
+    promises: [biden-2020-treatment-not-jail]
+    note: "\"That\" is treatment instead of jail (¶288.4-288.10)."
+  - ref: "¶305.4"
+    decision: describe
+    note: "Forecast (point of no return)."
+  - ref: "¶305.5"
+    decision: attack
+    note: "About the president's deregulation."
+  - ref: "¶305.8"
+    decision: include
+    promises: [biden-2020-ev-charging-50k]
+    note: "He corrects himself from 500,000 to 50,000."
+  - ref: "¶305.10"
+    decision: include
+    promises: [biden-2020-retrofit-buildings, biden-2020-retrofit-homes]
+    note: "Two numbers; split."
+  - ref: "¶305.14"
+    decision: describe
+    note: "An outside forecast of jobs from his plan (18.6 million); a forecast."
+  - ref: "¶305.15"
+    decision: describe
+    note: "An outside forecast of economic growth from his plan; a forecast."
+  - { ref: "¶323.2", decision: include, promises: [biden-2020-capture-fracking-emissions] }
+  - ref: "¶333.1"
+    decision: include
+    added: true
+    promises: [biden-2020-transition-from-oil]
+    note: "Untriggered; \"I would\" answers what he would do as president."
+  - ref: "¶339.1"
+    decision: include
+    added: true
+    promises: [biden-2020-transition-from-oil]
+    note: "Untriggered; \"has to be replaced\" completes ¶333.1."
+  - ref: "¶339.3"
+    decision: include
+    added: true
+    promises: [biden-2020-end-oil-subsidies]
+    note: "Untriggered; \"I'd stop\" answers what he would do as president."
+  - ref: "¶346.1-346.3"
+    decision: include
+    promises: [biden-2020-net-zero-power, biden-2020-net-zero-2050]
+    note: "¶346.2-346.3 complete \"we have to move toward a net zero\" (¶346.1). Two goals; split."
+  - ref: "¶350.1"
+    decision: include
+    promises: [biden-2020-rejoin-paris, biden-2020-china-paris]
+    note: "Two objects; split."
+  - ref: "¶355.1-355.3"
+    decision: include
+    promises: [biden-2020-president-for-all]
+    note: "Imagined address to all Americans after the election; ¶355.3 is the commitment."
+  - { ref: "¶355.4", decision: include, promises: [biden-2020-hope-over-fear] }
+  - ref: "¶355.5"
+    decision: describe
+    note: "No object (\"We're going to move\")."
+  - ref: "¶355.6-355.7"
+    decision: include
+    promises: [biden-2020-hope-over-fear]
+    note: "Two parallel sentences; joined."
+  - ref: "¶355.8"
+    decision: describe
+    note: "Rhetoric (\"choose to move forward\")."
+  - ref: "¶355.9-355.12"
+    decision: include
+    promises: [biden-2020-racial-justice, biden-2020-build-back-better, biden-2020-clean-energy-jobs]
+    note: "\"That's what we're going to do\" (¶355.12) points back to ¶355.9-355.11. Three objects; split."
+  - ref: "¶355.13"
+    decision: describe
+    note: "Rhetoric; character is on the ballot."
+  - ref: "¶355.14-355.19"
+    decision: include
+    promises: [biden-2020-decency-even-chance]
+    note: "\"That\" (¶355.19) is the list in ¶355.14-355.18."
+
+#   68 rows: 39 include (12 of them added), 29 excluded (attack 6, describe 18, past 5)
