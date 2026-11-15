@@ -6,6 +6,7 @@ date_published: 2024-09-10
 date_pulled: 2026-08-10
 source_url: https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania
 source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+speaker_label: TRUMP
 ---
 
 ## ¶1 — —

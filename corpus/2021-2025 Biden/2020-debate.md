@@ -6,6 +6,7 @@ date_published: 2020-10-22
 date_pulled: 2026-08-10
 source_url: https://www.presidency.ucsb.edu/documents/presidential-debate-belmont-university-nashville-tennessee-0
 source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+speaker_label: BIDEN
 ---
 
 ## ¶1 — —

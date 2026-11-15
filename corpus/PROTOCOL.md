@@ -216,14 +216,18 @@ whitespace normalised. No ellipses. To skip text, cite two occurrences.
 
 ## Checks
 
-The validator (run in CI) fails when:
+The validator (`npm run validate`, run in CI) fails when:
 
 - a trigger-matched sentence in a screened source has no ledger row;
 - a ledger `include` row names a promise that does not exist, or a promise cites a ref no row includes;
 - a ref does not resolve, or a quote is not a contiguous part of its span;
 - a debate ref falls outside the president's turns;
 - an id is duplicated, a theme is not in the list, or a required field is missing;
-- `deadline.applied` is missing, or a `high`/`medium` promise has no criterion.
+- `deadline.applied` is missing, or a `high`/`medium` promise has no criterion;
+- a `medium` promise has no `ambiguity`, or a non-`clear` uncertainty has no note.
+
+Terms not yet re-extracted (legacy `promises.yaml` without `protocol: 1`) get
+the id and ref checks only; their quote problems are reported as warnings.
 
 ## Repeatability
 

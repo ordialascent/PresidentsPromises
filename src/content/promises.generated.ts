@@ -189,7 +189,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶58.3",
-            "quote": "On principle, every family, every farmer and small- business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
+            "quote": "On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
           },
           {
             "source": {
@@ -349,7 +349,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in- chief who earns their respect."
+            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
           },
           {
             "source": {
