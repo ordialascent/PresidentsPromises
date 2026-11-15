@@ -1,1341 +1,2246 @@
-# Promises extracted from Donald J. Trump's 2024 nomination acceptance speech
-# (corpus/2025-2029 Trump/2024-acceptance.md). Refs are paragraph.sentence,
-# per corpus/README.md.
+# Promises and ambitions of Donald J. Trump's 2025-2029 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 2024 acceptance
+# speech, the 2024 final debate (Trump's turns) and the 2025 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
 #
-# Each promise is scored on four dimensions — the ingredients that decide
-# whether "was it kept?" can even be asked as a *measured* question:
-#
-#   metric     — is there a named quantity, AND a record that tracks it?
-#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
-#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
-#   instrument — does he name what HE will DO, or only what WILL happen?
-#
-# measurable:
-#   full     — metric + threshold + deadline all present (even if parametrically
-#              disputed — that dispute is the product, not a disqualifier)
-#   partial  — at least one of the three is missing or too vague to pin down
-#   no       — aspirational; no measurable quantity at all
-# (instrument sharpens accountability: an outcome-only promise is one he can't
-#  fully control. A promise can still be measurable without it.)
-#
-# NOTE: this speech leans heavily on "Day 1", "immediately", and "very quickly"
-# as its deadline language. Where a concrete date attaches (inauguration / "Day
-# 1" = 20 Jan 2025) that counts as a real deadline; "immediately"/"very rapidly"
-# is treated as a bounded-but-undated direction, which is why several otherwise
-# sharp promises land at partial.
+# 92 promises (high 21, medium 31, low 40)
+# 2 ambitions (high 1, medium 1, low 0)
+# Deadlines default to the end of the term (2029-01-20).
 
+protocol: 1
 promises:
-  - id: trump-2024-inflation
-    theme: inflation
+
+  - id: trump-2024-safety-prosperity-freedom
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶83.1"
-        quote: >
-          I will end the devastating inflation crisis immediately,
-          bring down interest rates and lower the cost of energy.
-      - in: inaugural
-        ref: "¶30.1"
-        quote: >
-          Next, I will direct all members of my Cabinet to marshal
-          the vast powers at their disposal to defeat what was
-          record inflation and rapidly bring down costs and prices.
-    restatement: End the inflation crisis immediately; cut interest rates and energy costs.
-    metric:
-      present: true
-      quantity: consumer price inflation; interest rates; energy prices
-      record: BLS CPI; Fed funds rate; EIA energy prices
-    threshold:
-      present: true
-      stated: end the crisis / bring down (direction, no level)
+    - in: acceptance
+      ref: "¶3.1"
+      quote: "Together, we will launch a new era of safety, prosperity and freedom for citizens of every race, religion, color and creed."
+    - in: inaugural
+      ref: "¶19.2"
+      quote: "We will move with purpose and speed to bring back hope, prosperity, safety, and peace for citizens of every race, religion, color, and creed."
+    restatement: "Bring a new era of safety, prosperity, freedom and peace for citizens of every race, religion, color and creed."
+    type: outcome
+    theme: government
     deadline:
-      present: false
-      stated: immediately (bounded-but-undated, not a real deadline per this file)
-    instrument:
-      present: true
-      stated: lower energy costs / drill; but rates are set by the Fed, not the president
-    measurable: "partial"
-    notes: >
-      Metric and threshold are present but soft, and "immediately" is not a
-      real deadline (per this file's convention) — so it lands at partial:
-      "end" names no target rate, and interest rates are an outcome he does not
-      directly control. The disputed boundary is what counts as the crisis
-      being "ended" — CPI back to 2%, or merely falling?
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-safety-prosperity-peace
 
-  - id: trump-2024-prices-day1
-    ref: "¶118.2"
-    theme: inflation
-    quote: >
-      Starting on Day 1, we will drive down prices and make America affordable
-      again.
-    restatement: Begin driving down consumer prices on Day 1.
-    metric:
-      present: true
-      quantity: consumer price level
-      record: BLS CPI
-    threshold:
-      present: true
-      stated: drive down (direction only, no magnitude)
-    deadline:
-      present: true
-      stated: "starting on Day 1 (20 Jan 2025)"
-    instrument:
-      present: true
-      stated: the Republican price plan (energy costs, deregulation)
-    measurable: "partial"
-    notes: >
-      A clean start date and a real metric, but "drive down" fixes no target
-      and no by-when-endpoint — a direction with a launch day but no finish
-      line, so how far prices must fall to count is undefined.
-
-  - id: trump-2024-energy-dominance
-    theme: energy
+  - id: trump-2024-unite-country
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶120.7-120.9"
-        quote: >
-          Under the Trump administration just three and a half years
-          ago, we were energy independent. But soon we will actually
-          be better than that. We will be energy dominant and supply
-          not only ourselves, but we will supply the rest of the
-          world.
-      - in: inaugural
-        ref: "¶30.3"
-        quote: >
-          We will drill, baby, drill.
-    restatement: Make the US "energy dominant" — a net supplier to the rest of the world.
-    metric:
-      present: true
-      quantity: US energy production and net exports
-      record: EIA — U.S. energy production, imports/exports
-    threshold:
-      present: true
-      stated: "\"energy dominant\" / supply the rest of the world (direction)"
+    - in: acceptance
+      ref: "¶4.1-4.2"
+      quote: "We must heal it quickly."
+    - in: acceptance
+      ref: "¶232.3-232.6"
+      quote: "We will unite."
+    - in: acceptance
+      ref: "¶236.1"
+      quote: "we must now come together, rise above past differences."
+    - in: inaugural
+      ref: "¶44.1-44.2"
+      quote: "That's what I want to be: a peacemaker and a unifier."
+    restatement: "Heal the country's divisions and unite Americans."
+    type: outcome
+    theme: government
     deadline:
-      present: false
-      stated: soon
-    instrument:
-      present: true
-      stated: expanded drilling / production
-    measurable: "partial"
-    notes: >
-      Production and export series track this cleanly, but "dominant" has no
-      agreed definition (the US was already a net energy exporter by 2020) and
-      "soon" is no deadline. The metric exists; the promise doesn't pin it.
-
-  - id: trump-2024-debt
-    ref: "¶121.1-121.2"
-    theme: fiscal
-    quote: >
-      With numbers that nobody has ever seen and we will reduce our debt, $36
-      trillion. We will start reducing that.
-    restatement: Reduce the national debt (cited at $36 trillion).
-    metric:
-      present: true
-      quantity: gross federal debt
-      record: Treasury / FRED GFDEBTN
-    threshold:
-      present: true
-      stated: reduce (direction; from $36T, no target level)
-    deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: growth and tax policy ("that's what's going to pay off our debt", 121.19)
-    measurable: "partial"
-    notes: >
-      The debt is one of the most precisely tracked numbers in government, but
-      "start reducing" is a bare direction with no target and no deadline — and
-      the same passage pairs it with further tax cuts, so the mechanism cuts
-      against the goal.
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Firm in the acceptance speech (\"We will unite\", ¶232.5); the other occurrences are soft (\"must\", \"want to be\")."
+    links: []
 
-  - id: trump-2024-taxes-cut
-    theme: taxes
+  - id: trump-2024-fight-for-you
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶121.3"
-        quote: >
-          And we will also reduce your taxes still further.
-      - in: debate
-        ref: "¶21.11"
-        quote: >
-          Cut taxes very substantially.
-    restatement: Cut taxes further beyond the 2017 cuts.
-    metric:
-      present: true
-      quantity: federal tax burden on households
-      record: JCT / Tax Policy Center distributional analysis
-    threshold:
-      present: true
-      stated: reduce still further (direction, no number)
+    - in: acceptance
+      ref: "¶43.3"
+      quote: "I will never stop fighting for you, your family and our magnificent country."
+    - in: acceptance
+      ref: "¶44.1-44.3"
+      quote: "everything I have to give with all of the energy and fight in my heart and soul, I pledge to our nation tonight."
+    - in: acceptance
+      ref: "¶237.4-237.6"
+      quote: "I will never, ever let you down."
+    - in: inaugural
+      ref: "¶63.2"
+      quote: "I am with you, I will fight for you, and I will win for you."
+    restatement: "Never stop fighting for Americans and never let them down."
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: further tax-rate cuts
-    measurable: "partial"
-    notes: >
-      A real metric and a clear direction, but no magnitude, no deadline, and
-      "your taxes" leaves the affected group undefined — whose taxes, and by
-      how much?
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-fight-for-you
 
-  - id: trump-2024-no-tax-tips
-    ref: "¶132.4"
-    theme: taxes
-    quote: >
-      It's called no tax on tips.
-    restatement: Exempt tip income from taxation.
-    metric:
-      present: true
-      quantity: whether the exemption is enacted (binary), not a trend
-      record: enacted tax law
-    threshold:
-      present: true
-      stated: no tax / to zero
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: change the tax code
-    measurable: "partial"
-    notes: >
-      Measurable only as a yes/no policy outcome, not a quantity over time. The
-      disputed boundary is scope — which workers and which taxes (income only,
-      or payroll too?).
-
-  - id: trump-2024-wall
-    ref: "¶87.1"
-    theme: immigration
-    quote: >
-      I will end the illegal immigration crisis by closing our border and
-      finishing the wall, most of which I've already built.
-    restatement: End illegal immigration by sealing the border and finishing the wall.
-    metric:
-      present: true
-      quantity: illegal border crossings; miles of border wall
-      record: CBP Southwest Border encounters; CBP wall-mileage reports
-    threshold:
-      present: true
-      stated: close the border / finish the wall (completion, direction to zero)
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: close the border; complete wall construction
-    measurable: "partial"
-    notes: >
-      Encounters and wall mileage are both tracked, but "finishing the wall"
-      has no agreed total length and "closing the border" no target crossing
-      level, and no deadline is attached here.
-
-  - id: trump-2024-border-day1
-    ref: "¶157.1-157.2"
-    theme: immigration
-    quote: >
-      At the heart of the Republican platform is our pledge to end this border
-      nightmare, and fully restore the sacred and sovereign borders of the
-      United States of America. And we're going to do that on Day 1.
-    restatement: End the border crisis and restore secure borders, starting on Day 1.
-    metric:
-      present: true
-      quantity: illegal border crossings / border-security status
-      record: CBP Southwest Border encounters
-    threshold:
-      present: true
-      stated: end the border nightmare / fully restore secure borders (direction, no level)
-    deadline:
-      present: true
-      stated: "on Day 1 (20 Jan 2025)"
-    instrument:
-      present: true
-      stated: the Republican platform's border agenda (sealing the border; enforcement)
-    measurable: "partial"
-    notes: >
-      The same border promise as trump-2024-wall but with a hard Day-1 date
-      attached — yet "end this border nightmare" and "fully restore" set no
-      target crossing level, and Day 1 is a launch, not a completion point, so
-      it lands at partial rather than full. Overlaps trump-2024-wall (¶87.1),
-      which carries no deadline.
-
-  - id: trump-2024-deportation
-    theme: immigration
+  - id: trump-2024-make-america-great-again
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶176.2-176.3"
-        quote: >
-          That's why, to keep our family safe, the Republican
-          platform promises to launch the largest deportation
-          operation in the history of our country. Even larger than
-          that of President Dwight D. Eisenhower, from many years
-          ago.
-      - in: debate
-        ref: "¶17.34-17.35"
-        quote: >
-          And we have to get 'em out. We have to get 'em out fast.
-    restatement: Launch the largest deportation operation in US history.
-    metric:
-      present: true
-      quantity: number of deportations / removals
-      record: ICE/DHS removal statistics
-    threshold:
-      present: true
-      stated: largest ever (exceed the historical record)
+    - in: acceptance
+      ref: "¶44.4"
+      quote: "We're going to turn our nation around and we're going to do it very quickly."
+    - in: acceptance
+      ref: "¶71.1"
+      quote: "Together, we will lead America to new heights of greatness like the world has never seen before."
+    - in: acceptance
+      ref: "¶105.2-105.3"
+      quote: "we will soon be a great nation again."
+    - in: acceptance
+      ref: "¶219.1-219.2"
+      quote: "we're going to bring this into a golden age like never seen before."
+    - in: acceptance
+      ref: "¶237.3"
+      quote: "We're going to make our country great again."
+    - in: acceptance
+      ref: "¶242.1"
+      quote: "Together, we will save this country, we will restore the republic"
+    - in: acceptance
+      ref: "¶244.1"
+      quote: "we will very quickly make America great again."
+    - in: inaugural
+      ref: "¶5.1-5.2"
+      quote: "America will soon be greater, stronger, and far more exceptional than ever before."
+    - in: inaugural
+      ref: "¶51.1"
+      quote: "we will lead it to new heights of victory and success."
+    - in: inaugural
+      ref: "¶62.2"
+      quote: "we will restore America promise and we will rebuild the nation that we love"
+    - in: inaugural
+      ref: "¶64.2"
+      quote: "But we are going to bring it back and make it great again, greater than ever before."
+    - in: inaugural
+      ref: "¶65.2"
+      quote: "We will be prosperous, we will be proud, we will be strong, and we will win like never before."
+    restatement: "Make America great again, greater than ever, and turn the nation around very quickly."
+    type: outcome
+    theme: government
     deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: a mass deportation operation
-    measurable: "partial"
-    notes: >
-      A genuine metric with a record to beat (the ~1.1M of Eisenhower's 1954
-      operation, by the usual telling), but no deadline and a contested
-      counting basis (removals vs. returns vs. total departures) — the boundary
-      that decides "largest."
+      stated: "very quickly"
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "A list of broad outcomes across the speeches (great, strong, prosperous, proud, a golden age), kept as one low promise."
+    links:
+    - kind: repeats
+      to: trump-2016-make-america-great-again
 
-  - id: trump-2024-ev-mandate
-    theme: energy
+  - id: trump-2024-wisconsin-great
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶124.1"
-        quote: >
-          And I will end the electric vehicle mandate on day one.
-      - in: inaugural
-        ref: "¶33.1"
-        quote: >
-          With my actions today, we will end the "green new deal,"
-          and we will revoke the electric vehicle mandate, saving
-          our auto industry and keeping my sacred pledge to our
-          great American autoworkers.
-    restatement: End the electric-vehicle mandate on Day 1.
-    metric:
-      present: true
-      quantity: whether the rule is rescinded (binary), not a trend
-      record: Federal Register / EPA-NHTSA rulemaking
-    threshold:
-      present: true
-      stated: end / to zero
-    deadline:
-      present: true
-      stated: "on day one (20 Jan 2025)"
-    instrument:
-      present: true
-      stated: executive/regulatory action
-    measurable: "partial"
-    notes: >
-      Threshold and a hard date are both present, but the metric is a yes/no
-      policy action rather than a measured quantity, and there is no single
-      federal "EV mandate" — which rules count is the disputed boundary.
-
-  - id: trump-2024-auto-jobs
-    theme: labor
-    sources:
-      - in: acceptance
-        ref: "¶131.4-131.5"
-        quote: >
-          This very simple formula will create massive numbers of
-          jobs. We will take over the auto industry again and many
-          many, hundreds of thousands of jobs, we lost so many jobs
-          over the years.
-      - in: inaugural
-        ref: "¶34.1"
-        quote: >
-          We will build automobiles in America again at a rate that
-          nobody could have dreamt possible just a few years ago.
-    restatement: Bring back the auto industry and hundreds of thousands of manufacturing jobs.
-    metric:
-      present: true
-      quantity: auto / manufacturing employment
-      record: BLS employment (motor vehicles & parts)
-    threshold:
-      present: true
-      stated: hundreds of thousands of jobs (direction with rough magnitude)
-    deadline:
-      present: false
-      stated: "null (\"fast\", 125.3)"
-    instrument:
-      present: true
-      stated: build-in-America requirement backed by tariffs
-    measurable: "partial"
-    notes: >
-      Employment is cleanly tracked and there is even a rough number, but "take
-      over the auto industry again" is undefined, there's no deadline, and job
-      creation is an outcome he can't fully attribute to the policy.
-
-  - id: trump-2024-car-tariff
-    theme: trade
-    sources:
-      - in: acceptance
-        ref: "¶127.2"
-        quote: >
-          And if they don't agree with us, we'll put a tariff of
-          approximately 100 to 200 percent on each car and they will
-          be unsellable in the United States.
-      - in: debate
-        ref: "¶229.8-229.9"
-        quote: >
-          But we're not going to let that. We'll put tariffs on
-          those cars so they can't come into our country.
-    restatement: Impose a 100-200% tariff on cars built abroad (esp. China-in-Mexico plants).
-    metric:
-      present: true
-      quantity: whether the tariff is imposed (binary) / tariff rate
-      record: USTR / Federal Register tariff schedules
-    threshold:
-      present: true
-      stated: 100 to 200 percent
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: impose a tariff
-    measurable: "partial"
-    notes: >
-      A sharp number and a clear instrument, but conditional ("if they don't
-      agree"), with no deadline and a wide 100-200% band — the trigger and rate
-      are the disputed boundary.
-
-  - id: trump-2024-ss-medicare
-    ref: "¶148.1"
-    theme: health
-    quote: >
-      I am going to protect Social Security and Medicare.
-    restatement: Protect Social Security and Medicare (no benefit cuts).
-    metric:
-      present: true
-      quantity: Social Security / Medicare benefit levels and solvency
-      record: SSA / CMS Trustees reports
-    threshold:
-      present: true
-      stated: protect / no cuts (direction only)
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: false
-      stated: "\"my plan\" — no named mechanism"
-    measurable: "partial"
-    notes: >
-      A real metric with a maintain-the-level direction, but "protect" sets no
-      target (nominal benefits? solvency date? real value against inflation?),
-      names no instrument, and carries no deadline.
-
-  - id: trump-2024-end-wars
-    theme: foreign-policy
-    sources:
-      - in: acceptance
-        ref: "¶89.1"
-        quote: >
-          I will end every single international crisis that the
-          current administration has created, including the horrible
-          war with Russia and Ukraine, which would have never
-          happened if I was president.
-      - in: inaugural
-        ref: "¶64.4"
-        quote: >
-          Our power will stop all wars and bring a new spirit of
-          unity to a world that has been angry, violent, and totally
-          unpredictable.
-      - in: debate
-        ref: "¶146.33-146.35"
-        quote: >
-          I will get that settled and fast. And I'll get the war
-          with Ukraine and Russia ended. If I'm President-Elect,
-          I'll get it done before even becoming President.
-    restatement: End every international crisis, including the Russia-Ukraine war.
-    metric:
-      present: true
-      quantity: active international conflicts (esp. the Russia-Ukraine war)
-      record: conflict-tracking datasets (e.g. UCDP/ACLED); ceasefire status
-    threshold:
-      present: true
-      stated: end every single one / to zero
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: false
-      stated: asserts he'll end them, but names no mechanism — an outcome he can't fully control
-    measurable: "partial"
-    notes: >
-      "Every single" is a clean to-zero threshold and the wars are trackable,
-      but there is no deadline in this sentence, no named instrument, and
-      ending a war depends on other parties — the classic outcome-only promise.
-
-  - id: trump-2024-iron-dome
-    ref: "¶210.7"
-    theme: defense
-    quote: >
-      We will replenish our military and build an iron dome missile defense
-      system to ensure that no enemy can strike our homeland.
-    restatement: Build a nationwide "iron dome" missile-defense system over the US.
-    metric:
-      present: true
-      quantity: whether the system is built/fielded (binary)
-      record: DoD/MDA program milestones and budgets
-    threshold:
-      present: true
-      stated: build it / no enemy can strike the homeland
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: fund and build the system domestically
-    measurable: "partial"
-    notes: >
-      Trackable as a defense-program milestone, but "no enemy can strike the
-      homeland" is an unfalsifiable coverage claim, there is no deadline, and
-      "an iron dome" over a continent-sized country has no defined completion
-      point.
-
-  - id: trump-2024-womens-sports
-    ref: "¶217.1-217.2"
-    theme: culture
-    quote: >
-      We will not have men playing in women's sports. That will end
-      immediately.
-    restatement: End transgender participation in women's sports immediately.
-    metric:
-      present: true
-      quantity: whether a barring policy is enacted (binary)
-      record: federal Title IX rule / executive order
-    threshold:
-      present: true
-      stated: end / to zero
-    deadline:
-      present: false
-      stated: immediately (bounded-but-undated, not a real deadline per this file)
-    instrument:
-      present: true
-      stated: executive/regulatory action
-    measurable: "partial"
-    notes: >
-      Threshold is present and "immediately" signals urgency but is not a real
-      deadline (per this file's convention); the object is a yes/no policy
-      rather than a measured quantity, and enforcement reach (federal funding
-      leverage vs. actual participation) is the disputed boundary.
-
-  - id: trump-2024-cancer-cures
-    ref: "¶215.1"
-    theme: health
-    quote: >
-      We will unleash the power of American innovation, and as we do, we will
-      soon be on the verge of finding the cures to cancer, Alzheimer's disease
-      and many other diseases.
-    restatement: Approach cures for cancer, Alzheimer's, and other diseases.
-    metric:
-      present: false
-      quantity: "\"cures\" and \"on the verge\" have no agreed measure"
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: soon
-    instrument:
-      present: false
-      stated: "\"unleash American innovation\" — no named action"
-    measurable: "no"
-    notes: >
-      Aspirational — "on the verge of finding cures" pins no quantity, no
-      target, no date, and no instrument. The far end of the scale, with a
-      hedge ("on the verge") that is unfalsifiable by design.
-
-  - id: trump-2024-cities
-    theme: crime
-    sources:
-      - in: acceptance
-        ref: "¶218.1"
-        quote: >
-          And we will restore and renovate our nation's once-great
-          cities, making them safe, clean and beautiful again.
-      - in: inaugural
-        ref: "¶39.5"
-        quote: >
-          And we are going to bring law and order back to our
-          cities.
-    restatement: Restore US cities to be safe, clean, and beautiful.
-    metric:
-      present: false
-      quantity: "\"safe, clean and beautiful\" has no agreed measure (crime rates only partly capture it)"
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: false
-      stated: "\"restore and renovate\" — no named mechanism"
-    measurable: "no"
-    notes: >
-      Pure aspiration — no quantity, no threshold, no deadline, no instrument.
-      Crime statistics touch "safe," but "clean and beautiful" resists any
-      series, so the promise as a whole doesn't attach to a metric.
-
-  - id: trump-2024-hostages
-    ref: "¶208.1"
-    theme: foreign-policy
-    quote: >
-      we want our hostages back — and they better be back before I assume
-      office, or you will be paying a very big price.
-    restatement: Get American hostages returned before Inauguration Day.
-    metric:
-      present: true
-      quantity: number of American hostages held abroad
-      record: State Dept / SPEHA hostage-recovery reporting
-    threshold:
-      present: true
-      stated: all back / to zero
-    deadline:
-      present: true
-      stated: "before I assume office (before 20 Jan 2025)"
-    instrument:
-      present: true
-      stated: threat of "a very big price" — coercion, an outcome he can't fully control
-    measurable: "full"
-    notes: >
-      All four ingredients are present — a countable metric, a to-zero
-      threshold, and a hard date — yet it's an outcome-only promise (release
-      depends on captors) and "our hostages" is an undefined set, which is
-      exactly the disputed boundary.
-
-  - id: trump-2024-green-redirect
-    ref: "¶123.1"
-    theme: fiscal
-    quote: >
-      And all of the trillions of dollars that are sitting there not yet spent,
-      we will redirect that money for important projects like roads, bridges,
-      dams and we will not allow it to be spent on the meaningless Green New
-      scam ideas.
-    restatement: Redirect unspent "Green New Deal" funds to roads, bridges, and dams.
-    metric:
-      present: true
-      quantity: reallocation of appropriated funds (binary/budget outlays)
-      record: OMB/agency obligation and outlay data
-    threshold:
-      present: true
-      stated: redirect all unspent funds (direction)
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: redirect / rescind and reprogram appropriations
-    measurable: "partial"
-    notes: >
-      Obligation data can track reallocation, but "all of the trillions ...
-      not yet spent" has no defined baseline, no deadline, and much of it is
-      already legally obligated — the accounting boundary is the dispute.
-
-  - id: trump-2024-incomes-prosper
+    - in: acceptance
+      ref: "¶69.5-69.6"
+      quote: "And I promise we will make Wisconsin great again."
+    restatement: "Make Wisconsin great again."
+    type: outcome
     theme: economy
-    sources:
-      - in: acceptance
-        ref: "¶149.1"
-        quote: >
-          Under my plan, incomes will skyrocket, inflation will
-          vanish completely, jobs will come roaring back, and the
-          middle class will prosper like never, ever before and
-          we're going to do it very rapidly.
-      - in: debate
-        ref: "¶202.9-202.10"
-        quote: >
-          I built one of the greatest economies in the history of
-          the world and I'm gonna build it again. It's going to be
-          bigger, better and stronger.
-    restatement: Incomes skyrocket, inflation vanishes completely, jobs return, middle class prospers.
-    metric:
-      present: true
-      quantity: real household incomes; inflation rate; employment
-      record: Census real median household income; BLS CPI; BLS payrolls
-    threshold:
-      present: true
-      stated: "\"skyrocket\" / \"vanish completely\" (to zero for inflation) / \"roaring back\""
     deadline:
-      present: false
-      stated: very rapidly
-    instrument:
-      present: false
-      stated: "\"my plan\" — no named mechanism in this sentence"
-    measurable: "partial"
-    notes: >
-      Rich, well-tracked metrics, and "inflation will vanish completely" is a
-      genuine to-zero threshold — but "skyrocket"/"roaring back" set no level,
-      "very rapidly" no date, and no instrument is named, so most of it stays
-      unpinned.
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  # --- Promises from the 2025 Inaugural Address (corpus/2025-2029 Trump/
-  # 2025-inaugural.md). Refs are paragraph.sentence into that document. The
-  # inaugural leans on "today", "this week", "immediately", and "a short time
-  # from now" — treated as urgency, not real completion dates (same convention
-  # as this file's "Day 1"/"immediately" handling), so none reach "full". Where
-  # an inaugural line merely restates a promise already made in the 2024
-  # acceptance speech (halt illegal entry, deport, drill/energy, prices/
-  # inflation, EV mandate, green new deal, auto jobs, general tariffs, stop all
-  # wars, hostages, law-and-order cities), NO duplicate entry is added.
+  - id: trump-2024-respected-again
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶75.1-75.3"
+      quote: "Under our leadership, the United States will be respected again."
+    - in: inaugural
+      ref: "¶3.1"
+      quote: "From this day forward, our country will flourish and be respected again all over the world."
+    - in: inaugural
+      ref: "¶45.1"
+      quote: "America will reclaim its rightful place as the greatest, most powerful, most respected nation on Earth"
+    - in: inaugural
+      ref: "¶65.1"
+      quote: "America will be respected again and admired again"
+    restatement: "Make the United States respected and admired again around the world."
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2024-border-emergency
+  - id: trump-2024-close-border
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶75.4"
+      quote: "Our borders will be totally secure."
+    - in: acceptance
+      ref: "¶87.1"
+      quote: "I will end the illegal immigration crisis by closing our border"
+    - in: acceptance
+      ref: "¶88.6-88.7"
+      quote: "We're not going to let that happen."
+    - in: acceptance
+      ref: "¶150.5"
+      quote: "The invasion at our southern border, we will stop it and we will stop it quickly."
+    - in: acceptance
+      ref: "¶157.1-157.2"
+      quote: "And we're going to do that on Day 1."
+    - in: acceptance
+      ref: "¶158.1-158.2"
+      quote: "close our borders."
+    - in: acceptance
+      ref: "¶165.8-165.9"
+      quote: "We're not going to stand for it."
+    - in: debate
+      ref: "¶128.15"
+      quote: "We have to have borders."
+    - in: inaugural
+      ref: "¶26.2"
+      quote: "All illegal entry will immediately be halted"
+    restatement: "Close the southern border and stop the illegal \"invasion\", on Day 1."
+    type: outcome
     theme: immigration
-    restatement: Declare a national emergency at the southern border.
-    sources:
-      - in: inaugural
-        ref: "¶26.1"
-        quote: >
-          First, I will declare a national emergency at our southern border.
-    metric:
-      present: true
-      quantity: whether the emergency is declared (binary), not a trend
-      record: presidential proclamation / Federal Register
-    threshold:
-      present: true
-      stated: declare / issue the emergency
     deadline:
-      present: false
-      stated: today (from ¶25.1; urgency, not a completion date)
-    instrument:
-      present: true
-      stated: national emergency declaration
-    measurable: "partial"
-    notes: >
-      A discrete, checkable executive act — declared or not — so the metric is
-      a yes/no policy action rather than a measured quantity, and "today" is
-      urgency, not a completion date. What powers the emergency actually
-      unlocks is the disputed boundary.
+      stated: "on Day 1"
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "illegal crossings at the southern border"
+      record: "CBP southwest border encounters"
+      criterion: "illegal crossings fall to near zero from the first day"
+      ambiguity: "\"Closed\" and \"halted\" are read as a sharp fall to record lows, not literally zero."
+    uncertainty:
+      extraction: probable
+      note: "Day 1 is stated in the acceptance speech (¶157.2, ¶158.1-158.2) and \"immediately\" in the inaugural; the other occurrences have no date."
+    links:
+    - kind: repeats
+      to: trump-2016-secure-border
+
+  - id: trump-2024-greatest-economy
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶75.5"
+      quote: "Our economy will soar."
+    - in: acceptance
+      ref: "¶86.12"
+      quote: "We'll do it again, but we'll do it even better."
+    - in: acceptance
+      ref: "¶121.18"
+      quote: "We want growth in our country."
+    - in: debate
+      ref: "¶17.37"
+      quote: "I'll do it again and even better."
+    - in: debate
+      ref: "¶21.10-21.12"
+      quote: "And create a great economy like I did before."
+    - in: debate
+      ref: "¶202.9-202.10"
+      quote: "I built one of the greatest economies in the history of the world and I'm gonna build it again."
+    restatement: "Build the greatest economy again, even better than before."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Several occurrences point back with \"it\" to the first-term economy."
+    links:
+    - kind: repeats
+      to: trump-2016-economic-machine
+
+  - id: trump-2024-law-and-order
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶75.6"
+      quote: "We will return law and order to our streets"
+    - in: inaugural
+      ref: "¶39.5"
+      quote: "And we are going to bring law and order back to our cities."
+    restatement: "Bring law and order back to the streets and cities."
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "crime"
+      record: "FBI national crime statistics; BJS National Crime Victimization Survey"
+      criterion: "violent crime falls over the term"
+      ambiguity: "\"Law and order\" is read as falling violent crime rates."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-restore-law-and-order
+
+  - id: trump-2024-patriotism-schools
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶75.6"
+      quote: "patriotism to our schools"
+    restatement: "Return patriotism to the schools."
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-world-peace
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶75.6"
+      quote: "we will restore peace, stability and harmony all throughout the world."
+    - in: acceptance
+      ref: "¶181.1"
+      quote: "we will help bring stability to the world."
+    - in: acceptance
+      ref: "¶209.1"
+      quote: "With our victory in November, the years of war, weakness and chaos will be over."
+    - in: inaugural
+      ref: "¶64.4"
+      quote: "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable."
+    restatement: "Restore peace, stability and harmony throughout the world; end the years of war."
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-end-inflation
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶83.1"
+      quote: "I will end the devastating inflation crisis immediately"
+    - in: acceptance
+      ref: "¶149.1"
+      quote: "inflation will vanish completely"
+    - in: inaugural
+      ref: "¶30.1"
+      quote: "I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation"
+    restatement: "End the inflation crisis immediately; make inflation vanish."
+    group: trump-2024-cost-of-living
+    type: outcome
+    theme: economy
+    deadline:
+      stated: "immediately"
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "consumer price inflation"
+      record: "Consumer Price Index (BLS)"
+      criterion: "annual CPI inflation falls back to a normal rate and stays there"
+      ambiguity: "\"End the crisis\" and \"vanish completely\" set no number; read as CPI inflation at or below about 2% a year."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-lower-interest-rates
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶83.1"
+      quote: "bring down interest rates"
+    restatement: "Bring down interest rates."
+    group: trump-2024-cost-of-living
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "interest rates"
+      record: "Federal Reserve (H.15 selected interest rates); Freddie Mac mortgage rates"
+      criterion: "interest rates are lower at the end of the term than at the start"
+      ambiguity: "No rate is named; read as the 30-year mortgage rate and 10-year Treasury yield. The Fed sets policy rates independently."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-lower-energy-costs
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶83.1"
+      quote: "lower the cost of energy."
+    - in: acceptance
+      ref: "¶120.2"
+      quote: "By slashing energy costs"
+    - in: inaugural
+      ref: "¶32.1"
+      quote: "We will bring prices down"
+    restatement: "Lower the cost of energy."
+    group: trump-2024-cost-of-living
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "energy prices"
+      record: "CPI energy index (BLS); EIA retail gasoline and electricity prices"
+      criterion: "energy prices are lower at the end of the term than at the start"
+      ambiguity: "No measure is named; read as the CPI energy index, with gasoline and electricity prices as checks."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-expand-drilling
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶83.2"
+      quote: "We will drill, baby, drill."
+    - in: acceptance
+      ref: "¶85.3"
+      quote: "But we will do it at levels that nobody's ever seen before"
+    - in: acceptance
+      ref: "¶158.1-158.2"
+      quote: "Drill, baby, drill"
+    - in: inaugural
+      ref: "¶30.3"
+      quote: "We will drill, baby, drill."
+    - in: inaugural
+      ref: "¶31.1-31.2"
+      quote: "the largest amount of oil and gas of any country on earth, and we are going to use it."
+    restatement: "Drill, baby, drill: raise oil and gas production to levels never seen before."
+    type: outcome
+    theme: energy
+    deadline:
+      stated: "Day 1"
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "US oil and gas production"
+      record: "EIA crude oil and natural gas production"
+      criterion: "US oil and gas production is higher at the end of the term than in 2024"
+    uncertainty:
+      extraction: probable
+      note: "¶85.3 \"it\" is drilling (¶83.2); its last clause (\"we'll end lots of different things\") is vague and not rated."
+    links: []
+
+  - id: trump-2024-lower-prices
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶84.1-84.2"
+      quote: "we will lead a large-scale decline in prices."
+    - in: acceptance
+      ref: "¶118.1-118.3"
+      quote: "Starting on Day 1, we will drive down prices and make America affordable again."
+    - in: inaugural
+      ref: "¶30.1"
+      quote: "rapidly bring down costs and prices."
+    restatement: "Drive prices down, starting on Day 1, and make America affordable again."
+    group: trump-2024-cost-of-living
+    type: outcome
+    theme: economy
+    deadline:
+      stated: "Starting on Day 1"
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "consumer price level"
+      record: "Consumer Price Index (BLS)"
+      criterion: "the price level is lower at the end of the term than at the start"
+      ambiguity: "\"Prices\" is read as the overall CPI level; a fall in the level counts, slower price growth does not."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-reduce-debt
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶85.4"
+      quote: "We'll start paying off debt"
+    - in: acceptance
+      ref: "¶121.1-121.2"
+      quote: "we will reduce our debt, $36 trillion."
+    restatement: "Start paying off the $36 trillion national debt."
+    type: outcome
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "federal debt"
+      record: "Debt to the Penny (Treasury)"
+      criterion: "total public debt outstanding is lower at the end of the term than at the start"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-cut-taxes
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶85.4"
+      quote: "start lowering taxes even further."
+    - in: acceptance
+      ref: "¶85.6"
+      quote: "We'll do it more."
+    - in: acceptance
+      ref: "¶121.3"
+      quote: "And we will also reduce your taxes still further."
+    - in: acceptance
+      ref: "¶121.15"
+      quote: "we're going to reduce your taxes still further."
+    - in: acceptance
+      ref: "¶121.17"
+      quote: "We're going to give you more"
+    - in: debate
+      ref: "¶21.10-21.12"
+      quote: "Cut taxes very substantially."
+    restatement: "Cut taxes further, very substantially."
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "federal taxes"
+      record: "enacted legislation (Congress.gov); CBO/JCT scores"
+      criterion: "a law is enacted that cuts federal taxes below their 2024 levels"
+      ambiguity: "\"Further\" is read as cuts beyond the 2017 law's rates; extending expiring cuts alone counts as partly kept."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-cut-taxes
+
+  - id: trump-2024-finish-wall
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶87.1"
+      quote: "finishing the wall"
+    - in: debate
+      ref: "¶128.14"
+      quote: "We need--and we have to have it."
+    restatement: "Finish the border wall."
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "southern border wall"
+      record: "CBP border wall status reports; appropriations"
+      criterion: "the wall is completed along the planned stretches of the southern border"
+      ambiguity: "\"Finishing\" is read as completing the barrier planned in the first term; no length is named."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-border-wall
+
+  - id: trump-2024-end-international-crises
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶89.1-89.2"
+      quote: "I will end every single international crisis that the current administration has created"
+    restatement: "End every international crisis the previous administration created."
+    group: trump-2024-end-wars
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-end-ukraine-war
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶89.1-89.2"
+      quote: "including the horrible war with Russia and Ukraine"
+    - in: debate
+      ref: "¶146.34-146.35"
+      quote: "And I'll get the war with Ukraine and Russia ended."
+    - in: debate
+      ref: "¶158.1"
+      quote: "I want the war to stop."
+    - in: debate
+      ref: "¶158.27"
+      quote: "I will get it settled before I even become President."
+    - in: debate
+      ref: "¶166.2"
+      quote: "Because we have to stop all of these human lives from being destroyed."
+    restatement: "End the Russia-Ukraine war, before even becoming President."
+    group: trump-2024-end-wars
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: "before I even become President"
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "Russia-Ukraine war"
+      record: "ceasefire or peace agreements; official statements"
+      criterion: "a ceasefire or peace agreement ends the fighting before 20 January 2025"
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶158.1 and ¶166.2 are soft restatements; acceptance ¶89.1 gives no date."
+    links: []
+
+  - id: trump-2024-end-israel-war
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶89.1-89.2"
+      quote: "And the war caused by the attack on Israel"
+    - in: debate
+      ref: "¶146.33"
+      quote: "I will get that settled and fast."
+    restatement: "Settle the war in the Middle East that followed the attack on Israel, fast."
+    group: trump-2024-end-wars
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: "fast"
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "Israel-Hamas war"
+      record: "ceasefire agreements; official statements"
+      criterion: "the Israel-Hamas war ends in a lasting ceasefire or peace agreement"
+      ambiguity: "\"That\" also takes in the wider regional conflict (Houthis, Iran); read as the Israel-Hamas war."
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶146.33 \"that\" points back to the Middle East wars of ¶146.5-146.31."
+    links: []
+
+  - id: trump-2024-election-integrity
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶91.1-91.5"
+      quote: "We're never going to let that happen again."
+    - in: debate
+      ref: "¶128.16"
+      quote: "And we have to have good elections."
+    restatement: "Never let an election result like 2020 happen again; have good elections."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"That\" in ¶91.1 is the 2020 election result (¶91.2), which he says was won by cheating (¶91.4)."
+    links: []
+
+  - id: trump-2024-restore-government-competence
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶93.1"
+      quote: "Together, we will restore vision, strength, competence and we're going to have a thing called common sense making most of our decisions actually."
+    - in: inaugural
+      ref: "¶16.2"
+      quote: "And we will immediately restore the integrity, competency, and loyalty of America's Government."
+    restatement: "Restore the integrity, competence and loyalty of the federal government; run it on common sense."
+    type: outcome
+    theme: government
+    deadline:
+      stated: "immediately"
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-american-dream
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶107.1-107.2"
+      quote: "I will bring back the American dream."
+    - in: inaugural
+      ref: "¶36.3"
+      quote: "The American dream will soon be back and thriving like never before."
+    restatement: "Bring back the American dream."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-bring-back-dreams
+
+  - id: trump-2024-implement-platform
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶116.1"
+      quote: "It's a series of bold promises that we will swiftly implement when you give us a Republican House."
+    restatement: "Swiftly implement the Republican platform's promises once given a Republican House and Senate."
+    type: action
+    theme: government
+    deadline:
+      stated: "swiftly"
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Conditional on a Republican Congress (¶116.1-117.1)."
+    links: []
+
+  - id: trump-2024-energy-exports
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶120.8-120.9"
+      quote: "We will be energy dominant and supply not only ourselves, but we will supply the rest of the world."
+    - in: inaugural
+      ref: "¶32.1"
+      quote: "export American energy all over the world."
+    restatement: "Become energy dominant and export American energy all over the world."
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "US energy exports"
+      record: "EIA energy trade data"
+      criterion: "US net energy exports rise over the term"
+      ambiguity: "The US was already a net exporter in 2024; \"dominant\" is read as net exports rising further."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-end-waste
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶122.1"
+      quote: "we will end the ridiculous and actually incredible waste of taxpayer dollars that is fueling the inflation crisis."
+    restatement: "End the waste of taxpayer dollars that fuels inflation."
+    type: outcome
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-redirect-green-funds
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶123.1"
+      quote: "we will redirect that money for important projects like roads, bridges, dams and we will not allow it to be spent on the meaningless Green New scam ideas."
+    restatement: "Redirect unspent \"Green New Scam\" money to roads, bridges and dams."
+    type: action
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "unspent climate and clean-energy appropriations"
+      record: "enacted rescissions and appropriations (Congress.gov); USAspending"
+      criterion: "unspent clean-energy funds are rescinded or redirected to roads, bridges and dams"
+      ambiguity: "\"Green New Scam\" names no law; read as the unspent clean-energy funds of the 2021-22 laws (IIJA, IRA)."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-end-ev-mandate
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶124.1"
+      quote: "And I will end the electric vehicle mandate on day one."
+    - in: acceptance
+      ref: "¶221.9-221.10"
+      quote: "And we're going to make that change on Day 1."
+    - in: inaugural
+      ref: "¶33.1"
+      quote: "we will revoke the electric vehicle mandate"
+    restatement: "End the electric vehicle mandate on day one, so people can buy the car of their choice."
+    type: action
+    theme: energy
+    deadline:
+      stated: "on day one"
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "federal EV policy"
+      record: "executive orders and agency rules (Federal Register)"
+      criterion: "the federal EV target and the rules that push EV sales are revoked"
+      ambiguity: "No law mandates EV purchases; \"mandate\" is read as the 2021 EV-share target and the EPA/NHTSA vehicle standards. Only the target can be revoked on day one; repealing rules takes longer."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-bring-back-auto-manufacturing
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶125.3"
+      quote: "we're going to bring back car manufacturing and we're going to bring it back fast."
+    - in: acceptance
+      ref: "¶126.4-126.5"
+      quote: "And we are going to bring it back."
+    - in: acceptance
+      ref: "¶131.5"
+      quote: "We will take over the auto industry again and many many, hundreds of thousands of jobs"
+    - in: inaugural
+      ref: "¶31.1-31.2"
+      quote: "America will be a manufacturing nation once again"
+    - in: inaugural
+      ref: "¶34.1"
+      quote: "We will build automobiles in America again at a rate that nobody could have dreamt possible just a few years ago."
+    restatement: "Bring car manufacturing back to the US, fast, with hundreds of thousands of jobs."
+    group: trump-2024-autos
+    type: outcome
+    theme: economy
+    deadline:
+      stated: "fast"
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "US auto production and jobs"
+      record: "BLS employment in motor vehicles and parts; Federal Reserve industrial production (motor vehicles)"
+      criterion: "US auto production and auto-manufacturing employment are higher at the end of the term than at the start"
+      ambiguity: "\"Bring back\" and \"a rate nobody could have dreamt\" set no number; read as both measures rising."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-mexico-car-tariff
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶127.2"
+      quote: "And if they don't agree with us, we'll put a tariff of approximately 100 to 200 percent on each car and they will be unsellable in the United States."
+    - in: debate
+      ref: "¶229.8-229.9"
+      quote: "We'll put tariffs on those cars so they can't come into our country."
+    restatement: "Put a tariff of about 100-200% on cars made in the new (Chinese-built) plants in Mexico."
+    group: trump-2024-autos
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "tariffs on cars imported from Mexico"
+      record: "tariff actions (Federal Register); Harmonized Tariff Schedule"
+      criterion: "a tariff of roughly 100% or more applies to cars from those plants"
+      ambiguity: "In the speech the tariff applies only \"if they don't agree\" to build in the US; read as cars from Chinese-owned plants in Mexico."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-stop-plunder
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶130.1"
+      quote: "We will not let countries come in, take our jobs, and plunder our nation."
+    - in: inaugural
+      ref: "¶3.2"
+      quote: "we will not allow ourselves to be taken advantage of any longer."
+    restatement: "Not let other countries take advantage of the US, take its jobs and plunder it."
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-stop-job-raids
+
+  - id: trump-2024-all-auto-jobs-back
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶131.8-131.9"
+      quote: "We're going to get them all back, every single one of them."
+    restatement: "Get back every auto-manufacturing job lost over the past 20-25 years."
+    group: trump-2024-autos
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "US auto-manufacturing employment"
+      record: "BLS employment in motor vehicles and parts"
+      criterion: "motor vehicle and parts employment returns to its level of about 2000 (roughly 1.3 million)"
+    uncertainty:
+      extraction: probable
+      note: "\"Them\" is the auto-manufacturing jobs lost to China and Mexico (¶131.6-131.7)."
+    links:
+    - kind: refines
+      to: trump-2024-bring-back-auto-manufacturing
+
+  - id: trump-2024-protect-social-security
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶148.1"
+      quote: "I am going to protect Social Security"
+    restatement: "Protect Social Security."
+    group: trump-2024-entitlements
+    type: ongoing
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "Social Security benefits"
+      record: "enacted legislation (Congress.gov); SSA programme rules"
+      criterion: "no law cuts Social Security benefits or raises the retirement age"
+      ambiguity: "\"Protect\" is read as no cuts to benefits or eligibility."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-protect-medicare
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶148.1"
+      quote: "I am going to protect Social Security and Medicare."
+    restatement: "Protect Medicare."
+    group: trump-2024-entitlements
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "Medicare benefits"
+      record: "enacted legislation (Congress.gov); CMS programme rules"
+      criterion: "no law cuts Medicare benefits or eligibility"
+      ambiguity: "\"Protect\" is read as no cuts to benefits or eligibility; payment changes to providers are a judgement call."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-incomes-soar
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶149.1"
+      quote: "Under my plan, incomes will skyrocket"
+    restatement: "Make incomes skyrocket."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "household income"
+      record: "real median household income (Census); real average weekly earnings (BLS)"
+      criterion: "real incomes rise over the term"
+      ambiguity: "\"Skyrocket\" sets no number; any real rise counts as partly kept, a rise faster than in recent terms as kept."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-jobs-roaring-back
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶149.1"
+      quote: "jobs will come roaring back"
+    restatement: "Bring jobs roaring back."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-create-jobs
+
+  - id: trump-2024-middle-class-prosper
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶149.1"
+      quote: "the middle class will prosper like never, ever before"
+    restatement: "Make the middle class prosper like never before."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2024-remain-in-mexico
-    theme: immigration
-    restatement: Reinstate the "Remain in Mexico" policy.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶26.3"
-        quote: >
-          We will reinstate my "Remain in Mexico" policy.
-    metric:
-      present: true
-      quantity: whether the policy is reinstated (binary), not a trend
-      record: DHS policy / Migrant Protection Protocols records
-    threshold:
-      present: true
-      stated: reinstate the policy
+    - in: acceptance
+      ref: "¶163.4"
+      quote: "We want them to stay on their soil."
+    - in: inaugural
+      ref: "¶26.3"
+      quote: "We will reinstate my \"Remain in Mexico\" policy."
+    restatement: "Reinstate the \"Remain in Mexico\" policy."
+    type: action
+    theme: immigration
     deadline:
-      present: false
-      stated: today (from ¶25.1; urgency, not a completion date)
-    instrument:
-      present: true
-      stated: executive/DHS action reviving MPP
-    measurable: "partial"
-    notes: >
-      A yes/no restoration of a named prior policy — measurable only as "was it
-      reinstated?", not a quantity over time, and no completion date. Scope of
-      "reinstate" (identical to the first-term MPP, or a variant?) is the
-      disputed boundary.
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "Migrant Protection Protocols"
+      record: "DHS policy memoranda; executive orders (Federal Register)"
+      criterion: "the Migrant Protection Protocols are reinstated"
+    uncertainty:
+      extraction: probable
+      note: "Acceptance ¶163.4 is a soft, broader wish that illegal aliens stay on foreign soil, read as this commitment."
+    links: []
 
-  - id: trump-2024-catch-and-release
-    theme: immigration
-    restatement: End the practice of catch-and-release.
+  - id: trump-2024-mass-deportation
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶27.1"
-        quote: >
-          I will end the practice of catch-and-release.
-    metric:
-      present: true
-      quantity: whether the practice is ended (binary); releases pending proceedings
-      record: DHS/ICE release and detention data
-    threshold:
-      present: true
-      stated: end / to zero
+    - in: acceptance
+      ref: "¶176.2"
+      quote: "the Republican platform promises to launch the largest deportation operation in the history of our country."
+    - in: debate
+      ref: "¶17.34-17.35"
+      quote: "We have to get 'em out fast."
+    - in: inaugural
+      ref: "¶26.2"
+      quote: "we will begin the process of returning millions and millions of criminal aliens back to the places from which they came."
+    restatement: "Launch the largest deportation operation in US history, returning millions of criminal aliens."
+    type: action
+    theme: immigration
     deadline:
-      present: false
-      stated: today (from ¶27.3 "the orders I sign today"; urgency, not a completion date)
-    instrument:
-      present: true
-      stated: enforcement/executive action ending catch-and-release
-    measurable: "partial"
-    notes: >
-      Releases can in principle be counted, but "the practice" has no defined
-      baseline or target level, there is no completion date, and detention
-      capacity constrains it — so it lands at a yes/no direction rather than a
-      pinned quantity.
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "deportations"
+      record: "ICE and DHS removal statistics"
+      criterion: "removals reach millions over the term, more than any earlier operation"
+      ambiguity: "Counts differ (removals vs returns); the 1954 operation's claimed figures are disputed. Read as millions of removals over the term."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2024-troops-border
-    theme: immigration
-    restatement: Deploy troops to the southern border.
+  - id: trump-2024-keep-criminals-out
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶27.2"
-        quote: >
-          And I will send troops to the southern border to repel the disastrous
-          invasion of our country.
-    metric:
-      present: true
-      quantity: number of troops deployed to the southern border
-      record: DoD / Northern Command deployment figures
-    threshold:
-      present: true
-      stated: send troops (direction, no number)
+    - in: acceptance
+      ref: "¶180.2"
+      quote: "I will not let these killers and criminals into our country."
+    restatement: "Not let killers and criminals into the country."
+    type: ongoing
+    theme: immigration
     deadline:
-      present: false
-      stated: today (from ¶27.3; urgency, not a completion date)
-    instrument:
-      present: true
-      stated: military deployment order
-    measurable: "partial"
-    notes: >
-      Troop counts are cleanly tracked, but the promise attaches no number and
-      no completion date — "send troops to repel the invasion" fixes neither a
-      level nor a by-when, so the metric exists but the promise doesn't pin it.
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-keep-americans-safe
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶180.3"
+      quote: "I will keep our sons and daughters safe."
+    - in: inaugural
+      ref: "¶4.2"
+      quote: "Our safety will be restored."
+    restatement: "Keep Americans safe; restore safety."
+    type: ongoing
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-hostages-back
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "¶208.1"
+      quote: "we want our hostages back — and they better be back before I assume office, or you will be paying a very big price."
+    restatement: "Get the hostages back before he takes office."
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: "before I assume office"
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "hostages held abroad (Gaza)"
+      record: "official statements on hostage releases"
+      criterion: "the hostages are released before 20 January 2025"
+    uncertainty:
+      extraction: probable
+      note: "A wish (\"we want\") with a threat of \"a very big price\"; the release is up to others."
+    links: []
+
+  - id: trump-2024-rebuild-military
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶210.7"
+      quote: "We will replenish our military"
+    - in: inaugural
+      ref: "¶43.1"
+      quote: "we will again build the strongest military the world has ever seen."
+    restatement: "Replenish the military and build the strongest military the world has ever seen."
+    type: action
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "US military"
+      record: "DoD budget (Congress.gov, Comptroller); munitions procurement"
+      criterion: "defense spending and munitions stocks grow in real terms over the term"
+      ambiguity: "\"Replenish\" and \"strongest ever\" set no number; read as real growth in defense budgets and stocks."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-rebuild-military
+
+  - id: trump-2024-iron-dome
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶210.7"
+      quote: "build an iron dome missile defense system to ensure that no enemy can strike our homeland."
+    - in: acceptance
+      ref: "¶214.3"
+      quote: "we're going to build an iron dome over our country"
+    restatement: "Build an iron dome missile defense system over the US so no enemy can strike the homeland."
+    group: trump-2024-iron-dome
+    type: action
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "homeland missile defense"
+      record: "DoD budget and contracts; Missile Defense Agency reports"
+      criterion: "a nationwide missile defense shield is built and operating by the end of the term"
+      ambiguity: "\"Build\" is read as deployed and operating; funding or starting it counts as partly kept."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-iron-dome-made-in-usa
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶211.1"
+      quote: "this great iron dome will be built entirely in the U.S.A."
+    - in: acceptance
+      ref: "¶214.4"
+      quote: "I'm going to make it all right here."
+    restatement: "Build the iron dome entirely in the USA."
+    group: trump-2024-iron-dome
+    type: action
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "where the missile shield is made"
+      record: "DoD contracts (SAM.gov, USAspending)"
+      criterion: "the shield's contracts go to US production"
+      ambiguity: "\"Entirely\" is read as US prime contractors and assembly; global supply chains are not traced."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-wisconsin-ships
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶212.6"
+      quote: "we're going to have a lot of that built right here in the state of Wisconsin and all other states."
+    restatement: "Have a lot of the navy ship contract built in Wisconsin and other states."
+    type: action
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "Navy shipbuilding in Wisconsin"
+      record: "Navy contracts (USAspending)"
+      criterion: "Navy ships under the contract are built in Wisconsin shipyards"
+      ambiguity: "\"A lot of that\" sets no share; read as continued Navy ship construction in Wisconsin."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-cure-cancer-alzheimers
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶215.1-215.2"
+      quote: "We will unleash the power of American innovation, and as we do, we will soon be on the verge of finding the cures to cancer, Alzheimer's disease and many other diseases."
+    - in: acceptance
+      ref: "¶216.2"
+      quote: "We're going to get to the cure for cancer and Alzheimer's and so many other things."
+    restatement: "Unleash American innovation and get to cures for cancer, Alzheimer's and other diseases."
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-womens-sports
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶217.1-217.2"
+      quote: "We will not have men playing in women's sports."
+    restatement: "Not have men playing in women's sports, ending it immediately."
+    type: action
+    theme: rights
+    deadline:
+      stated: "immediately"
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "participation of transgender women in women's sports"
+      record: "executive orders; Title IX rules and enforcement (Federal Register)"
+      criterion: "federal policy bars males from women's sports in federally funded programmes"
+      ambiguity: "Federal reach runs through Title IX funding; read as a federal rule or order, not every sports body."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-renovate-cities
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶218.1"
+      quote: "And we will restore and renovate our nation's once-great cities, making them safe, clean and beautiful again."
+    restatement: "Restore and renovate the nation's cities, making them safe, clean and beautiful."
+    group: trump-2024-cities
+    type: outcome
+    theme: infrastructure
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-proud-capital
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶218.4"
+      quote: "We will be, very soon, very proud of our capital again, Washington, D.C."
+    restatement: "Make Washington, D.C. a capital to be proud of again, very soon."
+    group: trump-2024-cities
+    type: outcome
+    theme: infrastructure
+    deadline:
+      stated: "very soon"
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-more-electricity
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "¶220.1"
+      quote: "We have to produce massive amounts of energy."
+    restatement: "Produce massive amounts of energy, including the electricity AI needs."
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "US electricity generation"
+      record: "EIA electricity generation data"
+      criterion: "US electricity generation grows over the term"
+      ambiguity: "\"Massive amounts\" sets no number; the doubling AI \"needs\" is context, not a target."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-forgotten-no-longer
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶238.1"
+      quote: "you will be forgotten no longer."
+    restatement: "The forgotten men and women will be forgotten no longer."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-forgotten-no-longer
+
+  - id: trump-2024-win-again
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶238.2"
+      quote: "together, we will win, win, win."
+    - in: inaugural
+      ref: "¶63.3"
+      quote: "We're going to win like never before."
+    restatement: "Win like never before."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-start-winning
+
+  - id: trump-2024-broad-tariffs
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶17.4-17.6"
+      quote: "We're doing tariffs on other countries."
+    - in: inaugural
+      ref: "¶35.2"
+      quote: "we will tariff and tax foreign countries to enrich our citizens."
+    restatement: "Tariff and tax foreign countries instead of taxing Americans."
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "US tariffs"
+      record: "tariff actions (Federal Register); Harmonized Tariff Schedule"
+      criterion: "broad new tariffs are imposed on imports from many countries"
+      ambiguity: "\"Substantial in some cases\" sets no rate; read as broad tariff increases on many countries' goods."
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶17.4-17.6 is untriggered (\"We're doing tariffs\")."
+    links: []
+
+  - id: trump-2024-tariff-revenue
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶26.3"
+      quote: "We are gonna take in billions of dollars, hundreds of billions of dollars."
+    - in: inaugural
+      ref: "¶36.1-36.2"
+      quote: "It will be massive amounts of money pouring into our Treasury, coming from foreign sources."
+    restatement: "Take in hundreds of billions of dollars from tariffs."
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "customs revenue"
+      record: "customs duties in the Monthly Treasury Statement"
+      criterion: "customs duties reach at least $200 billion a year during the term"
+    uncertainty:
+      extraction: probable
+      note: "Untriggered (\"We are gonna\", \"It will be massive amounts\")."
+    links:
+    - kind: refines
+      to: trump-2024-broad-tariffs
+
+  - id: trump-2024-no-abortion-ban
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶41.3-41.4"
+      quote: "I'm not signing a ban."
+    restatement: "Not sign a national abortion ban."
+    type: action
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "federal abortion ban"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "no federal abortion ban is signed into law during the term"
+    uncertainty:
+      extraction: probable
+      note: "Untriggered present tense (\"I'm not signing a ban\") in answer to whether he would sign one."
+    links: []
+
+  - id: trump-2024-ukraine-talks
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶158.28"
+      quote: "If I win, when I'm President-Elect, and what I'll do is I'll speak to one, I'll speak to the other, I'll get 'em together."
+    restatement: "As President-elect, speak to Putin and Zelenskyy and get them together."
+    group: trump-2024-end-wars
+    type: action
+    theme: foreign-policy
+    deadline:
+      stated: "when I'm President-Elect"
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "talks between Russia and Ukraine"
+      record: "official readouts and statements"
+      criterion: "he brings the two leaders into direct talks before taking office"
+      ambiguity: "\"Get 'em together\" is read as direct talks between the two leaders, not necessarily a meeting in person."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-aca-only-if-better
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶215.4"
+      quote: "And what I said, that if we come up with something, and we are working on things, we're going to do it and we're going to replace it."
+    - in: debate
+      ref: "¶215.28-215.30"
+      quote: "But until then, I'd run it as good as it can be run."
+    - in: debate
+      ref: "¶217.3-217.5"
+      quote: "But if we come up with something I would only change it if we come up with something that's better and less expensive."
+    restatement: "Keep running Obamacare as well as possible, and replace it only with a plan that costs less and is better."
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: contested
+      note: "Hedged and conditional on finding a better plan (\"if we come up with something\"); read as a commitment not to replace the ACA with anything worse."
+    links: []
+
+  - id: trump-2024-america-first
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶3.3"
+      quote: "During every single day of the Trump administration, I will, very simply, put America first."
+    restatement: "Put America first every day of the administration."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-america-first
+
+  - id: trump-2024-reclaim-sovereignty
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶4.1"
+      quote: "Our sovereignty will be reclaimed."
+    - in: inaugural
+      ref: "¶66.2"
+      quote: "From this day on, the United States of America will be a free, sovereign, and independent nation."
+    restatement: "Reclaim American sovereignty; make the US a free, sovereign and independent nation."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-impartial-justice
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶4.3"
+      quote: "The scales of justice will be rebalanced."
+    - in: inaugural
+      ref: "¶39.4"
+      quote: "Under my leadership, we will restore fair, equal, and impartial justice under the constitutional rule of law."
+    restatement: "Restore fair, equal and impartial justice under the rule of law."
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-end-weaponization
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶4.4"
+      quote: "The vicious, violent, and unfair weaponization of the Justice Department and our Government will end."
+    - in: inaugural
+      ref: "¶39.1-39.3"
+      quote: "We will not allow that to happen."
+    restatement: "End the weaponization of the Justice Department and government against political opponents."
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-disaster-response
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶12.5-12.7"
+      quote: "That's going to change."
+    restatement: "Make government able to deliver basic services in emergencies such as hurricanes and wildfires."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"That\" in ¶12.7 is the failed disaster response of ¶12.1-12.6."
+    links: []
+
+  - id: trump-2024-government-conduct
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶19.1"
+      quote: "we will be working to meet every crisis with dignity and power and strength."
+    - in: inaugural
+      ref: "¶24.2"
+      quote: "In everything we do, my administration will be inspired by a strong pursuit of excellence and unrelenting success."
+    restatement: "Meet every crisis with dignity and strength; run the administration in pursuit of excellence."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-mlk-dream
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶23.3-23.4"
+      quote: "We will make his dream come true."
+    restatement: "Make Martin Luther King's dream come true."
+    type: outcome
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"We will strive together\" (¶23.3) is shared with citizens; ¶23.4 is firm."
+    links: []
+
+  - id: trump-2024-border-emergency
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶26.1"
+      quote: "First, I will declare a national emergency at our southern border."
+    restatement: "Declare a national emergency at the southern border."
+    type: action
+    theme: immigration
+    deadline:
+      stated: "today"
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "national emergency at the southern border"
+      record: "proclamations (Federal Register)"
+      criterion: "a national emergency at the southern border is declared on 20 January 2025"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-end-catch-and-release
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶27.1"
+      quote: "I will end the practice of catch-and-release."
+    restatement: "End catch-and-release."
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "release of apprehended migrants into the US"
+      record: "DHS policy memoranda; ICE detention and release statistics"
+      criterion: "the policy of releasing apprehended border crossers into the US pending hearings ends"
+      ambiguity: "Some releases are required by law and court orders; read as ending routine release at the border."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-end-catch-and-release
+
+  - id: trump-2024-troops-to-border
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶27.2"
+      quote: "And I will send troops to the southern border to repel the disastrous invasion of our country."
+    restatement: "Send troops to the southern border."
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "military deployment to the southern border"
+      record: "DoD deployment orders and announcements"
+      criterion: "active-duty troops are deployed to the southern border"
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2024-cartels-fto
-    theme: immigration
-    restatement: Designate the drug cartels as foreign terrorist organizations.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶27.3"
-        quote: >
-          Under the orders I sign today, we will also be designating the cartels
-          as foreign terrorist organizations.
-    metric:
-      present: true
-      quantity: whether the cartels are designated (binary), not a trend
-      record: State Department Foreign Terrorist Organization list
-    threshold:
-      present: true
-      stated: designate as FTOs
+    - in: inaugural
+      ref: "¶27.3"
+      quote: "we will also be designating the cartels as foreign terrorist organizations."
+    restatement: "Designate the cartels as foreign terrorist organizations."
+    type: action
+    theme: crime-justice
     deadline:
-      present: false
-      stated: today (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: executive designation via State Department process
-    measurable: "partial"
-    notes: >
-      A yes/no legal designation with a formal record, not a measured quantity,
-      and "today" is urgency rather than a completion date. Which cartels and
-      how many the designation ultimately covers is the disputed boundary.
-
-  - id: trump-2024-alien-enemies-act
-    theme: immigration
-    restatement: Invoke the Alien Enemies Act of 1798 to eliminate all foreign gangs and criminal networks.
-    sources:
-      - in: inaugural
-        ref: "¶28.1"
-        quote: >
-          And by invoking the Alien Enemies Act of 1798, I will direct our
-          Government to use the full and immense power of Federal and State law
-          enforcement to eliminate the presence of all foreign gangs and
-          criminal networks bringing devastating crime to U.S. soil, including
-          our cities and inner cities.
-    metric:
-      present: true
-      quantity: presence of foreign gangs / criminal networks (members removed or arrested)
-      record: DOJ/DHS gang-enforcement and removal statistics
-    threshold:
-      present: true
-      stated: eliminate the presence of all foreign gangs (to zero)
-    deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: invoke the Alien Enemies Act of 1798; Federal/State law enforcement
-    measurable: "partial"
-    notes: >
-      A named legal instrument and a to-zero threshold ("all foreign gangs"),
-      but the gang population has no agreed count, "eliminate the presence" is
-      effectively unverifiable, and there is no deadline — a sharp direction
-      attached to an unmeasurable base.
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "FTO designation of drug cartels"
+      record: "State Department FTO list (Federal Register)"
+      criterion: "major drug cartels are designated foreign terrorist organizations"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-invoke-alien-enemies-act
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶28.1"
+      quote: "by invoking the Alien Enemies Act of 1798"
+    restatement: "Invoke the Alien Enemies Act of 1798 against foreign gangs."
+    group: trump-2024-alien-enemies
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "Alien Enemies Act"
+      record: "proclamations (Federal Register)"
+      criterion: "the Alien Enemies Act is formally invoked"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-eliminate-foreign-gangs
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶28.1"
+      quote: "to eliminate the presence of all foreign gangs and criminal networks bringing devastating crime to U.S. soil"
+    restatement: "Eliminate the presence of all foreign gangs and criminal networks in the US."
+    group: trump-2024-alien-enemies
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-defend-from-invasion
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶29.1-29.2"
+      quote: "We will do it at a level that nobody has ever seen before."
+    restatement: "Defend the country from threats and invasions at a level never seen before."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2024-energy-emergency
-    theme: energy
-    restatement: Declare a national energy emergency.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶30.2"
-        quote: >
-          The inflation crisis was caused by massive overspending and escalating
-          energy prices, and that is why today I will also declare a national
-          energy emergency.
-    metric:
-      present: true
-      quantity: whether the emergency is declared (binary), not a trend
-      record: presidential proclamation / Federal Register
-    threshold:
-      present: true
-      stated: declare the emergency
+    - in: inaugural
+      ref: "¶30.2"
+      quote: "today I will also declare a national energy emergency."
+    restatement: "Declare a national energy emergency."
+    type: action
+    theme: energy
     deadline:
-      present: false
-      stated: today (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: national emergency declaration
-    measurable: "partial"
-    notes: >
-      A discrete executive act, measurable only as declared-or-not, with
-      "today" as urgency rather than a completion date. What the declaration
-      changes on the ground (production, permitting) is the disputed boundary,
-      not the declaration itself.
+      stated: "today"
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "national energy emergency"
+      record: "executive orders (Federal Register)"
+      criterion: "a national energy emergency is declared on 20 January 2025"
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2024-spr-refill
-    theme: energy
-    restatement: Refill the Strategic Petroleum Reserve back to the top.
+  - id: trump-2024-refill-spr
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶32.1"
-        quote: >
-          We will bring prices down, fill our strategic reserves up again right
-          to the top, and export American energy all over the world.
-    metric:
-      present: true
-      quantity: Strategic Petroleum Reserve inventory level
-      record: EIA / DOE weekly SPR crude stocks
-    threshold:
-      present: true
-      stated: right to the top (full capacity)
+    - in: inaugural
+      ref: "¶32.1"
+      quote: "fill our strategic reserves up again right to the top"
+    restatement: "Fill the strategic petroleum reserve back up to the top."
+    type: outcome
+    theme: energy
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: purchase crude to refill the reserve
-    measurable: "partial"
-    notes: >
-      Unusually well-pinned: SPR stocks are reported weekly and "right to the
-      top" is a real target (authorized capacity ~714M barrels). Only the
-      deadline is missing — by-when to reach full is unstated — so it lands at
-      partial. The "bring prices down" and "export energy" clauses restate the
-      inflation/prices and energy-dominance promises (merge candidates), not
-      counted here.
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "Strategic Petroleum Reserve"
+      record: "EIA weekly SPR stocks"
+      criterion: "the SPR is at or near its full capacity (about 714 million barrels) by the end of the term"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-rich-nation
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶32.2"
+      quote: "We will be a rich nation again"
+    restatement: "Make America a rich nation again."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: trump-2016-make-country-rich
+
+  - id: trump-2024-end-green-new-deal
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶33.1"
+      quote: "we will end the \"green new deal,\""
+    restatement: "End the \"green new deal\"."
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "No law called the Green New Deal was enacted; read as Biden-era climate spending and rules."
+    links: []
+
+  - id: trump-2024-overhaul-trade
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶35.1"
+      quote: "I will immediately begin the overhaul of our trade system to protect American workers and families."
+    restatement: "Immediately begin overhauling the trade system to protect American workers."
+    type: action
+    theme: trade
+    deadline:
+      stated: "immediately"
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "US trade policy"
+      record: "tariff actions and trade agreements (Federal Register, USTR)"
+      criterion: "broad changes to tariffs and trade agreements begin in the first days of the term"
+      ambiguity: "\"Overhaul\" is not defined; read as broad new tariff and trade-agreement actions starting at once."
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2024-external-revenue-service
-    theme: trade
-    restatement: Establish an "External Revenue Service" to collect tariffs, duties, and revenues.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶36.1"
-        quote: >
-          For this purpose, we are establishing the External Revenue Service to
-          collect all tariffs, duties, and revenues.
-    metric:
-      present: true
-      quantity: whether the agency is established (binary), not a trend
-      record: executive order / enabling legislation creating the agency
-    threshold:
-      present: true
-      stated: establish the agency
+    - in: inaugural
+      ref: "¶36.1-36.2"
+      quote: "we are establishing the External Revenue Service to collect all tariffs, duties, and revenues."
+    restatement: "Establish an External Revenue Service to collect tariffs, duties and revenues."
+    type: action
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: create a new Federal agency
-    measurable: "partial"
-    notes: >
-      A yes/no institutional creation with a clear record, but no deadline and
-      an undefined form — whether the "External Revenue Service" is a standalone
-      agency, a rebrand of existing customs collection, or a slogan is the
-      disputed boundary. Genuinely new to the term; distinct from the 2024
-      car-tariff promise.
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "External Revenue Service"
+      record: "executive orders and statutes (Federal Register, Congress.gov)"
+      criterion: "an agency named the External Revenue Service is established to collect tariffs and duties"
+    uncertainty:
+      extraction: probable
+      note: "Untriggered; \"we are establishing\" is read as a commitment for the term."
+    links: []
 
   - id: trump-2024-doge
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶37.1"
+      quote: "my administration will establish the brandnew Department of Government Efficiency."
+    restatement: "Establish a new Department of Government Efficiency."
+    type: action
     theme: government
-    restatement: Establish the Department of Government Efficiency.
-    sources:
-      - in: inaugural
-        ref: "¶37.1"
-        quote: >
-          To restore competence and effectiveness to our Federal Government, my
-          administration will establish the brandnew Department of Government
-          Efficiency.
-    metric:
-      present: true
-      quantity: whether the entity is established (binary), not a trend
-      record: executive order establishing the entity
-    threshold:
-      present: true
-      stated: establish the entity
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: create a new government-efficiency body
-    measurable: "partial"
-    notes: >
-      A yes/no creation, measurable only as established-or-not, with no deadline
-      and no efficiency target attached in this sentence. What "Department"
-      means (a true department needs Congress) and what it must achieve are the
-      disputed boundaries.
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "Department of Government Efficiency"
+      record: "executive orders (Federal Register)"
+      criterion: "a Department of Government Efficiency is established"
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2024-free-speech-eo
-    theme: civil-liberties
-    restatement: Sign an executive order to stop all government censorship and restore free speech.
+  - id: trump-2024-free-speech-order
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶38.1"
-        quote: >
-          After years and years of illegal and unconstitutional Federal efforts
-          to restrict free expression, I also will sign an Executive order to
-          immediately stop all Government censorship and bring back free speech
-          to America.
-    metric:
-      present: true
-      quantity: whether the order is signed (binary); government censorship activity
-      record: executive order / Federal Register
-    threshold:
-      present: true
-      stated: stop all Government censorship (to zero)
+    - in: inaugural
+      ref: "¶38.1"
+      quote: "I also will sign an Executive order to immediately stop all Government censorship and bring back free speech to America."
+    restatement: "Sign an executive order to stop government censorship."
+    type: action
+    theme: rights
     deadline:
-      present: false
-      stated: immediately (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: executive order
-    measurable: "partial"
-    notes: >
-      Signing the order is a clean yes/no act, but "stop all Government
-      censorship" describes a contested, hard-to-measure condition rather than
-      a tracked quantity, "immediately" is urgency not a date, and what counts
-      as "censorship" is the disputed boundary.
+      stated: "immediately"
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "executive order on government censorship"
+      record: "executive orders (Federal Register)"
+      criterion: "an executive order barring federal censorship of speech is signed"
+    uncertainty:
+      extraction: probable
+      note: "Untriggered (\"I also will sign\")."
+    links: []
 
   - id: trump-2024-end-dei
-    theme: culture
-    restatement: End the government policy of socially engineering race and gender into public and private life.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶40.1"
-        quote: >
-          This week, I will also end the Government policy of trying to socially
-          engineer race and gender into every aspect of public and private life.
-    metric:
-      present: true
-      quantity: whether the DEI policies are rescinded (binary), not a trend
-      record: executive orders / agency policy rescissions (Federal Register)
-    threshold:
-      present: true
-      stated: end the policy
+    - in: inaugural
+      ref: "¶40.1"
+      quote: "This week, I will also end the Government policy of trying to socially engineer race and gender into every aspect of public and private life."
+    restatement: "End the government policy of \"socially engineering\" race and gender, this week."
+    type: action
+    theme: rights
     deadline:
-      present: false
-      stated: this week (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: executive/regulatory action ending the policies
-    measurable: "partial"
-    notes: >
-      A yes/no policy reversal rather than a measured quantity, with "this week"
-      as urgency, not a completion date. Which programs count as "socially
-      engineering race and gender," and reach into "private life," is the
-      disputed boundary.
+      stated: "This week"
+      applied: 2025-01-26
+    verifiability:
+      level: medium
+      object: "federal diversity, equity and inclusion programmes"
+      record: "executive orders (Federal Register)"
+      criterion: "orders ending federal DEI programmes and mandates are issued in the first week"
+      ambiguity: "\"Socially engineer race and gender\" is read as federal DEI programmes and requirements."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2024-two-genders
-    theme: culture
-    restatement: Make it official US Government policy that there are only two genders (male and female).
+  - id: trump-2024-colorblind-society
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶40.3"
-        quote: >
-          As of today, it will henceforth be the official policy of the United
-          States Government that there are only two genders: male and female.
-    metric:
-      present: true
-      quantity: whether the policy is adopted (binary), not a trend
-      record: executive order / agency policy and forms
-    threshold:
-      present: true
-      stated: two genders as official policy
+    - in: inaugural
+      ref: "¶40.2"
+      quote: "We will forge a society that is colorblind and merit based."
+    restatement: "Forge a society that is colorblind and merit based."
+    type: outcome
+    theme: rights
     deadline:
-      present: false
-      stated: as of today (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: executive declaration of official policy
-    measurable: "partial"
-    notes: >
-      A declarative yes/no policy set "as of today" — measurable only as adopted
-      or not, not a quantity. How far the policy propagates across agencies,
-      documents, and law is the disputed boundary.
-
-  - id: trump-2024-reinstate-servicemembers
-    theme: defense
-    restatement: Reinstate servicemembers expelled over the COVID vaccine mandate, with full backpay.
-    sources:
-      - in: inaugural
-        ref: "¶41.1"
-        quote: >
-          This week, I will reinstate any servicemembers who were unjustly
-          expelled from our military for objecting to the COVID vaccine mandate
-          with full backpay.
-    metric:
-      present: true
-      quantity: number of expelled servicemembers reinstated with backpay
-      record: DoD personnel / separation and reinstatement records
-    threshold:
-      present: true
-      stated: reinstate any (all) unjustly expelled, with full backpay
-    deadline:
-      present: false
-      stated: this week (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: reinstatement order with backpay
-    measurable: "partial"
-    notes: >
-      A countable population and an all-of-them threshold with a concrete remedy
-      (full backpay), but no completion date and a contested set — how many were
-      "unjustly expelled," and how many choose to return, is the disputed
-      boundary.
-
-  - id: trump-2024-military-depoliticize
-    theme: defense
-    restatement: Sign an order barring radical political theories and social experiments in the military.
-    sources:
-      - in: inaugural
-        ref: "¶42.1-42.2"
-        quote: >
-          And I will sign an order to stop our warriors from being subjected to
-          radical political theories and social experiments while on duty. It's
-          going to end immediately.
-    metric:
-      present: true
-      quantity: whether the order is signed (binary), not a trend
-      record: executive order / DoD directive
-    threshold:
-      present: true
-      stated: stop / end (to zero)
-    deadline:
-      present: false
-      stated: immediately (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: signed order
-    measurable: "partial"
-    notes: >
-      Signing is a yes/no act; "radical political theories and social
-      experiments" names no tracked quantity, and "immediately" is urgency, not
-      a completion date. What programs the order actually reaches is the
-      disputed boundary.
-
-  - id: trump-2024-strongest-military
-    theme: defense
-    restatement: Build the strongest military the world has ever seen.
-    sources:
-      - in: inaugural
-        ref: "¶43.1"
-        quote: >
-          Like in 2017, we will again build the strongest military the world has
-          ever seen.
-    metric:
-      present: true
-      quantity: military capability / defense spending and force levels
-      record: DoD budget; force-structure and readiness reporting
-    threshold:
-      present: true
-      stated: strongest the world has ever seen (direction, no defined level)
-    deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: rebuild/expand the military
-    measurable: "partial"
-    notes: >
-      Defense spending and force levels are tracked, but "strongest the world
-      has ever seen" has no agreed measure or target, and no deadline is
-      attached — a superlative direction over a real but unpinned metric, in the
-      same family as the 2024 iron-dome promise.
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-two-sexes-policy
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶40.3"
+      quote: "As of today, it will henceforth be the official policy of the United States Government that there are only two genders: male and female."
+    restatement: "Make it official US policy that there are only two genders, male and female."
+    type: action
+    theme: rights
+    deadline:
+      stated: "As of today"
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "federal policy on sex and gender"
+      record: "executive orders (Federal Register)"
+      criterion: "an order making it federal policy that there are two sexes is issued on 20 January 2025"
+    uncertainty:
+      extraction: probable
+      note: "Untriggered (\"it will henceforth be\")."
+    links: []
+
+  - id: trump-2024-reinstate-vaccine-refusers
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶41.1"
+      quote: "This week, I will reinstate any servicemembers who were unjustly expelled from our military for objecting to the COVID vaccine mandate with full backpay."
+    restatement: "Reinstate service members expelled for refusing the COVID vaccine, with full back pay, this week."
+    type: action
+    theme: defense
+    deadline:
+      stated: "This week"
+      applied: 2025-01-26
+    verifiability:
+      level: high
+      object: "service members discharged over the COVID-19 vaccine mandate"
+      record: "executive orders (Federal Register); DoD guidance"
+      criterion: "an order reinstating them with back pay is issued in the first week"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-military-anti-woke-order
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶42.1-42.2"
+      quote: "And I will sign an order to stop our warriors from being subjected to radical political theories and social experiments while on duty."
+    restatement: "Sign an order to stop troops being subjected to radical political theories and social experiments."
+    type: action
+    theme: defense
+    deadline:
+      stated: "immediately"
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "executive order on military training and policy"
+      record: "executive orders (Federal Register)"
+      criterion: "an executive order ending such training in the military is signed"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: trump-2024-avoid-new-wars
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶43.2"
+      quote: "We will measure our success not only by the battles we win, but also by the wars that we end and, perhaps most importantly, the wars we never get into."
+    restatement: "Measure success by the wars ended and the wars never entered."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "A yardstick rather than a direct pledge; read as a commitment to end wars and not start new ones."
+    links: []
 
   - id: trump-2024-gulf-of-america
-    theme: culture
-    restatement: Rename the Gulf of Mexico to the Gulf of America.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶46.1"
-        quote: >
-          A short time from now, we are going to be changing the name of the
-          Gulf of Mexico to the Gulf of America, and we will restore the name of
-          a great President, William McKinley, to Mount McKinley, where it
-          should be and where it belongs.
-    metric:
-      present: true
-      quantity: whether the feature is officially renamed (binary), not a trend
-      record: U.S. Board on Geographic Names / GNIS; official Federal usage
-    threshold:
-      present: true
-      stated: rename to the Gulf of America
+    - in: inaugural
+      ref: "¶46.1"
+      quote: "we are going to be changing the name of the Gulf of Mexico to the Gulf of America"
+    restatement: "Rename the Gulf of Mexico the Gulf of America."
+    type: action
+    theme: government
     deadline:
-      present: false
-      stated: a short time from now (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: executive action directing the renaming
-    measurable: "partial"
-    notes: >
-      A yes/no renaming in Federal usage, measurable as done-or-not with no
-      completion date. The disputed boundary is reach — the US can rename it in
-      its own records but cannot compel international adoption.
+      stated: "A short time from now"
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "federal name of the Gulf of Mexico"
+      record: "executive order (Federal Register); US Board on Geographic Names"
+      criterion: "the federal government officially renames the Gulf of Mexico the Gulf of America"
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2024-mount-mckinley
-    theme: culture
-    restatement: Restore the name Mount McKinley to the mountain (from Denali).
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶46.1"
-        quote: >
-          A short time from now, we are going to be changing the name of the
-          Gulf of Mexico to the Gulf of America, and we will restore the name of
-          a great President, William McKinley, to Mount McKinley, where it
-          should be and where it belongs.
-    metric:
-      present: true
-      quantity: whether the peak is officially renamed (binary), not a trend
-      record: U.S. Board on Geographic Names / GNIS
-    threshold:
-      present: true
-      stated: restore the name Mount McKinley
+    - in: inaugural
+      ref: "¶46.1"
+      quote: "we will restore the name of a great President, William McKinley, to Mount McKinley"
+    restatement: "Restore the name Mount McKinley."
+    type: action
+    theme: government
     deadline:
-      present: false
-      stated: a short time from now (urgency, not a completion date)
-    instrument:
-      present: true
-      stated: executive action directing the renaming
-    measurable: "partial"
-    notes: >
-      A clean yes/no renaming with an official record, no completion date. Split
-      from the Gulf of America renaming (same sentence) because each is
-      independently verifiable.
+      stated: "A short time from now"
+      applied: 2029-01-20
+    verifiability:
+      level: high
+      object: "federal name of Denali"
+      record: "executive order (Federal Register); US Board on Geographic Names"
+      criterion: "the federal government officially restores the name Mount McKinley"
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2024-panama-canal
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶49.3"
+      quote: "We gave it to Panama, and we're taking it back."
+    restatement: "Take back the Panama Canal."
+    type: action
     theme: foreign-policy
-    restatement: Take back the Panama Canal from Panama.
-    sources:
-      - in: inaugural
-        ref: "¶49.1-49.3"
-        quote: >
-          And above all, China is operating the Panama Canal. And we didn't give
-          it to China. We gave it to Panama, and we're taking it back.
-    metric:
-      present: true
-      quantity: whether the US regains control of the canal (binary), not a trend
-      record: canal ownership / operating-control status; treaty instruments
-    threshold:
-      present: true
-      stated: taking it back (regain US control)
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: asserts "we're taking it back" but names no mechanism — an outcome depending on Panama
-    measurable: "partial"
-    notes: >
-      Control of the canal is a knowable yes/no fact, but "taking it back" names
-      no instrument, carries no deadline, and depends on a sovereign foreign
-      nation — an outcome-only claim, with what "taking it back" even means
-      (ownership? operating rights? transit terms?) the disputed boundary.
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "control of the Panama Canal"
+      record: "treaties and agreements with Panama; official statements"
+      criterion: "the US regains control of the Panama Canal"
+      ambiguity: "\"Taking it back\" is not defined; read as US ownership or operational control, with removal of Chinese port operators as partly kept."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered present progressive (\"we're taking it back\")."
+    links: []
 
-  - id: trump-2024-chronic-disease
-    theme: health
-    restatement: End the chronic disease epidemic and keep children healthy and disease-free.
+  - id: trump-2024-end-chronic-disease
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶51.3"
-        quote: >
-          Together, we will end the chronic disease epidemic and keep our
-          children safe, healthy, and disease-free.
-    metric:
-      present: true
-      quantity: chronic disease prevalence (esp. among children)
-      record: CDC chronic-disease surveillance / NHANES
-    threshold:
-      present: true
-      stated: end the epidemic (to zero, direction)
+    - in: inaugural
+      ref: "¶51.3"
+      quote: "Together, we will end the chronic disease epidemic and keep our children safe, healthy, and disease-free."
+    restatement: "End the chronic disease epidemic and keep children healthy."
+    type: outcome
+    theme: health
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: "\"together, we will\" — no named mechanism"
-    measurable: "partial"
-    notes: >
-      Chronic-disease rates are tracked and "end the epidemic" is a to-zero
-      direction, but no instrument is named, there is no deadline, and "chronic
-      disease" and "disease-free" set no measurable target — an aspiration
-      attached to a real but unpinned metric.
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "chronic disease prevalence"
+      record: "CDC chronic disease and childhood obesity surveillance"
+      criterion: "the prevalence of chronic disease, including in children, falls over the term"
+      ambiguity: "\"End the epidemic\" sets no number; read as falling prevalence of the main chronic diseases."
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: trump-2024-mars
-    theme: space
-    restatement: Land American astronauts on Mars to plant the flag.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶53.1"
-        quote: >
-          And we will pursue our manifest destiny into the stars, launching
-          American astronauts to plant the Stars and Stripes on the planet Mars.
-    metric:
-      present: true
-      quantity: whether US astronauts land on Mars (binary milestone)
-      record: NASA mission milestones
-    threshold:
-      present: true
-      stated: plant the flag on Mars (crewed landing)
+    - in: inaugural
+      ref: "¶53.1"
+      quote: "And we will pursue our manifest destiny into the stars, launching American astronauts to plant the Stars and Stripes on the planet Mars."
+    restatement: "Launch American astronauts to plant the flag on Mars."
+    type: action
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: launch American astronauts (NASA/commercial crewed program)
-    measurable: "partial"
-    notes: >
-      A crewed Mars landing is an unambiguous yes/no milestone with a clear
-      threshold and a named instrument, but no deadline — and the timeline for
-      such a mission far exceeds a single term, so "when" is exactly what the
-      promise leaves open.
+      applied: 2029-01-20
+    verifiability:
+      level: medium
+      object: "crewed US mission to Mars"
+      record: "NASA mission records"
+      criterion: "American astronauts are launched to Mars and plant the US flag there"
+      ambiguity: "\"Pursue\" leaves open whether the landing itself is promised within the term; a crewed launch to Mars is read as partly kept, a landing as kept."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: trump-2024-tariffs-general
-    theme: trade
-    restatement: Impose substantial tariffs on other countries so they pay the US back.
+  - id: trump-2024-compassionate-nation
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶17.4-17.6"
-        quote: >
-          We're doing tariffs on other countries. Other countries
-          are going to finally, after 75 years, pay us back for all
-          that we've done for the world. And the tariff will be
-          substantial in some cases.
-    metric:     { present: true, stated: tariff revenue collected }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: tariffs on imports from other countries }
-    measurable: "partial"
-    notes: >
-      Names a clear instrument (tariffs) and points at revenue, but the
-      level is only "substantial" and no date is attached.
-
-  - id: trump-2024-replace-obamacare
-    theme: health
-    restatement: Replace Obamacare with a plan that is cheaper and better if a superior one is developed.
-    sources:
-      - in: debate
-        ref: "¶215.28-215.29"
-        quote: >
-          And what we will do is we're looking at different plans.
-          If we can come up with a plan that's going to cost our
-          people, our population, less money and be better health
-          care than Obamacare, then I would absolutely do it.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: false }
-    measurable: "no"
-    notes: >
-      A conditional commitment ("concepts of a plan") with no named
-      instrument, cost target, or date — the whole thing is contingent
-      on finding a better plan.
+    - in: inaugural
+      ref: "¶64.3"
+      quote: "We will be a nation like no other, full of compassion, courage, and exceptionalism."
+    restatement: "Be a nation full of compassion, courage and exceptionalism."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2029-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
