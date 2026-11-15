@@ -1,785 +1,2334 @@
-# Promises extracted from George W. Bush's 2000 nomination acceptance speech
-# (corpus/2001-2005 Bush/2000-acceptance.md). Refs are paragraph.sentence, per
-# corpus/README.md.
+# Promises and ambitions of George W. Bush's 2001-2005 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 2000 acceptance
+# speech, the 2000 final debate (Bush's turns) and the 2001 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
 #
-# Each promise is scored on four dimensions — the ingredients that decide
-# whether "was it kept?" can even be asked as a *measured* question:
-#
-#   metric     — is there a named quantity, AND a record that tracks it?
-#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
-#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
-#   instrument — does he name what HE will DO, or only what WILL happen?
-#
-# measurable:
-#   full     — metric + threshold + deadline all present (even if parametrically
-#              disputed — that dispute is the product, not a disqualifier)
-#   partial  — at least one of the three is missing or too vague to pin down
-#   no       — aspirational; no measurable quantity at all
-# (instrument sharpens accountability: an outcome-only promise is one he can't
-#  fully control. A promise can still be measurable without it.)
+# 69 promises (high 17, medium 14, low 38)
+# 43 ambitions (high 7, medium 10, low 26)
+# Deadlines default to the end of the term (2005-01-20).
 
+protocol: 1
 promises:
-  - id: bush-2000-medicare-drugs
-    theme: health
+
+  - id: bush-2000-renew-purpose
+    kind: promise
     sources:
       - in: acceptance
-        ref: "¶42.2"
-        quote: >
-          We will set it on firm financial ground and make
-          prescription drugs available and affordable for every
-          senior who needs them.
-      - in: debate
-        ref: "¶167.6"
-        quote: >
-          It's an agenda that says we're going to reform Medicare to
-          make sure seniors have got prescription drugs and to give
-          seniors different options from which they can choose.
-    restatement: Put Medicare on firm financial ground and make prescription drugs available and affordable for every senior.
-    metric:
-      present: true
-      quantity: Medicare solvency; share of seniors with affordable drug coverage
-      record: Medicare Trustees reports; CMS Part D enrollment (from 2006)
-    threshold:
-      present: true
-      stated: "for every senior who needs them (universal, direction) — no dollar figure"
+        ref: ¶4.1
+        quote: Together, we will renew America's purpose.
+    restatement: Renew America's purpose.
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: Medicare reform and a prescription-drug benefit
-    measurable: "partial"
-    notes: >
-      Real records exist and the 2003 Medicare Modernization Act created a drug
-      benefit, but "firm financial ground" sets no target solvency level,
-      "available and affordable" gives no baseline or magnitude, and there is no
-      deadline. "Every senior who needs them" is the disputed boundary.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-seize-moment
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶20.1-20.2
+        quote: So tonight, we vow to our nation we will seize this moment of American promise. We will use these good times for great goals.
+    restatement: Use the good times of 2000 for great goals.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-confront-hard-issues
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶21.1
+        quote: We will confront the hard issues, threats to our national security, threats to our health and retirement security, before the challenges of our time become crises for our children.
+    restatement: Confront the hard issues (national security, health and retirement security) before they become crises.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-extend-prosperity
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶22.1
+        quote: "And we will extend the promise of prosperity to every forgotten corner of this country: to every man and woman, a chance to succeed; to every child, a chance to learn; and to every family, a chance to live with dignity and hope."
+    restatement: "Extend prosperity to every corner of the country: a chance to succeed, to learn, to live with dignity."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-will-lead
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶27.2
+        quote: We will.
+      - in: acceptance
+        ref: ¶29.3
+        quote: We will.
+      - in: acceptance
+        ref: ¶31.3
+        quote: We will.
+      - in: acceptance
+        ref: ¶33.3
+        quote: We will.
+      - in: acceptance
+        ref: ¶83.3
+        quote: Give me the opportunity to lead this nation, and I will lead.
+      - in: acceptance
+        ref: ¶91.2
+        quote: And on this ground, we will lead our nation.
+    restatement: Lead the nation where the outgoing administration did not.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: Four of the six occurrences are an elliptical "We will", read as "we will lead" from the preceding "they have not led".
+    links: []
+
+  - id: bush-2000-leave-nation-greater
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶40.4
+        quote: We will add the work of our hands to the inheritance of our fathers and mothers and leave this nation greater than we found it.
+    restatement: Leave the nation greater than he found it.
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-reform-socialsecurity
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶41.3
+        quote: We will strengthen Social Security and Medicare for the greatest generation and for generations to come.
+      - in: inaugural
+        ref: ¶14.2
+        quote: We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent.
+      - in: debate
+        ref: ¶159.20
+        quote: One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus.
+      - in: debate
+        ref: ¶167.7
+        quote: It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America.
+    restatement: Reform Social Security.
+    group: bush-2000-reform-entitlements
+    type: action
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: Social Security programme
+      record: enacted legislation (Congress.gov); SSA programme rules
+      criterion: a law that changes Social Security's benefits or financing is enacted
+      ambiguity: The occurrences say "strengthen", "reform" and "think differently"; none says what change counts. Any enacted structural change to benefits or financing counts.
+    uncertainty:
+      extraction: probable
+      note: Read as one commitment across "strengthen" (acceptance), "reform" (inaugural, debate ¶159.20) and "think differently about making sure we have a system" (debate ¶167.7).
+    links: []
+
+  - id: bush-2000-reform-medicare
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶41.3
+        quote: We will strengthen Social Security and Medicare for the greatest generation and for generations to come.
+      - in: inaugural
+        ref: ¶14.2
+        quote: We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent.
+      - in: debate
+        ref: ¶167.6
+        quote: It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.
+    restatement: Reform Medicare.
+    group: bush-2000-reform-entitlements
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: Medicare programme
+      record: enacted legislation (Congress.gov); CMS programme rules
+      criterion: a law that changes Medicare's benefits or financing is enacted
+      ambiguity: '"Strengthen" and "reform" are not defined; any enacted structural change to Medicare benefits or financing counts.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-medicare-solvency
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶42.2
+        quote: We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them.
+    restatement: Set Medicare on firm financial ground.
+    group: bush-2000-medicare-ground
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: Medicare Hospital Insurance trust fund
+      record: Medicare Trustees reports
+      criterion: the projected trust-fund depletion date moves later over the term
+      ambiguity: '"Firm financial ground" names no level; a later projected depletion date is read as kept.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-medicare-drugs
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶42.2
+        quote: We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them.
+      - in: debate
+        ref: ¶21.6
+        quote: So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs.
+      - in: debate
+        ref: ¶146.7
+        quote: You get a plan that will include prescription drugs, a plan that will give you options.
+      - in: debate
+        ref: ¶167.6
+        quote: It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.
+    restatement: Make prescription drugs available and affordable for every senior who needs them.
+    group: bush-2000-medicare-ground
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: prescription drug coverage for seniors
+      record: enacted legislation; CMS enrollment data
+      criterion: a Medicare prescription drug benefit open to every senior is enacted
+      ambiguity: '"Affordable" gives no price or share; a drug benefit open to all seniors is read as kept, its cost judged separately.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-fix-socialsecurity
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶43.3
+        quote: And I intend to fix it.
+    restatement: Fix Social Security.
+    type: action
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: Social Security programme
+      record: enacted legislation (Congress.gov); SSA Trustees reports
+      criterion: a law that changes Social Security's financing is enacted
+      ambiguity: '"Fix" is not defined; same judgement call as the reform promise.'
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-socialsecurity-preserve
-    ref: "¶44.1-44.2"
-    theme: fiscal
-    quote: >
-      To the seniors in this country, you earned your benefits, you made your
-      plans, and President George W. Bush will keep the promise of Social
-      Security. No changes, no reductions, no way.
-    restatement: Preserve current Social Security benefits for today's seniors with no cuts.
-    metric:
-      present: true
-      quantity: scheduled Social Security benefit levels for current retirees
-      record: SSA benefit schedules / OASDI Trustees data
-    threshold:
-      present: true
-      stated: "No changes, no reductions (zero cuts, direction)"
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶44.1-44.2
+        quote: To the seniors in this country, you earned your benefits, you made your plans, and President George W. Bush will keep the promise of Social Security. No changes, no reductions, no way.
+      - in: debate
+        ref: ¶167.7
+        quote: It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America.
+    restatement: No changes and no reductions to Social Security benefits for current seniors.
+    type: ongoing
+    theme: retirement
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: protect the current-benefit guarantee ("keep the promise")
-    measurable: "partial"
-    notes: >
-      A clear zero-cut direction against a trackable benefit schedule, but it is
-      scoped only to current seniors, carries no date, and "the promise of Social
-      Security" is left undefined against the program's long-run solvency gap —
-      the very boundary the personal-accounts pledge below actually contests.
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: scheduled benefits of current retirees
+      record: SSA benefit rules and COLA history
+      criterion: no law or rule cuts or changes current retirees' scheduled benefits during the term
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-socialsecurity-accounts
-    theme: fiscal
+    kind: promise
     sources:
       - in: acceptance
-        ref: "¶47.1"
-        quote: >
-          For younger workers, we will give you the option, your
-          choice, to put part of your payroll taxes into sound,
-          responsible investments.
-      - in: debate
-        ref: "¶159.24"
-        quote: >
-          And you bet we're gonna take a trillion dollars of your
-          own money and let you invest it under safe guidelines so
-          you get a better rate of return on the money than the
-          paltry 2% that the federal government gets for you today.
-    restatement: Let younger workers divert part of their payroll taxes into voluntary personal investment accounts.
-    metric:
-      present: true
-      quantity: whether personal accounts are enacted (binary), not a trend
-      record: enacted Social Security law
-    threshold:
-      present: true
-      stated: "part of your payroll taxes (direction/portion) — no percentage"
+        ref: ¶47.1
+        quote: For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments.
+    restatement: Let younger workers put part of their payroll taxes into personal investment accounts.
+    type: action
+    theme: retirement
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: create voluntary personal retirement accounts
-    measurable: "partial"
-    notes: >
-      Measurable only as a yes/no policy outcome, not a quantity over time; "part
-      of your payroll taxes" states a direction but no share, and there is no
-      deadline. (The proposal reached Congress in 2005 and died there — a clean
-      binary verdict, but not a measured trend.)
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: optional personal accounts in Social Security
+      record: enacted legislation (Congress.gov)
+      criterion: a law creating the option is enacted
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2000-death-tax
-    theme: taxes
+  - id: bush-2000-end-low-expectations
+    kind: ambition
     sources:
       - in: acceptance
-        ref: "¶58.3"
-        quote: >
-          On principle, every family, every farmer and small-business
-          person should be free to pass on their life's work to those
-          they love, so we will abolish the death tax.
-      - in: debate
-        ref: "¶107.16"
-        quote: >
-          I'm for getting rid of the death tax, completely getting
-          rid of the death tax.
-    restatement: Abolish the estate ("death") tax.
-    metric:
-      present: true
-      quantity: whether the estate tax is repealed (binary)
-      record: enacted tax law (estate-tax provisions)
-    threshold:
-      present: true
-      stated: abolish / to zero
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: repeal the estate tax
-    measurable: "partial"
-    notes: >
-      A clean to-zero policy target with a real legislative record, but no
-      deadline. The disputed boundary is what counts as kept: EGTRRA (2001) only
-      phased the tax out for a single year (2010) before it snapped back, so
-      "abolish" versus "temporarily zero out" is the live dispute.
-
-  - id: bush-2000-tax-rates-allbrackets
-    theme: taxes
-    sources:
-      - in: acceptance
-        ref: "¶59.1"
-        quote: >
-          On principle, no one in America should have to pay more
-          than a third of their income to the federal government, so
-          we will reduce tax rates for everyone in every bracket.
-      - in: debate
-        ref: "¶146.4"
-        quote: >
-          Everybody that pays taxes is going to get tax relief.
-    restatement: Cut income-tax rates in every bracket, with no rate exceeding a third of income.
-    metric:
-      present: true
-      quantity: statutory marginal tax rates by bracket
-      record: IRS / statutory rate schedules
-    threshold:
-      present: true
-      stated: "everyone in every bracket (direction); no more than a third (~33% ceiling)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: cut statutory income-tax rates
-    measurable: "partial"
-    notes: >
-      Direction is unambiguous and rates are perfectly recorded, and the "no more
-      than a third" cap adds a ceiling — but there is no deadline and no stated
-      size of cut per bracket, and the cap is voiced as a principle rather than a
-      dated target, so it stops short of "full."
-
-  - id: bush-2000-bottom-rate-child-credit
-    ref: "¶60.1"
-    theme: taxes
-    quote: >
-      On principle, those with the greatest need should receive the greatest
-      help, so we will lower the bottom rate from 15 percent to 10 percent and
-      double the child credit.
-    restatement: Cut the bottom income-tax rate from 15% to 10% and double the child tax credit.
-    metric:
-      present: true
-      quantity: the bottom statutory rate; the child tax credit amount
-      record: statutory rate schedule; IRC child-credit provision
-    threshold:
-      present: true
-      stated: "from 15 percent to 10 percent; double the child credit"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: statutory rate cut plus credit increase
-    measurable: "partial"
-    notes: >
-      The most sharply specified promise in the speech — two exact numeric
-      targets against clean records — but with no deadline it still falls short of
-      "full." The textbook metric-plus-threshold-without-a-deadline case.
-
-  - id: bush-2000-head-start
-    ref: "¶54.1"
+        ref: ¶51.1
+        quote: "And our nation should treat it like other forms of discrimination: We should end it."
+    restatement: End the "soft bigotry of low expectations" in schools.
+    type: outcome
     theme: education
-    quote: >
-      Now is the time to make Head Start an early learning program to teach all
-      our children to read and renew the promise of America's public schools.
-    restatement: Refocus Head Start as an early-learning and reading program.
-    metric:
-      present: false
-      quantity: "\"an early learning program\" has no agreed measure; \"teach all our children to read\" has no record tied to it"
-      record: null
-    threshold:
-      present: false
-      stated: null
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: restructure Head Start toward early literacy
-    measurable: "no"
-    notes: >
-      A named instrument (reorient the program) with no metric, threshold, or
-      deadline — measurable at best as "did the program's mission change?" The
-      reading goal ("teach all our children to read") is aspirational.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-local-control
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶52.1
+        quote: One size does not fit all when it comes to educating our children, so local people should control local schools.
+      - in: debate
+        ref: ¶50.9
+        quote: What I want to do is to send flexibility and authority to the local folks so you can choose what to do with the money.
+    restatement: Give local people control of local schools and federal money.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-school-accountability
-    theme: education
+    kind: ambition
     sources:
       - in: acceptance
-        ref: "¶53.2-53.3"
-        quote: >
-          When a school district receives federal funds to teach
-          poor children, we expect them to learn. And if they don't,
-          parents should get the money to make a different choice.
+        ref: ¶53.1
+        quote: And those who spend your tax dollars must be held accountable.
       - in: debate
-        ref: "¶39.15"
-        quote: >
-          And the consequence is that federal portion or federal
-          money will go to the parent, so the parent can go to a
-          tutoring program or another public school or another
-          private school.
-    restatement: Tie federal school funds to results; let parents redirect the money if schools fail.
-    metric:
-      present: true
-      quantity: achievement of poor children in federally funded (Title I) schools
-      record: NAEP / state assessment results
-    threshold:
-      present: false
-      stated: "\"we expect them to learn\" — no proficiency level"
+        ref: ¶39.10
+        quote: I've said to the extent we send federal money on disadvantaged children, we want the schools to show us whether or not the children are learning.
+      - in: debate
+        ref: ¶50.13
+        quote: We need to have accountability.
+      - in: debate
+        ref: ¶50.15
+        quote: We need to demand on results.
+    restatement: Hold schools that spend federal money accountable for results.
+    type: action
+    theme: education
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: federal-funds accountability plus parental choice of the funds
-    measurable: "partial"
-    notes: >
-      A real metric (achievement of poor children, later operationalized by the
-      testing regime of No Child Left Behind), but the promise names no
-      proficiency target and no date, and "parents should get the money" is
-      hedged ("should"), softening the instrument.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-school-exit-funds
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶53.3
+        quote: And if they don't, parents should get the money to make a different choice.
+      - in: debate
+        ref: ¶35.18-35.19
+        quote: I also believe that we need to say to people that if you cannot meet standards, there has to be a consequence. Instead of just comes the soft bigotry of low expectations, that there has to be a consequence.
+      - in: debate
+        ref: ¶39.14
+        quote: But when we find children trapped in schools that will not change and will not teach, instead of saying oh, this is okay in America just to shuffle poor kids through schools, there has to be a consequence.
+      - in: debate
+        ref: ¶39.16
+        quote: You see, there has to be a consequence.
+    restatement: Give parents the money to choose another school when a school fails to meet standards.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-head-start
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶54.1
+        quote: Now is the time to make Head Start an early learning program to teach all our children to read and renew the promise of America's public schools.
+    restatement: Make Head Start an early learning programme that teaches children to read.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: Head Start programme
+      record: Head Start Act amendments; HHS programme performance standards
+      criterion: Head Start's statute or standards add early reading as a programme goal
+      ambiguity: '"An early learning program to teach all our children to read" is read as a change of programme mandate, not as a reading outcome.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-tax-fairness
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶58.1
+        quote: I will use this moment of opportunity to bring common sense and fairness to the tax code.
+    restatement: Bring common sense and fairness to the tax code.
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-death-tax
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶58.3
+        quote: On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax.
+      - in: debate
+        ref: ¶113.9
+        quote: I know this, 100% will get it if I'm the president.
+    restatement: Abolish the estate tax.
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: federal estate tax
+      record: enacted tax law (Congress.gov); IRS
+      criterion: a law repealing the estate tax is enacted
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-tax-rates-allbrackets
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶59.1
+        quote: On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket.
+    restatement: Reduce income tax rates in every bracket.
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: federal income tax rate schedule
+      record: enacted tax law; IRS rate tables
+      criterion: every bracket's statutory rate is lowered by law
+    uncertainty:
+      extraction: clear
+    links:
+      - kind: refines
+        to: bush-2000-reduce-taxes
+
+  - id: bush-2000-bottom-rate-10
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶60.1
+        quote: On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit.
+    restatement: Lower the bottom income tax rate from 15% to 10%.
+    group: bush-2000-greatest-need
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: lowest income tax bracket
+      record: enacted tax law; IRS rate tables
+      criterion: a 10% bottom rate is enacted
+    uncertainty:
+      extraction: clear
+    links:
+      - kind: refines
+        to: bush-2000-tax-rates-allbrackets
+
+  - id: bush-2000-double-child-credit
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶60.1
+        quote: On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit.
+    restatement: Double the child tax credit.
+    group: bush-2000-greatest-need
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: child tax credit
+      record: enacted tax law; IRS
+      criterion: the credit is raised by law from $500 to $1
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-military-means
-    theme: defense
+    kind: promise
     sources:
       - in: acceptance
-        ref: "¶63.1"
-        quote: >
-          We will give our military the means to keep the peace, and
-          we will give it one thing more: a commander-in-chief who
-          respects our men and women in uniform and a
-          commander-in-chief who earns their respect.
-      - in: debate
-        ref: "¶167.9"
-        quote: >
-          I want to have the military keeping the peace.
-    restatement: Give the military the resources to keep the peace, plus respectful leadership.
-    metric:
-      present: false
-      quantity: "\"the means to keep the peace\" names no quantity; the defense budget is trackable but never invoked"
-      record: null
-    threshold:
-      present: false
-      stated: null
+        ref: ¶63.1
+        quote: "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
+    restatement: Give the military the means to keep the peace.
+    group: bush-2000-military
+    type: ongoing
+    theme: defense
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: resource and equip the military
-    measurable: "no"
-    notes: >
-      A named instrument (resource the military) with no quantity, target, or
-      date; the second half ("respects... earns their respect") is pure
-      disposition. The adjacent ¶62.2 gives a direction ("better equipment,
-      better training and better pay") but frames it as a need, not a pledge.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-respect-military
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶63.1
+        quote: "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
+    restatement: Be a commander-in-chief who respects the troops and earns their respect.
+    group: bush-2000-military
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-reduce-nuclear
-    ref: "¶65.1"
-    theme: foreign-policy
-    quote: >
-      I will work to reduce nuclear weapons and nuclear tension in the world, to
-      turn these years of influence into decades of peace.
-    restatement: Work to reduce nuclear weapons and nuclear tensions.
-    metric:
-      present: true
-      quantity: US (and global) nuclear warhead counts
-      record: arms-control declarations (e.g., START data)
-    threshold:
-      present: true
-      stated: "reduce (direction only, no number)"
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶65.1
+        quote: I will work to reduce nuclear weapons and nuclear tension in the world, to turn these years of influence into decades of peace.
+    restatement: Work to reduce nuclear weapons and nuclear tension.
+    type: outcome
+    theme: defense
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: "\"I will work to\" — pledges effort toward reductions (an outcome he cannot fully control)"
-    measurable: "partial"
-    notes: >
-      Warhead counts are measurable and there is a reduce-direction, but no number
-      and no date, and "I will work to" promises effort rather than a result — an
-      outcome-shaped promise whose success depends on other states too.
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: US and Russian nuclear arsenals
+      record: treaties; State Department and arms-control stockpile data
+      criterion: the US deployed strategic arsenal is reduced by agreement or unilateral decision
+      ambiguity: '"Work to reduce" and "nuclear tension" are open; a reduction of US deployed warheads is read as kept, "tension" is not judged.'
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-missile-defense
-    ref: "¶65.2"
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶65.2
+        quote: And at the earliest possible date, my administration will deploy missile defenses to guard against attack and blackmail.
+    restatement: Deploy missile defenses.
+    type: action
     theme: defense
-    quote: >
-      And at the earliest possible date, my administration will deploy missile
-      defenses to guard against attack and blackmail.
-    restatement: Deploy missile defenses to protect against attack and blackmail.
-    metric:
-      present: true
-      quantity: whether an operational missile-defense system is deployed (milestone)
-      record: DoD / Missile Defense Agency deployment records
-    threshold:
-      present: true
-      stated: deploy (fielded / operational)
     deadline:
-      present: false
-      stated: "\"at the earliest possible date\" — bounded-but-undated, not a fixed period"
-    instrument:
-      present: true
-      stated: direct deployment by his administration
-    measurable: "partial"
-    notes: >
-      A deploy-or-not milestone he directly controls, but "at the earliest
-      possible date" is an intention to hurry, not a deadline, so it cannot score
-      "full." The disputed boundary is what counts as "deploy" — initial
-      ground-based interceptors versus a full shield.
-
-  - id: bush-2000-health-tax-credits
-    theme: health
-    sources:
-      - in: acceptance
-        ref: "¶92.1"
-        quote: >
-          We will give low-income Americans tax credits to buy the
-          private health insurance they need and deserve.
-      - in: debate
-        ref: "¶30.19"
-        quote: >
-          We need a $2,000 credit, rebate for people, working people
-          that don't have insurance, they can get in the marketplace
-          and start purchasing insurance.
-    restatement: Give low-income Americans tax credits to buy private health insurance.
-    metric:
-      present: true
-      quantity: whether the credits are enacted (binary); low-income uninsured rate
-      record: enacted tax law; Census/CPS uninsured rate
-    threshold:
-      present: false
-      stated: "no credit amount and no coverage target"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: refundable health-insurance tax credits
-    measurable: "partial"
-    notes: >
-      Measurable as a yes/no enactment with a real record, but no dollar amount,
-      no coverage target, and no deadline; "low-income Americans" is the undefined
-      boundary.
-
-  - id: bush-2000-housing-ownership
-    ref: "¶93.1"
-    theme: housing
-    quote: >
-      We will transform today's housing rental program to help hundreds of
-      thousands of low-income families find stability and dignity in a home of
-      their own.
-    restatement: Convert rental assistance to help hundreds of thousands of low-income families become homeowners.
-    metric:
-      present: true
-      quantity: number of low-income families moved into homeownership
-      record: HUD homeownership-voucher / program data
-    threshold:
-      present: true
-      stated: "hundreds of thousands (order-of-magnitude count)"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: transform the rental-voucher program toward ownership
-    measurable: "partial"
-    notes: >
-      Has a named instrument and a stated quantity ("hundreds of thousands") —
-      closer to full than most here — but the number is an order of magnitude, not
-      a firm target, there is no deadline, and "a home of their own" leaves the
-      success measure loose.
-
-  - id: bush-2000-charitable-incentives
-    theme: welfare
-    sources:
-      - in: acceptance
-        ref: "¶98.2"
-        quote: >
-          My administration will give taxpayers new incentives to
-          donate to charity, encourage after-school programs that
-          build character, and support mentoring groups that shape
-          and save young lives.
-      - in: debate
-        ref: "¶117.13"
-        quote: >
-          I think that afterschool money ought to be available for
-          faith-based programs and charitable programs that exist
-          because somebody has heard the call to love a neighbor
-          like you would like to be loved yourself.
-    restatement: Create new tax incentives for charitable giving and back after-school and mentoring programs.
-    metric:
-      present: false
-      quantity: a bundle of policy actions; "encourage" and "support" carry no quantity
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: new charitable-giving incentives plus program support
-    measurable: "no"
-    notes: >
-      A cluster of named instruments with no number, target, or date; measurable
-      at best as "did such incentives pass?" The charitable-giving-incentive piece
-      is the only cleanly binary element in the bundle.
-
-  - id: bush-2000-gun-enforcement
-    theme: crime
-    sources:
-      - in: acceptance
-        ref: "¶102.1"
-        quote: >
-          We must help protect our children in our schools and
-          streets, and by finally and strictly enforcing our
-          nation's gun laws.
-      - in: debate
-        ref: "¶100.11"
-        quote: >
-          But I also believe strongly that we need to enforce laws
-          on the books that the best way to make sure that we keep
-          our society safe and secure is to hold people accountable
-          for breaking the law.
-    restatement: Protect children by strictly enforcing existing gun laws.
-    metric:
-      present: true
-      quantity: federal gun-law prosecutions / enforcement actions
-      record: DOJ / ATF prosecution statistics
-    threshold:
-      present: false
-      stated: "\"strictly\" — a direction with no level"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: enforce existing gun laws (not new legislation)
-    measurable: "partial"
-    notes: >
-      Enforcement volume is trackable (prosecutions), giving a real metric, but
-      "strictly" sets no level and there is no date; "we must" frames it as an
-      obligation more than a personal action. The enforce-not-legislate framing is
-      the notable boundary.
-
-  - id: bush-2000-partial-birth-abortion
-    ref: "¶104.2"
-    theme: abortion
-    quote: >
-      And when Congress sends me a bill against partial-birth abortion, I will
-      sign it into law.
-    restatement: Sign a partial-birth abortion ban if Congress passes one.
-    metric:
-      present: true
-      quantity: whether he signs such a bill (binary)
-      record: enacted legislation / presidential signing record
-    threshold:
-      present: true
-      stated: sign it into law (yes/no)
-    deadline:
-      present: false
-      stated: "conditional on Congress (\"when Congress sends me\"), no date"
-    instrument:
-      present: true
-      stated: presidential signature
-    measurable: "partial"
-    notes: >
-      Cleanly binary and fully within his control once triggered (he signed the
-      Partial-Birth Abortion Ban Act in 2003), but it is conditional on Congress
-      acting and carries no date — a conditional promise where the trigger, not
-      just the timing, is out of his hands.
+      stated: at the earliest possible date
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: national missile defense system
+      record: Missile Defense Agency; DoD deployment records
+      criterion: a missile defense system is operationally deployed
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-tone-of-washington
-    theme: governance
+    kind: ambition
     sources:
       - in: acceptance
-        ref: "¶77.5"
-        quote: >
-          I want to change the tone of Washington to one of civility
-          and respect.
-      - in: debate
-        ref: "¶126.5"
-        quote: >
-          And what I think needs to happen in order to encourage the
-          young to become involved is to shoot straight, is to set
-          aside the partisan differences, and set an agenda that
-          will make sense.
+        ref: ¶77.5
+        quote: I want to change the tone of Washington to one of civility and respect.
     restatement: Change the tone of Washington to civility and respect.
-    metric:
-      present: false
-      quantity: none
-      record: null
-    threshold:
-      present: false
-      stated: null
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: "\"I want to\" — a wish, with no named mechanism"
-    measurable: "no"
-    notes: >
-      Pure aspiration — no quantity, threshold, deadline, or instrument, and even
-      the verb is a wish. Kept to anchor the aspirational end of the scale, the
-      counterpart to the concrete tax-rate pledges above.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  # --- Promises from the 2001 Inaugural Address (corpus/2001-2005 Bush/2001-inaugural.md) ---
-  # The inaugural is thematic and aspirational; most of its concrete pledges
-  # (schools, Social Security/Medicare reform, tax cuts, building up defense)
-  # restate the 2000 acceptance agenda and are tracked there. The entries below
-  # are the commitments genuinely new to, or first voiced in, the inaugural.
+  - id: bush-2000-honor-trust
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶83.1
+        quote: If you give me your trust, I will honor it.
+    restatement: Honor the voters' trust.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2000-inaugural-single-nation
-    theme: governance
+  - id: bush-2000-use-mandate
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶83.2
+        quote: Grant me a mandate, I will use it.
+    restatement: Use the mandate the election gives him.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-tear-down-wall
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶89.4
+        quote: And my fellow Americans, we must tear down that wall.
+    restatement: '"Tear down the wall" between prosperity and poverty, prison, addiction and despair.'
+    type: outcome
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-health-tax-credits
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶92.1
+        quote: We will give low-income Americans tax credits to buy the private health insurance they need and deserve.
+    restatement: Give low-income Americans tax credits to buy private health insurance.
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: health insurance tax credit for low-income people
+      record: enacted tax law (Congress.gov); IRS
+      criterion: a refundable health insurance credit for low-income people is enacted
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-housing-ownership
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶93.1
+        quote: We will transform today's housing rental program to help hundreds of thousands of low-income families find stability and dignity in a home of their own.
+    restatement: Transform the housing rental programme to help hundreds of thousands of low-income families own a home.
+    type: action
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal housing assistance (Section 8)
+      record: enacted legislation; HUD programme data
+      criterion: a law or HUD rule lets rental assistance be used toward home ownership
+      ambiguity: '"Transform" is not defined; a homeownership option within rental assistance is read as kept, the number of families judged separately.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-support-charities
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶94.1
+        quote: And in the next bold step of welfare reform, we will support the heroic work of homeless shelters and hospices, food pantry and crisis pregnancy centers, people reclaiming their communities block by block and heart by heart.
+    restatement: Support shelters, hospices, food pantries and crisis pregnancy centers in the next step of welfare reform.
+    type: action
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal support for community and faith-based charities
+      record: federal grant programmes; executive orders; enacted legislation
+      criterion: new federal funding or access to funding for such groups is created
+      ambiguity: '"Support" names no amount; any new federal funding channel is read as kept.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-charitable-incentives
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶98.2
+        quote: My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.
+    restatement: Give taxpayers new tax incentives to donate to charity.
+    group: bush-2000-charity-character
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: tax incentives for charitable giving
+      record: enacted tax law; IRS
+      criterion: a new or widened charitable deduction or credit is enacted
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-after-school
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶98.2
+        quote: My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.
+    restatement: Encourage after-school programmes that build character.
+    group: bush-2000-charity-character
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-mentoring
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶98.2
+        quote: My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.
+    restatement: Support mentoring groups for young people.
+    group: bush-2000-charity-character
+    type: action
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal support for youth mentoring
+      record: appropriations; HHS and Education grant programmes
+      criterion: new or increased federal funding for mentoring groups
+      ambiguity: '"Support" names no amount; any new or increased federal mentoring funding is read as kept.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-moral-courage
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶99.1
+        quote: We must give our children a spirit of moral courage because their character is our destiny.
+    restatement: Give children a spirit of moral courage.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-warn-drugs-bigotry
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶100.1
+        quote: We must tell them—we must tell them—we must tell them with confidence that drugs and alcohol can destroy you, and bigotry disfigures the heart.
+    restatement: Tell children that drugs and alcohol destroy and bigotry disfigures.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-gun-enforcement
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶102.1
+        quote: We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws.
+      - in: debate
+        ref: ¶100.11
+        quote: But I also believe strongly that we need to enforce laws on the books that the best way to make sure that we keep our society safe and secure is to hold people accountable for breaking the law.
+      - in: debate
+        ref: ¶100.12-100.13
+        quote: If we catch somebody illegally selling a gun, there needs to be a consequence. If we keep somebody -- you know, illegally using a gun, there needs to be a consequence.
+    restatement: Strictly enforce existing gun laws.
+    type: ongoing
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-teach-values
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶103.1
+        quote: But most of all, we must teach our children the values that defeat violence.
+    restatement: Teach children the values that defeat violence.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-culture-of-life
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶103.2
+        quote: I will lead our nation toward a culture that values life—the life of the elderly and sick, the life of the young and the life of the unborn.
+    restatement: Lead the nation toward a culture that values life
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-partial-birth-abortion
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶104.2
+        quote: And when Congress sends me a bill against partial-birth abortion, I will sign it into law.
+    restatement: Sign a bill banning partial-birth abortion when Congress sends one.
+    type: action
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: partial-birth abortion ban
+      record: enacted legislation (Congress.gov)
+      criterion: if such a bill reaches his desk
+    uncertainty:
+      extraction: probable
+      note: Depends on Congress passing a bill; if none reaches him the promise cannot be judged.
+    links: []
+
+  - id: bush-2000-responsibility-era
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶105.3
+        quote: Instead, we must usher in an era of responsibility.
+    restatement: Usher in an era of responsibility.
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-continue-progress
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶107.3
+        quote: We will continue this progress, and we will not turn back.
+    restatement: Continue progress on women's equality, racial progress and the environment, and not turn back.
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: contested
+      note: '"This progress" points back to ¶106.2-107.2; which areas it covers is a reading.'
+    links: []
+
+  - id: bush-2000-renew-values
+    kind: ambition
+    sources:
+      - in: acceptance
+        ref: ¶110.2
+        quote: And we know we must renew our values to restore our country.
+    restatement: Renew the country's values.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-honor-office
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶115.1
+        quote: So when I put my hand on the Bible, I will swear to not only uphold the laws of our land, I will swear to uphold the honor and dignity of the office to which I have been elected, so help me God.
+      - in: debate
+        ref: ¶167.21
+        quote: Should I be fortunate enough to become your president, when I put my hand on the Bible, I will swear to not only uphold the laws of the land, but I will also swear to uphold the honor and the dignity of the office to which I have been elected, so help me God.
+    restatement: Uphold the honor and dignity of the office.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-make-most
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶117.1
+        quote: For me, gaining this office is not the ambition of a lifetime, but it is the opportunity of a lifetime, and I will make the most of it.
+    restatement: Make the most of the office.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-not-attack-part
+    kind: promise
+    sources:
+      - in: acceptance
+        ref: ¶125.1
+        quote: I will not attack a part of this country because I want to lead the whole of it.
+    restatement: Not attack any part of the country.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-follow-no-other-course
+    kind: ambition
+    sources:
+      - in: inaugural
+        ref: ¶5.2
+        quote: And though our Nation has sometimes halted and sometimes delayed, we must follow no other course.
+    restatement: Follow no other course than the nation's founding promise.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-not-allow-division
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶7.4
+        quote: We do not accept this, and we will not allow it.
+    restatement: Not allow failing schools, hidden prejudice and deep divisions to limit Americans.
+    type: outcome
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: contested
+      note: '"It" refers back to ¶7.2-7.3; whether it means the schools, the prejudice or the division is a reading.'
+    links: []
+
+  - id: bush-2000-single-nation
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶8.2
+        quote: "And this is my solemn pledge: I will work to build a single nation of justice and opportunity."
     restatement: Work to build a single nation of justice and opportunity.
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-civility-commitment
+    kind: promise
     sources:
       - in: inaugural
-        ref: "¶8.2"
-        quote: >
-          And this is my solemn pledge: I will work to build a single nation of
-          justice and opportunity.
-    metric:
-      present: false
-      quantity: none
-      record: null
-    threshold:
-      present: false
-      stated: null
+        ref: ¶10.1
+        quote: Today we affirm a new commitment to live out our Nation's promise through civility, courage, compassion, and character.
+    restatement: Live out the nation's promise through civility, courage, compassion and character.
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: "\"I will work to\" — an effort toward an ideal, with no named mechanism"
-    measurable: "no"
-    notes: >
-      The thesis of the address, cast explicitly as a "solemn pledge," but pure
-      aspiration — no quantity, threshold, deadline, or mechanism, and the verb
-      ("work to build") promises effort toward an ideal, not a result. The
-      inaugural counterpart to the acceptance speech's tone-of-Washington anchor.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: contested
+      note: Present-tense "we affirm a new commitment"; whether that is a firm promise about future conduct is a reading.
+    links: []
 
-  - id: bush-2000-inaugural-wmd
+  - id: bush-2000-live-up-to-calling
+    kind: ambition
+    sources:
+      - in: inaugural
+        ref: ¶12.1
+        quote: We must live up to the calling we share.
+    restatement: Live up to the shared calling of the nation.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-confront-problems
+    kind: ambition
+    sources:
+      - in: inaugural
+        ref: ¶13.4
+        quote: We must show courage in a time of blessing by confronting problems instead of passing them on to future generations.
+    restatement: Confront problems instead of passing them on.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-reclaim-schools
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶14.1
+        quote: Together we will reclaim America's schools before ignorance and apathy claim more young lives.
+    restatement: Reclaim America's schools.
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-reduce-taxes
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶14.3
+        quote: And we will reduce taxes to recover the momentum of our economy and reward the effort and enterprise of working Americans.
+    restatement: Reduce taxes.
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: federal taxes
+      record: enacted tax law (Congress.gov)
+      criterion: a law cutting federal taxes is enacted
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-defenses
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶15.1
+        quote: We will build our defenses beyond challenge, lest weakness invite challenge.
+    restatement: Build US defences beyond challenge.
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: US military capability
+      record: defence budgets; DoD force-readiness reports
+      criterion: defence capability and spending rise over the term
+      ambiguity: '"Beyond challenge" has no measure; real growth in defence spending and readiness is the proxy.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-confront-wmd
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶15.2
+        quote: We will confront weapons of mass destruction, so that a new century is spared new horrors.
+    restatement: Confront weapons of mass destruction.
+    type: ongoing
     theme: foreign-policy
-    restatement: Confront weapons of mass destruction to spare the new century new horrors.
-    sources:
-      - in: inaugural
-        ref: "¶15.2"
-        quote: >
-          We will confront weapons of mass destruction, so that a new century is
-          spared new horrors.
-    metric:
-      present: false
-      quantity: "\"weapons of mass destruction\" names a domain, not a tracked quantity, and no record is invoked"
-      record: null
-    threshold:
-      present: false
-      stated: "\"confront\" — a verb with no level or count"
     deadline:
-      present: false
-      stated: "\"so that a new century is spared\" — a purpose, not a dated target"
-    instrument:
-      present: true
-      stated: confront / counter WMD proliferation
-    measurable: "no"
-    notes: >
-      Distinct from the acceptance speech's reduce-nuclear pledge (which cites
-      warhead counts) — this is a broad counter-proliferation commitment that
-      names no quantity, no level, and no date. A named direction of effort with
-      nothing measurable pinned to it.
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2000-inaugural-faith-based
-    theme: welfare
-    restatement: Give religious and charitable organizations an honored place in federal policy and law.
+  - id: bush-2000-defend-allies
+    kind: promise
     sources:
       - in: inaugural
-        ref: "¶19.4"
-        quote: >
-          Church and charity, synagogue and mosque lend our communities their
-          humanity, and they will have an honored place in our plans and in our
-          laws.
-    metric:
-      present: false
-      quantity: policy action (binary), not a quantity — did faith-based organizations gain a formal role?
-      record: null
-    threshold:
-      present: false
-      stated: null
+        ref: ¶16.1
+        quote: We will defend our allies and our interests.
+    restatement: Defend US allies and interests.
+    type: ongoing
+    theme: foreign-policy
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: give faith-based and community organizations a role "in our plans and in our laws"
-    measurable: "no"
-    notes: >
-      The seed of the faith-based initiative (later an executive office and
-      program). A named instrument with no metric, threshold, or date — measurable
-      at best as "did such a role get established?" Related to but distinct from
-      the acceptance speech's charitable-incentives pledge, which is about
-      donation incentives and program support rather than a place for religious
-      bodies in policy itself.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2000-inaugural-poverty-goal
-    theme: welfare
-    restatement: Commit the nation not to ignore those in poverty and suffering.
+  - id: bush-2000-purpose-not-arrogance
+    kind: promise
     sources:
       - in: inaugural
-        ref: "¶20.3"
-        quote: >
-          And I can pledge our Nation to a goal: When we see that wounded traveler
-          on the road to Jericho, we will not pass to the other side.
-    metric:
-      present: false
-      quantity: none — "the wounded traveler" is a parable, with no measure of poverty attached
-      record: null
-    threshold:
-      present: false
-      stated: "\"we will not pass to the other side\" — a direction of conscience, no level"
+        ref: ¶16.2
+        quote: We will show purpose without arrogance.
+    restatement: Show purpose without arrogance abroad.
+    type: ongoing
+    theme: foreign-policy
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: "a pledge to a goal, framed as a parable — no named mechanism"
-    measurable: "no"
-    notes: >
-      Explicitly a pledge ("I can pledge our Nation to a goal"), but the goal is
-      metaphorical (the Good Samaritan) and carries no quantity, target, deadline,
-      or mechanism. Aspirational — kept as the compassion-agenda counterpart to
-      the unity pledge above.
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-meet-aggression
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶16.3
+        quote: We will meet aggression and bad faith with resolve and strength.
+    restatement: Meet aggression and bad faith with resolve and strength.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-speak-for-values
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶16.4
+        quote: And to all nations, we will speak for the values that gave our Nation birth.
+    restatement: Speak to all nations for America's founding values.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-faith-based
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶19.4
+        quote: Church and charity, synagogue and mosque lend our communities their humanity, and they will have an honored place in our plans and in our laws.
+    restatement: Give churches and charities an honored place in his plans and laws.
+    type: action
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal policy toward faith-based and community groups
+      record: executive orders; enacted legislation; federal grant rules
+      criterion: a law
+      ambiguity: '"An honored place" is not defined; a formal federal channel for faith-based groups is read as kept.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-poverty-goal
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶20.3
+        quote: "And I can pledge our Nation to a goal: When we see that wounded traveler on the road to Jericho, we will not pass to the other side."
+    restatement: Not pass by those in poverty.
+    type: ongoing
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-lead-by-principles
+    kind: promise
+    sources:
+      - in: inaugural
+        ref: ¶24.1-24.2
+        quote: "I will live and lead by these principles: to advance my convictions with civility, to serve the public interest with courage, to speak for greater justice and compassion, to call for responsibility and try to live it, as well. In all these ways, I will bring the values of our history to the care of our times."
+    restatement: Lead by civility, courage, compassion and responsibility.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-pbr-cover-all
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶7.20
+        quote: You know, I support a national patient's bill of rights, Mr. Vice President, and I want all people covered.
+    restatement: A national patients' bill of rights that covers all people.
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal patients' bill of rights
+      record: enacted legislation (Congress.gov)
+      criterion: an enacted bill applies to all insured people
+      ambiguity: '"All people" is read as all privately insured patients, not the uninsured.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-pbr-state-laws
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶7.21
+        quote: I don't want the law to supersede good law like we've got in Texas.
+    restatement: A federal patients' bill of rights that does not override stronger state laws.
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal patients' bill of rights
+      record: enacted legislation (Congress.gov)
+      criterion: an enacted bill leaves stronger state laws in force
+      ambiguity: Whether a state law is "good law" that should stand is a judgement; read as stronger state protections.
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-patients-bill-rights
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶18.6-18.7
+        quote: If I'm the president, we're going to have emergency room care, we're going have gag orders, we're going to have direct access to OB/GYN. People will be able to take their HMO insurance company to court.
+    restatement: A patients' bill of rights with emergency room care, a ban on gag orders, direct access to OB/GYNs and the right to sue HMOs.
+    type: action
     theme: health
-    restatement: Enact a national patients' bill of rights guaranteeing emergency-room care, no gag orders, direct OB/GYN access, and the right to sue an HMO.
-    sources:
-      - in: debate
-        ref: "¶18.6-18.7"
-        quote: >
-          If I'm the president, we're going to have emergency room
-          care, we're going have gag orders, we're going to have
-          direct access to OB/GYN. People will be able to take their
-          HMO insurance company to court.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: federal patients' bill of rights }
-    measurable: "partial"
-    notes: >
-      Modeled on the Texas law he cites; names guaranteed benefits and a
-      right of action but no numeric target or date.
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal patients' bill of rights
+      record: enacted legislation (Congress.gov)
+      criterion: a law with the four named protections is enacted
+      ambiguity: '"Gag orders" is read as a ban on HMO gag orders (¶7.10-7.11); how strong the right to sue must be is not stated.'
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: bush-2000-teacher-protection
-    theme: education
-    restatement: Ask Congress to pass a federal teacher-protection act shielding teachers who uphold classroom discipline from lawsuits.
+  - id: bush-2000-bring-parties-together
+    kind: promise
     sources:
       - in: debate
-        ref: "¶50.20"
-        quote: >
-          So I'm going to ask the Congress to pass a teacher
-          protection act.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: federal teacher-protection act }
-    measurable: "partial"
-    notes: >
-      A named instrument (an act of Congress) but no measurable
-      threshold.
+        ref: ¶18.8
+        quote: That's what I've done in Texas and that's the kind of leadership style I'll bring to Washington.
+      - in: debate
+        ref: ¶159.30
+        quote: I'm going to bring them together.
+    restatement: Bring Republicans and Democrats together in Washington.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: '"The kind of leadership style" in ¶18.8 is read from ¶7.5-7.7.'
+    links: []
 
-  - id: bush-2000-fast-track
-    theme: trade
-    restatement: Seek fast-track trade-negotiating authority to open foreign markets to US farm exports.
+  - id: bush-2000-drugs-low-income
+    kind: promise
     sources:
       - in: debate
-        ref: "¶107.5"
-        quote: >
-          I want the next president to have fast track negotiating
-          authority to open up markets around the world with the
-          best and the most efficient farmers.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: fast-track negotiating authority }
-    measurable: "partial"
-    notes: >
-      Instrument is specific; the market-opening goal has no quantity or
-      deadline.
+        ref: ¶21.6
+        quote: So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs.
+    restatement: Pay for prescription drugs for low-income seniors.
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: drug coverage for low-income seniors
+      record: enacted legislation; CMS
+      criterion: a federal programme that pays low-income seniors' drug costs is enacted
+    uncertainty:
+      extraction: probable
+      note: Framed as a call on both parties in Congress; the firm part is "we'll pay for the poor seniors".
+    links:
+      - kind: refines
+        to: bush-2000-medicare-drugs
 
-  - id: bush-2000-food-embargo
-    theme: trade
-    restatement: Stop using food exports as a diplomatic weapon.
+  - id: bush-2000-community-clinics
+    kind: ambition
     sources:
       - in: debate
-        ref: "¶107.6"
-        quote: >
-          I don't want to use food as a diplomatic weapon from this
-          point forward.
-    metric:     { present: false }
-    threshold:  { present: true, stated: no future food embargoes }
-    deadline:   { present: true, stated: from this point forward }
-    instrument: { present: false }
-    measurable: "partial"
-    notes: >
-      A clear directional commitment (end embargoes) but no metric and
-      no named instrument.
+        ref: ¶30.16
+        quote: There needs to be more community health clinics where the poor can go get health care.
+    restatement: More community health clinics for the poor.
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federally funded community health centres
+      record: HRSA health centre programme data
+      criterion: the number of federally funded health centre sites rises over the term
+      ambiguity: '"More" gives no number; any net rise in funded sites is read as movement.'
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: bush-2000-smallbiz-insurance
-    theme: health
-    restatement: Let small businesses buy health insurance across state lines through pooled association plans.
+    kind: ambition
     sources:
       - in: debate
-        ref: "¶30.20"
-        quote: >
-          We need to have -- allow small businesses to write
-          insurance across jurisdictional lines so small business
-          can afford health care, small restaurants can afford
-          health care.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: association health plans across jurisdictional lines }
-    measurable: "partial"
-    notes: >
-      Instrument named; affordability goal is unquantified.
+        ref: ¶30.20
+        quote: We need to have -- allow small businesses to write insurance across jurisdictional lines so small business can afford health care, small restaurants can afford health care.
+    restatement: Let small businesses buy health insurance across state lines.
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: association or cross-state health plans for small businesses
+      record: enacted legislation; Department of Labor rules
+      criterion: a law or rule lets small businesses pool or buy insurance across state lines
+      ambiguity: '"Across jurisdictional lines" could mean pooling (association plans) or interstate sales; either counts.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-medicare-choices
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶30.23
+        quote: In the Medicare reform I talk about it says if you are a senior, you can stay in Medicare if you like it, and that's fine, but we're going to give you other choices to choose if you want to do so, just like they do the federal employees.
+      - in: debate
+        ref: ¶146.7
+        quote: You get a plan that will include prescription drugs, a plan that will give you options.
+      - in: debate
+        ref: ¶146.11
+        quote: So it will be a modern Medicare system that trusts you to make a variety of options for you.
+      - in: debate
+        ref: ¶167.6
+        quote: It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.
+    restatement: Give seniors a choice of private plans in Medicare
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: private plan options in Medicare
+      record: enacted legislation; CMS plan enrollment data
+      criterion: a law gives every senior a choice of private Medicare plans
+      ambiguity: '"Just like the federal employees" is a model, not a specification; any law that offers a range of private plans counts.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-choices-for-all
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶30.26
+        quote: And that's what we ought to do for all people in America.
+    restatement: Give everyone the kind of health plan choices federal employees have.
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: contested
+      note: '"That" points back to ¶30.23-30.25; whether "all people" means health insurance for everyone is a reading.'
+    links: []
+
+  - id: bush-2000-remind-love-children
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶35.4
+        quote: One of the things the next president must do is to remind people that if we are going to have a responsible period in America, that each of us must love our children with all our heart and all our soul.
+    restatement: Remind people to love their children.
+    type: ongoing
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-annual-testing
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶35.10
+        quote: I believe we ought to measure a lot, three, four, five, six, seven, eighth grade.
+    restatement: Test pupils every year from third to eighth grade.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: annual state testing in grades 3-8
+      record: enacted legislation (Congress.gov)
+      criterion: federal law requires yearly testing in grades 3 to 8
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-praise-school-success
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶39.13
+        quote: And if we find success we'll praise it.
+    restatement: Praise schools that succeed.
+    type: ongoing
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-school-funds-to-parents
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶39.15
+        quote: And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school.
+    restatement: Send the federal money for a failing school's pupils to their parents for tutoring or another school.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: federal Title I money for pupils in failing schools
+      record: enacted legislation (Congress.gov)
+      criterion: a law lets parents in failing schools take the federal money to tutoring or another public or private school
+    uncertainty:
+      extraction: clear
+    links:
+      - kind: refines
+        to: bush-2000-school-exit-funds
+
+  - id: bush-2000-teacher-protection
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶50.20
+        quote: So I'm going to ask the Congress to pass a teacher protection act.
+    restatement: Ask Congress to pass a teacher protection act.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: teacher liability protection bill
+      record: Congressional Record; presidential messages; enacted legislation
+      criterion: he formally asks Congress for such an act
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-teacher-funds-flexibility
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶50.22
+        quote: There needs to be flexibility for teacher training and teacher hiring with federal money.
+    restatement: Let federal money be used flexibly for teacher training and hiring.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: federal teacher-quality funding
+      record: enacted legislation (Congress.gov)
+      criterion: a law merges or opens federal teacher funds to state and local choice between training and hiring
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-relief-all-taxpayers
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶62.2-62.3
+        quote: If you pay taxes, you are going to get a benefit. People who pay taxes will get tax relief.
+      - in: debate
+        ref: ¶146.2-146.4
+        quote: You're going to get a tax refund in my plan. You're not going to be targeted in or targeted out. Everybody that pays taxes is going to get tax relief.
+    restatement: Everyone who pays income tax gets tax relief.
+    type: outcome
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal income tax liability
+      record: enacted tax law; Joint Committee on Taxation and IRS distribution tables
+      criterion: every income-tax-paying group gets a cut
+      ambiguity: '"Everybody that pays taxes" is read as everyone with income-tax liability; payroll-tax-only workers are a judgement call.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-low-income-marginal-rate
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶64.8
+        quote: So I want to do something about that.
+    restatement: Lower the high marginal tax rate low-income workers face as they earn more.
+    type: outcome
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: effective marginal tax rates of low earners
+      record: CBO and Treasury effective-rate studies
+      criterion: the marginal rate at the low-income phase-outs falls
+      ambiguity: Which phase-outs and income band count is a judgement; read as the bottom-bracket and EITC range.
+    uncertainty:
+      extraction: probable
+      note: '"That" in ¶64.8 refers to ¶64.6-64.7.'
+    links: []
+
+  - id: bush-2000-stand-by-israel
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶78.7
+        quote: Israel is our friend and we'll stand by Israel.
+    restatement: Stand by Israel.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-reach-arab-nations
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶78.8-78.9
+        quote: We need to reach out to modern Arab nations as well. To build coalitions to keep the peace.
+    restatement: Reach out to modern Arab nations to build coalitions that keep the peace.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-not-grow-government
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶89.2
+        quote: I readily admit I'm not going to grow the size of the federal government like he is.
+    restatement: Not grow the size of the federal government as his opponent would.
+    type: outcome
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: The measure is relative ("like he is") to the opponent's plans, which were never enacted.
+    links: []
+
+  - id: bush-2000-military-mission
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶89.11-89.12
+        quote: Should I be fortunate enough to earn your confidence, the mission of the United States military will be to be prepared and ready to fight and win war. And therefore prevent war from happening in the first place.
+    restatement: Make the military's mission to be ready to fight and win wars and so prevent them.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-military-equipment
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶89.15
+        quote: I want to make sure the equipment for our military is the best it can possibly be, of course.
+    restatement: Give the military the best equipment.
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-keep-peace
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶89.18
+        quote: This is a peaceful nation, and I intend to keep the peace.
+      - in: debate
+        ref: ¶167.9
+        quote: I want to have the military keeping the peace.
+    restatement: Keep the peace.
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-defense-review
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶89.21
+        quote: First thing I'm going to do is ask the Secretary of Defense to develop a plan so we are making sure we're not spending our money on political projects, but on projects to make sure our soldiers are well-paid, well-housed, and have the best equipment in the world.
+    restatement: Ask the Secretary of Defense for a plan to spend on troops and equipment rather than political projects.
+    type: action
+    theme: defense
+    deadline:
+      stated: First thing
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: a directed defence spending review
+      record: presidential directives; DoD records
+      criterion: he orders the Secretary of Defense to produce such a review
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-guns-from-prohibited
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶100.7
+        quote: I believe that we ought to keep guns out of the hands of people that shouldn't have them.
+    restatement: Keep guns away from people who should not have them.
+    type: ongoing
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-juvenile-gun-age
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶100.10
+        quote: I think we ought to raise the age at which juveniles can have a gun.
+    restatement: Raise the age at which juveniles may have a gun.
+    type: action
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: federal minimum age for gun possession
+      record: enacted legislation (Congress.gov)
+      criterion: a law raises the minimum age
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-enforce-gun-laws
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶100.20-100.21
+        quote: And I'm for enforcing laws on the books. And that's what is going to happen should I earn your confidence.
+    restatement: Enforce existing gun laws.
+    type: ongoing
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal gun prosecutions
+      record: Justice Department and TRAC prosecution data
+      criterion: federal firearms prosecutions rise over the term
+      ambiguity: Rising prosecutions is the proxy for "enforcing laws on the books".
+    uncertainty:
+      extraction: probable
+      note: '"That" in ¶100.21 may also cover "a safe society" (¶100.19).'
+    links:
+      - kind: refines
+        to: bush-2000-gun-enforcement
+
+  - id: bush-2000-farmers-feed-world
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶107.1-107.2
+        quote: I would like our farmers feeding the world. We're the best producers in the world, and I want -- I want the farmers feeding the world.
+    restatement: Have American farmers feeding the world.
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-open-markets
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶107.3
+        quote: We need to open up markets.
+      - in: debate
+        ref: ¶107.22
+        quote: So should I be fortunate enough to earn your vote, I also understand -- I want to open up markets, but I also understand that farming is a part of our national security.
+    restatement: Open foreign markets to US farm goods.
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: trade agreements
+      record: USTR; ratified trade agreements
+      criterion: new trade agreements that cut barriers to US farm exports are signed
+      ambiguity: Which agreements count as "opening markets" is not stated; any new agreement covering agriculture counts.
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-fast-track
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶107.5
+        quote: I want the next president to have fast track negotiating authority to open up markets around the world with the best and the most efficient farmers.
+    restatement: Get fast-track trade negotiating authority.
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: trade promotion authority
+      record: enacted legislation (Congress.gov)
+      criterion: Congress grants the president fast-track authority
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-food-embargo
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶107.6
+        quote: I don't want to use food as a diplomatic weapon from this point forward.
+    restatement: Not use food as a diplomatic weapon.
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: from this point forward
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: US food embargoes
+      record: Treasury OFAC sanctions; executive orders
+      criterion: no new sanction during the term bans food exports
+    uncertainty:
+      extraction: probable
+      note: '"From this point forward" is read as the whole term.'
+    links: []
+
+  - id: bush-2000-internet-filters
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶117.8
+        quote: There ought to be filters in public libraries and filters in public schools so if kids get on the Internet, there is not going to be pornography or violence coming in.
+    restatement: Filters on internet computers in public libraries and schools.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: internet filtering in schools and libraries
+      record: enacted legislation (Congress.gov)
+      criterion: federal law requires filters in public schools and libraries
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-character-education
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶117.9
+        quote: I think we ought to have character education in our schools.
+      - in: debate
+        ref: ¶117.11
+        quote: Greatly expand character education funding so that public schools will teach children values, values which have stood the test of time.
+    restatement: Greatly expand funding for character education in schools.
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: federal character-education grants
+      record: Education Department appropriations
+      criterion: character-education funding rises substantially
+      ambiguity: '"Greatly" gives no amount; a multiple of the 2000 level is read as kept.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-talk-to-hollywood
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶117.17
+        quote: But I do believe that we ought to talk plainly to the Hollywood moguls and people who produce this stuff and explain the consequences.
+    restatement: Talk plainly to Hollywood producers about the consequences of violent content.
+    type: ongoing
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-clear-ratings
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶117.18
+        quote: I think we need to have rating systems that are clear.
+    restatement: Clear rating systems for entertainment.
+    type: outcome
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-remind-parents
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶117.20
+        quote: I'll remind mothers and dads the best weapon is the off/on button, and paying attention to your children, and eating dinner with them and being -- I'm sorry.
+    restatement: Remind parents to switch off the TV and pay attention to their children.
+    type: ongoing
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-appoint-servants
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶130.2
+        quote: I'm going to find people that want to serve their country.
+    restatement: Appoint people who want to serve their country.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-diverse-administration
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶130.3
+        quote: But I want a diverse administration, I think it's important.
+    restatement: A diverse administration.
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: medium
+      object: cabinet and senior appointments
+      record: White House and Senate confirmation records
+      criterion: the cabinet includes women and minorities in substantial numbers
+      ambiguity: '"Diverse" names no measure; the share of women and minorities in the cabinet compared with predecessors is the proxy.'
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-administration-proud
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶130.20
+        quote: I'll have an administration that will make you proud.
+    restatement: An administration that will make Americans proud.
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-caregiver-exemption
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶146.5
+        quote: If you take care of an elderly in your home, you're going to get the personal exemption increased.
+    restatement: Raise the personal exemption for people who care for an elderly relative at home.
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: tax exemption for home caregivers
+      record: enacted tax law; IRS
+      criterion: a law raises the exemption for such caregivers
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-foreign-policy-clarity
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶146.12-146.13
+        quote: You're going to live in a peaceful world. It will be a world of peace because we're going to have a clear sight of foreign policy based upon a strong military and a mission that stands by our friends.
+    restatement: A clear foreign policy built on a strong military that stands by friends.
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-ss-trillion-accounts
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶159.20
+        quote: One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus.
+      - in: debate
+        ref: ¶159.24
+        quote: And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today.
+    restatement: Let workers invest $1 trillion of the Social Security surplus in personal accounts.
+    type: action
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: personal Social Security accounts
+      record: enacted legislation (Congress.gov); SSA Trustees reports
+      criterion: a law lets workers invest about $1 trillion of payroll taxes in personal accounts
+    uncertainty:
+      extraction: clear
+    links:
+      - kind: refines
+        to: bush-2000-socialsecurity-accounts
+
+  - id: bush-2000-worker-ownership
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶163.5
+        quote: I want workers to have their own assets.
+    restatement: Workers owning their own assets.
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-keep-promises
+    kind: promise
+    sources:
+      - in: debate
+        ref: ¶167.8
+        quote: A promise made will be a promise kept should I be fortunate enough to become your president.
+    restatement: Keep the promises he made.
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-no-child-left-behind
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶167.10
+        quote: I want to make sure the public school system in America keeps its promise so not one child is left behind.
+    restatement: A public school system that leaves no child behind.
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: bush-2000-return-surplus
+    kind: ambition
+    sources:
+      - in: debate
+        ref: ¶167.11
+        quote: After setting priorities, I want to give some of your money back.
+    restatement: Return some of the budget surplus to taxpayers.
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2005-01-20
+    verifiability:
+      level: high
+      object: federal tax refunds or cuts
+      record: enacted tax law; Treasury
+      criterion: a law returning part of the surplus to taxpayers is enacted
+    uncertainty:
+      extraction: clear
+    links: []

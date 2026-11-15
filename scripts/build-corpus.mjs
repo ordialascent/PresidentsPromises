@@ -15,13 +15,19 @@
  *   - single-source (legacy): top-level `ref` + `quote` → the acceptance speech
  *   - multi-source: a `sources:` list of { in: <kind>, ref, quote }
  *
- * Dependency-free by design: a small indentation-aware scanner reads exactly the
- * fields above (no YAML library, no install, no network). Re-run after editing
- * the corpus:  npm run build:corpus
+ * Terms re-extracted under corpus/PROTOCOL.md (`protocol: 1`) are read with the
+ * YAML library instead. Their records carry `kind` (promise | ambition), `type`
+ * and a verifiability `level`. Until the app shows those fields, a protocol-1
+ * term contributes its promises only (ambitions are left out), and its level
+ * stands in for the legacy quality: high -> full, medium -> partial, low -> no.
+ *
+ * Legacy terms are read by a small indentation-aware scanner that reads exactly
+ * the fields above. Re-run after editing the corpus:  npm run build:corpus
  */
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { parse as parseYaml } from 'yaml';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -34,6 +40,8 @@ const KIND_LABEL = {
   inaugural: 'inaugural address',
   debate: 'debate',
 };
+/** Interim projection of a protocol-1 verifiability level onto the legacy tiers. */
+const LEVEL_TO_QUALITY = { high: 'full', medium: 'partial', low: 'no' };
 const unquote = (s) => s.replace(/^["'](.*)["']$/, '$1');
 const isBlock = (v) => /^[>|]-?$/.test(v) || v === '';
 
@@ -173,9 +181,13 @@ for (const name of readdirSync(CORPUS)) {
   // The acceptance speech is the default source and the term's headline year.
   const acceptance = docs.acceptance || Object.values(docs).sort((a, b) => a.year - b.year)[0];
 
-  const raw = files.includes('promises.yaml')
-    ? parsePromises(readFileSync(join(dir, 'promises.yaml'), 'utf8'))
-    : [];
+  const ptext = files.includes('promises.yaml') ? readFileSync(join(dir, 'promises.yaml'), 'utf8') : '';
+  const pdoc = /^protocol: 1\s*$/m.test(ptext) ? parseYaml(ptext) : null;
+  const raw = pdoc
+    ? pdoc.promises
+        .filter((p) => p.kind === 'promise')
+        .map((p) => ({ ...p, measurable: LEVEL_TO_QUALITY[p.verifiability?.level] }))
+    : parsePromises(ptext);
   const promises = raw.map((p) => {
     if (!QUALITIES.includes(p.measurable)) {
       throw new Error(`${name}/${p.id}: bad measurable ${JSON.stringify(p.measurable)}`);

@@ -72,9 +72,366 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "label": "Bush 2000",
     "promises": [
       {
+        "id": "bush-2000-renew-purpose",
+        "theme": "government",
+        "restatement": "Renew America's purpose.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶4.1",
+            "quote": "Together, we will renew America's purpose."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-seize-moment",
+        "theme": "government",
+        "restatement": "Use the good times of 2000 for great goals.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶20.1-20.2",
+            "quote": "So tonight, we vow to our nation we will seize this moment of American promise. We will use these good times for great goals."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-confront-hard-issues",
+        "theme": "government",
+        "restatement": "Confront the hard issues (national security, health and retirement security) before they become crises.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶21.1",
+            "quote": "We will confront the hard issues, threats to our national security, threats to our health and retirement security, before the challenges of our time become crises for our children."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-extend-prosperity",
+        "theme": "economy",
+        "restatement": "Extend prosperity to every corner of the country: a chance to succeed, to learn, to live with dignity.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶22.1",
+            "quote": "And we will extend the promise of prosperity to every forgotten corner of this country: to every man and woman, a chance to succeed; to every child, a chance to learn; and to every family, a chance to live with dignity and hope."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-will-lead",
+        "theme": "government",
+        "restatement": "Lead the nation where the outgoing administration did not.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶27.2",
+            "quote": "We will."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶29.3",
+            "quote": "We will."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶31.3",
+            "quote": "We will."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶33.3",
+            "quote": "We will."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶83.3",
+            "quote": "Give me the opportunity to lead this nation, and I will lead."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶91.2",
+            "quote": "And on this ground, we will lead our nation."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-leave-nation-greater",
+        "theme": "government",
+        "restatement": "Leave the nation greater than he found it.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶40.4",
+            "quote": "We will add the work of our hands to the inheritance of our fathers and mothers and leave this nation greater than we found it."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-reform-socialsecurity",
+        "theme": "retirement",
+        "restatement": "Reform Social Security.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶41.3",
+            "quote": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶14.2",
+            "quote": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶159.20",
+            "quote": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.7",
+            "quote": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-reform-medicare",
+        "theme": "health",
+        "restatement": "Reform Medicare.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶41.3",
+            "quote": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶14.2",
+            "quote": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.6",
+            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-medicare-solvency",
+        "theme": "health",
+        "restatement": "Set Medicare on firm financial ground.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶42.2",
+            "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them."
+          }
+        ]
+      },
+      {
         "id": "bush-2000-medicare-drugs",
         "theme": "health",
-        "restatement": "Put Medicare on firm financial ground and make prescription drugs available and affordable for every senior.",
+        "restatement": "Make prescription drugs available and affordable for every senior who needs them.",
         "quality": "partial",
         "occurrences": [
           {
@@ -104,6 +461,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
               "label": "2000 debate"
             },
+            "ref": "¶21.6",
+            "quote": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.7",
+            "quote": "You get a plan that will include prescription drugs, a plan that will give you options."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
             "ref": "¶167.6",
             "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
           }
@@ -111,9 +498,9 @@ export const CORPUS_TERMS: CorpusTerm[] = [
       },
       {
         "id": "bush-2000-socialsecurity-preserve",
-        "theme": "fiscal",
-        "restatement": "Preserve current Social Security benefits for today's seniors with no cuts.",
-        "quality": "partial",
+        "theme": "retirement",
+        "restatement": "No changes and no reductions to Social Security benefits for current seniors.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -129,14 +516,29 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶44.1-44.2",
             "quote": "To the seniors in this country, you earned your benefits, you made your plans, and President George W. Bush will keep the promise of Social Security. No changes, no reductions, no way."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.7",
+            "quote": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America."
           }
         ]
       },
       {
         "id": "bush-2000-socialsecurity-accounts",
-        "theme": "fiscal",
-        "restatement": "Let younger workers divert part of their payroll taxes into voluntary personal investment accounts.",
-        "quality": "partial",
+        "theme": "retirement",
+        "restatement": "Let younger workers put part of their payroll taxes into personal investment accounts.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -152,29 +554,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶47.1",
             "quote": "For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments."
-          },
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-tax-fairness",
+        "theme": "taxes",
+        "restatement": "Bring common sense and fairness to the tax code.",
+        "quality": "no",
+        "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "acceptance",
+              "medium": "speech",
               "speaker": "George W. Bush",
-              "event": "Presidential Debate in St. Louis",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
               "year": 2000,
-              "date": "2000-10-17",
+              "date": "2000-08-03",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
-              "label": "2000 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
             },
-            "ref": "¶159.24",
-            "quote": "And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today."
+            "ref": "¶58.1",
+            "quote": "I will use this moment of opportunity to bring common sense and fairness to the tax code."
           }
         ]
       },
       {
         "id": "bush-2000-death-tax",
         "theme": "taxes",
-        "restatement": "Abolish the estate (\"death\") tax.",
-        "quality": "partial",
+        "restatement": "Abolish the estate tax.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -203,16 +613,16 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
               "label": "2000 debate"
             },
-            "ref": "¶107.16",
-            "quote": "I'm for getting rid of the death tax, completely getting rid of the death tax."
+            "ref": "¶113.9",
+            "quote": "I know this, 100% will get it if I'm the president."
           }
         ]
       },
       {
         "id": "bush-2000-tax-rates-allbrackets",
         "theme": "taxes",
-        "restatement": "Cut income-tax rates in every bracket, with no rate exceeding a third of income.",
-        "quality": "partial",
+        "restatement": "Reduce income tax rates in every bracket.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -228,29 +638,14 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶59.1",
             "quote": "On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in St. Louis",
-              "year": 2000,
-              "date": "2000-10-17",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
-              "label": "2000 debate"
-            },
-            "ref": "¶146.4",
-            "quote": "Everybody that pays taxes is going to get tax relief."
           }
         ]
       },
       {
-        "id": "bush-2000-bottom-rate-child-credit",
+        "id": "bush-2000-bottom-rate-10",
         "theme": "taxes",
-        "restatement": "Cut the bottom income-tax rate from 15% to 10% and double the child tax credit.",
-        "quality": "partial",
+        "restatement": "Lower the bottom income tax rate from 15% to 10%.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -270,10 +665,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
-        "id": "bush-2000-head-start",
-        "theme": "education",
-        "restatement": "Refocus Head Start as an early-learning and reading program.",
-        "quality": "no",
+        "id": "bush-2000-double-child-credit",
+        "theme": "taxes",
+        "restatement": "Double the child tax credit.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -287,53 +682,15 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
               "label": "2000 acceptance speech"
             },
-            "ref": "¶54.1",
-            "quote": "Now is the time to make Head Start an early learning program to teach all our children to read and renew the promise of America's public schools."
-          }
-        ]
-      },
-      {
-        "id": "bush-2000-school-accountability",
-        "theme": "education",
-        "restatement": "Tie federal school funds to results; let parents redirect the money if schools fail.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "George W. Bush",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
-              "year": 2000,
-              "date": "2000-08-03",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
-              "label": "2000 acceptance speech"
-            },
-            "ref": "¶53.2-53.3",
-            "quote": "When a school district receives federal funds to teach poor children, we expect them to learn. And if they don't, parents should get the money to make a different choice."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in St. Louis",
-              "year": 2000,
-              "date": "2000-10-17",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
-              "label": "2000 debate"
-            },
-            "ref": "¶39.15",
-            "quote": "And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school."
+            "ref": "¶60.1",
+            "quote": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit."
           }
         ]
       },
       {
         "id": "bush-2000-military-means",
         "theme": "defense",
-        "restatement": "Give the military the resources to keep the peace, plus respectful leadership.",
+        "restatement": "Give the military the means to keep the peace.",
         "quality": "no",
         "occurrences": [
           {
@@ -350,28 +707,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶63.1",
             "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
-          },
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-respect-military",
+        "theme": "defense",
+        "restatement": "Be a commander-in-chief who respects the troops and earns their respect.",
+        "quality": "no",
+        "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "acceptance",
+              "medium": "speech",
               "speaker": "George W. Bush",
-              "event": "Presidential Debate in St. Louis",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
               "year": 2000,
-              "date": "2000-10-17",
+              "date": "2000-08-03",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
-              "label": "2000 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
             },
-            "ref": "¶167.9",
-            "quote": "I want to have the military keeping the peace."
+            "ref": "¶63.1",
+            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
           }
         ]
       },
       {
         "id": "bush-2000-reduce-nuclear",
-        "theme": "foreign-policy",
-        "restatement": "Work to reduce nuclear weapons and nuclear tensions.",
+        "theme": "defense",
+        "restatement": "Work to reduce nuclear weapons and nuclear tension.",
         "quality": "partial",
         "occurrences": [
           {
@@ -394,8 +759,8 @@ export const CORPUS_TERMS: CorpusTerm[] = [
       {
         "id": "bush-2000-missile-defense",
         "theme": "defense",
-        "restatement": "Deploy missile defenses to protect against attack and blackmail.",
-        "quality": "partial",
+        "restatement": "Deploy missile defenses.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -415,10 +780,56 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
+        "id": "bush-2000-honor-trust",
+        "theme": "government",
+        "restatement": "Honor the voters' trust.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶83.1",
+            "quote": "If you give me your trust, I will honor it."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-use-mandate",
+        "theme": "government",
+        "restatement": "Use the mandate the election gives him.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶83.2",
+            "quote": "Grant me a mandate, I will use it."
+          }
+        ]
+      },
+      {
         "id": "bush-2000-health-tax-credits",
         "theme": "health",
         "restatement": "Give low-income Americans tax credits to buy private health insurance.",
-        "quality": "partial",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -434,28 +845,13 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶92.1",
             "quote": "We will give low-income Americans tax credits to buy the private health insurance they need and deserve."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in St. Louis",
-              "year": 2000,
-              "date": "2000-10-17",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
-              "label": "2000 debate"
-            },
-            "ref": "¶30.19",
-            "quote": "We need a $2,000 credit, rebate for people, working people that don't have insurance, they can get in the marketplace and start purchasing insurance."
           }
         ]
       },
       {
         "id": "bush-2000-housing-ownership",
-        "theme": "housing",
-        "restatement": "Convert rental assistance to help hundreds of thousands of low-income families become homeowners.",
+        "theme": "welfare",
+        "restatement": "Transform the housing rental programme to help hundreds of thousands of low-income families own a home.",
         "quality": "partial",
         "occurrences": [
           {
@@ -476,9 +872,55 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
-        "id": "bush-2000-charitable-incentives",
+        "id": "bush-2000-support-charities",
         "theme": "welfare",
-        "restatement": "Create new tax incentives for charitable giving and back after-school and mentoring programs.",
+        "restatement": "Support shelters, hospices, food pantries and crisis pregnancy centers in the next step of welfare reform.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶94.1",
+            "quote": "And in the next bold step of welfare reform, we will support the heroic work of homeless shelters and hospices, food pantry and crisis pregnancy centers, people reclaiming their communities block by block and heart by heart."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-charitable-incentives",
+        "theme": "taxes",
+        "restatement": "Give taxpayers new tax incentives to donate to charity.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶98.2",
+            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-after-school",
+        "theme": "education",
+        "restatement": "Encourage after-school programmes that build character.",
         "quality": "no",
         "occurrences": [
           {
@@ -495,28 +937,13 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶98.2",
             "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in St. Louis",
-              "year": 2000,
-              "date": "2000-10-17",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
-              "label": "2000 debate"
-            },
-            "ref": "¶117.13",
-            "quote": "I think that afterschool money ought to be available for faith-based programs and charitable programs that exist because somebody has heard the call to love a neighbor like you would like to be loved yourself."
           }
         ]
       },
       {
-        "id": "bush-2000-gun-enforcement",
-        "theme": "crime",
-        "restatement": "Protect children by strictly enforcing existing gun laws.",
+        "id": "bush-2000-mentoring",
+        "theme": "welfare",
+        "restatement": "Support mentoring groups for young people.",
         "quality": "partial",
         "occurrences": [
           {
@@ -531,31 +958,39 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
               "label": "2000 acceptance speech"
             },
-            "ref": "¶102.1",
-            "quote": "We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws."
-          },
+            "ref": "¶98.2",
+            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-culture-of-life",
+        "theme": "rights",
+        "restatement": "Lead the nation toward a culture that values life",
+        "quality": "no",
+        "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "acceptance",
+              "medium": "speech",
               "speaker": "George W. Bush",
-              "event": "Presidential Debate in St. Louis",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
               "year": 2000,
-              "date": "2000-10-17",
+              "date": "2000-08-03",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
-              "label": "2000 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
             },
-            "ref": "¶100.11",
-            "quote": "But I also believe strongly that we need to enforce laws on the books that the best way to make sure that we keep our society safe and secure is to hold people accountable for breaking the law."
+            "ref": "¶103.2",
+            "quote": "I will lead our nation toward a culture that values life—the life of the elderly and sick, the life of the young and the life of the unborn."
           }
         ]
       },
       {
         "id": "bush-2000-partial-birth-abortion",
-        "theme": "abortion",
-        "restatement": "Sign a partial-birth abortion ban if Congress passes one.",
-        "quality": "partial",
+        "theme": "rights",
+        "restatement": "Sign a bill banning partial-birth abortion when Congress sends one.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -575,9 +1010,9 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
-        "id": "bush-2000-tone-of-washington",
-        "theme": "governance",
-        "restatement": "Change the tone of Washington to civility and respect.",
+        "id": "bush-2000-continue-progress",
+        "theme": "rights",
+        "restatement": "Continue progress on women's equality, racial progress and the environment, and not turn back.",
         "quality": "no",
         "occurrences": [
           {
@@ -592,8 +1027,31 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
               "label": "2000 acceptance speech"
             },
-            "ref": "¶77.5",
-            "quote": "I want to change the tone of Washington to one of civility and respect."
+            "ref": "¶107.3",
+            "quote": "We will continue this progress, and we will not turn back."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-honor-office",
+        "theme": "government",
+        "restatement": "Uphold the honor and dignity of the office.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶115.1",
+            "quote": "So when I put my hand on the Bible, I will swear to not only uphold the laws of our land, I will swear to uphold the honor and dignity of the office to which I have been elected, so help me God."
           },
           {
             "source": {
@@ -607,14 +1065,83 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
               "label": "2000 debate"
             },
-            "ref": "¶126.5",
-            "quote": "And what I think needs to happen in order to encourage the young to become involved is to shoot straight, is to set aside the partisan differences, and set an agenda that will make sense."
+            "ref": "¶167.21",
+            "quote": "Should I be fortunate enough to become your president, when I put my hand on the Bible, I will swear to not only uphold the laws of the land, but I will also swear to uphold the honor and the dignity of the office to which I have been elected, so help me God."
           }
         ]
       },
       {
-        "id": "bush-2000-inaugural-single-nation",
-        "theme": "governance",
+        "id": "bush-2000-make-most",
+        "theme": "government",
+        "restatement": "Make the most of the office.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶117.1",
+            "quote": "For me, gaining this office is not the ambition of a lifetime, but it is the opportunity of a lifetime, and I will make the most of it."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-not-attack-part",
+        "theme": "government",
+        "restatement": "Not attack any part of the country.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Philadelphia",
+              "year": 2000,
+              "date": "2000-08-03",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-0",
+              "label": "2000 acceptance speech"
+            },
+            "ref": "¶125.1",
+            "quote": "I will not attack a part of this country because I want to lead the whole of it."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-not-allow-division",
+        "theme": "rights",
+        "restatement": "Not allow failing schools, hidden prejudice and deep divisions to limit Americans.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶7.4",
+            "quote": "We do not accept this, and we will not allow it."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-single-nation",
+        "theme": "rights",
         "restatement": "Work to build a single nation of justice and opportunity.",
         "quality": "no",
         "occurrences": [
@@ -636,9 +1163,101 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
-        "id": "bush-2000-inaugural-wmd",
+        "id": "bush-2000-civility-commitment",
+        "theme": "government",
+        "restatement": "Live out the nation's promise through civility, courage, compassion and character.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶10.1",
+            "quote": "Today we affirm a new commitment to live out our Nation's promise through civility, courage, compassion, and character."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-reclaim-schools",
+        "theme": "education",
+        "restatement": "Reclaim America's schools.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶14.1",
+            "quote": "Together we will reclaim America's schools before ignorance and apathy claim more young lives."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-reduce-taxes",
+        "theme": "taxes",
+        "restatement": "Reduce taxes.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶14.3",
+            "quote": "And we will reduce taxes to recover the momentum of our economy and reward the effort and enterprise of working Americans."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-defenses",
+        "theme": "defense",
+        "restatement": "Build US defences beyond challenge.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶15.1",
+            "quote": "We will build our defenses beyond challenge, lest weakness invite challenge."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-confront-wmd",
         "theme": "foreign-policy",
-        "restatement": "Confront weapons of mass destruction to spare the new century new horrors.",
+        "restatement": "Confront weapons of mass destruction.",
         "quality": "no",
         "occurrences": [
           {
@@ -659,10 +1278,102 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
-        "id": "bush-2000-inaugural-faith-based",
-        "theme": "welfare",
-        "restatement": "Give religious and charitable organizations an honored place in federal policy and law.",
+        "id": "bush-2000-defend-allies",
+        "theme": "foreign-policy",
+        "restatement": "Defend US allies and interests.",
         "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶16.1",
+            "quote": "We will defend our allies and our interests."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-purpose-not-arrogance",
+        "theme": "foreign-policy",
+        "restatement": "Show purpose without arrogance abroad.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶16.2",
+            "quote": "We will show purpose without arrogance."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-meet-aggression",
+        "theme": "foreign-policy",
+        "restatement": "Meet aggression and bad faith with resolve and strength.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶16.3",
+            "quote": "We will meet aggression and bad faith with resolve and strength."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-speak-for-values",
+        "theme": "foreign-policy",
+        "restatement": "Speak to all nations for America's founding values.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶16.4",
+            "quote": "And to all nations, we will speak for the values that gave our Nation birth."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-faith-based",
+        "theme": "welfare",
+        "restatement": "Give churches and charities an honored place in his plans and laws.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -682,9 +1393,9 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
-        "id": "bush-2000-inaugural-poverty-goal",
+        "id": "bush-2000-poverty-goal",
         "theme": "welfare",
-        "restatement": "Commit the nation not to ignore those in poverty and suffering.",
+        "restatement": "Not pass by those in poverty.",
         "quality": "no",
         "occurrences": [
           {
@@ -705,9 +1416,32 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
+        "id": "bush-2000-lead-by-principles",
+        "theme": "government",
+        "restatement": "Lead by civility, courage, compassion and responsibility.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George W. Bush",
+              "event": "Inaugural Address",
+              "year": 2001,
+              "date": "2001-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+              "label": "2001 inaugural address"
+            },
+            "ref": "¶24.1-24.2",
+            "quote": "I will live and lead by these principles: to advance my convictions with civility, to serve the public interest with courage, to speak for greater justice and compassion, to call for responsibility and try to live it, as well. In all these ways, I will bring the values of our history to the care of our times."
+          }
+        ]
+      },
+      {
         "id": "bush-2000-patients-bill-rights",
         "theme": "health",
-        "restatement": "Enact a national patients' bill of rights guaranteeing emergency-room care, no gag orders, direct OB/GYN access, and the right to sue an HMO.",
+        "restatement": "A patients' bill of rights with emergency room care, a ban on gag orders, direct access to OB/GYNs and the right to sue HMOs.",
         "quality": "partial",
         "occurrences": [
           {
@@ -728,10 +1462,185 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
+        "id": "bush-2000-bring-parties-together",
+        "theme": "government",
+        "restatement": "Bring Republicans and Democrats together in Washington.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶18.8",
+            "quote": "That's what I've done in Texas and that's the kind of leadership style I'll bring to Washington."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶159.30",
+            "quote": "I'm going to bring them together."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-drugs-low-income",
+        "theme": "health",
+        "restatement": "Pay for prescription drugs for low-income seniors.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶21.6",
+            "quote": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-medicare-choices",
+        "theme": "health",
+        "restatement": "Give seniors a choice of private plans in Medicare",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶30.23",
+            "quote": "In the Medicare reform I talk about it says if you are a senior, you can stay in Medicare if you like it, and that's fine, but we're going to give you other choices to choose if you want to do so, just like they do the federal employees."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.7",
+            "quote": "You get a plan that will include prescription drugs, a plan that will give you options."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.11",
+            "quote": "So it will be a modern Medicare system that trusts you to make a variety of options for you."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.6",
+            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-praise-school-success",
+        "theme": "education",
+        "restatement": "Praise schools that succeed.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶39.13",
+            "quote": "And if we find success we'll praise it."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-school-funds-to-parents",
+        "theme": "education",
+        "restatement": "Send the federal money for a failing school's pupils to their parents for tutoring or another school.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶39.15",
+            "quote": "And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school."
+          }
+        ]
+      },
+      {
         "id": "bush-2000-teacher-protection",
         "theme": "education",
-        "restatement": "Ask Congress to pass a federal teacher-protection act shielding teachers who uphold classroom discipline from lawsuits.",
-        "quality": "partial",
+        "restatement": "Ask Congress to pass a teacher protection act.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -751,9 +1660,9 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         ]
       },
       {
-        "id": "bush-2000-fast-track",
-        "theme": "trade",
-        "restatement": "Seek fast-track trade-negotiating authority to open foreign markets to US farm exports.",
+        "id": "bush-2000-relief-all-taxpayers",
+        "theme": "taxes",
+        "restatement": "Everyone who pays income tax gets tax relief.",
         "quality": "partial",
         "occurrences": [
           {
@@ -768,16 +1677,31 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
               "label": "2000 debate"
             },
-            "ref": "¶107.5",
-            "quote": "I want the next president to have fast track negotiating authority to open up markets around the world with the best and the most efficient farmers."
+            "ref": "¶62.2-62.3",
+            "quote": "If you pay taxes, you are going to get a benefit. People who pay taxes will get tax relief."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.2-146.4",
+            "quote": "You're going to get a tax refund in my plan. You're not going to be targeted in or targeted out. Everybody that pays taxes is going to get tax relief."
           }
         ]
       },
       {
-        "id": "bush-2000-food-embargo",
-        "theme": "trade",
-        "restatement": "Stop using food exports as a diplomatic weapon.",
-        "quality": "partial",
+        "id": "bush-2000-stand-by-israel",
+        "theme": "foreign-policy",
+        "restatement": "Stand by Israel.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -791,15 +1715,84 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
               "label": "2000 debate"
             },
-            "ref": "¶107.6",
-            "quote": "I don't want to use food as a diplomatic weapon from this point forward."
+            "ref": "¶78.7",
+            "quote": "Israel is our friend and we'll stand by Israel."
           }
         ]
       },
       {
-        "id": "bush-2000-smallbiz-insurance",
-        "theme": "health",
-        "restatement": "Let small businesses buy health insurance across state lines through pooled association plans.",
+        "id": "bush-2000-not-grow-government",
+        "theme": "budget",
+        "restatement": "Not grow the size of the federal government as his opponent would.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶89.2",
+            "quote": "I readily admit I'm not going to grow the size of the federal government like he is."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-military-mission",
+        "theme": "defense",
+        "restatement": "Make the military's mission to be ready to fight and win wars and so prevent them.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶89.11-89.12",
+            "quote": "Should I be fortunate enough to earn your confidence, the mission of the United States military will be to be prepared and ready to fight and win war. And therefore prevent war from happening in the first place."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-defense-review",
+        "theme": "defense",
+        "restatement": "Ask the Secretary of Defense for a plan to spend on troops and equipment rather than political projects.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶89.21",
+            "quote": "First thing I'm going to do is ask the Secretary of Defense to develop a plan so we are making sure we're not spending our money on political projects, but on projects to make sure our soldiers are well-paid, well-housed, and have the best equipment in the world."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-enforce-gun-laws",
+        "theme": "crime-justice",
+        "restatement": "Enforce existing gun laws.",
         "quality": "partial",
         "occurrences": [
           {
@@ -814,8 +1807,184 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
               "label": "2000 debate"
             },
-            "ref": "¶30.20",
-            "quote": "We need to have -- allow small businesses to write insurance across jurisdictional lines so small business can afford health care, small restaurants can afford health care."
+            "ref": "¶100.20-100.21",
+            "quote": "And I'm for enforcing laws on the books. And that's what is going to happen should I earn your confidence."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-remind-parents",
+        "theme": "welfare",
+        "restatement": "Remind parents to switch off the TV and pay attention to their children.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶117.20",
+            "quote": "I'll remind mothers and dads the best weapon is the off/on button, and paying attention to your children, and eating dinner with them and being -- I'm sorry."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-appoint-servants",
+        "theme": "government",
+        "restatement": "Appoint people who want to serve their country.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶130.2",
+            "quote": "I'm going to find people that want to serve their country."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-administration-proud",
+        "theme": "government",
+        "restatement": "An administration that will make Americans proud.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶130.20",
+            "quote": "I'll have an administration that will make you proud."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-caregiver-exemption",
+        "theme": "taxes",
+        "restatement": "Raise the personal exemption for people who care for an elderly relative at home.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.5",
+            "quote": "If you take care of an elderly in your home, you're going to get the personal exemption increased."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-foreign-policy-clarity",
+        "theme": "foreign-policy",
+        "restatement": "A clear foreign policy built on a strong military that stands by friends.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶146.12-146.13",
+            "quote": "You're going to live in a peaceful world. It will be a world of peace because we're going to have a clear sight of foreign policy based upon a strong military and a mission that stands by our friends."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-ss-trillion-accounts",
+        "theme": "retirement",
+        "restatement": "Let workers invest $1 trillion of the Social Security surplus in personal accounts.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶159.20",
+            "quote": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶159.24",
+            "quote": "And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today."
+          }
+        ]
+      },
+      {
+        "id": "bush-2000-keep-promises",
+        "theme": "government",
+        "restatement": "Keep the promises he made.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in St. Louis",
+              "year": 2000,
+              "date": "2000-10-17",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-st-louis-0",
+              "label": "2000 debate"
+            },
+            "ref": "¶167.8",
+            "quote": "A promise made will be a promise kept should I be fortunate enough to become your president."
           }
         ]
       }
@@ -5707,7 +6876,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 195;
+export const CORPUS_PROMISE_COUNT = 238;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 267;
+export const CORPUS_OCCURRENCE_COUNT = 322;
