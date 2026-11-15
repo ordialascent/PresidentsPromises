@@ -2,11 +2,10 @@ import type {
   CorpusPromise,
   CorpusTerm,
   Kind,
-  Method,
   Quality,
 } from '../content/promises.generated.js';
 
-export type { CorpusPromise, CorpusTerm, Kind, Method, Quality };
+export type { CorpusPromise, CorpusTerm, Kind, Quality };
 
 /**
  * The three measurability tiers, in stack order **bottom → top**: the most
@@ -14,7 +13,7 @@ export type { CorpusPromise, CorpusTerm, Kind, Method, Quality };
  * kept?" even be asked as a measured question?), never a kept/broken verdict
  * and never a party coding.
  */
-export const QUALITIES: Quality[] = ['full', 'partial', 'no'];
+export const QUALITIES: Quality[] = ['high', 'medium', 'low'];
 
 export interface QualityMeta {
   key: Quality;
@@ -22,27 +21,11 @@ export interface QualityMeta {
   blurb: string;
 }
 
-/**
- * The tiers are named by the protocol's verifiability levels. Terms still on
- * the legacy extraction fill the same slots from their old rubric (full /
- * partial / none), and the board labels those terms wherever they appear.
- */
+/** The tiers are the protocol's verifiability levels (corpus/PROTOCOL.md §4). */
 export const QUALITY_META: Record<Quality, QualityMeta> = {
-  full: { key: 'full', label: 'High', blurb: 'object, public record and criterion all fixed by the words' },
-  partial: { key: 'partial', label: 'Medium', blurb: 'needs one stated judgement call' },
-  no: { key: 'no', label: 'Low', blurb: 'object or record missing, or several judgement calls' },
-};
-
-/** How a term's records were extracted, in the reader's words. */
-export const METHOD_META: Record<Method, { label: string; note: string }> = {
-  protocol: {
-    label: 're-extracted',
-    note: 'Extracted sentence by sentence under the current protocol.',
-  },
-  legacy: {
-    label: 'legacy',
-    note: 'Earlier extraction, rated by an older rubric (metric, threshold, deadline). Not yet re-extracted; its tiers are not strictly comparable.',
-  },
+  high: { key: 'high', label: 'High', blurb: 'object, public record and criterion all fixed by the words' },
+  medium: { key: 'medium', label: 'Medium', blurb: 'needs one stated judgement call' },
+  low: { key: 'low', label: 'Low', blurb: 'object or record missing, or several judgement calls' },
 };
 
 export const KIND_META: Record<Kind, { label: string; plural: string }> = {
@@ -75,43 +58,11 @@ export interface VerdictPlaceholder {
 }
 
 /**
- * Legacy terms: what the detail panel says under the quotes until the scoring pass exists.
- * The three differ in kind, not in degree: a *full* promise carries a metric, a
- * threshold and a deadline, so a verdict is only waiting to be done. A *partial*
- * one could be scored, but only by supplying the terms it left out — deferred,
- * not impossible. A promise with *no* measurable quantity has nothing to score
- * at all. Replace `full` here when the first verdicts land.
- */
-export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
-  full: {
-    label: 'Verdict pending',
-    tag: 'pending',
-    mark: '?',
-    note: 'Metric, threshold and deadline are all on the record, so this promise can be scored against it. That analysis is coming soon.',
-  },
-  partial: {
-    label: 'Verdict out of scope (MVP)',
-    tag: 'out of scope',
-    mark: '–',
-    note: 'The metric is on the record, but at least one of the threshold and deadline is missing or too vague. Supplying it is a judgement call, and out of scope for the MVP.',
-  },
-  no: {
-    label: 'Verdict infeasible',
-    tag: 'infeasible',
-    mark: '–',
-    note: 'Due to the lack of specificity (metric, threshold, deadline), a verdict would require too many assumptions.',
-  },
-};
-
-/**
  * What can be said about keeping this record, until verdicts exist. Ambitions
- * never get one. Re-extracted promises follow the protocol (high and medium are
- * checkable); legacy promises keep the old rubric's wording.
+ * never get one; high and medium promises are checkable, low ones are not.
  */
 export function verdictFor(p: CorpusPromise): VerdictPlaceholder {
-  if (p.kind === 'ambition') return AMBITION_PLACEHOLDER;
-  if (p.method === 'protocol') return PROTOCOL_PLACEHOLDER[p.quality];
-  return VERDICT_PLACEHOLDER[p.quality];
+  return p.kind === 'ambition' ? AMBITION_PLACEHOLDER : VERDICT_PLACEHOLDER[p.quality];
 }
 
 const AMBITION_PLACEHOLDER: VerdictPlaceholder = {
@@ -121,20 +72,20 @@ const AMBITION_PLACEHOLDER: VerdictPlaceholder = {
   note: 'Said as a wish or an obligation ("we must", "I want"), not as a commitment. Ambitions are recorded and rated like promises, but never get a kept/broken verdict.',
 };
 
-const PROTOCOL_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
-  full: {
+export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
+  high: {
     label: 'Verdict pending',
     tag: 'pending',
     mark: '?',
     note: 'The words fix what the promise is about, a public record shows what happened, and the words say what counts as kept. That check is coming soon.',
   },
-  partial: {
+  medium: {
     label: 'Verdict pending',
     tag: 'pending',
     mark: '?',
     note: 'Checkable against a public record once one judgement call is made; the call is stated above. That check is coming soon.',
   },
-  no: {
+  low: {
     label: 'Verdict infeasible',
     tag: 'infeasible',
     mark: '–',
@@ -146,7 +97,6 @@ const PROTOCOL_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
 export interface TermSummary {
   key: string;
   label: string;
-  method: Method;
   surname: string;
   termLabel: string;
   speechYear: number | null;
@@ -172,7 +122,6 @@ export interface PromiseRow {
   termLabel: string;
   surname: string;
   speechYear: number | null;
-  method: Method;
 }
 
 /**
@@ -189,7 +138,6 @@ export function flattenPromises(terms: CorpusTerm[]): PromiseRow[] {
       termLabel: t.label,
       surname: t.surname,
       speechYear: t.speechYear,
-      method: t.method,
     })),
   );
 }
@@ -242,12 +190,11 @@ export function topicCounts(terms: CorpusTerm[]): TopicCount[] {
 
 export function summarize(terms: CorpusTerm[]): TermSummary[] {
   return terms.map((t) => {
-    const counts: Record<Quality, number> = { full: 0, partial: 0, no: 0 };
+    const counts: Record<Quality, number> = { high: 0, medium: 0, low: 0 };
     for (const p of t.promises) counts[p.quality] += 1;
     return {
       key: t.key,
       label: t.label,
-      method: t.method,
       surname: t.surname,
       termLabel: t.termLabel,
       speechYear: t.speechYear,
@@ -285,4 +232,40 @@ export function deltaBetween(prev: TermSummary, curr: TermSummary): Record<Quali
     };
   }
   return out;
+}
+
+/** One term's line in the methodology page's table: how screening went, and what came out. */
+export interface MethodRow {
+  key: string;
+  label: string;
+  /** Candidate sentences with a recorded decision, over all of the term's sources. */
+  screened: number;
+  included: number;
+  excluded: number;
+  /** Exclusion reasons with their counts, in protocol order, zeros dropped. */
+  excludedBy: [string, number][];
+  promises: number;
+  tiers: Record<Quality, number>;
+  ambitions: number;
+}
+
+export function methodRows(terms: CorpusTerm[]): MethodRow[] {
+  return terms.map((t) => {
+    const entries = Object.entries(t.screening) as [string, number][];
+    const screened = entries.reduce((n, [, c]) => n + c, 0);
+    const included = t.screening.include;
+    const tiers: Record<Quality, number> = { high: 0, medium: 0, low: 0 };
+    for (const p of t.promises) tiers[p.quality] += 1;
+    return {
+      key: t.key,
+      label: t.label,
+      screened,
+      included,
+      excluded: screened - included,
+      excludedBy: entries.filter(([d, c]) => d !== 'include' && c > 0),
+      promises: t.promises.length,
+      tiers,
+      ambitions: t.ambitions.length,
+    };
+  });
 }

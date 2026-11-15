@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import {
-  METHOD_META,
   QUALITIES,
   QUALITY_META,
   deltaBetween,
@@ -118,7 +117,7 @@ export function PromisesChart({
   // the category selection itself — so a category left out of the filter still
   // shows what picking it would get you, and can always be picked back.
   const totals = useMemo(() => {
-    const c: Record<Quality, number> = { full: 0, partial: 0, no: 0 };
+    const c: Record<Quality, number> = { high: 0, medium: 0, low: 0 };
     for (const t of terms) for (const p of t.promises) c[p.quality] += 1;
     return c;
   }, [terms]);
@@ -171,9 +170,6 @@ export function PromisesChart({
         {/* connectors between adjacent bars, per tier */}
         {bars.slice(1).map((bar, i) => {
           const prev = bars[i]!;
-          // A change across extraction methods is a change of ruler, not of
-          // president, so no delta is drawn over that boundary.
-          if (prev.summary.method !== bar.summary.method) return null;
           const d = deltaBetween(prev.summary, bar.summary);
           return QUALITIES.map((q) => {
             const a = prev.segs.find((s) => s.quality === q)!;
@@ -197,7 +193,7 @@ export function PromisesChart({
 
         {/* bars */}
         {bars.map((bar) => (
-          <g key={bar.summary.key} className="pc-bar" data-method={bar.summary.method}>
+          <g key={bar.summary.key} className="pc-bar">
             {bar.segs.map((s) => {
               const on =
                 selected?.termKey === bar.summary.key && selected?.quality === s.quality;
@@ -218,7 +214,6 @@ export function PromisesChart({
                   >
                     <title>
                       {bar.summary.label} · {QUALITY_META[s.quality].label}: {s.count}
-                      {bar.summary.method === 'legacy' ? ` (${METHOD_META.legacy.label})` : ''}
                     </title>
                   </rect>
                   {s.h >= 16 && (
@@ -240,16 +235,10 @@ export function PromisesChart({
             </text>
             <text className="pc-x-total" x={bar.x + BAR_W / 2} y={PAD_TOP + PLOT_H + 50}>
               n={bar.summary.total}
-              {bar.summary.method === 'legacy' ? ' · legacy' : ''}
             </text>
           </g>
         ))}
       </svg>
-      {summaries.some((s) => s.method === 'legacy') && (
-        <p className="pc-caption">
-          <span className="pc-caption-key" aria-hidden="true" /> Faded bars are <em>legacy</em>: {METHOD_META.legacy.note}
-        </p>
-      )}
     </div>
   );
 }

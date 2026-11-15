@@ -1,12 +1,11 @@
 # Corpus — speeches & promises
 
-The raw, sourced record the product rests on: candidates' **nomination
-acceptance speeches**, verbatim, and the **promises** extracted from them. A
-promise always cites the exact lines it came from, the same way every data
-point carries its provenance.
+The raw, sourced record the product rests on: each term's source documents,
+verbatim, and the **promises** extracted from them. A promise always cites the
+exact lines it came from, the same way every data point carries its provenance.
 
-Extraction (filling in the promises) is **step two**. This directory defines
-the structure and holds the speeches.
+How promises are extracted, cut, described and rated is defined in
+[PROTOCOL.md](PROTOCOL.md). This file covers the layout and the source format.
 
 ## Layout
 
@@ -17,6 +16,7 @@ corpus/
     <year>-acceptance.md              ← source document, verbatim + numbered
     <year>-inaugural.md               ← another source document (same term)
     <year>-debate.md                  ← the term's final general-election debate
+    <year>-<kind>.screening.yaml      ← screening ledger: a decision per candidate sentence
     promises.yaml                     ← ALL of the term's promises, from every source
 ```
 
@@ -83,67 +83,15 @@ prefer adding, and update citing promises deliberately.
 
 ## Promise file (`promises.yaml`)
 
-Human-curated. Each promise records what was said, where it was said, and
-whether/how it can be measured. The `measurability` block mirrors the chart's
-model (`src/content`), so a *measurable* promise maps straight onto a topic +
-`PromiseSpec` with no reshaping.
-
-A promise is scored on four dimensions (`metric` / `threshold` / `deadline` /
-`instrument`, each `present:` + details) that decide `measurable: full | partial
-| no`. **Single-source** promise — top-level `ref` + `quote`, which default to
-the term's acceptance speech:
-
-```yaml
-  - id: obama-2008-oil-mideast         # stable slug, prefixed with the term's election year
-    ref: "¶44.1"                       # paragraph.sentence span into the acceptance speech
-    theme: energy
-    quote: >                           # verbatim, from exactly those sentences
-      ...
-    restatement: End US dependence on Middle East oil within ten years.
-    metric:     { present: true, quantity: ..., record: ... }
-    threshold:  { present: true, stated: to zero }
-    deadline:   { present: true, stated: in ten years }
-    instrument: { present: true, stated: ... }
-    measurable: "full"
-    notes: >
-      ...
-```
-
-## Sources beyond the acceptance speech
-
-The promise is the **unit** — the commitment — and it lists every occurrence:
-where and when it was said. A commitment made in more than one source (say the
-acceptance speech *and* the inaugural) is **one promise** with a `sources:` list,
-not two entries. Replace the top-level `ref`/`quote` with the list; `in:` names
-the source kind (`acceptance`, `inaugural`, …), which the generator resolves to
-the term's `<year>-<kind>.md` for that occurrence's context:
-
-```yaml
-  - id: obama-2008-oil-mideast
-    theme: energy
-    restatement: End US dependence on Middle East oil within ten years.
-    sources:
-      - in: acceptance
-        ref: "¶44.1"
-        quote: >
-          ...
-      - in: inaugural
-        ref: "¶9.2"
-        quote: >
-          ...
-    metric: { ... }
-    # ... same four-dimension scoring + measurable + notes
-```
-
-The four-dimension scoring stays at the promise level (it's a property of the
-commitment; if two phrasings differ materially, note it). The occurrence count is
-the recurrence signal (how often the thing was promised). Adding a source kind is
-just: drop in the numbered `<year>-<kind>.md`, then either add its promises to
-`promises.yaml` or attach an `in: <kind>` occurrence to an existing promise. Keep
+Written under [PROTOCOL.md](PROTOCOL.md) and declares `protocol: 1`. The record
+shape (kind, sources, type, theme, deadline, verifiability, uncertainty, links)
+is defined in the protocol's [Records](PROTOCOL.md#records) section. A
+commitment made in more than one source is **one promise** with several
+`sources` occurrences (`in:` names the source kind), not two entries. Keep
 promise ids prefixed with the **term's election year** (`obama-2008-…` for the
 whole 2009–2013 term, whatever source a promise came from) so they stay unique.
 
-### Debate source (`<year>-debate.md`) — winner only
+## Debate source (`<year>-debate.md`) — winner only
 
 The third source per term is the **final general-election debate** of the cycle
 (the last time the two nominees face each other before the vote — arguably where
@@ -164,5 +112,5 @@ never gets one. Cite refs into the numbered debate exactly like any other source
    source recorded in the front-matter; never typed from memory or paraphrased.
 2. **Attribute the transcript.** `source_url` + `source_publisher` are required.
 3. **Don't renumber cited lines** (see above).
-4. **Measurable promises feed the app**, they don't get re-authored there:
-   `src/content` consumes the curated subset; this corpus stays the record.
+4. **The corpus is the record.** The app is generated from it
+   (`npm run build:corpus`); promises are never re-authored in the app.

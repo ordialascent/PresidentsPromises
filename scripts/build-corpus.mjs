@@ -10,20 +10,13 @@
  * occurrences, so the chart counts distinct promises, not utterances, and the
  * occurrence count is the "how often was this promised" signal.
  *
- * Corpus YAML shape (a controlled subset):
- *   - id / theme / restatement / measurable            (+ scoring blocks, ignored)
- *   - single-source (legacy): top-level `ref` + `quote` → the acceptance speech
- *   - multi-source: a `sources:` list of { in: <kind>, ref, quote }
+ * Every promises.yaml is written under corpus/PROTOCOL.md (`protocol: 1`). Its
+ * records carry `kind` (promise | ambition), `type` and a verifiability
+ * `level`; the app gets the protocol description under `protocol`, promises
+ * and ambitions in separate lists, and the level as the record's tier
+ * (`quality`). Run `npm run validate` first; this script trusts the shape.
  *
- * Terms re-extracted under corpus/PROTOCOL.md (`protocol: 1`) are read with the
- * YAML library instead. Their records carry `kind` (promise | ambition), `type`
- * and a verifiability `level`; the app gets them under `protocol`, promises and
- * ambitions in separate lists. The level also fills the shared tier slot
- * (high -> full, medium -> partial, low -> no) so both methods share one chart;
- * every term says which `method` produced it, and the app labels legacy terms.
- *
- * Legacy terms are read by a small indentation-aware scanner that reads exactly
- * the fields above. Re-run after editing the corpus:  npm run build:corpus
+ * Re-run after editing the corpus:  npm run build:corpus
  */
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -35,14 +28,14 @@ const ROOT = join(HERE, '..');
 const CORPUS = join(ROOT, 'corpus');
 const OUT = join(ROOT, 'src', 'content', 'promises.generated.ts');
 
-const QUALITIES = ['full', 'partial', 'no'];
+const QUALITIES = ['high', 'medium', 'low'];
+/** Screening decisions (corpus/PROTOCOL.md §2), in the order the methodology page lists them. */
+const DECISIONS = ['include', 'others', 'past', 'describe', 'conditional', 'attack', 'ceremony'];
 const KIND_LABEL = {
   acceptance: 'acceptance speech',
   inaugural: 'inaugural address',
   debate: 'debate',
 };
-/** Interim projection of a protocol-1 verifiability level onto the legacy tiers. */
-const LEVEL_TO_QUALITY = { high: 'full', medium: 'partial', low: 'no' };
 /** The protocol-1 description of a record, as the app shows it (absent keys dropped). */
 function protocolFields(p) {
   const v = p.verifiability ?? {};
@@ -63,7 +56,6 @@ function protocolFields(p) {
   };
 }
 const unquote = (s) => s.replace(/^["'](.*)["']$/, '$1');
-const isBlock = (v) => /^[>|]-?$/.test(v) || v === '';
 
 /** Parse a source document's YAML front-matter into a flat key -> value map. */
 function parseFrontMatter(md) {
@@ -75,96 +67,6 @@ function parseFrontMatter(md) {
     if (kv) fm[kv[1]] = unquote(kv[2].trim());
   }
   return fm;
-}
-
-/**
- * Parse promises.yaml into promise objects: { id, theme, restatement, measurable,
- * ref?, quote?, sources?: [{ in, ref, quote }] }. Nested scoring blocks
- * (metric / threshold / …) are simply skipped — only the app projection is read.
- */
-function parsePromises(text) {
-  const lines = text.split(/\r?\n/);
-  const n = lines.length;
-  const out = [];
-  let i = 0;
-
-  // Join a folded (">") block scalar whose body is indented deeper than `indent`.
-  const readFolded = (indent, start) => {
-    const re = new RegExp(`^ {${indent + 1},}(\\S.*)$`);
-    const buf = [];
-    let j = start;
-    while (j < n) {
-      const mm = lines[j].match(re);
-      if (!mm) break;
-      buf.push(mm[1].trim());
-      j += 1;
-    }
-    return [buf.join(' ').replace(/\s+/g, ' ').trim(), j];
-  };
-
-  while (i < n) {
-    const idm = lines[i].match(/^ {2}- id:\s*(.+?)\s*$/);
-    if (!idm) {
-      i += 1;
-      continue;
-    }
-    const p = { id: unquote(idm[1]) };
-    i += 1;
-    // consume the promise body until the next "- " item or a column-0 line
-    while (i < n && !/^ {2}- /.test(lines[i]) && !/^\S/.test(lines[i])) {
-      const line = lines[i];
-
-      let m = line.match(/^ {4}(theme|restatement|measurable|ref):\s*(.+?)\s*$/);
-      if (m) {
-        p[m[1]] = unquote(m[2]);
-        i += 1;
-        continue;
-      }
-      m = line.match(/^ {4}quote:\s*(.*)$/);
-      if (m) {
-        const rest = m[1].trim();
-        if (isBlock(rest)) {
-          const [q, ni] = readFolded(4, i + 1);
-          p.quote = q;
-          i = ni;
-        } else {
-          p.quote = unquote(rest);
-          i += 1;
-        }
-        continue;
-      }
-      if (/^ {4}sources:\s*$/.test(line)) {
-        i += 1;
-        p.sources = [];
-        while (i < n && /^ {6}- /.test(lines[i])) {
-          const entry = {};
-          const set = (key, val) => {
-            if (key === 'quote' && isBlock(val)) {
-              const [q, ni] = readFolded(8, i + 1);
-              entry.quote = q;
-              i = ni;
-            } else {
-              entry[key] = unquote(val);
-              i += 1;
-            }
-          };
-          const head = lines[i].match(/^ {6}- (\w+):\s*(.*)$/);
-          if (head) set(head[1], head[2].trim());
-          else i += 1;
-          while (i < n && /^ {8}\w+:/.test(lines[i])) {
-            const fm = lines[i].match(/^ {8}(\w+):\s*(.*)$/);
-            set(fm[1], fm[2].trim());
-          }
-          p.sources.push(entry);
-        }
-        continue;
-      }
-      // scoring blocks and their sub-lines, blanks, etc. — ignored
-      i += 1;
-    }
-    out.push(p);
-  }
-  return out;
 }
 
 const terms = [];
@@ -198,41 +100,45 @@ for (const name of readdirSync(CORPUS)) {
     };
   }
   if (!Object.keys(docs).length) continue;
-  // The acceptance speech is the default source and the term's headline year.
+  // The acceptance speech gives the term its headline year.
   const acceptance = docs.acceptance || Object.values(docs).sort((a, b) => a.year - b.year)[0];
 
   const ptext = files.includes('promises.yaml') ? readFileSync(join(dir, 'promises.yaml'), 'utf8') : '';
-  const pdoc = /^protocol: 1\s*$/m.test(ptext) ? parseYaml(ptext) : null;
-  const method = pdoc ? 'protocol' : 'legacy';
-  const raw = pdoc
-    ? pdoc.promises.map((p) => ({ ...p, measurable: LEVEL_TO_QUALITY[p.verifiability?.level] }))
-    : parsePromises(ptext).map((p) => ({ ...p, kind: 'promise' }));
-  const all = raw.map((p) => {
-    if (!QUALITIES.includes(p.measurable)) {
-      throw new Error(`${name}/${p.id}: bad measurable ${JSON.stringify(p.measurable)}`);
+  const pdoc = ptext ? parseYaml(ptext) : { protocol: 1, promises: [] };
+  if (pdoc?.protocol !== 1) throw new Error(`${name}/promises.yaml: must declare \`protocol: 1\``);
+  const all = (pdoc.promises ?? []).map((p) => {
+    const quality = p.verifiability?.level;
+    if (!QUALITIES.includes(quality)) {
+      throw new Error(`${name}/${p.id}: bad verifiability level ${JSON.stringify(quality)}`);
     }
-    let occurrences;
-    if (p.sources && p.sources.length) {
-      occurrences = p.sources.map((s) => {
-        const src = docs[s.in];
-        if (!src) throw new Error(`${name}/${p.id}: no "${s.in}" source document in this term`);
-        return { source: src, ref: String(s.ref ?? ''), quote: String(s.quote ?? '') };
-      });
-    } else {
-      occurrences = [{ source: acceptance, ref: p.ref ?? '', quote: p.quote ?? '' }];
-    }
-    const out = {
+    const occurrences = (p.sources ?? []).map((s) => {
+      const src = docs[s.in];
+      if (!src) throw new Error(`${name}/${p.id}: no "${s.in}" source document in this term`);
+      return { source: src, ref: String(s.ref ?? ''), quote: String(s.quote ?? '') };
+    });
+    if (!occurrences.length) throw new Error(`${name}/${p.id}: no sources`);
+    return {
       id: p.id,
       kind: p.kind,
-      method,
-      theme: p.theme ?? 'other',
-      restatement: p.restatement ?? p.id,
-      quality: p.measurable,
+      theme: p.theme,
+      restatement: p.restatement,
+      quality,
       occurrences,
+      protocol: protocolFields(p),
     };
-    if (pdoc) out.protocol = protocolFields(p);
-    return out;
   });
+  // How every screened sentence was decided, summed over the term's ledgers:
+  // the methodology page shows this so recall can be read, not just trusted.
+  const screening = Object.fromEntries(DECISIONS.map((d) => [d, 0]));
+  let added = 0;
+  for (const f of files.filter((x) => x.endsWith('.screening.yaml')).sort()) {
+    for (const row of parseYaml(readFileSync(join(dir, f), 'utf8'))?.rows ?? []) {
+      if (!(row.decision in screening)) throw new Error(`${name}/${f} ${row.ref}: bad decision ${row.decision}`);
+      screening[row.decision] += 1;
+      if (row.added) added += 1;
+    }
+  }
+
   const promises = all.filter((p) => p.kind === 'promise');
   const ambitions = all.filter((p) => p.kind === 'ambition');
 
@@ -245,7 +151,8 @@ for (const name of readdirSync(CORPUS)) {
     termLabel: `${fromStr}–${toStr}`,
     speechYear,
     label: speechYear ? `${surname} ${speechYear}` : surname,
-    method,
+    screening,
+    screenedAdded: added,
     promises,
     ambitions,
   });
@@ -261,7 +168,8 @@ const banner =
   '// Do not edit by hand — edit the corpus and run `npm run build:corpus`.\n';
 
 const body = `${banner}
-export type Quality = 'full' | 'partial' | 'no';
+/** Verifiability tier (corpus/PROTOCOL.md §4): the record's verifiability level. */
+export type Quality = 'high' | 'medium' | 'low';
 
 /** Where and how a promise was made — the "context". A term's source documents
  *  (acceptance speech, inaugural address, …) each supply one; generalised so
@@ -294,13 +202,10 @@ export interface PromiseOccurrence {
   quote: string;
 }
 
-/** Which extraction produced a term: corpus/PROTOCOL.md, or the earlier hand curation. */
-export type Method = 'protocol' | 'legacy';
-
 /** A firm commitment ("we will") or a wish/obligation ("we must"). Only promises get verdicts. */
 export type Kind = 'promise' | 'ambition';
 
-/** The protocol-1 description of a record (absent on legacy terms). */
+/** The protocol-1 description of a record. */
 export interface ProtocolFields {
   type: 'action' | 'outcome' | 'ongoing';
   group: string | null;
@@ -319,14 +224,16 @@ export interface ProtocolFields {
 export interface CorpusPromise {
   id: string;
   kind: Kind;
-  method: Method;
   theme: string;
   restatement: string;
   quality: Quality;
   /** Every time this commitment was made (>= 1). Length is the recurrence. */
   occurrences: PromiseOccurrence[];
-  protocol?: ProtocolFields;
+  protocol: ProtocolFields;
 }
+
+/** A screening-ledger decision: include, or the reason a candidate was left out. */
+export type Decision = ${DECISIONS.map((d) => `'${d}'`).join(' | ')};
 
 export interface CorpusTerm {
   /** Corpus directory name, e.g. "2009-2013 Obama". Stable key. */
@@ -342,10 +249,13 @@ export interface CorpusTerm {
   speechYear: number | null;
   /** Short bar label, e.g. "Obama 2008". */
   label: string;
-  method: Method;
+  /** Screened candidate sentences by decision, over all of the term's sources. */
+  screening: Record<Decision, number>;
+  /** How many of those were added by reading, without a trigger word. */
+  screenedAdded: number;
   /** Firm commitments: the chart's subject. */
   promises: CorpusPromise[];
-  /** Soft commitments; empty on legacy terms, which never recorded them. */
+  /** Soft commitments: wishes and obligations. Never get a verdict. */
   ambitions: CorpusPromise[];
 }
 
@@ -355,7 +265,7 @@ export const CORPUS_TERMS: CorpusTerm[] = ${JSON.stringify(terms, null, 2)};
 /** Total distinct promises across the corpus (sanity anchor for tests). */
 export const CORPUS_PROMISE_COUNT = ${total};
 
-/** Total ambitions across the corpus (re-extracted terms only). */
+/** Total ambitions across the corpus. */
 export const CORPUS_AMBITION_COUNT = ${ambitionTotal};
 
 /** Total promise occurrences (utterances) across the corpus. */

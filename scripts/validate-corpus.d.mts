@@ -16,6 +16,7 @@ export interface Report {
   warnings: string[];
 }
 export const THEMES: string[];
+export const DECISIONS: string[];
 export const TRIGGERS: { firm: string[]; soft: string[] };
 export function normalise(s: string): string;
 export function triggerOf(sentence: string): string | null;

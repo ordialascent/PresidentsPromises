@@ -7,7 +7,7 @@ import type { PromiseHit } from './search.js';
 /** A filter the reader switched on elsewhere on the board, and can switch off here. */
 export interface FilterChip {
   key: string;
-  /** What the chip reads, e.g. "topic: health" or "Obama 2008 · Partial". */
+  /** What the chip reads, e.g. "topic: health" or "Obama 2008 · Medium". */
   label: string;
   onClear: () => void;
 }
@@ -169,6 +169,9 @@ export function PromiseList({
             Show all
           </button>
         )}
+        <a className="pl-method" href="#method">
+          How promises are chosen and rated
+        </a>
       </div>
 
       {hits.length === 0 ? (
@@ -224,12 +227,7 @@ export function PromiseList({
                     {/* What kind of promise it is, held together at the right
                         end so the two never separate across a wrap */}
                     <span className="pl-row-kind">
-                      {p.protocol && <span className="pl-meta">{p.protocol.type}</span>}
-                      {p.method === 'legacy' && (
-                        <span className="pl-meta" title="Earlier extraction, older rubric">
-                          legacy
-                        </span>
-                      )}
+                      <span className="pl-meta">{p.protocol.type}</span>
                       <span className="pl-tier" data-q={p.quality}>
                         {QUALITY_META[p.quality].label}
                       </span>
