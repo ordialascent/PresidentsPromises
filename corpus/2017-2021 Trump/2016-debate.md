@@ -6,6 +6,7 @@ date_published: 2016-10-19
 date_pulled: 2026-08-10
 source_url: https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas
 source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+speaker_label: TRUMP
 ---
 
 ## ¶1 — PARTICIPANTS

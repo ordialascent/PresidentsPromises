@@ -1,0 +1,113 @@
+# Screening ledger for 2000-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added` were not
+# matched by the lexicon but read as commitments.
+# Ids shared with 2001-inaugural.screening.yaml are further occurrences of the
+# same promise (same object, same success criterion).
+source: 2000-acceptance
+protocol: 1
+rows:
+  - { ref: "¶4.1", decision: include, promises: [bush-2000-renew-purpose] }
+  - { ref: "¶8.5", decision: ceremony }
+  - { ref: "¶14.1", decision: ceremony }
+  - { ref: "¶20.1-20.2", decision: include, promises: [bush-2000-seize-moment] }
+  - { ref: "¶21.1", decision: include, promises: [bush-2000-confront-hard-issues] }
+  - { ref: "¶22.1", decision: include, promises: [bush-2000-extend-prosperity] }
+  - ref: "¶27.2"
+    decision: include
+    promises: [bush-2000-will-lead]
+    note: Elliptical "We will [lead]", answering "they have not led"; repeated at ¶29.3, ¶31.3, ¶33.3, ¶83.3, ¶91.2.
+  - { ref: "¶29.3", decision: include, promises: [bush-2000-will-lead] }
+  - { ref: "¶31.3", decision: include, promises: [bush-2000-will-lead] }
+  - { ref: "¶33.3", decision: include, promises: [bush-2000-will-lead] }
+  - { ref: "¶39.1", decision: describe, note: Quotes the civil rights movement; not the speaker's own commitment. }
+  - { ref: "¶39.2", decision: describe, note: Quotes the civil rights movement. }
+  - { ref: "¶40.3", decision: describe, note: Metaphor with no object ("chapters in the American story"). }
+  - { ref: "¶40.4", decision: include, promises: [bush-2000-leave-nation-greater] }
+  - ref: "¶41.3"
+    decision: include
+    promises: [bush-2000-reform-socialsecurity, bush-2000-reform-medicare]
+    note: '"Strengthen" here, "reform" in the inaugural ¶14.2; same object, read as the same commitment.'
+  - ref: "¶42.2"
+    decision: include
+    promises: [bush-2000-medicare-solvency, bush-2000-medicare-drugs]
+  - ref: "¶43.3"
+    decision: include
+    promises: [bush-2000-fix-socialsecurity]
+    note: Ambition ("I intend to"); same object as bush-2000-reform-socialsecurity.
+  - ref: "¶44.1-44.2"
+    decision: include
+    added: true
+    promises: [bush-2000-socialsecurity-preserve]
+  - { ref: "¶47.1", decision: include, promises: [bush-2000-socialsecurity-accounts] }
+  - { ref: "¶51.1", decision: include, promises: [bush-2000-end-low-expectations] }
+  - { ref: "¶52.1", decision: include, added: true, promises: [bush-2000-local-control] }
+  - { ref: "¶53.1", decision: include, added: true, promises: [bush-2000-school-accountability] }
+  - { ref: "¶53.3", decision: include, added: true, promises: [bush-2000-school-exit-funds] }
+  - { ref: "¶54.1", decision: include, added: true, promises: [bush-2000-head-start] }
+  - { ref: "¶58.1", decision: include, promises: [bush-2000-tax-fairness] }
+  - { ref: "¶58.2", decision: describe, note: Lead-in to the three principles in ¶58.3-60.1; no object of its own. }
+  - { ref: "¶58.3", decision: include, promises: [bush-2000-death-tax] }
+  - ref: "¶59.1"
+    decision: include
+    promises: [bush-2000-tax-rates-allbrackets]
+    note: Sharper version of bush-2000-reduce-taxes (inaugural ¶14.3); link refines. The "third of income" clause is the stated principle, not the promise.
+  - ref: "¶60.1"
+    decision: include
+    promises: [bush-2000-bottom-rate-10, bush-2000-double-child-credit]
+  - ref: "¶63.1"
+    decision: include
+    promises: [bush-2000-military-means, bush-2000-respect-military]
+  - { ref: "¶65.1", decision: include, promises: [bush-2000-reduce-nuclear] }
+  - { ref: "¶65.2", decision: include, promises: [bush-2000-missile-defense] }
+  - { ref: "¶77.5", decision: include, promises: [bush-2000-tone-of-washington] }
+  - { ref: "¶83.1", decision: include, promises: [bush-2000-honor-trust] }
+  - { ref: "¶83.2", decision: include, promises: [bush-2000-use-mandate] }
+  - { ref: "¶83.3", decision: include, promises: [bush-2000-will-lead] }
+  - { ref: "¶89.4", decision: include, promises: [bush-2000-tear-down-wall] }
+  - { ref: "¶91.2", decision: include, promises: [bush-2000-will-lead] }
+  - { ref: "¶92.1", decision: include, promises: [bush-2000-health-tax-credits] }
+  - { ref: "¶93.1", decision: include, promises: [bush-2000-housing-ownership] }
+  - { ref: "¶94.1", decision: include, promises: [bush-2000-support-charities] }
+  - ref: "¶98.2"
+    decision: include
+    promises: [bush-2000-charitable-incentives, bush-2000-after-school, bush-2000-mentoring]
+  - { ref: "¶99.1", decision: include, promises: [bush-2000-moral-courage] }
+  - { ref: "¶100.1", decision: include, promises: [bush-2000-warn-drugs-bigotry] }
+  - { ref: "¶102.1", decision: include, promises: [bush-2000-gun-enforcement] }
+  - { ref: "¶103.1", decision: include, promises: [bush-2000-teach-values] }
+  - { ref: "¶103.2", decision: include, promises: [bush-2000-culture-of-life] }
+  - ref: "¶104.2"
+    decision: include
+    promises: [bush-2000-partial-birth-abortion]
+    note: Depends on Congress sending a bill, but within the term, so not `conditional`. Judged only if such a bill reached his desk.
+  - { ref: "¶105.3", decision: include, promises: [bush-2000-responsibility-era] }
+  - ref: "¶107.3"
+    decision: include
+    promises: [bush-2000-continue-progress]
+    note: '"This progress" points back to ¶106.2-107.2 (women''s equality, racial progress, environment); scope contested.'
+  - { ref: "¶110.2", decision: include, promises: [bush-2000-renew-values] }
+  - { ref: "¶115.1", decision: include, promises: [bush-2000-honor-office] }
+  - { ref: "¶117.1", decision: include, promises: [bush-2000-make-most] }
+  - { ref: "¶125.1", decision: include, promises: [bush-2000-not-attack-part] }
+
+# Result:
+#   54 rows: 48 include (5 of them added), 6 excluded (ceremony 2, describe 4)
+#   include → 49 ids: 35 promises + 14 ambitions (¶43.3, ¶51.1, ¶52.1, ¶53.1,
+#   ¶53.3, ¶54.1, ¶77.5, ¶89.4, ¶99.1, ¶100.1, ¶102.1, ¶103.1, ¶105.3, ¶110.2).
+#   2 ids repeat the inaugural (Social Security and Medicare reform); ¶59.1
+#   refines the inaugural's reduce-taxes.
+#   verifiability (promises):
+#     high 10    socialsecurity-preserve, socialsecurity-accounts, death-tax,
+#                tax-rates-allbrackets, bottom-rate-10, double-child-credit,
+#                missile-defense, health-tax-credits, charitable-incentives,
+#                partial-birth-abortion
+#     medium 8   reform-socialsecurity, reform-medicare, medicare-solvency,
+#                medicare-drugs ("affordable"), reduce-nuclear,
+#                housing-ownership, support-charities, mentoring
+#     low 17     purpose, leadership and manner language
+#   Ids reuse the legacy promises.yaml ids where the promise is the same.
+#   The legacy file takes 17 promises from this source. It has none of the low
+#   (purpose, leadership, manner) promises or the ambitions, and misses
+#   Social Security / Medicare at ¶41.3, Medicare solvency (¶42.2, merged
+#   with drugs), respect for the military (¶63.1), charities (¶94.1),
+#   after-school and mentoring (¶98.2) and a culture of life (¶103.2).

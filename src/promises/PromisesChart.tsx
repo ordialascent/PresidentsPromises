@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import {
+  METHOD_META,
   QUALITIES,
   QUALITY_META,
   deltaBetween,
@@ -170,6 +171,9 @@ export function PromisesChart({
         {/* connectors between adjacent bars, per tier */}
         {bars.slice(1).map((bar, i) => {
           const prev = bars[i]!;
+          // A change across extraction methods is a change of ruler, not of
+          // president, so no delta is drawn over that boundary.
+          if (prev.summary.method !== bar.summary.method) return null;
           const d = deltaBetween(prev.summary, bar.summary);
           return QUALITIES.map((q) => {
             const a = prev.segs.find((s) => s.quality === q)!;
@@ -193,7 +197,7 @@ export function PromisesChart({
 
         {/* bars */}
         {bars.map((bar) => (
-          <g key={bar.summary.key}>
+          <g key={bar.summary.key} className="pc-bar" data-method={bar.summary.method}>
             {bar.segs.map((s) => {
               const on =
                 selected?.termKey === bar.summary.key && selected?.quality === s.quality;
@@ -214,6 +218,7 @@ export function PromisesChart({
                   >
                     <title>
                       {bar.summary.label} · {QUALITY_META[s.quality].label}: {s.count}
+                      {bar.summary.method === 'legacy' ? ` (${METHOD_META.legacy.label})` : ''}
                     </title>
                   </rect>
                   {s.h >= 16 && (
@@ -235,10 +240,16 @@ export function PromisesChart({
             </text>
             <text className="pc-x-total" x={bar.x + BAR_W / 2} y={PAD_TOP + PLOT_H + 50}>
               n={bar.summary.total}
+              {bar.summary.method === 'legacy' ? ' · legacy' : ''}
             </text>
           </g>
         ))}
       </svg>
+      {summaries.some((s) => s.method === 'legacy') && (
+        <p className="pc-caption">
+          <span className="pc-caption-key" aria-hidden="true" /> Faded bars are <em>legacy</em>: {METHOD_META.legacy.note}
+        </p>
+      )}
     </div>
   );
 }

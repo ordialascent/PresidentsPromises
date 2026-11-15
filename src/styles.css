@@ -1067,3 +1067,111 @@ main {
   font-size: 13px;
   line-height: 1.5;
 }
+
+/* ---- Kind switch, legacy marking, protocol facts -------------------- */
+
+/* Promises or ambitions: swaps the whole board's subject. Built like the
+   chart's scale toggle, one size up, because it sits above everything. */
+.kind-switch {
+  display: inline-flex;
+  align-self: flex-start;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.kind-switch button {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  background: transparent;
+  color: var(--dim);
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.kind-switch button[data-on="true"] {
+  background: var(--panel);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+.kind-switch-n {
+  font-size: 11px;
+  letter-spacing: 0;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+.kind-note {
+  margin: -4px 0 0;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Legacy terms: same tiers, older ruler. Faded so the eye doesn't compare
+   them one-to-one with re-extracted bars. */
+.pc-bar[data-method="legacy"] .pc-seg { opacity: 0.45; }
+.pc-bar[data-method="legacy"] .pc-seg:hover,
+.pc-bar[data-method="legacy"] .pc-seg[data-on="true"] { opacity: 0.8; }
+.pc-caption {
+  margin: 8px 0 0;
+  color: var(--dim);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.pc-caption-key {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  vertical-align: -1px;
+  background: var(--q-full);
+  opacity: 0.45;
+}
+
+.pl-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--dim);
+}
+
+.pc-facts {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.pc-facts-row {
+  display: grid;
+  grid-template-columns: 8.5em 1fr;
+  gap: 12px;
+}
+.pc-facts dt {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dim);
+  padding-top: 3px;
+}
+.pc-facts dd {
+  margin: 0;
+  color: var(--ink);
+}
+@media (max-width: 520px) {
+  .pc-facts-row { grid-template-columns: 1fr; gap: 0; }
+}
+.pc-detail-legacy {
+  margin: 0;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1.5;
+}

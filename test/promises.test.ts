@@ -58,13 +58,13 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the current extraction (16 / 141 / 38)', () => {
-    // Snapshot anchor — update when the corpus grows. Acceptance + inaugural +
-    // all seven final debates (2000–2024).
+  it('the corpus-wide tier split matches the current extraction (33 / 137 / 68)', () => {
+    // Snapshot anchor — update when the corpus changes. Bush 2000 is re-extracted
+    // under protocol 1 (its promises only; levels stand in for tiers).
     const c = { full: 0, partial: 0, no: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ full: 16, partial: 141, no: 38 });
-    expect(c.full + c.partial + c.no).toBe(195);
+    expect(c).toEqual({ full: 33, partial: 137, no: 68 });
+    expect(c.full + c.partial + c.no).toBe(238);
   });
 
   it('shares are a proper distribution within each term', () => {
@@ -129,7 +129,7 @@ describe('promises overview aggregation', () => {
   it('topic counts follow the tier filter, and the tiers still sum to the whole', () => {
     // What the page draws when only "full" is left selected in the chart legend.
     const full = topicCounts(filterByTiers(CORPUS_TERMS, new Set(['full'] as const)));
-    expect(full.reduce((n, t) => n + t.count, 0)).toBe(16);
+    expect(full.reduce((n, t) => n + t.count, 0)).toBe(33);
     for (const t of full) {
       const manual = CORPUS_TERMS.flatMap((x) => x.promises).filter(
         (p) => p.theme === t.theme && p.quality === 'full',

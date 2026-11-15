@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { PromiseDetail } from './PromiseDetail.js';
 import { toSpans } from './fuzzy.js';
-import { QUALITY_META, VERDICT_PLACEHOLDER } from './model.js';
+import { QUALITY_META, verdictFor } from './model.js';
 import type { PromiseHit } from './search.js';
 
 /** A filter the reader switched on elsewhere on the board, and can switch off here. */
@@ -50,10 +50,13 @@ export function PromiseList({
   onQuery,
   filters,
   onClearFilters,
+  noun = 'promises',
 }: {
   hits: PromiseHit[];
-  /** Promises in the whole corpus — the denominator of "showing n of N". */
+  /** Records of this kind in the whole corpus — the denominator of "showing n of N". */
   total: number;
+  /** What the records are called: "promises" or "ambitions". */
+  noun?: string;
   query: string;
   onQuery: (q: string) => void;
   filters: FilterChip[];
@@ -114,7 +117,7 @@ export function PromiseList({
           type="search"
           value={query}
           placeholder="Search"
-          aria-label="Search promises"
+          aria-label={`Search ${noun}`}
           autoComplete="off"
           spellCheck={false}
           onChange={(e) => onQuery(e.target.value)}
@@ -140,11 +143,11 @@ export function PromiseList({
       <div className="pl-status">
         {openHit ? (
           <button type="button" className="pl-back" onClick={() => setOpenId(null)}>
-            ← all {hits.length} promises
+            ← all {hits.length} {noun}
           </button>
         ) : (
           <span className="pl-count">
-            <strong>{hits.length}</strong> of {total} promises
+            <strong>{hits.length}</strong> of {total} {noun}
           </span>
         )}
         {filters.map((f) => (
@@ -170,7 +173,7 @@ export function PromiseList({
 
       {hits.length === 0 ? (
         <p className="pl-empty">
-          No promises match. Loosen the search, or{' '}
+          No {noun} match. Loosen the search, or{' '}
           <button type="button" className="pl-link" onClick={onClearFilters}>
             show all {total}
           </button>
@@ -215,12 +218,18 @@ export function PromiseList({
                         every tier today because none of these is a verdict —
                         only a statement of whether one can be reached. */}
                     <span className="pl-verdict" data-q={p.quality}>
-                      {VERDICT_PLACEHOLDER[p.quality].tag}
+                      {verdictFor(p).tag}
                     </span>
                     {hit.quoteOnly && <span className="pl-row-n">matched in the quote</span>}
                     {/* What kind of promise it is, held together at the right
                         end so the two never separate across a wrap */}
                     <span className="pl-row-kind">
+                      {p.protocol && <span className="pl-meta">{p.protocol.type}</span>}
+                      {p.method === 'legacy' && (
+                        <span className="pl-meta" title="Earlier extraction, older rubric">
+                          legacy
+                        </span>
+                      )}
                       <span className="pl-tier" data-q={p.quality}>
                         {QUALITY_META[p.quality].label}
                       </span>

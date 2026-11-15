@@ -63,6 +63,8 @@ source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Pr
 - **Paragraphs** are numbered `¶1, ¶2, …` in speech order.
 - **Sentences** are the ordered list items under each paragraph.
 - Wording is untouched. The only thing added is the numbering.
+- **Debates** add `speaker_label`: the exact label (after `¶n —`) of the
+  president's turns. Only those turns are screened for promises.
 - **Quote any front-matter value containing a colon** (like `title` above); an
   unquoted `key: text: more` is read as a nested mapping and breaks YAML.
 

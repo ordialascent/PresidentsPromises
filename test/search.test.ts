@@ -98,6 +98,8 @@ function promise(
 ): CorpusPromise {
   return {
     id,
+    kind: 'promise',
+    method: 'legacy',
     theme,
     restatement,
     quality,
@@ -128,6 +130,7 @@ function row(surname: string, year: number, p: CorpusPromise): PromiseRow {
     termLabel: `${surname} ${year}`,
     surname,
     speechYear: year,
+    method: 'legacy',
   };
 }
 

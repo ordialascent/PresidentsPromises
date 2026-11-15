@@ -6,6 +6,7 @@ date_published: 2004-10-13
 date_pulled: 2026-08-10
 source_url: https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona
 source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+speaker_label: President Bush
 ---
 
 ## ¶1 — Bob Schieffer

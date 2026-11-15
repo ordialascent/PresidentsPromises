@@ -4,17 +4,35 @@ import { TopicDonut } from '../promises/TopicDonut.js';
 import { PromiseList, type FilterChip } from '../promises/PromiseList.js';
 import { searchPromises } from '../promises/search.js';
 import {
+  KIND_META,
   QUALITIES,
   QUALITY_META,
+  termsOfKind,
   filterBySegment,
   filterByTiers,
   filterByTopics,
   flattenPromises,
   topicCounts,
   topicCountsIn,
+  type Kind,
   type Quality,
 } from '../promises/model.js';
-import { CORPUS_PROMISE_COUNT, CORPUS_TERMS } from '../content/promises.generated.js';
+import {
+  CORPUS_AMBITION_COUNT,
+  CORPUS_PROMISE_COUNT,
+  CORPUS_TERMS,
+} from '../content/promises.generated.js';
+
+const KINDS: Kind[] = ['promise', 'ambition'];
+const KIND_TOTAL: Record<Kind, number> = {
+  promise: CORPUS_PROMISE_COUNT,
+  ambition: CORPUS_AMBITION_COUNT,
+};
+const BY_KIND: Record<Kind, typeof CORPUS_TERMS> = {
+  promise: CORPUS_TERMS,
+  ambition: termsOfKind(CORPUS_TERMS, 'ambition'),
+};
+const HAS_LEGACY = CORPUS_TERMS.some((t) => t.method === 'legacy');
 
 /**
  * Every topic in the corpus, ordered once by its unfiltered size. The legend is
@@ -23,7 +41,12 @@ import { CORPUS_PROMISE_COUNT, CORPUS_TERMS } from '../content/promises.generate
  * shove the whole page around under the reader's cursor.
  */
 const CORPUS_TOPICS = topicCounts(CORPUS_TERMS);
-const TOPIC_ORDER = CORPUS_TOPICS.map((t) => t.theme);
+const AMBITION_TOPICS = topicCounts(BY_KIND.ambition);
+/** Promise topics by size, then any topic only ambitions use. One order for both kinds. */
+const TOPIC_ORDER = [
+  ...CORPUS_TOPICS.map((t) => t.theme),
+  ...AMBITION_TOPICS.map((t) => t.theme).filter((t) => !CORPUS_TOPICS.some((c) => c.theme === t)),
+];
 
 /**
  * Digits to pad every chip's count to, fixed by the largest count in the corpus.
@@ -31,7 +54,9 @@ const TOPIC_ORDER = CORPUS_TOPICS.map((t) => t.theme);
  * row fits one more, and the legend repacks — the same jump the fixed list was
  * meant to remove, arriving one layer down.
  */
-const COUNT_WIDTH = String(Math.max(...CORPUS_TOPICS.map((t) => t.count))).length;
+const COUNT_WIDTH = String(
+  Math.max(...CORPUS_TOPICS.map((t) => t.count), ...AMBITION_TOPICS.map((t) => t.count)),
+).length;
 
 /**
  * Front page: every nomination-acceptance promise since 2000, one stacked bar
@@ -63,8 +88,14 @@ const COUNT_WIDTH = String(Math.max(...CORPUS_TOPICS.map((t) => t.count))).lengt
  * about the corpus, so it must not re-proportion the donut or re-scale the bars
  * behind it. And the promises are no longer hidden inside a bar block waiting
  * for a click — they are the standing view, and everything above narrows it.
+ *
+ * Above all four sits the kind: promises (firm language) or ambitions (wishes
+ * and obligations). It swaps the whole board's subject rather than mixing the
+ * two, because only promises can ever be kept or broken.
  */
 export function PromisesPage() {
+  const [kind, setKind] = useState<Kind>('promise');
+  const corpus = BY_KIND[kind];
   // Topics are multi-select and additive: an empty selection means every topic,
   // so un-picking the last one is the way back to the whole corpus.
   const [selectedTopics, setSelectedTopics] = useState<ReadonlySet<string>>(() => new Set());
@@ -85,8 +116,8 @@ export function PromisesPage() {
   // the topic mix of the fully measurable promises alone. Topics with nothing
   // left stay in the list at zero — greyed out and unpickable, not gone.
   const topics = useMemo(
-    () => topicCountsIn(filterByTiers(CORPUS_TERMS, activeTiers), TOPIC_ORDER),
-    [activeTiers],
+    () => topicCountsIn(filterByTiers(corpus, activeTiers), TOPIC_ORDER),
+    [corpus, activeTiers],
   );
   const topicTotal = useMemo(() => topics.reduce((n, t) => n + t.count, 0), [topics]);
   // One bar block — a president crossed with a tier. Single-select: it is a
@@ -97,7 +128,7 @@ export function PromisesPage() {
   // The bars get the topic filter; the chart applies the category filter itself,
   // so its legend still counts what picking a category *would* get you, even one
   // currently left out. Neither view narrows its own counts — only the other's.
-  const terms = useMemo(() => filterByTopics(CORPUS_TERMS, selectedTopics), [selectedTopics]);
+  const terms = useMemo(() => filterByTopics(corpus, selectedTopics), [corpus, selectedTopics]);
 
   // What the list draws from: both filters, then the picked block, then ranked
   // against the search box.
@@ -137,7 +168,7 @@ export function PromisesPage() {
     // empties the selection, the bars widen back to every topic on their own.
     // Without this a greyed chip could still be filtering, with no way to click
     // it off.
-    const surviving = new Set(topicCounts(filterByTiers(CORPUS_TERMS, shown)).map((t) => t.theme));
+    const surviving = new Set(topicCounts(filterByTiers(corpus, shown)).map((t) => t.theme));
     const kept = new Set([...selectedTopics].filter((t) => surviving.has(t)));
     if (kept.size !== selectedTopics.size) setSelectedTopics(kept);
   };
@@ -183,6 +214,15 @@ export function PromisesPage() {
     return chips;
   }, [selectedTopics, pickedTiers, tierFilterOn, segment]);
 
+  // The other kind is a different corpus: its topics and blocks don't carry over.
+  const switchKind = (k: Kind) => {
+    if (k === kind) return;
+    setKind(k);
+    setSelectedTopics(new Set());
+    setPickedTiers(new Set());
+    setSegment(null);
+  };
+
   const clearAll = () => {
     setSelectedTopics(new Set());
     setPickedTiers(new Set());
@@ -201,6 +241,31 @@ export function PromisesPage() {
 
       <main>
         <section className="board">
+          <div className="kind-switch" role="group" aria-label="Promises or ambitions">
+            {KINDS.map((k) => (
+              <button
+                key={k}
+                type="button"
+                data-on={kind === k}
+                aria-pressed={kind === k}
+                onClick={() => switchKind(k)}
+              >
+                {KIND_META[k].plural}
+                <span className="kind-switch-n">{KIND_TOTAL[k]}</span>
+              </button>
+            ))}
+          </div>
+          <p className="kind-note">
+            {kind === 'promise' ? (
+              <>Firm commitments: “we will”, “I’m going to”. Only promises can be kept or broken.</>
+            ) : (
+              <>
+                Wishes and obligations: “we must”, “I want”. A direction, not a commitment, so
+                never given a verdict. Recorded for re-extracted terms only.
+              </>
+            )}
+          </p>
+
           <TopicDonut
             topics={topics}
             total={topicTotal}
@@ -213,7 +278,7 @@ export function PromisesPage() {
           <hr className="board-rule" />
 
           <div className="board-promises">
-            <span className="board-label">Promises</span>
+            <span className="board-label">{KIND_META[kind].plural}</span>
             <PromisesChart
               terms={terms}
               activeTiers={activeTiers}
@@ -228,7 +293,8 @@ export function PromisesPage() {
 
           <PromiseList
             hits={hits}
-            total={CORPUS_PROMISE_COUNT}
+            total={KIND_TOTAL[kind]}
+            noun={KIND_META[kind].plural.toLowerCase()}
             query={query}
             onQuery={setQuery}
             filters={filters}
@@ -245,36 +311,45 @@ export function PromisesPage() {
                   <tr>
                     <th className="veri-swatch-col" aria-hidden="true" />
                     <th scope="col" aria-label="Verifiability tier" />
-                    <th scope="col">Metric</th>
-                    <th scope="col">Threshold</th>
-                    <th scope="col">Deadline</th>
+                    <th scope="col">Object</th>
+                    <th scope="col">Record</th>
+                    <th scope="col">Criterion</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="veri-swatch" data-q="full" aria-hidden="true" />
-                    <th scope="row">Full</th>
+                    <th scope="row">High</th>
                     <td className="veri-yes">✓</td>
                     <td className="veri-yes">✓</td>
                     <td className="veri-yes">✓</td>
                   </tr>
                   <tr>
                     <td className="veri-swatch" data-q="partial" aria-hidden="true" />
-                    <th scope="row">Partial</th>
+                    <th scope="row">Medium</th>
                     <td className="veri-yes">✓</td>
-                    <td className="veri-q">?</td>
-                    <td className="veri-q">?</td>
+                    <td className="veri-yes">✓</td>
+                    <td className="veri-q">1 call</td>
                   </tr>
                   <tr>
                     <td className="veri-swatch" data-q="no" aria-hidden="true" />
-                    <th scope="row">None</th>
+                    <th scope="row">Low</th>
                     <td className="veri-q">?</td>
                     <td className="veri-q">?</td>
                     <td className="veri-q">?</td>
                   </tr>
                 </tbody>
               </table>
-              <p>Even a <em>full</em> promise may be debatable.</p>
+              <p>
+                <em>Object:</em> what it is about. <em>Record:</em> where the outcome shows.{' '}
+                <em>Criterion:</em> what counts as kept. A <em>call</em> is a stated judgement.
+              </p>
+              {HAS_LEGACY && (
+                <p>
+                  Terms marked <em>legacy</em> are not yet re-extracted. Their tiers come from an
+                  older rubric (metric, threshold, deadline) and are not strictly comparable.
+                </p>
+              )}
             </section>
 
             <section className="colophon-box">
