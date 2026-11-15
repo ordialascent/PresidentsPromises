@@ -1,0 +1,44 @@
+name: Delete merged branches
+
+# After a pull request is merged into main, delete every branch whose commits
+# are all contained in main. Such a branch holds nothing main doesn't, so
+# deleting it can't lose work. Branches with unmerged commits are never touched.
+# Can also be run by hand from the Actions tab.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prune-branches
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Delete branches fully contained in main
+        run: |
+          git fetch origin --prune
+          deleted=0
+          for ref in $(git for-each-ref --format='%(refname:strip=3)' refs/remotes/origin); do
+            case "$ref" in
+              HEAD|main) continue ;;
+            esac
+            if git merge-base --is-ancestor "origin/$ref" origin/main; then
+              echo "Deleting $ref (contained in main)"
+              git push origin --delete "$ref" && deleted=$((deleted + 1))
+            else
+              echo "Keeping $ref (has commits not in main)"
+            fi
+          done
+          echo "Deleted $deleted branch(es)."
