@@ -1,0 +1,135 @@
+# Screening ledger for 2012-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) goals he set for the term (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2012-acceptance
+protocol: 1
+rows:
+  - ref: "¶18.1"
+    decision: describe
+    note: "Says the path is not quick or easy; no commitment."
+  - ref: "¶21.3"
+    decision: include
+    added: true
+    promises: [obama-2012-export-more, obama-2012-outsource-fewer-jobs]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition."
+  - ref: "¶25.1"
+    decision: include
+    added: true
+    promises: [obama-2012-end-offshoring-tax-breaks, obama-2012-reward-us-jobs]
+    note: "Untriggered; a choice between two paths, his being the second, among the goals he asks voters to rally around (¶21.1-21.2). Recorded as ambitions."
+  - ref: "¶25.2"
+    decision: include
+    added: true
+    promises: [obama-2012-double-exports, obama-2012-manufacturing-jobs-1m]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition."
+  - ref: "¶26.1"
+    decision: include
+    added: true
+    promises: [obama-2012-control-energy]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition."
+  - { ref: "¶27.2", decision: include, promises: [obama-2012-open-more-acres] }
+  - ref: "¶27.3"
+    decision: include
+    promises: [obama-2012-oil-energy-plan, obama-2012-protect-coastlines, obama-2012-end-oil-subsidies]
+    note: "Three objects; split."
+  - ref: "¶28.1"
+    decision: include
+    added: true
+    promises: [obama-2012-invest-clean-energy, obama-2012-biofuels, obama-2012-efficient-buildings, obama-2012-natural-gas]
+    note: "Untriggered; a list of goals for the energy path he asks voters to choose (¶21.1-21.2). Four objects, recorded as ambitions."
+  - ref: "¶28.2"
+    decision: include
+    added: true
+    promises: [obama-2012-oil-imports-half, obama-2012-natural-gas-jobs]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition."
+  - { ref: "¶29.1", decision: include, promises: [obama-2012-reduce-carbon] }
+  - ref: "¶30.1"
+    decision: include
+    added: true
+    promises: [obama-2012-skills]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition."
+  - ref: "¶32.1"
+    decision: include
+    added: true
+    promises: [obama-2012-schools-classrooms]
+    note: "Untriggered; a choice between two paths among the goals he asks voters to rally around (¶21.1-21.2). Recorded as an ambition."
+  - ref: "¶33.4"
+    decision: describe
+    note: "\"I promise you, we can …\" assures that the goal is reachable; no act or result is committed to."
+  - ref: "¶34.2"
+    decision: include
+    added: true
+    promises: [obama-2012-teachers-100k, obama-2012-early-childhood]
+    note: "Untriggered; \"help me\" with goals he asks voters to rally around (¶21.1-21.2). Two objects, recorded as ambitions."
+  - ref: "¶34.3"
+    decision: include
+    added: true
+    promises: [obama-2012-community-college-2m]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition."
+  - ref: "¶34.4"
+    decision: include
+    added: true
+    promises: [obama-2012-tuition-growth-half]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition."
+  - ref: "¶35.6"
+    decision: include
+    added: true
+    promises: [obama-2012-afghanistan-end]
+    note: "Untriggered future statement (\"in 2014, our longest war will be over\")."
+  - ref: "¶36.4"
+    decision: ceremony
+    note: "Tribute to the troops."
+  - { ref: "¶36.5", decision: include, promises: [obama-2012-strongest-military] }
+  - { ref: "¶36.6", decision: include, promises: [obama-2012-serve-veterans] }
+  - ref: "¶38.4"
+    decision: include
+    promises: [obama-2012-israel-security, obama-2012-mideast-peace]
+    note: "\"Commitment\" is a firm trigger, but the verb is \"must\"; two ambitions."
+  - { ref: "¶41.3", decision: include, promises: [obama-2012-afghanistan-end] }
+  - ref: "¶42.1"
+    decision: include
+    promises: [obama-2012-war-savings-debt, obama-2012-war-savings-infrastructure]
+    note: "Two objects; split."
+  - ref: "¶43.1"
+    decision: include
+    added: true
+    promises: [obama-2012-reduce-deficit, obama-2012-deficit-spare-middle-class]
+    note: "Untriggered; one of the goals he asks voters to rally around for the next four years (¶21.1-21.2). Recorded as an ambition. Two objects."
+  - ref: "¶43.2"
+    decision: describe
+    note: "Independent experts' estimate of his plan (\"would cut … $4 trillion\"); a forecast, noted on obama-2012-reduce-deficit."
+  - ref: "¶44.1"
+    decision: include
+    promises: [obama-2012-tax-reform, obama-2012-top-rates-clinton]
+    note: "Two objects; split."
+  - ref: "¶45.1-45.4"
+    decision: include
+    promises: [obama-2012-debt-agreement]
+    note: "Range: ¶45.4's \"this\" is the agreement named in ¶45.1."
+  - ref: "¶46.1"
+    decision: include
+    added: true
+    promises: [obama-2012-no-deficit-tax-cuts-wealthy]
+    note: "Untriggered (\"as long as I'm President, I never will\"); firm and future."
+  - { ref: "¶48.1", decision: include, promises: [obama-2012-medicare-no-voucher] }
+  - ref: "¶48.4"
+    decision: include
+    promises: [obama-2012-medicare-strengthen, obama-2012-medicare-seniors-costs]
+    note: "Two objects; split."
+  - ref: "¶49.1"
+    decision: include
+    promises: [obama-2012-social-security-strengthen, obama-2012-social-security-no-privatise]
+    note: "Two objects; split."
+  - ref: "¶51.5"
+    decision: describe
+    note: "Creed (\"we have to earn it\")."
+  - ref: "¶55.2"
+    decision: describe
+    note: "Creed (\"a freedom without a commitment to others\")."
+  - ref: "¶73.1"
+    decision: describe
+    note: "Declines to promise an easy journey."
+
+#   34 rows: 27 include (14 of them added), 7 excluded (ceremony 1, describe 6)

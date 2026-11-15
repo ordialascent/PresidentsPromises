@@ -1,0 +1,170 @@
+# Screening ledger for 2012-debate.md (protocol v1).
+# Every trigger-matched sentence in the president's turns has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) goals he set for the term (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2012-debate
+protocol: 1
+rows:
+  - ref: "¶20.1-20.2"
+    decision: include
+    promises: [obama-2012-benghazi-justice]
+    note: "Range: ¶20.2's \"that\" is the list in ¶20.1."
+  - ref: "¶21.5"
+    decision: describe
+    note: "\"The opportunity we have to take advantage of\"; no commitment."
+  - ref: "¶34.1"
+    decision: attack
+    note: "Romney's position."
+  - ref: "¶34.3"
+    decision: attack
+    note: "Romney's position."
+  - ref: "¶34.4"
+    decision: attack
+    note: "Romney's position."
+  - ref: "¶35.2"
+    decision: attack
+    note: "Romney's position."
+  - { ref: "¶36.1", decision: include, promises: [obama-2012-steady-leadership] }
+  - ref: "¶59.1"
+    decision: attack
+    note: "Romney's position."
+  - ref: "¶68.3"
+    decision: attack
+    note: "Romney's position."
+  - ref: "¶69.2-72.1"
+    decision: include
+    added: true
+    promises: [obama-2012-mideast-partners]
+    note: "Untriggered (\"will continue to do\"); a numbered list of four low, manner-only points, kept as one promise."
+  - { ref: "¶72.2", decision: include, promises: [obama-2012-no-nation-building-abroad] }
+  - { ref: "¶80.2", decision: include, promises: [obama-2012-syria-help-opposition] }
+  - { ref: "¶80.4", decision: include, promises: [obama-2012-syria-vetted-help] }
+  - { ref: "¶93.5", decision: include, promises: [obama-2012-syria-vetted-help] }
+  - ref: "¶101.1"
+    decision: describe
+    note: "\"I'll be very quick.\""
+  - ref: "¶101.2-101.4"
+    decision: include
+    promises: [obama-2012-syria-transition]
+    note: "Range: ¶101.4 refers back to ¶101.2; ¶101.3 describes his record."
+  - { ref: "¶108.2", decision: include, promises: [obama-2012-egypt-economy] }
+  - ref: "¶110.1"
+    decision: describe
+    note: "Lead-in."
+  - ref: "¶110.3"
+    decision: describe
+    note: "General point about leadership at home."
+  - ref: "¶136.2"
+    decision: include
+    added: true
+    promises: [obama-2012-oil-imports-half]
+    note: "Untriggered (\"we also have to\"); restates the oil-imports goal of the acceptance speech."
+  - ref: "¶136.3"
+    decision: describe
+    note: "Summary (\"the kind of leadership that we need to show\")."
+  - ref: "¶138.4"
+    decision: attack
+    note: "About Romney's strategies."
+  - ref: "¶149.1"
+    decision: describe
+    note: "Lead-in."
+  - ref: "¶150.5"
+    decision: include
+    added: true
+    promises: [obama-2012-hire-teachers]
+    note: "\"I now want to\": the lexicon's \"I want to\" with \"now\" inserted."
+  - ref: "¶193.1"
+    decision: describe
+    note: "Lead-in (\"not just budgets\")."
+  - { ref: "¶193.3", decision: include, promises: [obama-2012-defense-cyber-space] }
+  - { ref: "¶193.4", decision: include, promises: [obama-2012-defense-cyber-space] }
+  - ref: "¶205.4"
+    decision: include
+    added: true
+    promises: [obama-2012-no-sequester]
+    note: "Untriggered future statement (\"It will not happen\") about the sequester (¶205.2)."
+  - ref: "¶213.2"
+    decision: include
+    added: true
+    promises: [obama-2012-israel-if-attacked]
+    note: "Untriggered future statement (\"America will stand with Israel\")."
+  - { ref: "¶215.1", decision: include, promises: [obama-2012-israel-if-attacked] }
+  - { ref: "¶215.3", decision: include, promises: [obama-2012-israel-exercise] }
+  - ref: "¶216.1"
+    decision: include
+    added: true
+    promises: [obama-2012-iran-no-nuke]
+    note: "Untriggered future statement (\"as long as I'm President … Iran will not get a nuclear weapon\")."
+  - { ref: "¶218.1", decision: include, promises: [obama-2012-iran-all-options] }
+  - ref: "¶219.1"
+    decision: attack
+    note: "Romney's position."
+  - { ref: "¶230.3", decision: include, promises: [obama-2012-iran-deal-terms] }
+  - { ref: "¶234.1", decision: include, promises: [obama-2012-iran-pressure] }
+  - { ref: "¶235.2", decision: include, promises: [obama-2012-iran-no-endless-talks] }
+  - ref: "¶237.1"
+    decision: include
+    promises: [obama-2012-iran-no-nuke, obama-2012-iran-all-options]
+    note: "Two objects: the goal (no Iranian weapon) and all options kept open."
+  - ref: "¶245.3"
+    decision: describe
+    note: "Rhetorical (\"I'll let the American people decide\")."
+  - ref: "¶247.3-247.4"
+    decision: include
+    promises: [obama-2012-iran-no-nuke, obama-2012-iran-pressure]
+    note: "Range: ¶247.4 (\"that will be the case so long as I'm President\") completes ¶247.3. Two objects."
+  - ref: "¶251.2"
+    decision: describe
+    note: "Lead-in about trips."
+  - ref: "¶269.3"
+    decision: attack
+    note: "Romney's position."
+  - ref: "¶270.3"
+    decision: attack
+    note: "Romney's position."
+  - ref: "¶271.2"
+    decision: describe
+    note: "Quotes a 9/11 victim."
+  - ref: "¶273.4"
+    decision: describe
+    note: "Describes how he makes decisions."
+  - ref: "¶281.1"
+    decision: describe
+    note: "Aside (\"We'll agree on that\")."
+  - { ref: "¶311.1", decision: include, promises: [obama-2012-shrink-terror-networks] }
+  - { ref: "¶314.2", decision: include, promises: [obama-2012-vigilance] }
+  - ref: "¶314.4"
+    decision: past
+    note: "His attitude on taking office in 2009."
+  - ref: "¶333.1"
+    decision: describe
+    note: "Prediction (\"then we will lose the lead\")."
+  - { ref: "¶334.3", decision: include, promises: [obama-2012-press-china] }
+  - { ref: "¶336.1", decision: include, promises: [obama-2012-pacific-presence] }
+  - ref: "¶336.2-336.5"
+    decision: include
+    promises: [obama-2012-asia-shipping, obama-2012-asia-trade]
+    note: "Range: ¶336.5 (\"we'll continue to show\") refers back to ¶336.2-336.3. Two objects."
+  - ref: "¶363.1"
+    decision: describe
+    note: "General point about choices."
+  - ref: "¶364.5"
+    decision: describe
+    note: "Rhetoric (\"move forward and not go back\")."
+  - ref: "¶378.1"
+    decision: describe
+    note: "Lead-in to the list in ¶378.2-380.1."
+  - ref: "¶378.3"
+    decision: include
+    promises: [obama-2012-best-education, obama-2012-retrain-workers]
+    note: "Two objects; split."
+  - { ref: "¶379.1", decision: include, promises: [obama-2012-control-energy] }
+  - { ref: "¶379.2", decision: include, promises: [obama-2012-reduce-deficit] }
+  - ref: "¶380.1"
+    decision: include
+    promises: [obama-2012-strongest-military, obama-2012-keep-faith-troops, obama-2012-go-after-enemies]
+    note: "Three objects; split."
+  - { ref: "¶381.2", decision: include, promises: [obama-2012-listen-fight-work] }
+
+#   61 rows: 34 include (6 of them added), 27 excluded (attack 10, describe 16, past 1)

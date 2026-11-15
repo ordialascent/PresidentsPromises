@@ -1,599 +1,1979 @@
-# Promises extracted from Barack Obama's 2012 nomination acceptance speech
-# (corpus/2013-2017 Obama/2012-acceptance.md). Refs are paragraph.sentence, per
-# corpus/README.md.
+# Promises and ambitions of Barack Obama's 2013-2017 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 2012 acceptance
+# speech, the 2012 final debate (Obama's turns) and the 2013 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
 #
-# Each promise is scored on four dimensions — the ingredients that decide
-# whether "was it kept?" can even be asked as a *measured* question:
-#
-#   metric     — is there a named quantity, AND a record that tracks it?
-#   threshold  — a number or an explicit direction ("in half", "to zero", "double")?
-#   deadline   — a date or a bounded period ("in ten years", "by 2020")?
-#   instrument — does he name what HE will DO, or only what WILL happen?
-#
-# measurable:
-#   full     — metric + threshold + deadline all present (even if parametrically
-#              disputed — that dispute is the product, not a disqualifier)
-#   partial  — at least one of the three is missing or too vague to pin down
-#   no       — aspirational; no measurable quantity at all
-# (instrument sharpens accountability: an outcome-only promise is one he can't
-#  fully control. A promise can still be measurable without it.)
-#
-# NOTE: this speech is unusually goal-heavy — Obama explicitly asks voters to
-# "rally around a set of goals" (¶21) and then attaches real numbers and dates
-# to several of them, so it has more "full" promises than most. Two are directly
-# chart-relevant: obama-2012-deficit-4t (¶43.2) is the fiscal/deficit pledge (the
-# FYFSD series the app already uses), and obama-2012-oil-imports-half (¶28.2)
-# repeats the exact parametric shape of his 2008 oil-from-the-Middle-East claim.
+# 43 promises (high 6, medium 18, low 19)
+# 48 ambitions (high 4, medium 21, low 23)
+# Deadlines default to the end of the term (2017-01-20).
 
+protocol: 1
 promises:
-  - id: obama-2012-manufacturing-jobs
-    theme: economy
+
+  - id: obama-2012-export-more
+    kind: ambition
     sources:
-      - in: acceptance
-        ref: "¶25.2"
-        quote: >
-          We can help big factories and small businesses double
-          their exports, and if we choose this path, we can create a
-          million new manufacturing jobs in the next 4 years.
-      - in: debate
-        ref: "¶135.2"
-        quote: >
-          And that's what my plan does: making sure that we're
-          bringing manufacturing back to our shores so that we're
-          creating jobs here, as we've done with the auto industry,
-          not rewarding companies that are shipping jobs overseas;
-          making sure that we've got the best education system in
-          the world, including retraining our workers for the jobs
-          of tomorrow.
-    restatement: Create a million new manufacturing jobs over the next four years.
-    metric:
-      present: true
-      quantity: manufacturing employment
-      record: BLS manufacturing payrolls (attribution to policy is contested)
-    threshold:
-      present: true
-      stated: a million new manufacturing jobs
+    - in: acceptance
+      ref: ¶21.3
+      quote: "We can choose a future where we export more products"
+    restatement: "Export more products."
+    group: obama-2012-trade-jobs
+    type: outcome
+    theme: trade
     deadline:
-      present: true
-      stated: in the next 4 years (2012 -> 2016)
-    instrument:
-      present: true
-      stated: reward companies that hire at home; help firms double exports
-    measurable: "full"
-    notes: >
-      All four ingredients present, but the count is an outcome he can't fully
-      control and can't be cleanly attributed to the named actions — and the
-      baseline month you measure "a million" from swings the verdict. The
-      "double exports" half is a second, separately-trackable target.
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "US exports of goods"
+      record: "Census Bureau / BEA international trade data (FT-900)"
+      criterion: "annual US goods exports are higher in the last full year of the term than in 2012"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-outsource-fewer-jobs
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶21.3
+      quote: "and outsource fewer jobs"
+    restatement: "Outsource fewer jobs."
+    group: obama-2012-trade-jobs
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-double-exports
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶25.2
+      quote: "We can help big factories and small businesses double their exports"
+    restatement: "Help factories and small businesses double their exports."
+    group: obama-2012-manufacturing-goals
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US exports"
+      record: "Census Bureau / BEA international trade data"
+      criterion: "US exports double from their level when the goal was set"
+      ambiguity: "No baseline or date is spoken; the reading is a doubling over the 2009 level by the end of the term (the administration's National Export Initiative set end-2014)."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: obama-2012-export-more
+
+  - id: obama-2012-manufacturing-jobs-1m
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶25.2
+      quote: "we can create a million new manufacturing jobs in the next 4 years"
+    restatement: "Create a million new manufacturing jobs in the next four years."
+    group: obama-2012-manufacturing-goals
+    type: outcome
+    theme: economy
+    deadline:
+      stated: "in the next 4 years"
+      applied: 2016-09-06
+    verifiability:
+      level: high
+      object: "manufacturing employment"
+      record: "BLS Current Employment Statistics (manufacturing payrolls)"
+      criterion: "manufacturing payroll employment rises by at least 1,000,000 within four years of the speech"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-end-offshoring-tax-breaks
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶25.1
+      quote: "We can give more tax breaks to corporations that ship jobs overseas, or"
+    restatement: "Stop giving tax breaks to corporations that ship jobs overseas."
+    group: obama-2012-jobs-tax-breaks
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "tax treatment of income from jobs moved abroad"
+      record: "enacted legislation (Congress.gov); Internal Revenue Code"
+      criterion: "a law removes a tax benefit that rewards moving jobs abroad"
+      ambiguity: "Stated as a choice, not a named provision; deferral of tax on foreign earnings and the deduction for relocation costs are the usual readings."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-end-offshoring-tax-breaks
+
+  - id: obama-2012-reward-us-jobs
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶25.1
+      quote: "we can start rewarding companies that open new plants and train new workers and create new jobs here in the United States of America"
+    restatement: "Reward companies that open plants, train workers and create jobs in the US."
+    group: obama-2012-jobs-tax-breaks
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "tax incentives for domestic investment and hiring"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a tax credit or break for companies that add plants or jobs in the US is enacted"
+      ambiguity: "\"Rewarding\" names no instrument; a tax incentive is the reading, matching his 2008 promise."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-tax-credit-us-jobs
+
+  - id: obama-2012-control-energy
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶26.1
+      quote: "You can choose the path where we control more of our own energy."
+    - in: debate
+      ref: ¶379.1
+      quote: "I want to control our own energy by developing oil and natural gas, but also the energy sources of the future."
+    restatement: "Control more of America's own energy."
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US energy self-sufficiency"
+      record: "EIA Monthly Energy Review (net energy imports, production vs consumption)"
+      criterion: "net energy imports as a share of consumption are lower at the end of the term than at its start"
+      ambiguity: "\"Control our own energy\" is read as less reliance on imports; production share is the proxy."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-open-more-acres
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶27.2
+      quote: "and we'll open more"
+    restatement: "Open more acreage for oil and gas exploration."
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "federal acreage offered for oil and gas leasing"
+      record: "BLM and BOEM lease sale statistics"
+      criterion: "new federal onshore or offshore acreage is offered for oil and gas leasing during the term"
+      ambiguity: "\"Open\" may mean offered for lease or actually leased; offered acreage is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-oil-energy-plan
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶27.3
+      quote: "I will not let oil companies write this country's energy plan"
+    restatement: "Not let oil companies write the country's energy plan."
+    group: obama-2012-oil-companies
+    type: ongoing
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-protect-coastlines
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶27.3
+      quote: "or endanger our coastlines"
+    restatement: "Not let oil companies endanger the coastlines."
+    group: obama-2012-oil-companies
+    type: ongoing
+    theme: environment
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-end-oil-subsidies
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶27.3
+      quote: "or collect another $4 billion in corporate welfare from our taxpayers"
+    restatement: "End the roughly $4 billion a year in tax breaks for oil companies."
+    group: obama-2012-oil-companies
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "federal tax preferences for oil and gas production"
+      record: "enacted legislation (Congress.gov); JCT tax expenditure estimates"
+      criterion: "a law repeals the oil and gas tax preferences worth about $4 billion a year"
+      ambiguity: "The speech names an amount, not provisions; his budgets' list of oil and gas preferences is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-invest-clean-energy
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶28.1
+      quote: "a future where we keep investing in wind and solar and clean coal"
+    restatement: "Keep investing in wind, solar and clean coal."
+    group: obama-2012-energy-future
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "federal spending on renewable energy and clean coal"
+      record: "DOE budget and appropriations"
+      criterion: "federal investment in wind, solar and clean coal continues through the term"
+      ambiguity: "\"Keep investing\" sets no amount; continued appropriations at any level are the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-biofuels
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶28.1
+      quote: "where farmers and scientists harness new biofuels to power our cars and trucks"
+    restatement: "Harness new biofuels for cars and trucks."
+    group: obama-2012-energy-future
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-efficient-buildings
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶28.1
+      quote: "where construction workers build homes and factories that waste less energy"
+    restatement: "Build homes and factories that waste less energy."
+    group: obama-2012-energy-future
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-natural-gas
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶28.1
+      quote: "where we develop a hundred-year supply of natural gas that's right beneath our feet"
+    restatement: "Develop the hundred-year supply of natural gas."
+    group: obama-2012-energy-future
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US natural gas production"
+      record: "EIA natural gas production data"
+      criterion: "dry natural gas production is higher at the end of the term than at its start"
+      ambiguity: "\"Develop a supply\" has no target; rising production is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: obama-2012-oil-imports-half
-    theme: energy
+    kind: ambition
     sources:
-      - in: acceptance
-        ref: "¶28.2"
-        quote: >
-          If you choose this path, we can cut our oil imports in
-          half by 2020 and support more than 600,000 new jobs in
-          natural gas alone.
-      - in: debate
-        ref: "¶136.2"
-        quote: >
-          We've cut our oil imports to the lowest level in two
-          decades because we've developed oil and natural gas, but
-          we also have to develop clean energy technologies that
-          will allow us to cut our exports in half by 2020.
-    restatement: Cut US oil imports in half by 2020; support 600,000+ natural-gas jobs.
-    metric:
-      present: true
-      quantity: US oil imports; natural-gas-sector jobs
-      record: EIA petroleum imports series; BLS employment
-    threshold:
-      present: true
-      stated: in half (oil imports); more than 600,000 (gas jobs)
+    - in: acceptance
+      ref: ¶28.2
+      quote: "we can cut our oil imports in half by 2020"
+    - in: debate
+      ref: ¶136.2
+      quote: "we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020"
+    restatement: "Cut oil imports in half by 2020."
+    type: outcome
+    theme: energy
     deadline:
-      present: true
-      stated: by 2020
-    instrument:
-      present: true
-      stated: the all-of-the-above energy plan named in ¶28.1 (wind/solar/clean coal/biofuels/gas)
-    measurable: "full"
-    notes: >
-      The exact parametric shape of his 2008 "end our dependence on oil from the
-      Middle East" pledge — clean number and date, but "in half" needs a baseline
-      year (2008? 2012? gross imports or net?), so which series and baseline you
-      pick decides whether it was met. A natural companion to the 2008 entry.
+      stated: "by 2020"
+      applied: 2020-12-31
+    verifiability:
+      level: medium
+      object: "US net petroleum imports"
+      record: "EIA petroleum supply data (net imports)"
+      criterion: "net oil imports in 2020 are half or less of the baseline level"
+      ambiguity: "No baseline year is spoken; the 2008 level (as in his 2011 energy blueprint) is the reading."
+    uncertainty:
+      extraction: probable
+      note: "The debate transcript says \"exports\"; the sentence before it is about oil imports, so it is read as a slip for imports."
+    links:
+    - kind: refines
+      to: obama-2012-control-energy
+    - kind: shared
+      to: bush-2004-energy-imports
+
+  - id: obama-2012-natural-gas-jobs
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶28.2
+      quote: "support more than 600,000 new jobs in natural gas alone"
+    restatement: "Support more than 600,000 new jobs in natural gas."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: "by 2020"
+      applied: 2020-12-31
+    verifiability:
+      level: medium
+      object: "jobs supported by natural gas"
+      record: "BLS employment in oil and gas extraction and support activities"
+      criterion: "jobs in natural gas rise by more than 600,000 by 2020"
+      ambiguity: "\"Support\" includes indirect jobs no statistic counts; direct and support-activity employment is the proxy."
+    uncertainty:
+      extraction: probable
+      note: "\"By 2020\" is read as applying to both clauses of the sentence."
+    links: []
+
+  - id: obama-2012-reduce-carbon
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶29.1
+      quote: "my plan will continue to reduce the carbon pollution that is heating our planet"
+    restatement: "Keep reducing carbon pollution."
+    type: outcome
+    theme: environment
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "US carbon dioxide emissions"
+      record: "EPA Inventory of U.S. Greenhouse Gas Emissions; EIA energy-related CO2"
+      criterion: "US energy-related CO2 emissions are lower at the end of the term than at its start"
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: obama-2012-climate-respond
+
+  - id: obama-2012-climate-respond
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶18.2
+      quote: "We will respond to the threat of climate change"
+    restatement: "Respond to the threat of climate change."
+    type: ongoing
+    theme: environment
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-lead-energy-transition
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶19.2
+      quote: "But America cannot resist this transition, we must lead it."
+    - in: inaugural
+      ref: ¶19.3
+      quote: "We cannot cede to other nations the technology that will power new jobs and new industries, we must claim its promise."
+    restatement: "Lead the transition to sustainable energy and its technology."
+    type: ongoing
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-skills
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶30.1
+      quote: "You can choose a future where more Americans have the chance to gain the skills they need to compete"
+    restatement: "More Americans get the chance to gain the skills they need."
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-schools-classrooms
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶32.1
+      quote: "we can decide that in the United States of America, no child should have her dreams deferred because of a crowded classroom or a crumbling school"
+    restatement: "No child held back by a crowded classroom or a crumbling school."
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: obama-2012-teachers-100k
-    theme: education
+    kind: ambition
     sources:
-      - in: acceptance
-        ref: "¶34.2"
-        quote: >
-          Help me recruit 100,000 math and science teachers within
-          10 years and improve early childhood education.
-      - in: debate
-        ref: "¶150.5"
-        quote: >
-          And what I now want to do is to hire more teachers,
-          especially in math and science, because we know that we've
-          fallen behind when it comes to math and science.
-    restatement: Recruit 100,000 math and science teachers within ten years.
-    metric:
-      present: true
-      quantity: number of math and science teachers recruited
-      record: no single official series (NCES staffing counts; program enrollment)
-    threshold:
-      present: true
-      stated: 100,000
+    - in: acceptance
+      ref: ¶34.2
+      quote: "Help me recruit 100,000 math and science teachers within 10 years"
+    restatement: "Recruit 100,000 math and science teachers within ten years."
+    group: obama-2012-education-goals
+    type: outcome
+    theme: education
     deadline:
-      present: true
-      stated: within 10 years
-    instrument:
-      present: true
-      stated: a federal teacher-recruitment effort
-    measurable: "full"
-    notes: >
-      Number and deadline are sharp, but the metric is soft: there is no clean,
-      agreed record of "math and science teachers recruited" attributable to the
-      program, so the dispute here is measurement (what counts, and against what
-      baseline) rather than the target itself. The early-childhood half is
-      direction-only.
+      stated: "within 10 years"
+      applied: 2022-09-06
+    verifiability:
+      level: medium
+      object: "new math and science teachers"
+      record: "NCES teacher surveys; reports of the federal 100Kin10 effort"
+      criterion: "100,000 additional math and science teachers are recruited within ten years"
+      ambiguity: "No official count of \"recruited\" teachers exists; new STEM teacher hires reported by NCES or 100Kin10 are the proxy."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: obama-2012-hire-teachers
+
+  - id: obama-2012-early-childhood
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶34.2
+      quote: "and improve early childhood education"
+    restatement: "Improve early childhood education."
+    group: obama-2012-education-goals
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "early childhood education programmes"
+      record: "HHS Head Start data; NIEER State of Preschool; federal appropriations"
+      criterion: "enrolment in or funding for public early childhood education is higher at the end of the term"
+      ambiguity: "\"Improve\" names no measure; enrolment or funding is the reading."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-early-childhood
 
   - id: obama-2012-community-college-2m
-    ref: "¶34.3"
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶34.3
+      quote: "Help give 2 million workers the chance to learn skills at their community college that will lead directly to a job."
+    restatement: "Give 2 million workers job-linked skills training at community colleges."
+    group: obama-2012-education-goals
+    type: outcome
     theme: education
-    quote: >
-      Help give 2 million workers the chance to learn skills at their community
-      college that will lead directly to a job.
-    restatement: Give 2 million workers job-focused skills training at community colleges.
-    metric:
-      present: true
-      quantity: workers trained in community-college skills programs
-      record: NCES / community-college enrollment; program participant counts
-    threshold:
-      present: true
-      stated: 2 million workers
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: federal community-college partnerships
-    measurable: "partial"
-    notes: >
-      A clean number and a named instrument, but no deadline, and "the chance to
-      learn skills... that will lead directly to a job" is an eligibility count,
-      not an employment outcome — measurable, but the boundary of what counts is
-      wide open.
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "community college job training"
+      record: "DOL TAACCCT grant reports; enacted programmes"
+      criterion: "2 million workers are trained at community colleges in programmes tied to jobs"
+      ambiguity: "No date is spoken and no single record counts trainees; federally funded community-college training reported by DOL is the proxy."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: obama-2012-tuition-half
-    ref: "¶34.4"
+  - id: obama-2012-tuition-growth-half
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶34.4
+      quote: "cut in half the growth of tuition costs over the next 10 years"
+    restatement: "Cut the growth of tuition costs in half over ten years."
+    group: obama-2012-education-goals
+    type: outcome
     theme: education
-    quote: >
-      Help us work with colleges and universities to cut in half the growth of
-      tuition costs over the next 10 years.
-    restatement: Halve the growth rate of tuition costs over the next ten years.
-    metric:
-      present: true
-      quantity: rate of growth of college tuition
-      record: College Board / BLS tuition CPI
-    threshold:
-      present: true
-      stated: cut in half (the growth rate)
     deadline:
-      present: true
-      stated: over the next 10 years
-    instrument:
-      present: true
-      stated: work with colleges and universities
-    measurable: "full"
-    notes: >
-      A rate-of-change target, which makes the baseline especially load-bearing:
-      "in half" relative to which prior growth rate, and measured on sticker
-      price or net price? The instrument ("work with") is also weak leverage over
-      an outcome set by thousands of institutions.
+      stated: "over the next 10 years"
+      applied: 2022-09-06
+    verifiability:
+      level: medium
+      object: "college tuition growth"
+      record: "College Board Trends in College Pricing; BLS CPI college tuition"
+      criterion: "average annual tuition growth over the ten years after the speech is half the rate of the preceding ten years"
+      ambiguity: "No baseline is spoken; the preceding decade's growth rate is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-hire-teachers
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶150.5
+      quote: "what I now want to do is to hire more teachers, especially in math and science"
+    restatement: "Hire more teachers, especially in math and science."
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "public school teacher employment"
+      record: "NCES Digest of Education Statistics; BLS local government education employment"
+      criterion: "the number of public school teachers is higher at the end of the term than at its start"
+      ambiguity: "\"Especially in math and science\" has no separate measure; total teacher numbers are the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-best-education
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶378.3
+      quote: "I want to make sure we've got the best education system in the world"
+    restatement: "Have the best education system in the world."
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-world-class-education
+
+  - id: obama-2012-retrain-workers
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶378.3
+      quote: "we're retaining our workers for the jobs of tomorrow"
+    restatement: "Retrain workers for the jobs of tomorrow."
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "The transcript says \"retaining\"; read as \"retraining\", as in ¶135.2."
+    links: []
+
+  - id: obama-2012-reform-schools
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶15.2
+      quote: "reform our schools"
+    restatement: "Reform the schools."
+    group: obama-2012-new-ideas
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "federal K-12 education law"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a federal law reforming K-12 schooling is enacted"
+      ambiguity: "\"Reform\" is not defined; any enacted structural change to federal school law counts."
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: obama-2012-afghanistan-end
-    theme: foreign-policy
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶35.6"
-        quote: >
-          We've blunted the Taliban's momentum in Afghanistan, and
-          in 2014, our longest war will be over.
-      - in: debate
-        ref: "¶291.4"
-        quote: >
-          We then started to build up Afghan forces, and we're now
-          in a position where we can transition out, because there's
-          no reason why Americans should die when Afghans are
-          perfectly capable of defending their own country.
-    restatement: End the war in Afghanistan by 2014.
-    metric:
-      present: true
-      quantity: US troop levels / combat-mission status in Afghanistan
-      record: DoD troop-strength reports
-    threshold:
-      present: true
-      stated: the war "will be over" (end / drawdown)
+    - in: acceptance
+      ref: ¶35.6
+      quote: "in 2014, our longest war will be over"
+    - in: acceptance
+      ref: ¶41.3
+      quote: "Well, I have, and I will."
+    restatement: "End the war in Afghanistan in 2014."
+    type: outcome
+    theme: defense
     deadline:
-      present: true
-      stated: in 2014
-    instrument:
-      present: true
-      stated: the announced withdrawal timeline (reaffirmed in ¶41.3)
-    measurable: "full"
-    notes: >
-      A dated end-state on a measurable quantity — but "the war will be over" has
-      no agreed definition (combat mission ended? all troops out? which counts
-      as "over"?), and US forces remained past 2014, so the verdict turns
-      entirely on how you define the endpoint.
+      stated: "in 2014"
+      applied: 2014-12-31
+    verifiability:
+      level: medium
+      object: "US combat mission in Afghanistan"
+      record: "DoD announcements and troop levels"
+      criterion: "the US combat mission in Afghanistan ends by the end of 2014"
+      ambiguity: "\"Over\" may mean the combat mission ends or all troops leave; the end of the combat mission is the reading."
+    uncertainty:
+      extraction: probable
+      note: "¶41.3 answers ¶41.2 (\"how he'll end the war in Afghanistan\"); \"I will\" is read as \"I will end it\"."
+    links: []
 
-  - id: obama-2012-deficit-4t
-    theme: fiscal
+  - id: obama-2012-strongest-military
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶43.2"
-        quote: >
-          Independent experts say that my plan would cut our deficit
-          by $4 trillion.
-      - in: debate
-        ref: "¶379.2"
-        quote: >
-          Yes, I want to reduce our deficit by cutting spending that
-          we don't need, but also by asking the wealthy to do a
-          little bit more so that we can invest in things like
-          research and technology that are the key to a 21st-century
-          economy.
-    restatement: Cut the deficit by $4 trillion under his budget plan.
-    metric:
-      present: true
-      quantity: the federal deficit / cumulative deficit reduction
-      record: CBO/OMB; FRED FYFSD (the series already in the app)
-    threshold:
-      present: true
-      stated: by $4 trillion
+    - in: acceptance
+      ref: ¶36.5
+      quote: "so long as I'm Commander in Chief, we will sustain the strongest military the world has ever known"
+    - in: debate
+      ref: ¶380.1
+      quote: "As Commander in Chief, I will maintain the strongest military in the world"
+    restatement: "Maintain the strongest military in the world."
+    type: ongoing
+    theme: defense
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: his budget plan (attributed to "independent experts")
-    measurable: "partial"
-    notes: >
-      The fiscal promise in this speech and a direct chart candidate — but note
-      what is NOT said: no time window (the usual "$4 trillion" was a 10-year
-      figure, but the speech omits it) and no baseline against which the cut is
-      measured, which is precisely the parameter the app lets the reader move.
-      "Cut the deficit by $4T" is also ambiguous between reducing the deficit and
-      reducing the debt.
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US military strength"
+      record: "DoD budget; SIPRI military expenditure; force structure data"
+      criterion: "the US remains the world's leading military power throughout the term"
+      ambiguity: "\"Strongest\" needs a proxy; military spending and capability rankings are the reading."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: bush-2000-defenses
 
-  - id: obama-2012-tax-reform-250k
-    ref: "¶44.1"
-    theme: taxes
-    quote: >
-      I want to reform the Tax Code so that it's simple, fair, and asks the
-      wealthiest households to pay higher taxes on incomes over $250,000, the
-      same rate we had when Bill Clinton was President
-    restatement: Reform the tax code; raise rates on income over $250,000 to Clinton-era levels.
-    metric:
-      present: true
-      quantity: top marginal tax rate on income over $250,000
-      record: enacted IRC rate schedules
-    threshold:
-      present: true
-      stated: higher taxes over $250,000 (the Clinton-era rate)
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: reform the tax code (legislation)
-    measurable: "partial"
-    notes: >
-      A specific rate on a specific bracket with a clean record, but no deadline,
-      and "reform the Tax Code so that it's simple, fair" bundles an unmeasurable
-      aspiration onto the pin-downable rate change. Measurable mainly as a yes/no
-      on the bracket rate.
-
-  - id: obama-2012-carbon-reduce
-    theme: energy
+  - id: obama-2012-serve-veterans
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶29.1"
-        quote: >
-          And yes, my plan will continue to reduce the carbon
-          pollution that is heating our planet, because climate
-          change is not a hoax.
-      - in: inaugural
-        ref: "¶18.2"
-        quote: >
-          We will respond to the threat of climate change, knowing
-          that the failure to do so would betray our children and
-          future generations.
-    restatement: Continue reducing US carbon pollution.
-    metric:
-      present: true
-      quantity: US greenhouse-gas / carbon emissions
-      record: EPA GHG Inventory; EIA CO2 emissions
-    threshold:
-      present: true
-      stated: "reduce / continue to reduce (direction, no level)"
+    - in: acceptance
+      ref: ¶36.6
+      quote: "When you take off the uniform, we will serve you as well as you've served us"
+    restatement: "Serve veterans as well as they served, with jobs, housing and care."
+    type: ongoing
+    theme: veterans
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: his climate/energy plan
-    measurable: "partial"
-    notes: >
-      A real metric with excellent records, but only a direction — no target
-      level and no deadline — so "did emissions fall?" is answerable while "did
-      he keep the promise?" has no threshold to test against.
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-veterans-care
 
-  - id: obama-2012-medicare-no-voucher
-    ref: "¶48.1"
-    theme: health
-    quote: >
-      And I will never—I will never—turn Medicare into a voucher.
-    restatement: Never convert Medicare into a voucher program.
-    metric:
-      present: true
-      quantity: whether Medicare is converted to a voucher/premium-support model (binary)
-      record: enacted Medicare law
-    threshold:
-      present: true
-      stated: never (to zero)
+  - id: obama-2012-war-savings-debt
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶42.1
+      quote: "I will use the money we're no longer spending on war to pay down our debt"
+    restatement: "Use the money saved from ending wars to pay down the debt."
+    group: obama-2012-war-savings
+    type: action
+    theme: budget
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: block any such conversion
-    measurable: "partial"
-    notes: >
-      A negative pledge: measurable only as a yes/no policy outcome, not a
-      quantity over time. The disputed boundary is definitional — what would
-      count as "turning Medicare into a voucher" (full privatization? premium
-      support? means-testing?).
-
-  - id: obama-2012-medicare-strengthen
-    ref: "¶48.4"
-    theme: health
-    quote: >
-      Yes, we will reform and strengthen Medicare for the long haul, but we'll do
-      it by reducing the cost of health care, not by asking seniors to pay
-      thousands of dollars more.
-    restatement: Strengthen Medicare by cutting health-care costs, not raising seniors' costs.
-    metric:
-      present: true
-      quantity: Medicare costs; out-of-pocket costs for seniors
-      record: CMS National Health Expenditure; Medicare trustees' reports
-    threshold:
-      present: true
-      stated: "reduce cost / not thousands more (direction)"
-    deadline:
-      present: false
-      stated: "\"for the long haul\" — unbounded, not a deadline"
-    instrument:
-      present: true
-      stated: reduce the cost of health care
-    measurable: "partial"
-    notes: >
-      Good metrics and records, but the threshold is directional and "for the
-      long haul" is explicitly open-ended, so there is no bounded period to test.
-      "Thousands of dollars more" hints at a magnitude but pins no baseline.
-
-  - id: obama-2012-social-security
-    ref: "¶49.1"
-    theme: social-security
-    quote: >
-      And we will keep the promise of Social Security by taking the responsible
-      steps to strengthen it, not by turning it over to Wall Street.
-    restatement: Strengthen Social Security without privatizing it.
-    metric:
-      present: true
-      quantity: Social Security trust-fund solvency
-      record: SSA/OASDI trustees' reports
-    threshold:
-      present: false
-      stated: "\"strengthen\" — no solvency target or horizon"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: "\"responsible steps\" (unnamed); rules out privatization"
-    measurable: "partial"
-    notes: >
-      A measurable metric (solvency) with a named non-action (no privatization),
-      but no target level, no deadline, and no named positive mechanism — the
-      "responsible steps" are left blank, so only the negative half is testable.
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: obama-2012-war-savings-infrastructure
-    theme: fiscal
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶42.1"
-        quote: >
-          I will use the money we're no longer spending on war to
-          pay down our debt and put more people back to work
-          rebuilding roads and bridges and schools and runways.
-      - in: debate
-        ref: "¶293.2"
-        quote: >
-          And what we can now do is free up some resources to, for
-          example, put Americans back to work—especially our
-          veterans—rebuilding our roads, our bridges, our schools;
-          making sure that our veterans are getting the care that
-          they need when it comes to posttraumatic stress disorder
-          and traumatic brain injury; making sure that the
-          certifications that they need for good jobs of the future
-          are in place.
-    restatement: Redirect war savings to debt reduction and infrastructure jobs.
-    metric:
-      present: true
-      quantity: federal debt; infrastructure spending / jobs
-      record: Treasury debt; BEA/BLS construction outlays and employment
-    threshold:
-      present: true
-      stated: "pay down / put back to work (direction, no number)"
+    - in: acceptance
+      ref: ¶42.1
+      quote: "put more people back to work rebuilding roads and bridges and schools and runways"
+    restatement: "Use war savings to put people to work rebuilding roads, bridges, schools and runways."
+    group: obama-2012-war-savings
+    type: action
+    theme: infrastructure
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: redirect drawdown savings ("the money we're no longer spending on war")
-    measurable: "partial"
-    notes: >
-      A compound promise (debt + infrastructure) built on the "peace dividend"
-      framing — but the "war savings" are a contested accounting construct (much
-      was borrowed, not banked), and there is no number or deadline on either
-      half.
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "federal infrastructure investment"
+      record: "DOT and federal appropriations; enacted legislation"
+      criterion: "federal investment in roads, bridges, schools or airports rises during the term"
+      ambiguity: "Money is fungible, so the war savings cannot be traced; a rise in federal infrastructure investment is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  # --- Promises from the 2013 Inaugural Address (corpus/2013-2017 Obama/
-  # 2013-inaugural.md). An inaugural is thematic and aspirational, so these are
-  # goals set as the generation's "task" ("our journey is not complete until
-  # ...") rather than dated pledges — hence all partial/no. Commitments that
-  # merely restate a 2012 acceptance-speech promise (climate/carbon, the
-  # deficit, the cost of health care, tax-code reform) are NOT re-added here.
+  - id: obama-2012-keep-faith-troops
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶380.1
+      quote: "keep faith with our troops"
+    restatement: "Keep faith with the troops."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-go-after-enemies
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶380.1
+      quote: "go after those who would do us harm"
+    restatement: "Go after those who would do the US harm."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-defense-cyber-space
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶193.3
+      quote: "We need to be thinking about cybersecurity."
+    - in: debate
+      ref: ¶193.4
+      quote: "We need to be thinking about space."
+    restatement: "Shape defence planning around cybersecurity and space."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-no-sequester
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶205.4
+      quote: "It will not happen."
+    restatement: "The budget sequester will not happen."
+    type: outcome
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "Budget Control Act sequestration"
+      record: "OMB sequestration reports; Presidential sequestration order"
+      criterion: "the across-the-board cuts of the Budget Control Act do not take effect"
+    uncertainty:
+      extraction: probable
+      note: "Reads as a forecast about Congress as much as a commitment; included because it is a flat future statement about a policy he co-decides."
+    links: []
+
+  - id: obama-2012-vigilance
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶314.2
+      quote: "We have to remain vigilant"
+    restatement: "Remain vigilant against terrorist networks."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-shrink-terror-networks
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶311.1
+      quote: "we want to shrink those groups and those networks, and we can do that"
+    restatement: "Shrink the groups and networks that threaten the US."
+    type: outcome
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-defend-people
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.1
+      quote: "We will defend our people"
+    restatement: "Defend the American people."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-defend-nation
+    - kind: shared
+      to: bush-2004-defend-america
+
+  - id: obama-2012-values-rule-of-law
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.1
+      quote: "uphold our values through strength of arms and rule of law"
+    restatement: "Uphold American values through strength of arms and the rule of law."
+    type: ongoing
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-reduce-deficit
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶43.1
+      quote: "You can choose a future where we reduce our deficit"
+    - in: inaugural
+      ref: ¶16.2
+      quote: "We must make the hard choices to reduce the cost of health care and the size of our deficit."
+    - in: debate
+      ref: ¶379.2
+      quote: "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more"
+    restatement: "Reduce the deficit, by cutting unneeded spending and asking the wealthy to pay more."
+    group: obama-2012-deficit
+    type: outcome
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "federal budget deficit"
+      record: "Treasury Final Monthly Treasury Statement / Financial Report (FYFSD)"
+      criterion: "the federal deficit in the last full fiscal year of the term is smaller than in fiscal 2012"
+      ambiguity: "Not a judgement call but a note: the independent estimate that his plan \"would cut our deficit by $4 trillion\" (acceptance ¶43.2) is a forecast, not recorded as a target."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-deficit-spare-middle-class
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶43.1
+      quote: "without sticking it to the middle class"
+    restatement: "Reduce the deficit without burdening the middle class."
+    group: obama-2012-deficit
+    type: ongoing
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-debt-agreement
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶45.1-45.4
+      quote: "I want to get this done, and we can get it done."
+    restatement: "Reach a deficit agreement based on his bipartisan debt commission's principles."
+    type: action
+    theme: budget
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "long-term deficit reduction agreement"
+      record: "enacted legislation (Congress.gov); CBO cost estimates"
+      criterion: "a bipartisan deficit reduction law is enacted"
+      ambiguity: "\"Based on the principles of my bipartisan debt commission\" is not defined; any bipartisan law combining spending cuts and revenue counts."
+    uncertainty:
+      extraction: probable
+      note: "\"This\" in ¶45.4 refers back to the agreement in ¶45.1."
+    links: []
+
+  - id: obama-2012-no-deficit-tax-cuts-wealthy
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶46.1
+      quote: "as long as I'm President, I never will"
+    restatement: "Never agree to lower deficits through new tax breaks for the wealthy."
+    type: ongoing
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "tax laws he signs"
+      record: "enacted legislation (Congress.gov); JCT/CBO estimates"
+      criterion: "he signs no law that adds deficit-financed tax cuts for the highest earners"
+      ambiguity: "\"Go along with\" is read as signing into law; \"that\" refers to Romney's plan in ¶45.5."
+    uncertainty:
+      extraction: probable
+      note: "\"That\" refers to ¶45.5 (lowering deficits by spending trillions on tax breaks for the wealthy)."
+    links: []
+
+  - id: obama-2012-tax-reform
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶44.1
+      quote: "I want to reform the Tax Code so that it's simple, fair"
+    - in: inaugural
+      ref: ¶15.2
+      quote: "revamp our Tax Code"
+    restatement: "Reform the tax code to make it simple and fair."
+    group: obama-2012-tax-reform
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "Internal Revenue Code"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a broad tax reform law is enacted"
+      ambiguity: "\"Reform\" and \"simple, fair\" are not defined; an enacted overhaul of the income tax counts."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: bush-2004-tax-reform
+
+  - id: obama-2012-top-rates-clinton
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶44.1
+      quote: "asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President"
+    restatement: "Return tax rates on income over $250,000 to Clinton-era levels."
+    group: obama-2012-tax-reform
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "top income tax rates"
+      record: "Internal Revenue Code; enacted legislation (Congress.gov)"
+      criterion: "income above $250,000 is taxed at the Clinton-era top rates (36% and 39.6%)"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-medicare-no-voucher
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶48.1
+      quote: "I will never—I will never—turn Medicare into a voucher."
+    restatement: "Never turn Medicare into a voucher."
+    group: obama-2012-medicare
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "Medicare's benefit structure"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "no law converting Medicare into a voucher or premium-support system is enacted"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-medicare-strengthen
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶48.4
+      quote: "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care"
+    restatement: "Reform and strengthen Medicare for the long haul by reducing health care costs."
+    group: obama-2012-medicare
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "Medicare's long-term finances"
+      record: "Medicare Trustees Reports (HI trust fund depletion date)"
+      criterion: "the projected depletion date of the Medicare trust fund is later at the end of the term than at its start"
+      ambiguity: "\"Strengthen for the long haul\" needs a measure; the Trustees' projected depletion date is the proxy."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-medicare-seniors-costs
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶48.4
+      quote: "not by asking seniors to pay thousands of dollars more"
+    restatement: "Not ask seniors to pay thousands of dollars more for Medicare."
+    group: obama-2012-medicare
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "Medicare beneficiaries' costs"
+      record: "CMS premium and cost-sharing rules; enacted legislation"
+      criterion: "no change he signs raises a typical beneficiary's Medicare costs by thousands of dollars"
+      ambiguity: "\"Thousands of dollars\" has no period; a per-beneficiary increase of $1,000 or more a year is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-social-security-strengthen
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶49.1
+      quote: "we will keep the promise of Social Security by taking the responsible steps to strengthen it"
+    restatement: "Strengthen Social Security."
+    group: obama-2012-social-security
+    type: action
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "Social Security's long-range finances"
+      record: "Social Security Trustees Reports; enacted legislation"
+      criterion: "a law that improves Social Security's long-range solvency is enacted"
+      ambiguity: "\"Responsible steps to strengthen\" is not defined; any enacted improvement in projected solvency counts."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-protect-social-security
+
+  - id: obama-2012-social-security-no-privatise
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶49.1
+      quote: "not by turning it over to Wall Street"
+    restatement: "Not turn Social Security over to Wall Street."
+    group: obama-2012-social-security
+    type: ongoing
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "Social Security's structure"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "no law diverts Social Security funds into private investment accounts"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-health-costs
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶16.2
+      quote: "reduce the cost of health care"
+    restatement: "Reduce the cost of health care."
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "national health spending"
+      record: "CMS National Health Expenditure Accounts"
+      criterion: "health spending per person grows more slowly during the term than in the preceding term"
+      ambiguity: "\"Reduce the cost\" may mean lower levels or slower growth; slower per-person growth is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-build-together
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶12.4
+      quote: "Now more than ever, we must do these things together, as one nation and one people."
+    restatement: "Together, train math and science teachers and build roads, networks and labs."
+    type: action
+    theme: infrastructure
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"These things\" are those named in ¶12.3."
+    links: []
+
+  - id: obama-2012-remake-government
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶15.2
+      quote: "So we must harness new ideas and technology to remake our government"
+    restatement: "Use new ideas and technology to remake government."
+    group: obama-2012-new-ideas
+    type: action
+    theme: government
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-empower-skills
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶15.2
+      quote: "empower our citizens with the skills they need to work harder, learn more, reach higher"
+    restatement: "Give citizens the skills they need."
+    group: obama-2012-new-ideas
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: obama-2012-equal-pay
-    theme: labor
-    restatement: Close the gender pay gap; women earning a living equal to their efforts.
+    kind: ambition
     sources:
-      - in: inaugural
-        ref: "¶24.2"
-        quote: >
-          For our journey is not complete until our wives, our mothers and
-          daughters can earn a living equal to their efforts.
-    metric:
-      present: true
-      quantity: gender pay gap (women's earnings relative to men's)
-      record: Census/BLS earnings by sex
-    threshold:
-      present: true
-      stated: "equal / parity (direction, no target level)"
+    - in: inaugural
+      ref: ¶24.2
+      quote: "our wives, our mothers and daughters can earn a living equal to their efforts"
+    restatement: "Women earn a living equal to their efforts."
+    group: obama-2012-journey
+    type: outcome
+    theme: rights
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: "\"our journey is not complete until\" — a generational goal, not a named action"
-    measurable: "partial"
-    notes: >
-      A real metric with a clean record and a clear direction, but no target
-      level, no deadline, and no named instrument — the same shape as the 2008
-      equal-pay aspiration, restated here as a collective task rather than a
-      pledge to act.
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "gender pay gap"
+      record: "Census Bureau / BLS women's-to-men's earnings ratio"
+      criterion: "the women's-to-men's earnings ratio narrows during the term"
+      ambiguity: "\"Equal to their efforts\" has no threshold; a narrowing pay gap is the reading."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-equal-pay
 
-  - id: obama-2012-lgbt-equality
-    theme: civil-rights
-    restatement: Equal treatment under the law for gay Americans.
+  - id: obama-2012-gay-equality
+    kind: ambition
     sources:
-      - in: inaugural
-        ref: "¶24.3"
-        quote: >
-          Our journey is not complete until our gay brothers and sisters are
-          treated like anyone else under the law—for if we are truly created
-          equal, then surely the love we commit to one another must be equal as
-          well.
-    metric:
-      present: false
-      quantity: "\"treated like anyone else under the law\" spans all law — no single agreed record"
-      record: null
-    threshold:
-      present: true
-      stated: "equal treatment (direction)"
+    - in: inaugural
+      ref: ¶24.3
+      quote: "our gay brothers and sisters are treated like anyone else under the law"
+    restatement: "Gay Americans treated like anyone else under the law."
+    group: obama-2012-journey
+    type: outcome
+    theme: rights
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: null
-    measurable: "no"
-    notes: >
-      A directional equality goal with no named quantity, deadline, or
-      instrument. Read narrowly as marriage equality it becomes a binary policy
-      metric (federal recognition of same-sex marriage), which would push it to
-      partial; but the sentence is broader than marriage, so there is no clean
-      measure — that boundary is the dispute.
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "legal equality for gay Americans"
+      record: "federal statutes, court rulings and agency rules"
+      criterion: "same-sex couples' marriages are recognised under federal law during the term"
+      ambiguity: "\"Like anyone else under the law\" covers many laws; marriage, named in the sentence, is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: obama-2012-voting-access
-    theme: voting
-    restatement: End hours-long waits to vote.
+  - id: obama-2012-voting-waits
+    kind: ambition
     sources:
-      - in: inaugural
-        ref: "¶24.4"
-        quote: >
-          Our journey is not complete until no citizen is forced to wait for
-          hours to exercise the right to vote.
-    metric:
-      present: true
-      quantity: polling-place wait times
-      record: "no single official series (MIT Election Lab / Survey of the Performance of American Elections)"
-    threshold:
-      present: true
-      stated: "no citizen waits for hours (toward zero hours-long waits)"
+    - in: inaugural
+      ref: ¶24.4
+      quote: "no citizen is forced to wait for hours to exercise the right to vote"
+    restatement: "No citizen has to wait hours to vote."
+    group: obama-2012-journey
+    type: outcome
+    theme: rights
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
-      stated: "\"our journey is not complete until\" — a goal; no named action (the election-administration commission came later)"
-    measurable: "partial"
-    notes: >
-      A near-measurable target — wait times are tracked in survey data — but
-      there is no authoritative federal record, no deadline, no named
-      instrument, and "hours" sets a fuzzy threshold. Elections are run by the
-      states, so this is largely an outcome he cannot directly control.
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "polling-place waiting times"
+      record: "Survey of the Performance of American Elections; EAC Election Administration and Voting Survey"
+      criterion: "hours-long waits to vote are eliminated or sharply reduced by the 2016 election"
+      ambiguity: "\"Wait for hours\" sets a threshold but no share; a fall in the share of voters waiting over an hour is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: obama-2012-immigration-reform
-    theme: immigration
-    restatement: Reform immigration to welcome immigrants and retain foreign students and engineers.
+    kind: ambition
     sources:
-      - in: inaugural
-        ref: "¶24.5"
-        quote: >
-          Our journey is not complete until we find a better way to welcome the
-          striving, hopeful immigrants who still see America as a land of
-          opportunity—until bright young students and engineers are enlisted in
-          our workforce rather than expelled from our country.
-    metric:
-      present: false
-      quantity: "no clean quantity (\"a better way to welcome\" names no specific policy or count)"
-      record: null
-    threshold:
-      present: false
-      stated: "\"a better way\" / \"enlisted... rather than expelled\" — directional imagery, no level"
+    - in: inaugural
+      ref: ¶24.5
+      quote: "we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country"
+    restatement: "Find a better way to welcome immigrants and keep foreign students and engineers."
+    group: obama-2012-journey
+    type: action
+    theme: immigration
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: false
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US immigration law"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "an immigration reform law is enacted that lets foreign graduates and engineers stay and work"
+      ambiguity: "\"A better way\" is not defined; an enacted reform covering foreign graduates is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-children-safe
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶24.6
+      quote: "all our children, from the streets of Detroit to the hills of Appalachia, to the quiet lanes of Newtown, know that they are cared for and cherished and always safe from harm"
+    restatement: "All children cared for and safe from harm."
+    group: obama-2012-journey
+    type: outcome
+    theme: crime-justice
+    deadline:
       stated: null
-    measurable: "no"
-    notes: >
-      A concrete policy area (comprehensive immigration reform; keeping
-      high-skilled graduates) framed aspirationally — "find a better way" names
-      no policy, number, deadline, or instrument. Measurable at most as a yes/no
-      on whether reform was enacted, the widest possible boundary.
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-israel-security
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶38.4
+      quote: "Our commitment to Israel's security must not waver"
+    restatement: "Unwavering commitment to Israel's security."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-mideast-peace
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶38.4
+      quote: "and neither must our pursuit of peace"
+    restatement: "Keep pursuing peace in the Middle East."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-benghazi-justice
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶20.1-20.2
+      quote: "And that's exactly what we're going to do."
+    restatement: "Investigate Benghazi and bring those who killed Americans to justice."
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "perpetrators of the 2012 Benghazi attack"
+      record: "DOJ indictments and FBI arrest records"
+      criterion: "people responsible for the Benghazi killings are captured or charged during the term"
+      ambiguity: "\"Bring them to justice\" has no number; at least one perpetrator captured and charged is the reading."
+    uncertainty:
+      extraction: probable
+      note: "\"That\" in ¶20.2 refers to the investigation and pursuit described in ¶20.1."
+    links: []
+
+  - id: obama-2012-steady-leadership
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶36.1
+      quote: "So what we need to do with respect to the Middle East is strong, steady leadership"
+    restatement: "Strong, steady leadership in the Middle East."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-mideast-partners
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶69.2-72.1
+      quote: "what I've done—throughout my Presidency and will continue to do—is, number one, make sure that these countries are supporting our counterterrorism efforts"
+    restatement: "Keep pressing Middle East governments to back counterterrorism, Israel's security, minorities and women, and to develop their economies."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-no-nation-building-abroad
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶72.2
+      quote: "we can't continue to do nation-building in these regions"
+    restatement: "Stop doing nation-building in the Middle East."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-syria-help-opposition
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶80.2
+      quote: "we are going to do everything we can to make sure that we are helping the opposition"
+    restatement: "Do everything possible to help the Syrian opposition."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US aid to the Syrian opposition"
+      record: "State Department and USAID assistance records"
+      criterion: "the US provides material aid to the Syrian opposition during the term"
+      ambiguity: "\"Everything we can\" has no bound; any material aid is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-syria-vetted-help
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶80.4
+      quote: "And we have to do so making absolutely certain that we know who we are helping"
+    - in: debate
+      ref: ¶93.5
+      quote: "And we have to take the same kind of steady, thoughtful leadership when it comes to Syria."
+    restatement: "Help in Syria only when sure who is being helped, so arms don't reach enemies."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-syria-transition
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶101.2-101.4
+      quote: "That's the kind of leadership we'll continue to show."
+    restatement: "Keep promoting a moderate leadership and transition in Syria so Asad goes."
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "Syrian leadership"
+      record: "public record of Syria's government"
+      criterion: "Bashar al-Asad leaves power by the end of the term"
+      ambiguity: "The words commit to keep trying (\"try to promote\"); Asad's departure, the stated aim, is the reading."
+    uncertainty:
+      extraction: probable
+      note: "\"That kind of leadership\" (¶101.4) refers to the policy described in ¶101.2."
+    links: []
+
+  - id: obama-2012-egypt-economy
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶108.2
+      quote: "we will help them with respect to developing their own economy"
+    restatement: "Help Egypt develop its economy."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US economic assistance to Egypt"
+      record: "foreignassistance.gov; USAID Egypt programmes"
+      criterion: "the US provides economic (non-military) assistance to Egypt during the term"
+      ambiguity: "\"Help\" has no amount; continued economic aid is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-israel-if-attacked
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶213.2
+      quote: "And if Israel is attacked, America will stand with Israel."
+    - in: debate
+      ref: ¶215.1
+      quote: "I will stand with Israel if they are attacked."
+    restatement: "Stand with Israel if it is attacked."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: bush-2000-stand-by-israel
+
+  - id: obama-2012-israel-exercise
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶215.3
+      quote: "In fact, this week, we'll be carrying out the largest military exercise with Israel in history"
+    restatement: "Hold the largest military exercise with Israel in history this week."
+    type: action
+    theme: defense
+    deadline:
+      stated: "this week"
+      applied: 2012-10-28
+    verifiability:
+      level: high
+      object: "US-Israel military exercise"
+      record: "DoD and IDF announcements"
+      criterion: "the exercise is held in the week of the debate"
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: obama-2012-iran-no-nuke
-    theme: foreign-policy
-    restatement: Prevent Iran from obtaining a nuclear weapon while he is President.
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶216.1"
-        quote: >
-          But to the issue of Iran, as long as I'm President of the
-          United States, Iran will not get a nuclear weapon.
-    metric:     { present: true, stated: whether Iran obtains a nuclear weapon (binary) }
-    threshold:  { present: true, stated: zero — Iran does not get one }
-    deadline:   { present: true, stated: for the duration of his presidency }
-    instrument: { present: true, stated: sanctions, diplomacy, and all options on the table }
-    measurable: "full"
-    notes: >
-      Binary outcome, bounded to his term, with a named instrument. The
-      endpoint is checkable, though it is a prevention rather than a
-      numeric target.
+    - in: debate
+      ref: ¶216.1
+      quote: "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon."
+    - in: debate
+      ref: ¶237.1
+      quote: "then we are going to take all options necessary to make sure they don't have a nuclear weapon"
+    - in: debate
+      ref: ¶247.3-247.4
+      quote: "And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon."
+    restatement: "Iran will not get a nuclear weapon while he is President."
+    group: obama-2012-iran
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: high
+      object: "Iran's nuclear weapons status"
+      record: "IAEA reports on Iran"
+      criterion: "Iran does not acquire a nuclear weapon during the term"
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: refines
+      to: obama-2008-iran-diplomacy
+
+  - id: obama-2012-iran-pressure
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶234.1
+      quote: "In the meantime, though, we're not going to let up the pressure until we have clear evidence that that takes place."
+    - in: debate
+      ref: ¶247.3-247.4
+      quote: "And we are going to continue to keep the pressure on"
+    restatement: "Keep sanctions pressure on Iran until there is clear evidence it has given up its nuclear programme."
+    group: obama-2012-iran
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "sanctions on Iran"
+      record: "Treasury OFAC and State Department sanctions actions; executive orders"
+      criterion: "sanctions are not eased before the IAEA verifies that Iran has met its nuclear obligations"
+      ambiguity: "\"Clear evidence\" is not defined; IAEA verification is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-iran-all-options
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶218.1
+      quote: "a United States President—me—who said we're not going to take any options off the table"
+    - in: debate
+      ref: ¶237.1
+      quote: "And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary"
+    restatement: "Keep all options, including force, on the table against Iran."
+    group: obama-2012-iran
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-iran-deal-terms
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶230.3
+      quote: "But the deal we'll accept is, they end their nuclear program."
+    restatement: "Accept only a deal in which Iran ends its nuclear programme."
+    group: obama-2012-iran
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "terms of any nuclear agreement with Iran"
+      record: "text of agreements (e.g. the Joint Plan of Action, JCPOA)"
+      criterion: "any agreement he accepts requires Iran to end its nuclear programme"
+      ambiguity: "\"End their nuclear program\" may mean any weapons path or all enrichment; ending any path to a weapon is the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-iran-no-endless-talks
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶235.2
+      quote: "We're not going to allow Iran to perpetually engage in negotiations that lead nowhere."
+    restatement: "Not let Iran drag out negotiations that lead nowhere."
+    group: obama-2012-iran
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-press-china
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶334.3
+      quote: "We absolutely have to make more progress, and that's why we're going to keep on pressing."
+    restatement: "Keep pressing China on trade and its currency."
+    type: ongoing
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US trade enforcement against China"
+      record: "USTR WTO dispute filings; Treasury currency reports"
+      criterion: "the US files new trade enforcement actions against China or presses on its currency during the term"
+      ambiguity: "\"Keep on pressing\" has no measure; new WTO cases or formal currency pressure are the reading."
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-china-currency
+
+  - id: obama-2012-pacific-presence
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶336.1
+      quote: "we're also sending a very clear signal that America is a Pacific power, that we are going to have a presence there"
+    restatement: "Keep a US presence in the Asia-Pacific."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "US military presence in the Asia-Pacific"
+      record: "DoD deployment and basing data"
+      criterion: "US forces stationed in the Asia-Pacific are maintained or increased during the term"
+      ambiguity: "\"Presence\" has no size; maintained or growing deployments are the reading."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-asia-shipping
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶336.2-336.5
+      quote: "We are working with countries in the region to make sure, for example, that ships can pass through, that commerce continues."
+    restatement: "Keep working with Asian countries so shipping and commerce can pass."
+    group: obama-2012-asia
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"That kind of leadership\" (¶336.5) is read as continuing the work in ¶336.2-336.3."
+    links: []
+
+  - id: obama-2012-asia-trade
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶336.2-336.5
+      quote: "And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards."
+    restatement: "Organise trade relations with Asian countries other than China."
+    group: obama-2012-asia
+    type: action
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: medium
+      object: "trade agreements with Asia-Pacific countries"
+      record: "USTR agreement texts"
+      criterion: "a trade agreement with Asia-Pacific countries other than China is concluded during the term"
+      ambiguity: "\"Organizing trade relations\" names no agreement; the Trans-Pacific Partnership talks are the reading."
+    uncertainty:
+      extraction: probable
+      note: "\"That kind of leadership\" (¶336.5) is read as continuing the work in ¶336.2-336.3."
+    links: []
+
+  - id: obama-2012-win-the-peace
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶20.5
+      quote: "we must carry those lessons into this time as well"
+    restatement: "Carry the lessons of winning the peace and turning enemies into friends into this time."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-resolve-peacefully
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.2
+      quote: "We will show the courage to try and resolve our differences with other nations peacefully"
+    restatement: "Try to resolve differences with other nations peacefully."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-alliances
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶22.1
+      quote: "America will remain the anchor of strong alliances in every corner of the globe."
+    restatement: "Remain the anchor of strong alliances around the globe."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-renew-institutions
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶22.2
+      quote: "And we will renew those institutions that extend our capacity to manage crisis abroad"
+    restatement: "Renew the institutions that help manage crises abroad."
+    type: action
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-support-democracy
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶22.3
+      quote: "We will support democracy from Asia to Africa, from the Americas to the Middle East"
+    restatement: "Support democracy from Asia to Africa, the Americas and the Middle East."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: shared
+      to: bush-2004-influence-for-freedom
+
+  - id: obama-2012-hope-to-poor
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶22.4
+      quote: "And we must be a source of hope to the poor, the sick, the marginalized, the victims of prejudice"
+    restatement: "Be a source of hope to the poor, the sick, the marginalised and victims of prejudice."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: obama-2012-listen-fight-work
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶381.2
+      quote: "I promise you I will always listen to your voices, I will fight for your families, and I will work every single day to make sure that America continues to be the greatest nation on Earth."
+    restatement: "Always listen, fight for families and work every day for America."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2017-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+    - kind: repeats
+      to: obama-2008-work-tirelessly
