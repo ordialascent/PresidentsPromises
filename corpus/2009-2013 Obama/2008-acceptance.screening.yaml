@@ -1,0 +1,98 @@
+# Screening ledger for 2008-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) what "now is the time" to do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2008-acceptance
+protocol: 1
+rows:
+  - ref: "¶15.5"
+    decision: others
+    note: "Asks voters to reject a third Bush term."
+  - ref: "¶16.3"
+    decision: describe
+    note: "Predicts what the opponent's convention will say."
+  - { ref: "¶32.4", decision: include, promises: [obama-2008-keep-american-promise] }
+  - ref: "¶34.1"
+    decision: describe
+    note: "Defines the American promise (\"what we will\")."
+  - { ref: "¶39.1", decision: include, promises: [obama-2008-keep-american-promise] }
+  - { ref: "¶41.1", decision: include, promises: [obama-2008-end-offshoring-tax-breaks, obama-2008-tax-credit-us-jobs] }
+  - { ref: "¶42.1", decision: include, promises: [obama-2008-capgains-smallbiz] }
+  - { ref: "¶43.1", decision: include, promises: [obama-2008-tax-cut-95] }
+  - ref: "¶43.2"
+    decision: include
+    promises: [obama-2008-no-tax-rise-under-250k]
+    note: "Soft restatement (\"the last thing we should do\"); recorded as an occurrence of the firm debate pledge."
+  - { ref: "¶44.1", decision: include, promises: [obama-2008-end-mideast-oil] }
+  - { ref: "¶47.1", decision: include, promises: [obama-2008-tap-natural-gas, obama-2008-clean-coal, obama-2008-nuclear-power] }
+  - { ref: "¶47.2", decision: include, promises: [obama-2008-auto-retool] }
+  - { ref: "¶47.3", decision: include, promises: [obama-2008-afford-efficient-cars] }
+  - { ref: "¶47.4", decision: include, promises: [obama-2008-renewables-150b, obama-2008-green-jobs-5m] }
+  - ref: "¶49.1"
+    decision: include
+    added: true
+    promises: [obama-2008-world-class-education]
+    note: "Untriggered; \"now is the time to\" in his list of changes as President (¶39.3). Recorded as an ambition."
+  - { ref: "¶49.3", decision: include, promises: [obama-2008-education-chance] }
+  - { ref: "¶49.4", decision: include, promises: [obama-2008-early-childhood] }
+  - { ref: "¶49.5", decision: include, promises: [obama-2008-recruit-teachers, obama-2008-teacher-pay-support] }
+  - { ref: "¶49.6", decision: include, promises: [obama-2008-teacher-accountability] }
+  - { ref: "¶49.7", decision: include, promises: [obama-2008-service-college] }
+  - ref: "¶50.1"
+    decision: include
+    added: true
+    promises: [obama-2008-health-care-all]
+    note: "Untriggered; \"now is the time to\" in the list of what change would mean \"if I am President\" (¶39.3). Recorded as an ambition."
+  - { ref: "¶50.2", decision: include, promises: [obama-2008-lower-premiums] }
+  - ref: "¶50.3"
+    decision: include
+    added: true
+    promises: [obama-2008-congress-style-coverage]
+    note: "Untriggered future statement of his plan (\"you'll be able to get\")."
+  - { ref: "¶50.4", decision: include, promises: [obama-2008-preexisting-conditions] }
+  - ref: "¶51.1"
+    decision: include
+    added: true
+    promises: [obama-2008-paid-sick-days, obama-2008-family-leave]
+    note: "Untriggered; \"now is the time to\" in his list of changes as President (¶39.3). Recorded as an ambition."
+  - ref: "¶52.1"
+    decision: include
+    added: true
+    promises: [obama-2008-bankruptcy-pensions, obama-2008-protect-social-security]
+    note: "Untriggered; \"now is the time to\" in his list of changes as President (¶39.3). Recorded as an ambition."
+  - { ref: "¶53.1", decision: include, promises: [obama-2008-equal-pay] }
+  - { ref: "¶54.1", decision: include, promises: [obama-2008-pay-for-every-dime, obama-2008-close-loopholes-havens] }
+  - { ref: "¶54.2", decision: include, promises: [obama-2008-budget-line-by-line, obama-2008-programs-work-better] }
+  - ref: "¶55.1"
+    decision: describe
+    note: "Introduces the call for responsibility."
+  - { ref: "¶55.4", decision: include, promises: [obama-2008-ladders-young-men] }
+  - ref: "¶55.5"
+    decision: others
+    note: "Responsibility of parents and fathers."
+  - ref: "¶58.2"
+    decision: past
+    note: "What he argued in the Senate."
+  - { ref: "¶63.1", decision: include, promises: [obama-2008-defend-nation, obama-2008-clear-mission, obama-2008-troop-equipment, obama-2008-veterans-care] }
+  - { ref: "¶64.1", decision: include, promises: [obama-2008-end-iraq-war, obama-2008-afghanistan-fight] }
+  - { ref: "¶64.2", decision: include, promises: [obama-2008-rebuild-military] }
+  - { ref: "¶64.3", decision: include, promises: [obama-2008-iran-diplomacy, obama-2008-curb-russia] }
+  - { ref: "¶64.4", decision: include, promises: [obama-2008-new-partnerships] }
+  - { ref: "¶64.5", decision: include, promises: [obama-2008-moral-standing] }
+  - ref: "¶65.1"
+    decision: describe
+    note: "Summary of ¶63.1-64.5."
+  - ref: "¶66.1"
+    decision: describe
+    note: "Campaign conduct toward his opponent; ends before the term."
+  - { ref: "¶66.2", decision: include, promises: [obama-2008-civil-politics] }
+  - { ref: "¶69.5", decision: include, promises: [obama-2008-common-purpose] }
+  - ref: "¶86.2"
+    decision: describe
+    note: "Quotes Martin Luther King Jr.; not the speaker's own commitment."
+  - ref: "¶87.8"
+    decision: describe
+    note: "Rhetorical call (\"march into the future\"); no object."
+
+#   45 rows: 35 include (5 of them added), 10 excluded (describe 7, others 2, past 1)
