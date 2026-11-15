@@ -1,5 +1,5 @@
 import { CORPUS_TERMS } from '../content/promises.generated.js';
-import { METHOD_META, QUALITY_META, verdictFor, type CorpusPromise } from './model.js';
+import { QUALITY_META, verdictFor, type CorpusPromise } from './model.js';
 
 /** Every record by id, so a link can name what it points at. */
 const BY_ID = new Map(
@@ -21,7 +21,6 @@ const TYPE_LABEL: Record<string, string> = {
 /** The protocol's description of one record: how it was read, and how it could be checked. */
 function ProtocolFacts({ promise }: { promise: CorpusPromise }) {
   const f = promise.protocol;
-  if (!f) return null;
   const v = f.verifiability;
   const rows: [string, React.ReactNode][] = [
     ['Type', TYPE_LABEL[f.type] ?? f.type],
@@ -124,11 +123,7 @@ export function PromiseDetail({
       ))}
 
       <hr className="pc-detail-rule" />
-      {promise.protocol ? (
-        <ProtocolFacts promise={promise} />
-      ) : (
-        <p className="pc-detail-legacy">{METHOD_META.legacy.note}</p>
-      )}
+      <ProtocolFacts promise={promise} />
 
       {/* Kept-or-broken lives here once the scoring pass exists; for now the
           tier decides whether there is anything to wait for. */}

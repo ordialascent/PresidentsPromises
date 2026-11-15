@@ -224,12 +224,7 @@ export function PromiseList({
                     {/* What kind of promise it is, held together at the right
                         end so the two never separate across a wrap */}
                     <span className="pl-row-kind">
-                      {p.protocol && <span className="pl-meta">{p.protocol.type}</span>}
-                      {p.method === 'legacy' && (
-                        <span className="pl-meta" title="Earlier extraction, older rubric">
-                          legacy
-                        </span>
-                      )}
+                      <span className="pl-meta">{p.protocol.type}</span>
                       <span className="pl-tier" data-q={p.quality}>
                         {QUALITY_META[p.quality].label}
                       </span>

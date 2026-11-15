@@ -99,7 +99,6 @@ function promise(
   return {
     id,
     kind: 'promise',
-    method: 'legacy',
     theme,
     restatement,
     quality,
@@ -120,6 +119,14 @@ function promise(
         },
       },
     ],
+    protocol: {
+      type: 'action',
+      group: null,
+      deadline: { stated: null, applied: '2013-01-20' },
+      verifiability: { level: quality, object: null, record: null, criterion: null, ambiguity: null },
+      uncertainty: { extraction: 'clear', note: null },
+      links: [],
+    },
   };
 }
 
@@ -130,15 +137,14 @@ function row(surname: string, year: number, p: CorpusPromise): PromiseRow {
     termLabel: `${surname} ${year}`,
     surname,
     speechYear: year,
-    method: 'legacy',
   };
 }
 
 const ROWS: PromiseRow[] = [
-  row('Obama', 2008, promise('a', 'taxes', 'Cut taxes for working families', 'partial', 'I will cut taxes for ninety-five percent of working families.')),
-  row('Bush', 2000, promise('b', 'taxes', 'Return the surplus to taxpayers', 'partial', 'The surplus is the people’s money.')),
-  row('Obama', 2008, promise('c', 'health', 'Guarantee health care coverage', 'no', 'We will keep the promise of affordable health care.')),
-  row('Reagan', 1984, promise('d', 'defense', 'Rebuild the armed forces', 'no', 'Peace through strength, and a stronger military.')),
+  row('Obama', 2008, promise('a', 'taxes', 'Cut taxes for working families', 'medium', 'I will cut taxes for ninety-five percent of working families.')),
+  row('Bush', 2000, promise('b', 'taxes', 'Return the surplus to taxpayers', 'medium', 'The surplus is the people’s money.')),
+  row('Obama', 2008, promise('c', 'health', 'Guarantee health care coverage', 'low', 'We will keep the promise of affordable health care.')),
+  row('Reagan', 1984, promise('d', 'defense', 'Rebuild the armed forces', 'low', 'Peace through strength, and a stronger military.')),
 ];
 
 describe('promise search', () => {
@@ -251,16 +257,16 @@ describe('the promise list under the chart', () => {
 
   it('a bar block is exactly one president crossed with one tier', () => {
     const rows = flattenPromises(CORPUS_TERMS);
-    const term = CORPUS_TERMS.find((t) => t.promises.some((p) => p.quality === 'partial'))!;
-    const segment = { termKey: term.key, quality: 'partial' as Quality };
+    const term = CORPUS_TERMS.find((t) => t.promises.some((p) => p.quality === 'medium'))!;
+    const segment = { termKey: term.key, quality: 'medium' as Quality };
     const inBlock = filterBySegment(rows, segment);
     for (const r of inBlock) {
       expect(r.termKey).toBe(term.key);
-      expect(r.promise.quality).toBe('partial');
+      expect(r.promise.quality).toBe('medium');
     }
     // and it is the number the block itself draws
     const summary = summarize(CORPUS_TERMS).find((s) => s.key === term.key)!;
-    expect(inBlock.length).toBe(summary.counts.partial);
+    expect(inBlock.length).toBe(summary.counts.medium);
     // no block picked is no filter
     expect(filterBySegment(rows, null)).toBe(rows);
   });

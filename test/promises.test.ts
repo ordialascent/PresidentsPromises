@@ -61,10 +61,10 @@ describe('promises overview aggregation', () => {
   it('the corpus-wide tier split matches the current extraction (82 / 181 / 232)', () => {
     // Snapshot anchor — update when the corpus changes. All seven terms are re-extracted
     // under protocol 1 (their promises only; levels stand in for tiers).
-    const c = { full: 0, partial: 0, no: 0 };
+    const c = { high: 0, medium: 0, low: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ full: 82, partial: 181, no: 232 });
-    expect(c.full + c.partial + c.no).toBe(495);
+    expect(c).toEqual({ high: 82, medium: 181, low: 232 });
+    expect(c.high + c.medium + c.low).toBe(495);
   });
 
   it('shares are a proper distribution within each term', () => {
@@ -127,19 +127,19 @@ describe('promises overview aggregation', () => {
   });
 
   it('topic counts follow the tier filter, and the tiers still sum to the whole', () => {
-    // What the page draws when only "full" is left selected in the chart legend.
-    const full = topicCounts(filterByTiers(CORPUS_TERMS, new Set(['full'] as const)));
-    expect(full.reduce((n, t) => n + t.count, 0)).toBe(82);
-    for (const t of full) {
+    // What the page draws when only "high" is left selected in the chart legend.
+    const high = topicCounts(filterByTiers(CORPUS_TERMS, new Set(['high'] as const)));
+    expect(high.reduce((n, t) => n + t.count, 0)).toBe(82);
+    for (const t of high) {
       const manual = CORPUS_TERMS.flatMap((x) => x.promises).filter(
-        (p) => p.theme === t.theme && p.quality === 'full',
+        (p) => p.theme === t.theme && p.quality === 'high',
       ).length;
       expect(t.count).toBe(manual);
     }
-    // a topic with no full promises drops out of the donut entirely
+    // a topic with no high promises drops out of the donut entirely
     const all = topicCounts(CORPUS_TERMS);
-    expect(full.length).toBeLessThanOrEqual(all.length);
-    for (const t of full) expect(all.some((a) => a.theme === t.theme)).toBe(true);
+    expect(high.length).toBeLessThanOrEqual(all.length);
+    for (const t of high) expect(all.some((a) => a.theme === t.theme)).toBe(true);
 
     // splitting the corpus by tier partitions it: the per-tier topic counts add
     // back up to the unfiltered ones, so no promise is double-counted or lost.
@@ -190,9 +190,9 @@ describe('promises overview aggregation', () => {
     // an empty selection is read as all three. Every subset the page can turn
     // into a filter therefore leaves promises to draw.
     const subsets = [
-      ['full'], ['partial'], ['no'],
-      ['full', 'partial'], ['full', 'no'], ['partial', 'no'],
-      ['full', 'partial', 'no'],
+      ['high'], ['medium'], ['low'],
+      ['high', 'medium'], ['high', 'low'], ['medium', 'low'],
+      ['high', 'medium', 'low'],
     ] as const;
     for (const shown of subsets) {
       const total = summarize(filterByTiers(CORPUS_TERMS, new Set(shown))).reduce(
@@ -208,7 +208,7 @@ describe('promises overview aggregation', () => {
   });
 
   it('the two filters commute — topic then tier is the same set as tier then topic', () => {
-    const tiers = new Set(['full', 'partial'] as const);
+    const tiers = new Set(['high', 'medium'] as const);
     const picked = new Set(['health']);
     const a = summarize(filterByTiers(filterByTopics(CORPUS_TERMS, picked), tiers));
     const b = summarize(filterByTopics(filterByTiers(CORPUS_TERMS, tiers), picked));
@@ -217,7 +217,7 @@ describe('promises overview aggregation', () => {
     expect(total).toBe(
       topicCounts(filterByTiers(CORPUS_TERMS, tiers)).find((t) => t.theme === 'health')!.count,
     );
-    for (const term of a) expect(term.counts.no).toBe(0);
+    for (const term of a) expect(term.counts.low).toBe(0);
   });
 
   it('deltas are the difference between adjacent terms, both count and points', () => {
@@ -235,18 +235,18 @@ describe('promises overview aggregation', () => {
     }
   });
 
-  it('every tier has verification copy, and only full is waiting on a verdict', () => {
+  it('every tier has verification copy, and only low is never checked', () => {
     for (const q of QUALITIES) {
       const v = VERDICT_PLACEHOLDER[q];
       expect(v.label).toBeTruthy();
       expect(v.note).toBeTruthy();
       expect(v.mark).toBeTruthy();
     }
-    // the scoring pass starts (and for now, stops) at the fully verifiable tier,
-    // and the two it skips are skipped for different reasons
-    expect(VERDICT_PLACEHOLDER.full.label).toMatch(/pending/i);
-    expect(VERDICT_PLACEHOLDER.partial.label).toMatch(/scope/i);
-    expect(VERDICT_PLACEHOLDER.no.label).toMatch(/infeasible/i);
+    // high and medium get verdicts (medium after its stated judgement call);
+    // low never does
+    expect(VERDICT_PLACEHOLDER.high.label).toMatch(/pending/i);
+    expect(VERDICT_PLACEHOLDER.medium.label).toMatch(/pending/i);
+    expect(VERDICT_PLACEHOLDER.low.label).toMatch(/infeasible/i);
 
     // the list row shows the same status in one lower-case phrase; it must say
     // the same thing as the panel, or a promise reads one way in the list and
@@ -256,6 +256,5 @@ describe('promises overview aggregation', () => {
       expect(v.tag).toBe(v.tag.toLowerCase());
       expect(v.label.toLowerCase()).toContain(v.tag);
     }
-    expect(new Set(QUALITIES.map((q) => VERDICT_PLACEHOLDER[q].tag)).size).toBe(QUALITIES.length);
   });
 });

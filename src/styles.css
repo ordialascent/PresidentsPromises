@@ -11,20 +11,20 @@
   --decoupled: #c084fc;
   --series: #123c6b;
   --target: #f0a202;
-  /* Measurability tiers as a single-hue ladder in Old Glory Blue: full is the
-     full navy, partial is that navy mixed 50/50 with white, none is white. A
+  /* Verifiability tiers as a single-hue ladder in Old Glory Blue: high is the
+     full navy, medium is that navy mixed 50/50 with white, low is white. A
      quality axis applied identically to every president — NOT kept/broken, NOT
      a party coding. `-line`/`-ink` variants keep connectors and on-fill numbers
      legible against the parchment. */
-  --q-full: #0a3161;
-  --q-partial: #8598b0;
-  --q-no: #ffffff;
-  --q-full-line: #0a3161;
-  --q-partial-line: #6f86a0;
-  --q-no-line: #9aa7b6;
-  --q-full-ink: #ffffff;
-  --q-partial-ink: #10243c;
-  --q-no-ink: #2b2117;
+  --q-high: #0a3161;
+  --q-medium: #8598b0;
+  --q-low: #ffffff;
+  --q-high-line: #0a3161;
+  --q-medium-line: #6f86a0;
+  --q-low-line: #9aa7b6;
+  --q-high-ink: #ffffff;
+  --q-medium-ink: #10243c;
+  --q-low-ink: #2b2117;
   /* Topics are a single accent (Old Glory Red); the selected slice holds it at
      full strength and the rest wash back to a tint. */
   --topic: #b31942;
@@ -178,9 +178,9 @@ main {
 /* the leading colour-key column takes the bar-chart tier fills */
 .veri-swatch-col,
 .veri-swatch { width: 16px; padding: 0; }
-.veri-swatch[data-q='full'] { background: var(--q-full); }
-.veri-swatch[data-q='partial'] { background: var(--q-partial); }
-.veri-swatch[data-q='no'] { background: var(--q-no); }
+.veri-swatch[data-q='high'] { background: var(--q-high); }
+.veri-swatch[data-q='medium'] { background: var(--q-medium); }
+.veri-swatch[data-q='low'] { background: var(--q-low); }
 .veri-yes { color: var(--ink); }
 .veri-q { color: var(--dim); }
 
@@ -255,9 +255,9 @@ main {
   display: inline-block;
   box-shadow: inset 0 0 0 1px rgba(43, 33, 23, 0.28);
 }
-.pc-swatch[data-q="full"] { background: var(--q-full); }
-.pc-swatch[data-q="partial"] { background: var(--q-partial); }
-.pc-swatch[data-q="no"] { background: var(--q-no); }
+.pc-swatch[data-q="high"] { background: var(--q-high); }
+.pc-swatch[data-q="medium"] { background: var(--q-medium); }
+.pc-swatch[data-q="low"] { background: var(--q-low); }
 .pc-legend-n {
   color: var(--ink);
   font-variant-numeric: tabular-nums;
@@ -302,9 +302,9 @@ main {
   stroke-width: 1;
   transition: opacity 120ms ease;
 }
-.pc-seg[data-q="full"] { fill: var(--q-full); }
-.pc-seg[data-q="partial"] { fill: var(--q-partial); }
-.pc-seg[data-q="no"] { fill: var(--q-no); }
+.pc-seg[data-q="high"] { fill: var(--q-high); }
+.pc-seg[data-q="medium"] { fill: var(--q-medium); }
+.pc-seg[data-q="low"] { fill: var(--q-low); }
 .pc-svg:hover .pc-seg:not(:hover) { opacity: 0.72; }
 .pc-seg[data-on="true"] {
   stroke: var(--ink);
@@ -312,7 +312,7 @@ main {
   opacity: 1 !important;
 }
 /* on the white block, an ink outline is invisible — use the dark base */
-.pc-seg[data-q="partial"][data-on="true"] { stroke: var(--bg); }
+.pc-seg[data-q="medium"][data-on="true"] { stroke: var(--bg); }
 
 .pc-seg-n {
   font-family: var(--font-mono);
@@ -322,18 +322,18 @@ main {
   pointer-events: none;
   font-variant-numeric: tabular-nums;
 }
-.pc-seg-n[data-q="full"] { fill: var(--q-full-ink); }
-.pc-seg-n[data-q="partial"] { fill: var(--q-partial-ink); }
-.pc-seg-n[data-q="no"] { fill: var(--q-no-ink); }
+.pc-seg-n[data-q="high"] { fill: var(--q-high-ink); }
+.pc-seg-n[data-q="medium"] { fill: var(--q-medium-ink); }
+.pc-seg-n[data-q="low"] { fill: var(--q-low-ink); }
 
 .pc-link line {
   stroke-width: 1;
   opacity: 0.55;
   stroke-dasharray: 3 3;
 }
-.pc-link[data-q="full"] line { stroke: var(--q-full-line); }
-.pc-link[data-q="partial"] line { stroke: var(--q-partial-line); opacity: 0.4; }
-.pc-link[data-q="no"] line { stroke: var(--q-no-line); }
+.pc-link[data-q="high"] line { stroke: var(--q-high-line); }
+.pc-link[data-q="medium"] line { stroke: var(--q-medium-line); opacity: 0.4; }
+.pc-link[data-q="low"] line { stroke: var(--q-low-line); }
 .pc-link-label {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -621,9 +621,9 @@ main {
 .pl-tier {
   font-weight: 600;
 }
-.pl-tier[data-q="full"] { color: var(--q-full); }
-.pl-tier[data-q="partial"] { color: var(--q-partial-line); }
-.pl-tier[data-q="no"] { color: var(--q-no-line); }
+.pl-tier[data-q="high"] { color: var(--q-high); }
+.pl-tier[data-q="medium"] { color: var(--q-medium-line); }
+.pl-tier[data-q="low"] { color: var(--q-low-line); }
 
 /* The recurrence: text too. A circle read as a control the moment it sat next
    to the tier — round things on this board are clickable. */
@@ -797,9 +797,9 @@ main {
   flex-direction: column;
   gap: 10px;
 }
-.pc-detail[data-q="full"] { box-shadow: inset 3px 0 0 var(--q-full); }
-.pc-detail[data-q="partial"] { box-shadow: inset 3px 0 0 var(--q-partial); }
-.pc-detail[data-q="no"] { box-shadow: inset 3px 0 0 var(--q-no); }
+.pc-detail[data-q="high"] { box-shadow: inset 3px 0 0 var(--q-high); }
+.pc-detail[data-q="medium"] { box-shadow: inset 3px 0 0 var(--q-medium); }
+.pc-detail[data-q="low"] { box-shadow: inset 3px 0 0 var(--q-low); }
 
 /* The close control is all that is left up here, so it comes out of the flow
    and sits in the corner — in the flow it held a whole empty band above the
@@ -924,11 +924,11 @@ main {
   font-weight: 700;
   line-height: 1;
 }
-/* A full promise is the only one with a verdict on the way, so its mark is the
+/* A high promise can be checked without any judgement call, so its mark is the
    only one that carries the tier colour. */
-.pc-verdict-mark[data-q="full"] {
-  color: var(--q-full);
-  border-color: color-mix(in srgb, var(--q-full) 55%, transparent);
+.pc-verdict-mark[data-q="high"] {
+  color: var(--q-high);
+  border-color: color-mix(in srgb, var(--q-high) 55%, transparent);
 }
 .pc-verdict-label {
   font-family: var(--font-mono);
@@ -945,7 +945,7 @@ main {
   line-height: 1.5;
 }
 
-/* ---- Kind switch, legacy marking, protocol facts -------------------- */
+/* ---- Kind switch, protocol facts -------------------- */
 
 /* Promises or ambitions: swaps the whole board's subject. Built like the
    chart's scale toggle, one size up, because it sits above everything. */
@@ -988,27 +988,6 @@ main {
   line-height: 1.5;
 }
 
-/* Legacy terms: same tiers, older ruler. Faded so the eye doesn't compare
-   them one-to-one with re-extracted bars. */
-.pc-bar[data-method="legacy"] .pc-seg { opacity: 0.45; }
-.pc-bar[data-method="legacy"] .pc-seg:hover,
-.pc-bar[data-method="legacy"] .pc-seg[data-on="true"] { opacity: 0.8; }
-.pc-caption {
-  margin: 8px 0 0;
-  color: var(--dim);
-  font-size: 12px;
-  line-height: 1.5;
-}
-.pc-caption-key {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-right: 2px;
-  vertical-align: -1px;
-  background: var(--q-full);
-  opacity: 0.45;
-}
-
 .pl-meta {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -1045,10 +1024,4 @@ main {
 }
 @media (max-width: 520px) {
   .pc-facts-row { grid-template-columns: 1fr; gap: 0; }
-}
-.pc-detail-legacy {
-  margin: 0;
-  color: var(--dim);
-  font-size: 13px;
-  line-height: 1.5;
 }

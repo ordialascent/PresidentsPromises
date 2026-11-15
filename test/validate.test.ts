@@ -196,19 +196,14 @@ describe('validateTerm', () => {
     expect(p('quote: build roads and bridges', 'quote: build roads [...] bridges')).toMatch(/not a contiguous part/);
   });
 
-  it('treats legacy quote problems as warnings, and legacy refs as errors', () => {
-    const legacy = `promises:
+  it('rejects a promises.yaml that does not declare the protocol', () => {
+    const old = `promises:
   - id: t-old
     ref: "¶1.2"
-    quote: We will cut [...] family.
-    measurable: "no"
+    quote: We will cut taxes for every family.
 `;
-    const files = { '2001-acceptance.md': speech, 'promises.yaml': legacy };
-    const r = validateTerm('T', files);
-    expect(r.errors).toEqual([]);
-    expect(r.warnings.join()).toMatch(/not a contiguous part/);
-    const bad = validateTerm('T', { ...files, 'promises.yaml': legacy.replace('¶1.2', '¶7.1') });
-    expect(bad.errors.join()).toMatch(/no paragraph ¶7/);
+    const r = validateTerm('T', { '2001-acceptance.md': speech, 'promises.yaml': old });
+    expect(r.errors.join()).toMatch(/must declare `protocol: 1`/);
   });
 });
 

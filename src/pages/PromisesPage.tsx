@@ -32,7 +32,6 @@ const BY_KIND: Record<Kind, typeof CORPUS_TERMS> = {
   promise: CORPUS_TERMS,
   ambition: termsOfKind(CORPUS_TERMS, 'ambition'),
 };
-const HAS_LEGACY = CORPUS_TERMS.some((t) => t.method === 'legacy');
 
 /**
  * Every topic in the corpus, ordered once by its unfiltered size. The legend is
@@ -112,8 +111,8 @@ export function PromisesPage() {
   // none — so it names no filter and draws no chip.
   const tierFilterOn = pickedTiers.size > 0 && pickedTiers.size < QUALITIES.length;
 
-  // Topics as counted inside the picked categories: pick "full" and the donut is
-  // the topic mix of the fully measurable promises alone. Topics with nothing
+  // Topics as counted inside the picked categories: pick "high" and the donut is
+  // the topic mix of the most verifiable promises alone. Topics with nothing
   // left stay in the list at zero — greyed out and unpickable, not gone.
   const topics = useMemo(
     () => topicCountsIn(filterByTiers(corpus, activeTiers), TOPIC_ORDER),
@@ -261,7 +260,7 @@ export function PromisesPage() {
             ) : (
               <>
                 Wishes and obligations: “we must”, “I want”. A direction, not a commitment, so
-                never given a verdict. Recorded for re-extracted terms only.
+                never given a verdict.
               </>
             )}
           </p>
@@ -318,21 +317,21 @@ export function PromisesPage() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="veri-swatch" data-q="full" aria-hidden="true" />
+                    <td className="veri-swatch" data-q="high" aria-hidden="true" />
                     <th scope="row">High</th>
                     <td className="veri-yes">✓</td>
                     <td className="veri-yes">✓</td>
                     <td className="veri-yes">✓</td>
                   </tr>
                   <tr>
-                    <td className="veri-swatch" data-q="partial" aria-hidden="true" />
+                    <td className="veri-swatch" data-q="medium" aria-hidden="true" />
                     <th scope="row">Medium</th>
                     <td className="veri-yes">✓</td>
                     <td className="veri-yes">✓</td>
                     <td className="veri-q">1 call</td>
                   </tr>
                   <tr>
-                    <td className="veri-swatch" data-q="no" aria-hidden="true" />
+                    <td className="veri-swatch" data-q="low" aria-hidden="true" />
                     <th scope="row">Low</th>
                     <td className="veri-q">?</td>
                     <td className="veri-q">?</td>
@@ -344,12 +343,6 @@ export function PromisesPage() {
                 <em>Object:</em> what it is about. <em>Record:</em> where the outcome shows.{' '}
                 <em>Criterion:</em> what counts as kept. A <em>call</em> is a stated judgement.
               </p>
-              {HAS_LEGACY && (
-                <p>
-                  Terms marked <em>legacy</em> are not yet re-extracted. Their tiers come from an
-                  older rubric (metric, threshold, deadline) and are not strictly comparable.
-                </p>
-              )}
             </section>
 
             <section className="colophon-box">

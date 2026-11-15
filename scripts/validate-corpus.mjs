@@ -7,10 +7,8 @@
  *   - screening ledgers (`<year>-<kind>.screening.yaml`): every row resolves,
  *     every trigger-matched sentence has a row (recall is checkable), debate
  *     rows stay inside the president's turns;
- *   - promises.yaml written under the protocol (`protocol: 1`): the full record
- *     schema, refs, exact quotes, links, and the ledger <-> promise cross-check;
- *   - promises.yaml in the legacy format: unique ids and resolvable refs as
- *     errors; quote mismatches as warnings until the term is re-extracted.
+ *   - promises.yaml, which must declare `protocol: 1`: the full record schema,
+ *     refs, exact quotes, links, and the ledger <-> promise cross-check.
  *
  * Usage:  npm run validate         (exit 1 on any error; warnings are printed)
  */
@@ -236,18 +234,15 @@ export function validateTerm(termName, files, allIds = new Set()) {
     err('promises.yaml', `YAML: ${e.message.split('\n')[0]}`);
     return { errors, warnings };
   }
+  if (pdoc?.protocol !== 1) {
+    err('promises.yaml', 'must declare `protocol: 1` (corpus/PROTOCOL.md)');
+    return { errors, warnings };
+  }
   const promises = Array.isArray(pdoc?.promises) ? pdoc.promises : [];
-  const strict = pdoc?.protocol === 1;
   const seen = new Set();
 
-  // Each occurrence: { in, ref, quote } — legacy single-source promises carry a
-  // top-level ref/quote that points at the acceptance speech.
-  const occurrencesOf = (p) =>
-    Array.isArray(p.sources) && p.sources.length
-      ? p.sources
-      : p.ref
-        ? [{ in: 'acceptance', ref: p.ref, quote: p.quote }]
-        : [];
+  // Each occurrence: { in, ref, quote }.
+  const occurrencesOf = (p) => (Array.isArray(p.sources) ? p.sources : []);
 
   for (const p of promises) {
     const id = p?.id;
@@ -273,13 +268,12 @@ export function validateTerm(termName, files, allIds = new Set()) {
         continue;
       }
       if (!quoteFits(o.quote ?? '', resolved.text)) {
-        (strict ? err : warn)(where, `quote is not a contiguous part of ${o.in} ${o.ref}`);
+        err(where, `quote is not a contiguous part of ${o.in} ${o.ref}`);
       }
       if (!inTurns(src, resolved)) {
-        (strict ? err : warn)(where, `${o.in} ${o.ref} is outside the turns of "${src.label}"`);
+        err(where, `${o.in} ${o.ref} is outside the turns of "${src.label}"`);
       }
     }
-    if (!strict) continue;
 
     // Full protocol-1 record.
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) err(where, 'id must be lowercase-kebab');
@@ -315,14 +309,7 @@ export function validateTerm(termName, files, allIds = new Set()) {
     }
   }
 
-  if (!strict) {
-    if (Object.keys(ledgers).length) {
-      warn('promises.yaml', 'legacy format: ledger <-> promise cross-checks are skipped until re-extraction');
-    }
-    return { errors, warnings };
-  }
-
-  // ---- ledger <-> promises (protocol 1 only) ------------------------------
+  // ---- ledger <-> promises ------------------------------------------------
   for (const kind of Object.keys(sources)) {
     if (!ledgers[kind]) err(`${sources[kind].file}`, 'a re-extracted term needs a screening ledger for every source');
   }
