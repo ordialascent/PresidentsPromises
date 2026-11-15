@@ -1,0 +1,227 @@
+# Screening ledger for 2016-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2016-acceptance
+protocol: 1
+rows:
+  - ref: "\u00b63.1"
+    decision: include
+    promises: [trump-2016-safety-prosperity-peace]
+    note: "The first clause (\"lead our party back to the White House\") is about the election; the second is included."
+  - { ref: "\u00b63.2", decision: include, promises: [trump-2016-generosity-warmth] }
+  - { ref: "\u00b63.3", decision: include, promises: [trump-2016-restore-law-and-order] }
+  - ref: "\u00b66.1-7.1"
+    decision: include
+    added: true
+    promises: [trump-2016-restore-law-and-order]
+    note: "Untriggered; future-tense commitment. \u00b67.1 gives its start date; joined."
+  - ref: "\u00b610.1"
+    decision: describe
+    note: "About this speech."
+  - ref: "\u00b612.2"
+    decision: describe
+    note: "About this convention."
+  - ref: "\u00b621.1"
+    decision: describe
+    note: "About this speech."
+  - { ref: "\u00b622.2-22.3", decision: include, promises: [trump-2016-fix-trade-deficit] }
+  - ref: "\u00b624.2"
+    decision: describe
+    note: "Rhetorical question."
+  - ref: "\u00b634.4"
+    decision: describe
+    note: "About this speech."
+  - ref: "\u00b635.1-35.2"
+    decision: include
+    added: true
+    promises: [trump-2016-america-first]
+    note: "Untriggered; \"our plan will\"."
+  - ref: "\u00b636.2"
+    decision: describe
+    note: "Outline of the plan; its parts are screened where stated."
+  - ref: "\u00b636.4"
+    decision: describe
+    note: "About this speech; the jobs claim is a forecast."
+  - ref: "\u00b637.1"
+    decision: describe
+    note: "About this speech."
+  - ref: "\u00b640.3"
+    decision: include
+    added: true
+    promises: [trump-2016-forgotten-no-longer]
+    note: "Untriggered; \"they're not going to be forgotten long\"."
+  - { ref: "\u00b646.1", decision: include, promises: [trump-2016-not-look-away] }
+  - { ref: "\u00b651.1", decision: include, promises: [trump-2016-better-trade-deals] }
+  - { ref: "\u00b651.2", decision: include, promises: [trump-2016-fix-the-system] }
+  - { ref: "\u00b652.1", decision: include, promises: [trump-2016-indiana-success] }
+  - ref: "\u00b652.4"
+    decision: include
+    added: true
+    promises: [trump-2016-restore-law-and-order]
+    note: "Untriggered; \"the first task for our new Administration will be\"."
+  - { ref: "\u00b654.4", decision: include, promises: [trump-2016-restore-law-and-order] }
+  - { ref: "\u00b655.1", decision: include, promises: [trump-2016-appoint-best-prosecutors] }
+  - { ref: "\u00b658.1", decision: include, promises: [trump-2016-kids-treated-equally] }
+  - { ref: "\u00b659.1", decision: include, promises: [trump-2016-inner-city-test] }
+  - ref: "\u00b660.1"
+    decision: include
+    promises: [trump-2016-defeat-isis]
+    note: "\"We must also address\" is a lead-in; the firm \"we are going to defeat\" decides the kind."
+  - ref: "\u00b663.2"
+    decision: include
+    promises: [trump-2016-protect-lgbtq]
+    note: "\"It\" is the terrorist targeting of the LGBTQ community."
+  - { ref: "\u00b664.1", decision: include, promises: [trump-2016-protect-lgbtq] }
+  - ref: "\u00b666.1"
+    decision: describe
+    note: "Lead-in to \u00b667."
+  - { ref: "\u00b667.1", decision: include, promises: [trump-2016-best-intelligence] }
+  - { ref: "\u00b667.2", decision: include, promises: [trump-2016-end-nation-building] }
+  - { ref: "\u00b667.3", decision: include, promises: [trump-2016-allies-against-isis] }
+  - ref: "\u00b667.4-67.5"
+    decision: include
+    promises: [trump-2016-defeat-isis]
+    note: "Restates \u00b660.1 for the fight against ISIS (\u00b667.3)."
+  - { ref: "\u00b670.1", decision: include, promises: [trump-2016-suspend-terror-immigration] }
+  - { ref: "\u00b673.2", decision: include, promises: [trump-2016-immigration-system-works] }
+  - ref: "\u00b674.3-74.4"
+    decision: include
+    promises: [trump-2016-solve-border-violence]
+    note: "Range: \u00b674.4's \"it\" is the violence of \u00b674.3."
+  - { ref: "\u00b676.3", decision: include, promises: [trump-2016-save-families] }
+  - { ref: "\u00b677.1", decision: include, promises: [trump-2016-border-wall] }
+  - ref: "\u00b677.2"
+    decision: include
+    added: true
+    promises: [trump-2016-work-with-border-patrol]
+    note: "Untriggered; \"and will work directly with them\"."
+  - ref: "\u00b678.1"
+    decision: include
+    promises: [trump-2016-end-catch-and-release, trump-2016-stop-smuggling-cycle]
+    note: "Two objects: the means (ending catch-and-release) and the outcome; split."
+  - ref: "\u00b678.2-78.4"
+    decision: include
+    promises: [trump-2016-illegal-crossings-down]
+    note: "Joined: \u00b678.3-78.4 restate \u00b678.2 (\"it\" is illegal crossings)."
+  - ref: "\u00b678.7"
+    decision: include
+    added: true
+    promises: [trump-2016-visa-overstays]
+    note: "Untriggered; future-tense commitment."
+  - ref: "\u00b679.1"
+    decision: describe
+    note: "Lead-in."
+  - ref: "\u00b680.1"
+    decision: include
+    added: true
+    promises: [trump-2016-enforce-laws-day-one]
+    note: "Untriggered; future-tense commitment tied to inauguration day."
+  - { ref: "\u00b680.2", decision: include, promises: [trump-2016-compassionate] }
+  - ref: "\u00b685.2-85.3"
+    decision: include
+    added: true
+    promises: [trump-2016-fair-trade-policy]
+    note: "Untriggered; \u00b685.3's \"it\" is the trade policy of \u00b685.2."
+  - { ref: "\u00b686.1", decision: include, promises: [trump-2016-make-country-rich] }
+  - { ref: "\u00b686.2", decision: include, promises: [trump-2016-better-trade-deals] }
+  - { ref: "\u00b689.1", decision: include, promises: [trump-2016-bring-jobs-back, trump-2016-offshoring-consequences] }
+  - ref: "\u00b691.3-91.4"
+    decision: include
+    added: true
+    promises: [trump-2016-no-tpp]
+    note: "Untriggered; \"it's not going to happen\" refers back to the TPP."
+  - { ref: "\u00b691.5-91.6", decision: include, promises: [trump-2016-no-bad-trade-deals] }
+  - ref: "\u00b691.9-92.1"
+    decision: include
+    promises: [trump-2016-bilateral-deals]
+    note: "Joined: \u00b692.1 (untriggered) states the same commitment negatively."
+  - { ref: "\u00b692.2", decision: include, promises: [trump-2016-enforce-trade-tariffs] }
+  - ref: "\u00b693.1"
+    decision: include
+    added: true
+    promises: [trump-2016-china-ip-theft, trump-2016-china-dumping, trump-2016-china-currency]
+    note: "Untriggered; continues \u00b692.2. Three objects; split."
+  - ref: "\u00b693.3"
+    decision: include
+    added: true
+    promises: [trump-2016-renegotiate-trade-deals]
+    note: "Untriggered; \"will be totally renegotiated\"."
+  - { ref: "\u00b693.4", decision: include, promises: [trump-2016-renegotiate-nafta] }
+  - { ref: "\u00b694.1", decision: include, promises: [trump-2016-making-things-again] }
+  - ref: "\u00b695.3"
+    decision: include
+    added: true
+    promises: [trump-2016-middle-income-tax-relief, trump-2016-simplify-taxes]
+    note: "Untriggered; effect of his tax plan. Two objects; split. \u00b695.2 (\"I have proposed\") is past."
+  - ref: "\u00b696.4-96.5"
+    decision: include
+    promises: [trump-2016-end-regulation]
+    note: "Joined: \u00b696.5's \"it\" is the regulation of \u00b696.4. The $20 trillion in \u00b696.7 is a forecast, not a promise."
+  - { ref: "\u00b696.6", decision: include, promises: [trump-2016-lift-energy-restrictions] }
+  - ref: "\u00b697.1-97.2"
+    decision: include
+    added: true
+    promises: [trump-2016-miners-steelworkers-back]
+    note: "Untriggered; \u00b697.2 states the commitment \u00b697.1 frames."
+  - { ref: "\u00b698.1", decision: include, promises: [trump-2016-rebuild-infrastructure] }
+  - { ref: "\u00b698.3", decision: include, promises: [trump-2016-school-choice] }
+  - ref: "\u00b699.3"
+    decision: include
+    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    note: "Two acts that could get different verdicts; split into repeal and replace."
+  - ref: "\u00b699.4"
+    decision: include
+    added: true
+    promises: [trump-2016-choose-your-doctor]
+    note: "Untriggered; future-tense result of his health plan."
+  - { ref: "\u00b699.5", decision: include, promises: [trump-2016-fix-tsa] }
+  - { ref: "\u00b6101.1", decision: include, promises: [trump-2016-student-debt] }
+  - ref: "\u00b6102.1"
+    decision: include
+    promises: [trump-2016-rebuild-military, trump-2016-allies-pay-fair-share]
+    note: "Two objects; split."
+  - { ref: "\u00b6103.1", decision: include, promises: [trump-2016-veterans-care] }
+  - { ref: "\u00b6103.3", decision: include, promises: [trump-2016-veterans-choice] }
+  - ref: "\u00b6104.2-104.3"
+    decision: include
+    promises: [trump-2016-wasteful-spending-100-days]
+    note: "Joined: \u00b6104.3's \"it\" is \u00b6104.2."
+  - { ref: "\u00b6105.1", decision: include, promises: [trump-2016-originalist-justices] }
+  - ref: "\u00b6106.1"
+    decision: include
+    added: true
+    promises: [trump-2016-supreme-court-scalia]
+    note: "Untriggered; future-tense commitment about his nominee."
+  - ref: "\u00b6106.5"
+    decision: include
+    added: true
+    promises: [trump-2016-protect-second-amendment]
+    note: "Untriggered; \"and will protect\"."
+  - ref: "\u00b6107.1"
+    decision: ceremony
+    note: "Thanks."
+  - { ref: "\u00b6108.1", decision: include, promises: [trump-2016-repeal-johnson-amendment] }
+  - ref: "\u00b6108.2"
+    decision: describe
+    note: "Rhetoric (\"all we need to do is start believing\")."
+  - ref: "\u00b6112.1"
+    decision: ceremony
+    note: "To his family."
+  - { ref: "\u00b6113.3", decision: include, promises: [trump-2016-start-winning] }
+  - { ref: "\u00b6113.4", decision: include, promises: [trump-2016-end-petty-politics] }
+  - ref: "\u00b6115.7"
+    decision: others
+    note: "Asks voters to choose."
+  - ref: "\u00b6117.1"
+    decision: describe
+    note: "Rhetoric."
+  - ref: "\u00b6119.1"
+    decision: describe
+    note: "Campaign slogan."
+  - { ref: "\u00b6121.1", decision: include, promises: [trump-2016-fight-for-you] }
+  - ref: "\u00b6122.1-126.1"
+    decision: include
+    promises: [trump-2016-make-america-great-again]
+    note: "\"I make this promise:\" and four slogans; a list of low outcomes, kept as one promise."

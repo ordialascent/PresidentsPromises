@@ -18592,14 +18592,944 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2017–2021",
     "speechYear": 2016,
     "label": "Trump 2016",
-    "method": "legacy",
+    "method": "protocol",
     "promises": [
+      {
+        "id": "trump-2016-safety-prosperity-peace",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Lead the country back to safety, prosperity and peace.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶3.1",
+            "quote": "we will lead our country back to safety, prosperity, and peace"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-generosity-warmth",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Be a country of generosity and warmth.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶3.2",
+            "quote": "We will be a country of generosity and warmth."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-restore-law-and-order",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Restore law and order; end the crime and violence afflicting the country.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶3.3",
+            "quote": "But we will also be a country of law and order."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶6.1-7.1",
+            "quote": "the crime and violence that today afflicts our nation will soon – and I mean very soon – come to an end"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶52.4",
+            "quote": "The first task for our new Administration will be to liberate our citizens from the crime and terrorism and lawlessness that threatens their communities."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶54.4",
+            "quote": "when I take the oath of office next year, I will restore law and order to our country"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "when I take the oath of office next year; very soon; beginning on January 20th of 2017",
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "violent crime in the United States",
+            "record": "FBI Uniform Crime Reporting (violent crime and homicide rates); BJS National Crime Victimization Survey",
+            "criterion": "the violent crime rate is lower at the end of the term than in 2016",
+            "ambiguity": "\"Law and order\" and \"come to an end\" are not defined; the reading is a fall in the national violent crime rate from its 2016 level."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The timing words mark when the effort starts, not a date by which crime can be measured, so the applied deadline is the end of the term (as with \"immediately\")."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-fix-trade-deficit",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Fix the nearly $800 billion trade deficit in goods.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶22.2-22.3",
+            "quote": "our trade deficit reached nearly $800 billion last year alone. We're going to fix that."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US trade deficit in goods",
+            "record": "Census Bureau / BEA international trade data (FT-900)",
+            "criterion": "the annual goods trade deficit is smaller in the last full year of the term than in 2015",
+            "ambiguity": "\"Fix\" sets no target; the reading is a shrinking goods deficit."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-america-first",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Put America first: make every decision on trade, taxes, immigration and foreign affairs to benefit American workers and families.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶35.1-35.2",
+            "quote": "our plan will put America First. Americanism, not globalism, will be our credo."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶15.2-16.1",
+            "quote": "Every decision on trade, on taxes, on immigration, on foreign affairs, will be made to benefit American workers and American families."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-forgotten-no-longer",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "The forgotten men and women will be forgotten no longer.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶40.3",
+            "quote": "And they are forgotten, but they're not going to be forgotten long."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶7.3",
+            "quote": "The forgotten men and women of our country will be forgotten no longer."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶30.1",
+            "quote": "You will never be ignored again."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-not-look-away",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Not look the other way when laws go unenforced.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶46.1",
+            "quote": "I am not able to look the other way, and I won't look the other way."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-better-trade-deals",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Turn bad trade deals into great ones.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶51.1",
+            "quote": "we will fix his biggest single issue: trade deals that strip us of our jobs, and strip us of our wealth as a country"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶86.2",
+            "quote": "I am going to turn our bad trade agreements into great trade agreements"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶84.4",
+            "quote": "We will be doing very much better with Mexico on trade deals."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶483.1",
+            "quote": "And frankly, now we're going to do it right."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶483.1 \"do it right\" is read as being tougher on trade (¶481.3)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-fix-the-system",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Fix the system so it works justly for every American.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶51.2",
+            "quote": "we are going to fix the system so it works justly for each and every American"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-indiana-success",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Bring Indiana's economic success to America.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶52.1",
+            "quote": "We will bring the same economic success to America that Mike brought to Indiana"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-appoint-best-prosecutors",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Work with and appoint the best prosecutors and law-enforcement officials.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶55.1",
+            "quote": "I will work with, and appoint, the best and prosecutors and law enforcement officials to get the job properly done."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-kids-treated-equally",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Work to ensure all children are treated and protected equally.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶58.1",
+            "quote": "When I am President, I will work to ensure that all of our kids are treated equally, and protected equally."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-inner-city-test",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Judge every action by whether it improves life for young Americans in the inner cities.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶59.1",
+            "quote": "Every action I take, I will ask myself: does this make better for young Americans in Baltimore, in Chicago, in Detroit, in Ferguson"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-defeat-isis",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Defeat ISIS, and fast.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶60.1",
+            "quote": "We are going to defeat the barbarians of ISIS, and we are going to defeat them fast."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶67.4-67.5",
+            "quote": "We're going to win. We're going to win fast."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "fast",
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "ISIS",
+            "record": "Combined Joint Task Force–Operation Inherent Resolve and DoD reports on territory held by ISIS",
+            "criterion": "ISIS no longer holds territory in Iraq and Syria by the end of the term",
+            "ambiguity": "\"Defeat\" is not defined; the reading is the loss of all territory ISIS held, not the end of the group. \"Fast\" gives no date."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-protect-lgbtq",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Protect LGBTQ citizens from the violence of a hateful foreign ideology.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶63.2",
+            "quote": "no good and we're going to stop it"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶64.1",
+            "quote": "As your President, I will do everything in my power to protect our LGBTQ citizens from the violence and oppression of a hateful foreign ideology"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "In ¶63.2 \"it\" is read as the terrorist targeting of the LGBTQ community named in the same sentence."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-immigration-system-works",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Have an immigration system that works for the American people.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶73.2",
+            "quote": "We are going to have an immigration system that works, but one that works for the American people."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-save-families",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Save countless families from losing children to crime by illegal immigrants.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶76.3",
+            "quote": "we will save countless more families from suffering and the same awful fate"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
       {
         "id": "trump-2016-border-wall",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "Build a border wall to stop illegal immigration, gangs, and drugs.",
+        "restatement": "Build a great wall on the southern border.",
         "quality": "partial",
         "occurrences": [
           {
@@ -18629,18 +19559,38 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
               "label": "2016 debate"
             },
-            "ref": "¶72.1-72.2",
-            "quote": "Now, I want to build the wall. We need the wall."
+            "ref": "¶72.1",
+            "quote": "Now, I want to build the wall."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a wall on the US–Mexico border",
+            "record": "CBP border wall status reports (miles of primary and secondary barrier)",
+            "criterion": "a wall is built along the southern border where none stood",
+            "ambiguity": "No length is stated; the reading is new barrier along the length of the border not already fenced, not replacement of existing fencing."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-suspend-terror-immigration",
+        "id": "trump-2016-work-with-border-patrol",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "Suspend immigration from terror-compromised nations until vetting is proven.",
-        "quality": "partial",
+        "restatement": "Work directly with Border Patrol agents to protect the lawful immigration system.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -18654,17 +19604,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶70.1",
-            "quote": "Lastly, and very importantly, we must immediately suspend immigration from any nation that has been compromised by terrorism until such time as proven vetting mechanisms have been put in place."
+            "ref": "¶77.2",
+            "quote": "will work directly with them to protect the integrity of our lawful, lawful, lawful immigration system"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2016-end-catch-and-release",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "End catch-and-release to stop human smuggling and border violence.",
+        "restatement": "End catch-and-release on the border.",
         "quality": "partial",
         "occurrences": [
           {
@@ -18682,80 +19652,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶78.1",
             "quote": "By ending catch-and-release on the border, we will stop the cycle of human smuggling and violence."
           }
-        ]
-      },
-      {
-        "id": "trump-2016-defeat-isis",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Defeat ISIS, and do it fast.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶60.1",
-            "quote": "To make life safe in America, we must also address the growing threats we face from outside the country: We are going to defeat the barbarians of ISIS, and we are going to defeat them fast."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-largest-tax-reduction",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "taxes",
-        "restatement": "Enact the largest tax reduction proposed by any candidate this cycle.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶95.2",
-            "quote": "While Hillary Clinton plans a massive -- and I mean massive -- tax increase, I have proposed the largest tax reduction of any candidate who has declared for the presidential race this year – Democrat or Republican."
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-catch-and-release",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶204.2-204.3",
-            "quote": "We are going to cut taxes massively. We're going to cut business taxes massively."
-          }
-        ]
+          "verifiability": {
+            "level": "medium",
+            "object": "release of apprehended migrants pending their hearings",
+            "record": "DHS and ICE detention and release statistics; executive orders and DHS memoranda",
+            "criterion": "migrants apprehended at the border are no longer released into the country pending their hearings",
+            "ambiguity": "Whether partial measures (e.g. returning some asylum seekers to Mexico) count as ending the practice is a judgement; the reading is that release pending hearings stops as a general practice."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-end-regulation",
+        "id": "trump-2016-stop-smuggling-cycle",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "regulation",
-        "restatement": "End the excessive regulation he says costs $2 trillion a year.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Stop the cycle of human smuggling and violence.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -18769,17 +19694,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶96.5",
-            "quote": "Excessive regulation is costing our country as much as $2 trillion a year, and we will end it very very quickly."
+            "ref": "¶78.1",
+            "quote": "we will stop the cycle of human smuggling and violence"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-catch-and-release",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-lift-energy-restrictions",
+        "id": "trump-2016-illegal-crossings-down",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "energy",
-        "restatement": "Lift restrictions on US energy production, generating $20T of activity over 40 years.",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Illegal border crossings will go down.",
         "quality": "full",
         "occurrences": [
           {
@@ -18794,17 +19739,42 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶96.6-96.7",
-            "quote": "We are going to lift the restrictions on the production of American energy. This will produce more than $20 trillion in job creating economic activity over the next four decades."
+            "ref": "¶78.2-78.4",
+            "quote": "Illegal border crossings will go down. We will stop it. It won't be happening very much anymore."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "illegal crossings of the southern border",
+            "record": "CBP southwest border apprehension statistics",
+            "criterion": "southwest border apprehensions are lower in the last full fiscal year of the term than in FY2016",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "trump-2016-secure-border"
+            }
+          ]
+        }
       },
       {
-        "id": "trump-2016-repeal-obamacare",
+        "id": "trump-2016-visa-overstays",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Repeal and replace the Affordable Care Act.",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Enforce the rules for people who overstay their visas.",
         "quality": "partial",
         "occurrences": [
           {
@@ -18819,32 +19789,232 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶99.3",
-            "quote": "We will repeal and replace disastrous Obamacare."
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶488.2",
-            "quote": "And one thing we have to do: Repeal and replace the disaster known as Obamacare."
+            "ref": "¶78.7",
+            "quote": "By enforcing the rules for the millions who overstay their visas, our laws will finally receive the respect they deserve."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "visa overstays",
+            "record": "DHS Entry/Exit Overstay Reports",
+            "criterion": "the suspected in-country overstay rate falls over the term",
+            "ambiguity": "\"Enforcing the rules\" is not defined; the reading uses DHS's own overstay rate as the measure of enforcement."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-renegotiate-nafta",
+        "id": "trump-2016-enforce-laws-day-one",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "From the day he takes office, the laws of the United States will be enforced.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶80.1",
+            "quote": "On January 20th of 2017, the day I take the oath of office, Americans will finally wake up in a country where the laws of the United States are enforced."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": "On January 20th of 2017",
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-compassionate",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Be considerate and compassionate to everyone.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶80.2",
+            "quote": "We are going to be considerate and compassionate to everyone."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-fair-trade-policy",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "trade",
-        "restatement": "Totally renegotiate NAFTA and other trade deals, or walk away.",
+        "restatement": "Make a fair trade policy that protects jobs and stands up to cheating countries a signature of his presidency.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶85.2-85.3",
+            "quote": "it will be a signature feature of my presidency from the moment I take the oath of office"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-make-country-rich",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Make the country rich again.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶86.1",
+            "quote": "now I'm going to make our country rich again"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶18.4",
+            "quote": "We will bring back our wealth."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-bring-jobs-back",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Bring jobs back to Ohio, Pennsylvania, New York, Michigan and all of America.",
         "quality": "partial",
         "occurrences": [
           {
@@ -18859,8 +20029,8 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶93.3-93.4",
-            "quote": "Our horrible trade agreements with China and many others, will be totally renegotiated. That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want."
+            "ref": "¶89.1",
+            "quote": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America"
           },
           {
             "source": {
@@ -18874,18 +20044,143 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
               "label": "2016 debate"
             },
-            "ref": "¶203.1-203.3",
-            "quote": "I am going to renegotiate NAFTA. And if I can't make a great deal—then we're going to terminate NAFTA and we're going to create new deals. We're going to have trade, but we're going—we're going to terminate it, we're going to make a great trade deal."
+            "ref": "¶202.4",
+            "quote": "We're bringing our jobs back."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶18.2",
+            "quote": "We will bring back our jobs."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-jobs-offshoring",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "manufacturing jobs lost abroad",
+            "record": "BLS Current Employment Statistics (manufacturing payrolls)",
+            "criterion": "manufacturing payroll employment is higher at the end of the term than in January 2017",
+            "ambiguity": "\"Our jobs\" is not defined; in context (factories, trade deals) the reading is manufacturing jobs."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-offshoring-consequences",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Impose consequences on companies that move abroad and fire their workers.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶89.1",
+            "quote": "I am not going to let companies move to other countries, firing their employees along the way, without consequences"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-jobs-offshoring",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "penalties on companies that move production abroad",
+            "record": "enacted legislation (Congress.gov); tariff and tax rules",
+            "criterion": "a law or rule penalizes companies for moving jobs abroad",
+            "ambiguity": "No consequence is named; any measure aimed at companies that relocate jobs abroad counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-no-tpp",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "The US will not join the Trans-Pacific Partnership.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶91.3-91.4",
+            "quote": "The TPP will not only destroy our manufacturing, but it will make America subject to the rulings of foreign governments. And it's not going to happen."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "the Trans-Pacific Partnership",
+            "record": "USTR; Congress.gov (ratification); presidential memoranda",
+            "criterion": "the United States does not ratify TPP and withdraws its signature",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"It\" may refer to TPP or to America being subject to foreign rulings; either way the commitment is that TPP will not bind the US."
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2016-no-bad-trade-deals",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "trade",
-        "restatement": "Never sign a trade deal that hurts American workers.",
-        "quality": "partial",
+        "restatement": "Never sign a trade agreement that hurts workers or diminishes US independence.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -18902,109 +20197,34 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶91.5-91.6",
             "quote": "I pledge to never sign any trade agreement that hurts our workers, or that diminishes our freedom and independence. I will never, ever sign bad trade deals."
           }
-        ]
-      },
-      {
-        "id": "trump-2016-bring-jobs-back",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Bring jobs back to the industrial states and penalize companies that offshore.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶89.1",
-            "quote": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America – and I am not going to let companies move to other countries, firing their employees along the way, without consequences."
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
           },
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Inaugural Address",
-              "year": 2017,
-              "date": "2017-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
-              "label": "2017 inaugural address"
-            },
-            "ref": "¶18.2",
-            "quote": "We will bring back our jobs."
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶202.4",
-            "quote": "We're bringing our jobs back."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-rebuild-military",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Rebuild the military and make protected allies pay their fair share.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶102.1",
-            "quote": "We will completely rebuild our depleted military, and the countries that we protect, at a massive loss, will be asked to pay their fair share."
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶507.4-507.5",
-            "quote": "We have a depleted military. It has to be helped, has to be fixed."
-          }
-        ]
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-veterans-choice",
+        "id": "trump-2016-bilateral-deals",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "veterans",
-        "restatement": "Guarantee veterans can see the doctor of their choice without long waits.",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Make individual deals with individual countries instead of large multilateral agreements.",
         "quality": "partial",
         "occurrences": [
           {
@@ -19019,172 +20239,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶103.1-103.3",
-            "quote": "We will take care of our great veterans like they have never been taken care of before. [...] We will guarantee those who serve this country will be able to visit the doctor or hospital of their choice without waiting five days in line and dying."
+            "ref": "¶91.9-92.1",
+            "quote": "Instead, I will make individual deals with individual countries. No longer will we enter into these massive transactions, with many countries"
           }
-        ]
-      },
-      {
-        "id": "trump-2016-wasteful-spending-100-days",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Have every department head list wasteful spending to cut in the first 100 days.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶104.2",
-            "quote": "We are going to ask every Department Head in government to provide a list of wasteful spending projects that we can eliminate in my first 100 days."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-supreme-court",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "judiciary",
-        "restatement": "Appoint Supreme Court justices who will uphold the laws and Constitution.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶105.1",
-            "quote": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution."
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶40.1-40.2",
-            "quote": "We are going to appoint justices—this is the best way to help the Second Amendment. We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-restore-law-and-order",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "crime",
-        "restatement": "Restore law and order upon taking office.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶54.4",
-            "quote": "I have a message to every last person threatening the peace on our streets and the safety of our police: when I take the oath of office next year, I will restore law and order to our country."
+          "verifiability": {
+            "level": "medium",
+            "object": "new US trade agreements",
+            "record": "USTR agreement list",
+            "criterion": "every new trade agreement signed during the term is bilateral",
+            "ambiguity": "Whether renegotiating an existing multilateral agreement (NAFTA) counts as entering a new one is a judgement; the reading counts only agreements with new partners or new scope."
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶508.2",
-            "quote": "We need law and order, but we need justice, too."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-crime-end",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "crime",
-        "restatement": "Crime and violence will soon come to an end.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶6.1",
-            "quote": "I have a message for all of you: the crime and violence that today afflicts our nation will soon – and I mean very soon – come to an end."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-repeal-johnson-amendment",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "religion",
-        "restatement": "Repeal the Johnson Amendment language restricting churches' political speech.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶108.1",
-            "quote": "I am going to work very hard to repeal that language and protect free speech for all Americans."
-          }
-        ]
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2016-enforce-trade-tariffs",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "trade",
-        "restatement": "Enforce trade violations against cheating countries, including through taxes and tariffs.",
+        "restatement": "Enforce trade violations, using taxes and tariffs against countries that cheat.",
         "quality": "partial",
         "occurrences": [
           {
@@ -19202,14 +20287,589 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶92.2",
             "quote": "We are going to enforce all trade violations against any country including through the use of taxes and tariffs, against any country that cheats."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2016-trade-enforcement",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US trade enforcement actions",
+            "record": "USTR Section 301 actions; Commerce Section 232 actions; WTO dispute filings; antidumping and countervailing duty orders",
+            "criterion": "tariffs or duties are imposed on countries found to violate trade rules",
+            "ambiguity": "\"All trade violations\" cannot be counted; the reading is whether tariffs were used as an enforcement tool against countries found to break rules."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-china-ip-theft",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Stop China's theft of intellectual property.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶93.1",
+            "quote": "This includes stopping China's outrageous theft of intellectual property"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-trade-enforcement",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Chinese theft of US intellectual property",
+            "record": "USTR Section 301 investigation and Special 301 reports",
+            "criterion": "USTR no longer reports China as engaging in systematic IP theft by the end of the term",
+            "ambiguity": "\"Stopping\" is read against USTR's own findings; a reduction short of an end is a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; continues ¶92.2's \"We are going to enforce\"."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-china-dumping",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Stop China's illegal product dumping.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶93.1",
+            "quote": "along with their illegal product dumping"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-trade-enforcement",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "dumping of Chinese products in the US market",
+            "record": "US International Trade Commission antidumping orders",
+            "criterion": "antidumping duties are in force against Chinese products found to be dumped",
+            "ambiguity": "\"Stopping\" dumping is read as duties against dumped goods, since dumping itself is not measured."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; continues ¶92.2's \"We are going to enforce\"."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-china-currency",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Stop China's currency manipulation.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶93.1",
+            "quote": "and their devastating currency manipulation"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-trade-enforcement",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "China's exchange-rate policy",
+            "record": "Treasury semiannual report on foreign exchange policies",
+            "criterion": "Treasury acts against China as a currency manipulator, and China's intervention to weaken its currency ends",
+            "ambiguity": "Whether China manipulated its currency during the term is contested; the reading relies on Treasury's own reports."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; continues ¶92.2's \"We are going to enforce\"."
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2008-china-currency"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-renegotiate-trade-deals",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Totally renegotiate trade agreements with China and many others.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶93.3",
+            "quote": "Our horrible trade agreements with China and many others, will be totally renegotiated."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶201.1",
+            "quote": "So my plan—we're going to renegotiate trade deals."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US trade agreements",
+            "record": "USTR agreement texts; Congress.gov implementing legislation",
+            "criterion": "existing US trade agreements, including one with China, are renegotiated and new terms signed",
+            "ambiguity": "The US had no trade agreement with China; a signed trade deal with China (and renegotiation of existing agreements) is read as meeting \"renegotiated\"."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "trump-2016-better-trade-deals"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-renegotiate-nafta",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Renegotiate NAFTA, or walk away from it.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶93.4",
+            "quote": "That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶203.1-204.1",
+            "quote": "I am going to renegotiate NAFTA. And if I can't make a great deal—then we're going to terminate NAFTA and we're going to create new deals."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "the North American Free Trade Agreement",
+            "record": "USTR; signed and enacted successor agreement or notice of withdrawal",
+            "criterion": "NAFTA is renegotiated into a new signed agreement, or the US gives notice of withdrawal",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "trump-2016-renegotiate-trade-deals"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-making-things-again",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Start building and making things again.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶94.1",
+            "quote": "We are going to start building and making things again."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶463.11",
+            "quote": "But I'm going to create a—the kind of a country that we were from the standpoint of industry."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US manufacturing output",
+            "record": "Federal Reserve industrial production index (manufacturing)",
+            "criterion": "manufacturing output is higher at the end of the term than in 2016",
+            "ambiguity": "\"Start making things again\" sets no level; the reading is growth in manufacturing output."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-middle-income-tax-relief",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Give middle-income Americans and businesses profound tax relief.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶95.3",
+            "quote": "Middle-income Americans and businesses will experience profound relief"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-taxes",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal taxes paid by middle-income households",
+            "record": "Tax Policy Center / JCT distributional analyses; IRS statistics of income",
+            "criterion": "average federal tax paid by middle-income households falls under the tax law enacted",
+            "ambiguity": "\"Profound\" sets no size; the reading is a clear average cut for the middle quintile."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; read as describing the effect of his tax plan (¶95.2)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-simplify-taxes",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Greatly simplify taxes for everyone.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶95.3",
+            "quote": "taxes will be greatly simplified for everyone, and I mean everyone"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-taxes",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "complexity of federal tax filing",
+            "record": "IRS statistics of income (share of returns that itemize); IRS burden estimates",
+            "criterion": "the share of filers who itemize, and the IRS's estimated filing burden, fall",
+            "ambiguity": "\"Greatly simplified\" is not defined; the reading uses itemizing and filing-burden measures."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; read as describing the effect of his tax plan (¶95.2)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-end-regulation",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "End excessive regulation, very quickly.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶96.4-96.5",
+            "quote": "Then we are going to deal with the issue of regulation, one of the greatest job-killers of them all. Excessive regulation is costing our country as much as $2 trillion a year, and we will end it very very quickly."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "very very quickly",
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal regulation",
+            "record": "OIRA regulatory reports (cost of new and repealed rules); Federal Register",
+            "criterion": "the net cost of federal regulation falls over the term",
+            "ambiguity": "Which regulation is \"excessive\" is a judgement; the reading is a net fall in regulatory costs as OIRA counts them."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-lift-energy-restrictions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Lift restrictions on producing American energy.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶96.6",
+            "quote": "We are going to lift the restrictions on the production of American energy."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal restrictions on energy production",
+            "record": "executive orders and rules (Federal Register); Interior leasing decisions",
+            "criterion": "major federal limits on oil, gas and coal production are lifted",
+            "ambiguity": "No restriction is named; the reading covers federal rules that limit fossil-fuel production (leasing moratoria, the Clean Power Plan, drilling limits)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-miners-steelworkers-back",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Put steelworkers and miners back to work.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶97.1-97.2",
+            "quote": "that will never happen with Donald Trump as President. Our steelworkers and our miners are going back to work again."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "employment in coal mining and steel",
+            "record": "BLS Current Employment Statistics (coal mining; iron and steel mills)",
+            "criterion": "coal-mining and steel-mill employment are both higher at the end of the term than in January 2017",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2016-rebuild-infrastructure",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "infrastructure",
-        "restatement": "Build new roads, highways, bridges, tunnels, airports, and railways.",
+        "restatement": "Build new roads, highways, bridges, tunnels, airports and railways.",
         "quality": "partial",
         "occurrences": [
           {
@@ -19242,15 +20902,40 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶19.1",
             "quote": "We will build new roads and highways and bridges and airports and tunnels and railways all across our wonderful Nation."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal infrastructure investment",
+            "record": "enacted legislation (Congress.gov); BEA public construction spending",
+            "criterion": "a major infrastructure law is enacted, or real federal infrastructure spending rises over the term",
+            "ambiguity": "No scale is stated; the reading is a major federal infrastructure programme."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2012-war-savings-infrastructure"
+            }
+          ]
+        }
       },
       {
         "id": "trump-2016-school-choice",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "education",
-        "restatement": "Expand school choice so parents can move children out of failing schools.",
-        "quality": "no",
+        "restatement": "Help parents send children in failing schools to a school of their choice.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -19267,15 +20952,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶98.3",
             "quote": "We will rescue kids from failing schools by helping their parents send them to a safe school of their choice."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal support for school choice",
+            "record": "enacted legislation (Congress.gov); Department of Education programmes and budget",
+            "criterion": "a federal law or programme funds parents' choice of school for children in failing schools",
+            "ambiguity": "\"Helping\" is not defined; the reading is new federal money or tax benefits that follow the child."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-student-debt",
+        "id": "trump-2016-repeal-obamacare",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Ease the burden of student debt on young people starting out.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Repeal Obamacare.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -19289,8 +20994,8 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶101.1",
-            "quote": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people just starting out their adult lives."
+            "ref": "¶99.3",
+            "quote": "We will repeal and replace disastrous Obamacare."
           },
           {
             "source": {
@@ -19304,17 +21009,67 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
               "label": "2016 debate"
             },
-            "ref": "¶195.4-195.5",
-            "quote": "And I'm a big proponent. We're going to do a lot of things for college tuition."
+            "ref": "¶488.2",
+            "quote": "Repeal and replace the disaster known as Obamacare."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶488.5",
+            "quote": "We have to repeal and replace Obamacare."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶490.3",
+            "quote": "We have to repeal and replace Obamacare."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-obamacare",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "the Affordable Care Act",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law repealing the Affordable Care Act is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-visa-overstays",
+        "id": "trump-2016-replace-obamacare",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "Enforce the rules against the millions who overstay their visas.",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Replace Obamacare.",
         "quality": "partial",
         "occurrences": [
           {
@@ -19329,17 +21084,82 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶78.7",
-            "quote": "By enforcing the rules for the millions who overstay their visas, our laws will finally receive the respect they deserve."
+            "ref": "¶99.3",
+            "quote": "We will repeal and replace disastrous Obamacare."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶488.2",
+            "quote": "Repeal and replace the disaster known as Obamacare."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶488.5",
+            "quote": "We have to repeal and replace Obamacare."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶490.3",
+            "quote": "We have to repeal and replace Obamacare."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-obamacare",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a replacement health-care law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law replacing the Affordable Care Act's coverage system is enacted",
+            "ambiguity": "No replacement is described; any enacted law that substitutes a new system for the ACA's marketplaces and subsidies counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-protect-lgbtq",
+        "id": "trump-2016-choose-your-doctor",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "civil-rights",
-        "restatement": "Protect LGBTQ citizens from terrorist violence and oppression.",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "People will be able to choose their own doctor again.",
         "quality": "no",
         "occurrences": [
           {
@@ -19354,17 +21174,1817 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
               "label": "2016 acceptance speech"
             },
-            "ref": "¶64.1",
-            "quote": "As your President, I will do everything in my power to protect our LGBTQ citizens from the violence and oppression of a hateful foreign ideology – believe me."
+            "ref": "¶99.4",
+            "quote": "You will be able to choose your own doctor again."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-obamacare",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-fix-tsa",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Fix the TSA at airports.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶99.5",
+            "quote": "And we will fix TSA at the airports which is a total disaster!"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-student-debt",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Work with students drowning in debt to take the pressure off.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶101.1",
+            "quote": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-rebuild-military",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Completely rebuild the military.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶102.1",
+            "quote": "We will completely rebuild our depleted military"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-military",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US military funding and readiness",
+            "record": "DoD budget (National Defense Authorization and appropriations acts); service readiness reports",
+            "criterion": "real defense spending is higher in each year of the term than in FY2016",
+            "ambiguity": "\"Completely rebuild\" is not defined; the reading is a sustained real increase in the defense budget."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2008-rebuild-military"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-allies-pay-fair-share",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Make the countries the US protects pay their fair share.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶102.1",
+            "quote": "the countries that we protect, at a massive loss, will be asked to pay their fair share"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶175.1",
+            "quote": "we have to renegotiate these agreements, because our country cannot afford to defend Saudi Arabia, Japan, Germany, South Korea, and many other places"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶200.1",
+            "quote": "We have to tell Japan in a very nice way, we have to tell Germany, all of these countries, South Korea, we have to say, you have to help us out."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-military",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "allied defense spending and host-nation support",
+            "record": "NATO defence expenditure reports; host-nation cost-sharing agreements (e.g. US–South Korea Special Measures Agreement)",
+            "criterion": "NATO allies' defense spending as a share of GDP rises over the term, and host-nation payments rise in renewed cost-sharing agreements",
+            "ambiguity": "\"Fair share\" is not defined; NATO's 2%-of-GDP guideline and cost-sharing agreements are the usual yardsticks. \"Will be asked\" is read as a commitment to the result, as the debate restates it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-veterans-care",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "veterans",
+        "restatement": "Take care of veterans as never before.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶103.1",
+            "quote": "We will take care of our great veterans like they have never been taken care of before."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "obama-2012-serve-veterans"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-veterans-choice",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "veterans",
+        "restatement": "Guarantee veterans can see the doctor or hospital of their choice without long waits.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶103.3",
+            "quote": "We will guarantee those who serve this country will be able to visit the doctor or hospital of their choice without waiting five days in line and dying."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "veterans' access to private doctors and hospitals",
+            "record": "enacted legislation (Congress.gov); VA community-care rules and wait-time data",
+            "criterion": "a law or rule lets veterans see a doctor or hospital of their choice when VA care would mean a wait",
+            "ambiguity": "\"Of their choice\" could mean unrestricted choice; the reading accepts access subject to wait-time or distance standards."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "trump-2016-veterans-care"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-wasteful-spending-100-days",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Ask every department head for a list of wasteful spending to eliminate in the first 100 days.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶104.2-104.3",
+            "quote": "We are going to ask every Department Head in government to provide a list of wasteful spending projects that we can eliminate in my first 100 days. The politicians have talked about it, I'm going to do it."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "in my first 100 days",
+            "applied": "2017-04-30"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a government-wide request for wasteful spending",
+            "record": "executive orders and OMB memoranda; the President's budget",
+            "criterion": "within 100 days every department is directed to list wasteful projects for elimination",
+            "ambiguity": "Whether the 100 days applies to the request or to eliminating the projects is unclear; the reading is the request."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"In my first 100 days\" may attach to \"ask\" or to \"eliminate\"; read as the request."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-originalist-justices",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Appoint conservative justices who interpret the Constitution as the founders intended.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶105.1",
+            "quote": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶22.2",
+            "quote": "They will have a conservative bent."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶22.5",
+            "quote": "They will interpret the Constitution the way the founders wanted it interpreted."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶23.1-23.3",
+            "quote": "And those are the people that I will appoint."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-supreme-court",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-supreme-court-scalia",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Replace Justice Scalia with a justice of similar views and philosophy.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶106.1",
+            "quote": "The replacement for our beloved Justice Scalia will be a person of similar views and judicial philosophies."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-supreme-court",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the nominee for Justice Scalia's seat",
+            "record": "Senate confirmation record; the justice's opinions",
+            "criterion": "the justice confirmed to Scalia's seat is an originalist conservative",
+            "ambiguity": "\"Similar views\" is a judgement; the reading is a nominee with a textualist/originalist record."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-protect-second-amendment",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Protect the right of all Americans to keep their families safe (the Second Amendment).",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶106.5",
+            "quote": "and will protect the right of all Americans to keep their families safe"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The sentence names the NRA and follows \"abolish the 2nd amendment\"; the right is read as the right to bear arms."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-repeal-johnson-amendment",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Work to repeal the Johnson Amendment's limits on political speech by churches.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶108.1",
+            "quote": "I am going to work very hard to repeal that language and protect free speech for all Americans."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the Johnson Amendment (Internal Revenue Code §501(c)(3))",
+            "record": "enacted legislation (Congress.gov); Internal Revenue Code",
+            "criterion": "the Johnson Amendment's ban on political campaigning by tax-exempt organizations is repealed by law",
+            "ambiguity": "He promises to \"work very hard\" to repeal; whether an executive order limiting enforcement counts is a judgement. The reading is repeal by law."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-start-winning",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "America will start winning again.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶113.3",
+            "quote": "we are going to start winning again"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶18.1",
+            "quote": "America will start winning again, winning like never before."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-fight-for-you",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Fight for Americans and never let them down.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶121.1",
+            "quote": "I'm With You, and I will fight for you, and I will win for you."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶17.3",
+            "quote": "I will fight for you with every breath in my body, and I will never, ever let you down."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-make-america-great-again",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Make America strong, proud, safe, wealthy and great again.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶122.1-126.1",
+            "quote": "We Will Make America Strong Again. We Will Make America Proud Again. We Will Make America Safe Again. And We Will Make America Great Again."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶507.3",
+            "quote": "We're going to make America great."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶509.2",
+            "quote": "We are going to make America strong again, and we are going to make America great again, and it has to start now."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶31.1-32.1",
+            "quote": "Together, we will make America strong again. We will make America wealthy again. We will make America proud again. We will make America safe again. And, yes, together, we will make America great again."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-pro-life-justices",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Appoint pro-life justices.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶22.1",
+            "quote": "the justices that I'm going to appoint will be pro-life"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶44.1",
+            "quote": "because I am pro-life, and I will be appointing pro-life judges"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-supreme-court",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "his Supreme Court appointments",
+            "record": "Senate confirmation records; the justices' votes in abortion cases",
+            "criterion": "the justices he appoints vote to restrict or overturn the constitutional right to abortion when the issue comes before them",
+            "ambiguity": "Whether a justice is \"pro-life\" is judged by later votes, which may fall after the term."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-second-amendment-justices",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Appoint justices who will protect the Second Amendment.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶22.3",
+            "quote": "They will be protecting the Second Amendment."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶40.1-40.2",
+            "quote": "We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-supreme-court",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "his Supreme Court appointments",
+            "record": "Senate confirmation records; the justices' votes in gun-rights cases",
+            "criterion": "the justices he appoints vote to uphold or widen gun rights when the issue comes before them",
+            "ambiguity": "Judged by later votes, which may fall after the term."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-secure-border",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Secure the border.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶72.6-72.7",
+            "quote": "we're going to secure the border"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶71.6",
+            "quote": "We have to have strong borders."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶18.3",
+            "quote": "We will bring back our borders."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "security of the southern border",
+            "record": "CBP southwest border apprehensions and estimated got-aways",
+            "criterion": "estimated unlawful entries across the southern border fall over the term",
+            "ambiguity": "\"Secure\" is not defined; the reading uses CBP's own measures of unlawful entry."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"Bring back our borders\" (inaugural) is read as the same commitment."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-deport-criminal-aliens",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "As one of his first acts, remove drug lords and other dangerous people in the country illegally.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶72.6-72.7",
+            "quote": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶72.9",
+            "quote": "But we have some bad hombres here, and we're going to get them out."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "One of my first acts",
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "removal of noncitizens with criminal records",
+            "record": "ICE Enforcement and Removal Operations annual reports (removals of convicted criminals)",
+            "criterion": "ICE removals of noncitizens with criminal convictions rise above the FY2016 level",
+            "ambiguity": "\"All of the bad ones\" cannot be counted; the reading is a rise in removals of convicted criminal noncitizens."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-speed-up-legal-immigration",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Speed up the process for people waiting in line to immigrate legally.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶101.6",
+            "quote": "We're going to speed up the process, big league, because it's very inefficient."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "processing time for legal immigration",
+            "record": "USCIS historical processing times (naturalization N-400, green card I-485)",
+            "criterion": "median processing times are shorter at the end of the term than in 2016",
+            "ambiguity": "\"The process\" is not named; the reading covers naturalization and green-card processing, the line he describes."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-stop-terrorism-at-home",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Stop radical Islamic terrorism in the United States.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶126.1",
+            "quote": "we are going to stop radical Islamic terrorism in this country"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-islamic-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "jihadist terrorist attacks in the United States",
+            "record": "Global Terrorism Database; New America terrorism-in-America database",
+            "criterion": "no deadly jihadist attack takes place in the United States during the term",
+            "ambiguity": "\"Stop\" is read as no deadly attack; which attacks count as \"radical Islamic terrorism\" follows the databases' own coding."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-college-tuition",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Do a lot for college tuition.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶195.5",
+            "quote": "We're going to do a lot of things for college tuition."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-more-free-trade",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Have more free trade than now.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶201.2-201.3",
+            "quote": "We're going to have a lot of free trade. We're going to have free trade, more free trade than we have right now."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "openness of US trade",
+            "record": "WTO / World Bank average applied US tariff rates; USITC tariff data",
+            "criterion": "the average US tariff rate is lower at the end of the term than in 2016",
+            "ambiguity": "\"Free trade\" is not defined; the reading uses tariff levels as the measure."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-cut-taxes",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Cut taxes massively.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶204.2",
+            "quote": "We are going to cut taxes massively."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-taxes",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal taxes",
+            "record": "enacted legislation (Congress.gov); Joint Committee on Taxation revenue estimates",
+            "criterion": "a tax-cut law is enacted that reduces federal revenue substantially",
+            "ambiguity": "\"Massively\" sets no size; the reading is a broad tax cut that JCT scores as a large revenue loss."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2000-reduce-taxes"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-cut-business-taxes",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Cut business taxes massively.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶204.3",
+            "quote": "We're going to cut business taxes massively."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2016-taxes",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal business taxes",
+            "record": "enacted legislation (Congress.gov); Internal Revenue Code",
+            "criterion": "a law substantially lowers the corporate income tax rate",
+            "ambiguity": "\"Massively\" sets no size; the reading is a large cut in the statutory corporate rate."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "trump-2016-cut-taxes"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2016-repatriate-offshore",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Bring the $2.5 trillion held offshore back into the country.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶204.5",
+            "quote": "We're going to bring the $2.5 trillion..."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶206.1",
+            "quote": "that's offshore back into the country"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-taxes",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US corporate earnings held abroad",
+            "record": "BEA international transactions (repatriated dividends of US multinationals)",
+            "criterion": "repatriated earnings over the term total about $2.5 trillion",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-economic-machine",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Create an economic machine not seen in decades.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶206.2",
+            "quote": "We are going to start the engine rolling again"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶463.7",
+            "quote": "We will have created a tremendous economic machine once again."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶466.1-466.3",
+            "quote": "we will create an economic machine the likes of which we haven't seen in many decades."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-growth",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-create-jobs",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Create tremendous numbers of jobs.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶463.1",
+            "quote": "I'm going to create tremendous jobs."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-gdp-growth",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Raise GDP growth from about 1 percent to 4 percent.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶463.2-463.3",
+            "quote": "And we're bringing GDP from, really, 1 percent, which is what it is now, and if she got in, it will be less than zero. But we're bringing it from 1 percent up to 4 percent."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-growth",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "real GDP growth",
+            "record": "BEA National Income and Product Accounts",
+            "criterion": "annual real GDP growth reaches 4 percent",
+            "ambiguity": "No year or averaging is stated; the reading is annual real growth of 4 percent in at least one calendar year of the term."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered (\"we're bringing\"); read as a commitment because it is stated as the result of his plan."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-stop-job-raids",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Not let other countries raid US companies and jobs.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶463.9",
+            "quote": "We're not going to let our companies be raided by other countries where we lose all our jobs, we don't make our product anymore."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2016-jobs-offshoring",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-record-growth",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Grow the economy at a record rate.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶486.2-486.3",
+            "quote": "We're going to grow the economy. It's going to grow at a record rate of growth."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-growth",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-more-for-minorities",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Do more for African-Americans and Latinos than his opponent could.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶508.7",
+            "quote": "I will do more for African-Americans and Latinos than she can ever do in 10 lifetimes."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-bring-back-dreams",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Bring back our dreams.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶18.5",
+            "quote": "And we will bring back our dreams."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-welfare-to-work",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "welfare",
+        "restatement": "Get people off welfare and back to work.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶20.1",
+            "quote": "We will get our people off of welfare and back to work"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "welfare caseloads",
+            "record": "HHS TANF and USDA SNAP caseload data",
+            "criterion": "TANF and SNAP caseloads are lower at the end of the term than in January 2017",
+            "ambiguity": "\"Welfare\" is not defined; the reading covers the main cash and food assistance programmes."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2016-buy-american-hire-american",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "trade",
-        "restatement": "Adopt \"Buy American and hire American\" as governing rules.",
+        "restatement": "Follow two rules: buy American and hire American.",
         "quality": "partial",
         "occurrences": [
           {
@@ -19382,15 +23002,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶20.2",
             "quote": "We will follow two simple rules: Buy American and hire American."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal procurement and work-visa policy",
+            "record": "executive orders (Federal Register); FPDS procurement data; USCIS H-1B statistics",
+            "criterion": "federal rules are changed to favor US-made goods in procurement and US workers in visa decisions",
+            "ambiguity": "\"Follow\" a rule is a stance; the reading is rule changes in procurement and work-visa policy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-welfare-to-work",
+        "id": "trump-2016-seek-friendship",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Move people off welfare and back to work.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Seek friendship and good will with the nations of the world.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -19404,17 +23044,82 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
               "label": "2017 inaugural address"
             },
-            "ref": "¶20.1",
-            "quote": "We will get our people off of welfare and back to work, rebuilding our country with American hands and American labor."
+            "ref": "¶21.1",
+            "quote": "We will seek friendship and good will with the nations of the world"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-lead-by-example",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Not impose the American way of life on anyone; let it shine as an example.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶21.2",
+            "quote": "We do not seek to impose our way of life on anyone, but rather to let it shine as an example—we will shine—for everyone to follow."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2016-eradicate-radical-islamic-terrorism",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Eradicate radical Islamic terrorism completely from the Earth.",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Eradicate radical Islamic terrorism completely from the face of the Earth.",
         "quality": "partial",
         "occurrences": [
           {
@@ -19430,7 +23135,459 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶22.1",
-            "quote": "We will reinforce old alliances and form new ones and unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth."
+            "quote": "unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-islamic-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "jihadist terrorism worldwide",
+            "record": "Global Terrorism Database; State Department Country Reports on Terrorism",
+            "criterion": "no jihadist terrorist attacks are recorded anywhere in the world in the last year of the term",
+            "ambiguity": "The criterion is stated (\"completely\"); the judgement is which groups and attacks count as \"radical Islamic terrorism\"."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-alliances",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Reinforce old alliances and form new ones.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶22.1",
+            "quote": "We will reinforce old alliances and form new ones"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2016-islamic-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-unite-against-terrorism",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Unite the civilized world against radical Islamic terrorism.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
+            },
+            "ref": "¶22.1",
+            "quote": "unite the civilized world against radical Islamic terrorism"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-islamic-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      }
+    ],
+    "ambitions": [
+      {
+        "id": "trump-2016-best-intelligence",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Have the best intelligence-gathering operation in the world.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶67.1",
+            "quote": "We must have the best intelligence gathering operation in the world."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2016-counterterror-plan",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-end-nation-building",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Abandon nation building and regime change.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶67.2",
+            "quote": "We must abandon the failed policy of nation building and regime change"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2016-counterterror-plan",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US use of force and aid for regime change or nation building",
+            "record": "war powers reports to Congress; DoD deployments; National Security Strategy",
+            "criterion": "no new US intervention aimed at regime change or nation building is started during the term",
+            "ambiguity": "What counts as nation building is a judgement; the reading is a new intervention whose stated aim is to replace a government or build a state."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-allies-against-isis",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Work with all allies who share the goal of destroying ISIS.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶67.3",
+            "quote": "we must work with all of our allies who share our goal of destroying ISIS and stamping out Islamic terrorism"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2016-counterterror-plan",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-suspend-terror-immigration",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Suspend immigration from nations compromised by terrorism until proven vetting is in place.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶70.1",
+            "quote": "we must immediately suspend immigration from any nation that has been compromised by terrorism until such time as proven vetting mechanisms have been put in place"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "immediately",
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "entry of immigrants from countries linked to terrorism",
+            "record": "presidential proclamations and executive orders (Federal Register); State Department visa statistics",
+            "criterion": "entry of immigrants from countries designated as compromised by terrorism is suspended by executive or legislative action",
+            "ambiguity": "Which nations are \"compromised by terrorism\" is not said; any suspension covering countries the government itself designates on terrorism grounds counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-solve-border-violence",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Solve the violence spilling across the border.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶74.3-74.4",
+            "quote": "violence spilling across our border, which we can solve. We have to solve it."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-end-petty-politics",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Break free from the petty politics of the past.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
+              "year": 2016,
+              "date": "2016-07-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
+              "label": "2016 acceptance speech"
+            },
+            "ref": "¶113.4",
+            "quote": "we must break free from the petty politics of the past"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-keep-drugs-out",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Keep drugs out of the country.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶71.7",
+            "quote": "We have to keep the drugs out of our country."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2016-border",
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2016-expert-trade-negotiators",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Use top business people, not political appointees, to negotiate trade deals.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate at the University of Nevada in Las Vegas",
+              "year": 2016,
+              "date": "2016-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
+              "label": "2016 debate"
+            },
+            "ref": "¶464.6",
+            "quote": "We have to use them to negotiate our trade deals."
           },
           {
             "source": {
@@ -19444,113 +23601,77 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
               "label": "2016 debate"
             },
-            "ref": "¶126.1",
-            "quote": "And you see, we are going to stop radical Islamic terrorism in this country."
+            "ref": "¶465.3",
+            "quote": "So we have to use our great people."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "appointment of US trade negotiators",
+            "record": "USTR and Commerce appointments (Senate confirmations)",
+            "criterion": "the lead trade negotiators appointed come from business rather than politics",
+            "ambiguity": "Whether an appointee counts as one of \"the greatest businesspeople\" is a judgement."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2016-gdp-growth",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "economy",
-        "restatement": "Grow GDP from 1 percent up to 4 percent, and aim for 5 or 6 percent.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶463.3-463.5",
-            "quote": "But we're bringing it from 1 percent up to 4 percent. And I actually think we can go higher than 4 percent. I think you can go to 5 percent or 6 percent."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-repatriate-offshore",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "taxes",
-        "restatement": "Bring the $2.5 trillion held offshore back into the country.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶204.5",
-            "quote": "We're going to bring the $2.5 trillion..."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-deport-criminal-aliens",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "As one of his first acts, deport the drug lords and bad people and secure the border.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶72.6-72.7",
-            "quote": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out; we're going to secure the border."
-          }
-        ]
-      },
-      {
-        "id": "trump-2016-expert-trade-negotiators",
-        "kind": "promise",
-        "method": "legacy",
+        "id": "trump-2016-trade-protection",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "trade",
-        "restatement": "Use the country's greatest businesspeople, not political hacks, to negotiate trade deals.",
-        "quality": "partial",
+        "restatement": "Protect the country from other countries making its products and taking its companies and jobs.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "inaugural",
+              "medium": "speech",
               "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
+              "event": "Inaugural Address",
+              "year": 2017,
+              "date": "2017-01-20",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+              "label": "2017 inaugural address"
             },
-            "ref": "¶464.4-464.6",
-            "quote": "Those are the people—these are the greatest negotiators in the world. We have the greatest businesspeople in the world. We have to use them to negotiate our trade deals."
+            "ref": "¶17.1",
+            "quote": "We must protect our borders from the ravages of other countries making our products, stealing our companies, and destroying our jobs."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2021-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       }
-    ],
-    "ambitions": []
+    ]
   },
   {
     "key": "2021-2025 Biden",
@@ -21676,10 +25797,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 346;
+export const CORPUS_PROMISE_COUNT = 403;
 
 /** Total ambitions across the corpus (re-extracted terms only). */
-export const CORPUS_AMBITION_COUNT = 129;
+export const CORPUS_AMBITION_COUNT = 138;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 449;
+export const CORPUS_OCCURRENCE_COUNT = 537;
