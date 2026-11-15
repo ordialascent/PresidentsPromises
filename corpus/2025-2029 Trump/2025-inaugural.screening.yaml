@@ -1,0 +1,267 @@
+# Screening ledger for 2025-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2025-inaugural
+protocol: 1
+rows:
+  - ref: "¶3.1"
+    decision: include
+    added: true
+    promises: [trump-2024-respected-again]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶3.2"
+    decision: include
+    promises: [trump-2024-stop-plunder]
+    note: "\"Envy of every nation\" is rhetoric."
+  - ref: "¶3.3"
+    decision: include
+    promises: [trump-2024-america-first]
+  - ref: "¶4.1"
+    decision: include
+    added: true
+    promises: [trump-2024-reclaim-sovereignty]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶4.2"
+    decision: include
+    added: true
+    promises: [trump-2024-keep-americans-safe]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶4.3"
+    decision: include
+    added: true
+    promises: [trump-2024-impartial-justice]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶4.4"
+    decision: include
+    added: true
+    promises: [trump-2024-end-weaponization]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶5.1-5.2"
+    decision: include
+    added: true
+    promises: [trump-2024-make-america-great-again]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶7.1"
+    decision: describe
+    note: "Rhetoric about candour."
+  - ref: "¶12.5-12.7"
+    decision: include
+    added: true
+    promises: [trump-2024-disaster-response]
+    note: "Untriggered; future-tense commitment."
+  - ref: "¶16.2"
+    decision: include
+    promises: [trump-2024-restore-government-competence]
+  - ref: "¶19.1"
+    decision: include
+    promises: [trump-2024-government-conduct]
+  - ref: "¶19.2"
+    decision: include
+    promises: [trump-2024-safety-prosperity-freedom]
+  - ref: "¶22.1"
+    decision: ceremony
+    note: "Thanks."
+  - ref: "¶22.2"
+    decision: describe
+    note: "Gratitude; no object."
+  - ref: "¶23.3-23.4"
+    decision: include
+    promises: [trump-2024-mlk-dream]
+  - ref: "¶24.2"
+    decision: include
+    promises: [trump-2024-government-conduct]
+  - ref: "¶24.3"
+    decision: describe
+    note: "Rhetoric (\"we will not forget\")."
+  - ref: "¶25.1"
+    decision: describe
+    note: "Announces the orders of ¶26-42; each listed order is its own promise."
+  - ref: "¶25.2"
+    decision: describe
+    note: "Rhetoric (\"revolution of common sense\")."
+  - ref: "¶26.1"
+    decision: include
+    promises: [trump-2024-border-emergency]
+    note: "\"Today\" (¶25.1) dates it."
+  - ref: "¶26.2"
+    decision: include
+    promises: [trump-2024-close-border, trump-2024-mass-deportation]
+    note: "Two objects; split."
+  - ref: "¶26.3"
+    decision: include
+    promises: [trump-2024-remain-in-mexico]
+  - ref: "¶27.1"
+    decision: include
+    promises: [trump-2024-end-catch-and-release]
+  - ref: "¶27.2"
+    decision: include
+    promises: [trump-2024-troops-to-border]
+  - ref: "¶27.3"
+    decision: include
+    promises: [trump-2024-cartels-fto]
+  - ref: "¶28.1"
+    decision: include
+    promises: [trump-2024-invoke-alien-enemies-act, trump-2024-eliminate-foreign-gangs]
+    note: "Two objects (the act, the outcome); split."
+  - ref: "¶29.1-29.2"
+    decision: include
+    promises: [trump-2024-defend-from-invasion]
+  - ref: "¶30.1"
+    decision: include
+    promises: [trump-2024-end-inflation, trump-2024-lower-prices]
+    note: "Two objects; split."
+  - ref: "¶30.2"
+    decision: include
+    promises: [trump-2024-energy-emergency]
+  - ref: "¶30.3"
+    decision: include
+    promises: [trump-2024-expand-drilling]
+  - ref: "¶31.1-31.2"
+    decision: include
+    promises: [trump-2024-bring-back-auto-manufacturing, trump-2024-expand-drilling]
+    note: "Two objects; split. \"Manufacturing nation\" is read with the auto promises (¶34.1)."
+  - ref: "¶32.1"
+    decision: include
+    promises: [trump-2024-lower-energy-costs, trump-2024-refill-spr, trump-2024-energy-exports]
+    note: "Three objects; split. \"Prices\" are energy prices (¶30.2-31.2)."
+  - ref: "¶32.2"
+    decision: include
+    promises: [trump-2024-rich-nation]
+  - ref: "¶33.1"
+    decision: include
+    promises: [trump-2024-end-green-new-deal, trump-2024-end-ev-mandate]
+    note: "Two objects; split."
+  - ref: "¶34.1"
+    decision: include
+    promises: [trump-2024-bring-back-auto-manufacturing]
+  - ref: "¶35.1"
+    decision: include
+    promises: [trump-2024-overhaul-trade]
+  - ref: "¶35.2"
+    decision: include
+    promises: [trump-2024-broad-tariffs]
+  - ref: "¶36.1-36.2"
+    decision: include
+    added: true
+    promises: [trump-2024-external-revenue-service, trump-2024-tariff-revenue]
+    note: "Untriggered; future plans. Two objects; split."
+  - ref: "¶36.3"
+    decision: include
+    added: true
+    promises: [trump-2024-american-dream]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶37.1"
+    decision: include
+    promises: [trump-2024-doge]
+  - ref: "¶38.1"
+    decision: include
+    added: true
+    promises: [trump-2024-free-speech-order]
+    note: "Untriggered (\"I also will\")."
+  - ref: "¶39.1-39.3"
+    decision: include
+    promises: [trump-2024-end-weaponization]
+    note: "\"That\" is weaponizing the state against opponents (¶39.1)."
+  - ref: "¶39.4"
+    decision: include
+    promises: [trump-2024-impartial-justice]
+  - ref: "¶39.5"
+    decision: include
+    promises: [trump-2024-law-and-order]
+  - ref: "¶40.1"
+    decision: include
+    promises: [trump-2024-end-dei]
+  - ref: "¶40.2"
+    decision: include
+    promises: [trump-2024-colorblind-society]
+  - ref: "¶40.3"
+    decision: include
+    added: true
+    promises: [trump-2024-two-sexes-policy]
+    note: "Untriggered; future-tense policy."
+  - ref: "¶41.1"
+    decision: include
+    promises: [trump-2024-reinstate-vaccine-refusers]
+  - ref: "¶42.1-42.2"
+    decision: include
+    promises: [trump-2024-military-anti-woke-order]
+  - ref: "¶43.1"
+    decision: include
+    promises: [trump-2024-rebuild-military]
+  - ref: "¶43.2"
+    decision: include
+    promises: [trump-2024-avoid-new-wars]
+  - ref: "¶44.1-44.2"
+    decision: include
+    promises: [trump-2024-unite-country]
+    note: "Soft restatement; the peacemaker part is read with ¶43.2 and ¶64.4."
+  - ref: "¶45.1"
+    decision: include
+    added: true
+    promises: [trump-2024-respected-again]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶46.1"
+    decision: include
+    promises: [trump-2024-gulf-of-america, trump-2024-mount-mckinley]
+    note: "Two objects; split."
+  - ref: "¶49.3"
+    decision: include
+    added: true
+    promises: [trump-2024-panama-canal]
+    note: "Untriggered present progressive; \"it\" is the Panama Canal (¶47.1-49.1)."
+  - ref: "¶51.1"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶51.2"
+    decision: describe
+    note: "Rhetoric (\"we will not be deterred\")."
+  - ref: "¶51.3"
+    decision: include
+    promises: [trump-2024-end-chronic-disease]
+  - ref: "¶52.1"
+    decision: describe
+    note: "Self-description as \"a growing nation\" that \"expands our territory\"; no concrete commitment."
+  - ref: "¶53.1"
+    decision: include
+    promises: [trump-2024-mars]
+  - ref: "¶62.2"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶63.2"
+    decision: include
+    promises: [trump-2024-fight-for-you]
+  - ref: "¶63.3"
+    decision: include
+    promises: [trump-2024-win-again]
+  - ref: "¶64.2"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶64.3"
+    decision: include
+    promises: [trump-2024-compassionate-nation]
+  - ref: "¶64.4"
+    decision: include
+    added: true
+    promises: [trump-2024-world-peace]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶65.1"
+    decision: include
+    added: true
+    promises: [trump-2024-respected-again]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶65.2"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶66.1"
+    decision: describe
+    note: "Rhetoric (\"we will not fail\")."
+  - ref: "¶66.2"
+    decision: include
+    added: true
+    promises: [trump-2024-reclaim-sovereignty]
+    note: "Untriggered; future-tense outcome."
+  - ref: "¶67.1"
+    decision: describe
+    note: "Rhetoric (\"we will stand bravely\")."

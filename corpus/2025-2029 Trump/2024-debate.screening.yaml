@@ -1,0 +1,157 @@
+# Screening ledger for 2024-debate.md (protocol v1).
+# Every trigger-matched sentence in the president's turns has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2024-debate
+protocol: 1
+rows:
+  - ref: "¶17.4-17.6"
+    decision: include
+    added: true
+    promises: [trump-2024-broad-tariffs]
+    note: "Untriggered; describes what he will do (\"the tariff will be substantial\")."
+  - ref: "¶17.34-17.35"
+    decision: include
+    promises: [trump-2024-mass-deportation]
+    note: "Soft restatement; \"'em\" are migrants who entered illegally (¶17.20-17.33)."
+  - ref: "¶17.37"
+    decision: include
+    promises: [trump-2024-greatest-economy]
+    note: "\"It\" is the economy of ¶17.36."
+  - ref: "¶21.5"
+    decision: describe
+    note: "Personal remark about Project 2025; no governing object."
+  - ref: "¶21.10-21.12"
+    decision: include
+    promises: [trump-2024-cut-taxes, trump-2024-greatest-economy]
+    note: "¶21.11-21.12 complete \"what I'm going to do\". Two objects; split."
+  - ref: "¶24.9"
+    decision: attack
+    note: "Paraphrases the opponent's plan."
+  - ref: "¶26.3"
+    decision: include
+    added: true
+    promises: [trump-2024-tariff-revenue]
+    note: "Untriggered (\"We are gonna\"); about tariffs (¶26.1-26.2)."
+  - ref: "¶30.21"
+    decision: describe
+    note: "Remark about the debate."
+  - ref: "¶34.3-34.4"
+    decision: attack
+    note: "Paraphrases a Democratic governor."
+  - ref: "¶41.3-41.4"
+    decision: include
+    added: true
+    promises: [trump-2024-no-abortion-ban]
+    note: "Untriggered; answers whether he would sign a ban."
+  - ref: "¶43.1"
+    decision: describe
+    note: "Declines to say whether he would veto a ban; predicts none will pass."
+  - ref: "¶43.12"
+    decision: attack
+    note: "Paraphrases the President."
+  - ref: "¶57.3"
+    decision: attack
+    note: "Paraphrases a Democratic governor."
+  - ref: "¶62.1"
+    decision: describe
+    note: "Debate procedure."
+  - ref: "¶64.33"
+    decision: attack
+    note: "Prediction if the opponent wins."
+  - ref: "¶72.1"
+    decision: describe
+    note: "Remark."
+  - ref: "¶80.8"
+    decision: describe
+    note: "Quotes other countries."
+  - ref: "¶86.3"
+    decision: describe
+    note: "Prediction about his court cases."
+  - ref: "¶103.6"
+    decision: attack
+    note: "Prediction if the opponent wins."
+  - ref: "¶103.16"
+    decision: attack
+    note: "Prediction if the opponent wins."
+  - ref: "¶114.8"
+    decision: past
+    note: "About 6 January 2021."
+  - ref: "¶118.13"
+    decision: attack
+    note: "Introduces what the opponent should do (¶118.14-120.3)."
+  - ref: "¶118.15"
+    decision: attack
+    note: "About the opponent."
+  - ref: "¶128.14"
+    decision: include
+    promises: [trump-2024-finish-wall]
+    note: "Soft; \"it\" is walls (¶128.13)."
+  - ref: "¶128.15"
+    decision: include
+    promises: [trump-2024-close-border]
+    note: "Soft restatement."
+  - ref: "¶128.16"
+    decision: include
+    promises: [trump-2024-election-integrity]
+    note: "Soft restatement."
+  - ref: "¶133.8"
+    decision: describe
+    note: "Offer to show election data."
+  - ref: "¶133.11"
+    decision: describe
+    note: "Rhetoric about national decline (¶133.13)."
+  - ref: "¶137.17"
+    decision: past
+    note: "About first-term and current pipelines."
+  - ref: "¶137.28"
+    decision: describe
+    note: "Aside."
+  - ref: "¶141.1"
+    decision: describe
+    note: "Forecast of the election."
+  - ref: "¶146.33"
+    decision: include
+    promises: [trump-2024-end-israel-war]
+  - ref: "¶146.34-146.35"
+    decision: include
+    promises: [trump-2024-end-ukraine-war]
+  - ref: "¶158.1"
+    decision: include
+    promises: [trump-2024-end-ukraine-war]
+    note: "Soft restatement."
+  - ref: "¶158.27"
+    decision: include
+    promises: [trump-2024-end-ukraine-war]
+  - ref: "¶158.28"
+    decision: include
+    promises: [trump-2024-ukraine-talks]
+  - ref: "¶166.2"
+    decision: include
+    promises: [trump-2024-end-ukraine-war]
+    note: "Soft restatement; answer on the Ukraine war."
+  - ref: "¶197.4"
+    decision: describe
+    note: "Remark about the opponent."
+  - ref: "¶202.9-202.10"
+    decision: include
+    promises: [trump-2024-greatest-economy]
+  - ref: "¶215.4"
+    decision: include
+    promises: [trump-2024-aca-only-if-better]
+  - ref: "¶215.28-215.30"
+    decision: include
+    promises: [trump-2024-aca-only-if-better]
+  - ref: "¶217.3-217.5"
+    decision: include
+    promises: [trump-2024-aca-only-if-better]
+  - ref: "¶229.8-229.9"
+    decision: include
+    promises: [trump-2024-mexico-car-tariff]
+  - ref: "¶236.11-236.13"
+    decision: attack
+    note: "Paraphrases the opponent."
+  - ref: "¶236.31"
+    decision: describe
+    note: "Forecast."

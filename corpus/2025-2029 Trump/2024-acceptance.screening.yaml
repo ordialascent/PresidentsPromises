@@ -1,0 +1,420 @@
+# Screening ledger for 2024-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2024-acceptance
+protocol: 1
+rows:
+  - ref: "¶2.3"
+    decision: describe
+    note: "Forecast of the election; \"the four greatest years\" is rhetoric."
+  - ref: "¶3.1"
+    decision: include
+    promises: [trump-2024-safety-prosperity-freedom]
+  - ref: "¶4.1-4.2"
+    decision: include
+    promises: [trump-2024-unite-country]
+    note: "Soft restatement of the firm \"We will unite\" (¶232.5)."
+  - ref: "¶7.2-7.3"
+    decision: describe
+    note: "\"Do it right\" has no object."
+  - ref: "¶9.4"
+    decision: describe
+    note: "Introduces the story of the shooting."
+  - ref: "¶13.1"
+    decision: describe
+    note: "Narrative."
+  - ref: "¶26.3"
+    decision: describe
+    note: "Narrative."
+  - ref: "¶31.1"
+    decision: ceremony
+    note: "Gratitude."
+  - ref: "¶33.4"
+    decision: describe
+    note: "Narrative."
+  - ref: "¶33.6"
+    decision: describe
+    note: "Narrative."
+  - ref: "¶35.1"
+    decision: ceremony
+    note: "Thanks."
+  - ref: "¶37.1"
+    decision: past
+    note: "Quotes what he told the families."
+  - ref: "¶43.1-43.2"
+    decision: describe
+    note: "Rhetoric (\"we will not break\")."
+  - ref: "¶43.3"
+    decision: include
+    promises: [trump-2024-fight-for-you]
+    note: "First clause (\"We will not back down\") is rhetoric."
+  - ref: "¶44.1-44.3"
+    decision: include
+    promises: [trump-2024-fight-for-you]
+  - ref: "¶44.4"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶47.1"
+    decision: others
+    note: "Addressed to the nation and, in ¶47.2, to the Democratic party."
+  - ref: "¶49.3"
+    decision: describe
+    note: "Forecast of the election."
+  - ref: "¶51.4"
+    decision: describe
+    note: "Remark about the letter."
+  - ref: "¶51.5"
+    decision: others
+    note: "Reports what others suggested."
+  - ref: "¶53.8"
+    decision: describe
+    note: "Anecdote."
+  - ref: "¶54.1"
+    decision: describe
+    note: "Quotes another person."
+  - ref: "¶56.2-56.3"
+    decision: describe
+    note: "Quotes another person."
+  - ref: "¶63.2"
+    decision: describe
+    note: "Rhetoric contrasting his agenda with the investigations."
+  - ref: "¶66.5"
+    decision: attack
+    note: "Quotes opponents."
+  - ref: "¶69.4"
+    decision: describe
+    note: "Aside."
+  - ref: "¶69.5-69.6"
+    decision: include
+    promises: [trump-2024-wisconsin-great]
+  - ref: "¶71.1"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶75.1-75.3"
+    decision: include
+    added: true
+    promises: [trump-2024-respected-again]
+    note: "Untriggered; future-tense outcome under his leadership."
+  - ref: "¶75.4"
+    decision: include
+    added: true
+    promises: [trump-2024-close-border]
+    note: "Untriggered; future-tense outcome under his leadership (¶75.1)."
+  - ref: "¶75.5"
+    decision: include
+    added: true
+    promises: [trump-2024-greatest-economy]
+    note: "Untriggered; future-tense outcome under his leadership (¶75.1)."
+  - ref: "¶75.6"
+    decision: include
+    promises: [trump-2024-law-and-order, trump-2024-patriotism-schools, trump-2024-world-peace]
+    note: "Three objects; split."
+  - ref: "¶76.1"
+    decision: describe
+    note: "Call to vote him in."
+  - ref: "¶83.1"
+    decision: include
+    promises: [trump-2024-end-inflation, trump-2024-lower-interest-rates, trump-2024-lower-energy-costs]
+    note: "Three objects; split."
+  - ref: "¶83.2"
+    decision: include
+    promises: [trump-2024-expand-drilling]
+  - ref: "¶84.1-84.2"
+    decision: include
+    promises: [trump-2024-lower-prices]
+  - ref: "¶85.3"
+    decision: include
+    promises: [trump-2024-expand-drilling]
+    note: "\"It\" is drilling (¶83.2)."
+  - ref: "¶85.4"
+    decision: include
+    promises: [trump-2024-reduce-debt, trump-2024-cut-taxes]
+    note: "Two objects; split."
+  - ref: "¶85.6"
+    decision: include
+    promises: [trump-2024-cut-taxes]
+    note: "\"It\" is the tax cut of ¶85.5."
+  - ref: "¶86.12"
+    decision: include
+    promises: [trump-2024-greatest-economy]
+    note: "\"It\" is the first-term economy of ¶86.1-86.11."
+  - ref: "¶87.1"
+    decision: include
+    promises: [trump-2024-close-border, trump-2024-finish-wall]
+    note: "Two objects; split."
+  - ref: "¶88.2"
+    decision: past
+    note: "Quotes what he said in the first term."
+  - ref: "¶88.5"
+    decision: past
+    note: "Quotes what he said in the first term."
+  - ref: "¶88.6-88.7"
+    decision: include
+    promises: [trump-2024-close-border]
+  - ref: "¶89.1-89.2"
+    decision: include
+    promises: [trump-2024-end-international-crises, trump-2024-end-ukraine-war, trump-2024-end-israel-war]
+    note: "¶89.2 continues the list of ¶89.1. Three objects; split."
+  - ref: "¶90.3"
+    decision: past
+    note: "Quotes what he told China in the first term."
+  - ref: "¶91.1-91.5"
+    decision: include
+    promises: [trump-2024-election-integrity]
+    note: "\"That\" is the 2020 election result (¶91.2)."
+  - ref: "¶92.9"
+    decision: describe
+    note: "Remark about naming his predecessor."
+  - ref: "¶93.1"
+    decision: include
+    promises: [trump-2024-restore-government-competence]
+  - ref: "¶105.2-105.3"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶107.1-107.2"
+    decision: include
+    promises: [trump-2024-american-dream]
+  - ref: "¶111.2"
+    decision: describe
+    note: "Aside about the speech."
+  - ref: "¶116.1"
+    decision: include
+    promises: [trump-2024-implement-platform]
+  - ref: "¶117.6"
+    decision: describe
+    note: "Rhetoric about the election."
+  - ref: "¶118.1-118.3"
+    decision: include
+    promises: [trump-2024-lower-prices]
+  - ref: "¶120.2"
+    decision: include
+    promises: [trump-2024-lower-energy-costs]
+    note: "The rest of the sentence is the expected effect."
+  - ref: "¶120.8-120.9"
+    decision: include
+    promises: [trump-2024-energy-exports]
+  - ref: "¶121.1-121.2"
+    decision: include
+    promises: [trump-2024-reduce-debt]
+  - ref: "¶121.3"
+    decision: include
+    promises: [trump-2024-cut-taxes]
+  - ref: "¶121.9"
+    decision: describe
+    note: "About politicians in general."
+  - ref: "¶121.10"
+    decision: describe
+    note: "About politicians in general."
+  - ref: "¶121.12"
+    decision: attack
+    note: "About the current administration."
+  - ref: "¶121.15"
+    decision: include
+    promises: [trump-2024-cut-taxes]
+  - ref: "¶121.17"
+    decision: include
+    promises: [trump-2024-cut-taxes]
+    note: "\"More\" is a further tax cut (¶121.16)."
+  - ref: "¶121.18"
+    decision: include
+    promises: [trump-2024-greatest-economy]
+    note: "Soft restatement."
+  - ref: "¶122.1"
+    decision: include
+    promises: [trump-2024-end-waste]
+  - ref: "¶123.1"
+    decision: include
+    promises: [trump-2024-redirect-green-funds]
+  - ref: "¶124.1"
+    decision: include
+    promises: [trump-2024-end-ev-mandate]
+  - ref: "¶125.3"
+    decision: include
+    promises: [trump-2024-bring-back-auto-manufacturing]
+    note: "The first part is about the UAW leadership."
+  - ref: "¶126.4-126.5"
+    decision: include
+    promises: [trump-2024-bring-back-auto-manufacturing]
+  - ref: "¶127.2"
+    decision: include
+    promises: [trump-2024-mexico-car-tariff]
+  - ref: "¶130.1"
+    decision: include
+    promises: [trump-2024-stop-plunder]
+  - ref: "¶131.5"
+    decision: include
+    promises: [trump-2024-bring-back-auto-manufacturing]
+  - ref: "¶131.8-131.9"
+    decision: include
+    promises: [trump-2024-all-auto-jobs-back]
+  - ref: "¶132.1"
+    decision: describe
+    note: "Present-tense description of the plan (\"are massive tax cuts ... no tax on tips\"); not a candidate under §1."
+  - ref: "¶134.2"
+    decision: describe
+    note: "Aside to the audience."
+  - ref: "¶148.1"
+    decision: include
+    promises: [trump-2024-protect-social-security, trump-2024-protect-medicare]
+    note: "Two objects; split."
+  - ref: "¶149.1"
+    decision: include
+    promises: [trump-2024-incomes-soar, trump-2024-end-inflation, trump-2024-jobs-roaring-back, trump-2024-middle-class-prosper]
+    note: "Four objects; split."
+  - ref: "¶150.5"
+    decision: include
+    promises: [trump-2024-close-border]
+  - ref: "¶156.4"
+    decision: past
+    note: "Quotes another country."
+  - ref: "¶157.1-157.2"
+    decision: include
+    promises: [trump-2024-close-border]
+    note: "\"That\" is ending the border nightmare (¶157.1)."
+  - ref: "¶158.1-158.2"
+    decision: include
+    added: true
+    promises: [trump-2024-expand-drilling, trump-2024-close-border]
+    note: "Untriggered; spells out the Day 1 commitments. Two objects; split."
+  - ref: "¶163.4"
+    decision: include
+    promises: [trump-2024-remain-in-mexico]
+    note: "Soft; follows the first-term agreements to keep illegal aliens abroad (¶163.3)."
+  - ref: "¶165.8-165.9"
+    decision: include
+    promises: [trump-2024-close-border]
+    note: "\"It\" is people pouring in illegally (¶165.6)."
+  - ref: "¶174.4-174.5"
+    decision: conditional
+    note: "Joke conditioned on losing the election."
+  - ref: "¶176.2"
+    decision: include
+    added: true
+    promises: [trump-2024-mass-deportation]
+    note: "Untriggered; his platform's promise."
+  - ref: "¶180.2"
+    decision: include
+    promises: [trump-2024-keep-criminals-out]
+  - ref: "¶180.3"
+    decision: include
+    promises: [trump-2024-keep-americans-safe]
+  - ref: "¶181.1"
+    decision: include
+    promises: [trump-2024-world-peace]
+  - ref: "¶182.12"
+    decision: describe
+    note: "Quotes another leader."
+  - ref: "¶199.4"
+    decision: past
+    note: "About the first-term Afghanistan plan."
+  - ref: "¶207.4"
+    decision: describe
+    note: "Hypothetical about press coverage."
+  - ref: "¶208.1"
+    decision: include
+    promises: [trump-2024-hostages-back]
+  - ref: "¶209.1"
+    decision: include
+    added: true
+    promises: [trump-2024-world-peace]
+    note: "Untriggered; future-tense outcome of his election."
+  - ref: "¶210.7"
+    decision: include
+    promises: [trump-2024-rebuild-military, trump-2024-iron-dome]
+    note: "Two objects; split."
+  - ref: "¶211.1"
+    decision: include
+    promises: [trump-2024-iron-dome-made-in-usa]
+  - ref: "¶212.1"
+    decision: past
+    note: "Quotes what he said about the ship design."
+  - ref: "¶212.6"
+    decision: include
+    promises: [trump-2024-wisconsin-ships]
+  - ref: "¶214.3"
+    decision: include
+    promises: [trump-2024-iron-dome]
+  - ref: "¶214.4"
+    decision: include
+    promises: [trump-2024-iron-dome-made-in-usa]
+  - ref: "¶215.1-215.2"
+    decision: include
+    promises: [trump-2024-cure-cancer-alzheimers]
+  - ref: "¶215.3"
+    decision: attack
+    note: "About his predecessor."
+  - ref: "¶216.1"
+    decision: attack
+    note: "Quotes his predecessor."
+  - ref: "¶216.2"
+    decision: include
+    promises: [trump-2024-cure-cancer-alzheimers]
+  - ref: "¶217.1-217.2"
+    decision: include
+    promises: [trump-2024-womens-sports]
+  - ref: "¶218.1"
+    decision: include
+    promises: [trump-2024-renovate-cities]
+  - ref: "¶218.4"
+    decision: include
+    promises: [trump-2024-proud-capital]
+  - ref: "¶219.1-219.2"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶220.1"
+    decision: include
+    promises: [trump-2024-more-electricity]
+  - ref: "¶220.2"
+    decision: describe
+    note: "Unfinished sentence."
+  - ref: "¶221.9-221.10"
+    decision: include
+    promises: [trump-2024-end-ev-mandate]
+    note: "\"That change\" lets buyers choose gasoline cars (¶221.9)."
+  - ref: "¶223.3"
+    decision: ceremony
+    note: "Thanks."
+  - ref: "¶227.2"
+    decision: describe
+    note: "Reflection."
+  - ref: "¶232.3-232.6"
+    decision: include
+    promises: [trump-2024-unite-country]
+  - ref: "¶234.8"
+    decision: describe
+    note: "Rhetoric about past heroes."
+  - ref: "¶234.10"
+    decision: describe
+    note: "Rhetoric about past heroes."
+  - ref: "¶236.1"
+    decision: include
+    promises: [trump-2024-unite-country]
+    note: "Soft restatement."
+  - ref: "¶237.2"
+    decision: describe
+    note: "Asks for votes."
+  - ref: "¶237.3"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶237.4-237.6"
+    decision: include
+    promises: [trump-2024-fight-for-you]
+  - ref: "¶238.1"
+    decision: include
+    added: true
+    promises: [trump-2024-forgotten-no-longer]
+    note: "Untriggered; future-tense commitment."
+  - ref: "¶238.2"
+    decision: include
+    promises: [trump-2024-win-again]
+  - ref: "¶241.1-241.2"
+    decision: describe
+    note: "Rhetoric (\"we will not fail\")."
+  - ref: "¶242.1"
+    decision: include
+    promises: [trump-2024-make-america-great-again]
+  - ref: "¶244.1"
+    decision: include
+    promises: [trump-2024-make-america-great-again]

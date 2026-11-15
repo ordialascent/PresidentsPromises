@@ -27660,14 +27660,1109 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2025–2029",
     "speechYear": 2024,
     "label": "Trump 2024",
-    "method": "legacy",
+    "method": "protocol",
     "promises": [
       {
-        "id": "trump-2024-inflation",
+        "id": "trump-2024-safety-prosperity-freedom",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "inflation",
-        "restatement": "End the inflation crisis immediately; cut interest rates and energy costs.",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Bring a new era of safety, prosperity, freedom and peace for citizens of every race, religion, color and creed.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶3.1",
+            "quote": "Together, we will launch a new era of safety, prosperity and freedom for citizens of every race, religion, color and creed."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶19.2",
+            "quote": "We will move with purpose and speed to bring back hope, prosperity, safety, and peace for citizens of every race, religion, color, and creed."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-safety-prosperity-peace"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-unite-country",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Heal the country's divisions and unite Americans.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶4.1-4.2",
+            "quote": "We must heal it quickly."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶232.3-232.6",
+            "quote": "We will unite."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶236.1",
+            "quote": "we must now come together, rise above past differences."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶44.1-44.2",
+            "quote": "That's what I want to be: a peacemaker and a unifier."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Firm in the acceptance speech (\"We will unite\", ¶232.5); the other occurrences are soft (\"must\", \"want to be\")."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-fight-for-you",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Never stop fighting for Americans and never let them down.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶43.3",
+            "quote": "I will never stop fighting for you, your family and our magnificent country."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶44.1-44.3",
+            "quote": "everything I have to give with all of the energy and fight in my heart and soul, I pledge to our nation tonight."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶237.4-237.6",
+            "quote": "I will never, ever let you down."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶63.2",
+            "quote": "I am with you, I will fight for you, and I will win for you."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-fight-for-you"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-make-america-great-again",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Make America great again, greater than ever, and turn the nation around very quickly.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶44.4",
+            "quote": "We're going to turn our nation around and we're going to do it very quickly."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶71.1",
+            "quote": "Together, we will lead America to new heights of greatness like the world has never seen before."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶105.2-105.3",
+            "quote": "we will soon be a great nation again."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶219.1-219.2",
+            "quote": "we're going to bring this into a golden age like never seen before."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶237.3",
+            "quote": "We're going to make our country great again."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶242.1",
+            "quote": "Together, we will save this country, we will restore the republic"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶244.1",
+            "quote": "we will very quickly make America great again."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶5.1-5.2",
+            "quote": "America will soon be greater, stronger, and far more exceptional than ever before."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶51.1",
+            "quote": "we will lead it to new heights of victory and success."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶62.2",
+            "quote": "we will restore America promise and we will rebuild the nation that we love"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶64.2",
+            "quote": "But we are going to bring it back and make it great again, greater than ever before."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶65.2",
+            "quote": "We will be prosperous, we will be proud, we will be strong, and we will win like never before."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "very quickly",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "A list of broad outcomes across the speeches (great, strong, prosperous, proud, a golden age), kept as one low promise."
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-make-america-great-again"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-wisconsin-great",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Make Wisconsin great again.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶69.5-69.6",
+            "quote": "And I promise we will make Wisconsin great again."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-respected-again",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Make the United States respected and admired again around the world.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶75.1-75.3",
+            "quote": "Under our leadership, the United States will be respected again."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶3.1",
+            "quote": "From this day forward, our country will flourish and be respected again all over the world."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶45.1",
+            "quote": "America will reclaim its rightful place as the greatest, most powerful, most respected nation on Earth"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶65.1",
+            "quote": "America will be respected again and admired again"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-close-border",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Close the southern border and stop the illegal \"invasion\", on Day 1.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶75.4",
+            "quote": "Our borders will be totally secure."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶87.1",
+            "quote": "I will end the illegal immigration crisis by closing our border"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶88.6-88.7",
+            "quote": "We're not going to let that happen."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶150.5",
+            "quote": "The invasion at our southern border, we will stop it and we will stop it quickly."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶157.1-157.2",
+            "quote": "And we're going to do that on Day 1."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶158.1-158.2",
+            "quote": "close our borders."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶165.8-165.9",
+            "quote": "We're not going to stand for it."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶128.15",
+            "quote": "We have to have borders."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶26.2",
+            "quote": "All illegal entry will immediately be halted"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "on Day 1",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "illegal crossings at the southern border",
+            "record": "CBP southwest border encounters",
+            "criterion": "illegal crossings fall to near zero from the first day",
+            "ambiguity": "\"Closed\" and \"halted\" are read as a sharp fall to record lows, not literally zero."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Day 1 is stated in the acceptance speech (¶157.2, ¶158.1-158.2) and \"immediately\" in the inaugural; the other occurrences have no date."
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-secure-border"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-greatest-economy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Build the greatest economy again, even better than before.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶75.5",
+            "quote": "Our economy will soar."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶86.12",
+            "quote": "We'll do it again, but we'll do it even better."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶121.18",
+            "quote": "We want growth in our country."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶17.37",
+            "quote": "I'll do it again and even better."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶21.10-21.12",
+            "quote": "And create a great economy like I did before."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶202.9-202.10",
+            "quote": "I built one of the greatest economies in the history of the world and I'm gonna build it again."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Several occurrences point back with \"it\" to the first-term economy."
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-economic-machine"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-law-and-order",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Bring law and order back to the streets and cities.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶75.6",
+            "quote": "We will return law and order to our streets"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶39.5",
+            "quote": "And we are going to bring law and order back to our cities."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "crime",
+            "record": "FBI national crime statistics; BJS National Crime Victimization Survey",
+            "criterion": "violent crime falls over the term",
+            "ambiguity": "\"Law and order\" is read as falling violent crime rates."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-restore-law-and-order"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-patriotism-schools",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Return patriotism to the schools.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶75.6",
+            "quote": "patriotism to our schools"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-world-peace",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Restore peace, stability and harmony throughout the world; end the years of war.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶75.6",
+            "quote": "we will restore peace, stability and harmony all throughout the world."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶181.1",
+            "quote": "we will help bring stability to the world."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶209.1",
+            "quote": "With our victory in November, the years of war, weakness and chaos will be over."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶64.4",
+            "quote": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-end-inflation",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "End the inflation crisis immediately; make inflation vanish.",
         "quality": "partial",
         "occurrences": [
           {
@@ -27683,7 +28778,22 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶83.1",
-            "quote": "I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy."
+            "quote": "I will end the devastating inflation crisis immediately"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶149.1",
+            "quote": "inflation will vanish completely"
           },
           {
             "source": {
@@ -27698,16 +28808,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶30.1",
-            "quote": "Next, I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation and rapidly bring down costs and prices."
+            "quote": "I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-cost-of-living",
+          "deadline": {
+            "stated": "immediately",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "consumer price inflation",
+            "record": "Consumer Price Index (BLS)",
+            "criterion": "annual CPI inflation falls back to a normal rate and stays there",
+            "ambiguity": "\"End the crisis\" and \"vanish completely\" set no number; read as CPI inflation at or below about 2% a year."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-prices-day1",
+        "id": "trump-2024-lower-interest-rates",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "inflation",
-        "restatement": "Begin driving down consumer prices on Day 1.",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Bring down interest rates.",
         "quality": "partial",
         "occurrences": [
           {
@@ -27722,17 +28852,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
               "label": "2024 acceptance speech"
             },
-            "ref": "¶118.2",
-            "quote": "Starting on Day 1, we will drive down prices and make America affordable again."
+            "ref": "¶83.1",
+            "quote": "bring down interest rates"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-cost-of-living",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "interest rates",
+            "record": "Federal Reserve (H.15 selected interest rates); Freddie Mac mortgage rates",
+            "criterion": "interest rates are lower at the end of the term than at the start",
+            "ambiguity": "No rate is named; read as the 30-year mortgage rate and 10-year Treasury yield. The Fed sets policy rates independently."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-energy-dominance",
+        "id": "trump-2024-lower-energy-costs",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "energy",
-        "restatement": "Make the US \"energy dominant\" — a net supplier to the rest of the world.",
+        "restatement": "Lower the cost of energy.",
         "quality": "partial",
         "occurrences": [
           {
@@ -27747,8 +28897,113 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
               "label": "2024 acceptance speech"
             },
-            "ref": "¶120.7-120.9",
-            "quote": "Under the Trump administration just three and a half years ago, we were energy independent. But soon we will actually be better than that. We will be energy dominant and supply not only ourselves, but we will supply the rest of the world."
+            "ref": "¶83.1",
+            "quote": "lower the cost of energy."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶120.2",
+            "quote": "By slashing energy costs"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶32.1",
+            "quote": "We will bring prices down"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-cost-of-living",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "energy prices",
+            "record": "CPI energy index (BLS); EIA retail gasoline and electricity prices",
+            "criterion": "energy prices are lower at the end of the term than at the start",
+            "ambiguity": "No measure is named; read as the CPI energy index, with gasoline and electricity prices as checks."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-expand-drilling",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Drill, baby, drill: raise oil and gas production to levels never seen before.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶83.2",
+            "quote": "We will drill, baby, drill."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶85.3",
+            "quote": "But we will do it at levels that nobody's ever seen before"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶158.1-158.2",
+            "quote": "Drill, baby, drill"
           },
           {
             "source": {
@@ -27764,15 +29019,50 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶30.3",
             "quote": "We will drill, baby, drill."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶31.1-31.2",
+            "quote": "the largest amount of oil and gas of any country on earth, and we are going to use it."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "Day 1",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US oil and gas production",
+            "record": "EIA crude oil and natural gas production",
+            "criterion": "US oil and gas production is higher at the end of the term than in 2024",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶85.3 \"it\" is drilling (¶83.2); its last clause (\"we'll end lots of different things\") is vague and not rated."
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-debt",
+        "id": "trump-2024-lower-prices",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Reduce the national debt (cited at $36 trillion).",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Drive prices down, starting on Day 1, and make America affordable again.",
         "quality": "partial",
         "occurrences": [
           {
@@ -27787,19 +29077,159 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
               "label": "2024 acceptance speech"
             },
-            "ref": "¶121.1-121.2",
-            "quote": "With numbers that nobody has ever seen and we will reduce our debt, $36 trillion. We will start reducing that."
+            "ref": "¶84.1-84.2",
+            "quote": "we will lead a large-scale decline in prices."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶118.1-118.3",
+            "quote": "Starting on Day 1, we will drive down prices and make America affordable again."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶30.1",
+            "quote": "rapidly bring down costs and prices."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-cost-of-living",
+          "deadline": {
+            "stated": "Starting on Day 1",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "consumer price level",
+            "record": "Consumer Price Index (BLS)",
+            "criterion": "the price level is lower at the end of the term than at the start",
+            "ambiguity": "\"Prices\" is read as the overall CPI level; a fall in the level counts, slower price growth does not."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-taxes-cut",
+        "id": "trump-2024-reduce-debt",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Start paying off the $36 trillion national debt.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶85.4",
+            "quote": "We'll start paying off debt"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶121.1-121.2",
+            "quote": "we will reduce our debt, $36 trillion."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal debt",
+            "record": "Debt to the Penny (Treasury)",
+            "criterion": "total public debt outstanding is lower at the end of the term than at the start",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-cut-taxes",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "taxes",
-        "restatement": "Cut taxes further beyond the 2017 cuts.",
+        "restatement": "Cut taxes further, very substantially.",
         "quality": "partial",
         "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶85.4",
+            "quote": "start lowering taxes even further."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶85.6",
+            "quote": "We'll do it more."
+          },
           {
             "source": {
               "kind": "acceptance",
@@ -27817,29 +29247,19 @@ export const CORPUS_TERMS: CorpusTerm[] = [
           },
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "acceptance",
+              "medium": "speech",
               "speaker": "Donald J. Trump",
-              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
               "year": 2024,
-              "date": "2024-09-10",
+              "date": "2024-07-18",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
-              "label": "2024 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
             },
-            "ref": "¶21.11",
-            "quote": "Cut taxes very substantially."
-          }
-        ]
-      },
-      {
-        "id": "trump-2024-no-tax-tips",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "taxes",
-        "restatement": "Exempt tip income from taxation.",
-        "quality": "partial",
-        "occurrences": [
+            "ref": "¶121.15",
+            "quote": "we're going to reduce your taxes still further."
+          },
           {
             "source": {
               "kind": "acceptance",
@@ -27852,17 +29272,57 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
               "label": "2024 acceptance speech"
             },
-            "ref": "¶132.4",
-            "quote": "It's called no tax on tips."
+            "ref": "¶121.17",
+            "quote": "We're going to give you more"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶21.10-21.12",
+            "quote": "Cut taxes very substantially."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal taxes",
+            "record": "enacted legislation (Congress.gov); CBO/JCT scores",
+            "criterion": "a law is enacted that cuts federal taxes below their 2024 levels",
+            "ambiguity": "\"Further\" is read as cuts beyond the 2017 law's rates; extending expiring cuts alone counts as partly kept."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-cut-taxes"
+            }
+          ]
+        }
       },
       {
-        "id": "trump-2024-wall",
+        "id": "trump-2024-finish-wall",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "End illegal immigration by sealing the border and finishing the wall.",
+        "restatement": "Finish the border wall.",
         "quality": "partial",
         "occurrences": [
           {
@@ -27878,57 +29338,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶87.1",
-            "quote": "I will end the illegal immigration crisis by closing our border and finishing the wall, most of which I've already built."
-          }
-        ]
-      },
-      {
-        "id": "trump-2024-border-day1",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "End the border crisis and restore secure borders, starting on Day 1.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
-              "year": 2024,
-              "date": "2024-07-18",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
-              "label": "2024 acceptance speech"
-            },
-            "ref": "¶157.1-157.2",
-            "quote": "At the heart of the Republican platform is our pledge to end this border nightmare, and fully restore the sacred and sovereign borders of the United States of America. And we're going to do that on Day 1."
-          }
-        ]
-      },
-      {
-        "id": "trump-2024-deportation",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "Launch the largest deportation operation in US history.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
-              "year": 2024,
-              "date": "2024-07-18",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
-              "label": "2024 acceptance speech"
-            },
-            "ref": "¶176.2-176.3",
-            "quote": "That's why, to keep our family safe, the Republican platform promises to launch the largest deportation operation in the history of our country. Even larger than that of President Dwight D. Eisenhower, from many years ago."
+            "quote": "finishing the wall"
           },
           {
             "source": {
@@ -27942,17 +29352,632 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
               "label": "2024 debate"
             },
-            "ref": "¶17.34-17.35",
-            "quote": "And we have to get 'em out. We have to get 'em out fast."
+            "ref": "¶128.14",
+            "quote": "We need--and we have to have it."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "southern border wall",
+            "record": "CBP border wall status reports; appropriations",
+            "criterion": "the wall is completed along the planned stretches of the southern border",
+            "ambiguity": "\"Finishing\" is read as completing the barrier planned in the first term; no length is named."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-border-wall"
+            }
+          ]
+        }
       },
       {
-        "id": "trump-2024-ev-mandate",
+        "id": "trump-2024-end-international-crises",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "End every international crisis the previous administration created.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶89.1-89.2",
+            "quote": "I will end every single international crisis that the current administration has created"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-end-wars",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-end-ukraine-war",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "End the Russia-Ukraine war, before even becoming President.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶89.1-89.2",
+            "quote": "including the horrible war with Russia and Ukraine"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶146.34-146.35",
+            "quote": "And I'll get the war with Ukraine and Russia ended."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶158.1",
+            "quote": "I want the war to stop."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶158.27",
+            "quote": "I will get it settled before I even become President."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶166.2",
+            "quote": "Because we have to stop all of these human lives from being destroyed."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-end-wars",
+          "deadline": {
+            "stated": "before I even become President",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Russia-Ukraine war",
+            "record": "ceasefire or peace agreements; official statements",
+            "criterion": "a ceasefire or peace agreement ends the fighting before 20 January 2025",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶158.1 and ¶166.2 are soft restatements; acceptance ¶89.1 gives no date."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-end-israel-war",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Settle the war in the Middle East that followed the attack on Israel, fast.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶89.1-89.2",
+            "quote": "And the war caused by the attack on Israel"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶146.33",
+            "quote": "I will get that settled and fast."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-end-wars",
+          "deadline": {
+            "stated": "fast",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Israel-Hamas war",
+            "record": "ceasefire agreements; official statements",
+            "criterion": "the Israel-Hamas war ends in a lasting ceasefire or peace agreement",
+            "ambiguity": "\"That\" also takes in the wider regional conflict (Houthis, Iran); read as the Israel-Hamas war."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶146.33 \"that\" points back to the Middle East wars of ¶146.5-146.31."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-election-integrity",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Never let an election result like 2020 happen again; have good elections.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶91.1-91.5",
+            "quote": "We're never going to let that happen again."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶128.16",
+            "quote": "And we have to have good elections."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That\" in ¶91.1 is the 2020 election result (¶91.2), which he says was won by cheating (¶91.4)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-restore-government-competence",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Restore the integrity, competence and loyalty of the federal government; run it on common sense.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶93.1",
+            "quote": "Together, we will restore vision, strength, competence and we're going to have a thing called common sense making most of our decisions actually."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶16.2",
+            "quote": "And we will immediately restore the integrity, competency, and loyalty of America's Government."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "immediately",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-american-dream",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Bring back the American dream.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶107.1-107.2",
+            "quote": "I will bring back the American dream."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶36.3",
+            "quote": "The American dream will soon be back and thriving like never before."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-bring-back-dreams"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-implement-platform",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Swiftly implement the Republican platform's promises once given a Republican House and Senate.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶116.1",
+            "quote": "It's a series of bold promises that we will swiftly implement when you give us a Republican House."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "swiftly",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Conditional on a Republican Congress (¶116.1-117.1)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-energy-exports",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "energy",
-        "restatement": "End the electric-vehicle mandate on Day 1.",
+        "restatement": "Become energy dominant and export American energy all over the world.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶120.8-120.9",
+            "quote": "We will be energy dominant and supply not only ourselves, but we will supply the rest of the world."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶32.1",
+            "quote": "export American energy all over the world."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US energy exports",
+            "record": "EIA energy trade data",
+            "criterion": "US net energy exports rise over the term",
+            "ambiguity": "The US was already a net exporter in 2024; \"dominant\" is read as net exports rising further."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-end-waste",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "End the waste of taxpayer dollars that fuels inflation.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶122.1",
+            "quote": "we will end the ridiculous and actually incredible waste of taxpayer dollars that is fueling the inflation crisis."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-redirect-green-funds",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Redirect unspent \"Green New Scam\" money to roads, bridges and dams.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶123.1",
+            "quote": "we will redirect that money for important projects like roads, bridges, dams and we will not allow it to be spent on the meaningless Green New scam ideas."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "unspent climate and clean-energy appropriations",
+            "record": "enacted rescissions and appropriations (Congress.gov); USAspending",
+            "criterion": "unspent clean-energy funds are rescinded or redirected to roads, bridges and dams",
+            "ambiguity": "\"Green New Scam\" names no law; read as the unspent clean-energy funds of the 2021-22 laws (IIJA, IRA)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-end-ev-mandate",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "End the electric vehicle mandate on day one, so people can buy the car of their choice.",
         "quality": "partial",
         "occurrences": [
           {
@@ -27972,6 +29997,21 @@ export const CORPUS_TERMS: CorpusTerm[] = [
           },
           {
             "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶221.9-221.10",
+            "quote": "And we're going to make that change on Day 1."
+          },
+          {
+            "source": {
               "kind": "inaugural",
               "medium": "speech",
               "speaker": "Donald J. Trump",
@@ -27983,16 +30023,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶33.1",
-            "quote": "With my actions today, we will end the \"green new deal,\" and we will revoke the electric vehicle mandate, saving our auto industry and keeping my sacred pledge to our great American autoworkers."
+            "quote": "we will revoke the electric vehicle mandate"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "on day one",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal EV policy",
+            "record": "executive orders and agency rules (Federal Register)",
+            "criterion": "the federal EV target and the rules that push EV sales are revoked",
+            "ambiguity": "No law mandates EV purchases; \"mandate\" is read as the 2021 EV-share target and the EPA/NHTSA vehicle standards. Only the target can be revoked on day one; repealing rules takes longer."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-auto-jobs",
+        "id": "trump-2024-bring-back-auto-manufacturing",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Bring back the auto industry and hundreds of thousands of manufacturing jobs.",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Bring car manufacturing back to the US, fast, with hundreds of thousands of jobs.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28007,8 +30067,53 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
               "label": "2024 acceptance speech"
             },
-            "ref": "¶131.4-131.5",
-            "quote": "This very simple formula will create massive numbers of jobs. We will take over the auto industry again and many many, hundreds of thousands of jobs, we lost so many jobs over the years."
+            "ref": "¶125.3",
+            "quote": "we're going to bring back car manufacturing and we're going to bring it back fast."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶126.4-126.5",
+            "quote": "And we are going to bring it back."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶131.5",
+            "quote": "We will take over the auto industry again and many many, hundreds of thousands of jobs"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶31.1-31.2",
+            "quote": "America will be a manufacturing nation once again"
           },
           {
             "source": {
@@ -28025,14 +30130,34 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶34.1",
             "quote": "We will build automobiles in America again at a rate that nobody could have dreamt possible just a few years ago."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-autos",
+          "deadline": {
+            "stated": "fast",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US auto production and jobs",
+            "record": "BLS employment in motor vehicles and parts; Federal Reserve industrial production (motor vehicles)",
+            "criterion": "US auto production and auto-manufacturing employment are higher at the end of the term than at the start",
+            "ambiguity": "\"Bring back\" and \"a rate nobody could have dreamt\" set no number; read as both measures rising."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-car-tariff",
+        "id": "trump-2024-mexico-car-tariff",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "trade",
-        "restatement": "Impose a 100-200% tariff on cars built abroad (esp. China-in-Mexico plants).",
+        "restatement": "Put a tariff of about 100-200% on cars made in the new (Chinese-built) plants in Mexico.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28063,16 +30188,196 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶229.8-229.9",
-            "quote": "But we're not going to let that. We'll put tariffs on those cars so they can't come into our country."
+            "quote": "We'll put tariffs on those cars so they can't come into our country."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2024-autos",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "tariffs on cars imported from Mexico",
+            "record": "tariff actions (Federal Register); Harmonized Tariff Schedule",
+            "criterion": "a tariff of roughly 100% or more applies to cars from those plants",
+            "ambiguity": "In the speech the tariff applies only \"if they don't agree\" to build in the US; read as cars from Chinese-owned plants in Mexico."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-ss-medicare",
+        "id": "trump-2024-stop-plunder",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Not let other countries take advantage of the US, take its jobs and plunder it.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶130.1",
+            "quote": "We will not let countries come in, take our jobs, and plunder our nation."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶3.2",
+            "quote": "we will not allow ourselves to be taken advantage of any longer."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-stop-job-raids"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-all-auto-jobs-back",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Get back every auto-manufacturing job lost over the past 20-25 years.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶131.8-131.9",
+            "quote": "We're going to get them all back, every single one of them."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-autos",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US auto-manufacturing employment",
+            "record": "BLS employment in motor vehicles and parts",
+            "criterion": "motor vehicle and parts employment returns to its level of about 2000 (roughly 1.3 million)",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"Them\" is the auto-manufacturing jobs lost to China and Mexico (¶131.6-131.7)."
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "trump-2024-bring-back-auto-manufacturing"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-protect-social-security",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Protect Social Security.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶148.1",
+            "quote": "I am going to protect Social Security"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2024-entitlements",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Social Security benefits",
+            "record": "enacted legislation (Congress.gov); SSA programme rules",
+            "criterion": "no law cuts Social Security benefits or raises the retirement age",
+            "ambiguity": "\"Protect\" is read as no cuts to benefits or eligibility."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-protect-medicare",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "Protect Social Security and Medicare (no benefit cuts).",
+        "restatement": "Protect Medicare.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28090,14 +30395,34 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶148.1",
             "quote": "I am going to protect Social Security and Medicare."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "trump-2024-entitlements",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Medicare benefits",
+            "record": "enacted legislation (Congress.gov); CMS programme rules",
+            "criterion": "no law cuts Medicare benefits or eligibility",
+            "ambiguity": "\"Protect\" is read as no cuts to benefits or eligibility; payment changes to providers are a judgement call."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-end-wars",
+        "id": "trump-2024-incomes-soar",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "End every international crisis, including the Russia-Ukraine war.",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Make incomes skyrocket.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28112,8 +30437,148 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
               "label": "2024 acceptance speech"
             },
-            "ref": "¶89.1",
-            "quote": "I will end every single international crisis that the current administration has created, including the horrible war with Russia and Ukraine, which would have never happened if I was president."
+            "ref": "¶149.1",
+            "quote": "Under my plan, incomes will skyrocket"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "household income",
+            "record": "real median household income (Census); real average weekly earnings (BLS)",
+            "criterion": "real incomes rise over the term",
+            "ambiguity": "\"Skyrocket\" sets no number; any real rise counts as partly kept, a rise faster than in recent terms as kept."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-jobs-roaring-back",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Bring jobs roaring back.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶149.1",
+            "quote": "jobs will come roaring back"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-create-jobs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-middle-class-prosper",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Make the middle class prosper like never before.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶149.1",
+            "quote": "the middle class will prosper like never, ever before"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-remain-in-mexico",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Reinstate the \"Remain in Mexico\" policy.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶163.4",
+            "quote": "We want them to stay on their soil."
           },
           {
             "source": {
@@ -28127,8 +30592,53 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
               "label": "2025 inaugural address"
             },
-            "ref": "¶64.4",
-            "quote": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable."
+            "ref": "¶26.3",
+            "quote": "We will reinstate my \"Remain in Mexico\" policy."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Migrant Protection Protocols",
+            "record": "DHS policy memoranda; executive orders (Federal Register)",
+            "criterion": "the Migrant Protection Protocols are reinstated",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Acceptance ¶163.4 is a soft, broader wish that illegal aliens stay on foreign soil, read as this commitment."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-mass-deportation",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Launch the largest deportation operation in US history, returning millions of criminal aliens.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶176.2",
+            "quote": "the Republican platform promises to launch the largest deportation operation in the history of our country."
           },
           {
             "source": {
@@ -28142,17 +30652,157 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
               "label": "2024 debate"
             },
-            "ref": "¶146.33-146.35",
-            "quote": "I will get that settled and fast. And I'll get the war with Ukraine and Russia ended. If I'm President-Elect, I'll get it done before even becoming President."
+            "ref": "¶17.34-17.35",
+            "quote": "We have to get 'em out fast."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶26.2",
+            "quote": "we will begin the process of returning millions and millions of criminal aliens back to the places from which they came."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "deportations",
+            "record": "ICE and DHS removal statistics",
+            "criterion": "removals reach millions over the term, more than any earlier operation",
+            "ambiguity": "Counts differ (removals vs returns); the 1954 operation's claimed figures are disputed. Read as millions of removals over the term."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-iron-dome",
+        "id": "trump-2024-keep-criminals-out",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "immigration",
+        "restatement": "Not let killers and criminals into the country.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶180.2",
+            "quote": "I will not let these killers and criminals into our country."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-keep-americans-safe",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Keep Americans safe; restore safety.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶180.3",
+            "quote": "I will keep our sons and daughters safe."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶4.2",
+            "quote": "Our safety will be restored."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-rebuild-military",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "defense",
-        "restatement": "Build a nationwide \"iron dome\" missile-defense system over the US.",
+        "restatement": "Replenish the military and build the strongest military the world has ever seen.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28168,16 +30818,281 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶210.7",
-            "quote": "We will replenish our military and build an iron dome missile defense system to ensure that no enemy can strike our homeland."
+            "quote": "We will replenish our military"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶43.1",
+            "quote": "we will again build the strongest military the world has ever seen."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US military",
+            "record": "DoD budget (Congress.gov, Comptroller); munitions procurement",
+            "criterion": "defense spending and munitions stocks grow in real terms over the term",
+            "ambiguity": "\"Replenish\" and \"strongest ever\" set no number; read as real growth in defense budgets and stocks."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-rebuild-military"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-iron-dome",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Build an iron dome missile defense system over the US so no enemy can strike the homeland.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶210.7",
+            "quote": "build an iron dome missile defense system to ensure that no enemy can strike our homeland."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶214.3",
+            "quote": "we're going to build an iron dome over our country"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2024-iron-dome",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "homeland missile defense",
+            "record": "DoD budget and contracts; Missile Defense Agency reports",
+            "criterion": "a nationwide missile defense shield is built and operating by the end of the term",
+            "ambiguity": "\"Build\" is read as deployed and operating; funding or starting it counts as partly kept."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-iron-dome-made-in-usa",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Build the iron dome entirely in the USA.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶211.1",
+            "quote": "this great iron dome will be built entirely in the U.S.A."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶214.4",
+            "quote": "I'm going to make it all right here."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2024-iron-dome",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "where the missile shield is made",
+            "record": "DoD contracts (SAM.gov, USAspending)",
+            "criterion": "the shield's contracts go to US production",
+            "ambiguity": "\"Entirely\" is read as US prime contractors and assembly; global supply chains are not traced."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-wisconsin-ships",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Have a lot of the navy ship contract built in Wisconsin and other states.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶212.6",
+            "quote": "we're going to have a lot of that built right here in the state of Wisconsin and all other states."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Navy shipbuilding in Wisconsin",
+            "record": "Navy contracts (USAspending)",
+            "criterion": "Navy ships under the contract are built in Wisconsin shipyards",
+            "ambiguity": "\"A lot of that\" sets no share; read as continued Navy ship construction in Wisconsin."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-cure-cancer-alzheimers",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Unleash American innovation and get to cures for cancer, Alzheimer's and other diseases.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶215.1-215.2",
+            "quote": "We will unleash the power of American innovation, and as we do, we will soon be on the verge of finding the cures to cancer, Alzheimer's disease and many other diseases."
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶216.2",
+            "quote": "We're going to get to the cure for cancer and Alzheimer's and so many other things."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-womens-sports",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "culture",
-        "restatement": "End transgender participation in women's sports immediately.",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Not have men playing in women's sports, ending it immediately.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28193,41 +31108,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶217.1-217.2",
-            "quote": "We will not have men playing in women's sports. That will end immediately."
+            "quote": "We will not have men playing in women's sports."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "immediately",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "participation of transgender women in women's sports",
+            "record": "executive orders; Title IX rules and enforcement (Federal Register)",
+            "criterion": "federal policy bars males from women's sports in federally funded programmes",
+            "ambiguity": "Federal reach runs through Title IX funding; read as a federal rule or order, not every sports body."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-cancer-cures",
+        "id": "trump-2024-renovate-cities",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Approach cures for cancer, Alzheimer's, and other diseases.",
-        "quality": "no",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
-              "year": 2024,
-              "date": "2024-07-18",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
-              "label": "2024 acceptance speech"
-            },
-            "ref": "¶215.1",
-            "quote": "We will unleash the power of American innovation, and as we do, we will soon be on the verge of finding the cures to cancer, Alzheimer's disease and many other diseases."
-          }
-        ]
-      },
-      {
-        "id": "trump-2024-cities",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "crime",
-        "restatement": "Restore US cities to be safe, clean, and beautiful.",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Restore and renovate the nation's cities, making them safe, clean and beautiful.",
         "quality": "no",
         "occurrences": [
           {
@@ -28244,6 +31154,146 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             },
             "ref": "¶218.1",
             "quote": "And we will restore and renovate our nation's once-great cities, making them safe, clean and beautiful again."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-cities",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-proud-capital",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Make Washington, D.C. a capital to be proud of again, very soon.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶218.4",
+            "quote": "We will be, very soon, very proud of our capital again, Washington, D.C."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-cities",
+          "deadline": {
+            "stated": "very soon",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-forgotten-no-longer",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "The forgotten men and women will be forgotten no longer.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶238.1",
+            "quote": "you will be forgotten no longer."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-forgotten-no-longer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-win-again",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Win like never before.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶238.2",
+            "quote": "together, we will win, win, win."
           },
           {
             "source": {
@@ -28257,83 +31307,273 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
               "label": "2025 inaugural address"
             },
-            "ref": "¶39.5",
-            "quote": "And we are going to bring law and order back to our cities."
+            "ref": "¶63.3",
+            "quote": "We're going to win like never before."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-start-winning"
+            }
+          ]
+        }
       },
       {
-        "id": "trump-2024-hostages",
+        "id": "trump-2024-broad-tariffs",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "Get American hostages returned before Inauguration Day.",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Tariff and tax foreign countries instead of taxing Americans.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶17.4-17.6",
+            "quote": "We're doing tariffs on other countries."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶35.2",
+            "quote": "we will tariff and tax foreign countries to enrich our citizens."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US tariffs",
+            "record": "tariff actions (Federal Register); Harmonized Tariff Schedule",
+            "criterion": "broad new tariffs are imposed on imports from many countries",
+            "ambiguity": "\"Substantial in some cases\" sets no rate; read as broad tariff increases on many countries' goods."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Debate ¶17.4-17.6 is untriggered (\"We're doing tariffs\")."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-tariff-revenue",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Take in hundreds of billions of dollars from tariffs.",
         "quality": "full",
         "occurrences": [
           {
             "source": {
-              "kind": "acceptance",
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶26.3",
+            "quote": "We are gonna take in billions of dollars, hundreds of billions of dollars."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
               "medium": "speech",
               "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
-              "year": 2024,
-              "date": "2024-07-18",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
-              "label": "2024 acceptance speech"
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
             },
-            "ref": "¶208.1",
-            "quote": "we want our hostages back — and they better be back before I assume office, or you will be paying a very big price."
+            "ref": "¶36.1-36.2",
+            "quote": "It will be massive amounts of money pouring into our Treasury, coming from foreign sources."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "customs revenue",
+            "record": "customs duties in the Monthly Treasury Statement",
+            "criterion": "customs duties reach at least $200 billion a year during the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered (\"We are gonna\", \"It will be massive amounts\")."
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "trump-2024-broad-tariffs"
+            }
+          ]
+        }
       },
       {
-        "id": "trump-2024-green-redirect",
+        "id": "trump-2024-no-abortion-ban",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Redirect unspent \"Green New Deal\" funds to roads, bridges, and dams.",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Not sign a national abortion ban.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶41.3-41.4",
+            "quote": "I'm not signing a ban."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal abortion ban",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "no federal abortion ban is signed into law during the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered present tense (\"I'm not signing a ban\") in answer to whether he would sign one."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-ukraine-talks",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "As President-elect, speak to Putin and Zelenskyy and get them together.",
         "quality": "partial",
         "occurrences": [
           {
             "source": {
-              "kind": "acceptance",
-              "medium": "speech",
+              "kind": "debate",
+              "medium": "debate",
               "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
               "year": 2024,
-              "date": "2024-07-18",
+              "date": "2024-09-10",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
-              "label": "2024 acceptance speech"
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
             },
-            "ref": "¶123.1",
-            "quote": "And all of the trillions of dollars that are sitting there not yet spent, we will redirect that money for important projects like roads, bridges, dams and we will not allow it to be spent on the meaningless Green New scam ideas."
+            "ref": "¶158.28",
+            "quote": "If I win, when I'm President-Elect, and what I'll do is I'll speak to one, I'll speak to the other, I'll get 'em together."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2024-end-wars",
+          "deadline": {
+            "stated": "when I'm President-Elect",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "talks between Russia and Ukraine",
+            "record": "official readouts and statements",
+            "criterion": "he brings the two leaders into direct talks before taking office",
+            "ambiguity": "\"Get 'em together\" is read as direct talks between the two leaders, not necessarily a meeting in person."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-incomes-prosper",
+        "id": "trump-2024-aca-only-if-better",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "economy",
-        "restatement": "Incomes skyrocket, inflation vanishes completely, jobs return, middle class prospers.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Keep running Obamacare as well as possible, and replace it only with a plan that costs less and is better.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
-              "kind": "acceptance",
-              "medium": "speech",
+              "kind": "debate",
+              "medium": "debate",
               "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
               "year": 2024,
-              "date": "2024-07-18",
+              "date": "2024-09-10",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
-              "label": "2024 acceptance speech"
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
             },
-            "ref": "¶149.1",
-            "quote": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly."
+            "ref": "¶215.4",
+            "quote": "And what I said, that if we come up with something, and we are working on things, we're going to do it and we're going to replace it."
           },
           {
             "source": {
@@ -28347,18 +31587,433 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
               "label": "2024 debate"
             },
-            "ref": "¶202.9-202.10",
-            "quote": "I built one of the greatest economies in the history of the world and I'm gonna build it again. It's going to be bigger, better and stronger."
+            "ref": "¶215.28-215.30",
+            "quote": "But until then, I'd run it as good as it can be run."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Donald J. Trump",
+              "event": "Presidential Debate in Philadelphia, Pennsylvania",
+              "year": 2024,
+              "date": "2024-09-10",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
+              "label": "2024 debate"
+            },
+            "ref": "¶217.3-217.5",
+            "quote": "But if we come up with something I would only change it if we come up with something that's better and less expensive."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "contested",
+            "note": "Hedged and conditional on finding a better plan (\"if we come up with something\"); read as a commitment not to replace the ACA with anything worse."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-america-first",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Put America first every day of the administration.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶3.3",
+            "quote": "During every single day of the Trump administration, I will, very simply, put America first."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-america-first"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-reclaim-sovereignty",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Reclaim American sovereignty; make the US a free, sovereign and independent nation.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶4.1",
+            "quote": "Our sovereignty will be reclaimed."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶66.2",
+            "quote": "From this day on, the United States of America will be a free, sovereign, and independent nation."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-impartial-justice",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Restore fair, equal and impartial justice under the rule of law.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶4.3",
+            "quote": "The scales of justice will be rebalanced."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶39.4",
+            "quote": "Under my leadership, we will restore fair, equal, and impartial justice under the constitutional rule of law."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-end-weaponization",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "End the weaponization of the Justice Department and government against political opponents.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶4.4",
+            "quote": "The vicious, violent, and unfair weaponization of the Justice Department and our Government will end."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶39.1-39.3",
+            "quote": "We will not allow that to happen."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-disaster-response",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Make government able to deliver basic services in emergencies such as hurricanes and wildfires.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶12.5-12.7",
+            "quote": "That's going to change."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That\" in ¶12.7 is the failed disaster response of ¶12.1-12.6."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-government-conduct",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Meet every crisis with dignity and strength; run the administration in pursuit of excellence.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶19.1",
+            "quote": "we will be working to meet every crisis with dignity and power and strength."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶24.2",
+            "quote": "In everything we do, my administration will be inspired by a strong pursuit of excellence and unrelenting success."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-mlk-dream",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Make Martin Luther King's dream come true.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶23.3-23.4",
+            "quote": "We will make his dream come true."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We will strive together\" (¶23.3) is shared with citizens; ¶23.4 is firm."
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-border-emergency",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
         "restatement": "Declare a national emergency at the southern border.",
-        "quality": "partial",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28375,39 +32030,34 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶26.1",
             "quote": "First, I will declare a national emergency at our southern border."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "today",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "national emergency at the southern border",
+            "record": "proclamations (Federal Register)",
+            "criterion": "a national emergency at the southern border is declared on 20 January 2025",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-remain-in-mexico",
+        "id": "trump-2024-end-catch-and-release",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "Reinstate the \"Remain in Mexico\" policy.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "inaugural",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Inaugural Address",
-              "year": 2025,
-              "date": "2025-01-20",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
-              "label": "2025 inaugural address"
-            },
-            "ref": "¶26.3",
-            "quote": "We will reinstate my \"Remain in Mexico\" policy."
-          }
-        ]
-      },
-      {
-        "id": "trump-2024-catch-and-release",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "End the practice of catch-and-release.",
+        "restatement": "End catch-and-release.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28425,15 +32075,40 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶27.1",
             "quote": "I will end the practice of catch-and-release."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "release of apprehended migrants into the US",
+            "record": "DHS policy memoranda; ICE detention and release statistics",
+            "criterion": "the policy of releasing apprehended border crossers into the US pending hearings ends",
+            "ambiguity": "Some releases are required by law and court orders; read as ending routine release at the border."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-end-catch-and-release"
+            }
+          ]
+        }
       },
       {
-        "id": "trump-2024-troops-border",
+        "id": "trump-2024-troops-to-border",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "Deploy troops to the southern border.",
-        "quality": "partial",
+        "restatement": "Send troops to the southern border.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28450,15 +32125,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶27.2",
             "quote": "And I will send troops to the southern border to repel the disastrous invasion of our country."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "military deployment to the southern border",
+            "record": "DoD deployment orders and announcements",
+            "criterion": "active-duty troops are deployed to the southern border",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-cartels-fto",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "immigration",
-        "restatement": "Designate the drug cartels as foreign terrorist organizations.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Designate the cartels as foreign terrorist organizations.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28473,17 +32168,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶27.3",
-            "quote": "Under the orders I sign today, we will also be designating the cartels as foreign terrorist organizations."
+            "quote": "we will also be designating the cartels as foreign terrorist organizations."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "FTO designation of drug cartels",
+            "record": "State Department FTO list (Federal Register)",
+            "criterion": "major drug cartels are designated foreign terrorist organizations",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-alien-enemies-act",
+        "id": "trump-2024-invoke-alien-enemies-act",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "Invoke the Alien Enemies Act of 1798 to eliminate all foreign gangs and criminal networks.",
-        "quality": "partial",
+        "restatement": "Invoke the Alien Enemies Act of 1798 against foreign gangs.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28498,17 +32213,127 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶28.1",
-            "quote": "And by invoking the Alien Enemies Act of 1798, I will direct our Government to use the full and immense power of Federal and State law enforcement to eliminate the presence of all foreign gangs and criminal networks bringing devastating crime to U.S. soil, including our cities and inner cities."
+            "quote": "by invoking the Alien Enemies Act of 1798"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "trump-2024-alien-enemies",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Alien Enemies Act",
+            "record": "proclamations (Federal Register)",
+            "criterion": "the Alien Enemies Act is formally invoked",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-eliminate-foreign-gangs",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Eliminate the presence of all foreign gangs and criminal networks in the US.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶28.1",
+            "quote": "to eliminate the presence of all foreign gangs and criminal networks bringing devastating crime to U.S. soil"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "trump-2024-alien-enemies",
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-defend-from-invasion",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Defend the country from threats and invasions at a level never seen before.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶29.1-29.2",
+            "quote": "We will do it at a level that nobody has ever seen before."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-energy-emergency",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "energy",
         "restatement": "Declare a national energy emergency.",
-        "quality": "partial",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28523,17 +32348,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶30.2",
-            "quote": "The inflation crisis was caused by massive overspending and escalating energy prices, and that is why today I will also declare a national energy emergency."
+            "quote": "today I will also declare a national energy emergency."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "today",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "national energy emergency",
+            "record": "executive orders (Federal Register)",
+            "criterion": "a national energy emergency is declared on 20 January 2025",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-spr-refill",
+        "id": "trump-2024-refill-spr",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "energy",
-        "restatement": "Refill the Strategic Petroleum Reserve back to the top.",
-        "quality": "partial",
+        "restatement": "Fill the strategic petroleum reserve back up to the top.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28548,16 +32393,131 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶32.1",
-            "quote": "We will bring prices down, fill our strategic reserves up again right to the top, and export American energy all over the world."
+            "quote": "fill our strategic reserves up again right to the top"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Strategic Petroleum Reserve",
+            "record": "EIA weekly SPR stocks",
+            "criterion": "the SPR is at or near its full capacity (about 714 million barrels) by the end of the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-external-revenue-service",
+        "id": "trump-2024-rich-nation",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Make America a rich nation again.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶32.2",
+            "quote": "We will be a rich nation again"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "trump-2016-make-country-rich"
+            }
+          ]
+        }
+      },
+      {
+        "id": "trump-2024-end-green-new-deal",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "End the \"green new deal\".",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶33.1",
+            "quote": "we will end the \"green new deal,\""
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "No law called the Green New Deal was enacted; read as Biden-era climate spending and rules."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-overhaul-trade",
+        "kind": "promise",
+        "method": "protocol",
         "theme": "trade",
-        "restatement": "Establish an \"External Revenue Service\" to collect tariffs, duties, and revenues.",
+        "restatement": "Immediately begin overhauling the trade system to protect American workers.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28572,18 +32532,83 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
               "label": "2025 inaugural address"
             },
-            "ref": "¶36.1",
-            "quote": "For this purpose, we are establishing the External Revenue Service to collect all tariffs, duties, and revenues."
+            "ref": "¶35.1",
+            "quote": "I will immediately begin the overhaul of our trade system to protect American workers and families."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "immediately",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US trade policy",
+            "record": "tariff actions and trade agreements (Federal Register, USTR)",
+            "criterion": "broad changes to tariffs and trade agreements begin in the first days of the term",
+            "ambiguity": "\"Overhaul\" is not defined; read as broad new tariff and trade-agreement actions starting at once."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-external-revenue-service",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Establish an External Revenue Service to collect tariffs, duties and revenues.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶36.1-36.2",
+            "quote": "we are establishing the External Revenue Service to collect all tariffs, duties, and revenues."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "External Revenue Service",
+            "record": "executive orders and statutes (Federal Register, Congress.gov)",
+            "criterion": "an agency named the External Revenue Service is established to collect tariffs and duties",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered; \"we are establishing\" is read as a commitment for the term."
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-doge",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "government",
-        "restatement": "Establish the Department of Government Efficiency.",
-        "quality": "partial",
+        "restatement": "Establish a new Department of Government Efficiency.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28598,17 +32623,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶37.1",
-            "quote": "To restore competence and effectiveness to our Federal Government, my administration will establish the brandnew Department of Government Efficiency."
+            "quote": "my administration will establish the brandnew Department of Government Efficiency."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Department of Government Efficiency",
+            "record": "executive orders (Federal Register)",
+            "criterion": "a Department of Government Efficiency is established",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-free-speech-eo",
+        "id": "trump-2024-free-speech-order",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "civil-liberties",
-        "restatement": "Sign an executive order to stop all government censorship and restore free speech.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Sign an executive order to stop government censorship.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28623,16 +32668,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶38.1",
-            "quote": "After years and years of illegal and unconstitutional Federal efforts to restrict free expression, I also will sign an Executive order to immediately stop all Government censorship and bring back free speech to America."
+            "quote": "I also will sign an Executive order to immediately stop all Government censorship and bring back free speech to America."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "immediately",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "executive order on government censorship",
+            "record": "executive orders (Federal Register)",
+            "criterion": "an executive order barring federal censorship of speech is signed",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered (\"I also will sign\")."
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-end-dei",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "culture",
-        "restatement": "End the government policy of socially engineering race and gender into public and private life.",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "End the government policy of \"socially engineering\" race and gender, this week.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28650,15 +32715,80 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶40.1",
             "quote": "This week, I will also end the Government policy of trying to socially engineer race and gender into every aspect of public and private life."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "This week",
+            "applied": "2025-01-26"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal diversity, equity and inclusion programmes",
+            "record": "executive orders (Federal Register)",
+            "criterion": "orders ending federal DEI programmes and mandates are issued in the first week",
+            "ambiguity": "\"Socially engineer race and gender\" is read as federal DEI programmes and requirements."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-two-genders",
+        "id": "trump-2024-colorblind-society",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "culture",
-        "restatement": "Make it official US Government policy that there are only two genders (male and female).",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Forge a society that is colorblind and merit based.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
+            },
+            "ref": "¶40.2",
+            "quote": "We will forge a society that is colorblind and merit based."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-two-sexes-policy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Make it official US policy that there are only two genders, male and female.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28675,15 +32805,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶40.3",
             "quote": "As of today, it will henceforth be the official policy of the United States Government that there are only two genders: male and female."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "As of today",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal policy on sex and gender",
+            "record": "executive orders (Federal Register)",
+            "criterion": "an order making it federal policy that there are two sexes is issued on 20 January 2025",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered (\"it will henceforth be\")."
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-reinstate-servicemembers",
+        "id": "trump-2024-reinstate-vaccine-refusers",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "defense",
-        "restatement": "Reinstate servicemembers expelled over the COVID vaccine mandate, with full backpay.",
-        "quality": "partial",
+        "restatement": "Reinstate service members expelled for refusing the COVID vaccine, with full back pay, this week.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28700,15 +32850,35 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶41.1",
             "quote": "This week, I will reinstate any servicemembers who were unjustly expelled from our military for objecting to the COVID vaccine mandate with full backpay."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "This week",
+            "applied": "2025-01-26"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "service members discharged over the COVID-19 vaccine mandate",
+            "record": "executive orders (Federal Register); DoD guidance",
+            "criterion": "an order reinstating them with back pay is issued in the first week",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-military-depoliticize",
+        "id": "trump-2024-military-anti-woke-order",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "defense",
-        "restatement": "Sign an order barring radical political theories and social experiments in the military.",
-        "quality": "partial",
+        "restatement": "Sign an order to stop troops being subjected to radical political theories and social experiments.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28723,17 +32893,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶42.1-42.2",
-            "quote": "And I will sign an order to stop our warriors from being subjected to radical political theories and social experiments while on duty. It's going to end immediately."
+            "quote": "And I will sign an order to stop our warriors from being subjected to radical political theories and social experiments while on duty."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "immediately",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "executive order on military training and policy",
+            "record": "executive orders (Federal Register)",
+            "criterion": "an executive order ending such training in the military is signed",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-strongest-military",
+        "id": "trump-2024-avoid-new-wars",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "defense",
-        "restatement": "Build the strongest military the world has ever seen.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Measure success by the wars ended and the wars never entered.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -28747,18 +32937,38 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
               "label": "2025 inaugural address"
             },
-            "ref": "¶43.1",
-            "quote": "Like in 2017, we will again build the strongest military the world has ever seen."
+            "ref": "¶43.2",
+            "quote": "We will measure our success not only by the battles we win, but also by the wars that we end and, perhaps most importantly, the wars we never get into."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "A yardstick rather than a direct pledge; read as a commitment to end wars and not start new ones."
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-gulf-of-america",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "culture",
-        "restatement": "Rename the Gulf of Mexico to the Gulf of America.",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Rename the Gulf of Mexico the Gulf of America.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28773,17 +32983,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶46.1",
-            "quote": "A short time from now, we are going to be changing the name of the Gulf of Mexico to the Gulf of America, and we will restore the name of a great President, William McKinley, to Mount McKinley, where it should be and where it belongs."
+            "quote": "we are going to be changing the name of the Gulf of Mexico to the Gulf of America"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "A short time from now",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal name of the Gulf of Mexico",
+            "record": "executive order (Federal Register); US Board on Geographic Names",
+            "criterion": "the federal government officially renames the Gulf of Mexico the Gulf of America",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-mount-mckinley",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "culture",
-        "restatement": "Restore the name Mount McKinley to the mountain (from Denali).",
-        "quality": "partial",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Restore the name Mount McKinley.",
+        "quality": "full",
         "occurrences": [
           {
             "source": {
@@ -28798,16 +33028,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶46.1",
-            "quote": "A short time from now, we are going to be changing the name of the Gulf of Mexico to the Gulf of America, and we will restore the name of a great President, William McKinley, to Mount McKinley, where it should be and where it belongs."
+            "quote": "we will restore the name of a great President, William McKinley, to Mount McKinley"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "A short time from now",
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal name of Denali",
+            "record": "executive order (Federal Register); US Board on Geographic Names",
+            "criterion": "the federal government officially restores the name Mount McKinley",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-panama-canal",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "foreign-policy",
-        "restatement": "Take back the Panama Canal from Panama.",
+        "restatement": "Take back the Panama Canal.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28822,17 +33072,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
               "label": "2025 inaugural address"
             },
-            "ref": "¶49.1-49.3",
-            "quote": "And above all, China is operating the Panama Canal. And we didn't give it to China. We gave it to Panama, and we're taking it back."
+            "ref": "¶49.3",
+            "quote": "We gave it to Panama, and we're taking it back."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "control of the Panama Canal",
+            "record": "treaties and agreements with Panama; official statements",
+            "criterion": "the US regains control of the Panama Canal",
+            "ambiguity": "\"Taking it back\" is not defined; read as US ownership or operational control, with removal of Chinese port operators as partly kept."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Untriggered present progressive (\"we're taking it back\")."
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-chronic-disease",
+        "id": "trump-2024-end-chronic-disease",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
         "theme": "health",
-        "restatement": "End the chronic disease epidemic and keep children healthy and disease-free.",
+        "restatement": "End the chronic disease epidemic and keep children healthy.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28850,14 +33120,34 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶51.3",
             "quote": "Together, we will end the chronic disease epidemic and keep our children safe, healthy, and disease-free."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "chronic disease prevalence",
+            "record": "CDC chronic disease and childhood obesity surveillance",
+            "criterion": "the prevalence of chronic disease, including in children, falls over the term",
+            "ambiguity": "\"End the epidemic\" sets no number; read as falling prevalence of the main chronic diseases."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "trump-2024-mars",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "space",
-        "restatement": "Land American astronauts on Mars to plant the flag.",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Launch American astronauts to plant the flag on Mars.",
         "quality": "partial",
         "occurrences": [
           {
@@ -28875,68 +33165,174 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶53.1",
             "quote": "And we will pursue our manifest destiny into the stars, launching American astronauts to plant the Stars and Stripes on the planet Mars."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "crewed US mission to Mars",
+            "record": "NASA mission records",
+            "criterion": "American astronauts are launched to Mars and plant the US flag there",
+            "ambiguity": "\"Pursue\" leaves open whether the landing itself is promised within the term; a crewed launch to Mars is read as partly kept, a landing as kept."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "trump-2024-tariffs-general",
+        "id": "trump-2024-compassionate-nation",
         "kind": "promise",
-        "method": "legacy",
-        "theme": "trade",
-        "restatement": "Impose substantial tariffs on other countries so they pay the US back.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate in Philadelphia, Pennsylvania",
-              "year": 2024,
-              "date": "2024-09-10",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
-              "label": "2024 debate"
-            },
-            "ref": "¶17.4-17.6",
-            "quote": "We're doing tariffs on other countries. Other countries are going to finally, after 75 years, pay us back for all that we've done for the world. And the tariff will be substantial in some cases."
-          }
-        ]
-      },
-      {
-        "id": "trump-2024-replace-obamacare",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Replace Obamacare with a plan that is cheaper and better if a superior one is developed.",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Be a nation full of compassion, courage and exceptionalism.",
         "quality": "no",
         "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "inaugural",
+              "medium": "speech",
               "speaker": "Donald J. Trump",
-              "event": "Presidential Debate in Philadelphia, Pennsylvania",
-              "year": 2024,
-              "date": "2024-09-10",
+              "event": "Inaugural Address",
+              "year": 2025,
+              "date": "2025-01-20",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-philadelphia-pennsylvania",
-              "label": "2024 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-54",
+              "label": "2025 inaugural address"
             },
-            "ref": "¶215.28-215.29",
-            "quote": "And what we will do is we're looking at different plans. If we can come up with a plan that's going to cost our people, our population, less money and be better health care than Obamacare, then I would absolutely do it."
+            "ref": "¶64.3",
+            "quote": "We will be a nation like no other, full of compassion, courage, and exceptionalism."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       }
     ],
-    "ambitions": []
+    "ambitions": [
+      {
+        "id": "trump-2024-hostages-back",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Get the hostages back before he takes office.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶208.1",
+            "quote": "we want our hostages back — and they better be back before I assume office, or you will be paying a very big price."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "before I assume office",
+            "applied": "2025-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "hostages held abroad (Gaza)",
+            "record": "official statements on hostage releases",
+            "criterion": "the hostages are released before 20 January 2025",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "A wish (\"we want\") with a threat of \"a very big price\"; the release is up to others."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "trump-2024-more-electricity",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Produce massive amounts of energy, including the electricity AI needs.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Donald J. Trump",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Milwaukee, Wisconsin",
+              "year": 2024,
+              "date": "2024-07-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-milwaukee",
+              "label": "2024 acceptance speech"
+            },
+            "ref": "¶220.1",
+            "quote": "We have to produce massive amounts of energy."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2029-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US electricity generation",
+            "record": "EIA electricity generation data",
+            "criterion": "US electricity generation grows over the term",
+            "ambiguity": "\"Massive amounts\" sets no number; the doubling AI \"needs\" is context, not a target."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      }
+    ]
   }
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 447;
+export const CORPUS_PROMISE_COUNT = 495;
 
 /** Total ambitions across the corpus (re-extracted terms only). */
-export const CORPUS_AMBITION_COUNT = 146;
+export const CORPUS_AMBITION_COUNT = 148;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 594;
+export const CORPUS_OCCURRENCE_COUNT = 720;
