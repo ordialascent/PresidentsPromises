@@ -14155,14 +14155,2250 @@ export const CORPUS_TERMS: CorpusTerm[] = [
     "termLabel": "2013–2017",
     "speechYear": 2012,
     "label": "Obama 2012",
-    "method": "legacy",
+    "method": "protocol",
     "promises": [
       {
-        "id": "obama-2012-manufacturing-jobs",
+        "id": "obama-2012-open-more-acres",
         "kind": "promise",
-        "method": "legacy",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Open more acreage for oil and gas exploration.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶27.2",
+            "quote": "and we'll open more"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal acreage offered for oil and gas leasing",
+            "record": "BLM and BOEM lease sale statistics",
+            "criterion": "new federal onshore or offshore acreage is offered for oil and gas leasing during the term",
+            "ambiguity": "\"Open\" may mean offered for lease or actually leased; offered acreage is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-oil-energy-plan",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Not let oil companies write the country's energy plan.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶27.3",
+            "quote": "I will not let oil companies write this country's energy plan"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-oil-companies",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-protect-coastlines",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Not let oil companies endanger the coastlines.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶27.3",
+            "quote": "or endanger our coastlines"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-oil-companies",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-end-oil-subsidies",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "End the roughly $4 billion a year in tax breaks for oil companies.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶27.3",
+            "quote": "or collect another $4 billion in corporate welfare from our taxpayers"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-oil-companies",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal tax preferences for oil and gas production",
+            "record": "enacted legislation (Congress.gov); JCT tax expenditure estimates",
+            "criterion": "a law repeals the oil and gas tax preferences worth about $4 billion a year",
+            "ambiguity": "The speech names an amount, not provisions; his budgets' list of oil and gas preferences is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-reduce-carbon",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Keep reducing carbon pollution.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶29.1",
+            "quote": "my plan will continue to reduce the carbon pollution that is heating our planet"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US carbon dioxide emissions",
+            "record": "EPA Inventory of U.S. Greenhouse Gas Emissions; EIA energy-related CO2",
+            "criterion": "US energy-related CO2 emissions are lower at the end of the term than at its start",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "obama-2012-climate-respond"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-climate-respond",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "environment",
+        "restatement": "Respond to the threat of climate change.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶18.2",
+            "quote": "We will respond to the threat of climate change"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-afghanistan-end",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "End the war in Afghanistan in 2014.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶35.6",
+            "quote": "in 2014, our longest war will be over"
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶41.3",
+            "quote": "Well, I have, and I will."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "in 2014",
+            "applied": "2014-12-31"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US combat mission in Afghanistan",
+            "record": "DoD announcements and troop levels",
+            "criterion": "the US combat mission in Afghanistan ends by the end of 2014",
+            "ambiguity": "\"Over\" may mean the combat mission ends or all troops leave; the end of the combat mission is the reading."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "¶41.3 answers ¶41.2 (\"how he'll end the war in Afghanistan\"); \"I will\" is read as \"I will end it\"."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-strongest-military",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Maintain the strongest military in the world.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶36.5",
+            "quote": "so long as I'm Commander in Chief, we will sustain the strongest military the world has ever known"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶380.1",
+            "quote": "As Commander in Chief, I will maintain the strongest military in the world"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US military strength",
+            "record": "DoD budget; SIPRI military expenditure; force structure data",
+            "criterion": "the US remains the world's leading military power throughout the term",
+            "ambiguity": "\"Strongest\" needs a proxy; military spending and capability rankings are the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2000-defenses"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-serve-veterans",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "veterans",
+        "restatement": "Serve veterans as well as they served, with jobs, housing and care.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶36.6",
+            "quote": "When you take off the uniform, we will serve you as well as you've served us"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-veterans-care"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-war-savings-debt",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Use the money saved from ending wars to pay down the debt.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶42.1",
+            "quote": "I will use the money we're no longer spending on war to pay down our debt"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-war-savings",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-war-savings-infrastructure",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Use war savings to put people to work rebuilding roads, bridges, schools and runways.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶42.1",
+            "quote": "put more people back to work rebuilding roads and bridges and schools and runways"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-war-savings",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal infrastructure investment",
+            "record": "DOT and federal appropriations; enacted legislation",
+            "criterion": "federal investment in roads, bridges, schools or airports rises during the term",
+            "ambiguity": "Money is fungible, so the war savings cannot be traced; a rise in federal infrastructure investment is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-keep-faith-troops",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Keep faith with the troops.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶380.1",
+            "quote": "keep faith with our troops"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-go-after-enemies",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Go after those who would do the US harm.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶380.1",
+            "quote": "go after those who would do us harm"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-no-sequester",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "The budget sequester will not happen.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶205.4",
+            "quote": "It will not happen."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Budget Control Act sequestration",
+            "record": "OMB sequestration reports; Presidential sequestration order",
+            "criterion": "the across-the-board cuts of the Budget Control Act do not take effect",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Reads as a forecast about Congress as much as a commitment; included because it is a flat future statement about a policy he co-decides."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-defend-people",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Defend the American people.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶21.1",
+            "quote": "We will defend our people"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-defend-nation"
+            },
+            {
+              "kind": "shared",
+              "to": "bush-2004-defend-america"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-values-rule-of-law",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Uphold American values through strength of arms and the rule of law.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶21.1",
+            "quote": "uphold our values through strength of arms and rule of law"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-no-deficit-tax-cuts-wealthy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Never agree to lower deficits through new tax breaks for the wealthy.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶46.1",
+            "quote": "as long as I'm President, I never will"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "tax laws he signs",
+            "record": "enacted legislation (Congress.gov); JCT/CBO estimates",
+            "criterion": "he signs no law that adds deficit-financed tax cuts for the highest earners",
+            "ambiguity": "\"Go along with\" is read as signing into law; \"that\" refers to Romney's plan in ¶45.5."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That\" refers to ¶45.5 (lowering deficits by spending trillions on tax breaks for the wealthy)."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-medicare-no-voucher",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Never turn Medicare into a voucher.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶48.1",
+            "quote": "I will never—I will never—turn Medicare into a voucher."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-medicare",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Medicare's benefit structure",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "no law converting Medicare into a voucher or premium-support system is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-medicare-strengthen",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Reform and strengthen Medicare for the long haul by reducing health care costs.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶48.4",
+            "quote": "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-medicare",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Medicare's long-term finances",
+            "record": "Medicare Trustees Reports (HI trust fund depletion date)",
+            "criterion": "the projected depletion date of the Medicare trust fund is later at the end of the term than at its start",
+            "ambiguity": "\"Strengthen for the long haul\" needs a measure; the Trustees' projected depletion date is the proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-medicare-seniors-costs",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Not ask seniors to pay thousands of dollars more for Medicare.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶48.4",
+            "quote": "not by asking seniors to pay thousands of dollars more"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-medicare",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Medicare beneficiaries' costs",
+            "record": "CMS premium and cost-sharing rules; enacted legislation",
+            "criterion": "no change he signs raises a typical beneficiary's Medicare costs by thousands of dollars",
+            "ambiguity": "\"Thousands of dollars\" has no period; a per-beneficiary increase of $1,000 or more a year is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-social-security-strengthen",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Strengthen Social Security.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶49.1",
+            "quote": "we will keep the promise of Social Security by taking the responsible steps to strengthen it"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-social-security",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Social Security's long-range finances",
+            "record": "Social Security Trustees Reports; enacted legislation",
+            "criterion": "a law that improves Social Security's long-range solvency is enacted",
+            "ambiguity": "\"Responsible steps to strengthen\" is not defined; any enacted improvement in projected solvency counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-protect-social-security"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-social-security-no-privatise",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "retirement",
+        "restatement": "Not turn Social Security over to Wall Street.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶49.1",
+            "quote": "not by turning it over to Wall Street"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-social-security",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Social Security's structure",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "no law diverts Social Security funds into private investment accounts",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-benghazi-justice",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "Investigate Benghazi and bring those who killed Americans to justice.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶20.1-20.2",
+            "quote": "And that's exactly what we're going to do."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "perpetrators of the 2012 Benghazi attack",
+            "record": "DOJ indictments and FBI arrest records",
+            "criterion": "people responsible for the Benghazi killings are captured or charged during the term",
+            "ambiguity": "\"Bring them to justice\" has no number; at least one perpetrator captured and charged is the reading."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That\" in ¶20.2 refers to the investigation and pursuit described in ¶20.1."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-mideast-partners",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Keep pressing Middle East governments to back counterterrorism, Israel's security, minorities and women, and to develop their economies.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶69.2-72.1",
+            "quote": "what I've done—throughout my Presidency and will continue to do—is, number one, make sure that these countries are supporting our counterterrorism efforts"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-syria-help-opposition",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Do everything possible to help the Syrian opposition.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶80.2",
+            "quote": "we are going to do everything we can to make sure that we are helping the opposition"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US aid to the Syrian opposition",
+            "record": "State Department and USAID assistance records",
+            "criterion": "the US provides material aid to the Syrian opposition during the term",
+            "ambiguity": "\"Everything we can\" has no bound; any material aid is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-syria-transition",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Keep promoting a moderate leadership and transition in Syria so Asad goes.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶101.2-101.4",
+            "quote": "That's the kind of leadership we'll continue to show."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Syrian leadership",
+            "record": "public record of Syria's government",
+            "criterion": "Bashar al-Asad leaves power by the end of the term",
+            "ambiguity": "The words commit to keep trying (\"try to promote\"); Asad's departure, the stated aim, is the reading."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That kind of leadership\" (¶101.4) refers to the policy described in ¶101.2."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-egypt-economy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Help Egypt develop its economy.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶108.2",
+            "quote": "we will help them with respect to developing their own economy"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US economic assistance to Egypt",
+            "record": "foreignassistance.gov; USAID Egypt programmes",
+            "criterion": "the US provides economic (non-military) assistance to Egypt during the term",
+            "ambiguity": "\"Help\" has no amount; continued economic aid is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-israel-if-attacked",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Stand with Israel if it is attacked.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶213.2",
+            "quote": "And if Israel is attacked, America will stand with Israel."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶215.1",
+            "quote": "I will stand with Israel if they are attacked."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2000-stand-by-israel"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-israel-exercise",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Hold the largest military exercise with Israel in history this week.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶215.3",
+            "quote": "In fact, this week, we'll be carrying out the largest military exercise with Israel in history"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "this week",
+            "applied": "2012-10-28"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US-Israel military exercise",
+            "record": "DoD and IDF announcements",
+            "criterion": "the exercise is held in the week of the debate",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-iran-no-nuke",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Iran will not get a nuclear weapon while he is President.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶216.1",
+            "quote": "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶237.1",
+            "quote": "then we are going to take all options necessary to make sure they don't have a nuclear weapon"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶247.3-247.4",
+            "quote": "And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon."
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-iran",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Iran's nuclear weapons status",
+            "record": "IAEA reports on Iran",
+            "criterion": "Iran does not acquire a nuclear weapon during the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "obama-2008-iran-diplomacy"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-iran-pressure",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Keep sanctions pressure on Iran until there is clear evidence it has given up its nuclear programme.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶234.1",
+            "quote": "In the meantime, though, we're not going to let up the pressure until we have clear evidence that that takes place."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶247.3-247.4",
+            "quote": "And we are going to continue to keep the pressure on"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-iran",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "sanctions on Iran",
+            "record": "Treasury OFAC and State Department sanctions actions; executive orders",
+            "criterion": "sanctions are not eased before the IAEA verifies that Iran has met its nuclear obligations",
+            "ambiguity": "\"Clear evidence\" is not defined; IAEA verification is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-iran-all-options",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Keep all options, including force, on the table against Iran.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶218.1",
+            "quote": "a United States President—me—who said we're not going to take any options off the table"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶237.1",
+            "quote": "And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-iran",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-iran-deal-terms",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Accept only a deal in which Iran ends its nuclear programme.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶230.3",
+            "quote": "But the deal we'll accept is, they end their nuclear program."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-iran",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "terms of any nuclear agreement with Iran",
+            "record": "text of agreements (e.g. the Joint Plan of Action, JCPOA)",
+            "criterion": "any agreement he accepts requires Iran to end its nuclear programme",
+            "ambiguity": "\"End their nuclear program\" may mean any weapons path or all enrichment; ending any path to a weapon is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-iran-no-endless-talks",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Not let Iran drag out negotiations that lead nowhere.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶235.2",
+            "quote": "We're not going to allow Iran to perpetually engage in negotiations that lead nowhere."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-iran",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-press-china",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Keep pressing China on trade and its currency.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶334.3",
+            "quote": "We absolutely have to make more progress, and that's why we're going to keep on pressing."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US trade enforcement against China",
+            "record": "USTR WTO dispute filings; Treasury currency reports",
+            "criterion": "the US files new trade enforcement actions against China or presses on its currency during the term",
+            "ambiguity": "\"Keep on pressing\" has no measure; new WTO cases or formal currency pressure are the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-china-currency"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-pacific-presence",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Keep a US presence in the Asia-Pacific.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶336.1",
+            "quote": "we're also sending a very clear signal that America is a Pacific power, that we are going to have a presence there"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US military presence in the Asia-Pacific",
+            "record": "DoD deployment and basing data",
+            "criterion": "US forces stationed in the Asia-Pacific are maintained or increased during the term",
+            "ambiguity": "\"Presence\" has no size; maintained or growing deployments are the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-asia-shipping",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Keep working with Asian countries so shipping and commerce can pass.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶336.2-336.5",
+            "quote": "We are working with countries in the region to make sure, for example, that ships can pass through, that commerce continues."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-asia",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That kind of leadership\" (¶336.5) is read as continuing the work in ¶336.2-336.3."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-asia-trade",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Organise trade relations with Asian countries other than China.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶336.2-336.5",
+            "quote": "And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-asia",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "trade agreements with Asia-Pacific countries",
+            "record": "USTR agreement texts",
+            "criterion": "a trade agreement with Asia-Pacific countries other than China is concluded during the term",
+            "ambiguity": "\"Organizing trade relations\" names no agreement; the Trans-Pacific Partnership talks are the reading."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"That kind of leadership\" (¶336.5) is read as continuing the work in ¶336.2-336.3."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-resolve-peacefully",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Try to resolve differences with other nations peacefully.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶21.2",
+            "quote": "We will show the courage to try and resolve our differences with other nations peacefully"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-alliances",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Remain the anchor of strong alliances around the globe.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶22.1",
+            "quote": "America will remain the anchor of strong alliances in every corner of the globe."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-renew-institutions",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Renew the institutions that help manage crises abroad.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶22.2",
+            "quote": "And we will renew those institutions that extend our capacity to manage crisis abroad"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-support-democracy",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Support democracy from Asia to Africa, the Americas and the Middle East.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶22.3",
+            "quote": "We will support democracy from Asia to Africa, from the Americas to the Middle East"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2004-influence-for-freedom"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-listen-fight-work",
+        "kind": "promise",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Always listen, fight for families and work every day for America.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶381.2",
+            "quote": "I promise you I will always listen to your voices, I will fight for your families, and I will work every single day to make sure that America continues to be the greatest nation on Earth."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-work-tirelessly"
+            }
+          ]
+        }
+      }
+    ],
+    "ambitions": [
+      {
+        "id": "obama-2012-export-more",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Export more products.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶21.3",
+            "quote": "We can choose a future where we export more products"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-trade-jobs",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "US exports of goods",
+            "record": "Census Bureau / BEA international trade data (FT-900)",
+            "criterion": "annual US goods exports are higher in the last full year of the term than in 2012",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-outsource-fewer-jobs",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Outsource fewer jobs.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶21.3",
+            "quote": "and outsource fewer jobs"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-trade-jobs",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-double-exports",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "trade",
+        "restatement": "Help factories and small businesses double their exports.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶25.2",
+            "quote": "We can help big factories and small businesses double their exports"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-manufacturing-goals",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US exports",
+            "record": "Census Bureau / BEA international trade data",
+            "criterion": "US exports double from their level when the goal was set",
+            "ambiguity": "No baseline or date is spoken; the reading is a doubling over the 2009 level by the end of the term (the administration's National Export Initiative set end-2014)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "obama-2012-export-more"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-manufacturing-jobs-1m",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "economy",
-        "restatement": "Create a million new manufacturing jobs over the next four years.",
+        "restatement": "Create a million new manufacturing jobs in the next four years.",
         "quality": "full",
         "occurrences": [
           {
@@ -14178,7 +16414,152 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶25.2",
-            "quote": "We can help big factories and small businesses double their exports, and if we choose this path, we can create a million new manufacturing jobs in the next 4 years."
+            "quote": "we can create a million new manufacturing jobs in the next 4 years"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-manufacturing-goals",
+          "deadline": {
+            "stated": "in the next 4 years",
+            "applied": "2016-09-06"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "manufacturing employment",
+            "record": "BLS Current Employment Statistics (manufacturing payrolls)",
+            "criterion": "manufacturing payroll employment rises by at least 1,000,000 within four years of the speech",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-end-offshoring-tax-breaks",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Stop giving tax breaks to corporations that ship jobs overseas.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶25.1",
+            "quote": "We can give more tax breaks to corporations that ship jobs overseas, or"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-jobs-tax-breaks",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "tax treatment of income from jobs moved abroad",
+            "record": "enacted legislation (Congress.gov); Internal Revenue Code",
+            "criterion": "a law removes a tax benefit that rewards moving jobs abroad",
+            "ambiguity": "Stated as a choice, not a named provision; deferral of tax on foreign earnings and the deduction for relocation costs are the usual readings."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-end-offshoring-tax-breaks"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-reward-us-jobs",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Reward companies that open plants, train workers and create jobs in the US.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶25.1",
+            "quote": "we can start rewarding companies that open new plants and train new workers and create new jobs here in the United States of America"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-jobs-tax-breaks",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "tax incentives for domestic investment and hiring",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a tax credit or break for companies that add plants or jobs in the US is enacted",
+            "ambiguity": "\"Rewarding\" names no instrument; a tax incentive is the reading, matching his 2008 promise."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-tax-credit-us-jobs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-control-energy",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Control more of America's own energy.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶26.1",
+            "quote": "You can choose the path where we control more of our own energy."
           },
           {
             "source": {
@@ -14192,18 +16573,218 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
               "label": "2012 debate"
             },
-            "ref": "¶135.2",
-            "quote": "And that's what my plan does: making sure that we're bringing manufacturing back to our shores so that we're creating jobs here, as we've done with the auto industry, not rewarding companies that are shipping jobs overseas; making sure that we've got the best education system in the world, including retraining our workers for the jobs of tomorrow."
+            "ref": "¶379.1",
+            "quote": "I want to control our own energy by developing oil and natural gas, but also the energy sources of the future."
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US energy self-sufficiency",
+            "record": "EIA Monthly Energy Review (net energy imports, production vs consumption)",
+            "criterion": "net energy imports as a share of consumption are lower at the end of the term than at its start",
+            "ambiguity": "\"Control our own energy\" is read as less reliance on imports; production share is the proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-invest-clean-energy",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Keep investing in wind, solar and clean coal.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶28.1",
+            "quote": "a future where we keep investing in wind and solar and clean coal"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-energy-future",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal spending on renewable energy and clean coal",
+            "record": "DOE budget and appropriations",
+            "criterion": "federal investment in wind, solar and clean coal continues through the term",
+            "ambiguity": "\"Keep investing\" sets no amount; continued appropriations at any level are the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-biofuels",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Harness new biofuels for cars and trucks.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶28.1",
+            "quote": "where farmers and scientists harness new biofuels to power our cars and trucks"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-energy-future",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-efficient-buildings",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Build homes and factories that waste less energy.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶28.1",
+            "quote": "where construction workers build homes and factories that waste less energy"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-energy-future",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-natural-gas",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Develop the hundred-year supply of natural gas.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶28.1",
+            "quote": "where we develop a hundred-year supply of natural gas that's right beneath our feet"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-energy-future",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US natural gas production",
+            "record": "EIA natural gas production data",
+            "criterion": "dry natural gas production is higher at the end of the term than at its start",
+            "ambiguity": "\"Develop a supply\" has no target; rising production is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "obama-2012-oil-imports-half",
-        "kind": "promise",
-        "method": "legacy",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "energy",
-        "restatement": "Cut US oil imports in half by 2020; support 600,000+ natural-gas jobs.",
-        "quality": "full",
+        "restatement": "Cut oil imports in half by 2020.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -14218,7 +16799,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶28.2",
-            "quote": "If you choose this path, we can cut our oil imports in half by 2020 and support more than 600,000 new jobs in natural gas alone."
+            "quote": "we can cut our oil imports in half by 2020"
           },
           {
             "source": {
@@ -14233,17 +16814,241 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶136.2",
-            "quote": "We've cut our oil imports to the lowest level in two decades because we've developed oil and natural gas, but we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020."
+            "quote": "we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "by 2020",
+            "applied": "2020-12-31"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US net petroleum imports",
+            "record": "EIA petroleum supply data (net imports)",
+            "criterion": "net oil imports in 2020 are half or less of the baseline level",
+            "ambiguity": "No baseline year is spoken; the 2008 level (as in his 2011 energy blueprint) is the reading."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The debate transcript says \"exports\"; the sentence before it is about oil imports, so it is read as a slip for imports."
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "obama-2012-control-energy"
+            },
+            {
+              "kind": "shared",
+              "to": "bush-2004-energy-imports"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-natural-gas-jobs",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "economy",
+        "restatement": "Support more than 600,000 new jobs in natural gas.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶28.2",
+            "quote": "support more than 600,000 new jobs in natural gas alone"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "by 2020",
+            "applied": "2020-12-31"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "jobs supported by natural gas",
+            "record": "BLS employment in oil and gas extraction and support activities",
+            "criterion": "jobs in natural gas rise by more than 600,000 by 2020",
+            "ambiguity": "\"Support\" includes indirect jobs no statistic counts; direct and support-activity employment is the proxy."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"By 2020\" is read as applying to both clauses of the sentence."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-lead-energy-transition",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "energy",
+        "restatement": "Lead the transition to sustainable energy and its technology.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶19.2",
+            "quote": "But America cannot resist this transition, we must lead it."
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶19.3",
+            "quote": "We cannot cede to other nations the technology that will power new jobs and new industries, we must claim its promise."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-skills",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "More Americans get the chance to gain the skills they need.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶30.1",
+            "quote": "You can choose a future where more Americans have the chance to gain the skills they need to compete"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-schools-classrooms",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "No child held back by a crowded classroom or a crumbling school.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶32.1",
+            "quote": "we can decide that in the United States of America, no child should have her dreams deferred because of a crowded classroom or a crumbling school"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "obama-2012-teachers-100k",
-        "kind": "promise",
-        "method": "legacy",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "education",
         "restatement": "Recruit 100,000 math and science teachers within ten years.",
-        "quality": "full",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -14258,31 +17063,91 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶34.2",
-            "quote": "Help me recruit 100,000 math and science teachers within 10 years and improve early childhood education."
+            "quote": "Help me recruit 100,000 math and science teachers within 10 years"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-education-goals",
+          "deadline": {
+            "stated": "within 10 years",
+            "applied": "2022-09-06"
           },
+          "verifiability": {
+            "level": "medium",
+            "object": "new math and science teachers",
+            "record": "NCES teacher surveys; reports of the federal 100Kin10 effort",
+            "criterion": "100,000 additional math and science teachers are recruited within ten years",
+            "ambiguity": "No official count of \"recruited\" teachers exists; new STEM teacher hires reported by NCES or 100Kin10 are the proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "obama-2012-hire-teachers"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-early-childhood",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Improve early childhood education.",
+        "quality": "partial",
+        "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "acceptance",
+              "medium": "speech",
               "speaker": "Barack Obama",
-              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
               "year": 2012,
-              "date": "2012-10-22",
+              "date": "2012-09-06",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
-              "label": "2012 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
             },
-            "ref": "¶150.5",
-            "quote": "And what I now want to do is to hire more teachers, especially in math and science, because we know that we've fallen behind when it comes to math and science."
+            "ref": "¶34.2",
+            "quote": "and improve early childhood education"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-education-goals",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "early childhood education programmes",
+            "record": "HHS Head Start data; NIEER State of Preschool; federal appropriations",
+            "criterion": "enrolment in or funding for public early childhood education is higher at the end of the term",
+            "ambiguity": "\"Improve\" names no measure; enrolment or funding is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-early-childhood"
+            }
+          ]
+        }
       },
       {
         "id": "obama-2012-community-college-2m",
-        "kind": "promise",
-        "method": "legacy",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "education",
-        "restatement": "Give 2 million workers job-focused skills training at community colleges.",
+        "restatement": "Give 2 million workers job-linked skills training at community colleges.",
         "quality": "partial",
         "occurrences": [
           {
@@ -14300,79 +17165,34 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "ref": "¶34.3",
             "quote": "Help give 2 million workers the chance to learn skills at their community college that will lead directly to a job."
           }
-        ]
-      },
-      {
-        "id": "obama-2012-tuition-half",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "education",
-        "restatement": "Halve the growth rate of tuition costs over the next ten years.",
-        "quality": "full",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
-              "year": 2012,
-              "date": "2012-09-06",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
-              "label": "2012 acceptance speech"
-            },
-            "ref": "¶34.4",
-            "quote": "Help us work with colleges and universities to cut in half the growth of tuition costs over the next 10 years."
-          }
-        ]
-      },
-      {
-        "id": "obama-2012-afghanistan-end",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "foreign-policy",
-        "restatement": "End the war in Afghanistan by 2014.",
-        "quality": "full",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
-              "year": 2012,
-              "date": "2012-09-06",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
-              "label": "2012 acceptance speech"
-            },
-            "ref": "¶35.6",
-            "quote": "We've blunted the Taliban's momentum in Afghanistan, and in 2014, our longest war will be over."
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-education-goals",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
           },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Barack Obama",
-              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
-              "year": 2012,
-              "date": "2012-10-22",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
-              "label": "2012 debate"
-            },
-            "ref": "¶291.4",
-            "quote": "We then started to build up Afghan forces, and we're now in a position where we can transition out, because there's no reason why Americans should die when Afghans are perfectly capable of defending their own country."
-          }
-        ]
+          "verifiability": {
+            "level": "medium",
+            "object": "community college job training",
+            "record": "DOL TAACCCT grant reports; enacted programmes",
+            "criterion": "2 million workers are trained at community colleges in programmes tied to jobs",
+            "ambiguity": "No date is spoken and no single record counts trainees; federally funded community-college training reported by DOL is the proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2012-deficit-4t",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Cut the deficit by $4 trillion under his budget plan.",
+        "id": "obama-2012-tuition-growth-half",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Cut the growth of tuition costs in half over ten years.",
         "quality": "partial",
         "occurrences": [
           {
@@ -14387,8 +17207,403 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
               "label": "2012 acceptance speech"
             },
-            "ref": "¶43.2",
-            "quote": "Independent experts say that my plan would cut our deficit by $4 trillion."
+            "ref": "¶34.4",
+            "quote": "cut in half the growth of tuition costs over the next 10 years"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-education-goals",
+          "deadline": {
+            "stated": "over the next 10 years",
+            "applied": "2022-09-06"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "college tuition growth",
+            "record": "College Board Trends in College Pricing; BLS CPI college tuition",
+            "criterion": "average annual tuition growth over the ten years after the speech is half the rate of the preceding ten years",
+            "ambiguity": "No baseline is spoken; the preceding decade's growth rate is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-hire-teachers",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Hire more teachers, especially in math and science.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶150.5",
+            "quote": "what I now want to do is to hire more teachers, especially in math and science"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "public school teacher employment",
+            "record": "NCES Digest of Education Statistics; BLS local government education employment",
+            "criterion": "the number of public school teachers is higher at the end of the term than at its start",
+            "ambiguity": "\"Especially in math and science\" has no separate measure; total teacher numbers are the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-best-education",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Have the best education system in the world.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶378.3",
+            "quote": "I want to make sure we've got the best education system in the world"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-world-class-education"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-retrain-workers",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Retrain workers for the jobs of tomorrow.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶378.3",
+            "quote": "we're retaining our workers for the jobs of tomorrow"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The transcript says \"retaining\"; read as \"retraining\", as in ¶135.2."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-reform-schools",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Reform the schools.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶15.2",
+            "quote": "reform our schools"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-new-ideas",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal K-12 education law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a federal law reforming K-12 schooling is enacted",
+            "ambiguity": "\"Reform\" is not defined; any enacted structural change to federal school law counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-defense-cyber-space",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Shape defence planning around cybersecurity and space.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶193.3",
+            "quote": "We need to be thinking about cybersecurity."
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶193.4",
+            "quote": "We need to be thinking about space."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-vigilance",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Remain vigilant against terrorist networks.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶314.2",
+            "quote": "We have to remain vigilant"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-shrink-terror-networks",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "defense",
+        "restatement": "Shrink the groups and networks that threaten the US.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶311.1",
+            "quote": "we want to shrink those groups and those networks, and we can do that"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-reduce-deficit",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Reduce the deficit, by cutting unneeded spending and asking the wealthy to pay more.",
+        "quality": "full",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶43.1",
+            "quote": "You can choose a future where we reduce our deficit"
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶16.2",
+            "quote": "We must make the hard choices to reduce the cost of health care and the size of our deficit."
           },
           {
             "source": {
@@ -14403,16 +17618,126 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶379.2",
-            "quote": "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more so that we can invest in things like research and technology that are the key to a 21st-century economy."
+            "quote": "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-deficit",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal budget deficit",
+            "record": "Treasury Final Monthly Treasury Statement / Financial Report (FYFSD)",
+            "criterion": "the federal deficit in the last full fiscal year of the term is smaller than in fiscal 2012",
+            "ambiguity": "Not a judgement call but a note: the independent estimate that his plan \"would cut our deficit by $4 trillion\" (acceptance ¶43.2) is a forecast, not recorded as a target."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2012-tax-reform-250k",
-        "kind": "promise",
-        "method": "legacy",
+        "id": "obama-2012-deficit-spare-middle-class",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Reduce the deficit without burdening the middle class.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶43.1",
+            "quote": "without sticking it to the middle class"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "obama-2012-deficit",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-debt-agreement",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "budget",
+        "restatement": "Reach a deficit agreement based on his bipartisan debt commission's principles.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶45.1-45.4",
+            "quote": "I want to get this done, and we can get it done."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "long-term deficit reduction agreement",
+            "record": "enacted legislation (Congress.gov); CBO cost estimates",
+            "criterion": "a bipartisan deficit reduction law is enacted",
+            "ambiguity": "\"Based on the principles of my bipartisan debt commission\" is not defined; any bipartisan law combining spending cuts and revenue counts."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"This\" in ¶45.4 refers back to the agreement in ¶45.1."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-tax-reform",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "taxes",
-        "restatement": "Reform the tax code; raise rates on income over $250,000 to Clinton-era levels.",
+        "restatement": "Reform the tax code to make it simple and fair.",
         "quality": "partial",
         "occurrences": [
           {
@@ -14428,32 +17753,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶44.1",
-            "quote": "I want to reform the Tax Code so that it's simple, fair, and asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President"
-          }
-        ]
-      },
-      {
-        "id": "obama-2012-carbon-reduce",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "energy",
-        "restatement": "Continue reducing US carbon pollution.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
-              "year": 2012,
-              "date": "2012-09-06",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
-              "label": "2012 acceptance speech"
-            },
-            "ref": "¶29.1",
-            "quote": "And yes, my plan will continue to reduce the carbon pollution that is heating our planet, because climate change is not a hoax."
+            "quote": "I want to reform the Tax Code so that it's simple, fair"
           },
           {
             "source": {
@@ -14467,132 +17767,267 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
               "label": "2013 inaugural address"
             },
-            "ref": "¶18.2",
-            "quote": "We will respond to the threat of climate change, knowing that the failure to do so would betray our children and future generations."
+            "ref": "¶15.2",
+            "quote": "revamp our Tax Code"
           }
-        ]
-      },
-      {
-        "id": "obama-2012-medicare-no-voucher",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Never convert Medicare into a voucher program.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
-              "year": 2012,
-              "date": "2012-09-06",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
-              "label": "2012 acceptance speech"
-            },
-            "ref": "¶48.1",
-            "quote": "And I will never—I will never—turn Medicare into a voucher."
-          }
-        ]
-      },
-      {
-        "id": "obama-2012-medicare-strengthen",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "health",
-        "restatement": "Strengthen Medicare by cutting health-care costs, not raising seniors' costs.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
-              "year": 2012,
-              "date": "2012-09-06",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
-              "label": "2012 acceptance speech"
-            },
-            "ref": "¶48.4",
-            "quote": "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care, not by asking seniors to pay thousands of dollars more."
-          }
-        ]
-      },
-      {
-        "id": "obama-2012-social-security",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "social-security",
-        "restatement": "Strengthen Social Security without privatizing it.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
-              "year": 2012,
-              "date": "2012-09-06",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
-              "label": "2012 acceptance speech"
-            },
-            "ref": "¶49.1",
-            "quote": "And we will keep the promise of Social Security by taking the responsible steps to strengthen it, not by turning it over to Wall Street."
-          }
-        ]
-      },
-      {
-        "id": "obama-2012-war-savings-infrastructure",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "fiscal",
-        "restatement": "Redirect war savings to debt reduction and infrastructure jobs.",
-        "quality": "partial",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Barack Obama",
-              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
-              "year": 2012,
-              "date": "2012-09-06",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
-              "label": "2012 acceptance speech"
-            },
-            "ref": "¶42.1",
-            "quote": "I will use the money we're no longer spending on war to pay down our debt and put more people back to work rebuilding roads and bridges and schools and runways."
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-tax-reform",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
           },
+          "verifiability": {
+            "level": "medium",
+            "object": "Internal Revenue Code",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a broad tax reform law is enacted",
+            "ambiguity": "\"Reform\" and \"simple, fair\" are not defined; an enacted overhaul of the income tax counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-2004-tax-reform"
+            }
+          ]
+        }
+      },
+      {
+        "id": "obama-2012-top-rates-clinton",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "taxes",
+        "restatement": "Return tax rates on income over $250,000 to Clinton-era levels.",
+        "quality": "full",
+        "occurrences": [
           {
             "source": {
-              "kind": "debate",
-              "medium": "debate",
+              "kind": "acceptance",
+              "medium": "speech",
               "speaker": "Barack Obama",
-              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
               "year": 2012,
-              "date": "2012-10-22",
+              "date": "2012-09-06",
               "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
-              "label": "2012 debate"
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
             },
-            "ref": "¶293.2",
-            "quote": "And what we can now do is free up some resources to, for example, put Americans back to work—especially our veterans—rebuilding our roads, our bridges, our schools; making sure that our veterans are getting the care that they need when it comes to posttraumatic stress disorder and traumatic brain injury; making sure that the certifications that they need for good jobs of the future are in place."
+            "ref": "¶44.1",
+            "quote": "asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-tax-reform",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "top income tax rates",
+            "record": "Internal Revenue Code; enacted legislation (Congress.gov)",
+            "criterion": "income above $250,000 is taxed at the Clinton-era top rates (36% and 39.6%)",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-health-costs",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "health",
+        "restatement": "Reduce the cost of health care.",
+        "quality": "partial",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶16.2",
+            "quote": "reduce the cost of health care"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "national health spending",
+            "record": "CMS National Health Expenditure Accounts",
+            "criterion": "health spending per person grows more slowly during the term than in the preceding term",
+            "ambiguity": "\"Reduce the cost\" may mean lower levels or slower growth; slower per-person growth is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-build-together",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "infrastructure",
+        "restatement": "Together, train math and science teachers and build roads, networks and labs.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶12.4",
+            "quote": "Now more than ever, we must do these things together, as one nation and one people."
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"These things\" are those named in ¶12.3."
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-remake-government",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "government",
+        "restatement": "Use new ideas and technology to remake government.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶15.2",
+            "quote": "So we must harness new ideas and technology to remake our government"
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-new-ideas",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-empower-skills",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "education",
+        "restatement": "Give citizens the skills they need.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶15.2",
+            "quote": "empower our citizens with the skills they need to work harder, learn more, reach higher"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-new-ideas",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "obama-2012-equal-pay",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "labor",
-        "restatement": "Close the gender pay gap; women earning a living equal to their efforts.",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Women earn a living equal to their efforts.",
         "quality": "partial",
         "occurrences": [
           {
@@ -14608,17 +18043,42 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.2",
-            "quote": "For our journey is not complete until our wives, our mothers and daughters can earn a living equal to their efforts."
+            "quote": "our wives, our mothers and daughters can earn a living equal to their efforts"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-journey",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "gender pay gap",
+            "record": "Census Bureau / BLS women's-to-men's earnings ratio",
+            "criterion": "the women's-to-men's earnings ratio narrows during the term",
+            "ambiguity": "\"Equal to their efforts\" has no threshold; a narrowing pay gap is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "obama-2008-equal-pay"
+            }
+          ]
+        }
       },
       {
-        "id": "obama-2012-lgbt-equality",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "civil-rights",
-        "restatement": "Equal treatment under the law for gay Americans.",
-        "quality": "no",
+        "id": "obama-2012-gay-equality",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "Gay Americans treated like anyone else under the law.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -14633,16 +18093,36 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.3",
-            "quote": "Our journey is not complete until our gay brothers and sisters are treated like anyone else under the law—for if we are truly created equal, then surely the love we commit to one another must be equal as well."
+            "quote": "our gay brothers and sisters are treated like anyone else under the law"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-journey",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "legal equality for gay Americans",
+            "record": "federal statutes, court rulings and agency rules",
+            "criterion": "same-sex couples' marriages are recognised under federal law during the term",
+            "ambiguity": "\"Like anyone else under the law\" covers many laws; marriage, named in the sentence, is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2012-voting-access",
-        "kind": "promise",
-        "method": "legacy",
-        "theme": "voting",
-        "restatement": "End hours-long waits to vote.",
+        "id": "obama-2012-voting-waits",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "rights",
+        "restatement": "No citizen has to wait hours to vote.",
         "quality": "partial",
         "occurrences": [
           {
@@ -14658,17 +18138,37 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.4",
-            "quote": "Our journey is not complete until no citizen is forced to wait for hours to exercise the right to vote."
+            "quote": "no citizen is forced to wait for hours to exercise the right to vote"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-journey",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "polling-place waiting times",
+            "record": "Survey of the Performance of American Elections; EAC Election Administration and Voting Survey",
+            "criterion": "hours-long waits to vote are eliminated or sharply reduced by the 2016 election",
+            "ambiguity": "\"Wait for hours\" sets a threshold but no share; a fall in the share of voters waiting over an hour is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
         "id": "obama-2012-immigration-reform",
-        "kind": "promise",
-        "method": "legacy",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "immigration",
-        "restatement": "Reform immigration to welcome immigrants and retain foreign students and engineers.",
-        "quality": "no",
+        "restatement": "Find a better way to welcome immigrants and keep foreign students and engineers.",
+        "quality": "partial",
         "occurrences": [
           {
             "source": {
@@ -14683,17 +18183,172 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.5",
-            "quote": "Our journey is not complete until we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country."
+            "quote": "we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "obama-2012-journey",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "US immigration law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "an immigration reform law is enacted that lets foreign graduates and engineers stay and work",
+            "ambiguity": "\"A better way\" is not defined; an enacted reform covering foreign graduates is the reading."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       },
       {
-        "id": "obama-2012-iran-no-nuke",
-        "kind": "promise",
-        "method": "legacy",
+        "id": "obama-2012-children-safe",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "crime-justice",
+        "restatement": "All children cared for and safe from harm.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶24.6",
+            "quote": "all our children, from the streets of Detroit to the hills of Appalachia, to the quiet lanes of Newtown, know that they are cared for and cherished and always safe from harm"
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "obama-2012-journey",
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-israel-security",
+        "kind": "ambition",
+        "method": "protocol",
         "theme": "foreign-policy",
-        "restatement": "Prevent Iran from obtaining a nuclear weapon while he is President.",
-        "quality": "full",
+        "restatement": "Unwavering commitment to Israel's security.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶38.4",
+            "quote": "Our commitment to Israel's security must not waver"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-mideast-peace",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Keep pursuing peace in the Middle East.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Charlotte, North Carolina",
+              "year": 2012,
+              "date": "2012-09-06",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-charlotte",
+              "label": "2012 acceptance speech"
+            },
+            "ref": "¶38.4",
+            "quote": "and neither must our pursuit of peace"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-steady-leadership",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Strong, steady leadership in the Middle East.",
+        "quality": "no",
         "occurrences": [
           {
             "source": {
@@ -14707,13 +18362,227 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
               "label": "2012 debate"
             },
-            "ref": "¶216.1",
-            "quote": "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon."
+            "ref": "¶36.1",
+            "quote": "So what we need to do with respect to the Middle East is strong, steady leadership"
           }
-        ]
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-no-nation-building-abroad",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Stop doing nation-building in the Middle East.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶72.2",
+            "quote": "we can't continue to do nation-building in these regions"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-syria-vetted-help",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Help in Syria only when sure who is being helped, so arms don't reach enemies.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶80.4",
+            "quote": "And we have to do so making absolutely certain that we know who we are helping"
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Barack Obama",
+              "event": "Presidential Debate at Lynn University in Boca Raton, Florida",
+              "year": 2012,
+              "date": "2012-10-22",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-boca-raton-florida",
+              "label": "2012 debate"
+            },
+            "ref": "¶93.5",
+            "quote": "And we have to take the same kind of steady, thoughtful leadership when it comes to Syria."
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-win-the-peace",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Carry the lessons of winning the peace and turning enemies into friends into this time.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶20.5",
+            "quote": "we must carry those lessons into this time as well"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
+      },
+      {
+        "id": "obama-2012-hope-to-poor",
+        "kind": "ambition",
+        "method": "protocol",
+        "theme": "foreign-policy",
+        "restatement": "Be a source of hope to the poor, the sick, the marginalised and victims of prejudice.",
+        "quality": "no",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Barack Obama",
+              "event": "Inaugural Address",
+              "year": 2013,
+              "date": "2013-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-15",
+              "label": "2013 inaugural address"
+            },
+            "ref": "¶22.4",
+            "quote": "And we must be a source of hope to the poor, the sick, the marginalized, the victims of prejudice"
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2017-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        }
       }
-    ],
-    "ambitions": []
+    ]
   },
   {
     "key": "2017-2021 Trump",
@@ -17807,10 +21676,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 321;
+export const CORPUS_PROMISE_COUNT = 346;
 
 /** Total ambitions across the corpus (re-extracted terms only). */
-export const CORPUS_AMBITION_COUNT = 81;
+export const CORPUS_AMBITION_COUNT = 129;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 424;
+export const CORPUS_OCCURRENCE_COUNT = 449;

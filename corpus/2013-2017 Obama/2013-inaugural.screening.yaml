@@ -1,0 +1,82 @@
+# Screening ledger for 2013-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) goals he set for the term (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2013-inaugural
+protocol: 1
+rows:
+  - ref: "¶12.3"
+    decision: describe
+    note: "\"No single person can …\"; the task is taken up in ¶12.4."
+  - { ref: "¶12.4", decision: include, promises: [obama-2012-build-together] }
+  - ref: "¶13.5"
+    decision: describe
+    note: "Rhetoric (\"we will seize it\")."
+  - ref: "¶15.2"
+    decision: include
+    promises: [obama-2012-reform-schools, obama-2012-tax-reform, obama-2012-remake-government, obama-2012-empower-skills]
+    note: "Four objects; split. \"Revamp our Tax Code\" is a further occurrence of obama-2012-tax-reform."
+  - ref: "¶16.2"
+    decision: include
+    promises: [obama-2012-reduce-deficit, obama-2012-health-costs]
+    note: "Two objects: health care costs and the deficit."
+  - { ref: "¶18.2", decision: include, promises: [obama-2012-climate-respond] }
+  - { ref: "¶19.2", decision: include, promises: [obama-2012-lead-energy-transition] }
+  - { ref: "¶19.3", decision: include, promises: [obama-2012-lead-energy-transition] }
+  - ref: "¶19.4"
+    decision: describe
+    note: "Purpose of ¶19.2-19.3 (\"that's how we will …\")."
+  - ref: "¶19.5"
+    decision: describe
+    note: "Purpose of ¶19.2-19.3 (\"that is how we will …\")."
+  - { ref: "¶20.5", decision: include, promises: [obama-2012-win-the-peace] }
+  - ref: "¶21.1"
+    decision: include
+    promises: [obama-2012-defend-people, obama-2012-values-rule-of-law]
+    note: "Two objects; split."
+  - { ref: "¶21.2", decision: include, promises: [obama-2012-resolve-peacefully] }
+  - ref: "¶22.1"
+    decision: include
+    added: true
+    promises: [obama-2012-alliances]
+    note: "Untriggered; \"America will remain\" read as a commitment of the government he leads."
+  - { ref: "¶22.2", decision: include, promises: [obama-2012-renew-institutions] }
+  - { ref: "¶22.3", decision: include, promises: [obama-2012-support-democracy] }
+  - { ref: "¶22.4", decision: include, promises: [obama-2012-hope-to-poor] }
+  - ref: "¶24.2"
+    decision: include
+    added: true
+    promises: [obama-2012-equal-pay]
+    note: "Untriggered; \"our journey is not complete until …\" names a task for \"our generation\" (¶24.1, ¶25.1). Recorded as an ambition, as with \"now is the time to\"."
+  - ref: "¶24.3"
+    decision: include
+    added: true
+    promises: [obama-2012-gay-equality]
+    note: "Untriggered; \"our journey is not complete until …\" names a task for \"our generation\" (¶24.1, ¶25.1). Recorded as an ambition, as with \"now is the time to\"."
+  - ref: "¶24.4"
+    decision: include
+    added: true
+    promises: [obama-2012-voting-waits]
+    note: "Untriggered; \"our journey is not complete until …\" names a task for \"our generation\" (¶24.1, ¶25.1). Recorded as an ambition, as with \"now is the time to\"."
+  - ref: "¶24.5"
+    decision: include
+    added: true
+    promises: [obama-2012-immigration-reform]
+    note: "Untriggered; \"our journey is not complete until …\" names a task for \"our generation\" (¶24.1, ¶25.1). Recorded as an ambition, as with \"now is the time to\"."
+  - ref: "¶24.6"
+    decision: include
+    added: true
+    promises: [obama-2012-children-safe]
+    note: "Untriggered; \"our journey is not complete until …\" names a task for \"our generation\" (¶24.1, ¶25.1). Recorded as an ambition, as with \"now is the time to\"."
+  - ref: "¶26.3"
+    decision: describe
+    note: "Call to act; no object."
+  - ref: "¶26.4"
+    decision: describe
+    note: "Call to act; no object."
+  - ref: "¶27.2"
+    decision: describe
+    note: "Restates the oath of office for all who serve; no object beyond it."
+
+#   25 rows: 18 include (6 of them added), 7 excluded (describe 7)

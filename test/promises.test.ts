@@ -58,13 +58,13 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the current extraction (47 / 153 / 121)', () => {
-    // Snapshot anchor — update when the corpus changes. Bush 2000, Bush 2004 and Obama 2008 are re-extracted
+  it('the corpus-wide tier split matches the current extraction (47 / 161 / 138)', () => {
+    // Snapshot anchor — update when the corpus changes. Bush 2000, Bush 2004, Obama 2008 and Obama 2012 are re-extracted
     // under protocol 1 (their promises only; levels stand in for tiers).
     const c = { full: 0, partial: 0, no: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ full: 47, partial: 153, no: 121 });
-    expect(c.full + c.partial + c.no).toBe(321);
+    expect(c).toEqual({ full: 47, partial: 161, no: 138 });
+    expect(c.full + c.partial + c.no).toBe(346);
   });
 
   it('shares are a proper distribution within each term', () => {
