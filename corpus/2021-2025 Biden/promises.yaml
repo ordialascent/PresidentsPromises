@@ -1,786 +1,1751 @@
-# Promises extracted from Joseph R. Biden, Jr.'s 2020 nomination acceptance
-# speech (corpus/2021-2025 Biden/2020-acceptance.md). Refs are
-# paragraph.sentence, per corpus/README.md.
+# Promises and ambitions of Joseph R. Biden, Jr.'s 2021-2025 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 2020 acceptance
+# speech, the 2020 final debate (Biden's turns) and the 2021 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
 #
-# Each promise is scored on four dimensions — the ingredients that decide
-# whether "was it kept?" can even be asked as a *measured* question:
-#
-#   metric     — is there a named quantity, AND a record that tracks it?
-#   threshold  — a number or an explicit direction ("in half", "to zero", "95%")?
-#   deadline   — a date or a bounded period ("in ten years", "by end of term")?
-#   instrument — does he name what HE will DO, or only what WILL happen?
-#
-# measurable:
-#   full     — metric + threshold + deadline all present (even if parametrically
-#              disputed — that dispute is the product, not a disqualifier)
-#   partial  — at least one of the three is missing or too vague to pin down
-#   no       — aspirational; no measurable quantity at all
-# (instrument sharpens accountability: an outcome-only promise is one he can't
-#  fully control. A promise can still be measurable without it.)
-#
-# NOTE: this speech was delivered inside the COVID-19 emergency and is unusually
-# dominated by pandemic-response commitments. Almost every promise here is
-# plan-shaped or outcome-shaped and, tellingly, none reaches "full" — deadlines
-# are the missing ingredient throughout ("day one" and "first step" are the
-# closest it gets). The recurring "build it back better" framing bundles many
-# discrete promises under one slogan; they are split out below.
+# 70 promises (high 11, medium 30, low 29)
+# 8 ambitions (high 3, medium 3, low 2)
+# Deadlines default to the end of the term (2025-01-20).
 
+protocol: 1
 promises:
-  - id: biden-2020-virus-control
-    theme: health
+
+  - id: biden-2020-best-of-us
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶67.1"
-        quote: >
-          As president, the first step I will take will be to get
-          control of the virus that's ruined so many lives.
-      - in: inaugural
-        ref: "¶27.4"
-        quote: >
-          We must set aside politics and finally face this pandemic
-          as one Nation.
-      - in: debate
-        ref: "¶42.1"
-        quote: >
-          What I would say is I'm going to shut down the virus, not
-          the country.
-    restatement: Get control of the COVID-19 virus as the first priority in office.
-    metric:
-      present: true
-      quantity: COVID-19 cases and deaths ("control of the virus")
-      record: CDC / Johns Hopkins COVID-19 case and death tracking
-    threshold:
-      present: false
-      stated: "\"get control\" — a direction, no level or count"
+    - in: acceptance
+      ref: "¶6.1-6.2"
+      quote: "I will draw on the best of us not the worst. I will be an ally of the light not of the darkness."
+    restatement: "Draw on the best of the country, not the worst; be an ally of the light."
+    type: ongoing
+    theme: government
     deadline:
-      present: false
-      stated: "\"first step\" implies immediacy but sets no bounded period"
-    instrument:
-      present: true
-      stated: get control of the virus (the concrete actions follow in 78-83)
-    measurable: "partial"
-    notes: >
-      Cases and deaths are perfectly trackable, but "get control" fixes no
-      number and "first step" fixes no date — so the metric exists while the
-      promise pins neither a level nor a deadline to it.
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: biden-2020-covid-strategy
-    theme: health
+  - id: biden-2020-hope-over-fear
+    kind: promise
     sources:
-      - in: acceptance
-        ref: "¶78.1"
-        quote: >
-          If I'm president on day one we'll implement the national
-          strategy I've been laying out since March.
-      - in: debate
-        ref: "¶7.16"
-        quote: >
-          And so folks, I will take care of this, I will end this, I
-          will make sure we have a plan.
-    restatement: Implement a national COVID-19 strategy on the first day in office.
-    metric:
-      present: false
-      quantity: whether the strategy was implemented (policy action, binary)
-      record: null
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: "¶8.3"
+      quote: "We will choose hope over fear, facts over fiction, fairness over privilege."
+    - in: debate
+      ref: "¶355.4"
+      quote: "I'm going to give you hope."
+    - in: debate
+      ref: "¶355.6-355.7"
+      quote: "We're going to choose science over fiction. We're going to choose hope over fear."
+    restatement: "Choose hope over fear, facts and science over fiction, fairness over privilege."
+    type: ongoing
+    theme: government
     deadline:
-      present: true
-      stated: day one
-    instrument:
-      present: true
-      stated: implement his pre-existing national strategy
-    measurable: "partial"
-    notes: >
-      Sharp deadline ("day one") and a clear instrument, but the object is a
-      binary policy act, not a quantity over time — measurable only as "was a
-      national strategy stood up?", with no target the strategy must hit.
-
-  - id: biden-2020-rapid-tests
-    theme: health
-    sources:
-      - in: acceptance
-        ref: "¶79.1"
-        quote: >
-          We'll develop and deploy rapid tests with results
-          available immediately.
-      - in: debate
-        ref: "¶7.13"
-        quote: >
-          I would make sure we move in the direction of rapid
-          testing, investing in rapid testing.
-    restatement: Develop and deploy rapid COVID tests with immediate results.
-    metric:
-      present: true
-      quantity: testing capacity and turnaround time
-      record: HHS / CDC COVID-19 testing volumes and turnaround reporting
-    threshold:
-      present: true
-      stated: results available immediately (turnaround toward zero delay)
-    deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: develop and deploy rapid tests
-    measurable: "partial"
-    notes: >
-      Real metric and a crisp direction ("immediately"), but no date and no
-      volume target — "rapid" and "immediately" are the disputed boundary, since
-      any turnaround short of instant can be argued either way.
-
-  - id: biden-2020-domestic-ppe
-    ref: "¶80.1-80.3"
-    theme: trade
-    quote: >
-      We'll make the medical supplies and protective equipment our country
-      needs. And we'll make them here in America. So we will never again be at
-      the mercy of China and other foreign countries in order to protect our
-      own people.
-    restatement: Manufacture medical supplies and PPE domestically to end reliance on China.
-    metric:
-      present: false
-      quantity: domestic production share of medical supplies/PPE (no clean series)
-      record: null
-    threshold:
-      present: false
-      stated: "\"never again be at the mercy\" — direction, no number"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: make medical supplies and PPE in America
-    measurable: "no"
-    notes: >
-      A named instrument with no agreed metric, no number, and no date. "At the
-      mercy of China" has no threshold for import share, so it is measurable only
-      as a vague yes/no about domestic sourcing.
-
-  - id: biden-2020-schools-reopen
-    theme: education
-    sources:
-      - in: acceptance
-        ref: "¶81.1"
-        quote: >
-          We'll make sure our schools have the resources they need
-          to be open, safe, and effective.
-      - in: debate
-        ref: "¶7.14"
-        quote: >
-          I would make sure that we set up national standards as to
-          how to open up schools and open up businesses so they can
-          be safe, and give them the wherewithal and financial
-          resources to be able to do that.
-    restatement: Give schools the resources to reopen safely and effectively.
-    metric:
-      present: false
-      quantity: "\"resources... to be open, safe, and effective\" has no agreed measure"
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: fund schools' reopening resources
-    measurable: "no"
-    notes: >
-      An instrument aimed at an unquantified end. "Open, safe, and effective"
-      names no level of funding, no reopening rate, and no date — aspirational
-      with a concrete action underneath.
-
-  - id: biden-2020-experts-transparency
-    theme: health
-    sources:
-      - in: acceptance
-        ref: "¶82.1"
-        quote: >
-          We'll put the politics aside and take the muzzle off our
-          experts so the public gets the information they need and
-          deserve.
-      - in: debate
-        ref: "¶15.1-15.2"
-        quote: >
-          Make sure it's totally transparent. Have the scientific
-          world see, know, look at it, go through all the processes.
-    restatement: Let public-health experts speak freely so the public gets unvarnished information.
-    metric:
-      present: false
-      quantity: whether experts communicate freely (governance posture, not a quantity)
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: stop political interference with public-health experts' communication
-    measurable: "no"
-    notes: >
-      Part of the same "day one" strategy bundle as the tests, supplies, and
-      mask promises, but the softest of them to measure — "take the muzzle off"
-      names an action with no quantity, no number, and no date, gaugeable only as
-      a vague yes/no about whether experts were allowed to speak.
-
-  - id: biden-2020-mask-mandate
-    theme: health
-    sources:
-      - in: acceptance
-        ref: "¶83.1"
-        quote: >
-          We'll have a national mandate to wear a mask-not as a
-          burden, but to protect each other.
-      - in: debate
-        ref: "¶7.12"
-        quote: >
-          What I would do is make sure we have everyone encouraged
-          to wear a mask, all the time.
-    restatement: Institute a national mask mandate.
-    metric:
-      present: false
-      quantity: whether a national mandate exists (policy action, binary)
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: a national mask mandate
-    measurable: "no"
-    notes: >
-      A concrete instrument, but a binary one with no metric, number, or date —
-      and the disputed boundary is authority itself, since a president's power to
-      impose a truly "national" mandate is contested.
-
-  - id: biden-2020-infrastructure-jobs
-    ref: "¶106.3-107.3"
-    theme: economy
-    quote: >
-      And when we do, we'll not only build it back, we'll build it back better.
-      With modern roads, bridges, highways, broadband, ports and airports as a
-      new foundation for economic growth. With pipes that transport clean water
-      to every community. With 5 million new manufacturing and technology jobs
-      so the future is made in America.
-    restatement: Rebuild infrastructure and create five million manufacturing and technology jobs.
-    metric:
-      present: true
-      quantity: manufacturing and technology employment; infrastructure investment
-      record: BLS employment (manufacturing/tech); federal infrastructure outlays
-    threshold:
-      present: true
-      stated: 5 million new manufacturing and technology jobs
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: rebuild economy / infrastructure investment ("build it back better")
-    measurable: "partial"
-    notes: >
-      The same 5-million-jobs shape as Obama's renewable pledge, but missing the
-      "over the next decade" clause that made his measurable-full — no timeframe
-      here drops it to partial, and the jobs are an outcome he can't fully
-      control or cleanly attribute.
-
-  - id: biden-2020-health-premiums
-    theme: health
-    sources:
-      - in: acceptance
-        ref: "¶108.1"
-        quote: >
-          With a health care system that lowers premiums,
-          deductibles, and drug prices by building on the Affordable
-          Care Act he's trying to rip away.
-      - in: debate
-        ref: "¶150.4"
-        quote: >
-          Secondly, we're going to make sure we reduce the premiums
-          and reduce drug prices by making sure that there's
-          competition that doesn't exist now by allowing Medicare to
-          negotiate drug prices with the insurance companies.
-    restatement: Lower premiums, deductibles, and drug prices by building on the ACA.
-    metric:
-      present: true
-      quantity: insurance premiums, deductibles, and prescription drug prices
-      record: KFF premium/deductible surveys; CMS drug spending data
-    threshold:
-      present: true
-      stated: lowers (direction, no magnitude)
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: build on the Affordable Care Act
-    measurable: "partial"
-    notes: >
-      Good metrics with real records and a clear direction, but no baseline, no
-      magnitude, and no date — "lower than what, and by how much?" is exactly the
-      unfilled boundary, echoing Obama's 2008 premium promise.
-
-  - id: biden-2020-college-cost
-    ref: "¶109.1"
-    theme: education
-    quote: >
-      With an education system that trains our people for the best jobs of the
-      21st century, where cost doesn't prevent young people from going to
-      college, and student debt doesn't crush them when they get out.
-    restatement: Make college affordable so cost and student debt aren't barriers.
-    metric:
-      present: true
-      quantity: college affordability; outstanding student debt burden
-      record: Federal Reserve / Dept. of Education student loan debt series
-    threshold:
-      present: false
-      stated: "\"cost doesn't prevent\" / \"debt doesn't crush\" — no number"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: reform the education system (mechanism unspecified)
-    measurable: "partial"
-    notes: >
-      Student debt is a hard, trackable series, but the promise attaches no
-      target level and no date, and "doesn't crush" has no agreed threshold — a
-      real metric with an aspiration draped over it.
-
-  - id: biden-2020-care-economy
-    ref: "¶110.1"
-    theme: labor
-    quote: >
-      With child care and elder care that make it possible for parents to go to
-      work and for the elderly to stay in their homes with dignity.
-    restatement: Provide child care and elder care so parents can work and the elderly can age at home.
-    metric:
-      present: false
-      quantity: "\"child care and elder care\" access has no single agreed measure"
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: fund child care and elder care programs (mechanism unspecified)
-    measurable: "no"
-    notes: >
-      Another strand split out of the "build it back better" list. A named
-      instrument aimed at an unquantified end — no level of coverage, no number
-      of families, and no date — so it registers only as "did such programs
-      expand?"
-
-  - id: biden-2020-immigration
-    ref: "¶110.2"
-    theme: immigration
-    quote: >
-      With an immigration system that powers our economy and reflects our
-      values.
-    restatement: Reform the immigration system to power the economy and reflect American values.
-    metric:
-      present: false
-      quantity: "\"powers our economy and reflects our values\" has no agreed measure"
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: reform the immigration system (mechanism unspecified)
-    measurable: "no"
-    notes: >
-      The vaguest strand of the "build it back better" list — an aspiration with
-      no quantity, no threshold, and no date, and the instrument itself is left
-      unspecified, so nothing here can be pinned to a measured outcome.
-
-  - id: biden-2020-labor
-    ref: "¶110.3-110.5"
-    theme: labor
-    quote: >
-      With newly empowered labor unions. With equal pay for women. With rising
-      wages you can raise a family on.
-    restatement: Empower unions, guarantee equal pay for women, and raise wages.
-    metric:
-      present: true
-      quantity: union membership; gender pay gap; wage levels
-      record: BLS union membership; Census/BLS earnings by sex; BLS wage series
-    threshold:
-      present: true
-      stated: equal pay (parity); rising wages (direction, no level)
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: empower unions, enforce equal pay, raise wages (a bundle)
-    measurable: "partial"
-    notes: >
-      Each strand has a real metric and record, and "equal pay" carries a parity
-      direction, but there is no target wage, no gap target, and no deadline — a
-      measurable quantity with no level or date pinned to it.
-
-  - id: biden-2020-essential-workers-pay
-    ref: "¶110.6-110.7"
-    theme: labor
-    quote: >
-      Yes, we're going to do more than praise our essential workers. We're
-      finally going to pay them.
-    restatement: Raise the pay of essential workers.
-    metric:
-      present: true
-      quantity: wages of essential/frontline workers
-      record: BLS wages for relevant occupations
-    threshold:
-      present: false
-      stated: "\"pay them\" — a direction (raise pay), no amount"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: raise essential-worker pay (mechanism unspecified)
-    measurable: "partial"
-    notes: >
-      A trackable wage metric and a clear direction, but no amount, no defined
-      class of "essential workers", and no date — measurable in principle, but
-      the promise fixes none of the parameters.
-
-  - id: biden-2020-clean-energy-jobs
-    theme: climate
-    sources:
-      - in: acceptance
-        ref: "¶111.1-111.3"
-        quote: >
-          We can, and we will, deal with climate change. It's not
-          only a crisis, it's an enormous opportunity. An
-          opportunity for America to lead the world in clean energy
-          and create millions of new good-paying jobs in the
-          process.
-      - in: debate
-        ref: "¶305.7"
-        quote: >
-          Because what it does, it will create millions of new,
-          good-paying jobs.
-    restatement: Address climate change and create millions of clean-energy jobs.
-    metric:
-      present: true
-      quantity: greenhouse-gas emissions; clean-energy employment
-      record: EPA/EIA emissions data; BLS/DOE clean-energy jobs reporting
-    threshold:
-      present: true
-      stated: millions of new good-paying jobs (order of magnitude, no exact number)
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: lead the world in clean energy
-    measurable: "partial"
-    notes: >
-      "Deal with climate change" is aspirational and "millions of jobs" is only
-      an order of magnitude, with no emissions target and no date — the metrics
-      exist but the promise sets no pinnable level or deadline.
-
-  - id: biden-2020-tax-fair-share
-    ref: "¶112.1"
-    theme: taxes
-    quote: >
-      And we can pay for these investments by ending loopholes and the
-      president's $1.3 trillion tax giveaway to the wealthiest 1 percent and the
-      biggest, most profitable corporations, some of which pay no tax at all.
-    restatement: Pay for the agenda by ending loopholes and repealing the $1.3T tax cut for the top 1% and corporations.
-    metric:
-      present: true
-      quantity: federal revenue from top earners and corporations
-      record: Treasury/CBO revenue data; JCT distributional analysis
-    threshold:
-      present: true
-      stated: "\"$1.3 trillion tax giveaway\" — end it"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: end loopholes and repeal the 2017 tax cuts
-    measurable: "partial"
-    notes: >
-      A named dollar figure and a real revenue record, but no deadline, and the
-      "$1.3 trillion" magnitude is itself a contested scoring estimate — the
-      disputed boundary is which provisions and baseline that number covers.
-
-  - id: biden-2020-social-security-medicare
-    ref: "¶115.2"
-    theme: fiscal
-    quote: >
-      If I'm your president, we're going to protect Social Security and
-      Medicare.
-    restatement: Protect Social Security and Medicare from cuts.
-    metric:
-      present: false
-      quantity: whether Social Security/Medicare benefits are cut (defensive, binary)
-      record: null
-    threshold:
-      present: false
-      stated: "\"protect\" — hold at status quo, no level"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: protect the programs (block cuts to benefits/funding)
-    measurable: "no"
-    notes: >
-      A defensive promise — "protect" means prevent a bad outcome, which has no
-      target level, no date, and is hard to attribute to him rather than to
-      Congress. Measurable only as a vague "were benefits cut on his watch?"
-
-  - id: biden-2020-election-interference
-    theme: foreign-policy
-    sources:
-      - in: acceptance
-        ref: "¶129.1-129.2"
-        quote: >
-          Under President Biden, America will not turn a blind eye
-          to Russian bounties on the heads of American soldiers. Nor
-          will I put up with foreign interference in our most sacred
-          democratic exercise -- voting.
-      - in: debate
-        ref: "¶70.3"
-        quote: >
-          I made it clear that any country, no matter who it is,
-          that interferes in American elections will pay a price.
-    restatement: Confront Russian bounties on US troops and foreign election interference.
-    metric:
-      present: false
-      quantity: none clean (foreign interference and bounties are not a tracked series)
-      record: null
-    threshold:
-      present: false
-      stated: "\"not turn a blind eye\" / \"not put up with\" — direction only"
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: respond to Russian bounties; counter election interference
-    measurable: "no"
-    notes: >
-      A stance-and-instrument promise with no quantity to track, no number, and
-      no date — and largely an outcome he cannot fully control, since it depends
-      on adversaries' conduct, not only on his response.
-
-  # --- Inaugural address (2021-01-20) ---------------------------------------
-  # Inaugural addresses are thematic and aspirational: this one centers on
-  # unity, democracy, and the pandemic, most of it values and vision rather
-  # than pinnable commitments. The genuinely forward, self-framed pledges below
-  # are all measurable: "no" — no metric, threshold, or deadline reaches the
-  # inaugural. The pandemic reappears here too, but as a restatement of the
-  # acceptance-speech promise biden-2020-virus-control, so it is not duplicated.
-
-  - id: biden-2020-alliances
-    theme: foreign-policy
-    restatement: Repair America's alliances and re-engage with the world.
-    sources:
-      - in: inaugural
-        ref: "¶28.4"
-        quote: >
-          We will repair our alliances and engage with the world once again, not
-          to meet yesterday's challenges, but today's and tomorrow's challenges.
-      - in: debate
-        ref: "¶100.15"
-        quote: >
-          We need to be having the rest of our friends with us,
-          saying to China, these are the rules.
-    metric:
-      present: false
-      quantity: "\"repair our alliances\" has no agreed series or measure"
-      record: null
-    threshold:
-      present: false
-      stated: null
-    deadline:
-      present: false
-      stated: null
-    instrument:
-      present: true
-      stated: repair alliances and re-engage with the world (specific mechanism unnamed)
-    measurable: "no"
-    notes: >
-      New to the term — the acceptance speech's foreign-policy promise
-      (biden-2020-election-interference) was about Russian bounties and election
-      interference, not alliances, so this is not a merge. A named direction with
-      an instrument, but no quantity, no threshold, and no date; "repair" and
-      "engage" name no level of restored partnership, so it is gaugeable only as
-      a vague yes/no about re-engagement.
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: biden-2020-president-for-all
-    theme: governance
-    restatement: Govern as a President for all Americans, fighting as hard for opponents as for supporters.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶22.9-22.10"
-        quote: >
-          And I pledge this to you: I will be a President for all Americans—all
-          Americans. And I promise you, I will fight as hard for those who did
-          not support me as for those who did.
-      - in: debate
-        ref: "¶355.1-355.3"
-        quote: >
-          I will say, 'I'm the American president. I represent all
-          of you whether you voted for me or against me. And I'm
-          going to make sure that you're represented.
-    metric:
-      present: false
-      quantity: whether he governs even-handedly (a governance posture, not a quantity)
-      record: null
-    threshold:
-      present: false
-      stated: null
+    - in: acceptance
+      ref: "¶10.1"
+      quote: "while I will be a Democratic candidate, I will be an American president."
+    - in: inaugural
+      ref: "¶22.9"
+      quote: "I will be a President for all Americans—all Americans."
+    - in: debate
+      ref: "¶194.1"
+      quote: "I'm running as a proud Democrat, but I'm gonna be an American president."
+    - in: debate
+      ref: "¶355.1-355.3"
+      quote: "I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented."
+    restatement: "Be a president for all Americans, not only for his party or his voters."
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: govern on behalf of all Americans, including those who opposed him
-    measurable: "no"
-    notes: >
-      Explicitly self-framed ("I pledge this to you" / "I promise you"), which is
-      why it clears the vision bar — but it is a character-and-governance
-      commitment with no quantity, no threshold, and no date, measurable only as
-      a contested judgment about even-handed governing.
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-work-for-all
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶10.2"
+      quote: "I will work as hard for those who didn't support me as I will for those who did."
+    - in: inaugural
+      ref: "¶22.10"
+      quote: "I will fight as hard for those who did not support me as for those who did."
+    restatement: "Work as hard for those who did not support him as for those who did."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-end-uncivil-war
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: "¶25.8"
+      quote: "We must end this uncivil war that pits red against blue, rural versus urban, conservative versus liberal."
+    restatement: "End the 'uncivil war' between red and blue, rural and urban, conservative and liberal."
+    type: outcome
+    theme: government
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: biden-2020-level-with-you
-    theme: governance
-    restatement: Always level with the American people — be honest and transparent.
+    kind: promise
     sources:
-      - in: inaugural
-        ref: "¶37.2"
-        quote: >
-          Before God and all of you I give you my word: I will always level with
-          you.
-    metric:
-      present: false
-      quantity: whether he communicates honestly (governance posture, not a quantity)
-      record: null
-    threshold:
-      present: false
-      stated: null
+    - in: inaugural
+      ref: "¶37.2"
+      quote: "I will always level with you."
+    restatement: "Always level with the public."
+    type: ongoing
+    theme: government
     deadline:
-      present: false
       stated: null
-    instrument:
-      present: true
-      stated: always level with the public (speak truthfully)
-    measurable: "no"
-    notes: >
-      A transparency pledge given as "my word," so a genuine forward commitment
-      rather than the ceremonial oath lines that follow it ("I will defend the
-      Constitution / our democracy / America," ¶37.3-37.5, left out as oath, not
-      policy). No quantity, no threshold, no date — the zero-of-three end of the
-      scale, with an instrument under it.
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: biden-2020-minimum-wage
-    theme: labor
-    restatement: Raise the federal minimum wage to $15 an hour.
+  - id: biden-2020-defend-constitution-democracy
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶206.5"
-        quote: >
-          They deserve a minimum wage of $15.
-    metric:     { present: true, stated: $15-an-hour federal minimum wage }
-    threshold:  { present: true, stated: $15 an hour }
-    deadline:   { present: false }
-    instrument: { present: true, stated: a federal minimum-wage increase }
-    measurable: "partial"
-    notes: >
-      A named dollar level and a named instrument, but no deadline for
-      reaching it.
+    - in: inaugural
+      ref: "¶37.3-37.4"
+      quote: "I will defend the Constitution. I will defend our democracy."
+    restatement: "Defend the Constitution and democracy."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: biden-2020-citizenship-path
-    theme: immigration
-    restatement: Send Congress a pathway to citizenship for over 11 million undocumented people within his first 100 days.
+  - id: biden-2020-serve-public-good
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶226.5"
-        quote: >
-          And the fact is, and I've made it very clear, within 100
-          days, I'm going to send to the United States Congress a
-          pathway to citizenship for over 11 million undocumented
-          people.
-    metric:     { present: true, stated: over 11 million undocumented people }
-    threshold:  { present: true, stated: a pathway to citizenship for all of them }
-    deadline:   { present: true, stated: within his first 100 days }
-    instrument: { present: true, stated: legislation sent to the U.S. Congress }
-    measurable: "full"
-    notes: >
-      All four dimensions are named, though enactment depends on
-      Congress and the 100-day deadline binds only the sending of the
-      bill, not final passage.
+    - in: inaugural
+      ref: "¶37.6"
+      quote: "thinking not of power, but of possibilities; not of personal interest, but of the public good."
+    restatement: "Give everything in public service, for the public good rather than power or personal interest."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-decency-even-chance
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶355.14-355.19"
+      quote: "Now, I'm going to make sure you get that."
+    restatement: "Make sure people get decency, honour, respect, dignity and an even chance."
+    type: ongoing
+    theme: government
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"That\" is the list in ¶355.14-355.18 (decency, honor, respect, dignity, an even chance)."
+    links: []
+
+  - id: biden-2020-racial-justice
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶6.5"
+      quote: "The dream of justice for all will be deferred no longer."
+    - in: debate
+      ref: "¶355.9-355.12"
+      quote: "We can deal with a systemic racism."
+    restatement: "Deliver racial justice and deal with systemic racism."
+    type: outcome
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Inaugural ¶6.5 is untriggered and impersonal (\"will be deferred no longer\"). In the debate, \"that's what we're going to do\" (¶355.12) points back to ¶355.9-355.11."
+    links: []
+
+  - id: biden-2020-black-opportunity
+    kind: ambition
+    sources:
+    - in: debate
+      ref: "¶247.18"
+      quote: "We have to provide for economic opportunity, better education, better health care, better access to schooling, better access to opportunity to borrow money to start businesses."
+    restatement: "Provide Black Americans with economic opportunity, better education, health care and access to credit."
+    type: outcome
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Said in answer on race and policing (¶247.1-247.16); read as aimed at Black Americans. A list of low objects, kept as one."
+    links: []
+
+  - id: biden-2020-equal-pay
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶110.4"
+      quote: "With equal pay for women."
+    restatement: "Equal pay for women."
+    type: outcome
+    theme: rights
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "pay gap between women and men"
+      record: "enacted legislation (Congress.gov); BLS and Census earnings data"
+      criterion: "a pay-equity law is enacted, or the gender pay gap narrows over the term"
+      ambiguity: "The words name the goal, not the means; either a law or a narrower gap is read as progress, full equality as kept."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links:
+      - kind: shared
+        to: obama-2012-equal-pay
+
+  - id: biden-2020-defeat-domestic-extremism
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶6.7"
+      quote: "a rise of political extremism, White supremacy, domestic terrorism that we must confront and we will defeat."
+    restatement: "Confront and defeat political extremism, white supremacy and domestic terrorism."
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-end-mandatory-minimums
+    kind: ambition
+    sources:
+    - in: debate
+      ref: "¶251.12"
+      quote: "there should be no, no minimum mandatories in the law."
+    restatement: "Remove mandatory minimum sentences from the law."
+    type: action
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "federal mandatory minimum sentences"
+      record: "United States Code (Congress.gov)"
+      criterion: "federal mandatory minimum sentences are repealed"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-state-sentencing-fund
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶251.13"
+      quote: "I'm offering $20 billion to states to change their state laws to eliminate minimum mandatories and set up drug courts."
+    restatement: "Offer states $20 billion to repeal mandatory minimums and set up drug courts."
+    type: action
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "$20 billion federal grant programme for states"
+      record: "appropriations (Congress.gov)"
+      criterion: "a $20 billion programme for state sentencing reform and drug courts is enacted"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-change-justice-system
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶251.16"
+      quote: "We should fundamentally change the system and that's what I'm going to do."
+    restatement: "Fundamentally change the criminal justice system."
+    type: outcome
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-treatment-not-jail
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶288.4"
+      quote: "we should not send anyone to jail for a pure drug offense."
+    - in: debate
+      ref: "¶288.12"
+      quote: "That's what I'm going to get done"
+    restatement: "Send people with a pure drug offence to treatment, not jail."
+    type: action
+    theme: crime-justice
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "incarceration for drug use"
+      record: "federal sentencing law (Congress.gov); Bureau of Prisons data"
+      criterion: "federal law no longer sends people to prison for drug use or possession alone"
+      ambiguity: "\"Pure drug offense\" is read as possession for personal use; only federal law is in his power."
+    uncertainty:
+      extraction: probable
+      note: "\"That\" in ¶288.12 is treatment instead of jail (¶288.4-288.10)."
+    links: []
+
+  - id: biden-2020-covid-strategy
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶78.1"
+      quote: "If I'm president on day one we'll implement the national strategy I've been laying out since March."
+    - in: debate
+      ref: "¶7.16"
+      quote: "I will make sure we have a plan."
+    restatement: "Implement a national COVID-19 strategy on day one."
+    type: action
+    theme: health
+    deadline:
+      stated: "on day one"
+      applied: 2021-01-20
+    verifiability:
+      level: medium
+      object: "national COVID-19 strategy"
+      record: "executive orders (Federal Register); the published national strategy"
+      criterion: "a national COVID-19 strategy is issued and put into effect on the first day"
+      ambiguity: "\"Implement\" is read as issuing the strategy and starting it on day one, not completing every part."
+    uncertainty:
+      extraction: probable
+      note: "The debate occurrence has no date; it is read as the same commitment."
+    links: []
+
+  - id: biden-2020-control-virus
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶67.1"
+      quote: "As president, the first step I will take will be to get control of the virus that's ruined so many lives."
+    - in: debate
+      ref: "¶42.1"
+      quote: "I'm going to shut down the virus"
+    restatement: "Get control of the virus, as the first step."
+    group: biden-2020-virus-not-country
+    type: outcome
+    theme: health
+    deadline:
+      stated: "the first step I will take"
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "spread of COVID-19"
+      record: "CDC case, hospitalisation and death data"
+      criterion: "cases and deaths fall and stay well below their level at the start of the term"
+      ambiguity: "\"Control\" is not defined; it is read as a sustained fall in cases and deaths."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-no-national-lockdown
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶42.1"
+      quote: "not the country."
+    - in: debate
+      ref: "¶44.1"
+      quote: "I'm not shutting down the nation"
+    restatement: "Do not shut down the country."
+    group: biden-2020-virus-not-country
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "nationwide shutdown order"
+      record: "executive orders (Federal Register)"
+      criterion: "no nationwide shutdown order is issued in the term"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-end-pandemic
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶7.16"
+      quote: "I will take care of this, I will end this"
+    - in: inaugural
+      ref: "¶27.7"
+      quote: "We will get through this, together—together."
+    restatement: "End the pandemic."
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "COVID-19 pandemic in the US"
+      record: "HHS public health emergency declarations; CDC death data"
+      criterion: "the COVID-19 public health emergency ends within the term"
+      ambiguity: "The end of the emergency declaration is read as the end; a lasting level of deaths could also be read as not ended."
+    uncertainty:
+      extraction: probable
+      note: "\"This\" in debate ¶7.16 is the pandemic (¶7.1-7.15). Inaugural ¶27.7 \"get through this\" is a softer restatement."
+    links: []
+
+  - id: biden-2020-rapid-tests
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶79.1"
+      quote: "We'll develop and deploy rapid tests with results available immediately."
+    - in: debate
+      ref: "¶7.13"
+      quote: "I would make sure we move in the direction of rapid testing, investing in rapid testing."
+    restatement: "Develop and deploy rapid tests with immediate results."
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "rapid COVID-19 tests"
+      record: "FDA authorisations; HHS procurement and distribution records"
+      criterion: "rapid tests with near-immediate results are federally funded and distributed widely"
+      ambiguity: "No quantity is stated; read as wide federal deployment."
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶7.13 uses \"would\" in answer to what he would do as president; read as conditioned on the election."
+    links: []
+
+  - id: biden-2020-domestic-ppe
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶80.1-80.3"
+      quote: "We'll make the medical supplies and protective equipment our country needs. And we'll make them here in America."
+    restatement: "Make the medical supplies and protective equipment the country needs in America."
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "production of medical supplies and protective equipment"
+      record: "HHS and Defense Production Act contracts; Census trade data on PPE imports"
+      criterion: "the medical supplies and PPE the country needs are produced in the US"
+      ambiguity: "No share of domestic production is stated; a clear shift to US production is read as kept."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-reopening-standards
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶7.14"
+      quote: "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe"
+    - in: debate
+      ref: "¶52.8"
+      quote: "we're going to make sure that we open safely."
+    restatement: "Set national standards for safely opening schools and businesses."
+    group: biden-2020-reopen-safely
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "national reopening guidance"
+      record: "CDC guidance documents"
+      criterion: "national standards for safely opening schools and businesses are issued"
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶7.14 uses \"would\" in answer to what he would do as president; read as conditioned on the election. ¶52.8 is a softer restatement."
+    links: []
+
+  - id: biden-2020-schools-resources
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶81.1"
+      quote: "We'll make sure our schools have the resources they need to be open, safe, and effective."
+    - in: debate
+      ref: "¶7.14"
+      quote: "give them the wherewithal and financial resources to be able to do that."
+    restatement: "Make sure schools have the resources to be open, safe and effective."
+    group: biden-2020-reopen-safely
+    type: action
+    theme: education
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "federal funding for safe school reopening"
+      record: "appropriations (Congress.gov); Education Department relief-fund data"
+      criterion: "federal funds for safely reopening schools are enacted"
+      ambiguity: "\"The resources they need\" is not quantified."
+    uncertainty:
+      extraction: probable
+      note: "In debate ¶7.14 \"them\" covers schools and businesses; the school part is this promise."
+    links: []
+
+  - id: biden-2020-free-experts
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶82.1"
+      quote: "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve."
+    restatement: "Take the muzzle off public health experts so the public gets the information it needs."
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-mask-mandate
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶83.1"
+      quote: "We'll have a national mandate to wear a mask-not as a burden, but to protect each other."
+    restatement: "Issue a national mask mandate."
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "federal mask mandate"
+      record: "executive orders (Federal Register)"
+      criterion: "a mask-wearing mandate is issued by the federal government"
+      ambiguity: "A president can order masks only on federal property and in interstate transport; whether such an order counts as \"national\" is a judgement call."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-encourage-masks
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶7.12"
+      quote: "What I would do is make sure we have everyone encouraged to wear a mask, all the time."
+    - in: debate
+      ref: "¶56.7"
+      quote: "what we have to do is say, wear these masks"
+    restatement: "Encourage everyone to wear a mask."
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶7.12 uses \"would\" in answer to what he would do as president; read as conditioned on the election. ¶56.7 is a softer restatement."
+    links: []
+
+  - id: biden-2020-build-back-better
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶106.2-106.3"
+      quote: "Together, we can, and we will, rebuild our economy. And when we do, we'll not only build it back, we'll build it back better."
+    - in: debate
+      ref: "¶355.9-355.12"
+      quote: "We can grow this economy."
+    restatement: "Rebuild the economy and build it back better."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-modern-infrastructure
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶107.1"
+      quote: "With modern roads, bridges, highways, broadband, ports and airports as a new foundation for economic growth."
+    restatement: "Build modern roads, bridges, highways, broadband, ports and airports."
+    type: action
+    theme: infrastructure
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "federal infrastructure investment"
+      record: "enacted legislation (Congress.gov); BEA public construction spending"
+      criterion: "a major infrastructure law covering roads, bridges, broadband, ports and airports is enacted"
+      ambiguity: "No scale is stated; the reading is a major federal infrastructure programme."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links:
+      - kind: shared
+        to: trump-2016-rebuild-infrastructure
+
+  - id: biden-2020-clean-water-pipes
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶107.2"
+      quote: "With pipes that transport clean water to every community."
+    restatement: "Pipes that bring clean water to every community."
+    type: action
+    theme: infrastructure
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "drinking-water pipes"
+      record: "appropriations (Congress.gov); EPA drinking-water and lead-service-line data"
+      criterion: "federal funding to bring safe water pipes to every community is enacted"
+      ambiguity: "\"Every community\" is read as nationwide funding to replace unsafe (lead) pipes; partial funding needs a judgement."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-manufacturing-tech-jobs-5m
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶107.3"
+      quote: "With 5 million new manufacturing and technology jobs so the future is made in America."
+    restatement: "Create 5 million new manufacturing and technology jobs."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "manufacturing and technology employment"
+      record: "BLS Current Employment Statistics"
+      criterion: "5 million more manufacturing and technology jobs at the end of the term than at its start"
+      ambiguity: "Which BLS series count as \"technology jobs\" is a judgement call."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-empower-unions
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶110.3"
+      quote: "With newly empowered labor unions."
+    restatement: "Empower labor unions."
+    type: action
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "workers' right to organise"
+      record: "enacted legislation (Congress.gov); NLRB rules"
+      criterion: "a law or rule that strengthens the right to organise is enacted"
+      ambiguity: "\"Empowered\" is not defined; any law or rule that strengthens organising is read as kept."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-rising-wages
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶110.5"
+      quote: "With rising wages you can raise a family on."
+    restatement: "Rising wages a family can live on."
+    type: outcome
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "wages"
+      record: "BLS real average hourly earnings"
+      criterion: "real wages rise over the term"
+      ambiguity: "\"You can raise a family on\" is not quantified; rising real wages are read as kept."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-pay-essential-workers
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶110.6-110.7"
+      quote: "Yes, we're going to do more than praise our essential workers. We're finally going to pay them."
+    restatement: "Pay essential workers, not just praise them."
+    type: action
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "pay for essential workers"
+      record: "appropriations (Congress.gov); Treasury relief-fund guidance"
+      criterion: "federal premium or hazard pay for essential workers is enacted"
+      ambiguity: "\"Pay them\" is read as premium or hazard pay; higher wages in general would be a looser reading."
+    uncertainty:
+      extraction: probable
+      note: "\"We're finally going to\" (¶110.7) is the lexicon's \"we're going to\" with \"finally\" inserted; ¶110.6-110.7 joined."
+    links: []
+
+  - id: biden-2020-small-business-aid
+    kind: ambition
+    sources:
+    - in: debate
+      ref: "¶56.7"
+      quote: "make sure we get the help that the businesses need."
+    - in: debate
+      ref: "¶196.1-196.2"
+      quote: "we're gonna have to bail them out, too. We should be bailing them out now, those small businesses."
+    restatement: "Bail out small businesses."
+    type: action
+    theme: economy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "federal aid to small businesses"
+      record: "appropriations (Congress.gov); SBA programme data"
+      criterion: "new federal relief for small businesses is enacted"
+      ambiguity: "\"Bail out\" is not quantified."
+    uncertainty:
+      extraction: probable
+      note: "\"We're gonna have to\" states an obligation, so this is an ambition."
+    links: []
+
+  - id: biden-2020-tax-wealthy
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "¶112.1"
+      quote: "we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent"
+    - in: acceptance
+      ref: "¶113.4"
+      quote: "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share."
+    restatement: "End the tax cuts and loopholes for the wealthiest 1 percent."
+    group: biden-2020-fair-share
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "taxes on the highest earners"
+      record: "enacted tax law (Congress.gov); IRS Statistics of Income"
+      criterion: "taxes on the top 1 percent are raised by law"
+      ambiguity: "\"Fair share\" is not quantified; any enacted increase is read as movement."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered. \"We can pay … by\" (¶112.1) and \"long past time\" (¶113.4) are read like \"now is the time to\": ambitions."
+    links: []
+
+  - id: biden-2020-tax-corporations
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: "¶112.1"
+      quote: "the biggest, most profitable corporations, some of which pay no tax at all."
+    - in: acceptance
+      ref: "¶113.4"
+      quote: "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share."
+    restatement: "Make the biggest corporations pay their fair share of tax."
+    group: biden-2020-fair-share
+    type: action
+    theme: taxes
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "corporate taxes"
+      record: "enacted tax law (Congress.gov); IRS Statistics of Income"
+      criterion: "taxes on large corporations are raised by law"
+      ambiguity: "\"Fair share\" is not quantified; any enacted increase is read as movement."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered. \"We can pay … by\" (¶112.1) and \"long past time\" (¶113.4) are read like \"now is the time to\": ambitions."
+    links: []
+
+  - id: biden-2020-keep-payroll-tax
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶115.1"
+      quote: "I will not let it happen."
+    restatement: "Do not let the payroll tax that funds Social Security be eliminated."
+    type: ongoing
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "payroll tax funding Social Security"
+      record: "Internal Revenue Code (Congress.gov)"
+      criterion: "the Social Security payroll tax is not eliminated in the term"
+    uncertainty:
+      extraction: probable
+      note: "\"It\" is the president's proposal to eliminate the tax that funds Social Security (¶114.2-114.3)."
+    links: []
+
+  - id: biden-2020-protect-social-security
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶115.2"
+      quote: "If I'm your president, we're going to protect Social Security and Medicare."
+    restatement: "Protect Social Security."
+    group: biden-2020-protect-ss-medicare
+    type: ongoing
+    theme: retirement
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "Social Security benefits"
+      record: "Social Security Act amendments (Congress.gov); SSA programme rules"
+      criterion: "no cut to Social Security benefits is enacted"
+      ambiguity: "\"Protect\" is read as no enacted benefit cuts."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-protect-medicare
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶115.2"
+      quote: "If I'm your president, we're going to protect Social Security and Medicare."
+    restatement: "Protect Medicare."
+    group: biden-2020-protect-ss-medicare
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "Medicare benefits"
+      record: "Medicare law (Congress.gov); CMS programme rules"
+      criterion: "no cut to Medicare benefits is enacted"
+      ambiguity: "\"Protect\" is read as no enacted benefit cuts."
+    uncertainty:
+      extraction: clear
+    links: []
 
   - id: biden-2020-public-option
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶150.1"
+      quote: "What I'm going to do is pass Obamacare with a public option -- become Bidencare."
+    restatement: "Pass a public health insurance option on top of the Affordable Care Act."
+    type: action
     theme: health
-    restatement: Pass a public option on top of the Affordable Care Act (Bidencare).
-    sources:
-      - in: debate
-        ref: "¶150.1"
-        quote: >
-          What I'm going to do is pass Obamacare with a public
-          option -- become Bidencare.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: a public option added to the Affordable Care Act }
-    measurable: "partial"
-    notes: >
-      A named policy instrument with no coverage target or deadline; he
-      separately put its cost at over $750 billion over ten years.
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "public health insurance option"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law creating a public insurance option is enacted"
+    uncertainty:
+      extraction: clear
+    links: []
 
-  - id: biden-2020-oil-transition
-    theme: climate
-    restatement: Transition away from the oil industry to renewable energy and end federal oil subsidies.
+  - id: biden-2020-medicare-negotiation
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶333.1-333.2"
-        quote: >
-          I would transition from the oil industry. Yes.
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: ending federal oil subsidies and replacing oil with renewables }
-    measurable: "partial"
-    notes: >
-      Names the mechanism — ending subsidies and shifting to renewables
-      — but leaves the pace vague ('over time'), with no phase-out date
-      or volume target for oil itself.
+    - in: debate
+      ref: "¶150.4"
+      quote: "by allowing Medicare to negotiate drug prices"
+    restatement: "Let Medicare negotiate drug prices."
+    type: action
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "Medicare drug-price negotiation"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law lets Medicare negotiate drug prices"
+    uncertainty:
+      extraction: clear
+    links:
+      - kind: shared
+        to: obama-2008-drug-price-negotiation
+
+  - id: biden-2020-lower-premiums
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶108.1"
+      quote: "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+    - in: debate
+      ref: "¶150.4"
+      quote: "we're going to make sure we reduce the premiums"
+    - in: debate
+      ref: "¶152.10"
+      quote: "We have to provide health insurance for people at an affordable rate, and that's what I do."
+    restatement: "Lower health insurance premiums."
+    group: biden-2020-health-costs
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "health insurance premiums"
+      record: "KFF Employer Health Benefits Survey; CMS marketplace premium data"
+      criterion: "premiums paid by consumers fall over the term"
+      ambiguity: "Which premiums (employer, marketplace, before or after subsidies) is not stated."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise. Debate ¶152.10 is a softer restatement."
+    links:
+      - kind: shared
+        to: obama-2008-lower-premiums
+
+  - id: biden-2020-lower-deductibles
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶108.1"
+      quote: "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+    restatement: "Lower health insurance deductibles."
+    group: biden-2020-health-costs
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "health insurance deductibles"
+      record: "KFF Employer Health Benefits Survey; CMS marketplace plan data"
+      criterion: "average deductibles fall over the term"
+      ambiguity: "Which plans are meant is not stated."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-lower-drug-prices
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶108.1"
+      quote: "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+    - in: debate
+      ref: "¶150.4"
+      quote: "reduce drug prices"
+    restatement: "Lower prescription drug prices."
+    group: biden-2020-health-costs
+    type: outcome
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "prescription drug prices"
+      record: "BLS consumer price index for prescription drugs; CMS drug spending data"
+      criterion: "prescription drug prices fall over the term"
+      ambiguity: "List or net prices, and which index, is not stated."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-pre-existing-conditions
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶150.8"
+      quote: "we're going to make sure we're in a situation that we've actually protect pre existing"
+    restatement: "Protect people with pre-existing conditions."
+    type: ongoing
+    theme: health
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "insurance protections for pre-existing conditions"
+      record: "Affordable Care Act (Congress.gov); court rulings"
+      criterion: "the protections for pre-existing conditions stay in force through the term"
+      ambiguity: "\"Protect\" is read as keeping the ACA protections in force."
+    uncertainty:
+      extraction: probable
+      note: "The sentence breaks off; read with ¶150.14 (people with pre-existing conditions)."
+    links: []
+
+  - id: biden-2020-job-training
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶109.1"
+      quote: "With an education system that trains our people for the best jobs of the 21st century"
+    restatement: "An education system that trains people for the best jobs of the 21st century."
+    group: biden-2020-education
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-college-cost
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶109.1"
+      quote: "where cost doesn't prevent young people from going to college"
+    restatement: "Cost should not prevent young people from going to college."
+    group: biden-2020-education
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "cost of college"
+      record: "enacted legislation (Congress.gov); NCES net-price and enrolment data"
+      criterion: "a federal programme makes college free or affordable for students who could not otherwise pay"
+      ambiguity: "\"Cost doesn't prevent\" is not quantified; read as a federal programme for tuition-free or affordable college."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-student-debt
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶109.1"
+      quote: "student debt doesn't crush them when they get out"
+    restatement: "Student debt should not crush graduates."
+    group: biden-2020-education
+    type: outcome
+    theme: education
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "student loan debt"
+      record: "Education Department loan portfolio data"
+      criterion: "federal relief reduces student-debt burdens"
+      ambiguity: "\"Doesn't crush\" is not quantified."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-child-care
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶110.1"
+      quote: "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
+    restatement: "Child care that makes it possible for parents to work."
+    group: biden-2020-care
+    type: action
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "federal child-care support"
+      record: "enacted legislation (Congress.gov); HHS child-care programme data"
+      criterion: "a law expanding affordable child care is enacted"
+      ambiguity: "No scale is stated."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-elder-care
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶110.1"
+      quote: "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
+    restatement: "Elder care that lets older people stay in their homes."
+    group: biden-2020-care
+    type: action
+    theme: welfare
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "federal home and elder care support"
+      record: "enacted legislation (Congress.gov); CMS home and community-based services data"
+      criterion: "a law expanding home and elder care is enacted"
+      ambiguity: "No scale is stated."
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-immigration-system
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶110.2"
+      quote: "With an immigration system that powers our economy and reflects our values."
+    restatement: "An immigration system that powers the economy and reflects American values."
+    type: outcome
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "¶107.1-110.5 are fragments completing \"we'll build it back better\" (¶106.3); each is read as part of that firm promise."
+    links: []
+
+  - id: biden-2020-citizenship-bill-100-days
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶226.5"
+      quote: "within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people."
+    restatement: "Within 100 days, send Congress a bill with a path to citizenship for 11 million undocumented people."
+    type: action
+    theme: immigration
+    deadline:
+      stated: "within 100 days"
+      applied: 2021-04-30
+    verifiability:
+      level: high
+      object: "immigration bill"
+      record: "Congress.gov bill records"
+      criterion: "a bill with a path to citizenship for about 11 million people is sent to Congress within 100 days"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-restore-daca
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶226.6"
+      quote: "they're going to be legally certified again, to be able to stay in this country"
+    restatement: "Restore legal status for Dreamers (DACA recipients)."
+    group: biden-2020-dreamers
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "DACA protection"
+      record: "DHS rules and memoranda (Federal Register)"
+      criterion: "DACA protection is reinstated"
+      ambiguity: "\"Legally certified\" is read as restoring DACA status."
+    uncertainty:
+      extraction: probable
+      note: "Untriggered (\"they're going to be\"); the future of his plan for Dreamers."
+    links: []
+
+  - id: biden-2020-dreamers-citizenship
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶226.6"
+      quote: "and put on a path to citizenship."
+    restatement: "Put Dreamers on a path to citizenship."
+    group: biden-2020-dreamers
+    type: action
+    theme: immigration
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "path to citizenship for Dreamers"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law gives Dreamers a path to citizenship"
+    uncertainty:
+      extraction: probable
+      note: "Untriggered (\"they're going to be\"); the future of his plan for Dreamers."
+    links: []
+
+  - id: biden-2020-protect-america
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶90.1-90.2"
+      quote: "I will protect America. I will defend us from every attack."
+    - in: inaugural
+      ref: "¶37.5"
+      quote: "I will defend America."
+    restatement: "Protect America and defend it from every attack."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-stand-with-allies
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶128.1"
+      quote: "I will be a president who will stand with our allies and friends."
+    restatement: "Stand with allies and friends."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+      - kind: shared
+        to: obama-2012-alliances
+
+  - id: biden-2020-repair-alliances
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶28.4"
+      quote: "We will repair our alliances"
+    restatement: "Repair America's alliances."
+    group: biden-2020-world
+    type: outcome
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-engage-world
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶28.4"
+      quote: "engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges."
+    restatement: "Engage with the world again on today's and tomorrow's challenges."
+    group: biden-2020-world
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-lead-by-example
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: "¶28.5-28.6"
+      quote: "And we'll lead not merely by the example of our power, but by the power of our example. We will be a strong and trusted partner for peace, progress, and security."
+    restatement: "Lead by the power of example; be a strong and trusted partner."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-no-cozying-dictators
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶128.2"
+      quote: "I will make it clear to our adversaries the days of cozying up to dictators are over."
+    restatement: "Make clear to adversaries that the days of cozying up to dictators are over."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-russia-bounties
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶129.1"
+      quote: "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers."
+    restatement: "Do not turn a blind eye to Russian bounties on American soldiers."
+    type: ongoing
+    theme: defense
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-punish-election-interference
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶129.2"
+      quote: "Nor will I put up with foreign interference in our most sacred democratic exercise -- voting."
+    - in: debate
+      ref: "¶70.7"
+      quote: "They will pay a price if I'm elected."
+    - in: debate
+      ref: "¶70.28"
+      quote: "Any country that interferes with us will, in fact, pay a price"
+    restatement: "Make any country that interferes in US elections pay a price."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "foreign election interference"
+      record: "Treasury sanctions designations; executive orders (Federal Register)"
+      criterion: "countries that interfered (named: Russia, China, Iran) face sanctions or comparable measures"
+      ambiguity: "\"Pay a price\" is not defined; sanctions or comparable measures are read as kept."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-human-rights-peace
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶130.1-130.2"
+      quote: "I will stand always for our values of human rights and dignity. And I will work in common purpose for a more secure, peaceful, and prosperous world."
+    restatement: "Stand for human rights and work for a more secure, peaceful and prosperous world."
+    type: ongoing
+    theme: foreign-policy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-china-rules
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶100.1"
+      quote: "What I'd make China do is play by the international rules"
+    - in: debate
+      ref: "¶100.15-100.17"
+      quote: "We need to be having the rest of our friends with us, saying to China, these are the rules."
+    restatement: "Make China play by international rules, together with allies."
+    type: outcome
+    theme: trade
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶100.1 uses \"I'd\" (would) in answer to what he would do; ¶100.17 (\"that's the way I will run it\") points back to ¶100.15-100.16."
+    links: []
+
+  - id: biden-2020-deal-climate
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: "¶111.1"
+      quote: "We can, and we will, deal with climate change."
+    restatement: "Deal with climate change."
+    type: ongoing
+    theme: environment
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links:
+      - kind: shared
+        to: obama-2012-climate-respond
 
   - id: biden-2020-rejoin-paris
-    theme: climate
-    restatement: Rejoin the Paris Climate Accord and press China to meet its commitments.
+    kind: promise
     sources:
-      - in: debate
-        ref: "¶350.1"
-        quote: >
-          No, I'm going to rejoin the Paris Accord and get China to
-          abide by what they agreed to
-    metric:     { present: false }
-    threshold:  { present: false }
-    deadline:   { present: false }
-    instrument: { present: true, stated: rejoining the Paris Climate Accord }
-    measurable: "partial"
-    notes: >
-      A concrete diplomatic action he controls, but with no metric,
-      threshold, or deadline attached.
+    - in: debate
+      ref: "¶350.1"
+      quote: "I'm going to rejoin the Paris Accord"
+    restatement: "Rejoin the Paris climate agreement."
+    group: biden-2020-paris
+    type: action
+    theme: environment
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "Paris Agreement"
+      record: "UN treaty records"
+      criterion: "the US rejoins the Paris Agreement"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-china-paris
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶350.1"
+      quote: "get China to abide by what they agreed to"
+    restatement: "Get China to abide by its Paris commitments."
+    group: biden-2020-paris
+    type: outcome
+    theme: environment
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-ev-charging-50k
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶305.8"
+      quote: "We're going to invest in, for example, 500,000-- 50,000, excuse me, 50,000 charging stations on our highways"
+    restatement: "Invest in 50,000 electric-car charging stations on highways."
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "public EV charging stations"
+      record: "DOE Alternative Fuels Data Center; federal charging-programme data"
+      criterion: "federal investment funds at least 50,000 highway charging stations"
+    uncertainty:
+      extraction: probable
+      note: "He corrects himself from 500,000 to 50,000; his written plan said 500,000. The number as finally said is rated."
+    links: []
+
+  - id: biden-2020-retrofit-buildings
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶305.10"
+      quote: "take 4 million existing billion, buildings"
+    restatement: "Retrofit 4 million existing buildings to save energy."
+    group: biden-2020-retrofits
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "energy retrofits of buildings"
+      record: "DOE programme data"
+      criterion: "4 million existing buildings are retrofitted"
+      ambiguity: "No single public record counts building retrofits; federal programme counts are a proxy."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-retrofit-homes
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶305.10"
+      quote: "2 million existing homes and retrofit them so they don't leak as much energy"
+    restatement: "Retrofit 2 million existing homes to save energy."
+    group: biden-2020-retrofits
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "energy retrofits of homes"
+      record: "DOE Weatherization Assistance Program data"
+      criterion: "2 million existing homes are retrofitted"
+      ambiguity: "No single public record counts home retrofits; federal programme counts are a proxy."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-capture-fracking-emissions
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶323.2"
+      quote: "What I will do with fracking over time is make sure that we can capture the emissions from the fracking."
+    restatement: "Capture the emissions from fracking."
+    type: action
+    theme: environment
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: medium
+      object: "methane and other emissions from oil and gas production"
+      record: "EPA rules (Federal Register)"
+      criterion: "a federal rule requires capture of emissions from fracked wells"
+      ambiguity: "\"Capture the emissions\" is read as rules that cut methane from gas production."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-transition-from-oil
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶333.1"
+      quote: "I would transition from the oil industry."
+    - in: debate
+      ref: "¶339.1"
+      quote: "it has to be replaced by renewable energy over time."
+    restatement: "Transition away from the oil industry to renewable energy over time."
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Debate ¶333.1 uses \"would\" in answer to what he would do as president; read as conditioned on the election."
+    links: []
+
+  - id: biden-2020-end-oil-subsidies
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶339.3"
+      quote: "I'd stop giving them federal subsidies."
+    restatement: "Stop federal subsidies to the oil industry."
+    type: action
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: high
+      object: "federal tax subsidies for oil"
+      record: "Internal Revenue Code (Congress.gov)"
+      criterion: "the oil industry's federal tax subsidies are repealed"
+    uncertainty:
+      extraction: probable
+      note: "Uses \"I'd\" (would) in answer to what he would do as president; read as conditioned on the election."
+    links:
+      - kind: shared
+        to: obama-2012-end-oil-subsidies
+
+  - id: biden-2020-net-zero-power
+    kind: ambition
+    sources:
+    - in: debate
+      ref: "¶346.1-346.3"
+      quote: "The first place to do that by the year 2025 is in energy production."
+    restatement: "Net-zero emissions from energy production by 2025."
+    type: outcome
+    theme: energy
+    deadline:
+      stated: "by the year 2025"
+      applied: 2025-01-01
+    verifiability:
+      level: high
+      object: "power-sector emissions"
+      record: "EIA electricity data; EPA greenhouse gas inventory"
+      criterion: "net-zero emissions from electricity production by 2025"
+    uncertainty:
+      extraction: contested
+      note: "He says 2025 here and in ¶323.1; his written plan set 2035. The words as said are recorded."
+    links: []
+
+  - id: biden-2020-net-zero-2050
+    kind: ambition
+    sources:
+    - in: debate
+      ref: "¶346.1-346.3"
+      quote: "By 2050, totally."
+    restatement: "Net-zero emissions economy-wide by 2050."
+    type: outcome
+    theme: environment
+    deadline:
+      stated: "By 2050"
+      applied: 2050-01-01
+    verifiability:
+      level: high
+      object: "US net greenhouse gas emissions"
+      record: "EPA greenhouse gas inventory"
+      criterion: "net-zero emissions by 2050"
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: biden-2020-clean-energy-jobs
+    kind: promise
+    sources:
+    - in: debate
+      ref: "¶355.9-355.12"
+      quote: "we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs."
+    restatement: "An economy run on clean energy, creating millions of new jobs."
+    type: outcome
+    theme: energy
+    deadline:
+      stated: null
+      applied: 2025-01-20
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"That's what we're going to do\" (¶355.12) points back to ¶355.9-355.11."
+    links: []

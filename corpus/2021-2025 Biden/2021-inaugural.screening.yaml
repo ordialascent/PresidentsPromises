@@ -1,0 +1,92 @@
+# Screening ledger for 2021-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added`
+# were not matched by the lexicon but state in the future tense what he or
+# his plan will do, or (as ambitions) goals he set for the term (PROTOCOL.md §1).
+# Ids shared with other ledgers are further occurrences of the same promise.
+source: 2021-inaugural
+protocol: 1
+rows:
+  - ref: "¶3.2"
+    decision: describe
+    note: "Rhetoric (\"the Nation we know we can be and we must be\")."
+  - ref: "¶5.4"
+    decision: describe
+    note: "Manner of work with no object; the tasks follow in the speech."
+  - ref: "¶6.5"
+    decision: include
+    added: true
+    promises: [biden-2020-racial-justice]
+    note: "Untriggered future statement (\"will be deferred no longer\")."
+  - ref: "¶6.7"
+    decision: include
+    promises: [biden-2020-defeat-domestic-extremism]
+    note: "\"Must confront\" and \"will defeat\"; the firm part decides the kind."
+  - ref: "¶14.2"
+    decision: others
+    note: "Call on the nation as a whole."
+  - ref: "¶14.3"
+    decision: describe
+    note: "Assurance conditioned on ¶14.2 (\"if we do that\")."
+  - ref: "¶15.5"
+    decision: others
+    note: "Call on all Americans."
+  - ref: "¶16.1"
+    decision: others
+    note: "Call on all Americans."
+  - { ref: "¶22.9", decision: include, promises: [biden-2020-president-for-all] }
+  - { ref: "¶22.10", decision: include, promises: [biden-2020-work-for-all] }
+  - ref: "¶25.6"
+    decision: describe
+    note: "Empathy (\"I get it\"); no commitment."
+  - { ref: "¶25.8", decision: include, promises: [biden-2020-end-uncivil-war] }
+  - ref: "¶27.1"
+    decision: describe
+    note: "Rhetoric (\"we're going to need each other\")."
+  - ref: "¶27.4"
+    decision: others
+    note: "Call on the nation to face the pandemic as one."
+  - ref: "¶27.6"
+    decision: describe
+    note: "Introduces a Bible verse; the commitment follows in ¶27.7."
+  - { ref: "¶27.7", decision: include, promises: [biden-2020-end-pandemic] }
+  - ref: "¶28.4"
+    decision: include
+    promises: [biden-2020-repair-alliances, biden-2020-engage-world]
+    note: "Two objects; split."
+  - ref: "¶28.5-28.6"
+    decision: include
+    promises: [biden-2020-lead-by-example]
+    note: "Two manner-only low commitments, kept as one."
+  - ref: "¶29.2"
+    decision: ceremony
+    note: "Moment of silent prayer."
+  - ref: "¶29.3"
+    decision: describe
+    note: "Rhetoric (\"we will honor them by becoming …\")."
+  - ref: "¶33.1"
+    decision: describe
+    note: "Prediction (\"we're going to be tested\")."
+  - ref: "¶33.5"
+    decision: describe
+    note: "Prediction (\"we will be judged\")."
+  - ref: "¶33.9"
+    decision: describe
+    note: "Belief that the nation must rise to the moment; no object."
+  - ref: "¶33.10"
+    decision: describe
+    note: "Belief (\"I believe we will\")."
+  - ref: "¶34.1"
+    decision: describe
+    note: "Rhetoric (\"we will write the next great chapter\")."
+  - { ref: "¶37.2", decision: include, promises: [biden-2020-level-with-you] }
+  - ref: "¶37.3-37.4"
+    decision: include
+    promises: [biden-2020-defend-constitution-democracy]
+    note: "Two manner-only low commitments, kept as one."
+  - { ref: "¶37.5", decision: include, promises: [biden-2020-protect-america] }
+  - { ref: "¶37.6", decision: include, promises: [biden-2020-serve-public-good] }
+  - ref: "¶37.7"
+    decision: describe
+    note: "Rhetoric (\"an American story of hope\")."
+
+#   30 rows: 12 include (1 of them added), 18 excluded (ceremony 1, describe 13, others 4)
