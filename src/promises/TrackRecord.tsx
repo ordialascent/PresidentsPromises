@@ -1,6 +1,11 @@
 import { useMemo } from 'react';
-import { CORPUS_TERMS } from '../content/promises.generated.js';
-import { VERDICT_META, VERDICT_STATUSES, trackRecords } from './model.js';
+import {
+  VERDICT_META,
+  VERDICT_STATUSES,
+  trackRecords,
+  type CorpusTerm,
+  type VerdictPick,
+} from './model.js';
 
 /**
  * Each president's verdicts in one row: a bar split by verdict, and the
@@ -8,10 +13,34 @@ import { VERDICT_META, VERDICT_STATUSES, trackRecords } from './model.js';
  * the term's verifiable promises, not all of them. Under-review verdicts are
  * counted apart until their figure is confirmed, and pending ones (term still
  * running) are never counted as kept or broken.
+ *
+ * It counts the promises the topic and category filters leave, like the bars
+ * above it, and a click on a bar section or a count picks that one cell (one
+ * president, one verdict) for the list. Clicking it again releases it.
  */
-export function TrackRecord() {
-  const rows = useMemo(() => trackRecords(CORPUS_TERMS), []);
+export function TrackRecord({
+  terms,
+  selected,
+  onSelect,
+}: {
+  terms: CorpusTerm[];
+  selected: VerdictPick | null;
+  onSelect: (pick: VerdictPick | null) => void;
+}) {
+  const rows = useMemo(() => trackRecords(terms), [terms]);
   const widest = Math.max(...rows.map((r) => r.verifiable), 1);
+  const isOn = (termKey: string, s: VerdictPick['status']) =>
+    selected?.termKey === termKey && selected.status === s;
+  const pick = (termKey: string, s: VerdictPick['status']) =>
+    onSelect(isOn(termKey, s) ? null : { termKey, status: s });
+
+  if (rows.every((r) => r.verifiable === 0)) {
+    return (
+      <p className="tr-note">
+        No verdicts in this selection: only high and medium promises get one.
+      </p>
+    );
+  }
 
   return (
     <div className="tr">
@@ -49,20 +78,21 @@ export function TrackRecord() {
                 <span className="tr-term">{r.termLabel}</span>
               </th>
               <td className="tr-bar-col">
-                <div
-                  className="tr-bar"
-                  style={{ width: `${(r.verifiable / widest) * 100}%` }}
-                  role="img"
-                  aria-label={VERDICT_STATUSES.map((s) => `${r.counts[s]} ${VERDICT_META[s].label.toLowerCase()}`).join(', ')}
-                >
+                <div className="tr-bar" style={{ width: `${(r.verifiable / widest) * 100}%` }}>
                   {VERDICT_STATUSES.map((s) =>
                     r.counts[s] ? (
-                      <span
+                      <button
+                        type="button"
                         key={s}
                         className="tr-seg"
                         data-v={s}
+                        data-on={isOn(r.key, s)}
+                        data-dim={selected != null && !isOn(r.key, s)}
+                        aria-pressed={isOn(r.key, s)}
                         style={{ flexGrow: r.counts[s] }}
-                        title={`${r.counts[s]} ${VERDICT_META[s].label.toLowerCase()}`}
+                        title={`${r.label}: ${r.counts[s]} ${VERDICT_META[s].label.toLowerCase()}`}
+                        aria-label={`${r.label}: show the ${r.counts[s]} ${VERDICT_META[s].label.toLowerCase()}`}
+                        onClick={() => pick(r.key, s)}
                       />
                     ) : null,
                   )}
@@ -70,7 +100,20 @@ export function TrackRecord() {
               </td>
               {VERDICT_STATUSES.map((s) => (
                 <td key={s} className="tr-n" data-zero={r.counts[s] === 0}>
-                  {r.counts[s]}
+                  {r.counts[s] ? (
+                    <button
+                      type="button"
+                      className="tr-n-btn"
+                      data-on={isOn(r.key, s)}
+                      aria-pressed={isOn(r.key, s)}
+                      aria-label={`${r.label}: show the ${r.counts[s]} ${VERDICT_META[s].label.toLowerCase()}`}
+                      onClick={() => pick(r.key, s)}
+                    >
+                      {r.counts[s]}
+                    </button>
+                  ) : (
+                    0
+                  )}
                 </td>
               ))}
               <td className="tr-n tr-share">
@@ -81,9 +124,10 @@ export function TrackRecord() {
         </tbody>
       </table>
       <p className="tr-note">
-        High and medium promises only. <em>Kept</em> is the share of kept among kept, partly and
+        High and medium promises only. Click a bar section or a count to list just those
+        promises. <em>Kept</em> is the share of kept among kept, partly and
         broken; under-review, indeterminate and pending verdicts are left out of it. Open any
-        promise below for its verdict and evidence.{' '}
+        promise for its verdict and evidence.{' '}
         <a href="#method">How verdicts are reached</a>
       </p>
     </div>

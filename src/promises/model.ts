@@ -249,6 +249,18 @@ export function filterBySegment(
   );
 }
 
+/** One cell of the track record: a president's term crossed with a verdict. */
+export interface VerdictPick {
+  termKey: string;
+  status: VerdictValue | 'review';
+}
+
+/** The promises of one term with one verdict status — what clicking a track-record cell means. */
+export function filterByVerdict(rows: PromiseRow[], pick: VerdictPick | null): PromiseRow[] {
+  if (!pick) return rows;
+  return rows.filter((r) => r.termKey === pick.termKey && verdictFor(r.promise).status === pick.status);
+}
+
 /** Terms carrying only the promises whose tier is in `tiers`. */
 export function filterByTiers(terms: CorpusTerm[], tiers: ReadonlySet<Quality>): CorpusTerm[] {
   return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => tiers.has(p.quality)) }));
