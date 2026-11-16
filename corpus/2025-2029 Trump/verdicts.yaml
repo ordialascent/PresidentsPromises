@@ -1,0 +1,704 @@
+# Verdicts for Donald Trump's 2025-2029 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2029-01-20
+# unless the promise states another. The term is running: a promise not yet met
+# is pending and is reviewed when its deadline passes.
+#
+# Complete: high 21/21, medium 31/31.
+
+protocol: 1
+verdicts:
+
+  # ---- border and immigration ------------------------------------------------------
+
+  - promise: trump-2024-border-emergency
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 20 January 2025 Trump proclaimed a national emergency at the southern border.
+    evidence:
+      - what: Proclamation 10886, Declaring a National Emergency at the Southern Border of the United States
+        url: https://www.federalregister.gov/d/2025-01948
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-close-border
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Orders on 20 January 2025 suspended entry at the southern border and ended routine release. Border Patrol apprehensions at the southwest border fell from about 47,000 in December 2024 to about 8,000 in February 2025, the lowest monthly count on record, and stayed near that level.
+    evidence:
+      - what: Proclamation 10888, Guaranteeing the States Protection Against Invasion, and Executive Order 14165, Securing Our Borders
+        url: https://www.federalregister.gov/executive-order/14165
+        publisher: Federal Register
+        date: 2025-01-20
+      - what: CBP, Southwest Land Border Encounters (monthly Border Patrol apprehensions)
+        url: https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters
+        publisher: U.S. Customs and Border Protection
+        date: 2026-11-16
+    uncertainty:
+      verdict: contested
+      note: The monthly figures are from memory (cbp.gov blocks scripts). Crossings reached record lows within weeks, not literally on the first day; a reader holding to "from the first day" would call this partly.
+
+  - promise: trump-2024-end-catch-and-release
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Executive Order 14165 ordered the end of catch-and-release on 20 January 2025. Border Patrol releases of apprehended crossers into the US fell to near zero in the months after.
+    evidence:
+      - what: Executive Order 14165, Securing Our Borders, sec. 7
+        url: https://www.federalregister.gov/executive-order/14165
+        publisher: Federal Register
+        date: 2025-01-20
+      - what: CBP monthly operational updates (Border Patrol releases)
+        url: https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters
+        publisher: U.S. Customs and Border Protection
+        date: 2026-11-16
+    uncertainty:
+      verdict: probable
+      note: The release figures are from memory (cbp.gov blocks scripts).
+
+  - promise: trump-2024-remain-in-mexico
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Executive Order 14165 directed DHS to resume the Migrant Protection Protocols, and DHS announced their reinstatement on 21 January 2025. It published an environmental assessment for the programme in April 2025.
+    evidence:
+      - what: Executive Order 14165, Securing Our Borders, sec. 7(a)
+        url: https://www.federalregister.gov/executive-order/14165
+        publisher: Federal Register
+        date: 2025-01-20
+      - what: DHS, Notice of Availability of a Draft Programmatic Environmental Assessment for actions related to the Migrant Protection Protocols
+        url: https://www.federalregister.gov/d/2025-06816
+        publisher: Federal Register
+        date: 2025-04-25
+    uncertainty:
+      verdict: probable
+      note: DHS's reinstatement announcement (dhs.gov) could not be read by script. How many people were actually returned to Mexico under it is not checked; the verdict counts the reinstatement.
+
+  - promise: trump-2024-troops-to-border
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Proclamation 10886 ordered the Secretary of Defense to deploy forces to the southern border. About 1,500 more active-duty troops were sent in the first week, and in April 2025 strips of the border were placed under military jurisdiction.
+    evidence:
+      - what: Proclamation 10886, sec. 3
+        url: https://www.federalregister.gov/d/2025-01948
+        publisher: Federal Register
+        date: 2025-01-20
+      - what: Department of Defense announcement of additional active-duty troops to the southern border
+        url: https://www.defense.gov/News/Releases/
+        publisher: U.S. Department of Defense
+        date: 2025-01-22
+    uncertainty:
+      verdict: probable
+      note: The troop numbers are from memory (defense.gov blocks scripts); the order itself is clear.
+
+  - promise: trump-2024-cartels-fto
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Executive Order 14157 started the process on 20 January 2025, and on 20 February 2025 the State Department designated eight groups, including the Sinaloa and Jalisco cartels, as foreign terrorist organizations.
+    evidence:
+      - what: Executive Order 14157, Designating Cartels and Other Organizations as Foreign Terrorist Organizations and Specially Designated Global Terrorists
+        url: https://www.federalregister.gov/executive-order/14157
+        publisher: Federal Register
+        date: 2025-01-20
+      - what: State Department, Foreign Terrorist Organization Designations of Tren de Aragua, Mara Salvatrucha, Cartel de Sinaloa, Cartel de Jalisco Nueva Generacion and others
+        url: https://www.federalregister.gov/d/2025-02873
+        publisher: Federal Register
+        date: 2025-02-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-invoke-alien-enemies-act
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 14 March 2025 Trump invoked the Alien Enemies Act against Tren de Aragua. Courts later limited how it could be used, which does not change the verdict.
+    evidence:
+      - what: Proclamation 10903, Invocation of the Alien Enemies Act Regarding the Invasion of the United States by Tren de Aragua
+        url: https://www.federalregister.gov/d/2025-04865
+        publisher: Federal Register
+        date: 2025-03-14
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-mass-deportation
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Removals have risen, but no official count shows millions of removals so far. The term runs to January 2029.
+    evidence:
+      - what: DHS Office of Homeland Security Statistics, immigration enforcement and removals data
+        url: https://ohss.dhs.gov/topics/immigration/immigration-enforcement
+        publisher: U.S. Department of Homeland Security
+        date: 2026-11-16
+    uncertainty:
+      verdict: probable
+      note: The official removals tables could not be read by script.
+
+  - promise: trump-2024-finish-wall
+    verdict: pending
+    as_of: 2026-11-16
+    summary: The 2025 tax and spending law funded new border barrier construction, which is under way. No report yet shows the planned barrier finished.
+    evidence:
+      - what: One Big Beautiful Bill Act (Public Law 119-21)
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+      - what: CBP, border wall status
+        url: https://www.cbp.gov/border-security/along-us-borders/border-wall-system
+        publisher: U.S. Customs and Border Protection
+        date: 2026-11-16
+    uncertainty:
+      verdict: probable
+      note: CBP's status page could not be read by script.
+
+
+  # ---- crime -----------------------------------------------------------------------
+
+  - promise: trump-2024-law-and-order
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Judged on the national violent crime rate for the last full year of the term against 2024.
+    evidence:
+      - what: FBI Crime Data Explorer, national violent crime rate
+        url: https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/explorer/crime/crime-trend
+        publisher: Federal Bureau of Investigation
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
+
+
+  # ---- economy, prices and debt ----------------------------------------------------
+
+  - promise: trump-2024-end-inflation
+    verdict: pending
+    as_of: 2026-11-16
+    summary: CPI inflation was 3.0% a year in January 2025 and about 3.7% in the year to September 2026. Judged on the last full year before the deadline.
+    evidence:
+      - what: BLS Consumer Price Index for All Urban Consumers (CPIAUCSL), via FRED
+        url: https://fred.stlouisfed.org/series/CPIAUCSL
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-13
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-lower-prices
+    verdict: pending
+    as_of: 2026-11-16
+    summary: The CPI level rose from 319.0 in January 2025 to 337.5 in October 2026 (+5.8%). Judged on the level at the deadline.
+    evidence:
+      - what: BLS Consumer Price Index for All Urban Consumers (CPIAUCSL), via FRED
+        url: https://fred.stlouisfed.org/series/CPIAUCSL
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-13
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-lower-energy-costs
+    verdict: pending
+    as_of: 2026-11-16
+    summary: The CPI energy index rose from 282.3 in January 2025 to 340.2 in October 2026 (+21%). Judged on the level at the deadline.
+    evidence:
+      - what: BLS CPI energy index (CPIENGSL), via FRED
+        url: https://fred.stlouisfed.org/series/CPIENGSL
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-13
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-lower-interest-rates
+    verdict: pending
+    as_of: 2026-11-16
+    summary: The 30-year mortgage rate was 6.96% in the week of the inauguration and 7.11% on 12 November 2026. Judged on rates at the deadline.
+    evidence:
+      - what: Freddie Mac 30-year fixed mortgage rate (MORTGAGE30US), via FRED
+        url: https://fred.stlouisfed.org/series/MORTGAGE30US
+        publisher: Federal Reserve Bank of St. Louis (Freddie Mac data)
+        date: 2026-11-12
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-reduce-debt
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Total public debt outstanding rose from $36.21 trillion on 17 January 2025 to $40.61 trillion on 12 November 2026. Judged on the figure at the deadline.
+    evidence:
+      - what: Treasury, Debt to the Penny (total public debt outstanding)
+        url: https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/
+        publisher: U.S. Department of the Treasury
+        date: 2026-11-12
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-cut-taxes
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The July 2025 tax and spending law made the 2017 income-tax cuts permanent and added new cuts, including deductions for tips, overtime and seniors and a higher state-and-local-tax cap.
+    evidence:
+      - what: One Big Beautiful Bill Act (Public Law 119-21)
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-incomes-soar
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Judged on real income at the deadline; no end-of-term figure exists yet.
+    evidence:
+      - what: BLS real average weekly earnings and BEA real disposable personal income per capita (A229RX0), via FRED
+        url: https://fred.stlouisfed.org/series/A229RX0
+        publisher: Federal Reserve Bank of St. Louis (BEA data)
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
+
+
+  # ---- trade and tariffs -----------------------------------------------------------
+
+  - promise: trump-2024-overhaul-trade
+    verdict: kept
+    as_of: 2026-11-16
+    summary: An America First trade memorandum was issued on 20 January 2025, and tariffs on Canada, Mexico and China were ordered on 1 February 2025, followed by reciprocal tariffs on most countries in April.
+    evidence:
+      - what: Executive Order 14194, Imposing Duties To Address the Situation at Our Southern Border
+        url: https://www.federalregister.gov/executive-order/14194
+        publisher: Federal Register
+        date: 2025-02-01
+      - what: Executive Order 14257, Regulating Imports With a Reciprocal Tariff
+        url: https://www.federalregister.gov/executive-order/14257
+        publisher: Federal Register
+        date: 2025-04-02
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-broad-tariffs
+    verdict: kept
+    as_of: 2026-11-16
+    summary: From April 2025 a reciprocal tariff of at least 10% applied to imports from nearly every country, alongside section 232 tariffs on steel, aluminium, cars and other goods. In February 2026 the Supreme Court ruled that the emergency-powers law did not authorise the reciprocal tariffs; they were ended and replaced the same day by a temporary import surcharge under the Trade Act.
+    evidence:
+      - what: Executive Order 14257, Regulating Imports With a Reciprocal Tariff
+        url: https://www.federalregister.gov/executive-order/14257
+        publisher: Federal Register
+        date: 2025-04-02
+      - what: Learning Resources, Inc. v. Trump, No. 24-1287 (slip opinion)
+        url: https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf
+        publisher: Supreme Court of the United States
+        date: 2026-02-20
+      - what: Proclamation 11012, Imposing a Temporary Import Surcharge, and Executive Order 14389, Ending Certain Tariff Actions
+        url: https://www.federalregister.gov/d/2026-03824
+        publisher: Federal Register
+        date: 2026-02-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-tariff-revenue
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Net customs duties were $264 billion in calendar 2025, up from about $80 billion a year before. After the February 2026 ruling, refunds made net receipts negative in May-July 2026; fiscal 2026 still came to $173 billion.
+    evidence:
+      - what: Treasury, Monthly Treasury Statement, Table 4 (customs duties, net receipts)
+        url: https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/
+        publisher: U.S. Department of the Treasury
+        date: 2026-10-31
+    uncertainty:
+      verdict: contested
+      note: Part of the 2025 revenue came from tariffs later found unlawful and is being refunded. A reader who nets those refunds against the year they were collected could find no 12 months above $200 billion and would call this pending.
+
+  - promise: trump-2024-mexico-car-tariff
+    verdict: pending
+    as_of: 2026-11-16
+    summary: A 25% section 232 tariff on imported cars took effect in April 2025. No tariff of about 100% or more on cars from Chinese-owned plants in Mexico is in force.
+    evidence:
+      - what: Proclamation 10908, Adjusting Imports of Automobiles and Automobile Parts Into the United States
+        url: https://www.federalregister.gov/d/2025-05930
+        publisher: Federal Register
+        date: 2025-03-26
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-external-revenue-service
+    verdict: pending
+    as_of: 2026-11-16
+    summary: No order or law has established an External Revenue Service; tariffs are still collected by Customs and Border Protection.
+    evidence:
+      - what: Federal Register, executive orders signed by Donald Trump, 2025-2026 (none establishes it)
+        url: https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2025
+        publisher: Federal Register
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
+
+
+  # ---- energy ----------------------------------------------------------------------
+
+  - promise: trump-2024-energy-emergency
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 20 January 2025 Trump declared a national energy emergency.
+    evidence:
+      - what: Executive Order 14156, Declaring a National Energy Emergency
+        url: https://www.federalregister.gov/executive-order/14156
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-expand-drilling
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Judged on production at the end of the term against 2024.
+    evidence:
+      - what: EIA, U.S. field production of crude oil and dry natural gas production
+        url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MCRFPUS2&f=M
+        publisher: U.S. Energy Information Administration
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-energy-exports
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Judged on net energy exports at the end of the term.
+    evidence:
+      - what: EIA, Monthly Energy Review, Table 1.4b (primary energy exports and net imports)
+        url: https://www.eia.gov/totalenergy/data/monthly/
+        publisher: U.S. Energy Information Administration
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-refill-spr
+    verdict: pending
+    as_of: 2026-11-16
+    summary: The reserve held 394.6 million barrels at the inauguration, rose to 415 million by March 2026, then fell to 279.5 million by 6 November 2026 after large releases.
+    evidence:
+      - what: EIA, Weekly U.S. Ending Stocks of Crude Oil in SPR (WCSSTUS1)
+        url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCSSTUS1&f=W
+        publisher: U.S. Energy Information Administration
+        date: 2026-11-06
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-end-ev-mandate
+    verdict: partly
+    as_of: 2026-11-16
+    summary: On 20 January 2025 Executive Order 14154 revoked the 2021 target of half of new car sales being electric and ordered the agencies to review the vehicle rules. The rules themselves were not revoked by the deadline; EPA rescinded its vehicle greenhouse-gas standards in February 2026.
+    evidence:
+      - what: Executive Order 14154, Unleashing American Energy, secs. 2(e) and 7
+        url: https://www.federalregister.gov/executive-order/14154
+        publisher: Federal Register
+        date: 2025-01-20
+      - what: EPA, Rescission of the Greenhouse Gas Endangerment Finding and Motor Vehicle Greenhouse Gas Emission Standards
+        url: https://www.federalregister.gov/d/2026-03157
+        publisher: Federal Register
+        date: 2026-02-18
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-redirect-green-funds
+    verdict: pending
+    as_of: 2026-11-16
+    summary: The July 2025 law rescinded unobligated balances of about two dozen clean-energy and environmental programmes and repealed the Greenhouse Gas Reduction Fund. It did not redirect them to roads, bridges or dams, and many clean-energy funds remain.
+    evidence:
+      - what: One Big Beautiful Bill Act (Public Law 119-21)
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+    uncertainty:
+      verdict: contested
+      note: The criterion reads "rescinded or redirected". A reader who counts the partial rescission as enough would call this kept.
+
+
+  # ---- autos and manufacturing -----------------------------------------------------
+
+  - promise: trump-2024-bring-back-auto-manufacturing
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Motor-vehicle production (industrial production index) rose from 97.1 in January 2025 to 107.6 in September 2026, while motor-vehicle and parts employment fell from 975,500 to 965,500 in October 2026. Both must be higher at the deadline.
+    evidence:
+      - what: 'Federal Reserve industrial production: motor vehicles and parts (IPG3361T3S), via FRED'
+        url: https://fred.stlouisfed.org/series/IPG3361T3S
+        publisher: Federal Reserve Bank of St. Louis (Federal Reserve data)
+        date: 2026-11-16
+      - what: BLS employment, motor vehicles and parts (CES3133600101), via FRED
+        url: https://fred.stlouisfed.org/series/CES3133600101
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-06
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-all-auto-jobs-back
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Motor-vehicle and parts employment was 965,500 in October 2026, against about 1.3 million in 2000.
+    evidence:
+      - what: BLS employment, motor vehicles and parts (CES3133600101), via FRED
+        url: https://fred.stlouisfed.org/series/CES3133600101
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-06
+    uncertainty: { verdict: clear }
+
+
+  # ---- Social Security and Medicare ------------------------------------------------
+
+  - promise: trump-2024-protect-social-security
+    verdict: pending
+    as_of: 2026-11-16
+    summary: No law has cut Social Security benefits or raised the retirement age so far. This must hold for the whole term.
+    evidence:
+      - what: One Big Beautiful Bill Act (Public Law 119-21)
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-protect-medicare
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The July 2025 law ended Medicare eligibility for some lawfully present immigrants, such as refugees and asylees, who had qualified before. No law cut benefits for beneficiaries in general.
+    attempt: none
+    evidence:
+      - what: One Big Beautiful Bill Act (Public Law 119-21), sec. 71201, Limiting Medicare coverage of certain individuals
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+    uncertainty:
+      verdict: contested
+      note: The cut is to eligibility, which the criterion names, but affects a small group of non-citizens. A reader who reads "protect Medicare" as protecting the programme for citizens would call this pending.
+
+
+  # ---- foreign policy --------------------------------------------------------------
+
+  - promise: trump-2024-end-ukraine-war
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The war was still being fought when Trump took office on 20 January 2025; no ceasefire or peace agreement had been reached.
+    attempt: none
+    evidence:
+      - what: Peace negotiations in the Russo-Ukrainian war (2022-present)
+        url: https://en.wikipedia.org/wiki/Peace_negotiations_in_the_Russo-Ukrainian_war_(2022%E2%80%93present)
+        publisher: Wikipedia
+        date: 2026-11-16
+        secondary: true
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-ukraine-talks
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Before 20 January 2025 Trump met Zelenskyy in Paris (7 December 2024), but Putin and Zelenskyy did not hold direct talks.
+    attempt: none
+    evidence:
+      - what: Peace negotiations in the Russo-Ukrainian war (2022-present)
+        url: https://en.wikipedia.org/wiki/Peace_negotiations_in_the_Russo-Ukrainian_war_(2022%E2%80%93present)
+        publisher: Wikipedia
+        date: 2026-11-16
+        secondary: true
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-end-israel-war
+    verdict: pending
+    as_of: 2026-11-16
+    summary: A ceasefire under Trump's Gaza plan took effect on 10 October 2025 and the living hostages were released. Whether it holds as a lasting end of the war is judged at the deadline.
+    evidence:
+      - what: Gaza peace plan
+        url: https://en.wikipedia.org/wiki/Gaza_peace_plan
+        publisher: Wikipedia
+        date: 2026-11-16
+        secondary: true
+    uncertainty:
+      verdict: probable
+      note: Developments after mid-2026 were not checked against a primary source.
+
+  - promise: trump-2024-panama-canal
+    verdict: pending
+    as_of: 2026-11-16
+    summary: No treaty or agreement has given the US ownership or control of the Panama Canal.
+    evidence:
+      - what: Panama Canal Authority
+        url: https://pancanal.com/en/
+        publisher: Autoridad del Canal de Panama
+        date: 2026-11-16
+    uncertainty:
+      verdict: probable
+      note: Changes to the Chinese-owned port concessions at the canal were not checked.
+
+
+  # ---- defence ---------------------------------------------------------------------
+
+  - promise: trump-2024-rebuild-military
+    verdict: pending
+    as_of: 2026-11-16
+    summary: The July 2025 law added about $150 billion for defence, including munitions. Real growth over the term is judged at the deadline.
+    evidence:
+      - what: One Big Beautiful Bill Act (Public Law 119-21)
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-iron-dome
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Executive Order 14186 (27 January 2025) ordered the shield, and the July 2025 law funded it. It is not built or operating.
+    evidence:
+      - what: Executive Order 14186, The Iron Dome for America
+        url: https://www.federalregister.gov/executive-order/14186
+        publisher: Federal Register
+        date: 2025-01-27
+      - what: One Big Beautiful Bill Act (Public Law 119-21)
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-iron-dome-made-in-usa
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Judged on the shield's contracts once they are awarded and built.
+    evidence:
+      - what: Executive Order 14186, The Iron Dome for America
+        url: https://www.federalregister.gov/executive-order/14186
+        publisher: Federal Register
+        date: 2025-01-27
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-wisconsin-ships
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Navy frigates have continued under construction at the Marinette, Wisconsin shipyard. In late 2025 the Navy cut the frigate programme back to the first ships.
+    evidence:
+      - what: Naval Sea Systems Command, Constellation-class frigate programme
+        url: https://www.navsea.navy.mil/Home/Team-Ships/PEO-Ships/Constellation-Class-Frigate/
+        publisher: U.S. Navy
+        date: 2026-11-16
+    uncertainty:
+      verdict: probable
+      note: The cutback is from memory (Navy sites block scripts).
+
+  - promise: trump-2024-military-anti-woke-order
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 27 January 2025 Trump signed an order barring the teaching of divisive concepts and gender ideology in the military.
+    evidence:
+      - what: Executive Order 14185, Restoring America's Fighting Force
+        url: https://www.federalregister.gov/executive-order/14185
+        publisher: Federal Register
+        date: 2025-01-27
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-reinstate-vaccine-refusers
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The order reinstating service members discharged over the COVID-19 vaccine, with back pay, was signed on Monday 27 January 2025, one day after the applied deadline.
+    attempt: none
+    evidence:
+      - what: Executive Order 14184, Reinstating Service Members Discharged Under the Military's COVID-19 Vaccination Mandate
+        url: https://www.federalregister.gov/executive-order/14184
+        publisher: Federal Register
+        date: 2025-01-27
+    uncertainty:
+      verdict: contested
+      note: The order came exactly seven days after the speech. A reader who counts "this week" as the seven days after the inauguration would call this kept.
+
+
+  # ---- government and culture ------------------------------------------------------
+
+  - promise: trump-2024-doge
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Executive Order 14158 (20 January 2025) set up the "Department of Government Efficiency" by renaming the US Digital Service.
+    evidence:
+      - what: Executive Order 14158, Establishing and Implementing the President's "Department of Government Efficiency"
+        url: https://www.federalregister.gov/executive-order/14158
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty:
+      verdict: probable
+      note: It is a renamed office inside the Executive Office of the President, not a cabinet department created by law.
+
+  - promise: trump-2024-free-speech-order
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 20 January 2025 Trump signed an order barring federal officers from abridging free speech.
+    evidence:
+      - what: Executive Order 14149, Restoring Freedom of Speech and Ending Federal Censorship
+        url: https://www.federalregister.gov/executive-order/14149
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-end-dei
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Orders on 20 and 21 January 2025 ended federal DEI offices, programmes and contractor requirements.
+    evidence:
+      - what: Executive Order 14151, Ending Radical and Wasteful Government DEI Programs and Preferencing
+        url: https://www.federalregister.gov/executive-order/14151
+        publisher: Federal Register
+        date: 2025-01-20
+      - what: Executive Order 14173, Ending Illegal Discrimination and Restoring Merit-Based Opportunity
+        url: https://www.federalregister.gov/executive-order/14173
+        publisher: Federal Register
+        date: 2025-01-21
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-two-sexes-policy
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 20 January 2025 an order made it federal policy to recognise two sexes, male and female.
+    evidence:
+      - what: Executive Order 14168, Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government
+        url: https://www.federalregister.gov/executive-order/14168
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-womens-sports
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 5 February 2025 an order made it federal policy, enforced through Title IX funding, to bar males from women's sports in federally funded programmes.
+    evidence:
+      - what: Executive Order 14201, Keeping Men Out of Women's Sports
+        url: https://www.federalregister.gov/executive-order/14201
+        publisher: Federal Register
+        date: 2025-02-05
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-gulf-of-america
+    verdict: kept
+    as_of: 2026-11-16
+    summary: An order on 20 January 2025 renamed the Gulf of Mexico the Gulf of America for federal use; the federal names database was updated in February 2025.
+    evidence:
+      - what: Executive Order 14172, Restoring Names That Honor American Greatness, sec. 4
+        url: https://www.federalregister.gov/executive-order/14172
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-mount-mckinley
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The same order restored the name Mount McKinley for federal use.
+    evidence:
+      - what: Executive Order 14172, Restoring Names That Honor American Greatness, sec. 3
+        url: https://www.federalregister.gov/executive-order/14172
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-no-abortion-ban
+    verdict: pending
+    as_of: 2026-11-16
+    summary: No federal abortion ban has been signed. This must hold for the whole term.
+    evidence:
+      - what: Federal Register, executive orders signed by Donald Trump, 2025-2026
+        url: https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2025
+        publisher: Federal Register
+        date: 2026-11-16
+      - what: One Big Beautiful Bill Act (Public Law 119-21)
+        url: https://www.govinfo.gov/app/details/PLAW-119publ21
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-07-04
+    uncertainty: { verdict: clear }
+
+
+  # ---- health and science ----------------------------------------------------------
+
+  - promise: trump-2024-end-chronic-disease
+    verdict: pending
+    as_of: 2026-11-16
+    summary: Judged on chronic-disease prevalence at the end of the term.
+    evidence:
+      - what: CDC, chronic disease indicators
+        url: https://www.cdc.gov/cdi/
+        publisher: Centers for Disease Control and Prevention
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2024-mars
+    verdict: pending
+    as_of: 2026-11-16
+    summary: No crewed mission to Mars has launched.
+    evidence:
+      - what: NASA, Moon to Mars architecture
+        url: https://www.nasa.gov/moontomarsarchitecture/
+        publisher: NASA
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
