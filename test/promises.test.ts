@@ -15,6 +15,8 @@ import {
   topicCounts,
   topicCountsIn,
   trackRecords,
+  filterByVerdict,
+  flattenPromises,
   verdictFor,
   VERDICT_STATUSES,
 } from '../src/promises/model.js';
@@ -302,5 +304,17 @@ describe('verdicts on the board', () => {
     }
     const review = records.reduce((n, r) => n + r.counts.review, 0);
     expect(review).toBe(all.filter((p) => p.verdict?.review).length);
+  });
+
+  it('a track-record cell lists exactly the promises it counts', () => {
+    const rows = flattenPromises(CORPUS_TERMS);
+    for (const r of trackRecords(CORPUS_TERMS)) {
+      for (const status of VERDICT_STATUSES) {
+        const picked = filterByVerdict(rows, { termKey: r.key, status });
+        expect(picked).toHaveLength(r.counts[status]);
+        for (const row of picked) expect(row.termKey).toBe(r.key);
+      }
+    }
+    expect(filterByVerdict(rows, null)).toBe(rows);
   });
 });

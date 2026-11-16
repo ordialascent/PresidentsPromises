@@ -11,12 +11,15 @@ import {
   termsOfKind,
   filterBySegment,
   filterByTiers,
+  filterByVerdict,
+  VERDICT_META,
   filterByTopics,
   flattenPromises,
   topicCounts,
   topicCountsIn,
   type Kind,
   type Quality,
+  type VerdictPick,
 } from '../promises/model.js';
 import {
   CORPUS_AMBITION_COUNT,
@@ -70,6 +73,9 @@ const COUNT_WIDTH = String(
  * - the donut counts the promises in the shown categories, by topic;
  * - the category legend counts the promises on the selected topics;
  * - the bars draw what both leave, and a block picks one president's share;
+ * - the track record counts the same promises by verdict, and a section picks
+ *   one president's kept (or broken, …) promises. A block and a section are
+ *   both "one cell" pointers, so holding one releases the other;
  * - the search box narrows the list alone, and nothing else.
  *
  * The first two count each other on purpose: a category with no promises on a
@@ -122,7 +128,20 @@ export function PromisesPage() {
   const topicTotal = useMemo(() => topics.reduce((n, t) => n + t.count, 0), [topics]);
   // One bar block — a president crossed with a tier. Single-select: it is a
   // pointer at one cell of the chart, so a second click elsewhere moves it.
-  const [segment, setSegment] = useState<Segment | null>(null);
+  const [segment, setSegmentState] = useState<Segment | null>(null);
+  // One track-record cell — a president crossed with a verdict. It is the same
+  // kind of pointer as a bar block, so only one of the two is ever held:
+  // picking either releases the other, and the list never shows the empty
+  // intersection of two cells from different charts.
+  const [verdictPick, setVerdictPickState] = useState<VerdictPick | null>(null);
+  const setSegment = (s: Segment | null) => {
+    setSegmentState(s);
+    if (s) setVerdictPickState(null);
+  };
+  const setVerdictPick = (v: VerdictPick | null) => {
+    setVerdictPickState(v);
+    if (v) setSegmentState(null);
+  };
   const [query, setQuery] = useState('');
 
   // The bars get the topic filter; the chart applies the category filter itself,
@@ -134,8 +153,8 @@ export function PromisesPage() {
   // against the search box.
   const shownTerms = useMemo(() => filterByTiers(terms, activeTiers), [terms, activeTiers]);
   const rows = useMemo(
-    () => filterBySegment(flattenPromises(shownTerms), segment),
-    [shownTerms, segment],
+    () => filterByVerdict(filterBySegment(flattenPromises(shownTerms), segment), verdictPick),
+    [shownTerms, segment, verdictPick],
   );
   const hits = useMemo(() => searchPromises(rows, query), [rows, query]);
 
@@ -145,8 +164,15 @@ export function PromisesPage() {
     if (!segment) return;
     const term = shownTerms.find((t) => t.key === segment.termKey);
     const left = term ? term.promises.filter((p) => p.quality === segment.quality).length : 0;
-    if (left === 0) setSegment(null);
+    if (left === 0) setSegmentState(null);
   }, [shownTerms, segment]);
+
+  // The same for a track-record cell the topic or category filter has emptied.
+  useEffect(() => {
+    if (!verdictPick) return;
+    const left = filterByVerdict(flattenPromises(shownTerms), verdictPick).length;
+    if (left === 0) setVerdictPickState(null);
+  }, [shownTerms, verdictPick]);
 
   const toggleTopic = (theme: string) => {
     const next = new Set(selectedTopics);
@@ -211,8 +237,16 @@ export function PromisesPage() {
         onClear: () => setSegment(null),
       });
     }
+    if (verdictPick) {
+      const term = CORPUS_TERMS.find((t) => t.key === verdictPick.termKey);
+      chips.push({
+        key: 'verdict',
+        label: `${term?.label ?? verdictPick.termKey} · ${VERDICT_META[verdictPick.status].label}`,
+        onClear: () => setVerdictPick(null),
+      });
+    }
     return chips;
-  }, [selectedTopics, pickedTiers, tierFilterOn, segment]);
+  }, [selectedTopics, pickedTiers, tierFilterOn, segment, verdictPick]);
 
   // The other kind is a different corpus: its topics and blocks don't carry over.
   const switchKind = (k: Kind) => {
@@ -221,12 +255,14 @@ export function PromisesPage() {
     setSelectedTopics(new Set());
     setPickedTiers(new Set());
     setSegment(null);
+    setVerdictPick(null);
   };
 
   const clearAll = () => {
     setSelectedTopics(new Set());
     setPickedTiers(new Set());
     setSegment(null);
+    setVerdictPick(null);
     setQuery('');
   };
 
@@ -294,7 +330,7 @@ export function PromisesPage() {
               <hr className="board-rule" />
               <div className="board-promises">
                 <span className="board-label">Track record</span>
-                <TrackRecord />
+                <TrackRecord terms={shownTerms} selected={verdictPick} onSelect={setVerdictPick} />
               </div>
             </>
           )}

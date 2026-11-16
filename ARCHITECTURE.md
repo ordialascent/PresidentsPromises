@@ -42,7 +42,9 @@ engine: a reading drawn from a series is always computed from the series.
 `verdictFor` turns it into what the list and detail show, and `trackRecords`
 counts them per term for the board's track-record table. A verdict with a
 `review` note is provisional: it shows as "under review" and stays out of the
-kept share until the note is removed.
+kept share until the note is removed. The track record counts what the topic
+and category filters leave, and clicking a section picks one term × verdict for
+the list (`filterByVerdict`); it and a bar-chart block are mutually exclusive.
 
 ## Invariant 2 — the data snapshot is append-only
 
