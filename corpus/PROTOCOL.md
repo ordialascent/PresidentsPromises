@@ -239,6 +239,15 @@ A verdict that relies on the absence of something ("no law was enacted")
 cites where one would appear and, where possible, a record of the attempt
 that failed.
 
+### Under review
+
+Some evidence sits on official sites that cannot always be read directly, so
+a figure may have been taken from a secondary report or from memory. Such a
+verdict carries `review`: one line naming the exact figure or page to be
+confirmed. The site shows it as **under review**, with the provisional
+verdict beside it, and leaves it out of the kept/partly/broken counts until
+the figure is confirmed and `review` is removed.
+
 ### Uncertainty
 
 `uncertainty.verdict`: `clear` · `probable` · `contested`, with a note when not
@@ -307,6 +316,7 @@ verdicts:
     as_of: 2026-11-15                   # when the verdict was last checked
     summary: The 2001 tax law cut the estate tax each year and repealed it for 2010 only; it was still in force at the deadline.
     # attempt: none | initiated | passed-chamber  (required when broken)
+    # review: what must still be confirmed      (optional; shown as under review)
     evidence:
       - what: Economic Growth and Tax Relief Reconciliation Act of 2001, Title V (phase-down, repeal in 2010, sunset after 2010)
         url: https://www.congress.gov/bill/107th-congress/house-bill/1836
@@ -327,7 +337,7 @@ The validator (`npm run validate`, run in CI) fails when:
 - `deadline.applied` is missing, or a `high`/`medium` promise has no criterion;
 - a `medium` promise has no `ambiguity`, or a non-`clear` uncertainty has no note;
 - a verdict names a promise that is missing, `low` or an ambition, or a promise has two verdicts;
-- a verdict has no evidence, an evidence item has no `https` link, or a `broken` verdict has no `attempt`;
+- a `review` is empty, a verdict has no evidence, an evidence item has no `https` link, or a `broken` verdict has no `attempt`;
 - a verdict is `pending` although its deadline is before `as_of`.
 
 A term's verdicts are complete when every `high` and `medium` promise has one;

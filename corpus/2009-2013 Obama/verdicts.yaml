@@ -124,6 +124,7 @@ verdicts:
 
   - promise: obama-2008-pay-for-every-dime
     verdict: partly
+    review: 'CBO scores: ARRA $787 billion added to deficits; ACA with reconciliation -$143 billion (from search snippets).'
     as_of: 2026-11-16
     summary: The health law was offset (CBO estimated it, with the reconciliation act, would cut deficits by $143 billion over 2010-2019). The 2009 stimulus, which carried the tax cut, clean energy and school funding from the same speech, had no offsets and added an estimated $787 billion to deficits.
     evidence:
@@ -233,6 +234,7 @@ verdicts:
 
   - promise: obama-2008-renewables-150b
     verdict: indeterminate
+    review: 'Total federal renewable-energy support per year (EIA subsidy reports FY2010 and FY2013).'
     as_of: 2026-11-16
     summary: No official total of federal spending and tax expenditure on renewable energy for 2008-2018 exists. EIA measures it only in sample years (FY2010, FY2013, FY2016 onward); its figures, such as wind and solar support of $12 billion in FY2013 and total renewable support of $7.4 billion in FY2016, suggest a ten-year sum below $150 billion but cannot settle it.
     evidence:
@@ -250,6 +252,7 @@ verdicts:
 
   - promise: obama-2008-green-jobs-5m
     verdict: broken
+    review: '3.4 million green goods and services jobs in 2011 (BLS; from memory).'
     as_of: 2026-11-16
     summary: The Energy Department's 2017 count found about 2.2 million jobs in energy efficiency, 374,000 in solar and 102,000 in wind. Total clean-energy employment was well under five million, so five million new jobs were not created. BLS stopped its green-jobs count after 2011.
     attempt: initiated
@@ -281,6 +284,7 @@ verdicts:
 
   - promise: obama-2008-lower-premiums
     verdict: broken
+    review: 'The 2008 MEPS-IC private-sector family premium (about $12,300, derived).'
     as_of: 2026-11-16
     summary: The average private-sector family premium rose from about $12,300 in 2008 to $15,473 in 2012.
     attempt: passed-chamber

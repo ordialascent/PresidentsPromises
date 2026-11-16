@@ -128,6 +128,7 @@ verdicts:
 
   - promise: bush-2004-job-training-double
     verdict: broken
+    review: 'Exact trainee counts for program years 2004 and 2008 (DOL TEN 34-09).'
     as_of: 2026-11-15
     summary: The number of WIA adult and dislocated-worker exiters who received training declined steadily from program year 2004 to 2008. It did not double.
     attempt: initiated
@@ -190,6 +191,7 @@ verdicts:
 
   - promise: bush-2004-own-businesses
     verdict: indeterminate
+    review: 'Self-employment trend 2004-2008 (BLS Monthly Labor Review, September 2010).'
     as_of: 2026-11-15
     summary: The measures disagree. Unincorporated self-employment fell over the term, while incorporated self-employment and the number of nonemployer businesses rose. No official series measures the share of Americans who own a business.
     evidence:
@@ -246,6 +248,7 @@ verdicts:
 
   - promise: bush-2004-health-centers
     verdict: partly
+    review: 'Any count of poor counties without a health centre in 2008 (GAO-08-723).'
     as_of: 2026-11-15
     summary: Health centres opened in many poor counties, but not all. In 2007 HRSA still targeted 200 high-poverty counties with no health centre site and funded 75 of them; a 2008 round funded up to 40 more.
     evidence:
@@ -369,6 +372,7 @@ verdicts:
 
   - promise: bush-2004-pell-grants
     verdict: kept
+    review: '2004-05 maximum Pell award of $4,050 (ed.gov; from memory).'
     as_of: 2026-11-15
     summary: The maximum Pell grant rose from $4,050 in 2004-05 to $4,731 in 2008-09 ($4,241 appropriated plus the $490 add-on created in 2007).
     evidence:
@@ -467,6 +471,7 @@ verdicts:
 
   - promise: bush-2004-iraqi-troops-125k
     verdict: indeterminate
+    review: 'An official Iraqi security forces count dated near 31 December 2004.'
     as_of: 2026-11-15
     summary: The official figures straddle the target. Secretary Rice told the Senate on 18 January 2005 that 120,000 Iraqi troops were trained; the Defense Department reported about 136,000 by mid-February. GAO found the counts unreliable.
     evidence:
@@ -497,6 +502,7 @@ verdicts:
 
   - promise: bush-2004-border-manpower
     verdict: kept
+    review: 'Border Patrol agent counts FY2004 10,819 and FY2008 17,499 (CBP staffing tables; from memory).'
     as_of: 2026-11-15
     summary: Border Patrol agents rose from 10,819 in FY2004 to 17,499 in FY2008.
     evidence:

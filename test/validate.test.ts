@@ -253,6 +253,8 @@ verdicts:
     expect(e(/ {4}evidence:\n.*\n/, '')).toMatch(/needs evidence/);
     expect(e('{ verdict: clear }', '{ verdict: probable }')).toMatch(/needs a note/);
     expect(e('verdict: broken', 'verdict: pending')).toMatch(/pending, but the deadline 2005-01-20 has passed/);
+    expect(e('    attempt: initiated\n', "    attempt: initiated\n    review: ''\n")).toMatch(/review must say/);
+    expect(v('    attempt: initiated\n', '    attempt: initiated\n    review: Confirm the budget figure.\n').errors).toEqual([]);
   });
 });
 

@@ -23,6 +23,7 @@ verdicts:
 
   - promise: trump-2024-close-border
     verdict: kept
+    review: 'Southwest Border Patrol apprehensions, December 2024 about 47,000 and February 2025 about 8,300 (CBP; from memory).'
     as_of: 2026-11-16
     summary: Orders on 20 January 2025 suspended entry at the southern border and ended routine release. Border Patrol apprehensions at the southwest border fell from about 47,000 in December 2024 to about 8,000 in February 2025, the lowest monthly count on record, and stayed near that level.
     evidence:
@@ -40,6 +41,7 @@ verdicts:
 
   - promise: trump-2024-end-catch-and-release
     verdict: kept
+    review: 'Border Patrol releases into the US from February 2025 (CBP; near zero, from memory).'
     as_of: 2026-11-16
     summary: Executive Order 14165 ordered the end of catch-and-release on 20 January 2025. Border Patrol releases of apprehended crossers into the US fell to near zero in the months after.
     evidence:
@@ -57,6 +59,7 @@ verdicts:
 
   - promise: trump-2024-remain-in-mexico
     verdict: kept
+    review: 'DHS reinstatement announcement of 21 January 2025, and how many people were returned under it.'
     as_of: 2026-11-16
     summary: Executive Order 14165 directed DHS to resume the Migrant Protection Protocols, and DHS announced their reinstatement on 21 January 2025. It published an environmental assessment for the programme in April 2025.
     evidence:
@@ -74,6 +77,7 @@ verdicts:
 
   - promise: trump-2024-troops-to-border
     verdict: kept
+    review: 'About 1,500 active-duty troops announced on 22 January 2025 (DoD; from memory).'
     as_of: 2026-11-16
     summary: Proclamation 10886 ordered the Secretary of Defense to deploy forces to the southern border. About 1,500 more active-duty troops were sent in the first week, and in April 2025 strips of the border were placed under military jurisdiction.
     evidence:
@@ -541,6 +545,7 @@ verdicts:
 
   - promise: trump-2024-wisconsin-ships
     verdict: pending
+    review: 'The November 2025 frigate cutback and the Marinette build status (Navy; from memory).'
     as_of: 2026-11-16
     summary: Navy frigates have continued under construction at the Marinette, Wisconsin shipyard. In late 2025 the Navy cut the frigate programme back to the first ships.
     evidence:

@@ -11,6 +11,7 @@ verdicts:
 
   - promise: trump-2016-restore-law-and-order
     verdict: broken
+    review: 'Violent crime rate 2016 397.5 vs 2020 398.5 per 100,000 (FBI; from search snippets, margin 0.3%).'
     as_of: 2026-11-16
     summary: The national violent crime rate was 397.5 per 100,000 in 2016 and 398.5 in 2020, the last full year of the term. It fell in 2017-2019 (to 380.8) and rose again in 2020.
     attempt: initiated
@@ -47,6 +48,7 @@ verdicts:
 
   - promise: trump-2016-end-catch-and-release
     verdict: partly
+    review: 'Family members released in FY2019; about 70,000 returned under MPP (DHS/CBP; from memory).'
     as_of: 2026-11-16
     summary: Release pending hearings was cut back but did not end. From 2019, about 70,000 asylum seekers were returned to Mexico to wait for their hearings, and from March 2020 most people caught at the border were expelled under a public-health order. In FY2019 several hundred thousand family members were still released into the country, and unaccompanied children kept being released to sponsors, as the law requires.
     evidence:
@@ -64,6 +66,7 @@ verdicts:
 
   - promise: trump-2016-illegal-crossings-down
     verdict: kept
+    review: 'Southwest Border Patrol apprehensions and expulsions FY2016 408,870 vs FY2020 400,651 (CBP; from memory).'
     as_of: 2026-11-16
     summary: Border Patrol apprehensions and expulsions at the southwest border were 400,651 in FY2020, the last full fiscal year of the term, against 408,870 in FY2016. In between they peaked at 851,508 in FY2019.
     evidence:
@@ -81,6 +84,7 @@ verdicts:
 
   - promise: trump-2016-secure-border
     verdict: indeterminate
+    review: 'Estimated unlawful entries FY2016 vs FY2020 (DHS Border Security Metrics Report).'
     as_of: 2026-11-16
     summary: DHS publishes an estimate of total unlawful entries (caught plus got-aways) in its Border Security Metrics Reports, but the FY2016 and FY2020 estimates could not be read for this verdict. Apprehensions alone fell slightly (see illegal-crossings-down).
     evidence:
@@ -94,6 +98,7 @@ verdicts:
 
   - promise: trump-2016-visa-overstays
     verdict: indeterminate
+    review: 'Suspected in-country overstay rate FY2016 vs FY2020, same visa classes (DHS Entry/Exit Overstay Reports).'
     as_of: 2026-11-16
     summary: DHS's overstay reports changed their coverage between FY2016 and FY2020, and in FY2020 travel collapsed with the pandemic. The FY2020 report gives a total overstay rate of 1.48%; a comparable FY2016 rate could not be read for this verdict.
     evidence:
@@ -111,6 +116,7 @@ verdicts:
 
   - promise: trump-2016-deport-criminal-aliens
     verdict: partly
+    review: 'ICE removals of people with criminal convictions FY2016-FY2020 (from memory).'
     as_of: 2026-11-16
     summary: ICE removals of people with criminal convictions were about 139,000 in FY2016. They fell to about 128,000 in FY2017, rose above the FY2016 level in FY2018 (145,262) and FY2019 (about 150,000), and fell to about 104,000 in FY2020.
     evidence:
@@ -128,6 +134,7 @@ verdicts:
 
   - promise: trump-2016-speed-up-legal-immigration
     verdict: broken
+    review: 'Naturalization (N-400) median processing time FY2016 about 5.6 vs FY2020 about 8.6 months (USCIS; from memory).'
     as_of: 2026-11-16
     summary: Processing got slower. USCIS's median time for naturalization applications rose from about 5.6 months in FY2016 to about 8.6 months in FY2020, and green-card applications also took longer.
     attempt: none
@@ -413,6 +420,7 @@ verdicts:
 
   - promise: trump-2016-middle-income-tax-relief
     verdict: kept
+    review: 'Average 2018 tax cut for the middle quintile (TPC/JCT; about $900, from memory).'
     as_of: 2026-11-16
     summary: Under the Tax Cuts and Jobs Act, the middle fifth of households paid on average about $900 less federal tax in 2018, a cut of about 1.6% of after-tax income.
     evidence:
@@ -431,6 +439,7 @@ verdicts:
 
   - promise: trump-2016-simplify-taxes
     verdict: kept
+    review: 'Share of returns itemizing, tax years 2017 and 2018 (IRS SOI; about 31% and 11%, from memory).'
     as_of: 2026-11-16
     summary: Both measures fell. With the larger standard deduction, the share of returns that itemize dropped from about 31% (2017) to about 11% (2018). The IRS's estimated average time to file a Form 1040 fell from 13 hours (2016 returns) to 12 hours (2020 returns); the estimated average cost rose from $210 to $230 in nominal terms, about flat after inflation.
     evidence:
@@ -465,6 +474,7 @@ verdicts:
 
   - promise: trump-2016-welfare-to-work
     verdict: kept
+    review: 'SNAP and TANF recipients, January 2017 vs December 2020 (USDA FNS, HHS ACF; partly from memory).'
     as_of: 2026-11-16
     summary: Both caseloads were lower at the end of the term. SNAP served about 42.6 million people in January 2017 and about 41.4 million in November 2020, after a pandemic rise from 37 million. TANF recipients fell from about 2.7 million to about 2.1 million.
     evidence:
@@ -626,6 +636,7 @@ verdicts:
 
   - promise: trump-2016-allies-pay-fair-share
     verdict: kept
+    review: 'NATO Europe and Canada defence spending as % of GDP, 2016 vs 2020; Korea cost-sharing increase (from memory).'
     as_of: 2026-11-16
     summary: Defence spending by NATO's European members and Canada rose from about 1.4% of GDP in 2016 to about 1.8% in 2020. The cost-sharing agreement with South Korea renewed in 2019 raised its payment by 8.2%. The agreement with Japan was not renewed during the term.
     evidence:

@@ -388,6 +388,9 @@ function validateVerdicts(text, byId, err, warn) {
       && toIso(p.deadline.applied) < toIso(v.as_of)) {
       err(where, `pending, but the deadline ${toIso(p.deadline.applied)} has passed`);
     }
+    if (v.review !== undefined && !nonEmpty(v.review)) {
+      err(where, 'review must say what is to be checked');
+    }
     const ev = Array.isArray(v.evidence) ? v.evidence : [];
     if (!ev.length) err(where, 'a verdict needs evidence');
     ev.forEach((e, i) => {

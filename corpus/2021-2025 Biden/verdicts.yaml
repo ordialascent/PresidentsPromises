@@ -106,6 +106,7 @@ verdicts:
 
   - promise: biden-2020-reopening-standards
     verdict: kept
+    review: 'Dates of the OSHA workplace guidance (29 January 2021) and CDC school strategy (12 February 2021) (from memory).'
     as_of: 2026-11-16
     summary: Biden ordered national guidance for both. OSHA issued workplace guidance on 29 January 2021 and a binding standard for health care in June 2021; the CDC issued its operational strategy for reopening K-12 schools on 12 February 2021.
     evidence:
@@ -304,6 +305,7 @@ verdicts:
 
   - promise: biden-2020-public-option
     verdict: broken
+    review: 'The FY2022 budget text on the public option (from memory).'
     as_of: 2026-11-16
     summary: No public insurance option was created. No bill for one passed either chamber, and the administration sent no legislative proposal for one.
     attempt: none
@@ -426,6 +428,7 @@ verdicts:
 
   - promise: biden-2020-student-debt
     verdict: kept
+    review: 'Total federal student debt discharged by January 2025 (about $180 billion, 5 million borrowers; from memory).'
     as_of: 2026-11-16
     summary: The broad cancellation plan was struck down in June 2023, but by January 2025 the administration had cancelled about $180 billion of federal student debt for about 5 million borrowers, mostly through fixes to Public Service Loan Forgiveness, income-driven repayment and disability discharge.
     evidence:
@@ -490,6 +493,7 @@ verdicts:
 
   - promise: biden-2020-restore-daca
     verdict: partly
+    review: 'Whether the court bar on new DACA approvals was still in force in January 2025.'
     as_of: 2026-11-16
     summary: Biden ordered DACA preserved on day one, and a 2022 rule wrote it into regulation. Existing recipients kept renewing their status, but a federal court has barred approval of new applications since July 2021.
     evidence:
@@ -563,6 +567,7 @@ verdicts:
 
   - promise: biden-2020-ev-charging-50k
     verdict: kept
+    review: 'NEVI-funded charging ports open by January 2025 (a few hundred, from memory).'
     as_of: 2026-11-16
     summary: The 2021 infrastructure law set aside $7.5 billion for public EV charging, $5 billion of it for chargers along highway corridors, enough by the administration's estimate for far more than 50,000. By the deadline only a few hundred chargers paid for by the highway programme were open.
     evidence:
@@ -576,6 +581,7 @@ verdicts:
 
   - promise: biden-2020-retrofit-buildings
     verdict: indeterminate
+    review: 'Buildings retrofitted 2021-2024 (IRS and DOE counts).'
     as_of: 2026-11-16
     summary: No record counts retrofitted buildings. The 2021 and 2022 laws funded efficiency upgrades through grants, tax deductions and rebates, but no federal count of buildings upgraded in the term exists.
     evidence:
@@ -589,6 +595,7 @@ verdicts:
 
   - promise: biden-2020-retrofit-homes
     verdict: indeterminate
+    review: 'Homes retrofitted 2021-2024 (IRS 25C claims; DOE weatherization counts).'
     as_of: 2026-11-16
     summary: No record counts homes retrofitted to leak less energy. The Weatherization Assistance Program does a few tens of thousands of homes a year. Millions of households claimed the home-improvement tax credit for 2023, but the credit also covers equipment such as heat pumps, so the claims do not count weatherized homes.
     evidence:
@@ -635,6 +642,7 @@ verdicts:
 
   - promise: biden-2020-state-sentencing-fund
     verdict: broken
+    review: 'Any budget request FY2022-FY2025 for a state sentencing-reform fund (none, from memory).'
     as_of: 2026-11-16
     summary: No $20 billion programme for state sentencing reform was enacted, and no bill for one passed either chamber.
     attempt: none

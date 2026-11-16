@@ -101,6 +101,7 @@ verdicts:
 
   - promise: obama-2012-social-security-strengthen
     verdict: kept
+    review: 'Actuarial balance -2.68% to -2.66%, mostly from the 2015 budget act (SSA Trustees Report 2016; from search snippets).'
     as_of: 2026-11-16
     summary: The Bipartisan Budget Act of 2015 ended the "file and suspend" and restricted-application claiming strategies and moved payroll tax to the disability fund. The 2016 Trustees Report credits it with most of the improvement in the long-range balance, from -2.68% to -2.66% of taxable payroll.
     evidence:
@@ -195,6 +196,7 @@ verdicts:
 
   - promise: obama-2012-strongest-military
     verdict: kept
+    review: 'US vs China military spending 2013-2016 (SIPRI; about 3 to 1, from memory).'
     as_of: 2026-11-16
     summary: The US had the largest military budget in the world in every year of the term, about three times China's, the second largest.
     evidence:
@@ -218,6 +220,7 @@ verdicts:
 
   - promise: obama-2012-pacific-presence
     verdict: kept
+    review: 'Troops in Japan, Korea, Guam and Australia, December 2012 vs December 2016 (DMDC); Darwin rotation about 250 to 1,250 (from memory).'
     as_of: 2026-11-16
     summary: US forces in the Asia-Pacific were kept and added to under the "rebalance". The Marine rotation in Darwin grew from about 250 in 2012 to about 1,250 in 2016, and a 2014 agreement with the Philippines allowed US rotations at Philippine bases.
     evidence:
@@ -311,6 +314,7 @@ verdicts:
 
   - promise: obama-2012-egypt-economy
     verdict: kept
+    review: 'Economic Support Fund aid to Egypt FY2013-FY2016 (about $150-250 million a year; from memory).'
     as_of: 2026-11-16
     summary: US economic aid to Egypt continued every year of the term, at about $150-250 million a year in Economic Support Funds. After the 2013 coup, some military deliveries were held back, but economic aid went on.
     evidence:
