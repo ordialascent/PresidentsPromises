@@ -1,5 +1,12 @@
 import { CORPUS_TERMS } from '../content/promises.generated.js';
-import { QUALITIES, QUALITY_META, methodRows } from '../promises/model.js';
+import {
+  QUALITIES,
+  QUALITY_META,
+  VERDICT_META,
+  VERDICT_STATUSES,
+  methodRows,
+  type VerdictValue,
+} from '../promises/model.js';
 import { EXCLUSIONS, THEMES } from './method.js';
 
 const REPO = 'https://github.com/ordialascent/PresidentsPromises';
@@ -7,6 +14,16 @@ const PROTOCOL_URL = `${REPO}/blob/main/corpus/PROTOCOL.md`;
 const CORPUS_URL = `${REPO}/tree/main/corpus`;
 
 const ROWS = methodRows(CORPUS_TERMS);
+
+/** When each verdict is given (corpus/PROTOCOL.md §6). */
+const VERDICT_RULE: Record<VerdictValue | 'review', string> = {
+  kept: 'The criterion was met by the deadline. For a promise about conduct, it held for the whole term.',
+  partly: 'Met only in part: some of the object, a smaller amount, or only for a limited time. The verdict says which part is missing.',
+  broken: 'Not met by the deadline, or the opposite was done.',
+  indeterminate: 'The record does not settle it: the evidence is missing or conflicts. The verdict says what is missing.',
+  review: 'A provisional verdict whose deciding figure is being confirmed against the official record.',
+  pending: 'The term is still running and the criterion is not yet met. Reviewed when the deadline passes.',
+};
 
 /**
  * How a sentence in a speech becomes a promise on the board, and how that
@@ -22,7 +39,7 @@ export function MethodPage() {
         <a className="method-back" href="#">
           ← All promises
         </a>
-        <h1>How promises are chosen and rated</h1>
+        <h1>How promises are chosen, rated and judged</h1>
         <p className="subtitle">
           Every promise on this site comes from the same kinds of speeches, is found by the same
           written rules and is rated on the same scale, for every president. This page explains
@@ -208,9 +225,60 @@ export function MethodPage() {
         <section>
           <h2>7. Kept or broken</h2>
           <p>
-            No verdicts are published yet. When they are, only high and medium promises will get one,
-            each citing its evidence, and the rules will be added to this page before the first verdict
-            appears. Low promises and ambitions never get a verdict.
+            Every high and medium promise gets one verdict. Low promises and ambitions never get one.
+            The verdict answers one question: <strong>was the criterion met by the deadline?</strong>{' '}
+            It is judged against the criterion shown with the promise, never against what the speaker
+            later said the promise meant.
+          </p>
+          <div className="method-scroll">
+            <table className="method-table">
+              <tbody>
+                {VERDICT_STATUSES.map((s) => (
+                  <tr key={s}>
+                    <th scope="row">{VERDICT_META[s].label}</th>
+                    <td>{VERDICT_RULE[s]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p>The same rules apply to every president:</p>
+          <ul>
+            <li>
+              <strong>What happened, not who is to blame.</strong> A promise that needed Congress and
+              did not pass is broken, even if the president fought for it. How far the president got
+              is shown separately as the <em>attempt</em>: no formal step, initiated (a bill, budget
+              request or order), or passed one chamber.
+            </li>
+            <li>
+              <strong>Judged at the deadline.</strong> Later events do not change a verdict: a law
+              repealed later still counts as kept, and a law passed in a later term does not count.
+            </li>
+            <li>
+              <strong>An action counts once done.</strong> Signing, enacting or ordering is enough; its
+              later effects are not part of the verdict.
+            </li>
+            <li>
+              <strong>An outcome</strong> is judged on the official figure for the last full year or
+              month before the deadline, with the series named.
+            </li>
+            <li>
+              <strong>Partial delivery is “partly”,</strong> never rounded up to kept.
+            </li>
+            <li>
+              A <strong>conditional</strong> promise is judged only if its condition arose.
+            </li>
+          </ul>
+          <p>
+            Every verdict cites its evidence with a link, preferring primary records (the statute, the
+            Federal Register, an agency’s own data); secondary sources are marked. Doubt is marked as
+            for extraction: <em>probable</em> or <em>contested</em>, with the other reading named.
+          </p>
+          <p>
+            Some official sites cannot always be read directly. When a verdict rests on a figure that
+            still has to be confirmed against such a site, it is shown as <strong>under review</strong>,
+            with its provisional reading and the exact figure being checked, and it is left out of the
+            kept share until confirmed.
           </p>
         </section>
 
@@ -270,6 +338,10 @@ export function MethodPage() {
             <li>
               Where the line between medium and low falls is the most judgement-heavy step, and is
               re-checked across all terms in regular audits.
+            </li>
+            <li>
+              Verdicts on a term still running are mostly pending. They are reviewed when their
+              deadline passes.
             </li>
             <li>
               Debates differ from cycle to cycle in format and length; only the final one is used.

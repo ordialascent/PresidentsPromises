@@ -3,9 +3,11 @@ import type {
   CorpusTerm,
   Kind,
   Quality,
+  Verdict,
+  VerdictValue,
 } from '../content/promises.generated.js';
 
-export type { CorpusPromise, CorpusTerm, Kind, Quality };
+export type { CorpusPromise, CorpusTerm, Kind, Quality, Verdict, VerdictValue };
 
 /**
  * The three measurability tiers, in stack order **bottom → top**: the most
@@ -42,56 +44,150 @@ export function termsOfKind(terms: CorpusTerm[], kind: Kind): CorpusTerm[] {
   return kind === 'promise' ? terms : terms.map((t) => ({ ...t, promises: t.ambitions }));
 }
 
-export interface VerdictPlaceholder {
+/**
+ * What the list row and the detail panel say about keeping a record. For a
+ * judged promise that is its verdict; a verdict whose evidence still needs a
+ * human check is shown as "under review"; otherwise it says why there is none.
+ */
+export type VerdictStatus =
+  | VerdictValue
+  | 'review'
+  | 'unjudged'
+  | 'infeasible'
+  | 'ambition';
+
+export interface VerdictView {
+  status: VerdictStatus;
   /** Short status word, shown next to the mark. */
   label: string;
-  /**
-   * The same status as one lower-case word for the list row's tag. Every tier's
-   * tag is grey today because none of them is a reading — when the scoring pass
-   * lands, kept/broken take this slot and the colour becomes a traffic light.
-   */
+  /** The same status as one lower-case word for the list row's tag. */
   tag: string;
   /** One line saying why that status, in the reader's terms. */
   note: string;
-  /** Stand-in for the eventual pass/fail glyph. */
+  /** The glyph in the detail panel's mark. */
   mark: string;
+  /** The verdict record, when there is one (also when under review). */
+  record: Verdict | null;
 }
 
-/**
- * What can be said about keeping this record, until verdicts exist. Ambitions
- * never get one; high and medium promises are checkable, low ones are not.
- */
-export function verdictFor(p: CorpusPromise): VerdictPlaceholder {
-  return p.kind === 'ambition' ? AMBITION_PLACEHOLDER : VERDICT_PLACEHOLDER[p.quality];
+/** Kept, partly, broken: the readings that count towards a track record, in display order. */
+export const SETTLED: VerdictValue[] = ['kept', 'partly', 'broken'];
+
+/** Every verdict status a judged promise can show, in display order. */
+export const VERDICT_STATUSES: (VerdictValue | 'review')[] = [
+  'kept',
+  'partly',
+  'broken',
+  'indeterminate',
+  'review',
+  'pending',
+];
+
+export const VERDICT_META: Record<VerdictValue | 'review', { label: string; mark: string; blurb: string }> = {
+  kept: { label: 'Kept', mark: '✓', blurb: 'the criterion was met by the deadline' },
+  partly: { label: 'Partly kept', mark: '◐', blurb: 'met only in part, or only for a time' },
+  broken: { label: 'Broken', mark: '✗', blurb: 'not met by the deadline, or the opposite was done' },
+  indeterminate: { label: 'Indeterminate', mark: '?', blurb: 'the record does not settle it' },
+  review: { label: 'Under review', mark: '…', blurb: 'a figure is being confirmed against the official record' },
+  pending: { label: 'Pending', mark: '⧗', blurb: 'the deadline has not passed yet' },
+};
+
+/** The tag word for each status: one lower-case word that the label contains. */
+const VERDICT_TAG: Record<VerdictValue | 'review', string> = {
+  kept: 'kept',
+  partly: 'partly',
+  broken: 'broken',
+  indeterminate: 'indeterminate',
+  review: 'review',
+  pending: 'pending',
+};
+
+/** What can be said about keeping this record. */
+export function verdictFor(p: CorpusPromise): VerdictView {
+  if (p.kind === 'ambition') return AMBITION_PLACEHOLDER;
+  const v = p.verdict;
+  if (!v) return VERDICT_PLACEHOLDER[p.quality];
+  const status: VerdictValue | 'review' = v.review ? 'review' : v.verdict;
+  const meta = VERDICT_META[status];
+  return {
+    status,
+    label: meta.label,
+    tag: VERDICT_TAG[status],
+    mark: meta.mark,
+    note: v.summary,
+    record: v,
+  };
 }
 
-const AMBITION_PLACEHOLDER: VerdictPlaceholder = {
+const AMBITION_PLACEHOLDER: VerdictView = {
+  status: 'ambition',
   label: 'No verdict (ambition)',
   tag: 'ambition',
   mark: '–',
   note: 'Said as a wish or an obligation ("we must", "I want"), not as a commitment. Ambitions are recorded and rated like promises, but never get a kept/broken verdict.',
+  record: null,
 };
 
-export const VERDICT_PLACEHOLDER: Record<Quality, VerdictPlaceholder> = {
+export const VERDICT_PLACEHOLDER: Record<Quality, VerdictView> = {
   high: {
-    label: 'Verdict pending',
-    tag: 'pending',
+    status: 'unjudged',
+    label: 'Unjudged',
+    tag: 'unjudged',
     mark: '?',
-    note: 'The words fix what the promise is about, a public record shows what happened, and the words say what counts as kept. That check is coming soon.',
+    note: 'The words fix what the promise is about, a public record shows what happened, and the words say what counts as kept. The check has not been done yet.',
+    record: null,
   },
   medium: {
-    label: 'Verdict pending',
-    tag: 'pending',
+    status: 'unjudged',
+    label: 'Unjudged',
+    tag: 'unjudged',
     mark: '?',
-    note: 'Checkable against a public record once one judgement call is made; the call is stated above. That check is coming soon.',
+    note: 'Checkable against a public record once one judgement call is made; the call is stated above. The check has not been done yet.',
+    record: null,
   },
   low: {
+    status: 'infeasible',
     label: 'Verdict infeasible',
     tag: 'infeasible',
     mark: '–',
     note: 'The words leave open what it is about or where it would show, or would need more than one judgement call to check.',
+    record: null,
   },
 };
+
+/** One term's verdicts, counted by status. */
+export interface TrackRecord {
+  key: string;
+  label: string;
+  termLabel: string;
+  /** High and medium promises: the ones that get a verdict. */
+  verifiable: number;
+  counts: Record<VerdictValue | 'review', number>;
+  /** Kept, partly and broken together: the base for the kept share. */
+  settled: number;
+}
+
+/** Verdict counts per term. Under-review verdicts count apart from their provisional reading. */
+export function trackRecords(terms: CorpusTerm[]): TrackRecord[] {
+  return terms.map((t) => {
+    const counts = Object.fromEntries(VERDICT_STATUSES.map((s) => [s, 0])) as TrackRecord['counts'];
+    let verifiable = 0;
+    for (const p of t.promises) {
+      if (p.quality === 'low') continue;
+      verifiable += 1;
+      if (!p.verdict) continue;
+      counts[p.verdict.review ? 'review' : p.verdict.verdict] += 1;
+    }
+    return {
+      key: t.key,
+      label: t.label,
+      termLabel: t.termLabel,
+      verifiable,
+      counts,
+      settled: SETTLED.reduce((n, s) => n + counts[s], 0),
+    };
+  });
+}
 
 /** One term with its promises rolled up by tier. */
 export interface TermSummary {

@@ -127,6 +127,7 @@ function promise(
       uncertainty: { extraction: 'clear', note: null },
       links: [],
     },
+    verdict: null,
   };
 }
 

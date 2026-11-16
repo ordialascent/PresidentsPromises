@@ -44,11 +44,11 @@ describe('kinds', () => {
     expect(summarize(CORPUS_TERMS).reduce((n, s) => n + s.total, 0)).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('ambitions never wait for a verdict; high and medium promises do', () => {
+  it('ambitions never get a verdict; high and medium promises have one', () => {
     for (const p of all) {
       const v = verdictFor(p);
       if (p.kind === 'ambition') expect(v.tag).toBe('ambition');
-      else if (p.quality !== 'low') expect(v.tag).toBe('pending');
+      else if (p.quality !== 'low') expect(v.record).not.toBeNull();
       else expect(v.tag).toBe('infeasible');
     }
   });

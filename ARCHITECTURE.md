@@ -38,6 +38,11 @@ Kept/broken verdicts on corpus promises (`corpus/*/verdicts.yaml`) are a
 different thing: they are judged by a reader under `corpus/PROTOCOL.md` §6,
 and every one cites its evidence. The invariant above is about the chart
 engine: a reading drawn from a series is always computed from the series.
+`scripts/build-corpus.mjs` attaches each verdict to its promise (`verdict`);
+`verdictFor` turns it into what the list and detail show, and `trackRecords`
+counts them per term for the board's track-record table. A verdict with a
+`review` note is provisional: it shows as "under review" and stays out of the
+kept share until the note is removed.
 
 ## Invariant 2 — the data snapshot is append-only
 
