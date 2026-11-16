@@ -1,0 +1,486 @@
+# Verdicts for Barack Obama's 2009-2013 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2013-01-20
+# unless the promise states another.
+#
+# Complete: high 6/6, medium 26/26.
+
+protocol: 1
+verdicts:
+
+  # ---- economy and taxes ---------------------------------------------------
+
+  - promise: obama-2008-create-jobs
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Nonfarm payroll employment was 134.08 million in January 2009 and 135.07 million in December 2012, the last full month before the deadline, a net gain of about one million jobs after a fall to 129.7 million in early 2010.
+    evidence:
+      - what: All Employees, Total Nonfarm (PAYEMS), seasonally adjusted, from the BLS Current Employment Statistics survey
+        url: https://fred.stlouisfed.org/series/PAYEMS
+        publisher: Federal Reserve Bank of St. Louis (FRED), data from the Bureau of Labor Statistics
+    uncertainty:
+      verdict: probable
+      note: The reading is net growth over the term. Measured from January 2009 alone, the term starts in the middle of a fall, which favours a gain; measured from the pre-recession peak, payrolls were still lower.
+
+  - promise: obama-2008-end-offshoring-tax-breaks
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Deferral of tax on foreign earnings and the deduction for the cost of moving jobs abroad were both still law at the deadline. The administration's budgets proposed removing them; Congress did not act. A 2010 law tightened foreign tax credit rules, but that does not target moving jobs abroad.
+    attempt: initiated
+    evidence:
+      - what: Treasury's FY2013 revenue proposals, "Remove tax deductions for shipping jobs overseas", still a proposal in February 2012
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2013.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2012-02-13
+      - what: Public Law 111-226, Secs. 211-219 (foreign tax credit changes; no change to deferral or relocation deductions)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ226/html/PLAW-111publ226.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-08-10
+    uncertainty:
+      verdict: probable
+      note: A reader who counts the 2010 foreign tax credit changes as removing a tax break for companies operating abroad could call this partly.
+
+  - promise: obama-2008-tax-credit-us-jobs
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2010 HIRE Act exempted employers from their share of Social Security tax for workers hired from the unemployed in 2010 and gave a credit of up to $1,000 for each such worker kept a year.
+    evidence:
+      - what: Hiring Incentives to Restore Employment Act (Pub. L. 111-147), Sec. 101 (payroll tax forgiveness for hiring unemployed workers) and Sec. 102 (retention credit)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ147/html/PLAW-111publ147.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-03-18
+    uncertainty:
+      verdict: contested
+      note: The HIRE Act rewards any new hire of an unemployed worker, not jobs kept from moving abroad. A reader who ties the promise to offshoring would call it broken; the insourcing credit proposed in 2012 was not enacted.
+
+  - promise: obama-2008-capgains-smallbiz
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2010 Small Business Jobs Act excluded 100% of the gain on qualified small business stock acquired from September 2010, and later laws extended the window through 2013. Earlier, the 2009 stimulus had raised the exclusion to 75%.
+    evidence:
+      - what: Small Business Jobs Act of 2010 (Pub. L. 111-240), Sec. 2011 (temporary exclusion of 100 percent of gain on certain small business stock)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ240/html/PLAW-111publ240.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-09-27
+      - what: American Taxpayer Relief Act of 2012 (Pub. L. 112-240), Sec. 324 (100 percent exclusion extended to stock acquired through 2013)
+        url: https://www.govinfo.gov/content/pkg/PLAW-112publ240/html/PLAW-112publ240.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2013-01-02
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Sec. 1241 (75 percent exclusion for 2009 and 2010)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: contested
+      note: The zero rate applied only to stock bought in a temporary window and held five years, so no gain was actually untaxed within the term. A reader applying the "measure that expires" rule would call this partly; it was still in force at the deadline, as the 2001 rate cuts were for Bush.
+
+  - promise: obama-2008-tax-cut-95
+    verdict: partly
+    as_of: 2026-11-16
+    summary: The Making Work Pay credit (up to $400, or $800 for couples, phasing out above $75,000/$150,000) covered 2009 and 2010. A two-point cut in employee payroll tax replaced it for 2011 and 2012 and expired on 31 December 2012, so no such cut was in force at the deadline.
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Sec. 1001 (Making Work Pay credit, tax years 2009 and 2010)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+      - what: Tax Relief, Unemployment Insurance Reauthorization, and Job Creation Act of 2010 (Pub. L. 111-312), Sec. 601 (payroll tax cut for 2011)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ312/html/PLAW-111publ312.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-12-17
+      - what: Middle Class Tax Relief and Job Creation Act of 2012 (Pub. L. 112-96), Sec. 1001 (payroll tax cut extended through 2012)
+        url: https://www.govinfo.gov/content/pkg/PLAW-112publ96/html/PLAW-112publ96.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2012-02-22
+    uncertainty:
+      verdict: contested
+      note: A broad cut was enacted and in force for four years of the term. A reader who counts enactment alone would call this kept; it is partly here because the measures expired before the deadline.
+
+  - promise: obama-2008-no-tax-rise-under-250k
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The 2010 health law raised taxes on some people under $250,000. Single filers earning over $200,000 owe an extra 0.9% Medicare payroll tax, and the income-tax floor for deducting medical costs rose from 7.5% to 10% of income for those under 65. Both were signed in the term, taking effect in 2013.
+    attempt: none
+    evidence:
+      - what: Patient Protection and Affordable Care Act (Pub. L. 111-148), Sec. 9015 as amended by Sec. 10906 (additional hospital insurance tax above $200,000, or $250,000 for joint returns) and Sec. 9013 (medical expense deduction floor raised to 10 percent)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ148/html/PLAW-111publ148.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-03-23
+    uncertainty:
+      verdict: probable
+      note: The $250,000 line in the promise reads as household income, and the extra Medicare tax starts at $200,000 for single filers. A reader who takes the promise to cover only tax rates on joint filers would find the rates were kept for incomes under $250,000.
+
+  - promise: obama-2008-tarp-repaid
+    verdict: broken
+    as_of: 2026-11-16
+    summary: By the end of 2012, Treasury had recovered $387 billion of the $418 billion disbursed under TARP (about 93%). The bank programmes had returned more than they received; the auto, AIG and housing programmes had not.
+    attempt: initiated
+    evidence:
+      - what: TARP Monthly 105(a) Report to Congress, December 2012 (recoveries and disbursements as of 31 December 2012)
+        url: https://home.treasury.gov/system/files/initiatives/financial-stability/reports/Documents/December%202012%20Monthly%20Report%20to%20Congress.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2013-01-10
+    uncertainty:
+      verdict: probable
+      note: The housing programmes were grants never meant to be repaid. Leaving them out, recovery was still short at the deadline, because Treasury's General Motors and Ally stakes were not yet sold.
+
+  - promise: obama-2008-pay-for-every-dime
+    verdict: partly
+    review: 'CBO scores: ARRA $787 billion added to deficits; ACA with reconciliation -$143 billion (from search snippets).'
+    as_of: 2026-11-16
+    summary: The health law was offset (CBO estimated it, with the reconciliation act, would cut deficits by $143 billion over 2010-2019). The 2009 stimulus, which carried the tax cut, clean energy and school funding from the same speech, had no offsets and added an estimated $787 billion to deficits.
+    evidence:
+      - what: CBO cost estimate for the conference agreement on H.R. 1, the American Recovery and Reinvestment Act of 2009
+        url: https://www.cbo.gov/publication/41762
+        publisher: Congressional Budget Office
+        date: 2009-02-13
+      - what: CBO cost estimate for H.R. 3590 and the reconciliation proposal (net deficit reduction of $143 billion over 2010-2019)
+        url: https://www.cbo.gov/publication/25049
+        publisher: Congressional Budget Office
+        date: 2010-03-20
+    uncertainty:
+      verdict: contested
+      note: The stimulus can be read as emergency spending outside "these plans". A reader who reads it that way would call this kept; one who counts the stimulus as the main vehicle for the speech's plans would call it broken.
+
+  - promise: obama-2008-close-loopholes-havens
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2010 HIRE Act enacted FATCA, which requires foreign banks to report accounts held by US taxpayers. A 2010 law also closed several foreign tax credit loopholes used by multinational companies.
+    evidence:
+      - what: Hiring Incentives to Restore Employment Act (Pub. L. 111-147), Title V, Subtitle A (Foreign Account Tax Compliance)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ147/html/PLAW-111publ147.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-03-18
+      - what: Public Law 111-226, Secs. 211-219 (foreign tax credit splitting, covered asset acquisitions and related provisions)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ226/html/PLAW-111publ226.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-08-10
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-budget-line-by-line
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Each budget came with a published list of programmes to end or cut. For the 2010 budget's 121 proposals, Congress approved cuts worth $6.8 billion, nearly 60% of the discretionary savings sought, including ending F-22 fighter production.
+    evidence:
+      - what: Terminations, Reductions, and Savings, Budget of the U.S. Government FY2011 (outcome of the FY2010 proposals)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2011-TRS/pdf/BUDGET-2011-TRS.pdf
+        publisher: Office of Management and Budget (via GovInfo)
+        date: 2010-02-01
+    uncertainty:
+      verdict: probable
+      note: The figures come from the administration's own report. Whether the terminated programmes "no longer work" is its judgement, which the criterion accepts.
+
+  # ---- energy ----------------------------------------------------------------
+
+  - promise: obama-2008-end-mideast-oil
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Imports of crude oil and petroleum products from Persian Gulf countries fell from about 2.4 million barrels a day in 2008 to about 1.6 million in the twelve months to August 2018, still about 15% of all US petroleum imports.
+    attempt: initiated
+    evidence:
+      - what: U.S. imports from Persian Gulf countries of crude oil and petroleum products, monthly (August 2008 2,438; August 2018 1,599 thousand barrels per day)
+        url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MTTIMUSPG2&f=M
+        publisher: U.S. Energy Information Administration
+      - what: U.S. imports of crude oil and petroleum products, monthly (August 2018 10,434 thousand barrels per day)
+        url: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MTTIMUS2&f=M
+        publisher: U.S. Energy Information Administration
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-tap-natural-gas
+    verdict: kept
+    as_of: 2026-11-16
+    summary: US dry natural gas production rose from 20.2 trillion cubic feet in 2008 to 24.0 trillion in 2012.
+    evidence:
+      - what: U.S. dry natural gas production, annual
+        url: https://www.eia.gov/dnav/ng/hist/n9070us2a.htm
+        publisher: U.S. Energy Information Administration
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-clean-coal
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2009 stimulus added $3.4 billion to Fossil Energy Research and Development, which funded carbon capture and clean coal projects.
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Title IV, "Fossil Energy Research and Development", $3,400,000,000
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-auto-retool
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Energy Department lent $5.9 billion to Ford in 2009, and smaller sums to Nissan, Tesla and Fisker, under the Advanced Technology Vehicles Manufacturing programme to build fuel-efficient vehicles in US plants.
+    evidence:
+      - what: Advanced Technology Vehicles Manufacturing loan program overview (loans to Ford, Nissan, Tesla, Fisker)
+        url: https://www.energy.gov/sites/prod/files/2015/02/f19/ATVM_Program_Overview_2015.pdf
+        publisher: U.S. Department of Energy, Loan Programs Office
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-afford-efficient-cars
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2009 stimulus rewrote the plug-in electric vehicle tax credit (up to $7,500 a vehicle).
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Sec. 1141 (credit for new qualified plug-in electric drive motor vehicles)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-renewables-150b
+    verdict: indeterminate
+    review: 'Total federal renewable-energy support per year (EIA subsidy reports FY2010 and FY2013).'
+    as_of: 2026-11-16
+    summary: No official total of federal spending and tax expenditure on renewable energy for 2008-2018 exists. EIA measures it only in sample years (FY2010, FY2013, FY2016 onward); its figures, such as wind and solar support of $12 billion in FY2013 and total renewable support of $7.4 billion in FY2016, suggest a ten-year sum below $150 billion but cannot settle it.
+    evidence:
+      - what: EIA, Total energy subsidies decline since 2010, with changes in support across fuel types (FY2010 and FY2013)
+        url: https://www.eia.gov/todayinenergy/detail.php?id=20352
+        publisher: U.S. Energy Information Administration
+        date: 2015-03-13
+      - what: EIA, Federal Financial Interventions and Subsidies in Energy in Fiscal Years 2016-2022 (renewables $7.4 billion in FY2016)
+        url: https://www.eia.gov/analysis/requests/subsidy/pdf/subsidy.pdf
+        publisher: U.S. Energy Information Administration
+        date: 2023-08-01
+    uncertainty:
+      verdict: contested
+      note: Interpolating between EIA's sample years gives roughly $100-130 billion, which would make this partly. EIA's categories also differ from "investment" in the speech.
+
+  - promise: obama-2008-green-jobs-5m
+    verdict: broken
+    review: '3.4 million green goods and services jobs in 2011 (BLS; from memory).'
+    as_of: 2026-11-16
+    summary: The Energy Department's 2017 count found about 2.2 million jobs in energy efficiency, 374,000 in solar and 102,000 in wind. Total clean-energy employment was well under five million, so five million new jobs were not created. BLS stopped its green-jobs count after 2011.
+    attempt: initiated
+    evidence:
+      - what: U.S. Energy and Employment Report, January 2017 (employment by technology, 2016)
+        url: https://www.energy.gov/sites/prod/files/2017/01/f34/2017%20US%20Energy%20and%20Jobs%20Report_0.pdf
+        publisher: U.S. Department of Energy
+        date: 2017-01-01
+      - what: BLS, Employment in Green Goods and Services, 2011 (3.4 million jobs, all green goods and services)
+        url: https://www.bls.gov/news.release/archives/ggqcew_03192013.htm
+        publisher: Bureau of Labor Statistics
+        date: 2013-03-19
+    uncertainty:
+      verdict: probable
+      note: No official series counts new clean-energy jobs for 2008-2018. The verdict rests on the total being under five million, which holds on every published definition.
+
+  - promise: obama-2008-harness-renewables
+    verdict: kept
+    as_of: 2026-11-16
+    summary: From 2008 to 2012, wind energy rose from 189 to 480 trillion Btu, solar from 61 to 94, and biofuels production from 1,374 to 1,936.
+    evidence:
+      - what: Monthly Energy Review, Table 10.1, Renewable energy production and consumption by source (annual)
+        url: https://www.eia.gov/totalenergy/data/browser/index.php?tbl=T10.01
+        publisher: U.S. Energy Information Administration
+    uncertainty:
+      verdict: clear
+
+  # ---- health ----------------------------------------------------------------
+
+  - promise: obama-2008-lower-premiums
+    verdict: broken
+    review: 'The 2008 MEPS-IC private-sector family premium (about $12,300, derived).'
+    as_of: 2026-11-16
+    summary: The average private-sector family premium rose from about $12,300 in 2008 to $15,473 in 2012.
+    attempt: passed-chamber
+    evidence:
+      - what: MEPS-IC Statistical Brief 435, premiums in 2012 (private-sector family coverage $15,473)
+        url: https://meps.ahrq.gov/mepsweb/data_files/publications/st435/stat435.shtml
+        publisher: Agency for Healthcare Research and Quality
+      - what: MEPS-IC Statistical Brief 365, premiums in 2008 and 2010 (private-sector family premiums up 12.8% from 2008 to $13,871 in 2010)
+        url: https://meps.ahrq.gov/data_files/publications/st365/stat365.pdf
+        publisher: Agency for Healthcare Research and Quality
+        date: 2012-03-01
+    uncertainty:
+      verdict: probable
+      note: The 2008 figure is derived from Brief 365's 2010 figure and growth rate. The health law was enacted, but premiums rose; a reader who takes "lower" to mean slower growth than otherwise would need a counterfactual no record gives.
+
+  - promise: obama-2008-congress-style-coverage
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2010 health law created state exchanges where people without employer coverage can buy private plans, including multi-state plans contracted by the Office of Personnel Management, which runs the federal employees' programme.
+    evidence:
+      - what: Patient Protection and Affordable Care Act (Pub. L. 111-148), Sec. 1311 (exchanges) and Sec. 1334 as added by Sec. 10104 (multi-state plans under OPM)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ148/html/PLAW-111publ148.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-03-23
+    uncertainty:
+      verdict: probable
+      note: The exchanges opened in 2014; the law counts when enacted.
+
+  - promise: obama-2008-preexisting-conditions
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2010 health law bars insurers from excluding pre-existing conditions (for children from 2010, for everyone from 2014) and from pricing by health status.
+    evidence:
+      - what: Patient Protection and Affordable Care Act (Pub. L. 111-148), Sec. 1201 (new PHSA Secs. 2701 and 2704) and Sec. 10103(e) (applies Sec. 2704 to children under 19 from 2010)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ148/html/PLAW-111publ148.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-03-23
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-drug-price-negotiation
+    verdict: broken
+    as_of: 2026-11-16
+    summary: No law let Medicare negotiate drug prices. The House health bill of November 2009 included it, but the enacted law did not; it instead wrote in a 50% manufacturer discount in the Part D coverage gap, agreed with the drug industry.
+    attempt: passed-chamber
+    evidence:
+      - what: Affordable Health Care for America Act (H.R. 3962), as passed by the House, Sec. 1186 (negotiation of lower covered Part D drug prices)
+        url: https://www.govinfo.gov/content/pkg/BILLS-111hr3962eh/html/BILLS-111hr3962eh.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-11-07
+      - what: Patient Protection and Affordable Care Act (Pub. L. 111-148), Sec. 3301 (Medicare coverage gap discount program)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ148/html/PLAW-111publ148.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-03-23
+    uncertainty:
+      verdict: contested
+      note: A reader who counts the industry agreement behind the coverage-gap discount as a negotiation would call this partly.
+
+  - promise: obama-2008-health-it
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The HITECH Act, part of the 2009 stimulus, funded Medicare and Medicaid incentive payments for adopting electronic health records and grants for health IT.
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Division A Title XIII and Division B Title IV (Health Information Technology for Economic and Clinical Health Act)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-small-biz-health-credit
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2010 health law gives small employers a credit of up to 35% of premiums from 2010 and up to 50% from 2014.
+    evidence:
+      - what: Patient Protection and Affordable Care Act (Pub. L. 111-148), Sec. 1421 (credit for employee health insurance expenses of small businesses)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ148/html/PLAW-111publ148.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2010-03-23
+    uncertainty:
+      verdict: probable
+      note: The full 50% applies only to firms with fewer than 10 full-time workers and low average wages, for two years. The law counts when enacted.
+
+  # ---- education and service -------------------------------------------------
+
+  - promise: obama-2008-early-childhood
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Head Start appropriation rose from $7.00 billion in FY2008 to $7.98 billion in FY2012. The 2009 stimulus added $2.1 billion for Head Start and Early Head Start and $2 billion for child care grants.
+    evidence:
+      - what: Consolidated Appropriations Act, 2008 (Pub. L. 110-161), Children and Families Services Programs ($7,000,270,000 for the Head Start Act)
+        url: https://www.govinfo.gov/content/pkg/PLAW-110publ161/html/PLAW-110publ161.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2007-12-26
+      - what: Consolidated Appropriations Act, 2012 (Pub. L. 112-74), Children and Families Services Programs ($7,983,633,000 for the Head Start Act)
+        url: https://www.govinfo.gov/content/pkg/PLAW-112publ74/html/PLAW-112publ74.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2011-12-23
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Title VIII (Head Start, Early Head Start, Child Care and Development Block Grant)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-recruit-teachers
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2009 stimulus gave $100 million to the Teacher Quality Partnership grants, which fund teacher preparation and recruitment, and $200 million to the Teacher Incentive Fund.
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Title VIII, "Higher Education" (part A of title II of the Higher Education Act, $100,000,000) and "Innovation and Improvement"
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: probable
+      note: The funding is modest and no count of recruited teachers is published; "an army" sets no number.
+
+  - promise: obama-2008-service-college
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2009 Serve America Act tied the AmeriCorps education award to the maximum Pell Grant and authorised growth of AmeriCorps to 250,000 positions by 2017.
+    evidence:
+      - what: Edward M. Kennedy Serve America Act (Pub. L. 111-13), Sec. 1404 (education award equal to the maximum Pell Grant) and the positions authorised for AmeriCorps (250,000 for FY2017)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ13/html/PLAW-111publ13.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-04-21
+    uncertainty:
+      verdict: clear
+
+  # ---- infrastructure --------------------------------------------------------
+
+  - promise: obama-2008-roads-bridges
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2009 stimulus provided $27.5 billion for highway infrastructure investment.
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Title XII, "Highway Infrastructure Investment", $27,500,000,000
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-electric-grid
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2009 stimulus provided $4.5 billion to modernise the electric grid, including smart grid grants.
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Title IV, "Electricity Delivery and Energy Reliability", $4,500,000,000
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: clear
+
+  - promise: obama-2008-broadband
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The 2009 stimulus provided $4.7 billion for the Broadband Technology Opportunities Program and $2.5 billion for rural broadband loans and grants.
+    evidence:
+      - what: American Recovery and Reinvestment Act of 2009 (Pub. L. 111-5), Title I ("Distance Learning, Telemedicine, and Broadband Program", $2,500,000,000) and Title II ("Broadband Technology Opportunities Program", $4,700,000,000)
+        url: https://www.govinfo.gov/content/pkg/PLAW-111publ5/html/PLAW-111publ5.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2009-02-17
+    uncertainty:
+      verdict: clear
+
+  # ---- security --------------------------------------------------------------
+
+  - promise: obama-2008-end-iraq-war
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The combat mission ended in August 2010, and the last US troops left Iraq in December 2011.
+    evidence:
+      - what: Remarks on the withdrawal of United States military personnel from Iraq (all troops home by the end of 2011)
+        url: https://www.presidency.ucsb.edu/documents/remarks-the-withdrawal-united-states-military-personnel-from-iraq
+        publisher: The American Presidency Project (UCSB)
+        date: 2011-10-21
+    uncertainty:
+      verdict: probable
+      note: The record shows the withdrawal; whether it was "responsible" is a judgement the criterion leaves out.
+
+  - promise: obama-2008-iran-diplomacy
+    verdict: kept
+    as_of: 2026-11-16
+    summary: US and Iranian negotiators met one-on-one at the P5+1 talks in Geneva in October 2009, and talks continued through 2012. The IAEA's last report before the deadline recorded enrichment but no nuclear weapon.
+    evidence:
+      - what: Background briefing by a senior US official on the P5+1 meeting (45-minute bilateral discussion with Iran's chief negotiator)
+        url: https://www.presidency.ucsb.edu/documents/opening-comments-background-briefing-senior-us-official-todays-p51-meeting
+        publisher: The American Presidency Project (UCSB)
+        date: 2009-10-01
+      - what: IAEA Board report GOV/2012/55, Implementation of the NPT safeguards agreement in Iran
+        url: https://www.iaea.org/sites/default/files/gov2012-55.pdf
+        publisher: International Atomic Energy Agency
+        date: 2012-11-16
+    uncertainty:
+      verdict: probable
+      note: Iran had no weapon at the deadline, but the IAEA could not confirm that all its nuclear activity was peaceful, and the talks had produced no agreement.

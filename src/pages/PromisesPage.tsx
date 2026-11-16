@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { PromisesChart, type Segment } from '../promises/PromisesChart.js';
 import { TopicDonut } from '../promises/TopicDonut.js';
 import { PromiseList, type FilterChip } from '../promises/PromiseList.js';
+import { TrackRecord } from '../promises/TrackRecord.js';
 import { searchPromises } from '../promises/search.js';
 import {
   KIND_META,
@@ -256,7 +257,7 @@ export function PromisesPage() {
           </div>
           <p className="kind-note">
             {kind === 'promise' ? (
-              <>Firm commitments: “we will”, “I’m going to”. Only promises can be kept or broken.</>
+              <>Firm commitments: “we will”, “I’m going to”. Only promises can be kept or broken, and only the high and medium ones get a verdict.</>
             ) : (
               <>
                 Wishes and obligations: “we must”, “I want”. A direction, not a commitment, so
@@ -287,6 +288,16 @@ export function PromisesPage() {
               onSelect={setSegment}
             />
           </div>
+
+          {kind === 'promise' && (
+            <>
+              <hr className="board-rule" />
+              <div className="board-promises">
+                <span className="board-label">Track record</span>
+                <TrackRecord />
+              </div>
+            </>
+          )}
 
           <hr className="board-rule" />
 
@@ -344,7 +355,7 @@ export function PromisesPage() {
                 <em>Criterion:</em> what counts as kept. A <em>call</em> is a stated judgement.
               </p>
               <p>
-                <a href="#method">How promises are chosen and rated</a>
+                <a href="#method">How promises are chosen, rated and judged</a>
               </p>
             </section>
 

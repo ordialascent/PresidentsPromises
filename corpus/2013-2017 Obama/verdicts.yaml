@@ -1,0 +1,353 @@
+# Verdicts for Barack Obama's 2013-2017 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2017-01-20
+# unless the promise states another.
+#
+# Complete: high 6/6, medium 18/18.
+
+protocol: 1
+verdicts:
+
+  # ---- budget and taxes -----------------------------------------------------
+
+  - promise: obama-2012-no-sequester
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The across-the-board cuts took effect on 1 March 2013, when the President ordered the FY2013 sequestration ($85bn). The 2013 and 2015 budget deals later raised the caps for FY2014-2017, but did not stop the 2013 cuts or the cuts to mandatory spending.
+    attempt: passed-chamber
+    evidence:
+      - what: OMB Report to the Congress on the Joint Committee Sequestration for Fiscal Year 2013 (sequestration ordered 1 March 2013)
+        url: https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/legislative_reports/fy13ombjcsequestrationreport.pdf
+        publisher: Office of Management and Budget
+        date: 2013-03-01
+      - what: Bipartisan Budget Act of 2013 (Pub. L. 113-67), Title I (partial relief from the caps for FY2014 and FY2015)
+        url: https://www.govinfo.gov/content/pkg/PLAW-113publ67/html/PLAW-113publ67.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2013-12-26
+    uncertainty:
+      verdict: clear
+      note: The attempt is recorded as passed-chamber because enacted laws reduced and delayed the cuts; none prevented them.
+
+  - promise: obama-2012-end-oil-subsidies
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The oil and gas tax preferences listed in his budgets (intangible drilling costs, percentage depletion, the manufacturing deduction for oil and gas, and others) were still law at the deadline. Every budget of the term proposed repealing them; Congress did not act.
+    attempt: initiated
+    evidence:
+      - what: Treasury's FY2017 revenue proposals, "Eliminate fossil fuel tax preferences", still a proposal in February 2016
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2017.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2016-02-09
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-no-deficit-tax-cuts-wealthy
+    verdict: kept
+    as_of: 2026-11-16
+    summary: No law signed in the term cut income-tax rates for the highest earners. The largest tax law of the term, the PATH Act of December 2015, made business credits and expensing permanent without offsets; it did not cut individual rates.
+    evidence:
+      - what: Consolidated Appropriations Act, 2016 (Pub. L. 114-113), Division Q, Protecting Americans from Tax Hikes Act of 2015
+        url: https://www.govinfo.gov/content/pkg/PLAW-114publ113/html/PLAW-114publ113.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2015-12-18
+    uncertainty:
+      verdict: contested
+      note: The PATH Act's unfunded business tax breaks flow largely to owners of capital. A reader who counts them as tax cuts for the wealthy would call this broken. The American Taxpayer Relief Act, which made the estate-tax exemption permanent at $5 million, was signed on 2 January 2013, before the term began.
+
+  # ---- health and retirement --------------------------------------------------
+
+  - promise: obama-2012-medicare-no-voucher
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Medicare stayed a defined-benefit programme. The House passed budget plans that would have turned it into premium support from 2024, but none became law.
+    evidence:
+      - what: House budget resolution for FY2014 (H.Con.Res. 25, as passed by the House), which assumed premium support; it was never agreed by the Senate
+        url: https://www.govinfo.gov/content/pkg/BILLS-113hconres25eh/html/BILLS-113hconres25eh.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2013-03-21
+      - what: 2016 Annual Report of the Medicare Boards of Trustees (programme structure and financing under current law)
+        url: https://www.cms.gov/research-statistics-data-and-systems/statistics-trends-and-reports/reportstrustfunds/downloads/tr2016.pdf
+        publisher: Centers for Medicare & Medicaid Services
+        date: 2016-06-22
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-medicare-strengthen
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Trustees projected the Hospital Insurance trust fund would be depleted in 2024 in their 2012 report, the last before the term, and in 2028 in their 2016 report, the last before the deadline.
+    evidence:
+      - what: 2012 Annual Report of the Medicare Boards of Trustees (HI fund exhausted in 2024)
+        url: https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/ReportsTrustFunds/Downloads/TR2012.pdf
+        publisher: Centers for Medicare & Medicaid Services
+        date: 2012-04-23
+      - what: 2016 Annual Report of the Medicare Boards of Trustees (HI depletion date 2028)
+        url: https://www.cms.gov/research-statistics-data-and-systems/statistics-trends-and-reports/reportstrustfunds/downloads/tr2016.pdf
+        publisher: Centers for Medicare & Medicaid Services
+        date: 2016-06-22
+    uncertainty:
+      verdict: probable
+      note: The depletion date also moves with the economy and with projection methods, not only with policy. The proxy measures the result, as the criterion asks, not its cause.
+
+  - promise: obama-2012-medicare-seniors-costs
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The term's Medicare changes that raise what beneficiaries pay were small. The 2015 MACRA law raised income-related Part B and D premiums for some higher-income beneficiaries from 2018 and barred new Medigap plans from covering the Part B deductible from 2020. Neither raises a typical beneficiary's costs by $1,000 a year.
+    evidence:
+      - what: Medicare Access and CHIP Reauthorization Act of 2015 (Pub. L. 114-10), Sec. 401 (Medigap first-dollar coverage) and Sec. 402 (income-related premiums)
+        url: https://www.govinfo.gov/content/pkg/PLAW-114publ10/html/PLAW-114publ10.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2015-04-16
+    uncertainty:
+      verdict: probable
+      note: Sec. 402 raises premiums by close to $1,000 a year for beneficiaries moved into a higher income bracket, a small minority well above the median.
+
+  - promise: obama-2012-social-security-strengthen
+    verdict: kept
+    review: 'Actuarial balance -2.68% to -2.66%, mostly from the 2015 budget act (SSA Trustees Report 2016; from search snippets).'
+    as_of: 2026-11-16
+    summary: The Bipartisan Budget Act of 2015 ended the "file and suspend" and restricted-application claiming strategies and moved payroll tax to the disability fund. The 2016 Trustees Report credits it with most of the improvement in the long-range balance, from -2.68% to -2.66% of taxable payroll.
+    evidence:
+      - what: Bipartisan Budget Act of 2015 (Pub. L. 114-74), Sec. 831 (closure of unintended loopholes) and Sec. 833 (reallocation of payroll tax rate)
+        url: https://www.govinfo.gov/content/pkg/PLAW-114publ74/html/PLAW-114publ74.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2015-11-02
+      - what: 2016 OASDI Trustees Report, Sec. IV.B (long-range estimates and reasons for change)
+        url: https://www.ssa.gov/OACT/TR/2016/IV_B_LRest.html
+        publisher: Social Security Administration
+        date: 2016-06-22
+    uncertainty:
+      verdict: probable
+      note: The improvement is very small, and the size of the 2015 Act's effect comes from the Chief Actuary's estimates and search excerpts, as ssa.gov could not be read directly.
+
+  - promise: obama-2012-social-security-no-privatise
+    verdict: kept
+    as_of: 2026-11-16
+    summary: No law in the term diverted Social Security payroll taxes into private accounts. The only Social Security law of the term, the 2015 budget act, changed claiming rules and the split between the trust funds.
+    evidence:
+      - what: Bipartisan Budget Act of 2015 (Pub. L. 114-74), Title VIII (the term's Social Security changes; no personal accounts)
+        url: https://www.govinfo.gov/content/pkg/PLAW-114publ74/html/PLAW-114publ74.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2015-11-02
+    uncertainty: { verdict: clear }
+
+  # ---- energy, environment and infrastructure ---------------------------------
+
+  - promise: obama-2012-open-more-acres
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The US-Mexico Transboundary Hydrocarbons Agreement, approved by law in December 2013, made about 1.5 million acres along the maritime boundary available for leasing, and BOEM offered those blocks in Western Gulf Sale 238 in August 2014. The administration also withdrew Arctic and Atlantic areas from leasing late in the term.
+    evidence:
+      - what: Bipartisan Budget Act of 2013 (Pub. L. 113-67), Title III (approval of the US-Mexico transboundary hydrocarbons agreement)
+        url: https://www.govinfo.gov/content/pkg/PLAW-113publ67/html/PLAW-113publ67.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2013-12-26
+      - what: BOEM final notice of Western Gulf of Mexico Sale 238, including blocks in the US-Mexico boundary area
+        url: https://www.govinfo.gov/content/pkg/FR-2014-07-18/pdf/2014-16962.pdf
+        publisher: Federal Register (GovInfo)
+        date: 2014-07-18
+      - what: Interior announcement of the first leases subject to the agreement (nearly 1.5 million acres opened)
+        url: https://www.doi.gov/news/pressreleases/secretary-jewell-announces-award-of-first-oil-and-gas-leases-in-gulf-of-mexico-subject-to-us-mexico-transboundary-hydrocarbons-agreement
+        publisher: U.S. Department of the Interior
+        date: 2014-05-30
+    uncertainty:
+      verdict: contested
+      note: The criterion asks only whether new acreage was offered. A reader who weighs the net change would call this broken, because the Arctic and Atlantic withdrawals of 2015-2016 closed far more acreage than the boundary area opened.
+
+  - promise: obama-2012-reduce-carbon
+    verdict: kept
+    as_of: 2026-11-16
+    summary: US energy-related CO2 emissions were 5,236 million metric tons in 2012, the last full year before the term, and 5,169 million in 2016, the last full year before the deadline. They rose to 5,359 million in 2013 before falling.
+    evidence:
+      - what: Monthly Energy Review, Table 11.1, Carbon Dioxide Emissions From Energy Consumption by Source (annual totals, series TETCEUS)
+        url: https://www.eia.gov/totalenergy/data/browser/?tbl=T11.01
+        publisher: U.S. Energy Information Administration
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-war-savings-infrastructure
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Federal grants for highways and airports, which carry most federal road, bridge and airport investment, were $46.9bn in FY2012 and $46.4bn in FY2016, and lower after inflation. The FAST Act of December 2015 raised highway funding, but outlays rose only after the term. Federal school construction had no regular programme.
+    attempt: passed-chamber
+    evidence:
+      - what: OMB Historical Tables, Table 9.6, Composition of Outlays for Grants for Major Public Physical Capital Investment (highways, airports)
+        url: https://trumpwhitehouse.archives.gov/wp-content/uploads/2020/02/hist09z6_fy21.xlsx
+        publisher: Office of Management and Budget
+        date: 2020-02-10
+      - what: Fixing America's Surface Transportation Act (Pub. L. 114-94)
+        url: https://www.govinfo.gov/content/pkg/PLAW-114publ94/html/PLAW-114publ94.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2015-12-04
+    uncertainty:
+      verdict: contested
+      note: Total transportation grants, including transit, rose from $59.7bn to $62.6bn in nominal terms. A reader who counts transit, or the FAST Act's higher authorisations, would call this kept. The attempt is passed-chamber because an enacted law raised funding without raising outlays within the term.
+
+  # ---- defence and security ---------------------------------------------------
+
+  - promise: obama-2012-afghanistan-end
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The US combat mission in Afghanistan ended in December 2014. The President announced its end on 28 December, and NATO handed security to Afghan forces. About 10,800 US troops stayed for training and counter-terrorism.
+    evidence:
+      - what: Statement by the President on the end of the combat mission in Afghanistan
+        url: https://obamawhitehouse.archives.gov/the-press-office/2014/12/28/statement-president-end-combat-mission-afghanistan
+        publisher: The White House (archived)
+        date: 2014-12-28
+    uncertainty:
+      verdict: probable
+      note: The reading is the end of the combat mission. A reader who takes "the war will be over" to mean US forces stop fighting would call this broken, since US troops kept conducting combat operations after 2014.
+
+  - promise: obama-2012-strongest-military
+    verdict: kept
+    review: 'US vs China military spending 2013-2016 (SIPRI; about 3 to 1, from memory).'
+    as_of: 2026-11-16
+    summary: The US had the largest military budget in the world in every year of the term, about three times China's, the second largest.
+    evidence:
+      - what: SIPRI Military Expenditure Database (country spending 2013-2016)
+        url: https://www.sipri.org/databases/milex
+        publisher: Stockholm International Peace Research Institute
+    uncertainty:
+      verdict: probable
+      note: Spending is a proxy for strength; no official ranking of military power exists.
+
+  - promise: obama-2012-israel-exercise
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Austere Challenge 12, the largest US-Israel exercise to that date, with about 3,500 US personnel, began on 21 October 2012 and ran into November.
+    evidence:
+      - what: US European Command, "Exercise Austere Challenge 2012 concludes" (archived)
+        url: https://webarchive.library.unt.edu/web/20161028155539/http://www.eucom.mil/media-library/article/24440/exercise-austere-challenge-2012-concludes
+        publisher: U.S. European Command
+        date: 2012-11-13
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-pacific-presence
+    verdict: kept
+    review: 'Troops in Japan, Korea, Guam and Australia, December 2012 vs December 2016 (DMDC); Darwin rotation about 250 to 1,250 (from memory).'
+    as_of: 2026-11-16
+    summary: US forces in the Asia-Pacific were kept and added to under the "rebalance". The Marine rotation in Darwin grew from about 250 in 2012 to about 1,250 in 2016, and a 2014 agreement with the Philippines allowed US rotations at Philippine bases.
+    evidence:
+      - what: Defense Manpower Data Center, military personnel by duty location (quarterly reports)
+        url: https://www.dmdc.osd.mil/appj/dwp/dwp_reports.jsp
+        publisher: U.S. Department of Defense
+    uncertainty:
+      verdict: probable
+      note: The Darwin and Philippines figures come from memory and are not in the cited reports; troop totals by country were not compared for 2012 and 2016.
+
+  - promise: obama-2012-benghazi-justice
+    verdict: kept
+    as_of: 2026-11-16
+    summary: US forces captured Ahmed Abu Khatallah in Libya on 15 June 2014. He was charged in federal court and indicted on 26 June 2014; he was later convicted.
+    evidence:
+      - what: Justice Department, "Libyan national charged with federal offenses" (capture and charges)
+        url: https://www.justice.gov/opa/pr/2014/June/14-nsd-641.html
+        publisher: U.S. Department of Justice
+        date: 2014-06-17
+      - what: Justice Department, Ahmed Abu Khatallah indicted
+        url: https://www.justice.gov/archives/opa/pr/ahmed-abu-khatallah-indicted-terrorist-conspiracy-stemming-september-2012-attack-benghazi
+        publisher: U.S. Department of Justice
+    uncertainty: { verdict: clear }
+
+  # ---- foreign policy and trade -----------------------------------------------
+
+  - promise: obama-2012-iran-no-nuke
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Iran did not acquire a nuclear weapon during the term. In January 2016 the IAEA verified that Iran had cut its enrichment capacity and stockpile under the nuclear agreement.
+    evidence:
+      - what: IAEA report GOV/INF/2016/1 (verification of Iran's steps on Implementation Day)
+        url: https://www.iaea.org/sites/default/files/gov-inf-2016-1.pdf
+        publisher: International Atomic Energy Agency
+        date: 2016-01-16
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-iran-pressure
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The November 2013 interim deal eased some sanctions from January 2014, worth about $7bn, in exchange for limited first steps, before Iran had met the obligations the UN Security Council set. Full relief under the 2015 agreement came only after IAEA verification in January 2016.
+    attempt: none
+    evidence:
+      - what: White House fact sheet on the first-step understandings (Joint Plan of Action) and the limited sanctions relief
+        url: https://obamawhitehouse.archives.gov/the-press-office/2013/11/23/fact-sheet-first-step-understandings-regarding-islamic-republic-iran-s-n
+        publisher: The White House (archived)
+        date: 2013-11-23
+      - what: IAEA report GOV/INF/2016/1 (verification before Implementation Day relief)
+        url: https://www.iaea.org/sites/default/files/gov-inf-2016-1.pdf
+        publisher: International Atomic Energy Agency
+        date: 2016-01-16
+    uncertainty:
+      verdict: contested
+      note: The interim relief came only after the IAEA confirmed Iran's first steps. A reader who counts that check as the "clear evidence" required would call this kept. The attempt is none because the President eased the sanctions himself.
+
+  - promise: obama-2012-iran-deal-terms
+    verdict: partly
+    as_of: 2026-11-16
+    summary: The 2015 agreement cut Iran's enrichment, stockpile and plutonium route and set inspections, but let Iran keep enriching uranium at 3.67%, and its main limits expire after 10 to 15 years.
+    evidence:
+      - what: Joint Comprehensive Plan of Action, full text
+        url: https://2009-2017.state.gov/documents/organization/245317.pdf
+        publisher: U.S. Department of State (archived)
+        date: 2015-07-14
+    uncertainty:
+      verdict: contested
+      note: A reader who takes the administration's claim that every pathway to a bomb was cut would call this kept; a reader who takes "end their nuclear program" literally would call it broken. It is partly here because the limits are temporary.
+
+  - promise: obama-2012-syria-help-opposition
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The US gave non-lethal aid to the Syrian opposition throughout the term, and from 2014 law authorised training and equipping vetted Syrian opposition forces.
+    evidence:
+      - what: Carl Levin and Howard P. "Buck" McKeon National Defense Authorization Act for FY2015 (Pub. L. 113-291), Sec. 1209 (assistance to the vetted Syrian opposition)
+        url: https://www.govinfo.gov/content/pkg/PLAW-113publ291/html/PLAW-113publ291.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2014-12-19
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-syria-transition
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Bashar al-Asad was still in power at the deadline. The US backed UN Security Council Resolution 2254 (December 2015) on a political transition, but the talks it launched produced none.
+    attempt: initiated
+    evidence:
+      - what: UN Security Council Resolution 2254 adopted unanimously (road map for a Syrian political transition)
+        url: https://press.un.org/en/2015/sc12171.doc.htm
+        publisher: United Nations
+        date: 2015-12-18
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-egypt-economy
+    verdict: kept
+    review: 'Economic Support Fund aid to Egypt FY2013-FY2016 (about $150-250 million a year; from memory).'
+    as_of: 2026-11-16
+    summary: US economic aid to Egypt continued every year of the term, at about $150-250 million a year in Economic Support Funds. After the 2013 coup, some military deliveries were held back, but economic aid went on.
+    evidence:
+      - what: 'Congressional Research Service, "Egypt: Background and U.S. Relations" (RL33003), aid tables'
+        url: https://www.everycrsreport.com/reports/RL33003.html
+        publisher: Congressional Research Service (via EveryCRSReport)
+        secondary: true
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-press-china
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The US filed new WTO cases against China throughout the term, including export subsidies (February 2015), export duties on raw materials (July 2016), farm subsidies (September 2016) and grain import quotas (December 2016).
+    evidence:
+      - what: WTO dispute DS489, China — Demonstration Bases (requested by the United States)
+        url: https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds489_e.htm
+        publisher: World Trade Organization
+        date: 2015-02-11
+      - what: WTO dispute DS511, China — Domestic Support for Agricultural Producers (requested by the United States)
+        url: https://www.wto.org/english/tratop_e/dispu_e/cases_e/ds511_e.htm
+        publisher: World Trade Organization
+        date: 2016-09-13
+    uncertainty: { verdict: clear }
+
+  - promise: obama-2012-asia-trade
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Trans-Pacific Partnership with eleven Pacific countries, not including China, was concluded in October 2015 and signed in February 2016. Congress never approved it.
+    evidence:
+      - what: USTR summary of the Trans-Pacific Partnership (conclusion of negotiations)
+        url: https://ustr.gov/about-us/policy-offices/press-office/press-releases/2015/october/summary-trans-pacific-partnership
+        publisher: Office of the U.S. Trade Representative
+        date: 2015-10-04
+    uncertainty:
+      verdict: probable
+      note: The criterion is concluding an agreement, which happened. A reader who requires it to take effect would call this broken.

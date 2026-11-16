@@ -170,7 +170,7 @@ export function PromiseList({
           </button>
         )}
         <a className="pl-method" href="#method">
-          How promises are chosen and rated
+          How promises are chosen, rated and judged
         </a>
       </div>
 
@@ -217,10 +217,9 @@ export function PromiseList({
                   </span>
 
                   <span className="pl-row-foot">
-                    {/* The reading leads the row, once there is one. Grey for
-                        every tier today because none of these is a verdict —
-                        only a statement of whether one can be reached. */}
-                    <span className="pl-verdict" data-q={p.quality}>
+                    {/* The reading leads the row: the verdict, coloured, or
+                        in grey why there is none. */}
+                    <span className="pl-verdict" data-q={p.quality} data-v={verdictFor(p).status}>
                       {verdictFor(p).tag}
                     </span>
                     {hit.quoteOnly && <span className="pl-row-n">matched in the quote</span>}

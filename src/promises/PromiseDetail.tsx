@@ -1,5 +1,5 @@
 import { CORPUS_TERMS } from '../content/promises.generated.js';
-import { QUALITY_META, verdictFor, type CorpusPromise } from './model.js';
+import { QUALITY_META, VERDICT_META, verdictFor, type CorpusPromise, type Verdict } from './model.js';
 
 /** Every record by id, so a link can name what it points at. */
 const BY_ID = new Map(
@@ -64,6 +64,59 @@ function ProtocolFacts({ promise }: { promise: CorpusPromise }) {
   );
 }
 
+const ATTEMPT_LABEL: Record<string, string> = {
+  none: 'No formal step on the record',
+  initiated: 'Initiated: a bill, budget request, order or other formal step',
+  'passed-chamber': 'Passed one chamber of Congress',
+};
+
+/** The verdict's record: how far it got, how sure it is, and the evidence it cites. */
+function VerdictFacts({ record, underReview }: { record: Verdict; underReview: boolean }) {
+  return (
+    <>
+      {underReview && (
+        <p className="pc-verdict-review">
+          <strong>Provisional reading: {VERDICT_META[record.verdict].label.toLowerCase()}.</strong>{' '}
+          Being confirmed against the official record: {record.review}
+        </p>
+      )}
+      <dl className="pc-facts">
+        {record.attempt && (
+          <div className="pc-facts-row">
+            <dt>Attempt</dt>
+            <dd>{ATTEMPT_LABEL[record.attempt] ?? record.attempt}</dd>
+          </div>
+        )}
+        <div className="pc-facts-row">
+          <dt>Certainty</dt>
+          <dd>
+            {record.uncertainty.verdict}
+            {record.uncertainty.note ? `: ${record.uncertainty.note}` : ''}
+          </dd>
+        </div>
+        <div className="pc-facts-row">
+          <dt>Checked</dt>
+          <dd>{record.asOf}</dd>
+        </div>
+      </dl>
+      <ol className="pc-evidence">
+        {record.evidence.map((e, i) => (
+          <li key={i}>
+            <a href={e.url} target="_blank" rel="noreferrer">
+              {e.what} ↗
+            </a>
+            <span className="pc-evidence-src">
+              {e.publisher}
+              {e.date ? `, ${e.date}` : ''}
+              {e.secondary ? ' · secondary source' : ''}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </>
+  );
+}
+
 /**
  * One promise opened up: every time it was made, quoted and cited, and what can
  * (or cannot) be said about keeping it.
@@ -125,20 +178,21 @@ export function PromiseDetail({
       <hr className="pc-detail-rule" />
       <ProtocolFacts promise={promise} />
 
-      {/* Kept-or-broken lives here once the scoring pass exists; for now the
-          tier decides whether there is anything to wait for. */}
       <hr className="pc-detail-rule" />
-      <div className="pc-verdict" data-q={promise.quality}>
+      <div className="pc-verdict" data-q={promise.quality} data-v={verdict.status}>
         <div className="pc-verdict-head">
-          <span className="pc-verdict-mark" data-q={promise.quality} aria-hidden="true">
+          <span className="pc-verdict-mark" data-q={promise.quality} data-v={verdict.status} aria-hidden="true">
             {verdict.mark}
           </span>
           <span className="pc-verdict-label">{verdict.label}</span>
         </div>
         <p className="pc-verdict-note">{verdict.note}</p>
+        {verdict.record && (
+          <VerdictFacts record={verdict.record} underReview={verdict.status === 'review'} />
+        )}
       </div>
       <a className="pc-detail-method" href="#method">
-        How this was extracted and rated →
+        How this was extracted, rated and judged →
       </a>
     </div>
   );

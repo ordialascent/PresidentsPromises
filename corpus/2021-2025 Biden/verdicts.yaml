@@ -1,0 +1,693 @@
+# Verdicts for Joe Biden's 2021-2025 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2025-01-20
+# unless the promise states another.
+#
+# Complete: high 11/11, medium 30/30.
+
+protocol: 1
+verdicts:
+
+  # ---- pandemic ------------------------------------------------------------------
+
+  - promise: biden-2020-covid-strategy
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 20 January 2021 Biden signed orders that set up the federal COVID-19 response and required masks on federal property. The 200-page national strategy was published the next day, with further orders that week.
+    evidence:
+      - what: Executive Order 13987, Organizing and Mobilizing the United States Government to Provide a Unified and Effective Response to Combat COVID-19
+        url: https://www.federalregister.gov/executive-order/13987
+        publisher: Federal Register
+        date: 2021-01-20
+      - what: Executive Order 13991, Protecting the Federal Workforce and Requiring Mask-Wearing
+        url: https://www.federalregister.gov/executive-order/13991
+        publisher: Federal Register
+        date: 2021-01-20
+      - what: National Strategy for the COVID-19 Response and Pandemic Preparedness
+        url: https://bidenwhitehouse.archives.gov/wp-content/uploads/2021/01/National-Strategy-for-the-COVID-19-Response-and-Pandemic-Preparedness.pdf
+        publisher: The White House
+        date: 2021-01-21
+    uncertainty:
+      verdict: contested
+      note: The strategy document itself came out on day two. A reader who requires the full strategy on day one would call this partly.
+
+  - promise: biden-2020-control-virus
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Weekly COVID-19 deaths were about 24,000-26,000 in January 2021 and about 500-700 in December 2024. Yearly deaths fell from 463,267 in 2021 to 47,540 in 2024. In between, the Omicron wave of January 2022 brought weekly deaths back to about 21,000.
+    evidence:
+      - what: CDC NCHS, Provisional COVID-19 Death Counts by Week Ending Date and State (United States, by week and by year)
+        url: https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab
+        publisher: Centers for Disease Control and Prevention
+        date: 2026-11-16
+    uncertainty:
+      verdict: contested
+      note: The fall held for the last two years of the term, but not for the whole term. A reader who reads "stay well below" as every month of the term would call this partly, because of the Delta and Omicron waves.
+
+  - promise: biden-2020-no-national-lockdown
+    verdict: kept
+    as_of: 2026-11-16
+    summary: No nationwide stay-at-home or shutdown order was issued in the term. The federal measures were mask and vaccination requirements for federal property, transport and some employers.
+    evidence:
+      - what: Federal Register, executive orders signed by Joe Biden, 2021-2025 (none orders a national shutdown)
+        url: https://www.federalregister.gov/presidential-documents/executive-orders/joe-biden/2021
+        publisher: Federal Register
+        date: 2025-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-end-pandemic
+    verdict: kept
+    as_of: 2026-11-16
+    summary: A law ended the national COVID-19 emergency on 10 April 2023, and the public health emergency expired on 11 May 2023.
+    evidence:
+      - what: Public Law 118-3, terminating the national emergency declared on 13 March 2020
+        url: https://www.govinfo.gov/app/details/PLAW-118publ3
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2023-04-10
+      - what: CDC NCHS weekly COVID-19 deaths (about 500-700 a week in December 2024)
+        url: https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab
+        publisher: Centers for Disease Control and Prevention
+        date: 2026-11-16
+    uncertainty:
+      verdict: probable
+      note: The promise's reading is the end of the emergency. A reader who counts the 47,540 COVID-19 deaths of 2024 as a pandemic not yet ended would call this broken.
+
+  - promise: biden-2020-rapid-tests
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The American Rescue Plan funded testing, and from January 2022 the government mailed free rapid at-home tests to every household that ordered them through COVIDtests.gov, in several rounds through 2024.
+    evidence:
+      - what: American Rescue Plan Act of 2021 (Public Law 117-2), sec. 2401 (COVID-19 testing, contact tracing and mitigation)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ2
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-03-11
+      - what: COVID.gov, free at-home COVID-19 tests
+        url: https://www.covid.gov/tests
+        publisher: U.S. Department of Health and Human Services
+        date: 2024-09-30
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-domestic-ppe
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The country still imported most of its masks, gloves and gowns at the end of the term. A 2021 law requires DHS to buy domestic PPE, and in May 2024 tariffs on Chinese masks, gloves and syringes were raised because of that dependence, effective mostly from 2025-2026.
+    attempt: passed-chamber
+    evidence:
+      - what: Infrastructure Investment and Jobs Act (Public Law 117-58), sec. 70953 (DHS to buy personal protective equipment made in the United States)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ58
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-11-15
+      - what: USTR, Section 301 four-year review, increases on medical gloves, face masks, syringes and needles
+        url: https://www.ustr.gov/about-us/policy-offices/press-office/press-releases/2024/may/us-trade-representative-katherine-tai-take-further-action-china-tariffs-after-releasing-statutory
+        publisher: Office of the U.S. Trade Representative
+        date: 2024-05-14
+    uncertainty:
+      verdict: contested
+      note: No official series gives the domestic share of PPE. A reader could call this indeterminate for lack of a count, or partly for the purchase rule.
+
+  - promise: biden-2020-reopening-standards
+    verdict: kept
+    review: 'Dates of the OSHA workplace guidance (29 January 2021) and CDC school strategy (12 February 2021) (from memory).'
+    as_of: 2026-11-16
+    summary: Biden ordered national guidance for both. OSHA issued workplace guidance on 29 January 2021 and a binding standard for health care in June 2021; the CDC issued its operational strategy for reopening K-12 schools on 12 February 2021.
+    evidence:
+      - what: Executive Order 13999, Protecting Worker Health and Safety (OSHA guidance within two weeks)
+        url: https://www.federalregister.gov/executive-order/13999
+        publisher: Federal Register
+        date: 2021-01-21
+      - what: Executive Order 14000, Supporting the Reopening and Continuing Operation of Schools and Early Childhood Education Providers
+        url: https://www.federalregister.gov/executive-order/14000
+        publisher: Federal Register
+        date: 2021-01-21
+      - what: OSHA, COVID-19 Emergency Temporary Standard for health care, 86 FR 32376
+        url: https://www.federalregister.gov/documents/2021/06/21/2021-12428/occupational-exposure-to-covid-19-emergency-temporary-standard
+        publisher: Federal Register
+        date: 2021-06-21
+    uncertainty:
+      verdict: probable
+      note: The dates of the OSHA guidance and the CDC school strategy are from memory (the agency pages block scripts).
+
+  - promise: biden-2020-schools-resources
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The American Rescue Plan gave schools about $122 billion through the Elementary and Secondary School Emergency Relief fund, to reopen safely and stay open.
+    evidence:
+      - what: American Rescue Plan Act of 2021 (Public Law 117-2), sec. 2001 (ARP ESSER)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ2
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-03-11
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-mask-mandate
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On his first two days Biden required masks on federal property and in interstate transport; the CDC's order covered planes, trains, buses and transit hubs nationwide from 1 February 2021 until a court struck it down in April 2022.
+    evidence:
+      - what: Executive Order 13991, Protecting the Federal Workforce and Requiring Mask-Wearing
+        url: https://www.federalregister.gov/executive-order/13991
+        publisher: Federal Register
+        date: 2021-01-20
+      - what: Executive Order 13998, Promoting COVID-19 Safety in Domestic and International Travel
+        url: https://www.federalregister.gov/executive-order/13998
+        publisher: Federal Register
+        date: 2021-01-21
+      - what: CDC order, Requirement for Persons To Wear Masks While on Conveyances and at Transportation Hubs, 86 FR 8025
+        url: https://www.federalregister.gov/documents/2021/02/03/2021-02340/requirement-for-persons-to-wear-masks-while-on-conveyances-and-at-transportation-hubs
+        publisher: Federal Register
+        date: 2021-02-03
+    uncertainty:
+      verdict: contested
+      note: The promise's own reading leaves open whether a federal-property and transport order is "national". A reader who expects a mandate for the whole public would call this partly.
+
+  # ---- infrastructure, jobs and wages -------------------------------------------
+
+  - promise: biden-2020-modern-infrastructure
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Infrastructure Investment and Jobs Act of November 2021 funds roads, bridges, broadband, ports and airports, with about $550 billion in new spending.
+    evidence:
+      - what: Infrastructure Investment and Jobs Act (Public Law 117-58)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ58
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-11-15
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-clean-water-pipes
+    verdict: partly
+    as_of: 2026-11-16
+    summary: The 2021 infrastructure law gave $15 billion for replacing lead service lines, plus general water funds. EPA estimates about 9 million lead lines remain and puts the cost of replacing them well above that sum. An October 2024 rule requires most of them to be replaced within ten years.
+    evidence:
+      - what: Infrastructure Investment and Jobs Act (Public Law 117-58), Division J, Title VI (lead service line replacement through the Drinking Water State Revolving Funds)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ58
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-11-15
+      - what: EPA, Lead and Copper Rule Improvements, 89 FR 86418
+        url: https://www.federalregister.gov/documents/2024/10/30/2024-23549/national-primary-drinking-water-regulations-for-lead-and-copper-improvements
+        publisher: Federal Register
+        date: 2024-10-30
+    uncertainty:
+      verdict: probable
+      note: The criterion leaves the scale to judgement. A reader who counts a funded nationwide programme with a replacement mandate as enough would call this kept.
+
+  - promise: biden-2020-manufacturing-tech-jobs-5m
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Manufacturing jobs rose from 12.14 million in January 2021 to 12.69 million in December 2024 (+551,000). The information sector added 148,000 and computer systems design 199,000. Together that is about 0.9 million, not 5 million.
+    attempt: passed-chamber
+    evidence:
+      - what: BLS Current Employment Statistics, all employees, manufacturing (MANEMP), via FRED
+        url: https://fred.stlouisfed.org/series/MANEMP
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: BLS Current Employment Statistics, all employees, information (USINFO), via FRED
+        url: https://fred.stlouisfed.org/series/USINFO
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: BLS Current Employment Statistics, all employees, computer systems design and related services (CES6054150001), via FRED
+        url: https://fred.stlouisfed.org/series/CES6054150001
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: CHIPS and Science Act (Public Law 117-167)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ167
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-08-09
+    uncertainty:
+      verdict: clear
+
+  - promise: biden-2020-empower-unions
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The PRO Act passed the House in March 2021 but not the Senate. The labor board's 2024 election rule, in force from 30 September 2024, restored faster union elections and blocking charges.
+    evidence:
+      - what: NLRB, Fair Choice-Employee Voice Final Rule, 89 FR 62952
+        url: https://www.federalregister.gov/documents/2024/08/01/2024-16488/fair-choice-employee-voice-final-rule
+        publisher: Federal Register
+        date: 2024-08-01
+      - what: House roll call 70 (2021), passage of H.R. 842, Protecting the Right to Organize Act
+        url: https://clerk.house.gov/Votes/202170
+        publisher: Office of the Clerk, U.S. House of Representatives
+        date: 2021-03-09
+    uncertainty:
+      verdict: probable
+      note: The promise's reading counts any rule. A reader who expects the law Biden campaigned on (the PRO Act) would call this broken.
+
+  - promise: biden-2020-rising-wages
+    verdict: indeterminate
+    as_of: 2026-11-16
+    summary: The official measures point opposite ways. Real median weekly earnings of full-time workers were $373 (1982-84 dollars) in Q1 2021 and $374 in Q4 2024. Real average hourly earnings fell 1.4% for all private employees and rose 0.8% for production and nonsupervisory workers (January 2021 to December 2024, deflated by the CPI).
+    evidence:
+      - what: BLS, median usual weekly real earnings, full-time wage and salary workers (LES1252881600Q), via FRED
+        url: https://fred.stlouisfed.org/series/LES1252881600Q
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: BLS, average hourly earnings of all private employees (CES0500000003) and of production and nonsupervisory employees (AHETPI), via FRED
+        url: https://fred.stlouisfed.org/series/AHETPI
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: BLS, Consumer Price Index for all urban consumers (CPIAUCSL), via FRED
+        url: https://fred.stlouisfed.org/series/CPIAUCSL
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+    uncertainty:
+      verdict: contested
+      note: January 2021 earnings were inflated because low-paid workers had lost their jobs in the pandemic. A reader who takes the median as the typical worker would call this kept (by a very small margin); one who takes all-employee hourly earnings would call it broken.
+
+  - promise: biden-2020-pay-essential-workers
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The American Rescue Plan let states and local governments use their $350 billion recovery funds for premium pay of up to $13 an hour for essential workers, and many did. No separate federal hazard-pay fund was enacted.
+    evidence:
+      - what: American Rescue Plan Act of 2021 (Public Law 117-2), sec. 9901 (Social Security Act sec. 602(c)(1)(A) and 603(c)(1)(A), premium pay)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ2
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-03-11
+      - what: Treasury, Coronavirus State and Local Fiscal Recovery Funds final rule (premium pay)
+        url: https://home.treasury.gov/system/files/136/SLFRF-Final-Rule.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2022-01-06
+    uncertainty:
+      verdict: contested
+      note: The federal law only allows premium pay; states decided whether to pay it. A reader who expects a federal fund paying every essential worker would call this partly.
+
+  # ---- retirement and health care -----------------------------------------------
+
+  - promise: biden-2020-keep-payroll-tax
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Social Security payroll tax stayed in force throughout the term. The only law changing benefits, the Social Security Fairness Act of January 2025, raised some of them.
+    evidence:
+      - what: Internal Revenue Code sec. 3101 and 3111 (FICA tax rates), as in force at the deadline
+        url: https://www.govinfo.gov/app/details/USCODE-2023-title26/USCODE-2023-title26-subtitleC-chap21-subchapA-sec3101
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2024-01-03
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-protect-social-security
+    verdict: kept
+    as_of: 2026-11-16
+    summary: No cut to Social Security benefits was enacted. The Social Security Fairness Act, signed on 5 January 2025, repealed two provisions that had reduced benefits for some public-sector retirees.
+    evidence:
+      - what: Social Security Fairness Act of 2023 (H.R. 82, signed 5 January 2025)
+        url: https://www.govinfo.gov/app/details/BILLS-118hr82enr
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2025-01-05
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-protect-medicare
+    verdict: kept
+    as_of: 2026-11-16
+    summary: No cut to Medicare benefits was enacted. The Inflation Reduction Act added a $35 monthly cap on insulin and an annual cap on out-of-pocket drug costs for Part D from 2025.
+    evidence:
+      - what: Inflation Reduction Act of 2022 (Public Law 117-169), Title I, Subtitle B (Medicare Part D redesign, insulin cap)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ169
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-08-16
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-public-option
+    verdict: broken
+    review: 'The FY2022 budget text on the public option (from memory).'
+    as_of: 2026-11-16
+    summary: No public insurance option was created. No bill for one passed either chamber, and the administration sent no legislative proposal for one.
+    attempt: none
+    evidence:
+      - what: Inflation Reduction Act of 2022 (Public Law 117-169), the term's main health law (extends marketplace subsidies, no public option)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ169
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-08-16
+    uncertainty:
+      verdict: probable
+      note: The FY2022 budget said the President supported a public option, without a legislative proposal. A reader who counts that statement would record the attempt as initiated.
+
+  - promise: biden-2020-medicare-negotiation
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Inflation Reduction Act lets Medicare negotiate the prices of some high-cost drugs. The first ten negotiated prices were announced in August 2024 and take effect in 2026.
+    evidence:
+      - what: Inflation Reduction Act of 2022 (Public Law 117-169), sec. 11001 (Medicare Drug Price Negotiation Program)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ169
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-08-16
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-lower-premiums
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Employer plans, which cover most people with private insurance, got dearer. The average family premium rose from $21,342 in 2020 to $25,572 in 2024, and the worker's share from $5,588 to $6,296. Larger marketplace subsidies (2021, extended in 2022) lowered what marketplace enrollees paid.
+    attempt: passed-chamber
+    evidence:
+      - what: KFF, 2024 Employer Health Benefits Survey (premiums and worker contributions)
+        url: https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey/
+        publisher: KFF
+        date: 2024-10-09
+        secondary: true
+      - what: KFF, 2020 Employer Health Benefits Survey
+        url: https://www.kff.org/health-costs/report/2020-employer-health-benefits-survey/
+        publisher: KFF
+        date: 2020-10-08
+        secondary: true
+      - what: American Rescue Plan Act of 2021 (Public Law 117-2), sec. 9661 (larger premium tax credits for 2021-2022)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ2
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-03-11
+    uncertainty:
+      verdict: contested
+      note: The promise does not say which premiums. A reader who looks only at marketplace premiums after subsidies would call this kept for about 20 million people, or partly overall.
+
+  - promise: biden-2020-lower-deductibles
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The average single deductible in employer plans rose from $1,644 in 2020 to $1,787 in 2024. The Medicare Part D standard deductible also rose. No law in the term aimed at deductibles in general.
+    attempt: none
+    evidence:
+      - what: KFF, 2024 Employer Health Benefits Survey (average general annual deductible, single coverage)
+        url: https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey/
+        publisher: KFF
+        date: 2024-10-09
+        secondary: true
+      - what: KFF, 2020 Employer Health Benefits Survey
+        url: https://www.kff.org/health-costs/report/2020-employer-health-benefits-survey/
+        publisher: KFF
+        date: 2020-10-08
+        secondary: true
+    uncertainty:
+      verdict: probable
+      note: KFF's employer survey is the standard series; no federal series covers all plans. The insulin and out-of-pocket caps in the Inflation Reduction Act lower costs for some people but are not deductibles.
+
+  - promise: biden-2020-lower-drug-prices
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Drug prices rose. The producer price index for pharmaceutical preparations rose about 10% from January 2021 to December 2024, and the consumer price index for medical care commodities about 9%. Medicare's negotiated prices take effect only in 2026.
+    attempt: passed-chamber
+    evidence:
+      - what: BLS producer price index, pharmaceutical preparation manufacturing (PCU325412325412), via FRED
+        url: https://fred.stlouisfed.org/series/PCU325412325412
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: BLS consumer price index, medical care commodities (CUUR0000SAM1), via FRED
+        url: https://fred.stlouisfed.org/series/CUUR0000SAM1
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: Inflation Reduction Act of 2022 (Public Law 117-169), sec. 11001 and 11101 (negotiation, inflation rebates)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ169
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-08-16
+    uncertainty:
+      verdict: probable
+      note: List-price indexes do not show rebates. Net prices are not published as an official series; the insulin cap lowered what some patients paid, not the price.
+
+  - promise: biden-2020-pre-existing-conditions
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Affordable Care Act's protections stayed in force through the term. In June 2021 the Supreme Court dismissed the challenge to the law.
+    evidence:
+      - what: California v. Texas, 593 U.S. 659 (2021)
+        url: https://www.supremecourt.gov/opinions/20pdf/19-840_6jfm.pdf
+        publisher: Supreme Court of the United States
+        date: 2021-06-17
+    uncertainty: { verdict: clear }
+
+  # ---- education and care -------------------------------------------------------
+
+  - promise: biden-2020-college-cost
+    verdict: broken
+    as_of: 2026-11-16
+    summary: No federal programme for free or debt-free college was enacted. Free community college was proposed in 2021 but dropped from the Build Back Better bill. The maximum Pell Grant rose from $6,495 to $7,395 through yearly appropriations.
+    attempt: initiated
+    evidence:
+      - what: Fact sheet, The American Families Plan (free community college, larger Pell Grants)
+        url: https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/04/28/fact-sheet-the-american-families-plan/
+        publisher: The White House
+        date: 2021-04-28
+      - what: Consolidated Appropriations Act, 2023 (Public Law 117-328), Pell Grant maximum award
+        url: https://www.govinfo.gov/app/details/PLAW-117publ328
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-12-29
+    uncertainty:
+      verdict: contested
+      note: A reader who counts the $900 rise in the maximum Pell Grant as a federal programme making college more affordable would call this partly.
+
+  - promise: biden-2020-student-debt
+    verdict: kept
+    review: 'Total federal student debt discharged by January 2025 (about $180 billion, 5 million borrowers; from memory).'
+    as_of: 2026-11-16
+    summary: The broad cancellation plan was struck down in June 2023, but by January 2025 the administration had cancelled about $180 billion of federal student debt for about 5 million borrowers, mostly through fixes to Public Service Loan Forgiveness, income-driven repayment and disability discharge.
+    evidence:
+      - what: Biden v. Nebraska, 600 U.S. 477 (2023)
+        url: https://www.law.cornell.edu/supremecourt/text/22-506
+        publisher: Legal Information Institute, Cornell Law School (opinion text)
+        date: 2023-06-30
+      - what: Department of Education, Improving Income-Driven Repayment (SAVE plan), 88 FR 43820
+        url: https://www.federalregister.gov/documents/2023/07/10/2023-14549/improving-income-driven-repayment-for-the-william-d-ford-federal-direct-loan-program-and-the-federal
+        publisher: Federal Register
+        date: 2023-07-10
+    uncertainty:
+      verdict: probable
+      note: The total and borrower count are from memory (ed.gov blocks scripts). The SAVE plan was blocked by courts from mid-2024.
+
+  - promise: biden-2020-child-care
+    verdict: partly
+    as_of: 2026-11-16
+    summary: The American Rescue Plan gave $39 billion in temporary child-care funding and a larger child-care tax credit for 2021 only. Both had run out by the deadline. The permanent plan in the Build Back Better bill passed the House but not the Senate.
+    evidence:
+      - what: American Rescue Plan Act of 2021 (Public Law 117-2), sec. 2201-2202 (Child Care and Development Block Grant, child care stabilization) and sec. 9631 (dependent care credit for 2021)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ2
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-03-11
+      - what: House roll call 385 (2021), passage of H.R. 5376, Build Back Better Act
+        url: https://clerk.house.gov/Votes/2021385
+        publisher: Office of the Clerk, U.S. House of Representatives
+        date: 2021-11-19
+    uncertainty:
+      verdict: probable
+      note: Yearly appropriations for the block grant also rose. A reader who counts those as an enacted expansion would call this kept.
+
+  - promise: biden-2020-elder-care
+    verdict: partly
+    as_of: 2026-11-16
+    summary: The American Rescue Plan raised federal Medicaid funding for home and community-based care by 10 percentage points for one year (April 2021 to March 2022), worth about $12 billion. The $150 billion permanent plan in the Build Back Better bill passed the House but not the Senate.
+    evidence:
+      - what: American Rescue Plan Act of 2021 (Public Law 117-2), sec. 9817 (additional support for Medicaid home and community-based services)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ2
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-03-11
+      - what: CMS, State Medicaid Director Letter SMD 21-003 (implementation of sec. 9817)
+        url: https://www.medicaid.gov/federal-policy-guidance/downloads/smd21003.pdf
+        publisher: Centers for Medicare & Medicaid Services
+        date: 2021-05-13
+    uncertainty:
+      verdict: probable
+      note: States could spend the extra funds until March 2025. A reader who counts that spending period as a measure still in force at the deadline would call this kept.
+
+  # ---- immigration --------------------------------------------------------------
+
+  - promise: biden-2020-citizenship-bill-100-days
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 20 January 2021 Biden sent Congress the U.S. Citizenship Act, with an eight-year path to citizenship for undocumented immigrants. It was introduced as H.R. 1177 in February.
+    evidence:
+      - what: Fact sheet, President Biden Sends Immigration Bill to Congress
+        url: https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/01/20/fact-sheet-president-biden-sends-immigration-bill-to-congress-as-part-of-his-commitment-to-modernize-our-immigration-system/
+        publisher: The White House
+        date: 2021-01-20
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-restore-daca
+    verdict: partly
+    review: 'Whether the court bar on new DACA approvals was still in force in January 2025.'
+    as_of: 2026-11-16
+    summary: Biden ordered DACA preserved on day one, and a 2022 rule wrote it into regulation. Existing recipients kept renewing their status, but a federal court has barred approval of new applications since July 2021.
+    evidence:
+      - what: Memorandum, Preserving and Fortifying Deferred Action for Childhood Arrivals (DACA), 86 FR 7053
+        url: https://www.federalregister.gov/documents/2021/01/25/2021-01769/preserving-and-fortifying-deferred-action-for-childhood-arrivals-daca
+        publisher: Federal Register
+        date: 2021-01-20
+      - what: DHS, Deferred Action for Childhood Arrivals final rule, 87 FR 53152
+        url: https://www.federalregister.gov/documents/2022/08/30/2022-18401/deferred-action-for-childhood-arrivals
+        publisher: Federal Register
+        date: 2022-08-30
+    uncertainty:
+      verdict: probable
+      note: The court order on new applications is from memory. A reader who counts only people already in DACA would call this kept.
+
+  - promise: biden-2020-dreamers-citizenship
+    verdict: broken
+    as_of: 2026-11-16
+    summary: No law gave Dreamers a path to citizenship. The American Dream and Promise Act passed the House in March 2021 but not the Senate.
+    attempt: passed-chamber
+    evidence:
+      - what: House roll call 91 (2021), passage of H.R. 6, American Dream and Promise Act of 2021
+        url: https://clerk.house.gov/Votes/202191
+        publisher: Office of the Clerk, U.S. House of Representatives
+        date: 2021-03-18
+    uncertainty: { verdict: clear }
+
+  # ---- foreign policy -----------------------------------------------------------
+
+  - promise: biden-2020-punish-election-interference
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The intelligence community found that Russia and Iran tried to influence the 2020 election and that China did not. Biden sanctioned Russia for it in April 2021, and Iranian actors in November 2021 and again for the 2024 election in September 2024.
+    evidence:
+      - what: ODNI, Foreign Threats to the 2020 US Federal Elections (ICA 2020-00078D)
+        url: https://www.dni.gov/files/ODNI/documents/assessments/ICA-declass-16MAR21.pdf
+        publisher: Office of the Director of National Intelligence
+        date: 2021-03-10
+      - what: Treasury, "Treasury Sanctions Russia with Sweeping New Sanctions Authority" (Executive Order 14024, election interference)
+        url: https://home.treasury.gov/news/press-releases/jy0127
+        publisher: U.S. Department of the Treasury
+        date: 2021-04-15
+      - what: Treasury, "Treasury Sanctions Iran Cyber Actors for Attempting to Influence the 2020 U.S. Presidential Election"
+        url: https://home.treasury.gov/news/press-releases/jy0494
+        publisher: U.S. Department of the Treasury
+        date: 2021-11-18
+      - what: Treasury, "Treasury Sanctions Iranian Regime Agents Attempting to Interfere in U.S. Elections"
+        url: https://home.treasury.gov/news/press-releases/jy2617
+        publisher: U.S. Department of the Treasury
+        date: 2024-09-27
+    uncertainty:
+      verdict: probable
+      note: The promise names China too. The intelligence assessment found no Chinese interference in 2020, so no measure was required.
+
+  # ---- energy and climate -------------------------------------------------------
+
+  - promise: biden-2020-rejoin-paris
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Biden signed the instrument to rejoin on 20 January 2021, and the United States was a party again from 19 February 2021.
+    evidence:
+      - what: Statement, Paris Climate Agreement (acceptance on behalf of the United States)
+        url: https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/01/20/paris-climate-agreement/
+        publisher: The White House
+        date: 2021-01-20
+      - what: UNFCCC, "US Officially Rejoins the Paris Agreement"
+        url: https://unfccc.int/news/us-officially-rejoins-the-paris-agreement
+        publisher: UNFCCC
+        date: 2021-02-19
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-ev-charging-50k
+    verdict: kept
+    review: 'NEVI-funded charging ports open by January 2025 (a few hundred, from memory).'
+    as_of: 2026-11-16
+    summary: The 2021 infrastructure law set aside $7.5 billion for public EV charging, $5 billion of it for chargers along highway corridors, enough by the administration's estimate for far more than 50,000. By the deadline only a few hundred chargers paid for by the highway programme were open.
+    evidence:
+      - what: Infrastructure Investment and Jobs Act (Public Law 117-58), Division J, Title VIII (National Electric Vehicle Infrastructure Formula Program) and sec. 11401 (Charging and Fueling Infrastructure grants)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ58
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-11-15
+    uncertainty:
+      verdict: contested
+      note: The criterion is funding, which was enacted. A reader who counts chargers actually built by the deadline would call this broken; the open-charger count is from memory.
+
+  - promise: biden-2020-retrofit-buildings
+    verdict: indeterminate
+    review: 'Buildings retrofitted 2021-2024 (IRS and DOE counts).'
+    as_of: 2026-11-16
+    summary: No record counts retrofitted buildings. The 2021 and 2022 laws funded efficiency upgrades through grants, tax deductions and rebates, but no federal count of buildings upgraded in the term exists.
+    evidence:
+      - what: Inflation Reduction Act of 2022 (Public Law 117-169), sec. 13303 (energy-efficient commercial buildings deduction) and sec. 50121-50122 (home energy rebates)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ169
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-08-16
+    uncertainty:
+      verdict: contested
+      note: Missing evidence. A reader who expects the programmes to report counts, and takes their silence as failure, would call this broken.
+
+  - promise: biden-2020-retrofit-homes
+    verdict: indeterminate
+    review: 'Homes retrofitted 2021-2024 (IRS 25C claims; DOE weatherization counts).'
+    as_of: 2026-11-16
+    summary: No record counts homes retrofitted to leak less energy. The Weatherization Assistance Program does a few tens of thousands of homes a year. Millions of households claimed the home-improvement tax credit for 2023, but the credit also covers equipment such as heat pumps, so the claims do not count weatherized homes.
+    evidence:
+      - what: Infrastructure Investment and Jobs Act (Public Law 117-58), sec. 40551 (Weatherization Assistance Program, $3.5 billion)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ58
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2021-11-15
+      - what: Inflation Reduction Act of 2022 (Public Law 117-169), sec. 13301 (energy efficient home improvement credit)
+        url: https://www.govinfo.gov/app/details/PLAW-117publ169
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2022-08-16
+    uncertainty:
+      verdict: contested
+      note: Missing evidence. A reader who counts every credit claim as a retrofit could call this kept; one who counts only weatherization would call it broken.
+
+  - promise: biden-2020-capture-fracking-emissions
+    verdict: kept
+    as_of: 2026-11-16
+    summary: EPA's December 2023 methane rule requires new oil and gas wells to capture or control methane, ends routine flaring, and requires states to set limits for existing wells. A methane fee on large emitters followed in November 2024.
+    evidence:
+      - what: EPA, Standards of Performance for New, Reconstructed, and Modified Sources and Emissions Guidelines for Existing Sources (oil and natural gas), 89 FR 16820
+        url: https://www.federalregister.gov/documents/2024/03/08/2024-00366/standards-of-performance-for-new-reconstructed-and-modified-sources-and-emissions-guidelines-for-existing-sources-oil-and
+        publisher: Federal Register
+        date: 2024-03-08
+      - what: EPA, Waste Emissions Charge for Petroleum and Natural Gas Systems, 89 FR 91094
+        url: https://www.federalregister.gov/documents/2024/11/18/2024-26003/waste-emissions-charge-for-petroleum-and-natural-gas-systems-procedures-for-facilitating-compliance
+        publisher: Federal Register
+        date: 2024-11-18
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-end-oil-subsidies
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The oil industry's tax preferences (such as expensing of drilling costs and percentage depletion) were not repealed. Biden proposed repealing them in every budget of the term.
+    attempt: initiated
+    evidence:
+      - what: Treasury, General Explanations of the Administration's Fiscal Year 2025 Revenue Proposals (eliminate fossil fuel tax preferences)
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2025.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2024-03-11
+    uncertainty: { verdict: clear }
+
+  # ---- justice and equality -----------------------------------------------------
+
+  - promise: biden-2020-state-sentencing-fund
+    verdict: broken
+    review: 'Any budget request FY2022-FY2025 for a state sentencing-reform fund (none, from memory).'
+    as_of: 2026-11-16
+    summary: No $20 billion programme for state sentencing reform was enacted, and no bill for one passed either chamber.
+    attempt: none
+    evidence:
+      - what: Consolidated Appropriations Act, 2024 (Public Law 118-42), Department of Justice state and local grants (no such programme)
+        url: https://www.govinfo.gov/app/details/PLAW-118publ42
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2024-03-09
+    uncertainty:
+      verdict: probable
+      note: The absence of a budget request for the programme is from memory.
+
+  - promise: biden-2020-treatment-not-jail
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Simple drug possession remained a federal crime that can carry prison time. Biden pardoned federal convictions for simple marijuana possession in 2022 and 2023, and his administration proposed moving marijuana to a lower schedule in 2024, which was not final at the deadline.
+    attempt: initiated
+    evidence:
+      - what: 21 U.S.C. 844 (penalties for simple possession), as in force at the deadline
+        url: https://www.govinfo.gov/app/details/USCODE-2023-title21/USCODE-2023-title21-chap13-subchapI-partD-sec844
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 2024-01-03
+      - what: Proclamation 10467, Granting Pardon for the Offense of Simple Possession of Marijuana
+        url: https://www.federalregister.gov/documents/2022/10/12/2022-22201/granting-pardon-for-the-offense-of-simple-possession-of-marijuana
+        publisher: Federal Register
+        date: 2022-10-06
+      - what: DOJ, Schedules of Controlled Substances, Rescheduling of Marijuana (proposed rule), 89 FR 44597
+        url: https://www.federalregister.gov/documents/2024/05/21/2024-11137/schedules-of-controlled-substances-rescheduling-of-marijuana
+        publisher: Federal Register
+        date: 2024-05-21
+    uncertainty: { verdict: clear }
+
+  - promise: biden-2020-equal-pay
+    verdict: partly
+    as_of: 2026-11-16
+    summary: The Paycheck Fairness Act passed the House in April 2021 but not the Senate. Women's median weekly earnings for full-time work rose from 82.3% of men's in 2020 to 82.7% in 2024, a slight narrowing.
+    evidence:
+      - what: BLS, median usual weekly earnings, full-time wage and salary workers, women (LEU0252882700A) and men (LEU0252881800A), via FRED
+        url: https://fred.stlouisfed.org/series/LEU0252882700A
+        publisher: Federal Reserve Bank of St. Louis (BLS data)
+        date: 2026-11-16
+      - what: House roll call 108 (2021), passage of H.R. 7, Paycheck Fairness Act
+        url: https://clerk.house.gov/Votes/2021108
+        publisher: Office of the Clerk, U.S. House of Representatives
+        date: 2021-04-15
+    uncertainty:
+      verdict: contested
+      note: The narrowing is small and depends on the base year; on quarterly data the ratio was 83.4% in Q4 2020 and 83.2% in Q4 2024. A reader who uses the quarterly figures would call this broken.

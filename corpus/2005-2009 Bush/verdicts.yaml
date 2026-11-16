@@ -1,0 +1,525 @@
+# Verdicts for George W. Bush's 2005-2009 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2009-01-20
+# unless the promise states another.
+#
+# Complete: high 16/16, medium 20/20.
+
+protocol: 1
+verdicts:
+
+  # ---- economy and taxes ---------------------------------------------------
+
+  - promise: bush-2004-restrain-spending
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Federal outlays grew 6.5% a year from FY2005 to FY2008, the last full fiscal year before the deadline, against 7.3% a year from FY2001 to FY2005.
+    evidence:
+      - what: Historical Tables, Table 1.1 (outlays FY2001 $1,863.2bn, FY2005 $2,472.2bn, FY2008 $2,982.9bn)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2010-TAB/xls/BUDGET-2010-TAB-1-1.xls
+        publisher: Office of Management and Budget (via GovInfo)
+    uncertainty:
+      verdict: contested
+      note: Measured as a share of GDP, outlays rose (19.6% in FY2005 to 20.2% in FY2008), and FY2009, which began under this president's budget, grew 18%. A reader using either measure would call this broken.
+
+  - promise: bush-2004-reduce-regulation
+    verdict: indeterminate
+    as_of: 2026-11-15
+    summary: The proxies disagree. Final rule documents fell from 4,101 in 2004 to 3,830 in 2008, but Federal Register pages of rules rose from 22,546 to 26,320 and the Code of Federal Regulations grew from 147,639 to 157,974 pages.
+    evidence:
+      - what: Federal Register statistics, pages and documents published by year, and CFR pages by year
+        url: https://uploads.federalregister.gov/uploads/2020/08/31144642/stats2019Fedreg-1.pdf
+        publisher: Office of the Federal Register
+    uncertainty:
+      verdict: contested
+      note: No official series measures the burden of regulation. Counting rules gives kept; counting pages gives broken.
+
+  - promise: bush-2004-tax-relief-permanent
+    verdict: partly
+    as_of: 2026-11-15
+    summary: The 2006 pension law made the 2001 law's retirement-saving and college-saving (529) provisions permanent. The rate cuts, child credit, estate tax repeal and the 2003 dividend and capital gains rates stayed temporary; a 2006 law only extended the last two to 2010.
+    evidence:
+      - what: Pension Protection Act of 2006 (Pub. L. 109-280), Sec. 811 (2001 law's pension and IRA provisions made permanent) and Sec. 1304 (529 provisions made permanent)
+        url: https://www.govinfo.gov/content/pkg/PLAW-109publ280/html/PLAW-109publ280.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2006-08-17
+      - what: Tax Increase Prevention and Reconciliation Act of 2005 (Pub. L. 109-222), Sec. 102 (dividend and capital gains rates extended through 2010, not made permanent)
+        url: https://www.govinfo.gov/content/pkg/PLAW-109publ222/html/PLAW-109publ222.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2006-05-17
+      - what: Treasury's FY2009 revenue proposals, still proposing to make the 2001 and 2003 tax cuts permanent
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2009.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2008-02-04
+    uncertainty:
+      verdict: contested
+      note: The permanent parts are a small share of the 2001 and 2003 cuts. A reader who takes "the tax relief" to mean the rate cuts would call this broken.
+
+  - promise: bush-2004-tax-reform
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The president appointed an advisory panel in January 2005, which reported in November 2005. No tax reform or simplification law followed.
+    attempt: initiated
+    evidence:
+      - what: Executive Order 13369, establishing the President's Advisory Panel on Federal Tax Reform (7 January 2005)
+        url: https://www.presidency.ucsb.edu/documents/executive-order-13369-presidents-advisory-panel-federal-tax-reform
+        publisher: The American Presidency Project (UCSB)
+        date: 2005-01-07
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-expand-trade
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Free trade agreements with Morocco, Bahrain, Oman and the CAFTA-DR countries took effect between 2006 and January 2009. Exports of goods and services rose from $1,168bn in 2004 to $1,850bn in 2008.
+    evidence:
+      - what: U.S. free trade agreements and their entry-into-force dates
+        url: https://ustr.gov/trade-agreements/free-trade-agreements
+        publisher: Office of the United States Trade Representative
+      - what: U.S. trade in goods and services, balance of payments basis, 1960-present (exports 2004 and 2008)
+        url: https://www.census.gov/foreign-trade/statistics/historical/gands.pdf
+        publisher: U.S. Census Bureau
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-economy-grows
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Real GDP grew in every calendar year of the term, by 3.5%, 2.8%, 2.0% and 0.1% in 2005-2008. Output fell in the second half of 2008.
+    evidence:
+      - what: BEA NIPA Table 1.1.1, percent change in real GDP, annual (series A191RL)
+        url: https://apps.bea.gov/national/Release/TXT/NipaDataA.txt
+        publisher: Bureau of Economic Analysis
+    uncertainty:
+      verdict: contested
+      note: The 2008 figure is 0.1%, and earlier BEA vintages showed a small decline. The recession began in December 2007. A reader who looks at quarters, or at an earlier vintage, would call this broken.
+
+  - promise: bush-2004-deficit-half
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The FY2005 budget projected a FY2004 deficit of $521bn, so the target was at most about $260bn in FY2009. The FY2009 deficit was $1,413bn. The deficit had fallen to $161bn in FY2007, but the promise names FY2009.
+    attempt: initiated
+    evidence:
+      - what: Budget of the U.S. Government, FY2005 (projected FY2004 deficit and the plan to halve it in five years)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2005-BUD/pdf/BUDGET-2005-BUD.pdf
+        publisher: Office of Management and Budget (via GovInfo)
+        date: 2004-02-02
+      - what: Historical Tables, Table 1.1 (FY2009 deficit $1,412.7bn)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2011-TAB/xls/BUDGET-2011-TAB-1-1.xls
+        publisher: Office of Management and Budget (via GovInfo)
+        date: 2010-02-01
+    uncertainty:
+      verdict: clear
+
+  # ---- energy, jobs, communities ---------------------------------------------
+
+  - promise: bush-2004-energy-imports
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Net petroleum imports fell from 58.4% of consumption in 2004 to 57.0% in 2008. Net imports of all primary energy fell from 29.1 to 26.0 quadrillion Btu, about 30% to 27% of consumption.
+    evidence:
+      - what: Monthly Energy Review, Table 3.3a (petroleum net imports as share of products supplied)
+        url: https://www.eia.gov/totalenergy/data/browser/?tbl=T03.03A
+        publisher: U.S. Energy Information Administration
+      - what: Monthly Energy Review, Tables 1.1 and 1.7 (primary energy net imports and consumption)
+        url: https://www.eia.gov/totalenergy/data/browser/?tbl=T01.01
+        publisher: U.S. Energy Information Administration
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-job-training-double
+    verdict: broken
+    review: 'Exact trainee counts for program years 2004 and 2008 (DOL TEN 34-09).'
+    as_of: 2026-11-15
+    summary: The number of WIA adult and dislocated-worker exiters who received training declined steadily from program year 2004 to 2008. It did not double.
+    attempt: initiated
+    evidence:
+      - what: Training and Employment Notice 34-09, WIA training trends PY2004-PY2008
+        url: https://www.dol.gov/sites/dolgov/files/ETA/advisories/TEN/2010/ten34-09.pdf
+        publisher: U.S. Department of Labor, Employment and Training Administration
+      - what: White House fact sheet proposing reforms to double the number of workers trained (formal proposal)
+        url: https://georgewbush-whitehouse.archives.gov/news/releases/2004/04/print/text/20040405-7.html
+        publisher: The White House (archived)
+        date: 2004-04-05
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-community-colleges
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The Community-Based Job Training Grants, a new line for community colleges, were funded at $125m a year from FY2005; the first round was awarded in October 2005 and later rounds followed each year of the term.
+    evidence:
+      - what: Solicitation for Community-Based Job Training Grants, Federal Register 70 FR 22916
+        url: https://www.govinfo.gov/content/pkg/FR-2005-05-03/pdf/05-8772.pdf
+        publisher: Federal Register (via GovInfo)
+        date: 2005-05-03
+    uncertainty:
+      verdict: contested
+      note: Against 2004 funding rose (the line is new). Within the term it stayed flat at about $125m a year, so a reader who compares 2005 with 2008 would call this broken.
+
+  - promise: bush-2004-opportunity-zones
+    verdict: broken
+    as_of: 2026-11-15
+    summary: Treasury proposed "Opportunity Zones" in the FY2006 and FY2007 budgets; no law created them. The 2005 Gulf Opportunity Zone law is a hurricane-relief measure for a different set of areas.
+    attempt: initiated
+    evidence:
+      - what: Treasury's FY2006 revenue proposals, "Establish Opportunity Zones"
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2006.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2005-02-07
+      - what: Treasury's FY2007 revenue proposals, still proposing them
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2007.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2006-02-06
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-own-homes
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The homeownership rate fell from 69.1% in the first quarter of 2005 to 67.5% in the fourth quarter of 2008.
+    attempt: initiated
+    evidence:
+      - what: Housing Vacancies and Homeownership, Table 14 (homeownership rates by quarter)
+        url: https://www.census.gov/housing/hvs/data/histtab14.xlsx
+        publisher: U.S. Census Bureau
+      - what: Housing and Economic Recovery Act of 2008 (Pub. L. 110-289), aimed at keeping owners in their homes
+        url: https://www.govinfo.gov/content/pkg/PLAW-110publ289/html/PLAW-110publ289.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2008-07-30
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-own-businesses
+    verdict: indeterminate
+    review: 'Self-employment trend 2004-2008 (BLS Monthly Labor Review, September 2010).'
+    as_of: 2026-11-15
+    summary: The measures disagree. Unincorporated self-employment fell over the term, while incorporated self-employment and the number of nonemployer businesses rose. No official series measures the share of Americans who own a business.
+    evidence:
+      - what: Self-employment in the United States, Monthly Labor Review, September 2010 (incorporated and unincorporated self-employment, 1994-2009)
+        url: https://www.bls.gov/opub/mlr/2010/09/art2full.pdf
+        publisher: Bureau of Labor Statistics
+    uncertainty:
+      verdict: contested
+      note: Unincorporated self-employment gives broken; incorporated self-employment or business counts give kept.
+
+  - promise: bush-2004-own-retirement
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The share of families with retirement accounts rose 2.9 points to 52.6% between the 2004 and 2007 Surveys of Consumer Finances.
+    evidence:
+      - what: Changes in U.S. Family Finances from 2004 to 2007 (Federal Reserve Bulletin, February 2009)
+        url: https://www.federalreserve.gov/pubs/bulletin/2009/pdf/scf09.pdf
+        publisher: Board of Governors of the Federal Reserve System
+    uncertainty:
+      verdict: probable
+      note: The survey is triennial; 2007 is the last reading before the deadline, and the 2010 survey showed a fall.
+
+  # ---- health ----------------------------------------------------------------
+
+  - promise: bush-2004-hsa-taxcredit
+    verdict: broken
+    as_of: 2026-11-15
+    summary: Treasury proposed a refundable tax credit for small employers' contributions to employee HSAs in the FY2006 budget; no law created it. The 2006 tax law expanded HSAs in other ways.
+    attempt: initiated
+    evidence:
+      - what: Treasury's FY2006 revenue proposals, "Provide a refundable tax credit for contributions of small employers to employee HSAs"
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2006.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2005-02-07
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-hsa-low-income
+    verdict: broken
+    as_of: 2026-11-15
+    summary: Treasury proposed a refundable health insurance credit for lower-income people buying HSA-eligible coverage in the FY2006 and FY2007 budgets; no law created it.
+    attempt: initiated
+    evidence:
+      - what: Treasury's FY2006 revenue proposals, refundable Health Insurance Tax Credit (part payable into an HSA)
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2006.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2005-02-07
+      - what: Treasury's FY2007 revenue proposals, refundable credit for lower-income individuals buying HSA-eligible coverage
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2007.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2006-02-06
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-health-centers
+    verdict: partly
+    review: 'Any count of poor counties without a health centre in 2008 (GAO-08-723).'
+    as_of: 2026-11-15
+    summary: Health centres opened in many poor counties, but not all. In 2007 HRSA still targeted 200 high-poverty counties with no health centre site and funded 75 of them; a 2008 round funded up to 40 more.
+    evidence:
+      - what: GAO-08-723, Health Resources and Services Administration — expansion of health centre sites, including the FY2007 High Poverty County competition
+        url: https://www.gao.gov/assets/a279451.html
+        publisher: U.S. Government Accountability Office
+    uncertainty:
+      verdict: probable
+      note: No count of poor counties still without a centre at the deadline was found; the 2007 and 2008 rounds together could not have covered all 200 targeted counties.
+
+  - promise: bush-2004-child-health-enroll
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Children covered by Medicaid or SCHIP rose from 19.9 million in 2004 to 22.6 million in 2008, a rise of 2.7 million.
+    evidence:
+      - what: Historical Health Insurance Table HIB-3, children under 18 by type of coverage, 1999-2012 (Medicaid includes SCHIP)
+        url: https://www2.census.gov/programs-surveys/demo/tables/health-insurance/time-series/hib/hihistt3b.xls
+        publisher: U.S. Census Bureau
+    uncertainty:
+      verdict: probable
+      note: The survey undercounts Medicaid enrolment, and administrative counts differ, but both show a rise of millions.
+
+  - promise: bush-2004-own-health-insurance
+    verdict: indeterminate
+    as_of: 2026-11-15
+    summary: The measures disagree. The share of people with directly purchased coverage fell from 10.0% in 2004 to 9.5% in 2008, while HSA-eligible plans grew from almost none to several million people. No official series combines the two.
+    evidence:
+      - what: Historical Health Insurance Table HIB-1, coverage by type, 1999-2012 (direct purchase)
+        url: https://www2.census.gov/programs-surveys/demo/tables/health-insurance/time-series/hib/hihistt1b.xls
+        publisher: U.S. Census Bureau
+    uncertainty:
+      verdict: contested
+      note: Direct-purchase coverage gives broken; counting HSAs as owned coverage could give kept.
+
+  - promise: bush-2004-ss-keep-promise
+    verdict: kept
+    as_of: 2026-11-15
+    summary: No law in 2005-2009 cut scheduled Social Security benefits; benefits rose each year with the automatic cost-of-living adjustment. The 2005 reform plan would have spared people over 55 and was not enacted.
+    evidence:
+      - what: SSA cost-of-living adjustment history (a benefit increase every year 2005-2008)
+        url: https://www.ssa.gov/oact/cola/colaseries.html
+        publisher: Social Security Administration
+    uncertainty:
+      verdict: probable
+      note: Rests on the absence of a benefit-cutting law; none is known, but absence cannot be cited directly.
+
+  - promise: bush-2004-abstinence
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Federal abstinence education stayed funded through the term; the Title V programme was extended to June 2009.
+    evidence:
+      - what: Medicare Improvements for Patients and Providers Act of 2008 (Pub. L. 110-275), Sec. 201 (abstinence education extended to 30 June 2009)
+        url: https://www.govinfo.gov/content/pkg/PLAW-110publ275/html/PLAW-110publ275.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2008-07-15
+    uncertainty:
+      verdict: clear
+
+  # ---- labour ----------------------------------------------------------------
+
+  - promise: bush-2004-comptime-flextime
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No law let private employers offer comp-time in place of overtime pay. No such bill passed either chamber in 2005-2008.
+    attempt: none
+    evidence:
+      - what: Fair Labor Standards Act overtime rules, unchanged on comp-time for private employers during the term
+        url: https://www.dol.gov/agencies/whd/overtime
+        publisher: U.S. Department of Labor, Wage and Hour Division
+    uncertainty:
+      verdict: probable
+      note: Rests on the absence of a law and of a formal proposal in this term; a 2003 bill passed the House in the previous term.
+
+  # ---- education ---------------------------------------------------------------
+
+  - promise: bush-2004-hs-intervention
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The FY2006 budget proposed a $1.24bn High School Intervention initiative; Congress did not fund it.
+    attempt: initiated
+    evidence:
+      - what: White House fact sheet on the high school initiatives in the FY2006 budget
+        url: https://www.presidency.ucsb.edu/documents/fact-sheet-no-child-left-behind-high-quality-high-school-initiatives
+        publisher: The American Presidency Project (UCSB)
+      - what: House panel turns down Bush's high school agenda
+        url: https://www.edweek.org/policy-politics/house-panel-turns-down-bushs-high-school-agenda/2005/06
+        publisher: Education Week
+        date: 2005-06-15
+        secondary: true
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-math-science
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2005 budget law created Academic Competitiveness and National SMART Grants for students in maths and science, and the 2007 America COMPETES Act authorised new maths and science education programmes.
+    evidence:
+      - what: Deficit Reduction Act of 2005 (Pub. L. 109-171), Sec. 8003 (Academic Competitiveness Grants and National SMART Grants)
+        url: https://www.govinfo.gov/content/pkg/PLAW-109publ171/html/PLAW-109publ171.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2006-02-08
+      - what: America COMPETES Act (Pub. L. 110-69)
+        url: https://www.govinfo.gov/content/pkg/PLAW-110publ69/html/PLAW-110publ69.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2007-08-09
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-hs-exit-exam
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No federal requirement for an exam before graduation was enacted. The FY2006 budget proposed more high school testing, which Congress did not adopt.
+    attempt: initiated
+    evidence:
+      - what: White House fact sheet on the high school initiatives (state high school assessments proposal)
+        url: https://www.presidency.ucsb.edu/documents/fact-sheet-no-child-left-behind-high-quality-high-school-initiatives
+        publisher: The American Presidency Project (UCSB)
+    uncertainty:
+      verdict: probable
+      note: The proposal was for testing in more high school grades, not a graduation exam; a stricter reader would record the attempt as none.
+
+  - promise: bush-2004-pell-grants
+    verdict: kept
+    review: '2004-05 maximum Pell award of $4,050 (ed.gov; from memory).'
+    as_of: 2026-11-15
+    summary: The maximum Pell grant rose from $4,050 in 2004-05 to $4,731 in 2008-09 ($4,241 appropriated plus the $490 add-on created in 2007).
+    evidence:
+      - what: Consolidated Appropriations Act, 2008 (Pub. L. 110-161), Division G (maximum Pell grant $4,241 for 2008-09)
+        url: https://www.govinfo.gov/content/pkg/PLAW-110publ161/html/PLAW-110publ161.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2007-12-26
+      - what: College Cost Reduction and Access Act (Pub. L. 110-84), Sec. 102 (mandatory Pell add-on)
+        url: https://www.govinfo.gov/content/pkg/PLAW-110publ84/html/PLAW-110publ84.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2007-09-27
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-college-diploma
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Bachelor's degrees conferred rose from 1,399,760 in 2003-04 to 1,563,734 in 2007-08.
+    evidence:
+      - what: Digest of Education Statistics, Table 318.10 (degrees conferred by level)
+        url: https://nces.ed.gov/programs/digest/d22/tables/dt22_318.10.asp
+        publisher: National Center for Education Statistics
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-reward-teachers
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The FY2006 appropriations law created the Teacher Incentive Fund for performance-based pay in high-need schools; it was funded through the term.
+    evidence:
+      - what: Labor, HHS and Education Appropriations Act, 2006 (Pub. L. 109-149), Title II (performance-based teacher and principal compensation)
+        url: https://www.govinfo.gov/content/pkg/PLAW-109publ149/html/PLAW-109publ149.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2005-12-30
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-strict-judges
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The two justices appointed in the term, John Roberts (2005) and Samuel Alito (2006), were sitting appellate judges known for a textualist approach.
+    evidence:
+      - what: Members of the Supreme Court and dates of appointment
+        url: https://www.supremecourt.gov/about/members_text.aspx
+        publisher: Supreme Court of the United States
+    uncertainty:
+      verdict: contested
+      note: Judicial philosophy is a judgement call, and Harriet Miers, nominated in 2005 and withdrawn, had no judicial record. A reader counting nominees rather than appointees could call this partly.
+
+  # ---- security ----------------------------------------------------------------
+
+  - promise: bush-2004-train-armies
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Trained Iraqi security forces grew from about 142,000 in February 2005 to more than 600,000 by the end of 2008; Afghan forces also grew.
+    evidence:
+      - what: GAO-05-431T, Rebuilding Iraq (Iraqi security forces reported trained, February 2005)
+        url: https://www.govinfo.gov/content/pkg/GAOREPORTS-GAO-05-431T/html/GAOREPORTS-GAO-05-431T.htm
+        publisher: U.S. Government Accountability Office (via GovInfo)
+        date: 2005-03-14
+      - what: Iraq Index (Iraqi security forces by month)
+        url: https://www.brookings.edu/articles/iraq-index/
+        publisher: Brookings Institution
+        secondary: true
+    uncertainty:
+      verdict: probable
+      note: GAO judged the reported training numbers unreliable, but the growth is far larger than the doubt.
+
+  - promise: bush-2004-afghan-iraq-elections
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Iraq held national elections on 30 January and 15 December 2005; Afghanistan held parliamentary elections on 18 September 2005.
+    evidence:
+      - what: Address to the Nation on the Iraqi Elections, 30 January 2005 (Public Papers of the Presidents)
+        url: https://www.govinfo.gov/content/pkg/PPP-2005-book1/html/PPP-2005-book1-doc-pg110.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2005-01-30
+      - what: Statement on the parliamentary elections in Afghanistan
+        url: https://www.presidency.ucsb.edu/documents/statement-the-parliamentary-elections-afghanistan
+        publisher: The American Presidency Project (UCSB)
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-troops-return
+    verdict: broken
+    as_of: 2026-11-15
+    summary: About 150,000 US troops were still in Iraq and over 30,000 in Afghanistan at the deadline. In November 2008 the US-Iraq security agreement set withdrawal from Iraq by the end of 2011.
+    attempt: initiated
+    evidence:
+      - what: CRS R40682, Troop Levels in the Afghan and Iraq Wars, FY2001-FY2012
+        url: https://www.everycrsreport.com/reports/R40682.html
+        publisher: Congressional Research Service (via EveryCRSReport)
+        secondary: true
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-iraqi-troops-125k
+    verdict: indeterminate
+    review: 'An official Iraqi security forces count dated near 31 December 2004.'
+    as_of: 2026-11-15
+    summary: The official figures straddle the target. Secretary Rice told the Senate on 18 January 2005 that 120,000 Iraqi troops were trained; the Defense Department reported about 136,000 by mid-February. GAO found the counts unreliable.
+    evidence:
+      - what: GAO-05-431T, Rebuilding Iraq (reliability of reported Iraqi force numbers)
+        url: https://www.govinfo.gov/content/pkg/GAOREPORTS-GAO-05-431T/html/GAOREPORTS-GAO-05-431T.htm
+        publisher: U.S. Government Accountability Office (via GovInfo)
+        date: 2005-03-14
+    uncertainty:
+      verdict: contested
+      note: No official count dated 31 December 2004 was found. Rice's January figure gives broken; the February figure, read back, could give kept.
+
+  - promise: bush-2004-border-uavs
+    verdict: partly
+    as_of: 2026-11-15
+    summary: CBP flew its first Predator B on the southern border from October 2005. It crashed in April 2006, and no drone flew on the border until a replacement arrived later in 2006; flights then continued through the term.
+    evidence:
+      - what: NTSB brief on the 25 April 2006 Predator B accident near Nogales, Arizona
+        url: https://www.ntsb.gov/investigations/AccidentReports/Reports/AAB0703.pdf
+        publisher: National Transportation Safety Board
+        date: 2007-10-16
+      - what: CRS RS21698, Homeland Security — Unmanned Aerial Vehicles and Border Surveillance
+        url: https://www.everycrsreport.com/reports/RS21698.html
+        publisher: Congressional Research Service (via EveryCRSReport)
+        secondary: true
+    uncertainty:
+      verdict: probable
+      note: The exact length of the gaps (early 2005 and mid-2006) is not in a primary record found.
+
+  - promise: bush-2004-border-manpower
+    verdict: kept
+    review: 'Border Patrol agent counts FY2004 10,819 and FY2008 17,499 (CBP staffing tables; from memory).'
+    as_of: 2026-11-15
+    summary: Border Patrol agents rose from 10,819 in FY2004 to 17,499 in FY2008.
+    evidence:
+      - what: U.S. Border Patrol Fiscal Year Staffing Statistics, FY1992-FY2019
+        url: https://www.cbp.gov/sites/default/files/assets/documents/2020-Jan/U.S.%20Border%20Patrol%20Fiscal%20Year%20Staffing%20Statistics%20%28FY%201992%20-%20FY%202019%29_0.pdf
+        publisher: U.S. Customs and Border Protection
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2004-border-equipment
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The FY2007 homeland security appropriations created a new account for border fencing, infrastructure and technology, funded at $1.19bn, on top of existing equipment spending.
+    evidence:
+      - what: Department of Homeland Security Appropriations Act, 2007 (Pub. L. 109-295), "Border Security Fencing, Infrastructure, and Technology" ($1,187,565,000)
+        url: https://www.govinfo.gov/content/pkg/PLAW-109publ295/html/PLAW-109publ295.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2006-10-04
+    uncertainty:
+      verdict: clear

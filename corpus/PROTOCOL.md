@@ -4,16 +4,17 @@ How promises are found in a source, cut into units, described and rated for
 verifiability. The same protocol applies to every president and every source.
 Nothing in it may be adjusted for one president.
 
-The protocol has five steps:
+The protocol has six steps:
 
 1. **Screen** every sentence of the source, and record a decision for each candidate.
 2. **Include or exclude** each candidate by the rules below, giving a reason code.
 3. **Cut** included text into atomic promises.
 4. **Describe** each promise: type, theme, deadline, verifiability, uncertainty.
 5. **Link** each promise to the same commitment in other sources and terms.
+6. **Judge** each verifiable promise: kept, partly, broken, pending or indeterminate, with evidence.
 
 The output of step 1–2 is a **screening ledger** per source. The output of steps
-3–5 is `promises.yaml`. A validator checks both (see [Checks](#checks)).
+3–5 is `promises.yaml`. The output of step 6 is `verdicts.yaml`. A validator checks both (see [Checks](#checks)).
 
 ---
 
@@ -178,6 +179,81 @@ allow **it**"), or sarcasm.
 | `refines` | A sharper version of a broader promise (adds a number or date). |
 | `shared` | A different president made the same commitment (Bush 2004 and Obama 2009 on halving the deficit). |
 
+## 6. Verdict
+
+Every `high` and `medium` promise gets one verdict. Low promises and ambitions
+never get one. The verdict answers one question: **was the criterion met by the
+applied deadline?** It is judged against the record's `verifiability.criterion`
+(and, for `medium`, the judgement call in `ambiguity`), never against what the
+speaker later said the promise meant.
+
+| Verdict | When |
+|---------|------|
+| `kept` | The criterion was met by the applied deadline. For `ongoing`, it held for the whole term. |
+| `partly` | The criterion was met only in part: some of the object, a smaller amount, or only for a limited time (a measure that expires). The summary says which part is missing. |
+| `broken` | The criterion was not met by the deadline, or the opposite was done. |
+| `pending` | The deadline has not passed and the criterion is not yet met. |
+| `indeterminate` | The record does not settle it: the evidence is missing or conflicts. The summary says what is missing. |
+
+Rules, the same for every president:
+
+- **What happened, not who is to blame.** A promise that needed Congress and
+  did not pass is `broken`, even if the president fought for it. How far the
+  president got is recorded separately in `attempt` (below), so effort is
+  visible without changing the verdict.
+- **Judged at the deadline.** What happens after the applied deadline does not
+  change the verdict (a law repealed later still counts as kept; a law passed
+  in a later term does not). For a term still running, a promise already met
+  is `kept`; one not yet met is `pending`. A `pending` verdict is reviewed when
+  its deadline passes.
+- **Conditional promises** ("when Congress sends me a bill, I will sign it") are
+  judged only if the condition arose; if it never did, the verdict is
+  `indeterminate`.
+- **An `action` counts once done.** Signing, enacting, ordering or deploying is
+  enough; the act's later effects are not part of the verdict. A law counts
+  when it is enacted, even if it takes effect after the deadline.
+- **An `outcome`** is judged on the official figure for the deadline (the last
+  full year or month before it), with the series named in the evidence.
+- **Partial delivery** is `partly`, not `kept`, even if the gap looks small.
+  Rounding up is the most common way a rubric drifts between presidents.
+
+### Attempt
+
+Recorded for every `broken` verdict: how far the president got.
+
+| Attempt | Meaning |
+|---------|---------|
+| `none` | No formal step on the record. |
+| `initiated` | A formal executive step: a bill or budget proposal sent to Congress, an order, a commission, a formal request. |
+| `passed-chamber` | A bill carrying it passed at least one chamber of Congress. |
+
+### Evidence
+
+Every verdict cites at least one piece of evidence, each with a link. Prefer
+primary records: the statute (Congress.gov, govinfo), the Federal Register, an
+agency's own data or announcement, the president's own papers. Use secondary
+sources (CRS, news) only for what no primary record shows, and mark them
+`secondary: true`.
+
+A verdict that relies on the absence of something ("no law was enacted")
+cites where one would appear and, where possible, a record of the attempt
+that failed.
+
+### Under review
+
+Some evidence sits on official sites that cannot always be read directly, so
+a figure may have been taken from a secondary report or from memory. Such a
+verdict carries `review`: one line naming the exact figure or page to be
+confirmed. The site shows it as **under review**, with the provisional
+verdict beside it, and leaves it out of the kept/partly/broken counts until
+the figure is confirmed and `review` is removed.
+
+### Uncertainty
+
+`uncertainty.verdict`: `clear` · `probable` · `contested`, with a note when not
+`clear`. Use `contested` when a careful reader could reach another verdict
+from the same evidence, and say which one.
+
 ---
 
 ## Records
@@ -227,6 +303,28 @@ Both kinds share one record shape and one file; `kind` tells them apart.
 Quotes are exact: the whole cited span or a contiguous part of it, with
 whitespace normalised. No ellipses. To skip text, cite two occurrences.
 
+### Verdict (`verdicts.yaml`)
+
+One record per `high` or `medium` promise of the term, in its own file, so
+that extraction and judgement can be reviewed apart.
+
+```yaml
+protocol: 1
+verdicts:
+  - promise: bush-2000-death-tax
+    verdict: partly                     # kept | partly | broken | pending | indeterminate
+    as_of: 2026-11-15                   # when the verdict was last checked
+    summary: The 2001 tax law cut the estate tax each year and repealed it for 2010 only; it was still in force at the deadline.
+    # attempt: none | initiated | passed-chamber  (required when broken)
+    # review: what must still be confirmed      (optional; shown as under review)
+    evidence:
+      - what: Economic Growth and Tax Relief Reconciliation Act of 2001, Title V (phase-down, repeal in 2010, sunset after 2010)
+        url: https://www.congress.gov/bill/107th-congress/house-bill/1836
+        publisher: Congress.gov
+        date: 2001-06-07
+    uncertainty: { verdict: clear }
+```
+
 ## Checks
 
 The validator (`npm run validate`, run in CI) fails when:
@@ -237,10 +335,13 @@ The validator (`npm run validate`, run in CI) fails when:
 - a debate ref falls outside the president's turns;
 - an id is duplicated, a theme is not in the list, or a required field is missing;
 - `deadline.applied` is missing, or a `high`/`medium` promise has no criterion;
-- a `medium` promise has no `ambiguity`, or a non-`clear` uncertainty has no note.
+- a `medium` promise has no `ambiguity`, or a non-`clear` uncertainty has no note;
+- a verdict names a promise that is missing, `low` or an ambition, or a promise has two verdicts;
+- a `review` is empty, a verdict has no evidence, an evidence item has no `https` link, or a `broken` verdict has no `attempt`;
+- a verdict is `pending` although its deadline is before `as_of`.
 
-Terms not yet re-extracted (legacy `promises.yaml` without `protocol: 1`) get
-the id and ref checks only; their quote problems are reported as warnings.
+A term's verdicts are complete when every `high` and `medium` promise has one;
+the validator reports missing ones as warnings until then.
 
 ## Repeatability
 

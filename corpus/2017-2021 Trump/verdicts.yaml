@@ -1,0 +1,750 @@
+# Verdicts for Donald Trump's 2017-2021 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2021-01-20
+# unless the promise states another.
+#
+# Complete: high 6/6, medium 41/41.
+
+protocol: 1
+verdicts:
+
+  # ---- crime, border and immigration ------------------------------------------
+
+  - promise: trump-2016-restore-law-and-order
+    verdict: broken
+    review: 'Violent crime rate 2016 397.5 vs 2020 398.5 per 100,000 (FBI; from search snippets, margin 0.3%).'
+    as_of: 2026-11-16
+    summary: The national violent crime rate was 397.5 per 100,000 in 2016 and 398.5 in 2020, the last full year of the term. It fell in 2017-2019 (to 380.8) and rose again in 2020.
+    attempt: initiated
+    evidence:
+      - what: Congressional Research Service, "Violent Crime Trends, 1990-2021" (IF12281), FBI UCR rates for 2016, 2019 and 2020
+        url: https://crsreports.congress.gov/product/pdf/IF/IF12281
+        publisher: Congressional Research Service
+        date: 2022-12-12
+        secondary: true
+      - what: FBI, "FBI Releases 2020 Crime Statistics"
+        url: https://www.fbi.gov/news/press-releases/press-releases/fbi-releases-2020-crime-statistics
+        publisher: Federal Bureau of Investigation
+        date: 2021-09-27
+      - what: Executive Order 13776, Task Force on Crime Reduction and Public Safety
+        url: https://www.federalregister.gov/executive-order/13776
+        publisher: Federal Register
+        date: 2017-02-09
+    uncertainty:
+      verdict: contested
+      note: The 2020 rate is only 0.3% above 2016 in the revised series. The FBI's first 2020 release gave 387.8, against 386.3 first published for 2016, so it is also higher there. A reader who judges by 2019, before the pandemic year, would call this kept.
+
+  - promise: trump-2016-border-wall
+    verdict: partly
+    as_of: 2026-11-16
+    summary: CBP counted about 458 miles of new wall by January 2021, but most replaced older fencing. In places with no barrier before, about 52 miles of primary and 33 miles of secondary wall were built. Most of the unfenced border stayed unfenced.
+    evidence:
+      - what: CBP/USACE Border Wall Status, 22 January 2021 (table "In locations where no barriers previously existed", completed)
+        url: https://cdn.factcheck.org/UploadedFiles/CBP-Border-Wall-Status-Paper_as-of-01222021-FINAL-003.pdf
+        publisher: U.S. Customs and Border Protection (copy hosted by FactCheck.org)
+        date: 2021-01-22
+    uncertainty:
+      verdict: contested
+      note: The criterion sets no length. A reader who counts any new barrier where none stood would call this kept; one who counts the 458 miles of replacement as building "a wall" would too. A reader who expects most of the unfenced border to be closed would call it broken.
+
+  - promise: trump-2016-end-catch-and-release
+    verdict: partly
+    review: 'Family members released in FY2019; about 70,000 returned under MPP (DHS/CBP; from memory).'
+    as_of: 2026-11-16
+    summary: Release pending hearings was cut back but did not end. From 2019, about 70,000 asylum seekers were returned to Mexico to wait for their hearings, and from March 2020 most people caught at the border were expelled under a public-health order. In FY2019 several hundred thousand family members were still released into the country, and unaccompanied children kept being released to sponsors, as the law requires.
+    evidence:
+      - what: DHS, Migrant Protection Protocols (policy memorandum, 25 January 2019)
+        url: https://www.dhs.gov/news/2019/01/24/migrant-protection-protocols
+        publisher: U.S. Department of Homeland Security
+        date: 2019-01-24
+      - what: CDC order suspending entry of certain persons (Title 42), 85 FR 17060
+        url: https://www.federalregister.gov/documents/2020/03/26/2020-06327/notice-of-order-under-sections-362-and-365-of-the-public-health-service-act-suspending-introduction-of-certain-persons-from
+        publisher: Federal Register
+        date: 2020-03-26
+    uncertainty:
+      verdict: contested
+      note: The release counts are from memory (DHS and CBP pages block scripts). A reader who judges only the state at the deadline, when most crossers were expelled, could call this kept; one who counts the FY2019 releases could call it broken.
+
+  - promise: trump-2016-illegal-crossings-down
+    verdict: kept
+    review: 'Southwest Border Patrol apprehensions and expulsions FY2016 408,870 vs FY2020 400,651 (CBP; from memory).'
+    as_of: 2026-11-16
+    summary: Border Patrol apprehensions and expulsions at the southwest border were 400,651 in FY2020, the last full fiscal year of the term, against 408,870 in FY2016. In between they peaked at 851,508 in FY2019.
+    evidence:
+      - what: CBP, Southwest Land Border Encounters (U.S. Border Patrol, FY2016-FY2020)
+        url: https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters
+        publisher: U.S. Customs and Border Protection
+        date: 2021-01-08
+      - what: U.S. Border Patrol, Southwest Border Sectors, total apprehensions by fiscal year (FY1960-FY2020)
+        url: https://www.cbp.gov/sites/default/files/assets/documents/2021-Aug/U.S.%20Border%20Patrol%20Fiscal%20Year%20Southwest%20Border%20Sector%20Apprehensions%20%28FY%201960%20-%20FY%202020%29_0.pdf
+        publisher: U.S. Customs and Border Protection
+        date: 2021-08-01
+    uncertainty:
+      verdict: probable
+      note: The FY figures are from memory (CBP blocks scripts). The FY2020 fall is small and came with the pandemic; from March 2020 expulsions replaced arrests, and repeat crossings rose, so FY2020 counts events rather than people.
+
+  - promise: trump-2016-secure-border
+    verdict: indeterminate
+    review: 'Estimated unlawful entries FY2016 vs FY2020 (DHS Border Security Metrics Report).'
+    as_of: 2026-11-16
+    summary: DHS publishes an estimate of total unlawful entries (caught plus got-aways) in its Border Security Metrics Reports, but the FY2016 and FY2020 estimates could not be read for this verdict. Apprehensions alone fell slightly (see illegal-crossings-down).
+    evidence:
+      - what: DHS Office of Immigration Statistics, Border Security Metrics Report (estimated unlawful entries between ports)
+        url: https://www.dhs.gov/immigration-statistics/border-security-metrics-report
+        publisher: U.S. Department of Homeland Security
+        date: 2022-07-01
+    uncertainty:
+      verdict: contested
+      note: Missing evidence, not conflict. To be settled once the DHS estimates for FY2016 and FY2020 are read.
+
+  - promise: trump-2016-visa-overstays
+    verdict: indeterminate
+    review: 'Suspected in-country overstay rate FY2016 vs FY2020, same visa classes (DHS Entry/Exit Overstay Reports).'
+    as_of: 2026-11-16
+    summary: DHS's overstay reports changed their coverage between FY2016 and FY2020, and in FY2020 travel collapsed with the pandemic. The FY2020 report gives a total overstay rate of 1.48%; a comparable FY2016 rate could not be read for this verdict.
+    evidence:
+      - what: DHS, Fiscal Year 2020 Entry/Exit Overstay Report
+        url: https://www.dhs.gov/sites/default/files/2022-08/22_0802_plcy_fy20-entry-exit-overstay-report.pdf
+        publisher: U.S. Department of Homeland Security
+        date: 2021-09-30
+      - what: DHS, Fiscal Year 2016 Entry/Exit Overstay Report
+        url: https://www.dhs.gov/sites/default/files/publications/Entry%20and%20Exit%20Overstay%20Report%2C%20Fiscal%20Year%202016.pdf
+        publisher: U.S. Department of Homeland Security
+        date: 2017-05-22
+    uncertainty:
+      verdict: contested
+      note: DHS pages block scripts; the FY2020 rate comes from search snippets. To be settled by comparing the suspected in-country rate for the same visa classes in both reports.
+
+  - promise: trump-2016-deport-criminal-aliens
+    verdict: partly
+    review: 'ICE removals of people with criminal convictions FY2016-FY2020 (from memory).'
+    as_of: 2026-11-16
+    summary: ICE removals of people with criminal convictions were about 139,000 in FY2016. They fell to about 128,000 in FY2017, rose above the FY2016 level in FY2018 (145,262) and FY2019 (about 150,000), and fell to about 104,000 in FY2020.
+    evidence:
+      - what: ICE Enforcement and Removal Operations Report, Fiscal Year 2019
+        url: https://www.ice.gov/sites/default/files/documents/Document/2019/eroReportFY2019.pdf
+        publisher: U.S. Immigration and Customs Enforcement
+        date: 2019-12-11
+      - what: ICE Enforcement and Removal Operations Report, Fiscal Year 2020
+        url: https://www.ice.gov/doclib/news/library/reports/annual-report/iceReportFY2020.pdf
+        publisher: U.S. Immigration and Customs Enforcement
+        date: 2020-12-23
+    uncertainty:
+      verdict: contested
+      note: Counts are from memory (ICE blocks scripts). The criterion names no year. A reader who takes the best year would call this kept; one who takes the last full year (FY2020, the pandemic year) would call it broken.
+
+  - promise: trump-2016-speed-up-legal-immigration
+    verdict: broken
+    review: 'Naturalization (N-400) median processing time FY2016 about 5.6 vs FY2020 about 8.6 months (USCIS; from memory).'
+    as_of: 2026-11-16
+    summary: Processing got slower. USCIS's median time for naturalization applications rose from about 5.6 months in FY2016 to about 8.6 months in FY2020, and green-card applications also took longer.
+    attempt: none
+    evidence:
+      - what: USCIS, Historical National Median Processing Time for all USCIS offices (FY2016-FY2020)
+        url: https://egov.uscis.gov/processing-times/historic-pt
+        publisher: U.S. Citizenship and Immigration Services
+        date: 2021-01-31
+    uncertainty:
+      verdict: probable
+      note: The figures are from memory; the USCIS page needs JavaScript. The direction is not in doubt.
+
+  - promise: trump-2016-stop-terrorism-at-home
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Deadly jihadist attacks took place in the United States during the term, including the New York truck attack of 31 October 2017 (eight killed) and the Pensacola naval air station shooting of 6 December 2019 (three killed), which the FBI tied to al-Qaeda in the Arabian Peninsula.
+    attempt: initiated
+    evidence:
+      - what: Attorney General Barr and FBI Director Wray announce significant developments in the investigation of the Naval Air Station Pensacola shooting
+        url: https://www.justice.gov/opa/pr/attorney-general-william-p-barr-and-fbi-director-christopher-wray-announce-significant
+        publisher: U.S. Department of Justice
+        date: 2020-05-18
+      - what: Executive Order 13780, Protecting the Nation From Foreign Terrorist Entry Into the United States
+        url: https://www.federalregister.gov/executive-order/13780
+        publisher: Federal Register
+        date: 2017-03-06
+    uncertainty:
+      verdict: clear
+      note: The New York attack is cited from memory; the attacker was convicted of terrorism-related murder in 2023.
+
+  # ---- trade ------------------------------------------------------------------
+
+  - promise: trump-2016-fix-trade-deficit
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The goods trade deficit grew, from $762bn in 2015 to $913bn in 2020 (balance-of-payments basis). It was already larger in 2019 ($857bn), before the pandemic.
+    attempt: initiated
+    evidence:
+      - what: Trade Balance, Goods, Balance of Payments Basis (BOPGTB), annual sums 2015, 2019, 2020
+        url: https://fred.stlouisfed.org/series/BOPGTB
+        publisher: U.S. Census Bureau and Bureau of Economic Analysis (via FRED)
+        date: 2026-11-16
+      - what: Section 301 action on China's acts, policies and practices (tariffs), 83 FR 28710
+        url: https://www.federalregister.gov/documents/2018/06/20/2018-13248/notice-of-action-and-request-for-public-comment-concerning-proposed-determination-of-action-pursuant
+        publisher: Federal Register
+        date: 2018-06-20
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-offshoring-consequences
+    verdict: broken
+    as_of: 2026-11-16
+    summary: No law or rule penalising companies for moving jobs abroad was adopted. The 2017 tax law added a minimum tax on foreign earnings (GILTI) and a base-erosion tax, which target profit shifting, not the relocation of jobs.
+    attempt: none
+    evidence:
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97), sections 14201 (GILTI) and 14401 (base erosion)
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+    uncertainty:
+      verdict: contested
+      note: A reader who counts GILTI, or tariffs on goods made abroad, as consequences for moving production would call this partly. The proposed "border tax" on relocating companies was never sent to Congress.
+
+  - promise: trump-2016-no-tpp
+    verdict: kept
+    as_of: 2026-11-16
+    summary: On 23 January 2017 the President withdrew the United States as a signatory of the Trans-Pacific Partnership. The agreement was never ratified.
+    evidence:
+      - what: Presidential Memorandum, Withdrawal of the United States From the Trans-Pacific Partnership Negotiations and Agreement
+        url: https://www.federalregister.gov/documents/2017/01/25/2017-01845/withdrawal-of-the-united-states-from-the-trans-pacific-partnership-negotiations-and-agreement
+        publisher: Federal Register
+        date: 2017-01-23
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-bilateral-deals
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The new trade agreements of the term were bilateral, with Japan (2019) and China (Phase One, 2020), plus an amended agreement with Korea. The one multilateral agreement, USMCA, replaced NAFTA with the same partners.
+    evidence:
+      - what: Economic and Trade Agreement between the United States and China (Phase One)
+        url: https://ustr.gov/countries-regions/china-mongolia-taiwan/peoples-republic-china/phase-one-trade-agreement/text
+        publisher: Office of the U.S. Trade Representative
+        date: 2020-01-15
+      - what: United States-Mexico-Canada Agreement Implementation Act (Pub. L. 116-113)
+        url: https://www.govinfo.gov/content/pkg/PLAW-116publ113/html/PLAW-116publ113.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2020-01-29
+    uncertainty:
+      verdict: contested
+      note: USMCA added new chapters (digital trade, labour). A reader who counts that as new scope would call this partly.
+
+  - promise: trump-2016-enforce-trade-tariffs
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Tariffs were used as an enforcement tool throughout the term. After a Section 301 finding that China's technology-transfer and IP practices were unfair, tariffs were placed on about $370bn of Chinese imports. Steel and aluminium tariffs followed under Section 232, and antidumping and countervailing duty orders increased.
+    evidence:
+      - what: Section 301 action on China, 83 FR 28710
+        url: https://www.federalregister.gov/documents/2018/06/20/2018-13248/notice-of-action-and-request-for-public-comment-concerning-proposed-determination-of-action-pursuant
+        publisher: Federal Register
+        date: 2018-06-20
+      - what: Proclamation 9705, Adjusting Imports of Steel Into the United States
+        url: https://www.federalregister.gov/documents/2018/03/15/2018-05478/adjusting-imports-of-steel-into-the-united-states
+        publisher: Federal Register
+        date: 2018-03-08
+    uncertainty:
+      verdict: clear
+      note: The steel tariffs rest on national security (Section 232), not on a finding of a trade violation; the Section 301 tariffs alone meet the criterion.
+
+  - promise: trump-2016-china-ip-theft
+    verdict: broken
+    as_of: 2026-11-16
+    summary: USTR's 2020 Special 301 Report kept China on the Priority Watch List and still described trade-secret theft and forced technology transfer. The Phase One agreement (January 2020) added IP commitments, but USTR did not report that the theft had stopped.
+    attempt: initiated
+    evidence:
+      - what: USTR, 2020 Special 301 Report (China, Priority Watch List)
+        url: https://ustr.gov/sites/default/files/2020_Special_301_Report.pdf
+        publisher: Office of the U.S. Trade Representative
+        date: 2020-04-29
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-china-dumping
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Antidumping duty orders on Chinese products were in force throughout the term, and many new ones were added (for example on steel products, aluminium foil and wire).
+    evidence:
+      - what: USITC, Antidumping and countervailing duty orders in place (list by country and product)
+        url: https://www.usitc.gov/trade_remedy/documents/orders.xls
+        publisher: U.S. International Trade Commission
+        date: 2026-11-16
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-china-currency
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Treasury designated China a currency manipulator in August 2019 and lifted the designation in January 2020. Treasury's December 2020 report did not find China intervening to weaken its currency.
+    evidence:
+      - what: Treasury designates China as a currency manipulator (press release sm751)
+        url: https://home.treasury.gov/news/press-releases/sm751
+        publisher: U.S. Department of the Treasury
+        date: 2019-08-05
+      - what: Treasury, Macroeconomic and Foreign Exchange Policies of Major Trading Partners of the United States, December 2020
+        url: https://home.treasury.gov/system/files/206/December-2020-FX-Report-FINAL.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2020-12-16
+    uncertainty:
+      verdict: contested
+      note: Treasury's reports also criticise China's lack of transparency about intervention. A reader who doubts China had stopped would call this partly (Treasury acted, but the end of intervention is not shown).
+
+  - promise: trump-2016-renegotiate-trade-deals
+    verdict: kept
+    as_of: 2026-11-16
+    summary: NAFTA was replaced by USMCA, the Korea agreement was amended (2018), and a trade agreement with China was signed in January 2020.
+    evidence:
+      - what: United States-Mexico-Canada Agreement Implementation Act (Pub. L. 116-113)
+        url: https://www.govinfo.gov/content/pkg/PLAW-116publ113/html/PLAW-116publ113.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2020-01-29
+      - what: Economic and Trade Agreement between the United States and China (Phase One)
+        url: https://ustr.gov/countries-regions/china-mongolia-taiwan/peoples-republic-china/phase-one-trade-agreement/text
+        publisher: Office of the U.S. Trade Representative
+        date: 2020-01-15
+    uncertainty:
+      verdict: clear
+      note: Not every agreement was renegotiated ("totally" is not part of the criterion).
+
+  - promise: trump-2016-renegotiate-nafta
+    verdict: kept
+    as_of: 2026-11-16
+    summary: NAFTA was renegotiated into the United States-Mexico-Canada Agreement, signed in November 2018, amended in December 2019 and enacted in January 2020.
+    evidence:
+      - what: United States-Mexico-Canada Agreement Implementation Act (Pub. L. 116-113)
+        url: https://www.govinfo.gov/content/pkg/PLAW-116publ113/html/PLAW-116publ113.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2020-01-29
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-more-free-trade
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Tariffs went up. Customs duties were 1.4% of goods imports in 2016 and 2.4% in 2020, after the tariffs on China, steel and aluminium.
+    attempt: none
+    evidence:
+      - what: Federal government current receipts, customs duties (B235RC1Q027SBEA), and imports of goods (IEAMGSN), annual 2016 and 2020
+        url: https://fred.stlouisfed.org/series/B235RC1Q027SBEA
+        publisher: Bureau of Economic Analysis (via FRED)
+        date: 2026-11-16
+    uncertainty:
+      verdict: clear
+      note: The opposite was done by the President's own acts, so the attempt is none, as for other promises reversed by the president's own act. The Japan and Phase One agreements cut some tariffs, far less than the new ones raised.
+
+  # ---- jobs, economy and taxes --------------------------------------------------
+
+  - promise: trump-2016-bring-jobs-back
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Manufacturing employment was 12.33 million in January 2017 and 12.15 million in December 2020. It had risen to about 12.8 million before the pandemic.
+    attempt: initiated
+    evidence:
+      - what: All Employees, Manufacturing (MANEMP), BLS Current Employment Statistics
+        url: https://fred.stlouisfed.org/series/MANEMP
+        publisher: U.S. Bureau of Labor Statistics (via FRED)
+        date: 2026-11-16
+    uncertainty:
+      verdict: probable
+      note: Judged at the deadline. A reader who judges by January 2020, before the pandemic, would call this kept.
+
+  - promise: trump-2016-making-things-again
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Manufacturing output (industrial production index) averaged 99.5 in 2016 and was 96.9 in December 2020. It was higher in 2018 and 2019, then fell in 2020.
+    attempt: initiated
+    evidence:
+      - what: Industrial Production, Manufacturing (IPMAN), Federal Reserve G.17
+        url: https://fred.stlouisfed.org/series/IPMAN
+        publisher: Board of Governors of the Federal Reserve System (via FRED)
+        date: 2026-11-16
+    uncertainty:
+      verdict: contested
+      note: Judged at the deadline, after the 2020 fall. A reader who judges by 2018 or 2019 would call this kept.
+
+  - promise: trump-2016-miners-steelworkers-back
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Coal-mining employment fell from 51,000 in January 2017 to 38,200 in December 2020. Primary-metals employment, the BLS group that includes steel mills, fell from 368,100 to 345,000.
+    attempt: initiated
+    evidence:
+      - what: All Employees, Coal Mining (CES1021210001)
+        url: https://fred.stlouisfed.org/series/CES1021210001
+        publisher: U.S. Bureau of Labor Statistics (via FRED)
+        date: 2026-11-16
+      - what: All Employees, Primary Metals (CES3133100001)
+        url: https://fred.stlouisfed.org/series/CES3133100001
+        publisher: U.S. Bureau of Labor Statistics (via FRED)
+        date: 2026-11-16
+      - what: Proclamation 9705, Adjusting Imports of Steel Into the United States
+        url: https://www.federalregister.gov/documents/2018/03/15/2018-05478/adjusting-imports-of-steel-into-the-united-states
+        publisher: Federal Register
+        date: 2018-03-08
+    uncertainty:
+      verdict: clear
+      note: The steel-mill series itself (NAICS 3311) was not read; coal mining alone settles the verdict.
+
+  - promise: trump-2016-gdp-growth
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Annual real GDP growth never reached 4 percent. It was 2.5% in 2017, 3.0% in 2018, 2.6% in 2019 and -2.1% in 2020.
+    attempt: passed-chamber
+    evidence:
+      - what: Real Gross Domestic Product, percent change from preceding year (A191RL1A225NBEA)
+        url: https://fred.stlouisfed.org/series/A191RL1A225NBEA
+        publisher: Bureau of Economic Analysis (via FRED)
+        date: 2026-11-16
+    uncertainty:
+      verdict: clear
+      note: Current vintage. The attempt is passed-chamber because the 2017 tax law, presented as raising growth, was enacted.
+
+  - promise: trump-2016-cut-taxes
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Tax Cuts and Jobs Act, signed in December 2017, cut individual and business taxes. The Joint Committee on Taxation scored it as reducing revenue by about $1.5 trillion over ten years.
+    evidence:
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97)
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+      - what: Joint Committee on Taxation, estimated budget effects of the conference agreement for H.R. 1 (JCX-67-17)
+        url: https://www.jct.gov/publications/2017/jcx-67-17/
+        publisher: Joint Committee on Taxation
+        date: 2017-12-18
+    uncertainty:
+      verdict: clear
+      note: Most individual cuts expire after 2025; they were in force at the deadline.
+
+  - promise: trump-2016-cut-business-taxes
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The Tax Cuts and Jobs Act cut the corporate income tax rate from 35% to 21% from 2018, permanently.
+    evidence:
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97), section 13001
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-middle-income-tax-relief
+    verdict: kept
+    review: 'Average 2018 tax cut for the middle quintile (TPC/JCT; about $900, from memory).'
+    as_of: 2026-11-16
+    summary: Under the Tax Cuts and Jobs Act, the middle fifth of households paid on average about $900 less federal tax in 2018, a cut of about 1.6% of after-tax income.
+    evidence:
+      - what: Tax Policy Center, Distributional Analysis of the Conference Agreement for the Tax Cuts and Jobs Act
+        url: https://www.taxpolicycenter.org/publications/distributional-analysis-conference-agreement-tax-cuts-and-jobs-act
+        publisher: Urban-Brookings Tax Policy Center
+        date: 2017-12-18
+        secondary: true
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97)
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+    uncertainty:
+      verdict: probable
+      note: The criterion sets no size, so a modest average cut meets it. The JCT published comparable tables; the TPC figure is the most cited.
+
+  - promise: trump-2016-simplify-taxes
+    verdict: kept
+    review: 'Share of returns itemizing, tax years 2017 and 2018 (IRS SOI; about 31% and 11%, from memory).'
+    as_of: 2026-11-16
+    summary: Both measures fell. With the larger standard deduction, the share of returns that itemize dropped from about 31% (2017) to about 11% (2018). The IRS's estimated average time to file a Form 1040 fell from 13 hours (2016 returns) to 12 hours (2020 returns); the estimated average cost rose from $210 to $230 in nominal terms, about flat after inflation.
+    evidence:
+      - what: IRS, 2016 Form 1040 Instructions, "Estimates of Taxpayer Burden"
+        url: https://www.irs.gov/pub/irs-prior/i1040gi--2016.pdf
+        publisher: Internal Revenue Service
+        date: 2017-01-01
+      - what: IRS, 2020 Form 1040 and 1040-SR Instructions, "Estimates of Taxpayer Burden"
+        url: https://www.irs.gov/pub/irs-prior/i1040gi--2020.pdf
+        publisher: Internal Revenue Service
+        date: 2021-01-01
+      - what: IRS Statistics of Income, individual returns by type of deduction (tax years 2017 and 2018)
+        url: https://www.irs.gov/statistics/soi-tax-stats-individual-statistical-tables-by-size-of-adjusted-gross-income
+        publisher: Internal Revenue Service
+        date: 2020-09-01
+    uncertainty:
+      verdict: probable
+      note: The itemizing shares are from memory. "Greatly simplified for everyone" asks more than the criterion; the time burden fell by one hour.
+
+  - promise: trump-2016-end-regulation
+    verdict: kept
+    as_of: 2026-11-16
+    summary: OIRA's final accounting under Executive Order 13771 counts 538 deregulatory and 97 significant regulatory actions in FY2017-2020, with net cost savings of about $199bn (present value).
+    evidence:
+      - what: OIRA, EO 13771 Final Accounting for Fiscal Year 2020
+        url: https://www.reginfo.gov/public/pdf/eo13771/EO_13771_Final_Accounting_for_Fiscal_Year_2020.pdf
+        publisher: Office of Information and Regulatory Affairs (OMB)
+        date: 2021-01-15
+    uncertainty:
+      verdict: contested
+      note: OIRA counts only actions under the order and leaves out some costly rules. GW Regulatory Studies found the FY2020 savings came almost entirely from one rule (vehicle fuel economy) and net costs without it. A reader who doubts OIRA's accounting could call this indeterminate.
+
+  - promise: trump-2016-welfare-to-work
+    verdict: kept
+    review: 'SNAP and TANF recipients, January 2017 vs December 2020 (USDA FNS, HHS ACF; partly from memory).'
+    as_of: 2026-11-16
+    summary: Both caseloads were lower at the end of the term. SNAP served about 42.6 million people in January 2017 and about 41.4 million in November 2020, after a pandemic rise from 37 million. TANF recipients fell from about 2.7 million to about 2.1 million.
+    evidence:
+      - what: USDA FNS, SNAP Data Tables (national persons participating, monthly)
+        url: https://www.fns.usda.gov/pd/supplemental-nutrition-assistance-program-snap
+        publisher: USDA Food and Nutrition Service
+        date: 2021-04-09
+      - what: HHS ACF, TANF caseload data 2017 and 2020
+        url: https://www.acf.hhs.gov/ofa/data/tanf-caseload-data-2020
+        publisher: U.S. Department of Health and Human Services
+        date: 2021-06-01
+    uncertainty:
+      verdict: probable
+      note: The monthly figures are from memory and a news report (FNS and ACF pages block scripts). The SNAP margin is small; SNAP rose again in 2021.
+
+  - promise: trump-2016-repatriate-offshore
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Dividends and withdrawals from US companies' foreign affiliates totalled about $1.6 trillion in 2018-2020 (about $851bn in 2018, $396bn in 2019 and $342bn in 2020). That includes the usual yearly flow, so the money brought home because of the tax law was less. Either way it falls well short of $2.5 trillion.
+    attempt: passed-chamber
+    evidence:
+      - what: BEA, U.S. International Transactions, Fourth Quarter and Year 2020, Table 4.2 (direct investment abroad, dividends and withdrawals, 2019 and 2020)
+        url: https://www.bea.gov/sites/default/files/2021-03/trans420.pdf
+        publisher: Bureau of Economic Analysis
+        date: 2021-03-23
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97), section 14103 (deemed repatriation)
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+    uncertainty:
+      verdict: clear
+      note: The 2019 and 2020 totals are from BEA's release; the 2018 total is from a news report. The attempt is passed-chamber because the enacted tax law aimed at it.
+
+  # ---- energy and infrastructure ------------------------------------------------
+
+  - promise: trump-2016-lift-energy-restrictions
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The federal coal-leasing moratorium was lifted (March 2017), the Clean Power Plan was repealed (2019), the 2017 tax law opened part of the Arctic refuge to drilling, and the Keystone XL and Dakota Access pipelines were permitted.
+    evidence:
+      - what: Interior Secretarial Order 3348, Concerning the Federal Coal Moratorium
+        url: https://www.doi.gov/sites/doi.gov/files/uploads/so_3348_coal_moratorium.pdf
+        publisher: U.S. Department of the Interior
+        date: 2017-03-29
+      - what: Repeal of the Clean Power Plan; Affordable Clean Energy rule, 84 FR 32520
+        url: https://www.federalregister.gov/documents/2019/07/08/2019-13507/repeal-of-the-clean-power-plan-emission-guidelines-for-greenhouse-gas-emissions-from-existing
+        publisher: Federal Register
+        date: 2019-07-08
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97), section 20001 (ANWR oil and gas program)
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-rebuild-infrastructure
+    verdict: kept
+    as_of: 2026-11-16
+    summary: No major infrastructure law was enacted; the February 2018 plan did not pass. Federal grants for highways and airports rose from $46.4bn in FY2016 to $51.6bn in FY2020, about 1% more after inflation (OMB's deflator for capital grants).
+    evidence:
+      - what: OMB Historical Tables, Table 9.6, Composition of Outlays for Grants for Major Public Physical Capital Investment (highways, airports)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2022-TAB/xls/BUDGET-2022-TAB-10-6.xlsx
+        publisher: Office of Management and Budget (via GovInfo)
+        date: 2021-05-28
+      - what: OMB Historical Tables, Table 9.2, physical capital grants in current and constant (FY2012) dollars
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2022-TAB/xls/BUDGET-2022-TAB-10-2.xlsx
+        publisher: Office of Management and Budget (via GovInfo)
+        date: 2021-05-28
+      - what: Legislative Outline for Rebuilding Infrastructure in America
+        url: https://trumpwhitehouse.archives.gov/wp-content/uploads/2018/02/INFRASTRUCTURE-211.pdf
+        publisher: The White House (archived)
+        date: 2018-02-12
+    uncertainty:
+      verdict: contested
+      note: The criterion is met only through its spending branch, by a small real rise that largely follows the FAST Act of 2015. A reader who requires a major programme would call this broken (attempt initiated). Same series as obama-2012-war-savings-infrastructure, which had a real fall.
+
+  # ---- education, health and veterans ---------------------------------------------
+
+  - promise: trump-2016-school-choice
+    verdict: partly
+    as_of: 2026-11-16
+    summary: The 2017 tax law let families use 529 savings plans tax-free for up to $10,000 a year of K-12 private-school tuition. That is a tax benefit that follows the child, but it is not aimed at children in failing schools. The proposed federal tax-credit scholarships were not enacted.
+    evidence:
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97), section 11032 (529 accounts for elementary and secondary tuition)
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+    uncertainty:
+      verdict: contested
+      note: The ambiguity accepts tax benefits that follow the child, so a reader could call this kept. One who requires help for children in failing schools would call it broken.
+
+  - promise: trump-2016-repeal-obamacare
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The Affordable Care Act was not repealed. The House passed the American Health Care Act in May 2017; the Senate rejected repeal in July 2017. The 2017 tax law set the individual-mandate penalty to zero from 2019.
+    attempt: passed-chamber
+    evidence:
+      - what: H.R. 1628, American Health Care Act of 2017 (passed House 4 May 2017)
+        url: https://www.congress.gov/bill/115th-congress/house-bill/1628
+        publisher: Congress.gov
+        date: 2017-05-04
+      - what: Tax Cuts and Jobs Act (Pub. L. 115-97), section 11081 (mandate penalty reduced to zero)
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2017-12-22
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-replace-obamacare
+    verdict: broken
+    as_of: 2026-11-16
+    summary: No law replaced the ACA's marketplaces and subsidies. The House-passed American Health Care Act would have, but it did not pass the Senate.
+    attempt: passed-chamber
+    evidence:
+      - what: H.R. 1628, American Health Care Act of 2017 (passed House 4 May 2017)
+        url: https://www.congress.gov/bill/115th-congress/house-bill/1628
+        publisher: Congress.gov
+        date: 2017-05-04
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-veterans-choice
+    verdict: kept
+    as_of: 2026-11-16
+    summary: The VA MISSION Act of June 2018 lets veterans use community doctors when VA cannot meet access standards. From June 2019 these were a 20-day wait (28 days for specialists) or a 30- or 60-minute drive.
+    evidence:
+      - what: VA MISSION Act of 2018 (Pub. L. 115-182), section 101
+        url: https://www.govinfo.gov/content/pkg/PLAW-115publ182/html/PLAW-115publ182.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2018-06-06
+    uncertainty:
+      verdict: clear
+      note: Access is subject to wait and drive-time standards, which the ambiguity accepts.
+
+  # ---- defence and foreign policy -------------------------------------------------
+
+  - promise: trump-2016-defeat-isis
+    verdict: kept
+    as_of: 2026-11-16
+    summary: ISIS lost all the territory it held. Iraq declared victory in December 2017, and the last ISIS-held town in Syria, Baghuz, fell in March 2019. The group remained active as an insurgency.
+    evidence:
+      - what: Lead Inspector General Report to the U.S. Congress, Operation Inherent Resolve, 1 January-31 March 2019
+        url: https://media.defense.gov/2019/May/02/2002127082/-1/-1/1/FY2019_LIG_OCOREPORT.PDF
+        publisher: Department of Defense Office of Inspector General
+        date: 2019-05-02
+    uncertainty:
+      verdict: clear
+      note: The criterion is territory, not the end of the group.
+
+  - promise: trump-2016-rebuild-military
+    verdict: partly
+    as_of: 2026-11-16
+    summary: Real defense outlays were $575.4bn in FY2016 (FY2012 dollars), $572.4bn in FY2017, then $587.2bn, $624.5bn and $657.1bn in FY2018-2020. They were higher than FY2016 in three of the four years.
+    evidence:
+      - what: OMB Historical Tables, Table 6.1, Composition of Outlays (national defense, constant FY2012 dollars)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2022-TAB/xls/BUDGET-2022-TAB-7-1.xlsx
+        publisher: Office of Management and Budget (via GovInfo)
+        date: 2021-05-28
+    uncertainty:
+      verdict: contested
+      note: FY2017 was budgeted before the term began. A reader who leaves it out would call this kept.
+
+  - promise: trump-2016-allies-pay-fair-share
+    verdict: kept
+    review: 'NATO Europe and Canada defence spending as % of GDP, 2016 vs 2020; Korea cost-sharing increase (from memory).'
+    as_of: 2026-11-16
+    summary: Defence spending by NATO's European members and Canada rose from about 1.4% of GDP in 2016 to about 1.8% in 2020. The cost-sharing agreement with South Korea renewed in 2019 raised its payment by 8.2%. The agreement with Japan was not renewed during the term.
+    evidence:
+      - what: NATO, Defence Expenditure of NATO Countries (2013-2020)
+        url: https://www.nato.int/cps/en/natohq/news_182242.htm
+        publisher: NATO
+        date: 2021-03-16
+    uncertainty:
+      verdict: probable
+      note: The 2020 share is partly due to the fall in GDP. The Korea figure is from memory. A reader who requires renewed agreements with every host country would call this partly.
+
+  - promise: trump-2016-eradicate-radical-islamic-terrorism
+    verdict: broken
+    as_of: 2026-11-16
+    summary: Jihadist groups carried out many deadly attacks worldwide in 2020, including ISIS and al-Qaeda affiliates in Africa, Afghanistan and Iraq.
+    attempt: initiated
+    evidence:
+      - what: State Department, Country Reports on Terrorism 2020
+        url: https://www.state.gov/reports/country-reports-on-terrorism-2020/
+        publisher: U.S. Department of State
+        date: 2021-12-16
+    uncertainty: { verdict: clear }
+
+  # ---- government and courts ----------------------------------------------------
+
+  - promise: trump-2016-wasteful-spending-100-days
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Executive Order 13781 of 13 March 2017 directed every agency head to propose eliminating or reorganising unneeded functions, and OMB's memorandum M-17-22 of 12 April 2017 set the deadlines. Both fell within the first 100 days.
+    evidence:
+      - what: Executive Order 13781, Comprehensive Plan for Reorganizing the Executive Branch
+        url: https://www.federalregister.gov/documents/2017/03/16/2017-05399/comprehensive-plan-for-reorganizing-the-executive-branch
+        publisher: Federal Register
+        date: 2017-03-13
+    uncertainty:
+      verdict: probable
+      note: The order asks for unneeded agencies and programmes rather than "wasteful spending projects"; read as the same request.
+
+  - promise: trump-2016-supreme-court-scalia
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Neil Gorsuch, a judge known for textualism and originalism, was confirmed to Justice Scalia's seat in April 2017.
+    evidence:
+      - what: Senate roll call vote 111 (115th Congress, 1st session), confirmation of Neil M. Gorsuch
+        url: https://www.senate.gov/legislative/LIS/roll_call_votes/vote1151/vote_115_1_00111.htm
+        publisher: U.S. Senate
+        date: 2017-04-07
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-repeal-johnson-amendment
+    verdict: broken
+    as_of: 2026-11-16
+    summary: The Johnson Amendment was not repealed. Executive Order 13798 (May 2017) told the Treasury to limit enforcement. The House version of the 2017 tax bill relaxed the ban, but that section was dropped in conference.
+    attempt: passed-chamber
+    evidence:
+      - what: Executive Order 13798, Promoting Free Speech and Religious Liberty
+        url: https://www.federalregister.gov/executive-order/13798
+        publisher: Federal Register
+        date: 2017-05-04
+      - what: H.R. 1, Tax Cuts and Jobs Act, as passed by the House (section 5201)
+        url: https://www.congress.gov/bill/115th-congress/house-bill/1
+        publisher: Congress.gov
+        date: 2017-11-16
+    uncertainty: { verdict: clear }
+
+  - promise: trump-2016-pro-life-justices
+    verdict: kept
+    as_of: 2026-11-16
+    summary: All three justices he appointed voted to restrict abortion when the issue came before them during the term. Gorsuch and Kavanaugh dissented in June Medical Services v. Russo (2020), and Barrett joined the January 2021 order reinstating in-person rules for abortion pills.
+    evidence:
+      - what: June Medical Services L.L.C. v. Russo, 591 U.S. ___ (2020)
+        url: https://www.supremecourt.gov/opinions/19pdf/18-1323_c07d.pdf
+        publisher: Supreme Court of the United States
+        date: 2020-06-29
+      - what: FDA v. American College of Obstetricians and Gynecologists (20A34), order granting stay
+        url: https://www.supremecourt.gov/opinions/20pdf/20a34_3f14.pdf
+        publisher: Supreme Court of the United States
+        date: 2021-01-12
+    uncertainty:
+      verdict: probable
+      note: Barrett's vote was on a stay, not the merits. Their 2022 votes to overturn Roe fall after the deadline and do not count.
+
+  - promise: trump-2016-second-amendment-justices
+    verdict: kept
+    as_of: 2026-11-16
+    summary: When gun rights came before the Court during the term, his appointees sided with them. In New York State Rifle & Pistol Ass'n v. City of New York (2020), Gorsuch would have struck down the city's rule, and Kavanaugh wrote that the Court should soon take up similar cases. Barrett had no Second Amendment case at the Court before the deadline.
+    evidence:
+      - what: New York State Rifle & Pistol Ass'n v. City of New York, 590 U.S. ___ (2020)
+        url: https://www.supremecourt.gov/opinions/19pdf/18-280_ba7d.pdf
+        publisher: Supreme Court of the United States
+        date: 2020-04-27
+    uncertainty:
+      verdict: probable
+      note: Barrett is judged only from later votes, which fall after the deadline. Kavanaugh also joined part of Justice Thomas's dissent from the June 2020 refusal to hear Rogers v. Grewal (from memory).
+
+  - promise: trump-2016-buy-american-hire-american
+    verdict: kept
+    as_of: 2026-11-16
+    summary: Rules were changed on both sides. Executive Order 13788 (April 2017) ordered stricter procurement and visa rules, the 2019 H-1B selection rule favoured US-degree holders, and Executive Order 13881 (July 2019) raised the domestic-content thresholds for federal procurement, finalised in the FAR in January 2021.
+    evidence:
+      - what: Executive Order 13788, Buy American and Hire American
+        url: https://www.federalregister.gov/executive-order/13788
+        publisher: Federal Register
+        date: 2017-04-18
+      - what: Executive Order 13881, Maximizing Use of American-Made Goods, Products, and Materials
+        url: https://www.federalregister.gov/executive-order/13881
+        publisher: Federal Register
+        date: 2019-07-15
+    uncertainty:
+      verdict: clear
+      note: Some wage rules for visas were struck down in court in late 2020; the procurement changes stand.

@@ -14,6 +14,9 @@ import {
   summarize,
   topicCounts,
   topicCountsIn,
+  trackRecords,
+  verdictFor,
+  VERDICT_STATUSES,
 } from '../src/promises/model.js';
 
 /**
@@ -244,8 +247,8 @@ describe('promises overview aggregation', () => {
     }
     // high and medium get verdicts (medium after its stated judgement call);
     // low never does
-    expect(VERDICT_PLACEHOLDER.high.label).toMatch(/pending/i);
-    expect(VERDICT_PLACEHOLDER.medium.label).toMatch(/pending/i);
+    expect(VERDICT_PLACEHOLDER.high.label).toMatch(/unjudged/i);
+    expect(VERDICT_PLACEHOLDER.medium.label).toMatch(/unjudged/i);
     expect(VERDICT_PLACEHOLDER.low.label).toMatch(/infeasible/i);
 
     // the list row shows the same status in one lower-case phrase; it must say
@@ -256,5 +259,48 @@ describe('promises overview aggregation', () => {
       expect(v.tag).toBe(v.tag.toLowerCase());
       expect(v.label.toLowerCase()).toContain(v.tag);
     }
+  });
+});
+
+describe('verdicts on the board', () => {
+  const all = CORPUS_TERMS.flatMap((t) => [...t.promises, ...t.ambitions]);
+
+  it('every high and medium promise carries a verdict; low ones and ambitions never do', () => {
+    for (const p of all) {
+      if (p.kind === 'promise' && p.quality !== 'low') expect(p.verdict, p.id).not.toBeNull();
+      else expect(p.verdict, p.id).toBeNull();
+    }
+  });
+
+  it('a verdict with an open review shows as under review, keeping the provisional reading', () => {
+    const reviewed = all.find((p) => p.verdict?.review);
+    expect(reviewed).toBeDefined();
+    const v = verdictFor(reviewed!);
+    expect(v.status).toBe('review');
+    expect(v.label).toMatch(/under review/i);
+    expect(v.record?.verdict).toBe(reviewed!.verdict!.verdict);
+
+    const settled = all.find((p) => p.verdict && !p.verdict.review)!;
+    expect(verdictFor(settled).status).toBe(settled.verdict!.verdict);
+  });
+
+  it('the list tag and the panel label say the same thing', () => {
+    for (const p of all) {
+      const v = verdictFor(p);
+      expect(v.tag).toBe(v.tag.toLowerCase());
+      expect(v.label.toLowerCase()).toContain(v.tag);
+    }
+  });
+
+  it('track records count every verifiable promise exactly once', () => {
+    const records = trackRecords(CORPUS_TERMS);
+    expect(records).toHaveLength(CORPUS_TERMS.length);
+    for (const r of records) {
+      const sum = VERDICT_STATUSES.reduce((n, s) => n + r.counts[s], 0);
+      expect(sum).toBe(r.verifiable);
+      expect(r.settled).toBe(r.counts.kept + r.counts.partly + r.counts.broken);
+    }
+    const review = records.reduce((n, r) => n + r.counts.review, 0);
+    expect(review).toBe(all.filter((p) => p.verdict?.review).length);
   });
 });

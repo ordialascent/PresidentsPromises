@@ -18,6 +18,7 @@ corpus/
     <year>-debate.md                  ← the term's final general-election debate
     <year>-<kind>.screening.yaml      ← screening ledger: a decision per candidate sentence
     promises.yaml                     ← ALL of the term's promises, from every source
+    verdicts.yaml                     ← kept/partly/broken verdicts with evidence (PROTOCOL.md §6)
 ```
 
 Directories are named `<start>-<end> <name>`, e.g. `2009-2013 Obama`,

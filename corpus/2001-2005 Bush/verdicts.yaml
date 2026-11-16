@@ -1,0 +1,440 @@
+# Verdicts for George W. Bush's 2001-2005 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2005-01-20.
+#
+# Complete: high 17/17, medium 14/14.
+
+protocol: 1
+verdicts:
+
+  # ---- high ----------------------------------------------------------------
+
+  - promise: bush-2000-socialsecurity-preserve
+    verdict: kept
+    as_of: 2026-11-15
+    summary: No law in 2001-2005 cut or changed current retirees' scheduled benefits; benefits rose each year with the automatic cost-of-living adjustment.
+    evidence:
+      - what: SSA cost-of-living adjustment history (a benefit increase every December 2001-2004)
+        url: https://www.ssa.gov/oact/cola/colaseries.html
+        publisher: Social Security Administration
+    uncertainty:
+      verdict: probable
+      note: Rests on the absence of a benefit-cutting law; none is known, but absence cannot be cited directly.
+
+  - promise: bush-2000-socialsecurity-accounts
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No law created personal accounts. During the term the president appointed a commission to design them; the push for legislation began only after the deadline, in 2005, and also failed.
+    attempt: initiated
+    evidence:
+      - what: Executive Order 13210, establishing the President's Commission to Strengthen Social Security (2 May 2001)
+        url: https://www.presidency.ucsb.edu/documents/executive-order-13210-presidents-commission-strengthen-social-security
+        publisher: The American Presidency Project (UCSB)
+        date: 2001-05-02
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-death-tax
+    verdict: partly
+    as_of: 2026-11-15
+    summary: The 2001 tax law lowered estate tax rates step by step and repealed the tax for 2010 only, with a sunset after 2010. At the deadline the estate tax was still in force.
+    evidence:
+      - what: Economic Growth and Tax Relief Reconciliation Act of 2001 (Pub. L. 107-16), Title V (rate reductions, repeal from 2010) and Sec. 901 (sunset after 2010)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ16/html/PLAW-107publ16.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-06-07
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-tax-rates-allbrackets
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2001 and 2003 tax laws cut the 28, 31, 36 and 39.6% rates to 25, 28, 33 and 35%, and moved the first part of the 15% bracket to a new 10% rate.
+    evidence:
+      - what: Economic Growth and Tax Relief Reconciliation Act of 2001 (Pub. L. 107-16), Sec. 101 (new 10% bracket, phased rate reductions)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ16/html/PLAW-107publ16.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-06-07
+      - what: Jobs and Growth Tax Relief Reconciliation Act of 2003 (Pub. L. 108-27), Sec. 105 (reduced rates brought forward to 2003)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ27/html/PLAW-108publ27.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-05-28
+    uncertainty:
+      verdict: contested
+      note: The 15% rate itself was not lowered; only part of that bracket's income moved to 10%. Read strictly ("every bracket's rate"), this is partly. Read as "every taxpayer's rate", as the speech frames it, it is kept.
+
+  - promise: bush-2000-bottom-rate-10
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2001 tax law created a 10% bracket, taking effect for 2001.
+    evidence:
+      - what: Economic Growth and Tax Relief Reconciliation Act of 2001 (Pub. L. 107-16), Sec. 101 (10-percent rate bracket)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ16/html/PLAW-107publ16.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-06-07
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-double-child-credit
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2001 law scheduled the credit to rise from $500 to $1,000 by 2010; the 2003 law raised it to $1,000 for 2003 and 2004, and the 2004 law kept it there.
+    evidence:
+      - what: Jobs and Growth Tax Relief Reconciliation Act of 2003 (Pub. L. 108-27), Sec. 101 ($1,000 per child for 2003 or 2004)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ27/html/PLAW-108publ27.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-05-28
+      - what: Working Families Tax Relief Act of 2004 (Pub. L. 108-311), Sec. 101 (keeps $1,000 per child)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ311/html/PLAW-108publ311.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2004-10-04
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-missile-defense
+    verdict: kept
+    as_of: 2026-11-15
+    summary: In December 2002 the president ordered an initial missile defense capability for 2004. The first ground-based interceptors were placed in silos at Fort Greely, Alaska, from July 2004, six by the end of the year.
+    evidence:
+      - what: White House statement on National Missile Defense, ordering initial capabilities to be fielded in 2004
+        url: https://georgewbush-whitehouse.archives.gov/news/releases/2002/12/20021217.html
+        publisher: The White House (archived)
+        date: 2002-12-17
+      - what: First ground-based interceptor emplaced at Fort Greely
+        url: https://www.army.mil/article/170191/smdc_history_gmd_arrives_in_fort_greely
+        publisher: U.S. Army
+    uncertainty:
+      verdict: probable
+      note: There is no single official declaration that the system was operational in 2004; interceptors were deployed in silos before the deadline, but their readiness was debated.
+
+  - promise: bush-2000-health-tax-credits
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No general health insurance tax credit for low-income people was enacted. The 2002 trade law created a credit only for trade-displaced workers and some pension recipients. The general credit was still being proposed in February 2005.
+    attempt: initiated
+    evidence:
+      - what: Trade Act of 2002 (Pub. L. 107-210), Title II (Health Coverage Tax Credit, limited to trade-displaced workers and PBGC pension recipients)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ210/html/PLAW-107publ210.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2002-08-06
+      - what: Treasury's FY2006 revenue proposals, still proposing a refundable tax credit for the purchase of health insurance
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2006.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2005-02-07
+    uncertainty:
+      verdict: probable
+      note: The 2002 trade credit is refundable and helps some low-income people; a reader who counts it would say partly.
+
+  - promise: bush-2000-charitable-incentives
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The main proposal, a charitable deduction for people who do not itemize, passed the House in 2001 and the Senate in 2003 in different bills, but never became law. Treasury was still proposing it in February 2004 and dropped it in 2005.
+    attempt: passed-chamber
+    evidence:
+      - what: Treasury's FY2005 revenue proposals, still proposing a charitable deduction for non-itemizers
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2005.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2004-02-02
+      - what: CARE Act of 2003 (S. 476), passed by the Senate on 9 April 2003; no conference with the House
+        url: https://www.congress.gov/bill/108th-congress/senate-bill/476
+        publisher: Congress.gov
+        date: 2003-04-09
+    uncertainty:
+      verdict: probable
+      note: Rests on no charitable incentive being enacted in 2001-2005; smaller provisions in other tax laws were not checked one by one.
+
+  - promise: bush-2000-partial-birth-abortion
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Congress sent the Partial-Birth Abortion Ban Act in 2003, and the president signed it.
+    evidence:
+      - what: Partial-Birth Abortion Ban Act of 2003 (Pub. L. 108-105)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ105/html/PLAW-108publ105.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-11-05
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-reduce-taxes
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2001 tax law cut income tax rates, and the 2003 law cut them further and lowered taxes on dividends and capital gains.
+    evidence:
+      - what: Economic Growth and Tax Relief Reconciliation Act of 2001 (Pub. L. 107-16)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ16/html/PLAW-107publ16.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-06-07
+      - what: Jobs and Growth Tax Relief Reconciliation Act of 2003 (Pub. L. 108-27)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ27/html/PLAW-108publ27.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-05-28
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-drugs-low-income
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2003 Medicare law created drug coverage with a subsidy that pays most drug costs for low-income seniors, plus $600 a year of transitional help in 2004-2005.
+    evidence:
+      - what: Medicare Prescription Drug, Improvement, and Modernization Act of 2003 (Pub. L. 108-173), Sec. 101 (Part D with a low-income subsidy; transitional assistance with the drug discount card)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ173/html/PLAW-108publ173.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-12-08
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-school-funds-to-parents
+    verdict: partly
+    as_of: 2026-11-15
+    summary: No Child Left Behind lets pupils in failing schools move to another public school or get free tutoring paid from federal funds. The private-school option was dropped, and the money goes to schools and tutoring providers, not to parents.
+    evidence:
+      - what: No Child Left Behind Act of 2001 (Pub. L. 107-110), Sec. 1116 (public school choice and supplemental educational services)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ110/html/PLAW-107publ110.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2002-01-08
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-teacher-protection
+    verdict: kept
+    as_of: 2026-11-15
+    summary: In April 2001 the president told Congress he was working for liability protection for teachers. It was enacted in No Child Left Behind as the Paul D. Coverdell Teacher Protection Act.
+    evidence:
+      - what: Remarks in the Rose Garden ("we are working for liability reform to support and protect teachers")
+        url: https://georgewbush-whitehouse.archives.gov/news/releases/2001/04/20010423-16.html
+        publisher: The White House (archived)
+        date: 2001-04-23
+      - what: Paul D. Coverdell Teacher Protection Act of 2001, enacted in Pub. L. 107-110 (now 20 U.S.C. 7941)
+        url: https://www.law.cornell.edu/uscode/text/20/7941
+        publisher: Legal Information Institute, Cornell Law School
+        date: 2002-01-08
+    uncertainty:
+      verdict: probable
+      note: No formal message asking Congress for the act was found; the remarks are the closest record of the request.
+
+  - promise: bush-2000-defense-review
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Within his first month, the president had the Secretary of Defense begin a review of strategy, forces and budget priorities, and said spending would follow it.
+    evidence:
+      - what: Remarks to the troops at Norfolk Naval Air Station, describing the review begun "at my request"
+        url: https://georgewbush-whitehouse.archives.gov/news/releases/20010213-1.html
+        publisher: The White House (archived)
+        date: 2001-02-13
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-caregiver-exemption
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The extra exemption for home caregivers passed the House in 2002 but never became law. Treasury was still proposing it in February 2004 and dropped it in 2005.
+    attempt: passed-chamber
+    evidence:
+      - what: Improving Access to Long-Term Care Act of 2002 (H.R. 4946), passed by the House on 25 July 2002
+        url: https://www.congress.gov/bill/107th-congress/house-bill/4946
+        publisher: Congress.gov
+        date: 2002-07-25
+      - what: Treasury's FY2005 revenue proposals, still proposing an additional personal exemption for home caregivers
+        url: https://home.treasury.gov/system/files/131/General-Explanations-FY2005.pdf
+        publisher: U.S. Department of the Treasury
+        date: 2004-02-02
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-ss-trillion-accounts
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No law let workers invest part of their payroll taxes in personal accounts. During the term the president appointed a commission to design them; the push for legislation began only after the deadline, in 2005, and also failed.
+    attempt: initiated
+    evidence:
+      - what: Executive Order 13210, establishing the President's Commission to Strengthen Social Security (2 May 2001)
+        url: https://www.presidency.ucsb.edu/documents/executive-order-13210-presidents-commission-strengthen-social-security
+        publisher: The American Presidency Project (UCSB)
+        date: 2001-05-02
+    uncertainty:
+      verdict: clear
+
+  # ---- medium --------------------------------------------------------------
+
+  - promise: bush-2000-reform-socialsecurity
+    verdict: broken
+    as_of: 2026-11-15
+    summary: No law changed Social Security's benefits or financing during the term. The president appointed a commission in 2001; the push for legislation began only in 2005, after the deadline.
+    attempt: initiated
+    evidence:
+      - what: Executive Order 13210, establishing the President's Commission to Strengthen Social Security (2 May 2001)
+        url: https://www.presidency.ucsb.edu/documents/executive-order-13210-presidents-commission-strengthen-social-security
+        publisher: The American Presidency Project (UCSB)
+        date: 2001-05-02
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-reform-medicare
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2003 Medicare law added a drug benefit, renamed and widened the private-plan option, and changed how Medicare is financed and paid.
+    evidence:
+      - what: Medicare Prescription Drug, Improvement, and Modernization Act of 2003 (Pub. L. 108-173)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ173/html/PLAW-108publ173.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-12-08
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-medicare-solvency
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The projected exhaustion of Medicare's hospital trust fund moved earlier, from 2029 in the 2001 Trustees Report to 2019 in the 2004 report, the last before the deadline. The 2003 Medicare law moved it about two years earlier, by the Trustees' estimate.
+    attempt: none
+    evidence:
+      - what: 2001 Annual Report of the Board of Trustees of the Federal Hospital Insurance Trust Fund (House Document 107-54), projecting exhaustion in 2029
+        url: https://www.govinfo.gov/content/pkg/CDOC-107hdoc54/html/CDOC-107hdoc54.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-03-19
+      - what: 2004 Annual Report of the Medicare Boards of Trustees, projecting exhaustion in 2019, "7 years earlier than estimated in last year's report"
+        url: https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/ReportsTrustFunds/downloads/tr2004.pdf
+        publisher: Centers for Medicare & Medicaid Services
+        date: 2004-03-23
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-medicare-drugs
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2003 Medicare law created a drug benefit open to every senior (Part D, from 2006) and a drug discount card for 2004-2005.
+    evidence:
+      - what: Medicare Prescription Drug, Improvement, and Modernization Act of 2003 (Pub. L. 108-173), Title I
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ173/html/PLAW-108publ173.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-12-08
+    uncertainty:
+      verdict: probable
+      note: The full benefit began in 2006, after the deadline. Under §6 a law counts when it is enacted; a reader who requires the benefit to be in force would say partly.
+
+  - promise: bush-2000-reduce-nuclear
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2002 Moscow Treaty committed the US and Russia to cut deployed strategic warheads to 1,700-2,200 each by 2012.
+    evidence:
+      - what: Treaty on Strategic Offensive Reductions (Moscow Treaty), signed 24 May 2002
+        url: https://2009-2017.state.gov/t/avc/trty/127129.htm
+        publisher: U.S. Department of State (archived)
+        date: 2002-05-24
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-housing-ownership
+    verdict: partly
+    as_of: 2026-11-15
+    summary: Using a rental voucher toward a mortgage was already allowed by a rule from 2000. In 2002 HUD added a one-time down-payment grant from voucher funds, but the rule bars its use until HUD publishes a notice, and it was not in use by the deadline.
+    evidence:
+      - what: 24 CFR 982.643, Homeownership option, downpayment assistance grants (67 FR 64494, 18 Oct 2002), paragraph (f)
+        url: https://www.govinfo.gov/content/pkg/CFR-2010-title24-vol4/pdf/CFR-2010-title24-vol4-sec982-643.pdf
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2002-10-18
+    uncertainty:
+      verdict: contested
+      note: A reader who counts the existing homeownership option would say kept; one who counts only the new grant, never put into use, would say broken.
+
+  - promise: bush-2000-support-charities
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The Compassion Capital Fund, first funded in January 2002, gives federal grants to help faith-based and community groups serving people in need.
+    evidence:
+      - what: About the Compassion Capital Fund (created 2002)
+        url: https://webarchive.library.unt.edu/web/20090109030640/http://www.acf.hhs.gov/programs/ccf/about_ccf/index.html
+        publisher: HHS Administration for Children and Families (archived)
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-mentoring
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The Mentoring Children of Prisoners programme was created by law in January 2002 and funded from 2003.
+    evidence:
+      - what: Promoting Safe and Stable Families Amendments of 2001 (Pub. L. 107-133), Title I Subtitle B, Mentoring Children of Prisoners
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ133/html/PLAW-107publ133.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2002-01-17
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-defenses
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Discretionary defence outlays rose from $295.0 billion in FY2000 to $401.9 billion in FY2004 in FY2000 dollars, a real increase of 36%.
+    evidence:
+      - what: Budget of the U.S. Government FY2006, Historical Tables, Table 8.2 (outlays by category in constant FY2000 dollars)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2006-TAB/pdf/BUDGET-2006-TAB.pdf
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2005-02-07
+    uncertainty:
+      verdict: probable
+      note: Spending is the only proxy measured; much of the rise paid for the wars in Afghanistan and Iraq, and readiness was not measured.
+
+  - promise: bush-2000-faith-based
+    verdict: kept
+    as_of: 2026-11-15
+    summary: In his first weeks the president created the White House Office of Faith-Based and Community Initiatives by executive order, and in 2002 ordered equal treatment of faith-based groups in federal grants. The faith-based bill (Community Solutions Act) passed the House but never became law.
+    evidence:
+      - what: Executive Order 13199, establishing the White House Office of Faith-Based and Community Initiatives
+        url: https://georgewbush-whitehouse.archives.gov/news/releases/2001/01/20010129-2.html
+        publisher: The White House (archived)
+        date: 2001-01-29
+    uncertainty:
+      verdict: contested
+      note: The promise says "in our laws"; the channel was created by executive order, not by law. A reader who requires a law would say partly.
+
+  - promise: bush-2000-patients-bill-rights
+    verdict: broken
+    as_of: 2026-11-15
+    summary: The House and the Senate each passed a patients' bill of rights in 2001, but the versions differed on the right to sue and no law was enacted.
+    attempt: passed-chamber
+    evidence:
+      - what: Bipartisan Patient Protection Act (H.R. 2563), passed by the House on 2 August 2001
+        url: https://www.congress.gov/bill/107th-congress/house-bill/2563
+        publisher: Congress.gov
+        date: 2001-08-02
+      - what: Bipartisan Patient Protection Act (S. 1052), passed by the Senate on 29 June 2001
+        url: https://www.congress.gov/bill/107th-congress/senate-bill/1052
+        publisher: Congress.gov
+        date: 2001-06-29
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-medicare-choices
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2003 Medicare law created Medicare Advantage, with regional private plans meant to reach every senior, and private drug plans to choose from.
+    evidence:
+      - what: Medicare Prescription Drug, Improvement, and Modernization Act of 2003 (Pub. L. 108-173), Title II (Medicare Advantage)
+        url: https://www.govinfo.gov/content/pkg/PLAW-108publ173/html/PLAW-108publ173.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2003-12-08
+    uncertainty:
+      verdict: clear
+
+  - promise: bush-2000-relief-all-taxpayers
+    verdict: kept
+    as_of: 2026-11-15
+    summary: The 2001 tax law lowered the rate on the first dollars of taxable income for everyone with income tax liability, and paid a rebate of up to $300 per person in 2001.
+    evidence:
+      - what: Economic Growth and Tax Relief Reconciliation Act of 2001 (Pub. L. 107-16), Sec. 101 (10% bracket, rate reductions) and Sec. 6428 (2001 rebate)
+        url: https://www.govinfo.gov/content/pkg/PLAW-107publ16/html/PLAW-107publ16.htm
+        publisher: GovInfo (U.S. Government Publishing Office)
+        date: 2001-06-07
+    uncertainty:
+      verdict: probable
+      note: Some taxpayers caught by the alternative minimum tax gained less or nothing; the law raised the AMT exemption only temporarily.
+
+  - promise: bush-2000-enforce-gun-laws
+    verdict: kept
+    as_of: 2026-11-15
+    summary: Federal firearms prosecutions rose 68% from FY2000 to FY2003, to over 10,500 cases, under the Project Safe Neighborhoods programme.
+    evidence:
+      - what: Justice Department release on record gun crime prosecutions (FY2000-FY2003)
+        url: https://www.justice.gov/archive/opa/pr/2004/June/04_ag_403.htm
+        publisher: U.S. Department of Justice (archived)
+        date: 2004-06-15
+    uncertainty:
+      verdict: probable
+      note: The figures come from the department's own release; the BJS-funded Urban Institute series confirms a rise over the period.
