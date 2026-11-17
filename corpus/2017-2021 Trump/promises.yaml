@@ -1140,38 +1140,7 @@ promises:
     - in: debate
       ref: "\u00b6490.3"
       quote: "We have to repeal and replace Obamacare."
-    restatement: "Repeal Obamacare."
-    group: trump-2016-obamacare
-    type: action
-    theme: health
-    deadline:
-      stated: null
-      applied: 2021-01-20
-    verifiability:
-      level: high
-      object: "the Affordable Care Act"
-      record: "enacted legislation (Congress.gov)"
-      criterion: "a law repealing the Affordable Care Act is enacted"
-    uncertainty:
-      extraction: clear
-    links: []
-
-  - id: trump-2016-replace-obamacare
-    kind: promise
-    sources:
-    - in: acceptance
-      ref: "\u00b699.3"
-      quote: "We will repeal and replace disastrous Obamacare."
-    - in: debate
-      ref: "\u00b6488.2"
-      quote: "Repeal and replace the disaster known as Obamacare."
-    - in: debate
-      ref: "\u00b6488.5"
-      quote: "We have to repeal and replace Obamacare."
-    - in: debate
-      ref: "\u00b6490.3"
-      quote: "We have to repeal and replace Obamacare."
-    restatement: "Replace Obamacare."
+    restatement: "Repeal and replace Obamacare."
     group: trump-2016-obamacare
     type: action
     theme: health
@@ -1180,10 +1149,10 @@ promises:
       applied: 2021-01-20
     verifiability:
       level: medium
-      object: "a replacement health-care law"
+      object: "the Affordable Care Act"
       record: "enacted legislation (Congress.gov)"
-      criterion: "a law replacing the Affordable Care Act's coverage system is enacted"
-      ambiguity: "No replacement is described; any enacted law that substitutes a new system for the ACA's marketplaces and subsidies counts."
+      criterion: "a law is enacted that repeals the Affordable Care Act and replaces its coverage system (marketplaces and subsidies)"
+      ambiguity: "No replacement is described; any enacted law that substitutes a new system for the ACA's marketplaces and subsidies counts. Repeal without a replacement would be partly kept."
     uncertainty:
       extraction: clear
     links: []

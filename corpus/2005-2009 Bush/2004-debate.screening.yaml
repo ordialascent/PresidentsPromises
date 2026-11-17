@@ -23,7 +23,7 @@ rows:
   - ref: "¶52.3"
     decision: include
     added: true
-    promises: [bush-2004-math-science, bush-2004-pell-grants, bush-2004-raise-standards, bush-2004-reward-teachers]
+    promises: [bush-2004-math-science, bush-2004-pell-grants, bush-2004-school-standards, bush-2004-reward-teachers]
     note: "Untriggered; \"4 more years, I've got more to do to …\" read as conditioned on re-election. Four objects."
   - { ref: "¶66.10", decision: attack }
   - ref: "¶77.6"

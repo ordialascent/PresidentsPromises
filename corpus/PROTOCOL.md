@@ -101,6 +101,9 @@ One promise has **one object** that could get **one verdict**.
 
 - **Split** a sentence when its parts could get different verdicts: "We will
   reform Social Security and Medicare" → two promises. Siblings share a `group`.
+- **Keep together** two verbs on one object that name one act: "reform and
+  simplify the tax code", "repeal and replace Obamacare" → one promise. If only
+  part of it is done, the verdict is `partly`.
 - **Join** consecutive sentences that state one commitment: the ref becomes a
   range (`¶24.1-24.2`).
 - **Merge** repeats of the same commitment in the same term into one promise

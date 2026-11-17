@@ -148,6 +148,11 @@ export function MethodPage() {
               promises, because one could be kept and the other not. Each part still shows the whole
               sentence, with its own words highlighted.
             </li>
+            <li>
+              <strong>Keep together:</strong> two verbs on one object that name one act stay one promise,
+              as in “reform and simplify the tax code” or “repeal and replace Obamacare”. If only part is
+              done, the verdict is “partly”.
+            </li>
             <li><strong>Join:</strong> consecutive sentences stating one commitment are cited together.</li>
             <li>
               <strong>Merge:</strong> the same commitment said again in the same term is one promise with

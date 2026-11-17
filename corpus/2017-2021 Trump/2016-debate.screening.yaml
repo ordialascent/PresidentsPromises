@@ -180,15 +180,15 @@ rows:
     note: "Joined: \u00b6486.3 states the criterion of \u00b6486.2."
   - ref: "\u00b6488.2"
     decision: include
-    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    promises: [trump-2016-repeal-obamacare]
     note: "Soft (\"one thing we have to do\"); a restatement of the firm acceptance promise. Two acts; split."
   - ref: "\u00b6488.5"
     decision: include
-    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    promises: [trump-2016-repeal-obamacare]
     note: "Soft restatement. Two acts; split."
   - ref: "\u00b6490.3"
     decision: include
-    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    promises: [trump-2016-repeal-obamacare]
     note: "Soft restatement. Two acts; split."
   - { ref: "\u00b6507.3", decision: include, promises: [trump-2016-make-america-great-again] }
   - { ref: "\u00b6508.7", decision: include, promises: [trump-2016-more-for-minorities] }

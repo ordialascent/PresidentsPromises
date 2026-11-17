@@ -1041,25 +1041,6 @@ promises:
       extraction: clear
     links: []
 
-  - id: bush-2004-raise-standards
-    kind: promise
-    sources:
-    - in: debate
-      ref: ¶52.3
-      quote: to continue to raise standards
-    restatement: Keep raising school standards.
-    type: ongoing
-    theme: education
-    deadline:
-      stated: null
-      applied: 2009-01-20
-    verifiability:
-      level: low
-    uncertainty:
-      extraction: probable
-      note: Untriggered; "4 more years, I've got more to do to …" is read as conditioned on re-election.
-    links: []
-
   - id: bush-2004-reward-teachers
     kind: promise
     sources:
@@ -1678,10 +1659,13 @@ promises:
   - id: bush-2004-school-standards
     kind: promise
     sources:
+    - in: debate
+      ref: ¶52.3
+      quote: to continue to raise standards
     - in: inaugural
       ref: ¶21.4
       quote: we will bring the highest standards to our schools
-    restatement: Bring the highest standards to schools.
+    restatement: Keep raising school standards, to the highest level.
     type: ongoing
     theme: education
     deadline:

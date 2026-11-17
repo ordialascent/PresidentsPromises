@@ -9919,56 +9919,6 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         }
       },
       {
-        "id": "bush-2004-raise-standards",
-        "kind": "promise",
-        "theme": "education",
-        "restatement": "Keep raising school standards.",
-        "quality": "low",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶52.3",
-            "quote": "to continue to raise standards",
-            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
-            "mark": [
-              42,
-              72
-            ]
-          }
-        ],
-        "protocol": {
-          "type": "ongoing",
-          "group": null,
-          "deadline": {
-            "stated": null,
-            "applied": "2009-01-20"
-          },
-          "verifiability": {
-            "level": "low",
-            "object": null,
-            "record": null,
-            "criterion": null,
-            "ambiguity": null
-          },
-          "uncertainty": {
-            "extraction": "probable",
-            "note": "Untriggered; \"4 more years, I've got more to do to …\" is read as conditioned on re-election."
-          },
-          "links": []
-        },
-        "verdict": null
-      },
-      {
         "id": "bush-2004-reward-teachers",
         "kind": "promise",
         "theme": "education",
@@ -11432,9 +11382,29 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "bush-2004-school-standards",
         "kind": "promise",
         "theme": "education",
-        "restatement": "Bring the highest standards to schools.",
+        "restatement": "Keep raising school standards, to the highest level.",
         "quality": "low",
         "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "to continue to raise standards",
+            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
+            "mark": [
+              42,
+              72
+            ]
+          },
           {
             "source": {
               "kind": "inaugural",
@@ -27018,143 +26988,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "trump-2016-repeal-obamacare",
         "kind": "promise",
         "theme": "health",
-        "restatement": "Repeal Obamacare.",
-        "quality": "high",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "acceptance",
-              "medium": "speech",
-              "speaker": "Donald J. Trump",
-              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in Cleveland, Ohio",
-              "year": 2016,
-              "date": "2016-07-21",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-cleveland",
-              "label": "2016 acceptance speech"
-            },
-            "ref": "¶99.3",
-            "quote": "We will repeal and replace disastrous Obamacare.",
-            "context": "We will repeal and replace disastrous Obamacare.",
-            "mark": [
-              0,
-              48
-            ]
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶488.2",
-            "quote": "Repeal and replace the disaster known as Obamacare.",
-            "context": "And one thing we have to do: Repeal and replace the disaster known as Obamacare.",
-            "mark": [
-              29,
-              80
-            ]
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶488.5",
-            "quote": "We have to repeal and replace Obamacare.",
-            "context": "We have to repeal and replace Obamacare.",
-            "mark": [
-              0,
-              40
-            ]
-          },
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "Donald J. Trump",
-              "event": "Presidential Debate at the University of Nevada in Las Vegas",
-              "year": 2016,
-              "date": "2016-10-19",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-nevada-las-vegas",
-              "label": "2016 debate"
-            },
-            "ref": "¶490.3",
-            "quote": "We have to repeal and replace Obamacare.",
-            "context": "We have to repeal and replace Obamacare.",
-            "mark": [
-              0,
-              40
-            ]
-          }
-        ],
-        "protocol": {
-          "type": "action",
-          "group": "trump-2016-obamacare",
-          "deadline": {
-            "stated": null,
-            "applied": "2021-01-20"
-          },
-          "verifiability": {
-            "level": "high",
-            "object": "the Affordable Care Act",
-            "record": "enacted legislation (Congress.gov)",
-            "criterion": "a law repealing the Affordable Care Act is enacted",
-            "ambiguity": null
-          },
-          "uncertainty": {
-            "extraction": "clear",
-            "note": null
-          },
-          "links": []
-        },
-        "verdict": {
-          "verdict": "broken",
-          "asOf": "2026-11-16",
-          "summary": "The Affordable Care Act was not repealed. The House passed the American Health Care Act in May 2017; the Senate rejected repeal in July 2017. The 2017 tax law set the individual-mandate penalty to zero from 2019.",
-          "attempt": "passed-chamber",
-          "review": null,
-          "evidence": [
-            {
-              "what": "H.R. 1628, American Health Care Act of 2017 (passed House 4 May 2017)",
-              "url": "https://www.congress.gov/bill/115th-congress/house-bill/1628",
-              "publisher": "Congress.gov",
-              "date": "2017-05-04",
-              "secondary": false
-            },
-            {
-              "what": "Tax Cuts and Jobs Act (Pub. L. 115-97), section 11081 (mandate penalty reduced to zero)",
-              "url": "https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm",
-              "publisher": "GovInfo (U.S. Government Publishing Office)",
-              "date": "2017-12-22",
-              "secondary": false
-            }
-          ],
-          "uncertainty": {
-            "verdict": "clear",
-            "note": null
-          }
-        }
-      },
-      {
-        "id": "trump-2016-replace-obamacare",
-        "kind": "promise",
-        "theme": "health",
-        "restatement": "Replace Obamacare.",
+        "restatement": "Repeal and replace Obamacare.",
         "quality": "medium",
         "occurrences": [
           {
@@ -27247,10 +27081,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
           },
           "verifiability": {
             "level": "medium",
-            "object": "a replacement health-care law",
+            "object": "the Affordable Care Act",
             "record": "enacted legislation (Congress.gov)",
-            "criterion": "a law replacing the Affordable Care Act's coverage system is enacted",
-            "ambiguity": "No replacement is described; any enacted law that substitutes a new system for the ACA's marketplaces and subsidies counts."
+            "criterion": "a law is enacted that repeals the Affordable Care Act and replaces its coverage system (marketplaces and subsidies)",
+            "ambiguity": "No replacement is described; any enacted law that substitutes a new system for the ACA's marketplaces and subsidies counts. Repeal without a replacement would be partly kept."
           },
           "uncertainty": {
             "extraction": "clear",
@@ -27261,7 +27095,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "verdict": {
           "verdict": "broken",
           "asOf": "2026-11-16",
-          "summary": "No law replaced the ACA's marketplaces and subsidies. The House-passed American Health Care Act would have, but it did not pass the Senate.",
+          "summary": "The Affordable Care Act was neither repealed nor replaced. The House passed the American Health Care Act, a repeal-and-replace bill, in May 2017; the Senate rejected repeal in July 2017. The 2017 tax law only set the individual-mandate penalty to zero from 2019.",
           "attempt": "passed-chamber",
           "review": null,
           "evidence": [
@@ -27270,6 +27104,13 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "url": "https://www.congress.gov/bill/115th-congress/house-bill/1628",
               "publisher": "Congress.gov",
               "date": "2017-05-04",
+              "secondary": false
+            },
+            {
+              "what": "Tax Cuts and Jobs Act (Pub. L. 115-97), section 11081 (mandate penalty reduced to zero)",
+              "url": "https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm",
+              "publisher": "GovInfo (U.S. Government Publishing Office)",
+              "date": "2017-12-22",
               "secondary": false
             }
           ],
@@ -43810,10 +43651,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 495;
+export const CORPUS_PROMISE_COUNT = 493;
 
 /** Total ambitions across the corpus. */
 export const CORPUS_AMBITION_COUNT = 148;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 720;
+export const CORPUS_OCCURRENCE_COUNT = 716;
