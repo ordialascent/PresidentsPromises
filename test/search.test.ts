@@ -106,6 +106,8 @@ function promise(
       {
         ref: '¶1',
         quote,
+        context: quote,
+        mark: [0, quote.length],
         source: {
           kind: 'acceptance',
           medium: 'speech',

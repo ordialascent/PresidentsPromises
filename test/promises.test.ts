@@ -318,3 +318,28 @@ describe('verdicts on the board', () => {
     expect(filterByVerdict(rows, null)).toBe(rows);
   });
 });
+
+describe('cited sentences', () => {
+  const norm = (s: string) => s.replace(/[‘’ʼ]/g, "'").replace(/\s+/g, ' ').trim();
+  const occurrences = CORPUS_TERMS.flatMap((t) =>
+    [...t.promises, ...t.ambitions].flatMap((p) => p.occurrences),
+  );
+
+  it('every occurrence carries its full sentence, with the quote marked inside it', () => {
+    expect(occurrences.length).toBeGreaterThan(CORPUS_OCCURRENCE_COUNT);
+    for (const o of occurrences) {
+      const [from, to] = o.mark;
+      expect(from).toBeGreaterThanOrEqual(0);
+      expect(to).toBeLessThanOrEqual(o.context.length);
+      expect(norm(o.context.slice(from, to))).toBe(norm(o.quote));
+    }
+  });
+
+  it('shows the whole sentence when a promise is one part of it', () => {
+    const o = CORPUS_TERMS.flatMap((t) => t.promises)
+      .find((p) => p.id === 'bush-2004-afghan-iraq-elections')!.occurrences[0];
+    expect(o.quote).toBe('move toward elections');
+    expect(o.context).toMatch(/^So our mission in Afghanistan and Iraq is clear: .* as quickly as possible\.$/);
+    expect(o.context.slice(...o.mark)).toBe('move toward elections');
+  });
+});

@@ -1,4 +1,5 @@
 import { CORPUS_TERMS } from '../content/promises.generated.js';
+import type { PromiseOccurrence } from '../content/promises.generated.js';
 import { QUALITY_META, VERDICT_META, verdictFor, type CorpusPromise, type Verdict } from './model.js';
 
 /** Every record by id, so a link can name what it points at. */
@@ -118,6 +119,31 @@ function VerdictFacts({ record, underReview }: { record: Verdict; underReview: b
 }
 
 /**
+ * The full sentence a promise was cited from. When the promise is one part of
+ * a sentence that holds several (PROTOCOL.md §3 splits them), its own part is
+ * highlighted and the rest is shown for context, so nothing reads out of place.
+ */
+export function CitedSentence({ occurrence: o }: { occurrence: PromiseOccurrence }) {
+  const [from, to] = o.mark;
+  const whole = from === 0 && to === o.context.length;
+  return (
+    <blockquote className="pc-detail-quote">
+      “
+      {whole ? (
+        o.context
+      ) : (
+        <>
+          {o.context.slice(0, from)}
+          <mark className="pc-detail-mark">{o.context.slice(from, to)}</mark>
+          {o.context.slice(to)}
+        </>
+      )}
+      ”
+    </blockquote>
+  );
+}
+
+/**
  * One promise opened up: every time it was made, quoted and cited, and what can
  * (or cannot) be said about keeping it.
  *
@@ -149,7 +175,7 @@ export function PromiseDetail({
       <div className="pc-detail-title">{promise.restatement}</div>
       {promise.occurrences.map((o, k) => (
         <div className="pc-detail-occ" key={`${o.source.kind}-${k}`}>
-          <blockquote className="pc-detail-quote">“{o.quote}”</blockquote>
+          <CitedSentence occurrence={o} />
           <div className="pc-detail-context">
             <span className="pc-detail-speaker">{o.source.speaker}</span>
             {o.source.year != null && (
