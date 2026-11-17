@@ -33,6 +33,10 @@ export interface PromiseOccurrence {
   source: PromiseSource;
   ref: string;
   quote: string;
+  /** The full sentence(s) the ref points at. */
+  context: string;
+  /** [start, end) of the quote inside `context`. */
+  mark: [number, number];
 }
 
 /** A firm commitment ("we will") or a wish/obligation ("we must"). Only promises get verdicts. */
@@ -161,7 +165,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶4.1",
-            "quote": "Together, we will renew America's purpose."
+            "quote": "Together, we will renew America's purpose.",
+            "context": "Together, we will renew America's purpose.",
+            "mark": [
+              0,
+              42
+            ]
           }
         ],
         "protocol": {
@@ -206,7 +215,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶20.1-20.2",
-            "quote": "So tonight, we vow to our nation we will seize this moment of American promise. We will use these good times for great goals."
+            "quote": "So tonight, we vow to our nation we will seize this moment of American promise. We will use these good times for great goals.",
+            "context": "So tonight, we vow to our nation we will seize this moment of American promise. We will use these good times for great goals.",
+            "mark": [
+              0,
+              125
+            ]
           }
         ],
         "protocol": {
@@ -251,7 +265,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶21.1",
-            "quote": "We will confront the hard issues, threats to our national security, threats to our health and retirement security, before the challenges of our time become crises for our children."
+            "quote": "We will confront the hard issues, threats to our national security, threats to our health and retirement security, before the challenges of our time become crises for our children.",
+            "context": "We will confront the hard issues, threats to our national security, threats to our health and retirement security, before the challenges of our time become crises for our children.",
+            "mark": [
+              0,
+              180
+            ]
           }
         ],
         "protocol": {
@@ -296,7 +315,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶22.1",
-            "quote": "And we will extend the promise of prosperity to every forgotten corner of this country: to every man and woman, a chance to succeed; to every child, a chance to learn; and to every family, a chance to live with dignity and hope."
+            "quote": "And we will extend the promise of prosperity to every forgotten corner of this country: to every man and woman, a chance to succeed; to every child, a chance to learn; and to every family, a chance to live with dignity and hope.",
+            "context": "And we will extend the promise of prosperity to every forgotten corner of this country: to every man and woman, a chance to succeed; to every child, a chance to learn; and to every family, a chance to live with dignity and hope.",
+            "mark": [
+              0,
+              228
+            ]
           }
         ],
         "protocol": {
@@ -341,7 +365,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶27.2",
-            "quote": "We will."
+            "quote": "We will.",
+            "context": "We will.",
+            "mark": [
+              0,
+              8
+            ]
           },
           {
             "source": {
@@ -356,7 +385,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶29.3",
-            "quote": "We will."
+            "quote": "We will.",
+            "context": "We will.",
+            "mark": [
+              0,
+              8
+            ]
           },
           {
             "source": {
@@ -371,7 +405,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶31.3",
-            "quote": "We will."
+            "quote": "We will.",
+            "context": "We will.",
+            "mark": [
+              0,
+              8
+            ]
           },
           {
             "source": {
@@ -386,7 +425,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶33.3",
-            "quote": "We will."
+            "quote": "We will.",
+            "context": "We will.",
+            "mark": [
+              0,
+              8
+            ]
           },
           {
             "source": {
@@ -401,7 +445,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶83.3",
-            "quote": "Give me the opportunity to lead this nation, and I will lead."
+            "quote": "Give me the opportunity to lead this nation, and I will lead.",
+            "context": "Give me the opportunity to lead this nation, and I will lead.",
+            "mark": [
+              0,
+              61
+            ]
           },
           {
             "source": {
@@ -416,7 +465,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶91.2",
-            "quote": "And on this ground, we will lead our nation."
+            "quote": "And on this ground, we will lead our nation.",
+            "context": "And on this ground, we will lead our nation.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -461,7 +515,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶40.4",
-            "quote": "We will add the work of our hands to the inheritance of our fathers and mothers and leave this nation greater than we found it."
+            "quote": "We will add the work of our hands to the inheritance of our fathers and mothers and leave this nation greater than we found it.",
+            "context": "We will add the work of our hands to the inheritance of our fathers and mothers and leave this nation greater than we found it.",
+            "mark": [
+              0,
+              127
+            ]
           }
         ],
         "protocol": {
@@ -506,7 +565,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶41.3",
-            "quote": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come."
+            "quote": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come.",
+            "context": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come.",
+            "mark": [
+              0,
+              104
+            ]
           },
           {
             "source": {
@@ -521,7 +585,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶14.2",
-            "quote": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent."
+            "quote": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent.",
+            "context": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent.",
+            "mark": [
+              0,
+              110
+            ]
           },
           {
             "source": {
@@ -536,7 +605,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶159.20",
-            "quote": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus."
+            "quote": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus.",
+            "context": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus.",
+            "mark": [
+              0,
+              140
+            ]
           },
           {
             "source": {
@@ -551,7 +625,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.7",
-            "quote": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America."
+            "quote": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America.",
+            "context": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America.",
+            "mark": [
+              0,
+              209
+            ]
           }
         ],
         "protocol": {
@@ -615,7 +694,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶41.3",
-            "quote": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come."
+            "quote": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come.",
+            "context": "We will strengthen Social Security and Medicare for the greatest generation and for generations to come.",
+            "mark": [
+              0,
+              104
+            ]
           },
           {
             "source": {
@@ -630,7 +714,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶14.2",
-            "quote": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent."
+            "quote": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent.",
+            "context": "We will reform Social Security and Medicare, sparing our children from struggles we have the power to prevent.",
+            "mark": [
+              0,
+              110
+            ]
           },
           {
             "source": {
@@ -645,7 +734,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.6",
-            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
+            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.",
+            "context": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.",
+            "mark": [
+              0,
+              170
+            ]
           }
         ],
         "protocol": {
@@ -709,7 +803,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶42.2",
-            "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them."
+            "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them.",
+            "context": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them.",
+            "mark": [
+              0,
+              125
+            ]
           }
         ],
         "protocol": {
@@ -780,7 +879,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶42.2",
-            "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them."
+            "quote": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them.",
+            "context": "We will set it on firm financial ground and make prescription drugs available and affordable for every senior who needs them.",
+            "mark": [
+              0,
+              125
+            ]
           },
           {
             "source": {
@@ -795,7 +899,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶21.6",
-            "quote": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs."
+            "quote": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs.",
+            "context": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs.",
+            "mark": [
+              0,
+              281
+            ]
           },
           {
             "source": {
@@ -810,7 +919,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶146.7",
-            "quote": "You get a plan that will include prescription drugs, a plan that will give you options."
+            "quote": "You get a plan that will include prescription drugs, a plan that will give you options.",
+            "context": "You get a plan that will include prescription drugs, a plan that will give you options.",
+            "mark": [
+              0,
+              87
+            ]
           },
           {
             "source": {
@@ -825,7 +939,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.6",
-            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
+            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.",
+            "context": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.",
+            "mark": [
+              0,
+              170
+            ]
           }
         ],
         "protocol": {
@@ -889,7 +1008,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶44.1-44.2",
-            "quote": "To the seniors in this country, you earned your benefits, you made your plans, and President George W. Bush will keep the promise of Social Security. No changes, no reductions, no way."
+            "quote": "To the seniors in this country, you earned your benefits, you made your plans, and President George W. Bush will keep the promise of Social Security. No changes, no reductions, no way.",
+            "context": "To the seniors in this country, you earned your benefits, you made your plans, and President George W. Bush will keep the promise of Social Security. No changes, no reductions, no way.",
+            "mark": [
+              0,
+              184
+            ]
           },
           {
             "source": {
@@ -904,7 +1028,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.7",
-            "quote": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America."
+            "quote": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America.",
+            "context": "It's an agenda that says we're listen to the young voices in Social Security and say we're going to think differently about making sure we have a system, but also fulfill the promise to the seniors in America.",
+            "mark": [
+              0,
+              209
+            ]
           }
         ],
         "protocol": {
@@ -968,7 +1097,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶47.1",
-            "quote": "For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments."
+            "quote": "For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments.",
+            "context": "For younger workers, we will give you the option, your choice, to put part of your payroll taxes into sound, responsible investments.",
+            "mark": [
+              0,
+              133
+            ]
           }
         ],
         "protocol": {
@@ -1032,7 +1166,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶58.1",
-            "quote": "I will use this moment of opportunity to bring common sense and fairness to the tax code."
+            "quote": "I will use this moment of opportunity to bring common sense and fairness to the tax code.",
+            "context": "I will use this moment of opportunity to bring common sense and fairness to the tax code.",
+            "mark": [
+              0,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -1077,7 +1216,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶58.3",
-            "quote": "On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax."
+            "quote": "On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax.",
+            "context": "On principle, every family, every farmer and small-business person should be free to pass on their life's work to those they love, so we will abolish the death tax.",
+            "mark": [
+              0,
+              164
+            ]
           },
           {
             "source": {
@@ -1092,7 +1236,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶113.9",
-            "quote": "I know this, 100% will get it if I'm the president."
+            "quote": "I know this, 100% will get it if I'm the president.",
+            "context": "I know this, 100% will get it if I'm the president.",
+            "mark": [
+              0,
+              51
+            ]
           }
         ],
         "protocol": {
@@ -1156,7 +1305,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶59.1",
-            "quote": "On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket."
+            "quote": "On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket.",
+            "context": "On principle, no one in America should have to pay more than a third of their income to the federal government, so we will reduce tax rates for everyone in every bracket.",
+            "mark": [
+              0,
+              170
+            ]
           }
         ],
         "protocol": {
@@ -1232,7 +1386,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶60.1",
-            "quote": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit."
+            "quote": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit.",
+            "context": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit.",
+            "mark": [
+              0,
+              168
+            ]
           }
         ],
         "protocol": {
@@ -1301,7 +1460,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶60.1",
-            "quote": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit."
+            "quote": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit.",
+            "context": "On principle, those with the greatest need should receive the greatest help, so we will lower the bottom rate from 15 percent to 10 percent and double the child credit.",
+            "mark": [
+              0,
+              168
+            ]
           }
         ],
         "protocol": {
@@ -1372,7 +1536,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
+            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect.",
+            "context": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect.",
+            "mark": [
+              0,
+              203
+            ]
           }
         ],
         "protocol": {
@@ -1417,7 +1586,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect."
+            "quote": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect.",
+            "context": "We will give our military the means to keep the peace, and we will give it one thing more: a commander-in-chief who respects our men and women in uniform and a commander-in-chief who earns their respect.",
+            "mark": [
+              0,
+              203
+            ]
           }
         ],
         "protocol": {
@@ -1462,7 +1636,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶65.1",
-            "quote": "I will work to reduce nuclear weapons and nuclear tension in the world, to turn these years of influence into decades of peace."
+            "quote": "I will work to reduce nuclear weapons and nuclear tension in the world, to turn these years of influence into decades of peace.",
+            "context": "I will work to reduce nuclear weapons and nuclear tension in the world, to turn these years of influence into decades of peace.",
+            "mark": [
+              0,
+              127
+            ]
           }
         ],
         "protocol": {
@@ -1526,7 +1705,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶65.2",
-            "quote": "And at the earliest possible date, my administration will deploy missile defenses to guard against attack and blackmail."
+            "quote": "And at the earliest possible date, my administration will deploy missile defenses to guard against attack and blackmail.",
+            "context": "And at the earliest possible date, my administration will deploy missile defenses to guard against attack and blackmail.",
+            "mark": [
+              0,
+              120
+            ]
           }
         ],
         "protocol": {
@@ -1597,7 +1781,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶83.1",
-            "quote": "If you give me your trust, I will honor it."
+            "quote": "If you give me your trust, I will honor it.",
+            "context": "If you give me your trust, I will honor it.",
+            "mark": [
+              0,
+              43
+            ]
           }
         ],
         "protocol": {
@@ -1642,7 +1831,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶83.2",
-            "quote": "Grant me a mandate, I will use it."
+            "quote": "Grant me a mandate, I will use it.",
+            "context": "Grant me a mandate, I will use it.",
+            "mark": [
+              0,
+              34
+            ]
           }
         ],
         "protocol": {
@@ -1687,7 +1881,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶92.1",
-            "quote": "We will give low-income Americans tax credits to buy the private health insurance they need and deserve."
+            "quote": "We will give low-income Americans tax credits to buy the private health insurance they need and deserve.",
+            "context": "We will give low-income Americans tax credits to buy the private health insurance they need and deserve.",
+            "mark": [
+              0,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -1758,7 +1957,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶93.1",
-            "quote": "We will transform today's housing rental program to help hundreds of thousands of low-income families find stability and dignity in a home of their own."
+            "quote": "We will transform today's housing rental program to help hundreds of thousands of low-income families find stability and dignity in a home of their own.",
+            "context": "We will transform today's housing rental program to help hundreds of thousands of low-income families find stability and dignity in a home of their own.",
+            "mark": [
+              0,
+              152
+            ]
           }
         ],
         "protocol": {
@@ -1822,7 +2026,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶94.1",
-            "quote": "And in the next bold step of welfare reform, we will support the heroic work of homeless shelters and hospices, food pantry and crisis pregnancy centers, people reclaiming their communities block by block and heart by heart."
+            "quote": "And in the next bold step of welfare reform, we will support the heroic work of homeless shelters and hospices, food pantry and crisis pregnancy centers, people reclaiming their communities block by block and heart by heart.",
+            "context": "And in the next bold step of welfare reform, we will support the heroic work of homeless shelters and hospices, food pantry and crisis pregnancy centers, people reclaiming their communities block by block and heart by heart.",
+            "mark": [
+              0,
+              224
+            ]
           }
         ],
         "protocol": {
@@ -1886,7 +2095,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶98.2",
-            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
+            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.",
+            "context": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.",
+            "mark": [
+              0,
+              190
+            ]
           }
         ],
         "protocol": {
@@ -1957,7 +2171,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶98.2",
-            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
+            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.",
+            "context": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.",
+            "mark": [
+              0,
+              190
+            ]
           }
         ],
         "protocol": {
@@ -2002,7 +2221,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶98.2",
-            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives."
+            "quote": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.",
+            "context": "My administration will give taxpayers new incentives to donate to charity, encourage after-school programs that build character, and support mentoring groups that shape and save young lives.",
+            "mark": [
+              0,
+              190
+            ]
           }
         ],
         "protocol": {
@@ -2066,7 +2290,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶103.2",
-            "quote": "I will lead our nation toward a culture that values life—the life of the elderly and sick, the life of the young and the life of the unborn."
+            "quote": "I will lead our nation toward a culture that values life—the life of the elderly and sick, the life of the young and the life of the unborn.",
+            "context": "I will lead our nation toward a culture that values life—the life of the elderly and sick, the life of the young and the life of the unborn.",
+            "mark": [
+              0,
+              140
+            ]
           }
         ],
         "protocol": {
@@ -2111,7 +2340,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶104.2",
-            "quote": "And when Congress sends me a bill against partial-birth abortion, I will sign it into law."
+            "quote": "And when Congress sends me a bill against partial-birth abortion, I will sign it into law.",
+            "context": "And when Congress sends me a bill against partial-birth abortion, I will sign it into law.",
+            "mark": [
+              0,
+              90
+            ]
           }
         ],
         "protocol": {
@@ -2175,7 +2409,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶107.3",
-            "quote": "We will continue this progress, and we will not turn back."
+            "quote": "We will continue this progress, and we will not turn back.",
+            "context": "We will continue this progress, and we will not turn back.",
+            "mark": [
+              0,
+              58
+            ]
           }
         ],
         "protocol": {
@@ -2220,7 +2459,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶115.1",
-            "quote": "So when I put my hand on the Bible, I will swear to not only uphold the laws of our land, I will swear to uphold the honor and dignity of the office to which I have been elected, so help me God."
+            "quote": "So when I put my hand on the Bible, I will swear to not only uphold the laws of our land, I will swear to uphold the honor and dignity of the office to which I have been elected, so help me God.",
+            "context": "So when I put my hand on the Bible, I will swear to not only uphold the laws of our land, I will swear to uphold the honor and dignity of the office to which I have been elected, so help me God.",
+            "mark": [
+              0,
+              194
+            ]
           },
           {
             "source": {
@@ -2235,7 +2479,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.21",
-            "quote": "Should I be fortunate enough to become your president, when I put my hand on the Bible, I will swear to not only uphold the laws of the land, but I will also swear to uphold the honor and the dignity of the office to which I have been elected, so help me God."
+            "quote": "Should I be fortunate enough to become your president, when I put my hand on the Bible, I will swear to not only uphold the laws of the land, but I will also swear to uphold the honor and the dignity of the office to which I have been elected, so help me God.",
+            "context": "Should I be fortunate enough to become your president, when I put my hand on the Bible, I will swear to not only uphold the laws of the land, but I will also swear to uphold the honor and the dignity of the office to which I have been elected, so help me God.",
+            "mark": [
+              0,
+              259
+            ]
           }
         ],
         "protocol": {
@@ -2280,7 +2529,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶117.1",
-            "quote": "For me, gaining this office is not the ambition of a lifetime, but it is the opportunity of a lifetime, and I will make the most of it."
+            "quote": "For me, gaining this office is not the ambition of a lifetime, but it is the opportunity of a lifetime, and I will make the most of it.",
+            "context": "For me, gaining this office is not the ambition of a lifetime, but it is the opportunity of a lifetime, and I will make the most of it.",
+            "mark": [
+              0,
+              135
+            ]
           }
         ],
         "protocol": {
@@ -2325,7 +2579,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶125.1",
-            "quote": "I will not attack a part of this country because I want to lead the whole of it."
+            "quote": "I will not attack a part of this country because I want to lead the whole of it.",
+            "context": "I will not attack a part of this country because I want to lead the whole of it.",
+            "mark": [
+              0,
+              80
+            ]
           }
         ],
         "protocol": {
@@ -2370,7 +2629,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶7.4",
-            "quote": "We do not accept this, and we will not allow it."
+            "quote": "We do not accept this, and we will not allow it.",
+            "context": "We do not accept this, and we will not allow it.",
+            "mark": [
+              0,
+              48
+            ]
           }
         ],
         "protocol": {
@@ -2415,7 +2679,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶8.2",
-            "quote": "And this is my solemn pledge: I will work to build a single nation of justice and opportunity."
+            "quote": "And this is my solemn pledge: I will work to build a single nation of justice and opportunity.",
+            "context": "And this is my solemn pledge: I will work to build a single nation of justice and opportunity.",
+            "mark": [
+              0,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -2460,7 +2729,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶10.1",
-            "quote": "Today we affirm a new commitment to live out our Nation's promise through civility, courage, compassion, and character."
+            "quote": "Today we affirm a new commitment to live out our Nation's promise through civility, courage, compassion, and character.",
+            "context": "Today we affirm a new commitment to live out our Nation's promise through civility, courage, compassion, and character.",
+            "mark": [
+              0,
+              119
+            ]
           }
         ],
         "protocol": {
@@ -2505,7 +2779,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶14.1",
-            "quote": "Together we will reclaim America's schools before ignorance and apathy claim more young lives."
+            "quote": "Together we will reclaim America's schools before ignorance and apathy claim more young lives.",
+            "context": "Together we will reclaim America's schools before ignorance and apathy claim more young lives.",
+            "mark": [
+              0,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -2550,7 +2829,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶14.3",
-            "quote": "And we will reduce taxes to recover the momentum of our economy and reward the effort and enterprise of working Americans."
+            "quote": "And we will reduce taxes to recover the momentum of our economy and reward the effort and enterprise of working Americans.",
+            "context": "And we will reduce taxes to recover the momentum of our economy and reward the effort and enterprise of working Americans.",
+            "mark": [
+              0,
+              122
+            ]
           }
         ],
         "protocol": {
@@ -2621,7 +2905,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶15.1",
-            "quote": "We will build our defenses beyond challenge, lest weakness invite challenge."
+            "quote": "We will build our defenses beyond challenge, lest weakness invite challenge.",
+            "context": "We will build our defenses beyond challenge, lest weakness invite challenge.",
+            "mark": [
+              0,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -2685,7 +2974,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶15.2",
-            "quote": "We will confront weapons of mass destruction, so that a new century is spared new horrors."
+            "quote": "We will confront weapons of mass destruction, so that a new century is spared new horrors.",
+            "context": "We will confront weapons of mass destruction, so that a new century is spared new horrors.",
+            "mark": [
+              0,
+              90
+            ]
           }
         ],
         "protocol": {
@@ -2730,7 +3024,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶16.1",
-            "quote": "We will defend our allies and our interests."
+            "quote": "We will defend our allies and our interests.",
+            "context": "We will defend our allies and our interests.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -2775,7 +3074,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶16.2",
-            "quote": "We will show purpose without arrogance."
+            "quote": "We will show purpose without arrogance.",
+            "context": "We will show purpose without arrogance.",
+            "mark": [
+              0,
+              39
+            ]
           }
         ],
         "protocol": {
@@ -2820,7 +3124,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶16.3",
-            "quote": "We will meet aggression and bad faith with resolve and strength."
+            "quote": "We will meet aggression and bad faith with resolve and strength.",
+            "context": "We will meet aggression and bad faith with resolve and strength.",
+            "mark": [
+              0,
+              64
+            ]
           }
         ],
         "protocol": {
@@ -2865,7 +3174,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶16.4",
-            "quote": "And to all nations, we will speak for the values that gave our Nation birth."
+            "quote": "And to all nations, we will speak for the values that gave our Nation birth.",
+            "context": "And to all nations, we will speak for the values that gave our Nation birth.",
+            "mark": [
+              0,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -2910,7 +3224,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶19.4",
-            "quote": "Church and charity, synagogue and mosque lend our communities their humanity, and they will have an honored place in our plans and in our laws."
+            "quote": "Church and charity, synagogue and mosque lend our communities their humanity, and they will have an honored place in our plans and in our laws.",
+            "context": "Church and charity, synagogue and mosque lend our communities their humanity, and they will have an honored place in our plans and in our laws.",
+            "mark": [
+              0,
+              143
+            ]
           }
         ],
         "protocol": {
@@ -2974,7 +3293,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶20.3",
-            "quote": "And I can pledge our Nation to a goal: When we see that wounded traveler on the road to Jericho, we will not pass to the other side."
+            "quote": "And I can pledge our Nation to a goal: When we see that wounded traveler on the road to Jericho, we will not pass to the other side.",
+            "context": "And I can pledge our Nation to a goal: When we see that wounded traveler on the road to Jericho, we will not pass to the other side.",
+            "mark": [
+              0,
+              132
+            ]
           }
         ],
         "protocol": {
@@ -3019,7 +3343,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶24.1-24.2",
-            "quote": "I will live and lead by these principles: to advance my convictions with civility, to serve the public interest with courage, to speak for greater justice and compassion, to call for responsibility and try to live it, as well. In all these ways, I will bring the values of our history to the care of our times."
+            "quote": "I will live and lead by these principles: to advance my convictions with civility, to serve the public interest with courage, to speak for greater justice and compassion, to call for responsibility and try to live it, as well. In all these ways, I will bring the values of our history to the care of our times.",
+            "context": "I will live and lead by these principles: to advance my convictions with civility, to serve the public interest with courage, to speak for greater justice and compassion, to call for responsibility and try to live it, as well. In all these ways, I will bring the values of our history to the care of our times.",
+            "mark": [
+              0,
+              310
+            ]
           }
         ],
         "protocol": {
@@ -3064,7 +3393,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶18.6-18.7",
-            "quote": "If I'm the president, we're going to have emergency room care, we're going have gag orders, we're going to have direct access to OB/GYN. People will be able to take their HMO insurance company to court."
+            "quote": "If I'm the president, we're going to have emergency room care, we're going have gag orders, we're going to have direct access to OB/GYN. People will be able to take their HMO insurance company to court.",
+            "context": "If I'm the president, we're going to have emergency room care, we're going have gag orders, we're going to have direct access to OB/GYN. People will be able to take their HMO insurance company to court.",
+            "mark": [
+              0,
+              202
+            ]
           }
         ],
         "protocol": {
@@ -3135,7 +3469,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶18.8",
-            "quote": "That's what I've done in Texas and that's the kind of leadership style I'll bring to Washington."
+            "quote": "That's what I've done in Texas and that's the kind of leadership style I'll bring to Washington.",
+            "context": "That's what I've done in Texas and that's the kind of leadership style I'll bring to Washington.",
+            "mark": [
+              0,
+              96
+            ]
           },
           {
             "source": {
@@ -3150,7 +3489,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶159.30",
-            "quote": "I'm going to bring them together."
+            "quote": "I'm going to bring them together.",
+            "context": "I'm going to bring them together.",
+            "mark": [
+              0,
+              33
+            ]
           }
         ],
         "protocol": {
@@ -3195,7 +3539,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶21.6",
-            "quote": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs."
+            "quote": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs.",
+            "context": "So what I want to do is I want to call upon Republicans and Democrats to forget all the arguing and finger pointing, and come together and take care of our seniors' prescription drug program, that says we'll pay for the poor seniors, we'll help all seniors with prescription drugs.",
+            "mark": [
+              0,
+              281
+            ]
           }
         ],
         "protocol": {
@@ -3264,7 +3613,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶30.23",
-            "quote": "In the Medicare reform I talk about it says if you are a senior, you can stay in Medicare if you like it, and that's fine, but we're going to give you other choices to choose if you want to do so, just like they do the federal employees."
+            "quote": "In the Medicare reform I talk about it says if you are a senior, you can stay in Medicare if you like it, and that's fine, but we're going to give you other choices to choose if you want to do so, just like they do the federal employees.",
+            "context": "In the Medicare reform I talk about it says if you are a senior, you can stay in Medicare if you like it, and that's fine, but we're going to give you other choices to choose if you want to do so, just like they do the federal employees.",
+            "mark": [
+              0,
+              237
+            ]
           },
           {
             "source": {
@@ -3279,7 +3633,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶146.7",
-            "quote": "You get a plan that will include prescription drugs, a plan that will give you options."
+            "quote": "You get a plan that will include prescription drugs, a plan that will give you options.",
+            "context": "You get a plan that will include prescription drugs, a plan that will give you options.",
+            "mark": [
+              0,
+              87
+            ]
           },
           {
             "source": {
@@ -3294,7 +3653,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶146.11",
-            "quote": "So it will be a modern Medicare system that trusts you to make a variety of options for you."
+            "quote": "So it will be a modern Medicare system that trusts you to make a variety of options for you.",
+            "context": "So it will be a modern Medicare system that trusts you to make a variety of options for you.",
+            "mark": [
+              0,
+              92
+            ]
           },
           {
             "source": {
@@ -3309,7 +3673,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.6",
-            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose."
+            "quote": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.",
+            "context": "It's an agenda that says we're going to reform Medicare to make sure seniors have got prescription drugs and to give seniors different options from which they can choose.",
+            "mark": [
+              0,
+              170
+            ]
           }
         ],
         "protocol": {
@@ -3373,7 +3742,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶39.13",
-            "quote": "And if we find success we'll praise it."
+            "quote": "And if we find success we'll praise it.",
+            "context": "And if we find success we'll praise it.",
+            "mark": [
+              0,
+              39
+            ]
           }
         ],
         "protocol": {
@@ -3418,7 +3792,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶39.15",
-            "quote": "And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school."
+            "quote": "And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school.",
+            "context": "And the consequence is that federal portion or federal money will go to the parent, so the parent can go to a tutoring program or another public school or another private school.",
+            "mark": [
+              0,
+              178
+            ]
           }
         ],
         "protocol": {
@@ -3487,7 +3866,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶50.20",
-            "quote": "So I'm going to ask the Congress to pass a teacher protection act."
+            "quote": "So I'm going to ask the Congress to pass a teacher protection act.",
+            "context": "So I'm going to ask the Congress to pass a teacher protection act.",
+            "mark": [
+              0,
+              66
+            ]
           }
         ],
         "protocol": {
@@ -3558,7 +3942,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶62.2-62.3",
-            "quote": "If you pay taxes, you are going to get a benefit. People who pay taxes will get tax relief."
+            "quote": "If you pay taxes, you are going to get a benefit. People who pay taxes will get tax relief.",
+            "context": "If you pay taxes, you are going to get a benefit. People who pay taxes will get tax relief.",
+            "mark": [
+              0,
+              91
+            ]
           },
           {
             "source": {
@@ -3573,7 +3962,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶146.2-146.4",
-            "quote": "You're going to get a tax refund in my plan. You're not going to be targeted in or targeted out. Everybody that pays taxes is going to get tax relief."
+            "quote": "You're going to get a tax refund in my plan. You're not going to be targeted in or targeted out. Everybody that pays taxes is going to get tax relief.",
+            "context": "You're going to get a tax refund in my plan. You're not going to be targeted in or targeted out. Everybody that pays taxes is going to get tax relief.",
+            "mark": [
+              0,
+              150
+            ]
           }
         ],
         "protocol": {
@@ -3637,7 +4031,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶78.7",
-            "quote": "Israel is our friend and we'll stand by Israel."
+            "quote": "Israel is our friend and we'll stand by Israel.",
+            "context": "Israel is our friend and we'll stand by Israel.",
+            "mark": [
+              0,
+              47
+            ]
           }
         ],
         "protocol": {
@@ -3682,7 +4081,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶89.2",
-            "quote": "I readily admit I'm not going to grow the size of the federal government like he is."
+            "quote": "I readily admit I'm not going to grow the size of the federal government like he is.",
+            "context": "I readily admit I'm not going to grow the size of the federal government like he is.",
+            "mark": [
+              0,
+              84
+            ]
           }
         ],
         "protocol": {
@@ -3727,7 +4131,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶89.11-89.12",
-            "quote": "Should I be fortunate enough to earn your confidence, the mission of the United States military will be to be prepared and ready to fight and win war. And therefore prevent war from happening in the first place."
+            "quote": "Should I be fortunate enough to earn your confidence, the mission of the United States military will be to be prepared and ready to fight and win war. And therefore prevent war from happening in the first place.",
+            "context": "Should I be fortunate enough to earn your confidence, the mission of the United States military will be to be prepared and ready to fight and win war. And therefore prevent war from happening in the first place.",
+            "mark": [
+              0,
+              211
+            ]
           }
         ],
         "protocol": {
@@ -3772,7 +4181,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶89.21",
-            "quote": "First thing I'm going to do is ask the Secretary of Defense to develop a plan so we are making sure we're not spending our money on political projects, but on projects to make sure our soldiers are well-paid, well-housed, and have the best equipment in the world."
+            "quote": "First thing I'm going to do is ask the Secretary of Defense to develop a plan so we are making sure we're not spending our money on political projects, but on projects to make sure our soldiers are well-paid, well-housed, and have the best equipment in the world.",
+            "context": "First thing I'm going to do is ask the Secretary of Defense to develop a plan so we are making sure we're not spending our money on political projects, but on projects to make sure our soldiers are well-paid, well-housed, and have the best equipment in the world.",
+            "mark": [
+              0,
+              263
+            ]
           }
         ],
         "protocol": {
@@ -3836,7 +4250,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶100.20-100.21",
-            "quote": "And I'm for enforcing laws on the books. And that's what is going to happen should I earn your confidence."
+            "quote": "And I'm for enforcing laws on the books. And that's what is going to happen should I earn your confidence.",
+            "context": "And I'm for enforcing laws on the books. And that's what is going to happen should I earn your confidence.",
+            "mark": [
+              0,
+              106
+            ]
           }
         ],
         "protocol": {
@@ -3905,7 +4324,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶117.20",
-            "quote": "I'll remind mothers and dads the best weapon is the off/on button, and paying attention to your children, and eating dinner with them and being -- I'm sorry."
+            "quote": "I'll remind mothers and dads the best weapon is the off/on button, and paying attention to your children, and eating dinner with them and being -- I'm sorry.",
+            "context": "I'll remind mothers and dads the best weapon is the off/on button, and paying attention to your children, and eating dinner with them and being -- I'm sorry.",
+            "mark": [
+              0,
+              157
+            ]
           }
         ],
         "protocol": {
@@ -3950,7 +4374,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶130.2",
-            "quote": "I'm going to find people that want to serve their country."
+            "quote": "I'm going to find people that want to serve their country.",
+            "context": "I'm going to find people that want to serve their country.",
+            "mark": [
+              0,
+              58
+            ]
           }
         ],
         "protocol": {
@@ -3995,7 +4424,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶130.20",
-            "quote": "I'll have an administration that will make you proud."
+            "quote": "I'll have an administration that will make you proud.",
+            "context": "I'll have an administration that will make you proud.",
+            "mark": [
+              0,
+              53
+            ]
           }
         ],
         "protocol": {
@@ -4040,7 +4474,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶146.5",
-            "quote": "If you take care of an elderly in your home, you're going to get the personal exemption increased."
+            "quote": "If you take care of an elderly in your home, you're going to get the personal exemption increased.",
+            "context": "If you take care of an elderly in your home, you're going to get the personal exemption increased.",
+            "mark": [
+              0,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -4111,7 +4550,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶146.12-146.13",
-            "quote": "You're going to live in a peaceful world. It will be a world of peace because we're going to have a clear sight of foreign policy based upon a strong military and a mission that stands by our friends."
+            "quote": "You're going to live in a peaceful world. It will be a world of peace because we're going to have a clear sight of foreign policy based upon a strong military and a mission that stands by our friends.",
+            "context": "You're going to live in a peaceful world. It will be a world of peace because we're going to have a clear sight of foreign policy based upon a strong military and a mission that stands by our friends.",
+            "mark": [
+              0,
+              200
+            ]
           }
         ],
         "protocol": {
@@ -4156,7 +4600,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶159.20",
-            "quote": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus."
+            "quote": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus.",
+            "context": "One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus.",
+            "mark": [
+              0,
+              140
+            ]
           },
           {
             "source": {
@@ -4171,7 +4620,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶159.24",
-            "quote": "And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today."
+            "quote": "And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today.",
+            "context": "And you bet we're gonna take a trillion dollars of your own money and let you invest it under safe guidelines so you get a better rate of return on the money than the paltry 2% that the federal government gets for you today.",
+            "mark": [
+              0,
+              224
+            ]
           }
         ],
         "protocol": {
@@ -4240,7 +4694,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.8",
-            "quote": "A promise made will be a promise kept should I be fortunate enough to become your president."
+            "quote": "A promise made will be a promise kept should I be fortunate enough to become your president.",
+            "context": "A promise made will be a promise kept should I be fortunate enough to become your president.",
+            "mark": [
+              0,
+              92
+            ]
           }
         ],
         "protocol": {
@@ -4287,7 +4746,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶43.3",
-            "quote": "And I intend to fix it."
+            "quote": "And I intend to fix it.",
+            "context": "And I intend to fix it.",
+            "mark": [
+              0,
+              23
+            ]
           }
         ],
         "protocol": {
@@ -4332,7 +4796,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶51.1",
-            "quote": "And our nation should treat it like other forms of discrimination: We should end it."
+            "quote": "And our nation should treat it like other forms of discrimination: We should end it.",
+            "context": "And our nation should treat it like other forms of discrimination: We should end it.",
+            "mark": [
+              0,
+              84
+            ]
           }
         ],
         "protocol": {
@@ -4377,7 +4846,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶52.1",
-            "quote": "One size does not fit all when it comes to educating our children, so local people should control local schools."
+            "quote": "One size does not fit all when it comes to educating our children, so local people should control local schools.",
+            "context": "One size does not fit all when it comes to educating our children, so local people should control local schools.",
+            "mark": [
+              0,
+              112
+            ]
           },
           {
             "source": {
@@ -4392,7 +4866,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶50.9",
-            "quote": "What I want to do is to send flexibility and authority to the local folks so you can choose what to do with the money."
+            "quote": "What I want to do is to send flexibility and authority to the local folks so you can choose what to do with the money.",
+            "context": "What I want to do is to send flexibility and authority to the local folks so you can choose what to do with the money.",
+            "mark": [
+              0,
+              118
+            ]
           }
         ],
         "protocol": {
@@ -4437,7 +4916,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶53.1",
-            "quote": "And those who spend your tax dollars must be held accountable."
+            "quote": "And those who spend your tax dollars must be held accountable.",
+            "context": "And those who spend your tax dollars must be held accountable.",
+            "mark": [
+              0,
+              62
+            ]
           },
           {
             "source": {
@@ -4452,7 +4936,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶39.10",
-            "quote": "I've said to the extent we send federal money on disadvantaged children, we want the schools to show us whether or not the children are learning."
+            "quote": "I've said to the extent we send federal money on disadvantaged children, we want the schools to show us whether or not the children are learning.",
+            "context": "I've said to the extent we send federal money on disadvantaged children, we want the schools to show us whether or not the children are learning.",
+            "mark": [
+              0,
+              145
+            ]
           },
           {
             "source": {
@@ -4467,7 +4956,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶50.13",
-            "quote": "We need to have accountability."
+            "quote": "We need to have accountability.",
+            "context": "We need to have accountability.",
+            "mark": [
+              0,
+              31
+            ]
           },
           {
             "source": {
@@ -4482,7 +4976,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶50.15",
-            "quote": "We need to demand on results."
+            "quote": "We need to demand on results.",
+            "context": "We need to demand on results.",
+            "mark": [
+              0,
+              29
+            ]
           }
         ],
         "protocol": {
@@ -4527,7 +5026,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶53.3",
-            "quote": "And if they don't, parents should get the money to make a different choice."
+            "quote": "And if they don't, parents should get the money to make a different choice.",
+            "context": "And if they don't, parents should get the money to make a different choice.",
+            "mark": [
+              0,
+              75
+            ]
           },
           {
             "source": {
@@ -4542,7 +5046,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶35.18-35.19",
-            "quote": "I also believe that we need to say to people that if you cannot meet standards, there has to be a consequence. Instead of just comes the soft bigotry of low expectations, that there has to be a consequence."
+            "quote": "I also believe that we need to say to people that if you cannot meet standards, there has to be a consequence. Instead of just comes the soft bigotry of low expectations, that there has to be a consequence.",
+            "context": "I also believe that we need to say to people that if you cannot meet standards, there has to be a consequence. Instead of just comes the soft bigotry of low expectations, that there has to be a consequence.",
+            "mark": [
+              0,
+              206
+            ]
           },
           {
             "source": {
@@ -4557,7 +5066,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶39.14",
-            "quote": "But when we find children trapped in schools that will not change and will not teach, instead of saying oh, this is okay in America just to shuffle poor kids through schools, there has to be a consequence."
+            "quote": "But when we find children trapped in schools that will not change and will not teach, instead of saying oh, this is okay in America just to shuffle poor kids through schools, there has to be a consequence.",
+            "context": "But when we find children trapped in schools that will not change and will not teach, instead of saying oh, this is okay in America just to shuffle poor kids through schools, there has to be a consequence.",
+            "mark": [
+              0,
+              205
+            ]
           },
           {
             "source": {
@@ -4572,7 +5086,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶39.16",
-            "quote": "You see, there has to be a consequence."
+            "quote": "You see, there has to be a consequence.",
+            "context": "You see, there has to be a consequence.",
+            "mark": [
+              0,
+              39
+            ]
           }
         ],
         "protocol": {
@@ -4617,7 +5136,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶54.1",
-            "quote": "Now is the time to make Head Start an early learning program to teach all our children to read and renew the promise of America's public schools."
+            "quote": "Now is the time to make Head Start an early learning program to teach all our children to read and renew the promise of America's public schools.",
+            "context": "Now is the time to make Head Start an early learning program to teach all our children to read and renew the promise of America's public schools.",
+            "mark": [
+              0,
+              145
+            ]
           }
         ],
         "protocol": {
@@ -4662,7 +5186,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶77.5",
-            "quote": "I want to change the tone of Washington to one of civility and respect."
+            "quote": "I want to change the tone of Washington to one of civility and respect.",
+            "context": "I want to change the tone of Washington to one of civility and respect.",
+            "mark": [
+              0,
+              71
+            ]
           }
         ],
         "protocol": {
@@ -4707,7 +5236,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶89.4",
-            "quote": "And my fellow Americans, we must tear down that wall."
+            "quote": "And my fellow Americans, we must tear down that wall.",
+            "context": "And my fellow Americans, we must tear down that wall.",
+            "mark": [
+              0,
+              53
+            ]
           }
         ],
         "protocol": {
@@ -4752,7 +5286,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶99.1",
-            "quote": "We must give our children a spirit of moral courage because their character is our destiny."
+            "quote": "We must give our children a spirit of moral courage because their character is our destiny.",
+            "context": "We must give our children a spirit of moral courage because their character is our destiny.",
+            "mark": [
+              0,
+              91
+            ]
           }
         ],
         "protocol": {
@@ -4797,7 +5336,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶100.1",
-            "quote": "We must tell them—we must tell them—we must tell them with confidence that drugs and alcohol can destroy you, and bigotry disfigures the heart."
+            "quote": "We must tell them—we must tell them—we must tell them with confidence that drugs and alcohol can destroy you, and bigotry disfigures the heart.",
+            "context": "We must tell them—we must tell them—we must tell them with confidence that drugs and alcohol can destroy you, and bigotry disfigures the heart.",
+            "mark": [
+              0,
+              143
+            ]
           }
         ],
         "protocol": {
@@ -4842,7 +5386,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶102.1",
-            "quote": "We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws."
+            "quote": "We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws.",
+            "context": "We must help protect our children in our schools and streets, and by finally and strictly enforcing our nation's gun laws.",
+            "mark": [
+              0,
+              122
+            ]
           },
           {
             "source": {
@@ -4857,7 +5406,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶100.11",
-            "quote": "But I also believe strongly that we need to enforce laws on the books that the best way to make sure that we keep our society safe and secure is to hold people accountable for breaking the law."
+            "quote": "But I also believe strongly that we need to enforce laws on the books that the best way to make sure that we keep our society safe and secure is to hold people accountable for breaking the law.",
+            "context": "But I also believe strongly that we need to enforce laws on the books that the best way to make sure that we keep our society safe and secure is to hold people accountable for breaking the law.",
+            "mark": [
+              0,
+              193
+            ]
           },
           {
             "source": {
@@ -4872,7 +5426,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶100.12-100.13",
-            "quote": "If we catch somebody illegally selling a gun, there needs to be a consequence. If we keep somebody -- you know, illegally using a gun, there needs to be a consequence."
+            "quote": "If we catch somebody illegally selling a gun, there needs to be a consequence. If we keep somebody -- you know, illegally using a gun, there needs to be a consequence.",
+            "context": "If we catch somebody illegally selling a gun, there needs to be a consequence. If we keep somebody -- you know, illegally using a gun, there needs to be a consequence.",
+            "mark": [
+              0,
+              167
+            ]
           }
         ],
         "protocol": {
@@ -4917,7 +5476,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶103.1",
-            "quote": "But most of all, we must teach our children the values that defeat violence."
+            "quote": "But most of all, we must teach our children the values that defeat violence.",
+            "context": "But most of all, we must teach our children the values that defeat violence.",
+            "mark": [
+              0,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -4962,7 +5526,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶105.3",
-            "quote": "Instead, we must usher in an era of responsibility."
+            "quote": "Instead, we must usher in an era of responsibility.",
+            "context": "Instead, we must usher in an era of responsibility.",
+            "mark": [
+              0,
+              51
+            ]
           }
         ],
         "protocol": {
@@ -5007,7 +5576,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 acceptance speech"
             },
             "ref": "¶110.2",
-            "quote": "And we know we must renew our values to restore our country."
+            "quote": "And we know we must renew our values to restore our country.",
+            "context": "And we know we must renew our values to restore our country.",
+            "mark": [
+              0,
+              60
+            ]
           }
         ],
         "protocol": {
@@ -5052,7 +5626,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶5.2",
-            "quote": "And though our Nation has sometimes halted and sometimes delayed, we must follow no other course."
+            "quote": "And though our Nation has sometimes halted and sometimes delayed, we must follow no other course.",
+            "context": "And though our Nation has sometimes halted and sometimes delayed, we must follow no other course.",
+            "mark": [
+              0,
+              97
+            ]
           }
         ],
         "protocol": {
@@ -5097,7 +5676,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶12.1",
-            "quote": "We must live up to the calling we share."
+            "quote": "We must live up to the calling we share.",
+            "context": "We must live up to the calling we share.",
+            "mark": [
+              0,
+              40
+            ]
           }
         ],
         "protocol": {
@@ -5142,7 +5726,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2001 inaugural address"
             },
             "ref": "¶13.4",
-            "quote": "We must show courage in a time of blessing by confronting problems instead of passing them on to future generations."
+            "quote": "We must show courage in a time of blessing by confronting problems instead of passing them on to future generations.",
+            "context": "We must show courage in a time of blessing by confronting problems instead of passing them on to future generations.",
+            "mark": [
+              0,
+              116
+            ]
           }
         ],
         "protocol": {
@@ -5187,7 +5776,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶7.20",
-            "quote": "You know, I support a national patient's bill of rights, Mr. Vice President, and I want all people covered."
+            "quote": "You know, I support a national patient's bill of rights, Mr. Vice President, and I want all people covered.",
+            "context": "You know, I support a national patient's bill of rights, Mr. Vice President, and I want all people covered.",
+            "mark": [
+              0,
+              107
+            ]
           }
         ],
         "protocol": {
@@ -5232,7 +5826,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶7.21",
-            "quote": "I don't want the law to supersede good law like we've got in Texas."
+            "quote": "I don't want the law to supersede good law like we've got in Texas.",
+            "context": "I don't want the law to supersede good law like we've got in Texas.",
+            "mark": [
+              0,
+              67
+            ]
           }
         ],
         "protocol": {
@@ -5277,7 +5876,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶30.16",
-            "quote": "There needs to be more community health clinics where the poor can go get health care."
+            "quote": "There needs to be more community health clinics where the poor can go get health care.",
+            "context": "There needs to be more community health clinics where the poor can go get health care.",
+            "mark": [
+              0,
+              86
+            ]
           }
         ],
         "protocol": {
@@ -5322,7 +5926,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶30.20",
-            "quote": "We need to have -- allow small businesses to write insurance across jurisdictional lines so small business can afford health care, small restaurants can afford health care."
+            "quote": "We need to have -- allow small businesses to write insurance across jurisdictional lines so small business can afford health care, small restaurants can afford health care.",
+            "context": "We need to have -- allow small businesses to write insurance across jurisdictional lines so small business can afford health care, small restaurants can afford health care.",
+            "mark": [
+              0,
+              172
+            ]
           }
         ],
         "protocol": {
@@ -5367,7 +5976,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶30.26",
-            "quote": "And that's what we ought to do for all people in America."
+            "quote": "And that's what we ought to do for all people in America.",
+            "context": "And that's what we ought to do for all people in America.",
+            "mark": [
+              0,
+              57
+            ]
           }
         ],
         "protocol": {
@@ -5412,7 +6026,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶35.4",
-            "quote": "One of the things the next president must do is to remind people that if we are going to have a responsible period in America, that each of us must love our children with all our heart and all our soul."
+            "quote": "One of the things the next president must do is to remind people that if we are going to have a responsible period in America, that each of us must love our children with all our heart and all our soul.",
+            "context": "One of the things the next president must do is to remind people that if we are going to have a responsible period in America, that each of us must love our children with all our heart and all our soul.",
+            "mark": [
+              0,
+              202
+            ]
           }
         ],
         "protocol": {
@@ -5457,7 +6076,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶35.10",
-            "quote": "I believe we ought to measure a lot, three, four, five, six, seven, eighth grade."
+            "quote": "I believe we ought to measure a lot, three, four, five, six, seven, eighth grade.",
+            "context": "I believe we ought to measure a lot, three, four, five, six, seven, eighth grade.",
+            "mark": [
+              0,
+              81
+            ]
           }
         ],
         "protocol": {
@@ -5502,7 +6126,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶50.22",
-            "quote": "There needs to be flexibility for teacher training and teacher hiring with federal money."
+            "quote": "There needs to be flexibility for teacher training and teacher hiring with federal money.",
+            "context": "There needs to be flexibility for teacher training and teacher hiring with federal money.",
+            "mark": [
+              0,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -5547,7 +6176,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶64.8",
-            "quote": "So I want to do something about that."
+            "quote": "So I want to do something about that.",
+            "context": "So I want to do something about that.",
+            "mark": [
+              0,
+              37
+            ]
           }
         ],
         "protocol": {
@@ -5592,7 +6226,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶78.8-78.9",
-            "quote": "We need to reach out to modern Arab nations as well. To build coalitions to keep the peace."
+            "quote": "We need to reach out to modern Arab nations as well. To build coalitions to keep the peace.",
+            "context": "We need to reach out to modern Arab nations as well. To build coalitions to keep the peace.",
+            "mark": [
+              0,
+              91
+            ]
           }
         ],
         "protocol": {
@@ -5637,7 +6276,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶89.15",
-            "quote": "I want to make sure the equipment for our military is the best it can possibly be, of course."
+            "quote": "I want to make sure the equipment for our military is the best it can possibly be, of course.",
+            "context": "I want to make sure the equipment for our military is the best it can possibly be, of course.",
+            "mark": [
+              0,
+              93
+            ]
           }
         ],
         "protocol": {
@@ -5682,7 +6326,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶89.18",
-            "quote": "This is a peaceful nation, and I intend to keep the peace."
+            "quote": "This is a peaceful nation, and I intend to keep the peace.",
+            "context": "This is a peaceful nation, and I intend to keep the peace.",
+            "mark": [
+              0,
+              58
+            ]
           },
           {
             "source": {
@@ -5697,7 +6346,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.9",
-            "quote": "I want to have the military keeping the peace."
+            "quote": "I want to have the military keeping the peace.",
+            "context": "I want to have the military keeping the peace.",
+            "mark": [
+              0,
+              46
+            ]
           }
         ],
         "protocol": {
@@ -5742,7 +6396,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶100.7",
-            "quote": "I believe that we ought to keep guns out of the hands of people that shouldn't have them."
+            "quote": "I believe that we ought to keep guns out of the hands of people that shouldn't have them.",
+            "context": "I believe that we ought to keep guns out of the hands of people that shouldn't have them.",
+            "mark": [
+              0,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -5787,7 +6446,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶100.10",
-            "quote": "I think we ought to raise the age at which juveniles can have a gun."
+            "quote": "I think we ought to raise the age at which juveniles can have a gun.",
+            "context": "I think we ought to raise the age at which juveniles can have a gun.",
+            "mark": [
+              0,
+              68
+            ]
           }
         ],
         "protocol": {
@@ -5832,7 +6496,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶107.1-107.2",
-            "quote": "I would like our farmers feeding the world. We're the best producers in the world, and I want -- I want the farmers feeding the world."
+            "quote": "I would like our farmers feeding the world. We're the best producers in the world, and I want -- I want the farmers feeding the world.",
+            "context": "I would like our farmers feeding the world. We're the best producers in the world, and I want -- I want the farmers feeding the world.",
+            "mark": [
+              0,
+              134
+            ]
           }
         ],
         "protocol": {
@@ -5877,7 +6546,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶107.3",
-            "quote": "We need to open up markets."
+            "quote": "We need to open up markets.",
+            "context": "We need to open up markets.",
+            "mark": [
+              0,
+              27
+            ]
           },
           {
             "source": {
@@ -5892,7 +6566,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶107.22",
-            "quote": "So should I be fortunate enough to earn your vote, I also understand -- I want to open up markets, but I also understand that farming is a part of our national security."
+            "quote": "So should I be fortunate enough to earn your vote, I also understand -- I want to open up markets, but I also understand that farming is a part of our national security.",
+            "context": "So should I be fortunate enough to earn your vote, I also understand -- I want to open up markets, but I also understand that farming is a part of our national security.",
+            "mark": [
+              0,
+              169
+            ]
           }
         ],
         "protocol": {
@@ -5937,7 +6616,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶107.5",
-            "quote": "I want the next president to have fast track negotiating authority to open up markets around the world with the best and the most efficient farmers."
+            "quote": "I want the next president to have fast track negotiating authority to open up markets around the world with the best and the most efficient farmers.",
+            "context": "I want the next president to have fast track negotiating authority to open up markets around the world with the best and the most efficient farmers.",
+            "mark": [
+              0,
+              148
+            ]
           }
         ],
         "protocol": {
@@ -5982,7 +6666,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶107.6",
-            "quote": "I don't want to use food as a diplomatic weapon from this point forward."
+            "quote": "I don't want to use food as a diplomatic weapon from this point forward.",
+            "context": "I don't want to use food as a diplomatic weapon from this point forward.",
+            "mark": [
+              0,
+              72
+            ]
           }
         ],
         "protocol": {
@@ -6027,7 +6716,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶117.8",
-            "quote": "There ought to be filters in public libraries and filters in public schools so if kids get on the Internet, there is not going to be pornography or violence coming in."
+            "quote": "There ought to be filters in public libraries and filters in public schools so if kids get on the Internet, there is not going to be pornography or violence coming in.",
+            "context": "There ought to be filters in public libraries and filters in public schools so if kids get on the Internet, there is not going to be pornography or violence coming in.",
+            "mark": [
+              0,
+              167
+            ]
           }
         ],
         "protocol": {
@@ -6072,7 +6766,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶117.9",
-            "quote": "I think we ought to have character education in our schools."
+            "quote": "I think we ought to have character education in our schools.",
+            "context": "I think we ought to have character education in our schools.",
+            "mark": [
+              0,
+              60
+            ]
           },
           {
             "source": {
@@ -6087,7 +6786,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶117.11",
-            "quote": "Greatly expand character education funding so that public schools will teach children values, values which have stood the test of time."
+            "quote": "Greatly expand character education funding so that public schools will teach children values, values which have stood the test of time.",
+            "context": "Greatly expand character education funding so that public schools will teach children values, values which have stood the test of time.",
+            "mark": [
+              0,
+              135
+            ]
           }
         ],
         "protocol": {
@@ -6132,7 +6836,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶117.17",
-            "quote": "But I do believe that we ought to talk plainly to the Hollywood moguls and people who produce this stuff and explain the consequences."
+            "quote": "But I do believe that we ought to talk plainly to the Hollywood moguls and people who produce this stuff and explain the consequences.",
+            "context": "But I do believe that we ought to talk plainly to the Hollywood moguls and people who produce this stuff and explain the consequences.",
+            "mark": [
+              0,
+              134
+            ]
           }
         ],
         "protocol": {
@@ -6177,7 +6886,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶117.18",
-            "quote": "I think we need to have rating systems that are clear."
+            "quote": "I think we need to have rating systems that are clear.",
+            "context": "I think we need to have rating systems that are clear.",
+            "mark": [
+              0,
+              54
+            ]
           }
         ],
         "protocol": {
@@ -6222,7 +6936,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶130.3",
-            "quote": "But I want a diverse administration, I think it's important."
+            "quote": "But I want a diverse administration, I think it's important.",
+            "context": "But I want a diverse administration, I think it's important.",
+            "mark": [
+              0,
+              60
+            ]
           }
         ],
         "protocol": {
@@ -6267,7 +6986,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶163.5",
-            "quote": "I want workers to have their own assets."
+            "quote": "I want workers to have their own assets.",
+            "context": "I want workers to have their own assets.",
+            "mark": [
+              0,
+              40
+            ]
           }
         ],
         "protocol": {
@@ -6312,7 +7036,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.10",
-            "quote": "I want to make sure the public school system in America keeps its promise so not one child is left behind."
+            "quote": "I want to make sure the public school system in America keeps its promise so not one child is left behind.",
+            "context": "I want to make sure the public school system in America keeps its promise so not one child is left behind.",
+            "mark": [
+              0,
+              106
+            ]
           }
         ],
         "protocol": {
@@ -6357,7 +7086,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2000 debate"
             },
             "ref": "¶167.11",
-            "quote": "After setting priorities, I want to give some of your money back."
+            "quote": "After setting priorities, I want to give some of your money back.",
+            "context": "After setting priorities, I want to give some of your money back.",
+            "mark": [
+              0,
+              65
+            ]
           }
         ],
         "protocol": {
@@ -6423,7 +7157,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶3.4",
-            "quote": "We will build a safer world"
+            "quote": "We will build a safer world",
+            "context": "We will build a safer world and a more hopeful America, and nothing will hold us back.",
+            "mark": [
+              0,
+              27
+            ]
           },
           {
             "source": {
@@ -6438,7 +7177,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶66.4",
-            "quote": "By promoting liberty abroad, we will build a safer world."
+            "quote": "By promoting liberty abroad, we will build a safer world.",
+            "context": "By promoting liberty abroad, we will build a safer world.",
+            "mark": [
+              0,
+              57
+            ]
           }
         ],
         "protocol": {
@@ -6483,7 +7227,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶3.4",
-            "quote": "a more hopeful America"
+            "quote": "a more hopeful America",
+            "context": "We will build a safer world and a more hopeful America, and nothing will hold us back.",
+            "mark": [
+              32,
+              54
+            ]
           },
           {
             "source": {
@@ -6498,7 +7247,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶66.5",
-            "quote": "By encouraging liberty at home, we will build a more hopeful America."
+            "quote": "By encouraging liberty at home, we will build a more hopeful America.",
+            "context": "By encouraging liberty at home, we will build a more hopeful America.",
+            "mark": [
+              0,
+              69
+            ]
           }
         ],
         "protocol": {
@@ -6543,7 +7297,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶14.2",
-            "quote": "Our Nation's founding commitment is still our deepest commitment: In our world and here at home, we will extend the frontiers of freedom."
+            "quote": "Our Nation's founding commitment is still our deepest commitment: In our world and here at home, we will extend the frontiers of freedom.",
+            "context": "Our Nation's founding commitment is still our deepest commitment: In our world and here at home, we will extend the frontiers of freedom.",
+            "mark": [
+              0,
+              137
+            ]
           },
           {
             "source": {
@@ -6558,7 +7317,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶263.3",
-            "quote": "And as we pursue the enemy wherever it exists, we'll also spread freedom and liberty."
+            "quote": "And as we pursue the enemy wherever it exists, we'll also spread freedom and liberty.",
+            "context": "And as we pursue the enemy wherever it exists, we'll also spread freedom and liberty.",
+            "mark": [
+              0,
+              85
+            ]
           }
         ],
         "protocol": {
@@ -6603,7 +7367,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶16.4",
-            "quote": "We will transform these systems so that all citizens are equipped, prepared—and thus truly free—to make your own choices and pursue your own dreams."
+            "quote": "We will transform these systems so that all citizens are equipped, prepared—and thus truly free—to make your own choices and pursue your own dreams.",
+            "context": "We will transform these systems so that all citizens are equipped, prepared—and thus truly free—to make your own choices and pursue your own dreams.",
+            "mark": [
+              0,
+              148
+            ]
           }
         ],
         "protocol": {
@@ -6648,7 +7417,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶17.4",
-            "quote": "my plan will encourage investment and expansion by restraining Federal spending"
+            "quote": "my plan will encourage investment and expansion by restraining Federal spending",
+            "context": "To create jobs, my plan will encourage investment and expansion by restraining Federal spending, reducing regulation, and making the tax relief permanent.",
+            "mark": [
+              16,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -6712,7 +7486,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶17.4",
-            "quote": "reducing regulation"
+            "quote": "reducing regulation",
+            "context": "To create jobs, my plan will encourage investment and expansion by restraining Federal spending, reducing regulation, and making the tax relief permanent.",
+            "mark": [
+              97,
+              116
+            ]
           }
         ],
         "protocol": {
@@ -6776,7 +7555,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶17.4",
-            "quote": "making the tax relief permanent"
+            "quote": "making the tax relief permanent",
+            "context": "To create jobs, my plan will encourage investment and expansion by restraining Federal spending, reducing regulation, and making the tax relief permanent.",
+            "mark": [
+              122,
+              153
+            ]
           }
         ],
         "protocol": {
@@ -6854,7 +7638,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶17.5",
-            "quote": "To create jobs, we will make our country less dependent on foreign sources of energy."
+            "quote": "To create jobs, we will make our country less dependent on foreign sources of energy.",
+            "context": "To create jobs, we will make our country less dependent on foreign sources of energy.",
+            "mark": [
+              0,
+              85
+            ]
           }
         ],
         "protocol": {
@@ -6925,7 +7714,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶17.6",
-            "quote": "we will expand trade"
+            "quote": "we will expand trade",
+            "context": "To create jobs, we will expand trade and level the playing field to sell American goods and services across the globe.",
+            "mark": [
+              16,
+              36
+            ]
           }
         ],
         "protocol": {
@@ -6996,7 +7790,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶17.6",
-            "quote": "level the playing field to sell American goods and services across the globe"
+            "quote": "level the playing field to sell American goods and services across the globe",
+            "context": "To create jobs, we will expand trade and level the playing field to sell American goods and services across the globe.",
+            "mark": [
+              41,
+              117
+            ]
           }
         ],
         "protocol": {
@@ -7041,7 +7840,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶18.3",
-            "quote": "In a new term, I will lead a bipartisan effort to reform and simplify the Federal Tax Code."
+            "quote": "In a new term, I will lead a bipartisan effort to reform and simplify the Federal Tax Code.",
+            "context": "In a new term, I will lead a bipartisan effort to reform and simplify the Federal Tax Code.",
+            "mark": [
+              0,
+              91
+            ]
           }
         ],
         "protocol": {
@@ -7105,7 +7909,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶19.3",
-            "quote": "we will double the number of people served by our principal job training program"
+            "quote": "we will double the number of people served by our principal job training program",
+            "context": "So we will double the number of people served by our principal job training program and increase funding for our community colleges.",
+            "mark": [
+              3,
+              83
+            ]
           }
         ],
         "protocol": {
@@ -7176,7 +7985,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶19.3",
-            "quote": "increase funding for our community colleges"
+            "quote": "increase funding for our community colleges",
+            "context": "So we will double the number of people served by our principal job training program and increase funding for our community colleges.",
+            "mark": [
+              88,
+              131
+            ]
           }
         ],
         "protocol": {
@@ -7240,7 +8054,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶20.2-20.3",
-            "quote": "To stand with workers in poor communities and those that have lost manufacturing, textile, and other jobs, we will create American opportunity zones. In these areas, we will provide tax relief and other incentives to attract new business and improve housing and job training to bring hope and work throughout all of America."
+            "quote": "To stand with workers in poor communities and those that have lost manufacturing, textile, and other jobs, we will create American opportunity zones. In these areas, we will provide tax relief and other incentives to attract new business and improve housing and job training to bring hope and work throughout all of America.",
+            "context": "To stand with workers in poor communities and those that have lost manufacturing, textile, and other jobs, we will create American opportunity zones. In these areas, we will provide tax relief and other incentives to attract new business and improve housing and job training to bring hope and work throughout all of America.",
+            "mark": [
+              0,
+              324
+            ]
           }
         ],
         "protocol": {
@@ -7311,7 +8130,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶22.1",
-            "quote": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts"
+            "quote": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts",
+            "context": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts and provide direct help for low-income Americans to purchase them.",
+            "mark": [
+              0,
+              110
+            ]
           }
         ],
         "protocol": {
@@ -7375,7 +8199,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶22.1",
-            "quote": "provide direct help for low-income Americans to purchase them"
+            "quote": "provide direct help for low-income Americans to purchase them",
+            "context": "We will offer a tax credit to encourage small businesses and their employees to set up health savings accounts and provide direct help for low-income Americans to purchase them.",
+            "mark": [
+              115,
+              176
+            ]
           }
         ],
         "protocol": {
@@ -7446,7 +8275,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶22.3",
-            "quote": "We will provide low-income Americans with better access to health care."
+            "quote": "We will provide low-income Americans with better access to health care.",
+            "context": "We will provide low-income Americans with better access to health care.",
+            "mark": [
+              0,
+              71
+            ]
           }
         ],
         "protocol": {
@@ -7491,7 +8325,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶22.4",
-            "quote": "In a new term, I will ensure every poor county in America has a community or rural health center."
+            "quote": "In a new term, I will ensure every poor county in America has a community or rural health center.",
+            "context": "In a new term, I will ensure every poor county in America has a community or rural health center.",
+            "mark": [
+              0,
+              97
+            ]
           }
         ],
         "protocol": {
@@ -7560,7 +8399,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶23.3",
-            "quote": "And in all we do to improve health care in America, we will make sure that health decisions are made by doctors and patients, not by bureaucrats in Washington, DC."
+            "quote": "And in all we do to improve health care in America, we will make sure that health decisions are made by doctors and patients, not by bureaucrats in Washington, DC.",
+            "context": "And in all we do to improve health care in America, we will make sure that health decisions are made by doctors and patients, not by bureaucrats in Washington, DC.",
+            "mark": [
+              0,
+              163
+            ]
           }
         ],
         "protocol": {
@@ -7605,7 +8449,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶24.2",
-            "quote": "In a new term, we will change outdated labor laws to offer comp-time and flex-time."
+            "quote": "In a new term, we will change outdated labor laws to offer comp-time and flex-time.",
+            "context": "In a new term, we will change outdated labor laws to offer comp-time and flex-time.",
+            "mark": [
+              0,
+              83
+            ]
           }
         ],
         "protocol": {
@@ -7669,7 +8518,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶25.1",
-            "quote": "Another priority for a new term is to build an ownership society, because ownership brings security and dignity and independence."
+            "quote": "Another priority for a new term is to build an ownership society, because ownership brings security and dignity and independence.",
+            "context": "Another priority for a new term is to build an ownership society, because ownership brings security and dignity and independence.",
+            "mark": [
+              0,
+              129
+            ]
           },
           {
             "source": {
@@ -7684,7 +8538,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.4",
-            "quote": "build an ownership society"
+            "quote": "build an ownership society",
+            "context": "To give every American a stake in the promise and future of our country, we will bring the highest standards to our schools and build an ownership society.",
+            "mark": [
+              128,
+              154
+            ]
           }
         ],
         "protocol": {
@@ -7729,7 +8588,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶27.2",
-            "quote": "We'll always keep the promise of Social Security for our older workers."
+            "quote": "We'll always keep the promise of Social Security for our older workers.",
+            "context": "We'll always keep the promise of Social Security for our older workers.",
+            "mark": [
+              0,
+              71
+            ]
           },
           {
             "source": {
@@ -7744,7 +8608,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶129.3",
-            "quote": "they will continue to get their checks"
+            "quote": "they will continue to get their checks",
+            "context": "Well, people got their checks, and they will continue to get their checks.",
+            "mark": [
+              35,
+              73
+            ]
           },
           {
             "source": {
@@ -7759,7 +8628,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶130.3",
-            "quote": "We'll honor our commitment to our seniors"
+            "quote": "We'll honor our commitment to our seniors",
+            "context": "We'll honor our commitment to our seniors, but for young—for our children and our grandchildren, we need to have a different strategy.",
+            "mark": [
+              0,
+              41
+            ]
           }
         ],
         "protocol": {
@@ -7828,7 +8702,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶30.8-30.9",
-            "quote": "And that is the spirit of our education reform and the commitment of our country: No dejaremos a ningun nino atras. We will leave no child behind."
+            "quote": "And that is the spirit of our education reform and the commitment of our country: No dejaremos a ningun nino atras. We will leave no child behind.",
+            "context": "And that is the spirit of our education reform and the commitment of our country: No dejaremos a ningun nino atras. We will leave no child behind.",
+            "mark": [
+              0,
+              146
+            ]
           }
         ],
         "protocol": {
@@ -7878,7 +8757,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶31.3",
-            "quote": "In our high schools, we will fund early intervention programs to help students at risk."
+            "quote": "In our high schools, we will fund early intervention programs to help students at risk.",
+            "context": "In our high schools, we will fund early intervention programs to help students at risk.",
+            "mark": [
+              0,
+              87
+            ]
           }
         ],
         "protocol": {
@@ -7949,7 +8833,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶31.4",
-            "quote": "We will place a new focus on math and science."
+            "quote": "We will place a new focus on math and science.",
+            "context": "We will place a new focus on math and science.",
+            "mark": [
+              0,
+              46
+            ]
           },
           {
             "source": {
@@ -7964,7 +8853,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶52.3",
-            "quote": "to emphasize math and science in the classrooms"
+            "quote": "to emphasize math and science in the classrooms",
+            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
+            "mark": [
+              144,
+              191
+            ]
           }
         ],
         "protocol": {
@@ -8035,7 +8929,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶31.5",
-            "quote": "As we make progress, we will require a rigorous exam before graduation."
+            "quote": "As we make progress, we will require a rigorous exam before graduation.",
+            "context": "As we make progress, we will require a rigorous exam before graduation.",
+            "mark": [
+              0,
+              71
+            ]
           }
         ],
         "protocol": {
@@ -8099,7 +8998,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶31.6",
-            "quote": "expanding Pell grants for low- and middle-income families"
+            "quote": "expanding Pell grants for low- and middle-income families",
+            "context": "By raising performance in our high schools and expanding Pell grants for low- and middle-income families, we will help more Americans start their career with a college diploma.",
+            "mark": [
+              47,
+              104
+            ]
           },
           {
             "source": {
@@ -8114,7 +9018,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶52.3",
-            "quote": "to continue to expand Pell grants"
+            "quote": "to continue to expand Pell grants",
+            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
+            "mark": [
+              193,
+              226
+            ]
           }
         ],
         "protocol": {
@@ -8185,7 +9094,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶31.6",
-            "quote": "we will help more Americans start their career with a college diploma"
+            "quote": "we will help more Americans start their career with a college diploma",
+            "context": "By raising performance in our high schools and expanding Pell grants for low- and middle-income families, we will help more Americans start their career with a college diploma.",
+            "mark": [
+              106,
+              175
+            ]
           }
         ],
         "protocol": {
@@ -8249,7 +9163,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶32.2-32.3",
-            "quote": "In a new term, we will lead an aggressive effort to enroll millions of poor children who are eligible but not signed up for the Government's health insurance programs. We will not allow a lack of attention or information to stand between these children and the health care they need."
+            "quote": "In a new term, we will lead an aggressive effort to enroll millions of poor children who are eligible but not signed up for the Government's health insurance programs. We will not allow a lack of attention or information to stand between these children and the health care they need.",
+            "context": "In a new term, we will lead an aggressive effort to enroll millions of poor children who are eligible but not signed up for the Government's health insurance programs. We will not allow a lack of attention or information to stand between these children and the health care they need.",
+            "mark": [
+              0,
+              283
+            ]
           }
         ],
         "protocol": {
@@ -8313,7 +9232,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶38.4",
-            "quote": "I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law"
+            "quote": "I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law",
+            "context": "Because the union of a man and woman deserves an honored place in our society, I support the protection of marriage against activist judges, and I will continue to appoint Federal judges who know the difference between personal opinion and the strict interpretation of the law.",
+            "mark": [
+              145,
+              276
+            ]
           },
           {
             "source": {
@@ -8328,7 +9252,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶174.2",
-            "quote": "I will pick judges who will interpret the Constitution"
+            "quote": "I will pick judges who will interpret the Constitution",
+            "context": "I will pick judges who will interpret the Constitution, but I'll have no litmus test.",
+            "mark": [
+              0,
+              54
+            ]
           }
         ],
         "protocol": {
@@ -8392,7 +9321,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶40.6",
-            "quote": "I will never relent in defending America, whatever it takes."
+            "quote": "I will never relent in defending America, whatever it takes.",
+            "context": "I will never relent in defending America, whatever it takes.",
+            "mark": [
+              0,
+              60
+            ]
           },
           {
             "source": {
@@ -8407,7 +9341,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶45.7",
-            "quote": "Faced with that choice, I will defend America every time."
+            "quote": "Faced with that choice, I will defend America every time.",
+            "context": "Faced with that choice, I will defend America every time.",
+            "mark": [
+              0,
+              57
+            ]
           }
         ],
         "protocol": {
@@ -8452,7 +9391,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶41.7",
-            "quote": "And we will prevail."
+            "quote": "And we will prevail.",
+            "context": "And we will prevail.",
+            "mark": [
+              0,
+              20
+            ]
           }
         ],
         "protocol": {
@@ -8497,7 +9441,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶44.6",
-            "quote": "We must and we will confront threats to America before it is too late."
+            "quote": "We must and we will confront threats to America before it is too late.",
+            "context": "We must and we will confront threats to America before it is too late.",
+            "mark": [
+              0,
+              70
+            ]
           }
         ],
         "protocol": {
@@ -8542,7 +9491,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶47.4",
-            "quote": "We will help new leaders to train their armies"
+            "quote": "We will help new leaders to train their armies",
+            "context": "So our mission in Afghanistan and Iraq is clear: We will help new leaders to train their armies and move toward elections and get on the path of stability and democracy as quickly as possible.",
+            "mark": [
+              49,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -8613,7 +9567,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶47.4",
-            "quote": "move toward elections"
+            "quote": "move toward elections",
+            "context": "So our mission in Afghanistan and Iraq is clear: We will help new leaders to train their armies and move toward elections and get on the path of stability and democracy as quickly as possible.",
+            "mark": [
+              100,
+              121
+            ]
           }
         ],
         "protocol": {
@@ -8684,7 +9643,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶47.4",
-            "quote": "get on the path of stability and democracy as quickly as possible"
+            "quote": "get on the path of stability and democracy as quickly as possible",
+            "context": "So our mission in Afghanistan and Iraq is clear: We will help new leaders to train their armies and move toward elections and get on the path of stability and democracy as quickly as possible.",
+            "mark": [
+              126,
+              191
+            ]
           }
         ],
         "protocol": {
@@ -8729,7 +9693,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶47.5",
-            "quote": "And then our troops will return home with the honor they have earned."
+            "quote": "And then our troops will return home with the honor they have earned.",
+            "context": "And then our troops will return home with the honor they have earned.",
+            "mark": [
+              0,
+              69
+            ]
           }
         ],
         "protocol": {
@@ -8793,7 +9762,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶49.9",
-            "quote": "We will give you all the resources, all the tools, and all the support you need for victory."
+            "quote": "We will give you all the resources, all the tools, and all the support you need for victory.",
+            "context": "We will give you all the resources, all the tools, and all the support you need for victory.",
+            "mark": [
+              0,
+              92
+            ]
           }
         ],
         "protocol": {
@@ -8838,7 +9812,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶16.1",
-            "quote": "At home, we'll do everything we can to protect the homeland."
+            "quote": "At home, we'll do everything we can to protect the homeland.",
+            "context": "At home, we'll do everything we can to protect the homeland.",
+            "mark": [
+              0,
+              60
+            ]
           }
         ],
         "protocol": {
@@ -8883,7 +9862,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶46.2",
-            "quote": "I sent up my budget man to the Congress, and he says, \"Here's how we're going to reduce the deficit in half by 5 years.\""
+            "quote": "I sent up my budget man to the Congress, and he says, \"Here's how we're going to reduce the deficit in half by 5 years.\"",
+            "context": "I sent up my budget man to the Congress, and he says, \"Here's how we're going to reduce the deficit in half by 5 years.\"",
+            "mark": [
+              0,
+              120
+            ]
           }
         ],
         "protocol": {
@@ -8954,7 +9938,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶52.3",
-            "quote": "to continue to raise standards"
+            "quote": "to continue to raise standards",
+            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
+            "mark": [
+              42,
+              72
+            ]
           }
         ],
         "protocol": {
@@ -8999,7 +9988,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶52.3",
-            "quote": "to continue to reward teachers and school districts that are working"
+            "quote": "to continue to reward teachers and school districts that are working",
+            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
+            "mark": [
+              74,
+              142
+            ]
           }
         ],
         "protocol": {
@@ -9063,7 +10057,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶92.2",
-            "quote": "I will continue to promote abstinence programs."
+            "quote": "I will continue to promote abstinence programs.",
+            "context": "I will continue to promote abstinence programs.",
+            "mark": [
+              0,
+              47
+            ]
           }
         ],
         "protocol": {
@@ -9127,7 +10126,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶126.7",
-            "quote": "Veterans are getting very good health care under my administration, and they will continue to do so during the next 4 years."
+            "quote": "Veterans are getting very good health care under my administration, and they will continue to do so during the next 4 years.",
+            "context": "Veterans are getting very good health care under my administration, and they will continue to do so during the next 4 years.",
+            "mark": [
+              0,
+              124
+            ]
           }
         ],
         "protocol": {
@@ -9172,7 +10176,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶132.1",
-            "quote": "I will work with Republicans and Democrats."
+            "quote": "I will work with Republicans and Democrats.",
+            "context": "I will work with Republicans and Democrats.",
+            "mark": [
+              0,
+              43
+            ]
           },
           {
             "source": {
@@ -9187,7 +10196,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶132.4",
-            "quote": "And so I'll bring Republicans and Democrats together, and we're of course going to have to consider the costs."
+            "quote": "And so I'll bring Republicans and Democrats together, and we're of course going to have to consider the costs.",
+            "context": "And so I'll bring Republicans and Democrats together, and we're of course going to have to consider the costs.",
+            "mark": [
+              0,
+              110
+            ]
           }
         ],
         "protocol": {
@@ -9232,7 +10246,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶148.6",
-            "quote": "We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years."
+            "quote": "We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years.",
+            "context": "We're using unmanned vehicles to spot people coming across, and we'll continue to do so over the next 4 years.",
+            "mark": [
+              0,
+              110
+            ]
           }
         ],
         "protocol": {
@@ -9303,7 +10322,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶160.6",
-            "quote": "And we'll continue to protect our borders."
+            "quote": "And we'll continue to protect our borders.",
+            "context": "And we'll continue to protect our borders.",
+            "mark": [
+              0,
+              42
+            ]
           }
         ],
         "protocol": {
@@ -9348,7 +10372,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶160.7",
-            "quote": "We'll continue to increase manpower"
+            "quote": "We'll continue to increase manpower",
+            "context": "We'll continue to increase manpower and equipment.",
+            "mark": [
+              0,
+              35
+            ]
           }
         ],
         "protocol": {
@@ -9412,7 +10441,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶160.7",
-            "quote": "equipment"
+            "quote": "equipment",
+            "context": "We'll continue to increase manpower and equipment.",
+            "mark": [
+              40,
+              49
+            ]
           }
         ],
         "protocol": {
@@ -9476,7 +10510,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶174.1",
-            "quote": "I will not have a litmus test"
+            "quote": "I will not have a litmus test",
+            "context": "What he's asking me is will I have a litmus test for my judges, and the answer is no, I will not have a litmus test.",
+            "mark": [
+              86,
+              115
+            ]
           },
           {
             "source": {
@@ -9491,7 +10530,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶174.2",
-            "quote": "but I'll have no litmus test"
+            "quote": "but I'll have no litmus test",
+            "context": "I will pick judges who will interpret the Constitution, but I'll have no litmus test.",
+            "mark": [
+              56,
+              84
+            ]
           }
         ],
         "protocol": {
@@ -9536,7 +10580,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶195.2",
-            "quote": "We'll have 125,000 troops trained by the end of this year."
+            "quote": "We'll have 125,000 troops trained by the end of this year.",
+            "context": "We'll have 125,000 troops trained by the end of this year.",
+            "mark": [
+              0,
+              58
+            ]
           }
         ],
         "protocol": {
@@ -9605,7 +10654,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶197.7",
-            "quote": "We'll continue to build strong coalitions."
+            "quote": "We'll continue to build strong coalitions.",
+            "context": "We'll continue to build strong coalitions.",
+            "mark": [
+              0,
+              42
+            ]
           }
         ],
         "protocol": {
@@ -9650,7 +10704,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶197.8",
-            "quote": "But I will never turn over our national security decisions to leaders of other countries."
+            "quote": "But I will never turn over our national security decisions to leaders of other countries.",
+            "context": "But I will never turn over our national security decisions to leaders of other countries.",
+            "mark": [
+              0,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -9695,7 +10754,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶197.9-197.10",
-            "quote": "We'll be resolute. We'll be strong, and we will wage a comprehensive war against the terrorists."
+            "quote": "We'll be resolute. We'll be strong, and we will wage a comprehensive war against the terrorists.",
+            "context": "We'll be resolute. We'll be strong, and we will wage a comprehensive war against the terrorists.",
+            "mark": [
+              0,
+              96
+            ]
           }
         ],
         "protocol": {
@@ -9740,7 +10804,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶25.2",
-            "quote": "I will strive in good faith to heal them"
+            "quote": "I will strive in good faith to heal them",
+            "context": "We have known divisions, which must be healed to move forward in great purposes, and I will strive in good faith to heal them.",
+            "mark": [
+              85,
+              125
+            ]
           },
           {
             "source": {
@@ -9755,7 +10824,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶241.1",
-            "quote": "I'll continue in the 4 years to continue to try to work to do so."
+            "quote": "I'll continue in the 4 years to continue to try to work to do so.",
+            "context": "I'll continue in the 4 years to continue to try to work to do so.",
+            "mark": [
+              0,
+              65
+            ]
           }
         ],
         "protocol": {
@@ -9805,7 +10879,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶260.4",
-            "quote": "Over the next 4 years, we'll make sure the economy continues to grow."
+            "quote": "Over the next 4 years, we'll make sure the economy continues to grow.",
+            "context": "Over the next 4 years, we'll make sure the economy continues to grow.",
+            "mark": [
+              0,
+              69
+            ]
           }
         ],
         "protocol": {
@@ -9869,7 +10948,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶261.2",
-            "quote": "Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America."
+            "quote": "Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America.",
+            "context": "Over the next 4 years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America.",
+            "mark": [
+              0,
+              167
+            ]
           }
         ],
         "protocol": {
@@ -9914,7 +10998,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶262.1",
-            "quote": "Over the next 4 years, we'll continue to work to make sure health care is available and affordable."
+            "quote": "Over the next 4 years, we'll continue to work to make sure health care is available and affordable.",
+            "context": "Over the next 4 years, we'll continue to work to make sure health care is available and affordable.",
+            "mark": [
+              0,
+              99
+            ]
           }
         ],
         "protocol": {
@@ -9959,7 +11048,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶262.2",
-            "quote": "Over the next 4 years, we'll continue to rally the armies of compassion to help heal the hurt that exists in some of our country's neighborhoods."
+            "quote": "Over the next 4 years, we'll continue to rally the armies of compassion to help heal the hurt that exists in some of our country's neighborhoods.",
+            "context": "Over the next 4 years, we'll continue to rally the armies of compassion to help heal the hurt that exists in some of our country's neighborhoods.",
+            "mark": [
+              0,
+              145
+            ]
           }
         ],
         "protocol": {
@@ -10004,7 +11098,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶7.2",
-            "quote": "we will defend ourselves and our friends by force of arms when necessary"
+            "quote": "we will defend ourselves and our friends by force of arms when necessary",
+            "context": "This is not primarily the task of arms, though we will defend ourselves and our friends by force of arms when necessary.",
+            "mark": [
+              47,
+              119
+            ]
           }
         ],
         "protocol": {
@@ -10049,7 +11148,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶7.5",
-            "quote": "America will not impose our own style of government on the unwilling."
+            "quote": "America will not impose our own style of government on the unwilling.",
+            "context": "America will not impose our own style of government on the unwilling.",
+            "mark": [
+              0,
+              69
+            ]
           }
         ],
         "protocol": {
@@ -10094,7 +11198,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶8.3",
-            "quote": "we will use it confidently in freedom's cause"
+            "quote": "we will use it confidently in freedom's cause",
+            "context": "America's influence is not unlimited, but fortunately for the oppressed, America's influence is considerable and we will use it confidently in freedom's cause.",
+            "mark": [
+              113,
+              158
+            ]
           }
         ],
         "protocol": {
@@ -10139,7 +11248,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶9.3",
-            "quote": "We will persistently clarify the choice before every ruler and every nation, the moral choice between oppression, which is always wrong, and freedom, which is eternally right."
+            "quote": "We will persistently clarify the choice before every ruler and every nation, the moral choice between oppression, which is always wrong, and freedom, which is eternally right.",
+            "context": "We will persistently clarify the choice before every ruler and every nation, the moral choice between oppression, which is always wrong, and freedom, which is eternally right.",
+            "mark": [
+              0,
+              175
+            ]
           }
         ],
         "protocol": {
@@ -10184,7 +11298,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶10.2",
-            "quote": "We will encourage reform in other governments by making clear that success in our relations will require the decent treatment of their own people."
+            "quote": "We will encourage reform in other governments by making clear that success in our relations will require the decent treatment of their own people.",
+            "context": "We will encourage reform in other governments by making clear that success in our relations will require the decent treatment of their own people.",
+            "mark": [
+              0,
+              146
+            ]
           }
         ],
         "protocol": {
@@ -10229,7 +11348,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶12.2-12.3",
-            "quote": "All who live in tyranny and hopelessness can know: The United States will not ignore your oppression or excuse your oppressors. When you stand for your liberty, we will stand with you."
+            "quote": "All who live in tyranny and hopelessness can know: The United States will not ignore your oppression or excuse your oppressors. When you stand for your liberty, we will stand with you.",
+            "context": "All who live in tyranny and hopelessness can know: The United States will not ignore your oppression or excuse your oppressors. When you stand for your liberty, we will stand with you.",
+            "mark": [
+              0,
+              184
+            ]
           }
         ],
         "protocol": {
@@ -10274,7 +11398,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.3",
-            "quote": "And now we will extend this vision by reforming great institutions to serve the needs of our time."
+            "quote": "And now we will extend this vision by reforming great institutions to serve the needs of our time.",
+            "context": "And now we will extend this vision by reforming great institutions to serve the needs of our time.",
+            "mark": [
+              0,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -10319,7 +11448,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.4",
-            "quote": "we will bring the highest standards to our schools"
+            "quote": "we will bring the highest standards to our schools",
+            "context": "To give every American a stake in the promise and future of our country, we will bring the highest standards to our schools and build an ownership society.",
+            "mark": [
+              73,
+              123
+            ]
           }
         ],
         "protocol": {
@@ -10364,7 +11498,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.5",
-            "quote": "We will widen the ownership of homes"
+            "quote": "We will widen the ownership of homes",
+            "context": "We will widen the ownership of homes and businesses, retirement savings, and health insurance, preparing our people for the challenges of life in a free society.",
+            "mark": [
+              0,
+              36
+            ]
           }
         ],
         "protocol": {
@@ -10435,7 +11574,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.5",
-            "quote": "businesses"
+            "quote": "businesses",
+            "context": "We will widen the ownership of homes and businesses, retirement savings, and health insurance, preparing our people for the challenges of life in a free society.",
+            "mark": [
+              41,
+              51
+            ]
           }
         ],
         "protocol": {
@@ -10499,7 +11643,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.5",
-            "quote": "retirement savings"
+            "quote": "retirement savings",
+            "context": "We will widen the ownership of homes and businesses, retirement savings, and health insurance, preparing our people for the challenges of life in a free society.",
+            "mark": [
+              53,
+              71
+            ]
           }
         ],
         "protocol": {
@@ -10563,7 +11712,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.5",
-            "quote": "and health insurance"
+            "quote": "and health insurance",
+            "context": "We will widen the ownership of homes and businesses, retirement savings, and health insurance, preparing our people for the challenges of life in a free society.",
+            "mark": [
+              73,
+              93
+            ]
           }
         ],
         "protocol": {
@@ -10627,7 +11781,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2005 inaugural address"
             },
             "ref": "¶21.6",
-            "quote": "By making every citizen an agent of his or her own destiny, we will give our fellow Americans greater freedom from want and fear and make our society more prosperous and just and equal."
+            "quote": "By making every citizen an agent of his or her own destiny, we will give our fellow Americans greater freedom from want and fear and make our society more prosperous and just and equal.",
+            "context": "By making every citizen an agent of his or her own destiny, we will give our fellow Americans greater freedom from want and fear and make our society more prosperous and just and equal.",
+            "mark": [
+              0,
+              185
+            ]
           }
         ],
         "protocol": {
@@ -10674,7 +11833,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶17.7",
-            "quote": "And we must protect small-business owners and workers from the explosion of frivolous lawsuits that threaten jobs across our country."
+            "quote": "And we must protect small-business owners and workers from the explosion of frivolous lawsuits that threaten jobs across our country.",
+            "context": "And we must protect small-business owners and workers from the explosion of frivolous lawsuits that threaten jobs across our country.",
+            "mark": [
+              0,
+              133
+            ]
           }
         ],
         "protocol": {
@@ -10719,7 +11883,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶21.3",
-            "quote": "In a new term, we must allow small firms to join together to purchase insurance at the discounts available to big companies."
+            "quote": "In a new term, we must allow small firms to join together to purchase insurance at the discounts available to big companies.",
+            "context": "In a new term, we must allow small firms to join together to purchase insurance at the discounts available to big companies.",
+            "mark": [
+              0,
+              124
+            ]
           }
         ],
         "protocol": {
@@ -10764,7 +11933,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶23.2",
-            "quote": "To make health care more affordable and accessible, we must pass medical liability reform now."
+            "quote": "To make health care more affordable and accessible, we must pass medical liability reform now.",
+            "context": "To make health care more affordable and accessible, we must pass medical liability reform now.",
+            "mark": [
+              0,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -10809,7 +11983,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶26.2",
-            "quote": "Tonight we set a new goal: 7 million more affordable homes in the next 10 years so more American families will be able to open the door and say, \"Welcome to my home.\""
+            "quote": "Tonight we set a new goal: 7 million more affordable homes in the next 10 years so more American families will be able to open the door and say, \"Welcome to my home.\"",
+            "context": "Tonight we set a new goal: 7 million more affordable homes in the next 10 years so more American families will be able to open the door and say, \"Welcome to my home.\"",
+            "mark": [
+              0,
+              166
+            ]
           }
         ],
         "protocol": {
@@ -10854,7 +12033,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶27.4",
-            "quote": "We must strengthen Social Security by allowing younger workers to save some of their taxes in a personal account, a nest egg you can call your own and Government can never take away."
+            "quote": "We must strengthen Social Security by allowing younger workers to save some of their taxes in a personal account, a nest egg you can call your own and Government can never take away.",
+            "context": "We must strengthen Social Security by allowing younger workers to save some of their taxes in a personal account, a nest egg you can call your own and Government can never take away.",
+            "mark": [
+              0,
+              182
+            ]
           },
           {
             "source": {
@@ -10869,7 +12053,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶130.3",
-            "quote": "for our children and our grandchildren, we need to have a different strategy"
+            "quote": "for our children and our grandchildren, we need to have a different strategy",
+            "context": "We'll honor our commitment to our seniors, but for young—for our children and our grandchildren, we need to have a different strategy.",
+            "mark": [
+              57,
+              133
+            ]
           }
         ],
         "protocol": {
@@ -10919,7 +12108,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶29.2",
-            "quote": "To build a more hopeful America, we must help our children reach as far as their vision and character can take them."
+            "quote": "To build a more hopeful America, we must help our children reach as far as their vision and character can take them.",
+            "context": "To build a more hopeful America, we must help our children reach as far as their vision and character can take them.",
+            "mark": [
+              0,
+              116
+            ]
           }
         ],
         "protocol": {
@@ -10964,7 +12158,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 acceptance speech"
             },
             "ref": "¶38.2",
-            "quote": "Because a caring society will value its weakest members, we must make a place for the unborn child."
+            "quote": "Because a caring society will value its weakest members, we must make a place for the unborn child.",
+            "context": "Because a caring society will value its weakest members, we must make a place for the unborn child.",
+            "mark": [
+              0,
+              99
+            ]
           }
         ],
         "protocol": {
@@ -11009,7 +12208,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶49.4",
-            "quote": "We want to help pay for you to gain the skills necessary to fill the jobs of the 21st century.\""
+            "quote": "We want to help pay for you to gain the skills necessary to fill the jobs of the 21st century.\"",
+            "context": "We want to help pay for you to gain the skills necessary to fill the jobs of the 21st century.\"",
+            "mark": [
+              0,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -11054,7 +12258,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶97.6",
-            "quote": "We want there to be electronic medical records to cut down on error as well as to reduce costs."
+            "quote": "We want there to be electronic medical records to cut down on error as well as to reduce costs.",
+            "context": "We want there to be electronic medical records to cut down on error as well as to reduce costs.",
+            "mark": [
+              0,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -11099,7 +12308,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶150.1",
-            "quote": "And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs."
+            "quote": "And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs.",
+            "context": "And so, in order to take pressure off the border, in order to make the borders more secure, I believe there ought to be a temporary-worker card that allows a willing worker and a willing employer to mate up—so long as there's not an American willing to do the job—to join up in order to be able to fulfill the employer's needs.",
+            "mark": [
+              0,
+              327
+            ]
           }
         ],
         "protocol": {
@@ -11144,7 +12358,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶152.1-152.2",
-            "quote": "Now, it's very important for our citizens to also know that I don't believe we ought to have amnesty. I don't think we ought to reward illegal behavior."
+            "quote": "Now, it's very important for our citizens to also know that I don't believe we ought to have amnesty. I don't think we ought to reward illegal behavior.",
+            "context": "Now, it's very important for our citizens to also know that I don't believe we ought to have amnesty. I don't think we ought to reward illegal behavior.",
+            "mark": [
+              0,
+              152
+            ]
           }
         ],
         "protocol": {
@@ -11189,7 +12408,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶219.1",
-            "quote": "And secondly, like my opponent, I don't agree we ought to have quotas—I agree, we shouldn't have quotas."
+            "quote": "And secondly, like my opponent, I don't agree we ought to have quotas—I agree, we shouldn't have quotas.",
+            "context": "And secondly, like my opponent, I don't agree we ought to have quotas—I agree, we shouldn't have quotas.",
+            "mark": [
+              0,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -11234,7 +12458,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶219.2",
-            "quote": "But we ought to have an aggressive effort to make sure people are educated, to make sure when they get out of high school there's Pell grants available for them, which is what we've done."
+            "quote": "But we ought to have an aggressive effort to make sure people are educated, to make sure when they get out of high school there's Pell grants available for them, which is what we've done.",
+            "context": "But we ought to have an aggressive effort to make sure people are educated, to make sure when they get out of high school there's Pell grants available for them, which is what we've done.",
+            "mark": [
+              0,
+              187
+            ]
           }
         ],
         "protocol": {
@@ -11279,7 +12508,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2004 debate"
             },
             "ref": "¶263.2",
-            "quote": "We must never waver in the face of this enemy that—these ideologues of hate."
+            "quote": "We must never waver in the face of this enemy that—these ideologues of hate.",
+            "context": "We must never waver in the face of this enemy that—these ideologues of hate.",
+            "mark": [
+              0,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -11345,7 +12579,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.2",
-            "quote": "we will act not only to create new jobs"
+            "quote": "we will act not only to create new jobs",
+            "context": "The state of the economy calls for action, bold and swift, and we will act not only to create new jobs but to lay a new foundation for growth.",
+            "mark": [
+              63,
+              102
+            ]
           }
         ],
         "protocol": {
@@ -11409,7 +12648,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.2",
-            "quote": "but to lay a new foundation for growth"
+            "quote": "but to lay a new foundation for growth",
+            "context": "The state of the economy calls for action, bold and swift, and we will act not only to create new jobs but to lay a new foundation for growth.",
+            "mark": [
+              103,
+              141
+            ]
           }
         ],
         "protocol": {
@@ -11454,7 +12698,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶41.1",
-            "quote": "I will stop giving tax breaks to corporations that ship jobs overseas"
+            "quote": "I will stop giving tax breaks to corporations that ship jobs overseas",
+            "context": "Unlike John McCain, I will stop giving tax breaks to corporations that ship jobs overseas, and I will start giving them to companies that create good jobs right here in America.",
+            "mark": [
+              20,
+              89
+            ]
           },
           {
             "source": {
@@ -11469,7 +12718,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶30.2",
-            "quote": "I want to end the tax breaks for companies that are shipping jobs overseas"
+            "quote": "I want to end the tax breaks for companies that are shipping jobs overseas",
+            "context": "I want to end the tax breaks for companies that are shipping jobs overseas and provide a tax credit for every company that's creating a job right here in America.",
+            "mark": [
+              0,
+              74
+            ]
           }
         ],
         "protocol": {
@@ -11540,7 +12794,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶41.1",
-            "quote": "I will start giving them to companies that create good jobs right here in America"
+            "quote": "I will start giving them to companies that create good jobs right here in America",
+            "context": "Unlike John McCain, I will stop giving tax breaks to corporations that ship jobs overseas, and I will start giving them to companies that create good jobs right here in America.",
+            "mark": [
+              95,
+              176
+            ]
           },
           {
             "source": {
@@ -11555,7 +12814,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶30.2",
-            "quote": "provide a tax credit for every company that's creating a job right here in America"
+            "quote": "provide a tax credit for every company that's creating a job right here in America",
+            "context": "I want to end the tax breaks for companies that are shipping jobs overseas and provide a tax credit for every company that's creating a job right here in America.",
+            "mark": [
+              79,
+              161
+            ]
           }
         ],
         "protocol": {
@@ -11619,7 +12883,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶42.1",
-            "quote": "I will eliminate capital gains taxes for the small businesses and the start-ups that will create the high-wage, high-tech jobs of tomorrow."
+            "quote": "I will eliminate capital gains taxes for the small businesses and the start-ups that will create the high-wage, high-tech jobs of tomorrow.",
+            "context": "I will eliminate capital gains taxes for the small businesses and the start-ups that will create the high-wage, high-tech jobs of tomorrow.",
+            "mark": [
+              0,
+              139
+            ]
           }
         ],
         "protocol": {
@@ -11697,7 +12966,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶43.1",
-            "quote": "I will cut taxes – cut taxes – for 95% of all working families."
+            "quote": "I will cut taxes – cut taxes – for 95% of all working families.",
+            "context": "I will cut taxes – cut taxes – for 95% of all working families.",
+            "mark": [
+              0,
+              63
+            ]
           },
           {
             "source": {
@@ -11712,7 +12986,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶45.1",
-            "quote": "I want to provide a tax cut for 95 percent of working Americans"
+            "quote": "I want to provide a tax cut for 95 percent of working Americans",
+            "context": "What I've said is I want to provide a tax cut for 95 percent of working Americans, 95 percent.",
+            "mark": [
+              18,
+              81
+            ]
           },
           {
             "source": {
@@ -11727,7 +13006,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶46.1",
-            "quote": "And 95 percent of working families, 95 percent of you out there, will get a tax cut."
+            "quote": "And 95 percent of working families, 95 percent of you out there, will get a tax cut.",
+            "context": "And 95 percent of working families, 95 percent of you out there, will get a tax cut.",
+            "mark": [
+              0,
+              84
+            ]
           },
           {
             "source": {
@@ -11742,7 +13026,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶48.1",
-            "quote": "I want to give them a tax break now"
+            "quote": "I want to give them a tax break now",
+            "context": "And what I want to do is to make sure that the plumber, the nurse, the firefighter, the teacher, the young entrepreneur who doesn't yet have money, I want to give them a tax break now.",
+            "mark": [
+              148,
+              183
+            ]
           },
           {
             "source": {
@@ -11757,7 +13046,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶57.2",
-            "quote": "Number one, I want to cut taxes for 95 percent of Americans."
+            "quote": "Number one, I want to cut taxes for 95 percent of Americans.",
+            "context": "Number one, I want to cut taxes for 95 percent of Americans.",
+            "mark": [
+              0,
+              60
+            ]
           },
           {
             "source": {
@@ -11772,7 +13066,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶240.1",
-            "quote": "give tax cuts not to the wealthiest corporations, but give them to small businesses and give them to individuals who are struggling right now"
+            "quote": "give tax cuts not to the wealthiest corporations, but give them to small businesses and give them to individuals who are struggling right now",
+            "context": "Because after eight years of failed policies, he and I both agree that what we're going to have to do is to re-prioritize, make sure that we're investing in the American people, give tax cuts not to the wealthiest corporations, but give them to small businesses and give them to individuals who are struggling right now, make sure that we finally get serious about energy independence, something that has been languishing in Washington for 30 years, and make sure that our kids get a great education and can afford to go to college.",
+            "mark": [
+              178,
+              319
+            ]
           },
           {
             "source": {
@@ -11787,7 +13086,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶486.1",
-            "quote": "we're going to have to invest in the American people again, in tax cuts for the middle class"
+            "quote": "we're going to have to invest in the American people again, in tax cuts for the middle class",
+            "context": "But we're going to have to invest in the American people again, in tax cuts for the middle class, in health care for all Americans, and college for every young person who wants to go.",
+            "mark": [
+              4,
+              96
+            ]
           }
         ],
         "protocol": {
@@ -11865,7 +13169,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶45.2",
-            "quote": "If you make more -- if you make less than a quarter million dollars a year, then you will not see your income tax go up, your capital gains tax go up, your payroll tax."
+            "quote": "If you make more -- if you make less than a quarter million dollars a year, then you will not see your income tax go up, your capital gains tax go up, your payroll tax.",
+            "context": "If you make more -- if you make less than a quarter million dollars a year, then you will not see your income tax go up, your capital gains tax go up, your payroll tax.",
+            "mark": [
+              0,
+              168
+            ]
           },
           {
             "source": {
@@ -11880,7 +13189,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶45.3",
-            "quote": "Not one dime."
+            "quote": "Not one dime.",
+            "context": "Not one dime.",
+            "mark": [
+              0,
+              13
+            ]
           },
           {
             "source": {
@@ -11895,7 +13209,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶43.2",
-            "quote": "Because in an economy like this, the last thing we should do is raise taxes on the middle-class."
+            "quote": "Because in an economy like this, the last thing we should do is raise taxes on the middle-class.",
+            "context": "Because in an economy like this, the last thing we should do is raise taxes on the middle-class.",
+            "mark": [
+              0,
+              96
+            ]
           }
         ],
         "protocol": {
@@ -11959,7 +13278,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶75.1",
-            "quote": "as president, I will make sure it's structured properly, means that ultimately taxpayers get their money back"
+            "quote": "as president, I will make sure it's structured properly, means that ultimately taxpayers get their money back",
+            "context": "Well, first of all, I think it's important for the American public to understand that the $750 billion rescue package, if it's structured properly, and, as president, I will make sure it's structured properly, means that ultimately taxpayers get their money back, and that's important to understand.",
+            "mark": [
+              153,
+              262
+            ]
           }
         ],
         "protocol": {
@@ -12023,7 +13347,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶54.1",
-            "quote": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime"
+            "quote": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime",
+            "context": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime – by closing corporate loopholes and tax havens that don't help America grow.",
+            "mark": [
+              0,
+              96
+            ]
           }
         ],
         "protocol": {
@@ -12094,7 +13423,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶54.1",
-            "quote": "by closing corporate loopholes and tax havens that don't help America grow"
+            "quote": "by closing corporate loopholes and tax havens that don't help America grow",
+            "context": "Now, many of these plans will cost money, which is why I've laid out how I'll pay for every dime – by closing corporate loopholes and tax havens that don't help America grow.",
+            "mark": [
+              99,
+              173
+            ]
           }
         ],
         "protocol": {
@@ -12165,7 +13499,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶54.2",
-            "quote": "But I will also go through the federal budget, line by line, eliminating programs that no longer work"
+            "quote": "But I will also go through the federal budget, line by line, eliminating programs that no longer work",
+            "context": "But I will also go through the federal budget, line by line, eliminating programs that no longer work and making the ones we do need work better and cost less – because we cannot meet twenty-first century challenges with a twentieth century bureaucracy.",
+            "mark": [
+              0,
+              101
+            ]
           },
           {
             "source": {
@@ -12180,7 +13519,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶14.4",
-            "quote": "Where the answer is no, programs will end."
+            "quote": "Where the answer is no, programs will end.",
+            "context": "Where the answer is no, programs will end.",
+            "mark": [
+              0,
+              42
+            ]
           },
           {
             "source": {
@@ -12195,7 +13539,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶81.1",
-            "quote": "We need to eliminate a whole host of programs that don't work."
+            "quote": "We need to eliminate a whole host of programs that don't work.",
+            "context": "We need to eliminate a whole host of programs that don't work.",
+            "mark": [
+              0,
+              62
+            ]
           },
           {
             "source": {
@@ -12210,7 +13559,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶81.2",
-            "quote": "I want to go through the federal budget line by line, page by page, programs that don't work, we should cut."
+            "quote": "I want to go through the federal budget line by line, page by page, programs that don't work, we should cut.",
+            "context": "And I want to go through the federal budget line by line, page by page, programs that don't work, we should cut.",
+            "mark": [
+              4,
+              112
+            ]
           },
           {
             "source": {
@@ -12225,7 +13579,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶113.3",
-            "quote": "And I want to make sure that we are focused on those programs that work."
+            "quote": "And I want to make sure that we are focused on those programs that work.",
+            "context": "And I want to make sure that we are focused on those programs that work.",
+            "mark": [
+              0,
+              72
+            ]
           }
         ],
         "protocol": {
@@ -12289,7 +13648,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶54.2",
-            "quote": "making the ones we do need work better and cost less"
+            "quote": "making the ones we do need work better and cost less",
+            "context": "But I will also go through the federal budget, line by line, eliminating programs that no longer work and making the ones we do need work better and cost less – because we cannot meet twenty-first century challenges with a twentieth century bureaucracy.",
+            "mark": [
+              106,
+              158
+            ]
           },
           {
             "source": {
@@ -12304,7 +13668,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶81.3",
-            "quote": "Programs that we need, we should make them work better."
+            "quote": "Programs that we need, we should make them work better.",
+            "context": "Programs that we need, we should make them work better.",
+            "mark": [
+              0,
+              55
+            ]
           }
         ],
         "protocol": {
@@ -12349,7 +13718,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶44.1",
-            "quote": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East."
+            "quote": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East.",
+            "context": "And for the sake of our economy, our security, and the future of our planet, I will set a clear goal as President: in ten years, we will finally end our dependence on oil from the Middle East.",
+            "mark": [
+              0,
+              192
+            ]
           }
         ],
         "protocol": {
@@ -12425,7 +13799,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶47.1",
-            "quote": "As President, I will tap our natural gas reserves"
+            "quote": "As President, I will tap our natural gas reserves",
+            "context": "As President, I will tap our natural gas reserves, invest in clean coal technology, and find ways to safely harness nuclear power.",
+            "mark": [
+              0,
+              49
+            ]
           }
         ],
         "protocol": {
@@ -12489,7 +13868,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶47.1",
-            "quote": "invest in clean coal technology"
+            "quote": "invest in clean coal technology",
+            "context": "As President, I will tap our natural gas reserves, invest in clean coal technology, and find ways to safely harness nuclear power.",
+            "mark": [
+              51,
+              82
+            ]
           }
         ],
         "protocol": {
@@ -12553,7 +13937,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶47.1",
-            "quote": "find ways to safely harness nuclear power"
+            "quote": "find ways to safely harness nuclear power",
+            "context": "As President, I will tap our natural gas reserves, invest in clean coal technology, and find ways to safely harness nuclear power.",
+            "mark": [
+              88,
+              129
+            ]
           }
         ],
         "protocol": {
@@ -12598,7 +13987,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶47.2",
-            "quote": "I'll help our auto companies re-tool, so that the fuel-efficient cars of the future are built right here in America."
+            "quote": "I'll help our auto companies re-tool, so that the fuel-efficient cars of the future are built right here in America.",
+            "context": "I'll help our auto companies re-tool, so that the fuel-efficient cars of the future are built right here in America.",
+            "mark": [
+              0,
+              116
+            ]
           },
           {
             "source": {
@@ -12613,7 +14007,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶285.1",
-            "quote": "We invented the auto industry and the fact that we have fallen so far behind is something that we have to work on."
+            "quote": "We invented the auto industry and the fact that we have fallen so far behind is something that we have to work on.",
+            "context": "We invented the auto industry and the fact that we have fallen so far behind is something that we have to work on.",
+            "mark": [
+              0,
+              114
+            ]
           }
         ],
         "protocol": {
@@ -12677,7 +14076,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶47.3",
-            "quote": "I'll make it easier for the American people to afford these new cars."
+            "quote": "I'll make it easier for the American people to afford these new cars.",
+            "context": "I'll make it easier for the American people to afford these new cars.",
+            "mark": [
+              0,
+              69
+            ]
           }
         ],
         "protocol": {
@@ -12741,7 +14145,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶47.4",
-            "quote": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy"
+            "quote": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy",
+            "context": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy – wind power and solar power and the next generation of biofuels; an investment that will lead to new industries and five million new jobs that pay well and can't ever be outsourced.",
+            "mark": [
+              0,
+              99
+            ]
           }
         ],
         "protocol": {
@@ -12812,7 +14221,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶47.4",
-            "quote": "an investment that will lead to new industries and five million new jobs"
+            "quote": "an investment that will lead to new industries and five million new jobs",
+            "context": "And I'll invest 150 billion dollars over the next decade in affordable, renewable sources of energy – wind power and solar power and the next generation of biofuels; an investment that will lead to new industries and five million new jobs that pay well and can't ever be outsourced.",
+            "mark": [
+              166,
+              238
+            ]
           }
         ],
         "protocol": {
@@ -12883,7 +14297,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.5",
-            "quote": "We will harness the sun and the winds and the soil to fuel our cars and run our factories."
+            "quote": "We will harness the sun and the winds and the soil to fuel our cars and run our factories.",
+            "context": "We will harness the sun and the winds and the soil to fuel our cars and run our factories.",
+            "mark": [
+              0,
+              90
+            ]
           }
         ],
         "protocol": {
@@ -12952,7 +14371,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶50.2",
-            "quote": "If you have health care, my plan will lower your premiums."
+            "quote": "If you have health care, my plan will lower your premiums.",
+            "context": "If you have health care, my plan will lower your premiums.",
+            "mark": [
+              0,
+              58
+            ]
           },
           {
             "source": {
@@ -12967,7 +14391,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶312.1",
-            "quote": "The only thing we're going to try to do is lower costs so that those cost savings are passed onto you."
+            "quote": "The only thing we're going to try to do is lower costs so that those cost savings are passed onto you.",
+            "context": "The only thing we're going to try to do is lower costs so that those cost savings are passed onto you.",
+            "mark": [
+              0,
+              102
+            ]
           },
           {
             "source": {
@@ -12982,7 +14411,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶365.1",
-            "quote": "All I want to do, if you've already got health care, is lower your costs."
+            "quote": "All I want to do, if you've already got health care, is lower your costs.",
+            "context": "All I want to do, if you've already got health care, is lower your costs.",
+            "mark": [
+              0,
+              73
+            ]
           }
         ],
         "protocol": {
@@ -13053,7 +14487,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶50.3",
-            "quote": "If you don't, you'll be able to get the same kind of coverage that members of Congress give themselves."
+            "quote": "If you don't, you'll be able to get the same kind of coverage that members of Congress give themselves.",
+            "context": "If you don't, you'll be able to get the same kind of coverage that members of Congress give themselves.",
+            "mark": [
+              0,
+              103
+            ]
           },
           {
             "source": {
@@ -13068,7 +14507,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶313.1",
-            "quote": "If you don't have health insurance, then what we're going to do is to provide you the option of buying into the same kind of federal pool that both Sen. McCain and I enjoy as federal employees, which will give you high-quality care, choice of doctors, at lower costs, because so many people are part of this insured group."
+            "quote": "If you don't have health insurance, then what we're going to do is to provide you the option of buying into the same kind of federal pool that both Sen. McCain and I enjoy as federal employees, which will give you high-quality care, choice of doctors, at lower costs, because so many people are part of this insured group.",
+            "context": "If you don't have health insurance, then what we're going to do is to provide you the option of buying into the same kind of federal pool that both Sen. McCain and I enjoy as federal employees, which will give you high-quality care, choice of doctors, at lower costs, because so many people are part of this insured group.",
+            "mark": [
+              0,
+              322
+            ]
           }
         ],
         "protocol": {
@@ -13132,7 +14576,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶50.4",
-            "quote": "I will make certain those companies stop discriminating against those who are sick and need care the most"
+            "quote": "I will make certain those companies stop discriminating against those who are sick and need care the most",
+            "context": "And as someone who watched my mother argue with insurance companies while she lay in bed dying of cancer, I will make certain those companies stop discriminating against those who are sick and need care the most.",
+            "mark": [
+              106,
+              211
+            ]
           },
           {
             "source": {
@@ -13147,7 +14596,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶314.1",
-            "quote": "We're going to make sure that insurance companies can't discriminate on the basis of pre-existing conditions."
+            "quote": "We're going to make sure that insurance companies can't discriminate on the basis of pre-existing conditions.",
+            "context": "We're going to make sure that insurance companies can't discriminate on the basis of pre-existing conditions.",
+            "mark": [
+              0,
+              109
+            ]
           }
         ],
         "protocol": {
@@ -13211,7 +14665,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶314.2",
-            "quote": "We'll negotiate with the drug companies for the cheapest available price on drugs."
+            "quote": "We'll negotiate with the drug companies for the cheapest available price on drugs.",
+            "context": "We'll negotiate with the drug companies for the cheapest available price on drugs.",
+            "mark": [
+              0,
+              82
+            ]
           }
         ],
         "protocol": {
@@ -13282,7 +14741,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶315.1",
-            "quote": "We are going to invest in information technology to eliminate bureaucracy and make the system more efficient."
+            "quote": "We are going to invest in information technology to eliminate bureaucracy and make the system more efficient.",
+            "context": "We are going to invest in information technology to eliminate bureaucracy and make the system more efficient.",
+            "mark": [
+              0,
+              109
+            ]
           },
           {
             "source": {
@@ -13297,7 +14761,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.4",
-            "quote": "wield technology's wonders to raise health care's quality and lower its cost"
+            "quote": "wield technology's wonders to raise health care's quality and lower its cost",
+            "context": "We will restore science to its rightful place and wield technology's wonders to raise health care's quality and lower its cost.",
+            "mark": [
+              50,
+              126
+            ]
           }
         ],
         "protocol": {
@@ -13366,7 +14835,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶316.1",
-            "quote": "And we are going to make sure that we manage chronic illnesses, like diabetes and heart disease, that cost a huge amount, but could be prevented."
+            "quote": "And we are going to make sure that we manage chronic illnesses, like diabetes and heart disease, that cost a huge amount, but could be prevented.",
+            "context": "And we are going to make sure that we manage chronic illnesses, like diabetes and heart disease, that cost a huge amount, but could be prevented.",
+            "mark": [
+              0,
+              145
+            ]
           }
         ],
         "protocol": {
@@ -13411,7 +14885,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶341.3",
-            "quote": "we'll give you a 50 percent credit so that you will actually be able to afford it"
+            "quote": "we'll give you a 50 percent credit so that you will actually be able to afford it",
+            "context": "In fact, what, Joe, if you want to do the right thing with your employees and you want to provide them health insurance, we'll give you a 50 percent credit so that you will actually be able to afford it.",
+            "mark": [
+              121,
+              202
+            ]
           }
         ],
         "protocol": {
@@ -13475,7 +14954,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶49.3",
-            "quote": "And I will not settle for an America where some kids don't have that chance."
+            "quote": "And I will not settle for an America where some kids don't have that chance.",
+            "context": "And I will not settle for an America where some kids don't have that chance.",
+            "mark": [
+              0,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -13520,7 +15004,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶49.4",
-            "quote": "I'll invest in early childhood education."
+            "quote": "I'll invest in early childhood education.",
+            "context": "I'll invest in early childhood education.",
+            "mark": [
+              0,
+              41
+            ]
           },
           {
             "source": {
@@ -13535,7 +15024,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶419.1-419.2",
-            "quote": "In some cases, we are going to have to invest. Early childhood education, which closes the achievement gap, so that every child is prepared for school, every dollar we invest in that, we end up getting huge benefits with improved reading scores, reduced dropout rates, reduced delinquency rates."
+            "quote": "In some cases, we are going to have to invest. Early childhood education, which closes the achievement gap, so that every child is prepared for school, every dollar we invest in that, we end up getting huge benefits with improved reading scores, reduced dropout rates, reduced delinquency rates.",
+            "context": "In some cases, we are going to have to invest. Early childhood education, which closes the achievement gap, so that every child is prepared for school, every dollar we invest in that, we end up getting huge benefits with improved reading scores, reduced dropout rates, reduced delinquency rates.",
+            "mark": [
+              0,
+              295
+            ]
           },
           {
             "source": {
@@ -13550,7 +15044,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶438.1",
-            "quote": "what I want to do is focus on early childhood education"
+            "quote": "what I want to do is focus on early childhood education",
+            "context": "So what I want to do is focus on early childhood education, providing teachers higher salaries in exchange for more support.",
+            "mark": [
+              3,
+              58
+            ]
           }
         ],
         "protocol": {
@@ -13628,7 +15127,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶49.5",
-            "quote": "I'll recruit an army of new teachers"
+            "quote": "I'll recruit an army of new teachers",
+            "context": "I'll recruit an army of new teachers, and pay them higher salaries and give them more support.",
+            "mark": [
+              0,
+              36
+            ]
           }
         ],
         "protocol": {
@@ -13692,7 +15196,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶49.5",
-            "quote": "and pay them higher salaries and give them more support"
+            "quote": "and pay them higher salaries and give them more support",
+            "context": "I'll recruit an army of new teachers, and pay them higher salaries and give them more support.",
+            "mark": [
+              38,
+              93
+            ]
           },
           {
             "source": {
@@ -13707,7 +15216,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶438.1",
-            "quote": "providing teachers higher salaries in exchange for more support"
+            "quote": "providing teachers higher salaries in exchange for more support",
+            "context": "So what I want to do is focus on early childhood education, providing teachers higher salaries in exchange for more support.",
+            "mark": [
+              60,
+              123
+            ]
           }
         ],
         "protocol": {
@@ -13752,7 +15266,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶49.6",
-            "quote": "And in exchange, I'll ask for higher standards and more accountability."
+            "quote": "And in exchange, I'll ask for higher standards and more accountability.",
+            "context": "And in exchange, I'll ask for higher standards and more accountability.",
+            "mark": [
+              0,
+              71
+            ]
           }
         ],
         "protocol": {
@@ -13797,7 +15316,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶49.7",
-            "quote": "And we will keep our promise to every young American – if you commit to serving your community or your country, we will make sure you can afford a college education."
+            "quote": "And we will keep our promise to every young American – if you commit to serving your community or your country, we will make sure you can afford a college education.",
+            "context": "And we will keep our promise to every young American – if you commit to serving your community or your country, we will make sure you can afford a college education.",
+            "mark": [
+              0,
+              165
+            ]
           }
         ],
         "protocol": {
@@ -13861,7 +15385,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.6",
-            "quote": "And we will transform our schools and colleges and universities to meet the demands of a new age."
+            "quote": "And we will transform our schools and colleges and universities to meet the demands of a new age.",
+            "context": "And we will transform our schools and colleges and universities to meet the demands of a new age.",
+            "mark": [
+              0,
+              97
+            ]
           }
         ],
         "protocol": {
@@ -13906,7 +15435,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.3",
-            "quote": "We will build the roads and bridges"
+            "quote": "We will build the roads and bridges",
+            "context": "We will build the roads and bridges, the electric grids and digital lines that feed our commerce and bind us together.",
+            "mark": [
+              0,
+              35
+            ]
           }
         ],
         "protocol": {
@@ -13970,7 +15504,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.3",
-            "quote": "the electric grids"
+            "quote": "the electric grids",
+            "context": "We will build the roads and bridges, the electric grids and digital lines that feed our commerce and bind us together.",
+            "mark": [
+              37,
+              55
+            ]
           }
         ],
         "protocol": {
@@ -14034,7 +15573,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.3",
-            "quote": "digital lines"
+            "quote": "digital lines",
+            "context": "We will build the roads and bridges, the electric grids and digital lines that feed our commerce and bind us together.",
+            "mark": [
+              60,
+              73
+            ]
           }
         ],
         "protocol": {
@@ -14098,7 +15642,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶12.4",
-            "quote": "We will restore science to its rightful place"
+            "quote": "We will restore science to its rightful place",
+            "context": "We will restore science to its rightful place and wield technology's wonders to raise health care's quality and lower its cost.",
+            "mark": [
+              0,
+              45
+            ]
           }
         ],
         "protocol": {
@@ -14143,7 +15692,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶14.5",
-            "quote": "And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government."
+            "quote": "And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government.",
+            "context": "And those of us who manage the public's dollars will be held to account to spend wisely, reform bad habits, and do our business in the light of day, because only then can we restore the vital trust between a people and their government.",
+            "mark": [
+              0,
+              236
+            ]
           }
         ],
         "protocol": {
@@ -14188,7 +15742,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶489.2",
-            "quote": "I will work every single day, tirelessly, on your behalf and on the behalf of the future of our children"
+            "quote": "I will work every single day, tirelessly, on your behalf and on the behalf of the future of our children",
+            "context": "I would ask for your vote, and I promise you that if you give me the extraordinary honor of serving as your president, I will work every single day, tirelessly, on your behalf and on the behalf of the future of our children.",
+            "mark": [
+              119,
+              223
+            ]
           }
         ],
         "protocol": {
@@ -14233,7 +15792,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶383.2",
-            "quote": "I will look for those judges who have an outstanding judicial record, who have the intellect, and who hopefully have a sense of what real-world folks are going through."
+            "quote": "I will look for those judges who have an outstanding judicial record, who have the intellect, and who hopefully have a sense of what real-world folks are going through.",
+            "context": "I will look for those judges who have an outstanding judicial record, who have the intellect, and who hopefully have a sense of what real-world folks are going through.",
+            "mark": [
+              0,
+              168
+            ]
           },
           {
             "source": {
@@ -14248,7 +15812,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶387.2",
-            "quote": "And that's the kind of judge that I want."
+            "quote": "And that's the kind of judge that I want.",
+            "context": "And that's the kind of judge that I want.",
+            "mark": [
+              0,
+              41
+            ]
           }
         ],
         "protocol": {
@@ -14293,7 +15862,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.1",
-            "quote": "I will end this war in Iraq responsibly"
+            "quote": "I will end this war in Iraq responsibly",
+            "context": "I will end this war in Iraq responsibly, and finish the fight against al Qaeda and the Taliban in Afghanistan.",
+            "mark": [
+              0,
+              39
+            ]
           },
           {
             "source": {
@@ -14308,7 +15882,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.3",
-            "quote": "We will begin to responsibly leave Iraq to its people"
+            "quote": "We will begin to responsibly leave Iraq to its people",
+            "context": "We will begin to responsibly leave Iraq to its people and forge a hard-earned peace in Afghanistan.",
+            "mark": [
+              0,
+              53
+            ]
           }
         ],
         "protocol": {
@@ -14372,7 +15951,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.1",
-            "quote": "finish the fight against al Qaeda and the Taliban in Afghanistan"
+            "quote": "finish the fight against al Qaeda and the Taliban in Afghanistan",
+            "context": "I will end this war in Iraq responsibly, and finish the fight against al Qaeda and the Taliban in Afghanistan.",
+            "mark": [
+              45,
+              109
+            ]
           }
         ],
         "protocol": {
@@ -14417,7 +16001,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.3",
-            "quote": "forge a hard-earned peace in Afghanistan"
+            "quote": "forge a hard-earned peace in Afghanistan",
+            "context": "We will begin to responsibly leave Iraq to its people and forge a hard-earned peace in Afghanistan.",
+            "mark": [
+              58,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -14462,7 +16051,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.2",
-            "quote": "I will rebuild our military to meet future conflicts."
+            "quote": "I will rebuild our military to meet future conflicts.",
+            "context": "I will rebuild our military to meet future conflicts.",
+            "mark": [
+              0,
+              53
+            ]
           }
         ],
         "protocol": {
@@ -14512,7 +16106,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "As Commander-in-Chief, I will never hesitate to defend this nation"
+            "quote": "As Commander-in-Chief, I will never hesitate to defend this nation",
+            "context": "As Commander-in-Chief, I will never hesitate to defend this nation, but I will only send our troops into harm's way with a clear mission and a sacred commitment to give them the equipment they need in battle and the care and benefits they deserve when they come home.",
+            "mark": [
+              0,
+              66
+            ]
           }
         ],
         "protocol": {
@@ -14557,7 +16156,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "I will only send our troops into harm's way with a clear mission"
+            "quote": "I will only send our troops into harm's way with a clear mission",
+            "context": "As Commander-in-Chief, I will never hesitate to defend this nation, but I will only send our troops into harm's way with a clear mission and a sacred commitment to give them the equipment they need in battle and the care and benefits they deserve when they come home.",
+            "mark": [
+              72,
+              136
+            ]
           }
         ],
         "protocol": {
@@ -14602,7 +16206,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "a sacred commitment to give them the equipment they need in battle"
+            "quote": "a sacred commitment to give them the equipment they need in battle",
+            "context": "As Commander-in-Chief, I will never hesitate to defend this nation, but I will only send our troops into harm's way with a clear mission and a sacred commitment to give them the equipment they need in battle and the care and benefits they deserve when they come home.",
+            "mark": [
+              141,
+              207
+            ]
           }
         ],
         "protocol": {
@@ -14656,7 +16265,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶63.1",
-            "quote": "the care and benefits they deserve when they come home"
+            "quote": "the care and benefits they deserve when they come home",
+            "context": "As Commander-in-Chief, I will never hesitate to defend this nation, but I will only send our troops into harm's way with a clear mission and a sacred commitment to give them the equipment they need in battle and the care and benefits they deserve when they come home.",
+            "mark": [
+              212,
+              266
+            ]
           }
         ],
         "protocol": {
@@ -14706,7 +16320,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.3",
-            "quote": "But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons"
+            "quote": "But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons",
+            "context": "But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons and curb Russian aggression.",
+            "mark": [
+              0,
+              102
+            ]
           }
         ],
         "protocol": {
@@ -14777,7 +16396,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.3",
-            "quote": "curb Russian aggression"
+            "quote": "curb Russian aggression",
+            "context": "But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons and curb Russian aggression.",
+            "mark": [
+              107,
+              130
+            ]
           }
         ],
         "protocol": {
@@ -14822,7 +16446,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.4",
-            "quote": "I will build new partnerships to defeat the threats of the 21st century: terrorism and nuclear proliferation; poverty and genocide; climate change and disease."
+            "quote": "I will build new partnerships to defeat the threats of the 21st century: terrorism and nuclear proliferation; poverty and genocide; climate change and disease.",
+            "context": "I will build new partnerships to defeat the threats of the 21st century: terrorism and nuclear proliferation; poverty and genocide; climate change and disease.",
+            "mark": [
+              0,
+              159
+            ]
           }
         ],
         "protocol": {
@@ -14867,7 +16496,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶64.5",
-            "quote": "And I will restore our moral standing, so that America is once again that last, best hope for all who are called to the cause of freedom, who long for lives of peace, and who yearn for a better future."
+            "quote": "And I will restore our moral standing, so that America is once again that last, best hope for all who are called to the cause of freedom, who long for lives of peace, and who yearn for a better future.",
+            "context": "And I will restore our moral standing, so that America is once again that last, best hope for all who are called to the cause of freedom, who long for lives of peace, and who yearn for a better future.",
+            "mark": [
+              0,
+              201
+            ]
           }
         ],
         "protocol": {
@@ -14912,7 +16546,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.4",
-            "quote": "With old friends and former foes, we will work tirelessly to lessen the nuclear threat"
+            "quote": "With old friends and former foes, we will work tirelessly to lessen the nuclear threat",
+            "context": "With old friends and former foes, we will work tirelessly to lessen the nuclear threat and roll back the specter of a warming planet.",
+            "mark": [
+              0,
+              86
+            ]
           }
         ],
         "protocol": {
@@ -14957,7 +16596,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.4",
-            "quote": "roll back the specter of a warming planet"
+            "quote": "roll back the specter of a warming planet",
+            "context": "With old friends and former foes, we will work tirelessly to lessen the nuclear threat and roll back the specter of a warming planet.",
+            "mark": [
+              91,
+              132
+            ]
           }
         ],
         "protocol": {
@@ -15002,7 +16646,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.5",
-            "quote": "We will not apologize for our way of life, nor will we waver in its defense."
+            "quote": "We will not apologize for our way of life, nor will we waver in its defense.",
+            "context": "We will not apologize for our way of life, nor will we waver in its defense.",
+            "mark": [
+              0,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -15047,7 +16696,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶18.7",
-            "quote": "You cannot outlast us, and we will defeat you."
+            "quote": "You cannot outlast us, and we will defeat you.",
+            "context": "You cannot outlast us, and we will defeat you.",
+            "mark": [
+              0,
+              46
+            ]
           }
         ],
         "protocol": {
@@ -15092,7 +16746,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶16.3",
-            "quote": "we will not give them up for expedience's sake"
+            "quote": "we will not give them up for expedience's sake",
+            "context": "Those ideals still light the world, and we will not give them up for expedience's sake.",
+            "mark": [
+              40,
+              86
+            ]
           }
         ],
         "protocol": {
@@ -15137,7 +16796,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶20.3",
-            "quote": "we will extend a hand if you are willing to unclench your fist"
+            "quote": "we will extend a hand if you are willing to unclench your fist",
+            "context": "To those who cling to power through corruption and deceit and the silencing of dissent, know that you are on the wrong side of history, but that we will extend a hand if you are willing to unclench your fist.",
+            "mark": [
+              145,
+              207
+            ]
           }
         ],
         "protocol": {
@@ -15182,7 +16846,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶21.1",
-            "quote": "To the people of poor nations, we pledge to work alongside you to make your farms flourish and let clean waters flow, to nourish starved bodies and feed hungry minds."
+            "quote": "To the people of poor nations, we pledge to work alongside you to make your farms flourish and let clean waters flow, to nourish starved bodies and feed hungry minds.",
+            "context": "To the people of poor nations, we pledge to work alongside you to make your farms flourish and let clean waters flow, to nourish starved bodies and feed hungry minds.",
+            "mark": [
+              0,
+              166
+            ]
           }
         ],
         "protocol": {
@@ -15229,7 +16898,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2009 inaugural address"
             },
             "ref": "¶11.8",
-            "quote": "Starting today, we must pick ourselves up, dust ourselves off, and begin again the work of remaking America."
+            "quote": "Starting today, we must pick ourselves up, dust ourselves off, and begin again the work of remaking America.",
+            "context": "Starting today, we must pick ourselves up, dust ourselves off, and begin again the work of remaking America.",
+            "mark": [
+              0,
+              108
+            ]
           }
         ],
         "protocol": {
@@ -15274,7 +16948,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶283.1",
-            "quote": "And I think that we should look at offshore drilling and implement it in a way that allows us to get some additional oil."
+            "quote": "And I think that we should look at offshore drilling and implement it in a way that allows us to get some additional oil.",
+            "context": "And I think that we should look at offshore drilling and implement it in a way that allows us to get some additional oil.",
+            "mark": [
+              0,
+              121
+            ]
           }
         ],
         "protocol": {
@@ -15319,7 +16998,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶240.1",
-            "quote": "make sure that we finally get serious about energy independence"
+            "quote": "make sure that we finally get serious about energy independence",
+            "context": "Because after eight years of failed policies, he and I both agree that what we're going to have to do is to re-prioritize, make sure that we're investing in the American people, give tax cuts not to the wealthiest corporations, but give them to small businesses and give them to individuals who are struggling right now, make sure that we finally get serious about energy independence, something that has been languishing in Washington for 30 years, and make sure that our kids get a great education and can afford to go to college.",
+            "mark": [
+              321,
+              384
+            ]
           }
         ],
         "protocol": {
@@ -15364,7 +17048,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶50.1",
-            "quote": "Now is the time to finally keep the promise of affordable, accessible health care for every single American."
+            "quote": "Now is the time to finally keep the promise of affordable, accessible health care for every single American.",
+            "context": "Now is the time to finally keep the promise of affordable, accessible health care for every single American.",
+            "mark": [
+              0,
+              108
+            ]
           },
           {
             "source": {
@@ -15379,7 +17068,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶486.1",
-            "quote": "in health care for all Americans"
+            "quote": "in health care for all Americans",
+            "context": "But we're going to have to invest in the American people again, in tax cuts for the middle class, in health care for all Americans, and college for every young person who wants to go.",
+            "mark": [
+              98,
+              130
+            ]
           }
         ],
         "protocol": {
@@ -15424,7 +17118,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶51.1",
-            "quote": "Now is the time to help families with paid sick days"
+            "quote": "Now is the time to help families with paid sick days",
+            "context": "Now is the time to help families with paid sick days and better family leave, because nobody in America should have to choose between keeping their jobs and caring for a sick child or ailing parent.",
+            "mark": [
+              0,
+              52
+            ]
           }
         ],
         "protocol": {
@@ -15469,7 +17168,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶51.1",
-            "quote": "better family leave"
+            "quote": "better family leave",
+            "context": "Now is the time to help families with paid sick days and better family leave, because nobody in America should have to choose between keeping their jobs and caring for a sick child or ailing parent.",
+            "mark": [
+              57,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -15514,7 +17218,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶403.1",
-            "quote": "But there surely is some common ground when both those who believe in choice and those who are opposed to abortion can come together and say, \"We should try to prevent unintended pregnancies by providing appropriate education to our youth, communicating that sexuality is sacred and that they should not be engaged in cavalier activity, and providing options for adoption, and helping single mothers if they want to choose to keep the baby.\""
+            "quote": "But there surely is some common ground when both those who believe in choice and those who are opposed to abortion can come together and say, \"We should try to prevent unintended pregnancies by providing appropriate education to our youth, communicating that sexuality is sacred and that they should not be engaged in cavalier activity, and providing options for adoption, and helping single mothers if they want to choose to keep the baby.\"",
+            "context": "But there surely is some common ground when both those who believe in choice and those who are opposed to abortion can come together and say, \"We should try to prevent unintended pregnancies by providing appropriate education to our youth, communicating that sexuality is sacred and that they should not be engaged in cavalier activity, and providing options for adoption, and helping single mothers if they want to choose to keep the baby.\"",
+            "mark": [
+              0,
+              441
+            ]
           },
           {
             "source": {
@@ -15529,7 +17238,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶405.1",
-            "quote": "We should try to reduce these circumstances."
+            "quote": "We should try to reduce these circumstances.",
+            "context": "We should try to reduce these circumstances.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -15574,7 +17288,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶254.1",
-            "quote": "I do want to just point out that autism, for example, or other special needs will require some additional funding, if we're going to get serious in terms of research."
+            "quote": "I do want to just point out that autism, for example, or other special needs will require some additional funding, if we're going to get serious in terms of research.",
+            "context": "I do want to just point out that autism, for example, or other special needs will require some additional funding, if we're going to get serious in terms of research.",
+            "mark": [
+              0,
+              166
+            ]
           },
           {
             "source": {
@@ -15589,7 +17308,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶255.2",
-            "quote": "That's an example of, I think, the kind of use of the scalpel that we want to make sure that we're funding some of those programs."
+            "quote": "That's an example of, I think, the kind of use of the scalpel that we want to make sure that we're funding some of those programs.",
+            "context": "That's an example of, I think, the kind of use of the scalpel that we want to make sure that we're funding some of those programs.",
+            "mark": [
+              0,
+              130
+            ]
           }
         ],
         "protocol": {
@@ -15634,7 +17358,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶49.1",
-            "quote": "Now is the time to finally meet our moral obligation to provide every child a world-class education, because it will take nothing less to compete in the global economy."
+            "quote": "Now is the time to finally meet our moral obligation to provide every child a world-class education, because it will take nothing less to compete in the global economy.",
+            "context": "Now is the time to finally meet our moral obligation to provide every child a world-class education, because it will take nothing less to compete in the global economy.",
+            "mark": [
+              0,
+              168
+            ]
           }
         ],
         "protocol": {
@@ -15679,7 +17408,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶440.1",
-            "quote": "And we also agree on the need for making sure that if we have bad teachers that they are swiftly -- after given an opportunity to prove themselves, if they can't hack it, then we need to move on because our kids have to have their best future."
+            "quote": "And we also agree on the need for making sure that if we have bad teachers that they are swiftly -- after given an opportunity to prove themselves, if they can't hack it, then we need to move on because our kids have to have their best future.",
+            "context": "And we also agree on the need for making sure that if we have bad teachers that they are swiftly -- after given an opportunity to prove themselves, if they can't hack it, then we need to move on because our kids have to have their best future.",
+            "mark": [
+              0,
+              243
+            ]
           }
         ],
         "protocol": {
@@ -15724,7 +17458,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶240.1",
-            "quote": "make sure that our kids get a great education and can afford to go to college"
+            "quote": "make sure that our kids get a great education and can afford to go to college",
+            "context": "Because after eight years of failed policies, he and I both agree that what we're going to have to do is to re-prioritize, make sure that we're investing in the American people, give tax cuts not to the wealthiest corporations, but give them to small businesses and give them to individuals who are struggling right now, make sure that we finally get serious about energy independence, something that has been languishing in Washington for 30 years, and make sure that our kids get a great education and can afford to go to college.",
+            "mark": [
+              454,
+              531
+            ]
           },
           {
             "source": {
@@ -15739,7 +17478,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶486.1",
-            "quote": "and college for every young person who wants to go"
+            "quote": "and college for every young person who wants to go",
+            "context": "But we're going to have to invest in the American people again, in tax cuts for the middle class, in health care for all Americans, and college for every young person who wants to go.",
+            "mark": [
+              132,
+              182
+            ]
           }
         ],
         "protocol": {
@@ -15784,7 +17528,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶461.1-461.2",
-            "quote": "So if we are going to be serious about this issue, we've got to have a president who is going to tackle it head-on. And that's what I intend to do as president."
+            "quote": "So if we are going to be serious about this issue, we've got to have a president who is going to tackle it head-on. And that's what I intend to do as president.",
+            "context": "So if we are going to be serious about this issue, we've got to have a president who is going to tackle it head-on. And that's what I intend to do as president.",
+            "mark": [
+              0,
+              160
+            ]
           }
         ],
         "protocol": {
@@ -15829,7 +17578,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶32.4",
-            "quote": "And it is on their behalf that I intend to win this election and keep our promise alive as President of the United States."
+            "quote": "And it is on their behalf that I intend to win this election and keep our promise alive as President of the United States.",
+            "context": "And it is on their behalf that I intend to win this election and keep our promise alive as President of the United States.",
+            "mark": [
+              0,
+              122
+            ]
           },
           {
             "source": {
@@ -15844,7 +17598,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶39.1",
-            "quote": "That's the promise we need to keep."
+            "quote": "That's the promise we need to keep.",
+            "context": "That's the promise we need to keep.",
+            "mark": [
+              0,
+              35
+            ]
           }
         ],
         "protocol": {
@@ -15889,7 +17648,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶66.2",
-            "quote": "Because one of the things that we have to change in our politics is the idea that people cannot disagree without challenging each other's character and patriotism."
+            "quote": "Because one of the things that we have to change in our politics is the idea that people cannot disagree without challenging each other's character and patriotism.",
+            "context": "Because one of the things that we have to change in our politics is the idea that people cannot disagree without challenging each other's character and patriotism.",
+            "mark": [
+              0,
+              163
+            ]
           }
         ],
         "protocol": {
@@ -15934,7 +17698,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶69.5",
-            "quote": "And that's what we have to restore."
+            "quote": "And that's what we have to restore.",
+            "context": "And that's what we have to restore.",
+            "mark": [
+              0,
+              35
+            ]
           }
         ],
         "protocol": {
@@ -15979,7 +17748,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶210.1",
-            "quote": "What I think is most important is that we recognize that to solve the key problems that we're facing, if we're going to solve two wars, the worst financial crisis since the Great Depression, if we can -- if we're going to focus on lifting wages that have declined over the last eight years and create jobs here in America, then Democrats, independents and Republicans, we're going to have to be able to work together."
+            "quote": "What I think is most important is that we recognize that to solve the key problems that we're facing, if we're going to solve two wars, the worst financial crisis since the Great Depression, if we can -- if we're going to focus on lifting wages that have declined over the last eight years and create jobs here in America, then Democrats, independents and Republicans, we're going to have to be able to work together.",
+            "context": "What I think is most important is that we recognize that to solve the key problems that we're facing, if we're going to solve two wars, the worst financial crisis since the Great Depression, if we can -- if we're going to focus on lifting wages that have declined over the last eight years and create jobs here in America, then Democrats, independents and Republicans, we're going to have to be able to work together.",
+            "mark": [
+              0,
+              417
+            ]
           }
         ],
         "protocol": {
@@ -16024,7 +17798,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶483.1",
-            "quote": "We need fundamental change in this country, and that's what I'd like to bring."
+            "quote": "We need fundamental change in this country, and that's what I'd like to bring.",
+            "context": "We need fundamental change in this country, and that's what I'd like to bring.",
+            "mark": [
+              0,
+              78
+            ]
           }
         ],
         "protocol": {
@@ -16069,7 +17848,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶55.4",
-            "quote": "Yes, we must provide more ladders to success for young men who fall into lives of crime and despair."
+            "quote": "Yes, we must provide more ladders to success for young men who fall into lives of crime and despair.",
+            "context": "Yes, we must provide more ladders to success for young men who fall into lives of crime and despair.",
+            "mark": [
+              0,
+              100
+            ]
           }
         ],
         "protocol": {
@@ -16114,7 +17898,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶52.1",
-            "quote": "Now is the time to change our bankruptcy laws, so that your pensions are protected ahead of CEO bonuses"
+            "quote": "Now is the time to change our bankruptcy laws, so that your pensions are protected ahead of CEO bonuses",
+            "context": "Now is the time to change our bankruptcy laws, so that your pensions are protected ahead of CEO bonuses; and the time to protect Social Security for future generations.",
+            "mark": [
+              0,
+              103
+            ]
           }
         ],
         "protocol": {
@@ -16159,7 +17948,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶52.1",
-            "quote": "the time to protect Social Security for future generations"
+            "quote": "the time to protect Social Security for future generations",
+            "context": "Now is the time to change our bankruptcy laws, so that your pensions are protected ahead of CEO bonuses; and the time to protect Social Security for future generations.",
+            "mark": [
+              109,
+              167
+            ]
           }
         ],
         "protocol": {
@@ -16204,7 +17998,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 acceptance speech"
             },
             "ref": "¶53.1",
-            "quote": "And now is the time to keep the promise of equal pay for an equal day's work, because I want my daughters to have exactly the same opportunities as your sons."
+            "quote": "And now is the time to keep the promise of equal pay for an equal day's work, because I want my daughters to have exactly the same opportunities as your sons.",
+            "context": "And now is the time to keep the promise of equal pay for an equal day's work, because I want my daughters to have exactly the same opportunities as your sons.",
+            "mark": [
+              0,
+              158
+            ]
           }
         ],
         "protocol": {
@@ -16249,7 +18048,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶287.1",
-            "quote": "And what I said was we should include those and make them enforceable."
+            "quote": "And what I said was we should include those and make them enforceable.",
+            "context": "And what I said was we should include those and make them enforceable.",
+            "mark": [
+              0,
+              70
+            ]
           }
         ],
         "protocol": {
@@ -16294,7 +18098,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶287.2",
-            "quote": "In the same way that we should enforce rules against China manipulating its currency to make our exports more expensive and their exports to us cheaper."
+            "quote": "In the same way that we should enforce rules against China manipulating its currency to make our exports more expensive and their exports to us cheaper.",
+            "context": "In the same way that we should enforce rules against China manipulating its currency to make our exports more expensive and their exports to us cheaper.",
+            "mark": [
+              0,
+              152
+            ]
           }
         ],
         "protocol": {
@@ -16339,7 +18148,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2008 debate"
             },
             "ref": "¶297.1",
-            "quote": "we have to stand for human rights and we have to make sure that violence isn't being perpetrated against workers who are just trying to organize for their rights"
+            "quote": "we have to stand for human rights and we have to make sure that violence isn't being perpetrated against workers who are just trying to organize for their rights",
+            "context": "And what I have said, because the free trade -- the trade agreement itself does have labor and environmental protections, but we have to stand for human rights and we have to make sure that violence isn't being perpetrated against workers who are just trying to organize for their rights, which is why, for example, I supported the Peruvian Free Trade Agreement which was a well-structured agreement.",
+            "mark": [
+              126,
+              287
+            ]
           }
         ],
         "protocol": {
@@ -16405,7 +18219,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶27.2",
-            "quote": "and we'll open more"
+            "quote": "and we'll open more",
+            "context": "We've opened millions of new acres for oil and gas exploration in the last 3 years, and we'll open more.",
+            "mark": [
+              84,
+              103
+            ]
           }
         ],
         "protocol": {
@@ -16483,7 +18302,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶27.3",
-            "quote": "I will not let oil companies write this country's energy plan"
+            "quote": "I will not let oil companies write this country's energy plan",
+            "context": "But unlike my opponent, I will not let oil companies write this country's energy plan or endanger our coastlines or collect another $4 billion in corporate welfare from our taxpayers.",
+            "mark": [
+              24,
+              85
+            ]
           }
         ],
         "protocol": {
@@ -16528,7 +18352,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶27.3",
-            "quote": "or endanger our coastlines"
+            "quote": "or endanger our coastlines",
+            "context": "But unlike my opponent, I will not let oil companies write this country's energy plan or endanger our coastlines or collect another $4 billion in corporate welfare from our taxpayers.",
+            "mark": [
+              86,
+              112
+            ]
           }
         ],
         "protocol": {
@@ -16573,7 +18402,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶27.3",
-            "quote": "or collect another $4 billion in corporate welfare from our taxpayers"
+            "quote": "or collect another $4 billion in corporate welfare from our taxpayers",
+            "context": "But unlike my opponent, I will not let oil companies write this country's energy plan or endanger our coastlines or collect another $4 billion in corporate welfare from our taxpayers.",
+            "mark": [
+              113,
+              182
+            ]
           }
         ],
         "protocol": {
@@ -16637,7 +18471,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶29.1",
-            "quote": "my plan will continue to reduce the carbon pollution that is heating our planet"
+            "quote": "my plan will continue to reduce the carbon pollution that is heating our planet",
+            "context": "And yes, my plan will continue to reduce the carbon pollution that is heating our planet, because climate change is not a hoax.",
+            "mark": [
+              9,
+              88
+            ]
           }
         ],
         "protocol": {
@@ -16706,7 +18545,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶18.2",
-            "quote": "We will respond to the threat of climate change"
+            "quote": "We will respond to the threat of climate change",
+            "context": "We will respond to the threat of climate change, knowing that the failure to do so would betray our children and future generations.",
+            "mark": [
+              0,
+              47
+            ]
           }
         ],
         "protocol": {
@@ -16751,7 +18595,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶35.6",
-            "quote": "in 2014, our longest war will be over"
+            "quote": "in 2014, our longest war will be over",
+            "context": "We've blunted the Taliban's momentum in Afghanistan, and in 2014, our longest war will be over.",
+            "mark": [
+              57,
+              94
+            ]
           },
           {
             "source": {
@@ -16766,7 +18615,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶41.3",
-            "quote": "Well, I have, and I will."
+            "quote": "Well, I have, and I will.",
+            "context": "Well, I have, and I will.",
+            "mark": [
+              0,
+              25
+            ]
           }
         ],
         "protocol": {
@@ -16830,7 +18684,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶36.5",
-            "quote": "so long as I'm Commander in Chief, we will sustain the strongest military the world has ever known"
+            "quote": "so long as I'm Commander in Chief, we will sustain the strongest military the world has ever known",
+            "context": "And so long as I'm Commander in Chief, we will sustain the strongest military the world has ever known.",
+            "mark": [
+              4,
+              102
+            ]
           },
           {
             "source": {
@@ -16845,7 +18704,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶380.1",
-            "quote": "As Commander in Chief, I will maintain the strongest military in the world"
+            "quote": "As Commander in Chief, I will maintain the strongest military in the world",
+            "context": "As Commander in Chief, I will maintain the strongest military in the world, keep faith with our troops, and go after those who would do us harm.",
+            "mark": [
+              0,
+              74
+            ]
           }
         ],
         "protocol": {
@@ -16914,7 +18778,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶36.6",
-            "quote": "When you take off the uniform, we will serve you as well as you've served us"
+            "quote": "When you take off the uniform, we will serve you as well as you've served us",
+            "context": "When you take off the uniform, we will serve you as well as you've served us, because no one who fights for this country should have to fight for a job or a roof over their heads or the care that they need when they come home.",
+            "mark": [
+              0,
+              76
+            ]
           }
         ],
         "protocol": {
@@ -16964,7 +18833,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶42.1",
-            "quote": "I will use the money we're no longer spending on war to pay down our debt"
+            "quote": "I will use the money we're no longer spending on war to pay down our debt",
+            "context": "And while my opponent would spend more money on military hardware that our Joint Chiefs don't even want, I will use the money we're no longer spending on war to pay down our debt and put more people back to work rebuilding roads and bridges and schools and runways.",
+            "mark": [
+              105,
+              178
+            ]
           }
         ],
         "protocol": {
@@ -17009,7 +18883,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶42.1",
-            "quote": "put more people back to work rebuilding roads and bridges and schools and runways"
+            "quote": "put more people back to work rebuilding roads and bridges and schools and runways",
+            "context": "And while my opponent would spend more money on military hardware that our Joint Chiefs don't even want, I will use the money we're no longer spending on war to pay down our debt and put more people back to work rebuilding roads and bridges and schools and runways.",
+            "mark": [
+              183,
+              264
+            ]
           }
         ],
         "protocol": {
@@ -17080,7 +18959,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶380.1",
-            "quote": "keep faith with our troops"
+            "quote": "keep faith with our troops",
+            "context": "As Commander in Chief, I will maintain the strongest military in the world, keep faith with our troops, and go after those who would do us harm.",
+            "mark": [
+              76,
+              102
+            ]
           }
         ],
         "protocol": {
@@ -17125,7 +19009,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶380.1",
-            "quote": "go after those who would do us harm"
+            "quote": "go after those who would do us harm",
+            "context": "As Commander in Chief, I will maintain the strongest military in the world, keep faith with our troops, and go after those who would do us harm.",
+            "mark": [
+              108,
+              143
+            ]
           }
         ],
         "protocol": {
@@ -17170,7 +19059,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶205.4",
-            "quote": "It will not happen."
+            "quote": "It will not happen.",
+            "context": "It will not happen.",
+            "mark": [
+              0,
+              19
+            ]
           }
         ],
         "protocol": {
@@ -17241,7 +19135,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶21.1",
-            "quote": "We will defend our people"
+            "quote": "We will defend our people",
+            "context": "We will defend our people and uphold our values through strength of arms and rule of law.",
+            "mark": [
+              0,
+              25
+            ]
           }
         ],
         "protocol": {
@@ -17295,7 +19194,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶21.1",
-            "quote": "uphold our values through strength of arms and rule of law"
+            "quote": "uphold our values through strength of arms and rule of law",
+            "context": "We will defend our people and uphold our values through strength of arms and rule of law.",
+            "mark": [
+              30,
+              88
+            ]
           }
         ],
         "protocol": {
@@ -17340,7 +19244,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶46.1",
-            "quote": "as long as I'm President, I never will"
+            "quote": "as long as I'm President, I never will",
+            "context": "I refuse to go along with that, and as long as I'm President, I never will.",
+            "mark": [
+              36,
+              74
+            ]
           }
         ],
         "protocol": {
@@ -17404,7 +19313,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶48.1",
-            "quote": "I will never—I will never—turn Medicare into a voucher."
+            "quote": "I will never—I will never—turn Medicare into a voucher.",
+            "context": "And I will never—I will never—turn Medicare into a voucher.",
+            "mark": [
+              4,
+              59
+            ]
           }
         ],
         "protocol": {
@@ -17475,7 +19389,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶48.4",
-            "quote": "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care"
+            "quote": "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care",
+            "context": "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care, not by asking seniors to pay thousands of dollars more.",
+            "mark": [
+              0,
+              114
+            ]
           }
         ],
         "protocol": {
@@ -17546,7 +19465,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶48.4",
-            "quote": "not by asking seniors to pay thousands of dollars more"
+            "quote": "not by asking seniors to pay thousands of dollars more",
+            "context": "Yes, we will reform and strengthen Medicare for the long haul, but we'll do it by reducing the cost of health care, not by asking seniors to pay thousands of dollars more.",
+            "mark": [
+              116,
+              170
+            ]
           }
         ],
         "protocol": {
@@ -17610,7 +19534,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶49.1",
-            "quote": "we will keep the promise of Social Security by taking the responsible steps to strengthen it"
+            "quote": "we will keep the promise of Social Security by taking the responsible steps to strengthen it",
+            "context": "And we will keep the promise of Social Security by taking the responsible steps to strengthen it, not by turning it over to Wall Street.",
+            "mark": [
+              4,
+              96
+            ]
           }
         ],
         "protocol": {
@@ -17686,7 +19615,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶49.1",
-            "quote": "not by turning it over to Wall Street"
+            "quote": "not by turning it over to Wall Street",
+            "context": "And we will keep the promise of Social Security by taking the responsible steps to strengthen it, not by turning it over to Wall Street.",
+            "mark": [
+              98,
+              135
+            ]
           }
         ],
         "protocol": {
@@ -17750,7 +19684,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶20.1-20.2",
-            "quote": "And that's exactly what we're going to do."
+            "quote": "And that's exactly what we're going to do.",
+            "context": "Now, with respect to Libya, as I indicated in the last debate, when we received that phone call, I immediately made sure that, number one, we did everything we could to secure those Americans who were still in harm's way; number two, that we would investigate exactly what happened; and number three, most importantly, that we would go after those who killed Americans and we would bring them to justice. And that's exactly what we're going to do.",
+            "mark": [
+              405,
+              447
+            ]
           }
         ],
         "protocol": {
@@ -17821,7 +19760,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶69.2-72.1",
-            "quote": "what I've done—throughout my Presidency and will continue to do—is, number one, make sure that these countries are supporting our counterterrorism efforts"
+            "quote": "what I've done—throughout my Presidency and will continue to do—is, number one, make sure that these countries are supporting our counterterrorism efforts",
+            "context": "And so what I've done—throughout my Presidency and will continue to do—is, number one, make sure that these countries are supporting our counterterrorism efforts. Number two, make sure that they are standing by our interests in Israel's security, because it is a true friend and our greatest ally in the region. Number three, we do have to make sure that we're protecting religious minorities and women because these countries can't develop unless all the population—not just half of it—is developing. Number four, we do have to develop their economic capabilities.",
+            "mark": [
+              7,
+              161
+            ]
           }
         ],
         "protocol": {
@@ -17866,7 +19810,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶80.2",
-            "quote": "we are going to do everything we can to make sure that we are helping the opposition"
+            "quote": "we are going to do everything we can to make sure that we are helping the opposition",
+            "context": "And that's why we are going to do everything we can to make sure that we are helping the opposition.",
+            "mark": [
+              15,
+              99
+            ]
           }
         ],
         "protocol": {
@@ -17930,7 +19879,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶101.2-101.4",
-            "quote": "That's the kind of leadership we'll continue to show."
+            "quote": "That's the kind of leadership we'll continue to show.",
+            "context": "What you just heard Governor Romney said is he doesn't have different ideas, and that's because we're doing exactly what we should be doing to try to promote a moderate Syrian leadership and an effective transition so that we get Asad out. That's the kind of leadership we've shown. That's the kind of leadership we'll continue to show.",
+            "mark": [
+              283,
+              336
+            ]
           }
         ],
         "protocol": {
@@ -17994,7 +19948,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶108.2",
-            "quote": "we will help them with respect to developing their own economy"
+            "quote": "we will help them with respect to developing their own economy",
+            "context": "And we will help them with respect to developing their own economy, because ultimately, what's going to make the Egyptian revolution successful for the people of Egypt, but also for the world is if those young people who gathered there are seeing opportunities.",
+            "mark": [
+              4,
+              66
+            ]
           }
         ],
         "protocol": {
@@ -18058,7 +20017,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶213.2",
-            "quote": "And if Israel is attacked, America will stand with Israel."
+            "quote": "And if Israel is attacked, America will stand with Israel.",
+            "context": "And if Israel is attacked, America will stand with Israel.",
+            "mark": [
+              0,
+              58
+            ]
           },
           {
             "source": {
@@ -18073,7 +20037,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶215.1",
-            "quote": "I will stand with Israel if they are attacked."
+            "quote": "I will stand with Israel if they are attacked.",
+            "context": "I will stand with Israel if they are attacked.",
+            "mark": [
+              0,
+              46
+            ]
           }
         ],
         "protocol": {
@@ -18123,7 +20092,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶215.3",
-            "quote": "In fact, this week, we'll be carrying out the largest military exercise with Israel in history"
+            "quote": "In fact, this week, we'll be carrying out the largest military exercise with Israel in history",
+            "context": "In fact, this week, we'll be carrying out the largest military exercise with Israel in history—this very week.",
+            "mark": [
+              0,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -18187,7 +20161,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶216.1",
-            "quote": "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon."
+            "quote": "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon.",
+            "context": "But to the issue of Iran, as long as I'm President of the United States, Iran will not get a nuclear weapon.",
+            "mark": [
+              0,
+              108
+            ]
           },
           {
             "source": {
@@ -18202,7 +20181,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶237.1",
-            "quote": "then we are going to take all options necessary to make sure they don't have a nuclear weapon"
+            "quote": "then we are going to take all options necessary to make sure they don't have a nuclear weapon",
+            "context": "And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary to make sure they don't have a nuclear weapon.",
+            "mark": [
+              98,
+              191
+            ]
           },
           {
             "source": {
@@ -18217,7 +20201,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶247.3-247.4",
-            "quote": "And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon."
+            "quote": "And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon.",
+            "context": "And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon. That's in America's national interest, and that will be the case so long as I'm President.",
+            "mark": [
+              0,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -18286,7 +20275,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶234.1",
-            "quote": "In the meantime, though, we're not going to let up the pressure until we have clear evidence that that takes place."
+            "quote": "In the meantime, though, we're not going to let up the pressure until we have clear evidence that that takes place.",
+            "context": "In the meantime, though, we're not going to let up the pressure until we have clear evidence that that takes place.",
+            "mark": [
+              0,
+              115
+            ]
           },
           {
             "source": {
@@ -18301,7 +20295,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶247.3-247.4",
-            "quote": "And we are going to continue to keep the pressure on"
+            "quote": "And we are going to continue to keep the pressure on",
+            "context": "And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon. That's in America's national interest, and that will be the case so long as I'm President.",
+            "mark": [
+              0,
+              52
+            ]
           }
         ],
         "protocol": {
@@ -18372,7 +20371,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶218.1",
-            "quote": "a United States President—me—who said we're not going to take any options off the table"
+            "quote": "a United States President—me—who said we're not going to take any options off the table",
+            "context": "So the work that we've done with respect to sanctions now offers Iran a choice: They can take the diplomatic route and end their nuclear program, or they will have to face a united world and a United States President—me—who said we're not going to take any options off the table.",
+            "mark": [
+              191,
+              278
+            ]
           },
           {
             "source": {
@@ -18387,7 +20391,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶237.1",
-            "quote": "And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary"
+            "quote": "And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary",
+            "context": "And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary to make sure they don't have a nuclear weapon.",
+            "mark": [
+              0,
+              145
+            ]
           }
         ],
         "protocol": {
@@ -18432,7 +20441,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶230.3",
-            "quote": "But the deal we'll accept is, they end their nuclear program."
+            "quote": "But the deal we'll accept is, they end their nuclear program.",
+            "context": "But the deal we'll accept is, they end their nuclear program.",
+            "mark": [
+              0,
+              61
+            ]
           }
         ],
         "protocol": {
@@ -18496,7 +20510,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶235.2",
-            "quote": "We're not going to allow Iran to perpetually engage in negotiations that lead nowhere."
+            "quote": "We're not going to allow Iran to perpetually engage in negotiations that lead nowhere.",
+            "context": "We're not going to allow Iran to perpetually engage in negotiations that lead nowhere.",
+            "mark": [
+              0,
+              86
+            ]
           }
         ],
         "protocol": {
@@ -18541,7 +20560,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶334.3",
-            "quote": "We absolutely have to make more progress, and that's why we're going to keep on pressing."
+            "quote": "We absolutely have to make more progress, and that's why we're going to keep on pressing.",
+            "context": "We absolutely have to make more progress, and that's why we're going to keep on pressing.",
+            "mark": [
+              0,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -18617,7 +20641,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶336.1",
-            "quote": "we're also sending a very clear signal that America is a Pacific power, that we are going to have a presence there"
+            "quote": "we're also sending a very clear signal that America is a Pacific power, that we are going to have a presence there",
+            "context": "And we believe China can be a partner, but we're also sending a very clear signal that America is a Pacific power, that we are going to have a presence there.",
+            "mark": [
+              43,
+              157
+            ]
           }
         ],
         "protocol": {
@@ -18681,7 +20710,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶336.2-336.5",
-            "quote": "We are working with countries in the region to make sure, for example, that ships can pass through, that commerce continues."
+            "quote": "We are working with countries in the region to make sure, for example, that ships can pass through, that commerce continues.",
+            "context": "We are working with countries in the region to make sure, for example, that ships can pass through, that commerce continues. And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards. That's the kind of leadership we've shown in the region. That's the kind of leadership that we'll continue to show.",
+            "mark": [
+              0,
+              124
+            ]
           }
         ],
         "protocol": {
@@ -18726,7 +20760,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶336.2-336.5",
-            "quote": "And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards."
+            "quote": "And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards.",
+            "context": "We are working with countries in the region to make sure, for example, that ships can pass through, that commerce continues. And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards. That's the kind of leadership we've shown in the region. That's the kind of leadership that we'll continue to show.",
+            "mark": [
+              125,
+              281
+            ]
           }
         ],
         "protocol": {
@@ -18790,7 +20829,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶21.2",
-            "quote": "We will show the courage to try and resolve our differences with other nations peacefully"
+            "quote": "We will show the courage to try and resolve our differences with other nations peacefully",
+            "context": "We will show the courage to try and resolve our differences with other nations peacefully—not because we are naive about the dangers we face, but because engagement can more durably lift suspicion and fear.",
+            "mark": [
+              0,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -18835,7 +20879,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶22.1",
-            "quote": "America will remain the anchor of strong alliances in every corner of the globe."
+            "quote": "America will remain the anchor of strong alliances in every corner of the globe.",
+            "context": "America will remain the anchor of strong alliances in every corner of the globe.",
+            "mark": [
+              0,
+              80
+            ]
           }
         ],
         "protocol": {
@@ -18880,7 +20929,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶22.2",
-            "quote": "And we will renew those institutions that extend our capacity to manage crisis abroad"
+            "quote": "And we will renew those institutions that extend our capacity to manage crisis abroad",
+            "context": "And we will renew those institutions that extend our capacity to manage crisis abroad, for no one has a greater stake in a peaceful world than its most powerful nation.",
+            "mark": [
+              0,
+              85
+            ]
           }
         ],
         "protocol": {
@@ -18925,7 +20979,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶22.3",
-            "quote": "We will support democracy from Asia to Africa, from the Americas to the Middle East"
+            "quote": "We will support democracy from Asia to Africa, from the Americas to the Middle East",
+            "context": "We will support democracy from Asia to Africa, from the Americas to the Middle East, because our interests and our conscience compel us to act on behalf of those who long for freedom.",
+            "mark": [
+              0,
+              83
+            ]
           }
         ],
         "protocol": {
@@ -18975,7 +21034,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶381.2",
-            "quote": "I promise you I will always listen to your voices, I will fight for your families, and I will work every single day to make sure that America continues to be the greatest nation on Earth."
+            "quote": "I promise you I will always listen to your voices, I will fight for your families, and I will work every single day to make sure that America continues to be the greatest nation on Earth.",
+            "context": "And if I have the privilege of being your President for another 4 years, I promise you I will always listen to your voices, I will fight for your families, and I will work every single day to make sure that America continues to be the greatest nation on Earth.",
+            "mark": [
+              73,
+              260
+            ]
           }
         ],
         "protocol": {
@@ -19027,7 +21091,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶21.3",
-            "quote": "We can choose a future where we export more products"
+            "quote": "We can choose a future where we export more products",
+            "context": "We can choose a future where we export more products and outsource fewer jobs.",
+            "mark": [
+              0,
+              52
+            ]
           }
         ],
         "protocol": {
@@ -19072,7 +21141,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶21.3",
-            "quote": "and outsource fewer jobs"
+            "quote": "and outsource fewer jobs",
+            "context": "We can choose a future where we export more products and outsource fewer jobs.",
+            "mark": [
+              53,
+              77
+            ]
           }
         ],
         "protocol": {
@@ -19117,7 +21191,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶25.2",
-            "quote": "We can help big factories and small businesses double their exports"
+            "quote": "We can help big factories and small businesses double their exports",
+            "context": "We can help big factories and small businesses double their exports, and if we choose this path, we can create a million new manufacturing jobs in the next 4 years.",
+            "mark": [
+              0,
+              67
+            ]
           }
         ],
         "protocol": {
@@ -19167,7 +21246,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶25.2",
-            "quote": "we can create a million new manufacturing jobs in the next 4 years"
+            "quote": "we can create a million new manufacturing jobs in the next 4 years",
+            "context": "We can help big factories and small businesses double their exports, and if we choose this path, we can create a million new manufacturing jobs in the next 4 years.",
+            "mark": [
+              97,
+              163
+            ]
           }
         ],
         "protocol": {
@@ -19212,7 +21296,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶25.1",
-            "quote": "We can give more tax breaks to corporations that ship jobs overseas, or"
+            "quote": "We can give more tax breaks to corporations that ship jobs overseas, or",
+            "context": "And now you have a choice: We can give more tax breaks to corporations that ship jobs overseas, or we can start rewarding companies that open new plants and train new workers and create new jobs here in the United States of America.",
+            "mark": [
+              27,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -19262,7 +21351,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶25.1",
-            "quote": "we can start rewarding companies that open new plants and train new workers and create new jobs here in the United States of America"
+            "quote": "we can start rewarding companies that open new plants and train new workers and create new jobs here in the United States of America",
+            "context": "And now you have a choice: We can give more tax breaks to corporations that ship jobs overseas, or we can start rewarding companies that open new plants and train new workers and create new jobs here in the United States of America.",
+            "mark": [
+              99,
+              231
+            ]
           }
         ],
         "protocol": {
@@ -19312,7 +21406,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶26.1",
-            "quote": "You can choose the path where we control more of our own energy."
+            "quote": "You can choose the path where we control more of our own energy.",
+            "context": "You can choose the path where we control more of our own energy.",
+            "mark": [
+              0,
+              64
+            ]
           },
           {
             "source": {
@@ -19327,7 +21426,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶379.1",
-            "quote": "I want to control our own energy by developing oil and natural gas, but also the energy sources of the future."
+            "quote": "I want to control our own energy by developing oil and natural gas, but also the energy sources of the future.",
+            "context": "I want to control our own energy by developing oil and natural gas, but also the energy sources of the future.",
+            "mark": [
+              0,
+              110
+            ]
           }
         ],
         "protocol": {
@@ -19372,7 +21476,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶28.1",
-            "quote": "a future where we keep investing in wind and solar and clean coal"
+            "quote": "a future where we keep investing in wind and solar and clean coal",
+            "context": "We're offering a better path, where we—a future where we keep investing in wind and solar and clean coal; where farmers and scientists harness new biofuels to power our cars and trucks; where construction workers build homes and factories that waste less energy; where we develop a hundred-year supply of natural gas that's right beneath our feet.",
+            "mark": [
+              39,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -19417,7 +21526,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶28.1",
-            "quote": "where farmers and scientists harness new biofuels to power our cars and trucks"
+            "quote": "where farmers and scientists harness new biofuels to power our cars and trucks",
+            "context": "We're offering a better path, where we—a future where we keep investing in wind and solar and clean coal; where farmers and scientists harness new biofuels to power our cars and trucks; where construction workers build homes and factories that waste less energy; where we develop a hundred-year supply of natural gas that's right beneath our feet.",
+            "mark": [
+              106,
+              184
+            ]
           }
         ],
         "protocol": {
@@ -19462,7 +21576,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶28.1",
-            "quote": "where construction workers build homes and factories that waste less energy"
+            "quote": "where construction workers build homes and factories that waste less energy",
+            "context": "We're offering a better path, where we—a future where we keep investing in wind and solar and clean coal; where farmers and scientists harness new biofuels to power our cars and trucks; where construction workers build homes and factories that waste less energy; where we develop a hundred-year supply of natural gas that's right beneath our feet.",
+            "mark": [
+              186,
+              261
+            ]
           }
         ],
         "protocol": {
@@ -19507,7 +21626,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶28.1",
-            "quote": "where we develop a hundred-year supply of natural gas that's right beneath our feet"
+            "quote": "where we develop a hundred-year supply of natural gas that's right beneath our feet",
+            "context": "We're offering a better path, where we—a future where we keep investing in wind and solar and clean coal; where farmers and scientists harness new biofuels to power our cars and trucks; where construction workers build homes and factories that waste less energy; where we develop a hundred-year supply of natural gas that's right beneath our feet.",
+            "mark": [
+              263,
+              346
+            ]
           }
         ],
         "protocol": {
@@ -19552,7 +21676,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶28.2",
-            "quote": "we can cut our oil imports in half by 2020"
+            "quote": "we can cut our oil imports in half by 2020",
+            "context": "If you choose this path, we can cut our oil imports in half by 2020 and support more than 600,000 new jobs in natural gas alone.",
+            "mark": [
+              25,
+              67
+            ]
           },
           {
             "source": {
@@ -19567,7 +21696,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶136.2",
-            "quote": "we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020"
+            "quote": "we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020",
+            "context": "We've cut our oil imports to the lowest level in two decades because we've developed oil and natural gas, but we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020.",
+            "mark": [
+              110,
+              213
+            ]
           }
         ],
         "protocol": {
@@ -19621,7 +21755,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶28.2",
-            "quote": "support more than 600,000 new jobs in natural gas alone"
+            "quote": "support more than 600,000 new jobs in natural gas alone",
+            "context": "If you choose this path, we can cut our oil imports in half by 2020 and support more than 600,000 new jobs in natural gas alone.",
+            "mark": [
+              72,
+              127
+            ]
           }
         ],
         "protocol": {
@@ -19666,7 +21805,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶19.2",
-            "quote": "But America cannot resist this transition, we must lead it."
+            "quote": "But America cannot resist this transition, we must lead it.",
+            "context": "But America cannot resist this transition, we must lead it.",
+            "mark": [
+              0,
+              59
+            ]
           },
           {
             "source": {
@@ -19681,7 +21825,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶19.3",
-            "quote": "We cannot cede to other nations the technology that will power new jobs and new industries, we must claim its promise."
+            "quote": "We cannot cede to other nations the technology that will power new jobs and new industries, we must claim its promise.",
+            "context": "We cannot cede to other nations the technology that will power new jobs and new industries, we must claim its promise.",
+            "mark": [
+              0,
+              118
+            ]
           }
         ],
         "protocol": {
@@ -19726,7 +21875,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶30.1",
-            "quote": "You can choose a future where more Americans have the chance to gain the skills they need to compete"
+            "quote": "You can choose a future where more Americans have the chance to gain the skills they need to compete",
+            "context": "You can choose a future where more Americans have the chance to gain the skills they need to compete, no matter how old they are or how much money they have.",
+            "mark": [
+              0,
+              100
+            ]
           }
         ],
         "protocol": {
@@ -19771,7 +21925,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶32.1",
-            "quote": "we can decide that in the United States of America, no child should have her dreams deferred because of a crowded classroom or a crumbling school"
+            "quote": "we can decide that in the United States of America, no child should have her dreams deferred because of a crowded classroom or a crumbling school",
+            "context": "And now you have a choice: We can gut education, or we can decide that in the United States of America, no child should have her dreams deferred because of a crowded classroom or a crumbling school.",
+            "mark": [
+              52,
+              197
+            ]
           }
         ],
         "protocol": {
@@ -19816,7 +21975,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶34.2",
-            "quote": "Help me recruit 100,000 math and science teachers within 10 years"
+            "quote": "Help me recruit 100,000 math and science teachers within 10 years",
+            "context": "Help me recruit 100,000 math and science teachers within 10 years and improve early childhood education.",
+            "mark": [
+              0,
+              65
+            ]
           }
         ],
         "protocol": {
@@ -19866,7 +22030,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶34.2",
-            "quote": "and improve early childhood education"
+            "quote": "and improve early childhood education",
+            "context": "Help me recruit 100,000 math and science teachers within 10 years and improve early childhood education.",
+            "mark": [
+              66,
+              103
+            ]
           }
         ],
         "protocol": {
@@ -19916,7 +22085,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶34.3",
-            "quote": "Help give 2 million workers the chance to learn skills at their community college that will lead directly to a job."
+            "quote": "Help give 2 million workers the chance to learn skills at their community college that will lead directly to a job.",
+            "context": "Help give 2 million workers the chance to learn skills at their community college that will lead directly to a job.",
+            "mark": [
+              0,
+              115
+            ]
           }
         ],
         "protocol": {
@@ -19961,7 +22135,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶34.4",
-            "quote": "cut in half the growth of tuition costs over the next 10 years"
+            "quote": "cut in half the growth of tuition costs over the next 10 years",
+            "context": "Help us work with colleges and universities to cut in half the growth of tuition costs over the next 10 years.",
+            "mark": [
+              47,
+              109
+            ]
           }
         ],
         "protocol": {
@@ -20006,7 +22185,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶150.5",
-            "quote": "what I now want to do is to hire more teachers, especially in math and science"
+            "quote": "what I now want to do is to hire more teachers, especially in math and science",
+            "context": "And what I now want to do is to hire more teachers, especially in math and science, because we know that we've fallen behind when it comes to math and science.",
+            "mark": [
+              4,
+              82
+            ]
           }
         ],
         "protocol": {
@@ -20051,7 +22235,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶378.3",
-            "quote": "I want to make sure we've got the best education system in the world"
+            "quote": "I want to make sure we've got the best education system in the world",
+            "context": "I want to make sure we've got the best education system in the world, and we're retaining our workers for the jobs of tomorrow.",
+            "mark": [
+              0,
+              68
+            ]
           }
         ],
         "protocol": {
@@ -20101,7 +22290,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶378.3",
-            "quote": "we're retaining our workers for the jobs of tomorrow"
+            "quote": "we're retaining our workers for the jobs of tomorrow",
+            "context": "I want to make sure we've got the best education system in the world, and we're retaining our workers for the jobs of tomorrow.",
+            "mark": [
+              74,
+              126
+            ]
           }
         ],
         "protocol": {
@@ -20146,7 +22340,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶15.2",
-            "quote": "reform our schools"
+            "quote": "reform our schools",
+            "context": "So we must harness new ideas and technology to remake our government, revamp our Tax Code, reform our schools, and empower our citizens with the skills they need to work harder, learn more, reach higher.",
+            "mark": [
+              91,
+              109
+            ]
           }
         ],
         "protocol": {
@@ -20191,7 +22390,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶193.3",
-            "quote": "We need to be thinking about cybersecurity."
+            "quote": "We need to be thinking about cybersecurity.",
+            "context": "We need to be thinking about cybersecurity.",
+            "mark": [
+              0,
+              43
+            ]
           },
           {
             "source": {
@@ -20206,7 +22410,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶193.4",
-            "quote": "We need to be thinking about space."
+            "quote": "We need to be thinking about space.",
+            "context": "We need to be thinking about space.",
+            "mark": [
+              0,
+              35
+            ]
           }
         ],
         "protocol": {
@@ -20251,7 +22460,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶314.2",
-            "quote": "We have to remain vigilant"
+            "quote": "We have to remain vigilant",
+            "context": "We have to remain vigilant, as I just said.",
+            "mark": [
+              0,
+              26
+            ]
           }
         ],
         "protocol": {
@@ -20296,7 +22510,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶311.1",
-            "quote": "we want to shrink those groups and those networks, and we can do that"
+            "quote": "we want to shrink those groups and those networks, and we can do that",
+            "context": "But there are always going to be elements in these countries that potentially threaten the United States, and we want to shrink those groups and those networks, and we can do that.",
+            "mark": [
+              110,
+              179
+            ]
           }
         ],
         "protocol": {
@@ -20341,7 +22560,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶43.1",
-            "quote": "You can choose a future where we reduce our deficit"
+            "quote": "You can choose a future where we reduce our deficit",
+            "context": "You can choose a future where we reduce our deficit without sticking it to the middle class.",
+            "mark": [
+              0,
+              51
+            ]
           },
           {
             "source": {
@@ -20356,7 +22580,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶16.2",
-            "quote": "We must make the hard choices to reduce the cost of health care and the size of our deficit."
+            "quote": "We must make the hard choices to reduce the cost of health care and the size of our deficit.",
+            "context": "We must make the hard choices to reduce the cost of health care and the size of our deficit.",
+            "mark": [
+              0,
+              92
+            ]
           },
           {
             "source": {
@@ -20371,7 +22600,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶379.2",
-            "quote": "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more"
+            "quote": "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more",
+            "context": "Yes, I want to reduce our deficit by cutting spending that we don't need, but also by asking the wealthy to do a little bit more so that we can invest in things like research and technology that are the key to a 21st-century economy.",
+            "mark": [
+              0,
+              128
+            ]
           }
         ],
         "protocol": {
@@ -20416,7 +22650,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶43.1",
-            "quote": "without sticking it to the middle class"
+            "quote": "without sticking it to the middle class",
+            "context": "You can choose a future where we reduce our deficit without sticking it to the middle class.",
+            "mark": [
+              52,
+              91
+            ]
           }
         ],
         "protocol": {
@@ -20461,7 +22700,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶45.1-45.4",
-            "quote": "I want to get this done, and we can get it done."
+            "quote": "I want to get this done, and we can get it done.",
+            "context": "Now, I'm still eager to reach an agreement based on the principles of my bipartisan debt commission. No party has a monopoly on wisdom. No democracy works without compromise. I want to get this done, and we can get it done.",
+            "mark": [
+              175,
+              223
+            ]
           }
         ],
         "protocol": {
@@ -20506,7 +22750,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶44.1",
-            "quote": "I want to reform the Tax Code so that it's simple, fair"
+            "quote": "I want to reform the Tax Code so that it's simple, fair",
+            "context": "I want to reform the Tax Code so that it's simple, fair, and asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President; the same rate we had when our economy created nearly 23 million new jobs, the biggest surplus in history, and a whole lot of millionaires to boot.",
+            "mark": [
+              0,
+              55
+            ]
           },
           {
             "source": {
@@ -20521,7 +22770,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶15.2",
-            "quote": "revamp our Tax Code"
+            "quote": "revamp our Tax Code",
+            "context": "So we must harness new ideas and technology to remake our government, revamp our Tax Code, reform our schools, and empower our citizens with the skills they need to work harder, learn more, reach higher.",
+            "mark": [
+              70,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -20571,7 +22825,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶44.1",
-            "quote": "asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President"
+            "quote": "asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President",
+            "context": "I want to reform the Tax Code so that it's simple, fair, and asks the wealthiest households to pay higher taxes on incomes over $250,000, the same rate we had when Bill Clinton was President; the same rate we had when our economy created nearly 23 million new jobs, the biggest surplus in history, and a whole lot of millionaires to boot.",
+            "mark": [
+              61,
+              190
+            ]
           }
         ],
         "protocol": {
@@ -20616,7 +22875,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶16.2",
-            "quote": "reduce the cost of health care"
+            "quote": "reduce the cost of health care",
+            "context": "We must make the hard choices to reduce the cost of health care and the size of our deficit.",
+            "mark": [
+              33,
+              63
+            ]
           }
         ],
         "protocol": {
@@ -20661,7 +22925,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶12.4",
-            "quote": "Now more than ever, we must do these things together, as one nation and one people."
+            "quote": "Now more than ever, we must do these things together, as one nation and one people.",
+            "context": "Now more than ever, we must do these things together, as one nation and one people.",
+            "mark": [
+              0,
+              83
+            ]
           }
         ],
         "protocol": {
@@ -20706,7 +22975,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶15.2",
-            "quote": "So we must harness new ideas and technology to remake our government"
+            "quote": "So we must harness new ideas and technology to remake our government",
+            "context": "So we must harness new ideas and technology to remake our government, revamp our Tax Code, reform our schools, and empower our citizens with the skills they need to work harder, learn more, reach higher.",
+            "mark": [
+              0,
+              68
+            ]
           }
         ],
         "protocol": {
@@ -20751,7 +23025,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶15.2",
-            "quote": "empower our citizens with the skills they need to work harder, learn more, reach higher"
+            "quote": "empower our citizens with the skills they need to work harder, learn more, reach higher",
+            "context": "So we must harness new ideas and technology to remake our government, revamp our Tax Code, reform our schools, and empower our citizens with the skills they need to work harder, learn more, reach higher.",
+            "mark": [
+              115,
+              202
+            ]
           }
         ],
         "protocol": {
@@ -20796,7 +23075,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.2",
-            "quote": "our wives, our mothers and daughters can earn a living equal to their efforts"
+            "quote": "our wives, our mothers and daughters can earn a living equal to their efforts",
+            "context": "For our journey is not complete until our wives, our mothers and daughters can earn a living equal to their efforts.",
+            "mark": [
+              38,
+              115
+            ]
           }
         ],
         "protocol": {
@@ -20846,7 +23130,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.3",
-            "quote": "our gay brothers and sisters are treated like anyone else under the law"
+            "quote": "our gay brothers and sisters are treated like anyone else under the law",
+            "context": "Our journey is not complete until our gay brothers and sisters are treated like anyone else under the law—for if we are truly created equal, then surely the love we commit to one another must be equal as well.",
+            "mark": [
+              34,
+              105
+            ]
           }
         ],
         "protocol": {
@@ -20891,7 +23180,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.4",
-            "quote": "no citizen is forced to wait for hours to exercise the right to vote"
+            "quote": "no citizen is forced to wait for hours to exercise the right to vote",
+            "context": "Our journey is not complete until no citizen is forced to wait for hours to exercise the right to vote.",
+            "mark": [
+              34,
+              102
+            ]
           }
         ],
         "protocol": {
@@ -20936,7 +23230,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.5",
-            "quote": "we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country"
+            "quote": "we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country",
+            "context": "Our journey is not complete until we find a better way to welcome the striving, hopeful immigrants who still see America as a land of opportunity—until bright young students and engineers are enlisted in our workforce rather than expelled from our country.",
+            "mark": [
+              34,
+              255
+            ]
           }
         ],
         "protocol": {
@@ -20981,7 +23280,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶24.6",
-            "quote": "all our children, from the streets of Detroit to the hills of Appalachia, to the quiet lanes of Newtown, know that they are cared for and cherished and always safe from harm"
+            "quote": "all our children, from the streets of Detroit to the hills of Appalachia, to the quiet lanes of Newtown, know that they are cared for and cherished and always safe from harm",
+            "context": "Our journey is not complete until all our children, from the streets of Detroit to the hills of Appalachia, to the quiet lanes of Newtown, know that they are cared for and cherished and always safe from harm.",
+            "mark": [
+              34,
+              207
+            ]
           }
         ],
         "protocol": {
@@ -21026,7 +23330,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶38.4",
-            "quote": "Our commitment to Israel's security must not waver"
+            "quote": "Our commitment to Israel's security must not waver",
+            "context": "Our commitment to Israel's security must not waver, and neither must our pursuit of peace.",
+            "mark": [
+              0,
+              50
+            ]
           }
         ],
         "protocol": {
@@ -21071,7 +23380,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 acceptance speech"
             },
             "ref": "¶38.4",
-            "quote": "and neither must our pursuit of peace"
+            "quote": "and neither must our pursuit of peace",
+            "context": "Our commitment to Israel's security must not waver, and neither must our pursuit of peace.",
+            "mark": [
+              52,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -21116,7 +23430,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶36.1",
-            "quote": "So what we need to do with respect to the Middle East is strong, steady leadership"
+            "quote": "So what we need to do with respect to the Middle East is strong, steady leadership",
+            "context": "So what we need to do with respect to the Middle East is strong, steady leadership, not wrong and reckless leadership that is all over the map.",
+            "mark": [
+              0,
+              82
+            ]
           }
         ],
         "protocol": {
@@ -21161,7 +23480,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶72.2",
-            "quote": "we can't continue to do nation-building in these regions"
+            "quote": "we can't continue to do nation-building in these regions",
+            "context": "But number five, the other thing that we have to do is recognize that we can't continue to do nation-building in these regions.",
+            "mark": [
+              70,
+              126
+            ]
           }
         ],
         "protocol": {
@@ -21206,7 +23530,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶80.4",
-            "quote": "And we have to do so making absolutely certain that we know who we are helping"
+            "quote": "And we have to do so making absolutely certain that we know who we are helping",
+            "context": "And we have to do so making absolutely certain that we know who we are helping, that we're not putting arms in the hands of folks who eventually could turn them against us or our allies in the region.",
+            "mark": [
+              0,
+              78
+            ]
           },
           {
             "source": {
@@ -21221,7 +23550,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2012 debate"
             },
             "ref": "¶93.5",
-            "quote": "And we have to take the same kind of steady, thoughtful leadership when it comes to Syria."
+            "quote": "And we have to take the same kind of steady, thoughtful leadership when it comes to Syria.",
+            "context": "And we have to take the same kind of steady, thoughtful leadership when it comes to Syria.",
+            "mark": [
+              0,
+              90
+            ]
           }
         ],
         "protocol": {
@@ -21266,7 +23600,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶20.5",
-            "quote": "we must carry those lessons into this time as well"
+            "quote": "we must carry those lessons into this time as well",
+            "context": "But we are also heirs to those who won the peace and not just the war; who turned sworn enemies into the surest of friends—and we must carry those lessons into this time as well.",
+            "mark": [
+              127,
+              177
+            ]
           }
         ],
         "protocol": {
@@ -21311,7 +23650,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2013 inaugural address"
             },
             "ref": "¶22.4",
-            "quote": "And we must be a source of hope to the poor, the sick, the marginalized, the victims of prejudice"
+            "quote": "And we must be a source of hope to the poor, the sick, the marginalized, the victims of prejudice",
+            "context": "And we must be a source of hope to the poor, the sick, the marginalized, the victims of prejudice—not out of mere charity, but because peace in our time requires the constant advance of those principles that our common creed describes: tolerance and opportunity, human dignity and justice.",
+            "mark": [
+              0,
+              97
+            ]
           }
         ],
         "protocol": {
@@ -21377,7 +23721,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶3.1",
-            "quote": "we will lead our country back to safety, prosperity, and peace"
+            "quote": "we will lead our country back to safety, prosperity, and peace",
+            "context": "Together, we will lead our party back to the White House, and we will lead our country back to safety, prosperity, and peace.",
+            "mark": [
+              62,
+              124
+            ]
           }
         ],
         "protocol": {
@@ -21422,7 +23771,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶3.2",
-            "quote": "We will be a country of generosity and warmth."
+            "quote": "We will be a country of generosity and warmth.",
+            "context": "We will be a country of generosity and warmth.",
+            "mark": [
+              0,
+              46
+            ]
           }
         ],
         "protocol": {
@@ -21467,7 +23821,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶3.3",
-            "quote": "But we will also be a country of law and order."
+            "quote": "But we will also be a country of law and order.",
+            "context": "But we will also be a country of law and order.",
+            "mark": [
+              0,
+              47
+            ]
           },
           {
             "source": {
@@ -21482,7 +23841,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶6.1-7.1",
-            "quote": "the crime and violence that today afflicts our nation will soon – and I mean very soon – come to an end"
+            "quote": "the crime and violence that today afflicts our nation will soon – and I mean very soon – come to an end",
+            "context": "I have a message for all of you: the crime and violence that today afflicts our nation will soon – and I mean very soon – come to an end. Beginning on January 20th of 2017, safety will be restored.",
+            "mark": [
+              33,
+              136
+            ]
           },
           {
             "source": {
@@ -21497,7 +23861,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶52.4",
-            "quote": "The first task for our new Administration will be to liberate our citizens from the crime and terrorism and lawlessness that threatens their communities."
+            "quote": "The first task for our new Administration will be to liberate our citizens from the crime and terrorism and lawlessness that threatens their communities.",
+            "context": "The first task for our new Administration will be to liberate our citizens from the crime and terrorism and lawlessness that threatens their communities.",
+            "mark": [
+              0,
+              153
+            ]
           },
           {
             "source": {
@@ -21512,7 +23881,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶54.4",
-            "quote": "when I take the oath of office next year, I will restore law and order to our country"
+            "quote": "when I take the oath of office next year, I will restore law and order to our country",
+            "context": "I have a message to every last person threatening the peace on our streets and the safety of our police: when I take the oath of office next year, I will restore law and order to our country.",
+            "mark": [
+              105,
+              190
+            ]
           }
         ],
         "protocol": {
@@ -21590,7 +23964,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶22.2-22.3",
-            "quote": "our trade deficit reached nearly $800 billion last year alone. We're going to fix that."
+            "quote": "our trade deficit reached nearly $800 billion last year alone. We're going to fix that.",
+            "context": "Our trade deficit in goods -- think of this -- our trade deficit reached nearly $800 billion last year alone. We're going to fix that.",
+            "mark": [
+              47,
+              134
+            ]
           }
         ],
         "protocol": {
@@ -21661,7 +24040,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶35.1-35.2",
-            "quote": "our plan will put America First. Americanism, not globalism, will be our credo."
+            "quote": "our plan will put America First. Americanism, not globalism, will be our credo.",
+            "context": "The most important difference between our plan and that of our opponents, is that our plan will put America First. Americanism, not globalism, will be our credo.",
+            "mark": [
+              82,
+              161
+            ]
           },
           {
             "source": {
@@ -21676,7 +24060,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶15.2-16.1",
-            "quote": "Every decision on trade, on taxes, on immigration, on foreign affairs, will be made to benefit American workers and American families."
+            "quote": "Every decision on trade, on taxes, on immigration, on foreign affairs, will be made to benefit American workers and American families.",
+            "context": "From this day forward, a new vision will govern our land. From this day forward, it's going to be only America first. America first. Every decision on trade, on taxes, on immigration, on foreign affairs, will be made to benefit American workers and American families.",
+            "mark": [
+              133,
+              267
+            ]
           }
         ],
         "protocol": {
@@ -21721,7 +24110,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶40.3",
-            "quote": "And they are forgotten, but they're not going to be forgotten long."
+            "quote": "And they are forgotten, but they're not going to be forgotten long.",
+            "context": "And they are forgotten, but they're not going to be forgotten long.",
+            "mark": [
+              0,
+              67
+            ]
           },
           {
             "source": {
@@ -21736,7 +24130,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶7.3",
-            "quote": "The forgotten men and women of our country will be forgotten no longer."
+            "quote": "The forgotten men and women of our country will be forgotten no longer.",
+            "context": "The forgotten men and women of our country will be forgotten no longer.",
+            "mark": [
+              0,
+              71
+            ]
           },
           {
             "source": {
@@ -21751,7 +24150,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶30.1",
-            "quote": "You will never be ignored again."
+            "quote": "You will never be ignored again.",
+            "context": "So to all Americans in every city near and far, small and large, from mountain to mountain, from ocean to ocean, hear these words: You will never be ignored again.",
+            "mark": [
+              131,
+              163
+            ]
           }
         ],
         "protocol": {
@@ -21796,7 +24200,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶46.1",
-            "quote": "I am not able to look the other way, and I won't look the other way."
+            "quote": "I am not able to look the other way, and I won't look the other way.",
+            "context": "When innocent people suffer, because our political system lacks the will, or the courage, or the basic decency to enforce our laws – or still worse still, has sold out to some corporate lobbyist for cash – I am not able to look the other way, and I won't look the other way.",
+            "mark": [
+              206,
+              274
+            ]
           }
         ],
         "protocol": {
@@ -21841,7 +24250,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶51.1",
-            "quote": "we will fix his biggest single issue: trade deals that strip us of our jobs, and strip us of our wealth as a country"
+            "quote": "we will fix his biggest single issue: trade deals that strip us of our jobs, and strip us of our wealth as a country",
+            "context": "But his supporters will join our movement, because we will fix his biggest single issue: trade deals that strip us of our jobs, and strip us of our wealth as a country.",
+            "mark": [
+              51,
+              167
+            ]
           },
           {
             "source": {
@@ -21856,7 +24270,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶86.2",
-            "quote": "I am going to turn our bad trade agreements into great trade agreements"
+            "quote": "I am going to turn our bad trade agreements into great trade agreements",
+            "context": "Using the richest people in the world, which our country has, I am going to turn our bad trade agreements into great trade agreements.",
+            "mark": [
+              62,
+              133
+            ]
           },
           {
             "source": {
@@ -21871,7 +24290,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶84.4",
-            "quote": "We will be doing very much better with Mexico on trade deals."
+            "quote": "We will be doing very much better with Mexico on trade deals.",
+            "context": "We will be doing very much better with Mexico on trade deals.",
+            "mark": [
+              0,
+              61
+            ]
           },
           {
             "source": {
@@ -21886,7 +24310,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶483.1",
-            "quote": "And frankly, now we're going to do it right."
+            "quote": "And frankly, now we're going to do it right.",
+            "context": "And frankly, now we're going to do it right.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -21931,7 +24360,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶51.2",
-            "quote": "we are going to fix the system so it works justly for each and every American"
+            "quote": "we are going to fix the system so it works justly for each and every American",
+            "context": "Millions of Democrats will join our movement because we are going to fix the system so it works justly for each and every American.",
+            "mark": [
+              53,
+              130
+            ]
           }
         ],
         "protocol": {
@@ -21976,7 +24410,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶52.1",
-            "quote": "We will bring the same economic success to America that Mike brought to Indiana"
+            "quote": "We will bring the same economic success to America that Mike brought to Indiana",
+            "context": "We will bring the same economic success to America that Mike brought to Indiana, which is amazing.",
+            "mark": [
+              0,
+              79
+            ]
           }
         ],
         "protocol": {
@@ -22021,7 +24460,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶55.1",
-            "quote": "I will work with, and appoint, the best and prosecutors and law enforcement officials to get the job properly done."
+            "quote": "I will work with, and appoint, the best and prosecutors and law enforcement officials to get the job properly done.",
+            "context": "I will work with, and appoint, the best and prosecutors and law enforcement officials to get the job properly done.",
+            "mark": [
+              0,
+              115
+            ]
           }
         ],
         "protocol": {
@@ -22066,7 +24510,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶58.1",
-            "quote": "When I am President, I will work to ensure that all of our kids are treated equally, and protected equally."
+            "quote": "When I am President, I will work to ensure that all of our kids are treated equally, and protected equally.",
+            "context": "When I am President, I will work to ensure that all of our kids are treated equally, and protected equally.",
+            "mark": [
+              0,
+              107
+            ]
           }
         ],
         "protocol": {
@@ -22111,7 +24560,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶59.1",
-            "quote": "Every action I take, I will ask myself: does this make better for young Americans in Baltimore, in Chicago, in Detroit, in Ferguson"
+            "quote": "Every action I take, I will ask myself: does this make better for young Americans in Baltimore, in Chicago, in Detroit, in Ferguson",
+            "context": "Every action I take, I will ask myself: does this make better for young Americans in Baltimore, in Chicago, in Detroit, in Ferguson who have as much of a right to live out their dreams as any other child America?",
+            "mark": [
+              0,
+              131
+            ]
           }
         ],
         "protocol": {
@@ -22156,7 +24610,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶60.1",
-            "quote": "We are going to defeat the barbarians of ISIS, and we are going to defeat them fast."
+            "quote": "We are going to defeat the barbarians of ISIS, and we are going to defeat them fast.",
+            "context": "To make life safe in America, we must also address the growing threats we face from outside the country: We are going to defeat the barbarians of ISIS, and we are going to defeat them fast.",
+            "mark": [
+              105,
+              189
+            ]
           },
           {
             "source": {
@@ -22171,7 +24630,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶67.4-67.5",
-            "quote": "We're going to win. We're going to win fast."
+            "quote": "We're going to win. We're going to win fast.",
+            "context": "We're going to win. We're going to win fast.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -22235,7 +24699,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶63.2",
-            "quote": "no good and we're going to stop it"
+            "quote": "no good and we're going to stop it",
+            "context": "This time, the terrorist targeted LGBTQ community – no good and we're going to stop it.",
+            "mark": [
+              52,
+              86
+            ]
           },
           {
             "source": {
@@ -22250,7 +24719,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶64.1",
-            "quote": "As your President, I will do everything in my power to protect our LGBTQ citizens from the violence and oppression of a hateful foreign ideology"
+            "quote": "As your President, I will do everything in my power to protect our LGBTQ citizens from the violence and oppression of a hateful foreign ideology",
+            "context": "As your President, I will do everything in my power to protect our LGBTQ citizens from the violence and oppression of a hateful foreign ideology – believe me.",
+            "mark": [
+              0,
+              144
+            ]
           }
         ],
         "protocol": {
@@ -22295,7 +24769,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶73.2",
-            "quote": "We are going to have an immigration system that works, but one that works for the American people."
+            "quote": "We are going to have an immigration system that works, but one that works for the American people.",
+            "context": "We are going to have an immigration system that works, but one that works for the American people.",
+            "mark": [
+              0,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -22340,7 +24819,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶76.3",
-            "quote": "we will save countless more families from suffering and the same awful fate"
+            "quote": "we will save countless more families from suffering and the same awful fate",
+            "context": "Tonight, this candidate and the whole nation stand in their corner to support them, to send them our love, and to pledge in their honor that we will save countless more families from suffering and the same awful fate.",
+            "mark": [
+              141,
+              216
+            ]
           }
         ],
         "protocol": {
@@ -22385,7 +24869,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶77.1",
-            "quote": "We are going to build a great border wall to stop illegal immigration, to stop the gangs and the violence, and to stop the drugs from pouring into our communities."
+            "quote": "We are going to build a great border wall to stop illegal immigration, to stop the gangs and the violence, and to stop the drugs from pouring into our communities.",
+            "context": "We are going to build a great border wall to stop illegal immigration, to stop the gangs and the violence, and to stop the drugs from pouring into our communities.",
+            "mark": [
+              0,
+              163
+            ]
           },
           {
             "source": {
@@ -22400,7 +24889,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶72.1",
-            "quote": "Now, I want to build the wall."
+            "quote": "Now, I want to build the wall.",
+            "context": "Now, I want to build the wall.",
+            "mark": [
+              0,
+              30
+            ]
           }
         ],
         "protocol": {
@@ -22464,7 +24958,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶77.2",
-            "quote": "will work directly with them to protect the integrity of our lawful, lawful, lawful immigration system"
+            "quote": "will work directly with them to protect the integrity of our lawful, lawful, lawful immigration system",
+            "context": "I have been honored to receive the endorsement of America's Border Patrol Agents, and will work directly with them to protect the integrity of our lawful, lawful, lawful immigration system.",
+            "mark": [
+              86,
+              188
+            ]
           }
         ],
         "protocol": {
@@ -22509,7 +25008,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶78.1",
-            "quote": "By ending catch-and-release on the border, we will stop the cycle of human smuggling and violence."
+            "quote": "By ending catch-and-release on the border, we will stop the cycle of human smuggling and violence.",
+            "context": "By ending catch-and-release on the border, we will stop the cycle of human smuggling and violence.",
+            "mark": [
+              0,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -22580,7 +25084,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶78.1",
-            "quote": "we will stop the cycle of human smuggling and violence"
+            "quote": "we will stop the cycle of human smuggling and violence",
+            "context": "By ending catch-and-release on the border, we will stop the cycle of human smuggling and violence.",
+            "mark": [
+              43,
+              97
+            ]
           }
         ],
         "protocol": {
@@ -22625,7 +25134,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶78.2-78.4",
-            "quote": "Illegal border crossings will go down. We will stop it. It won't be happening very much anymore."
+            "quote": "Illegal border crossings will go down. We will stop it. It won't be happening very much anymore.",
+            "context": "Illegal border crossings will go down. We will stop it. It won't be happening very much anymore.",
+            "mark": [
+              0,
+              96
+            ]
           }
         ],
         "protocol": {
@@ -22701,7 +25215,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶78.7",
-            "quote": "By enforcing the rules for the millions who overstay their visas, our laws will finally receive the respect they deserve."
+            "quote": "By enforcing the rules for the millions who overstay their visas, our laws will finally receive the respect they deserve.",
+            "context": "By enforcing the rules for the millions who overstay their visas, our laws will finally receive the respect they deserve.",
+            "mark": [
+              0,
+              121
+            ]
           }
         ],
         "protocol": {
@@ -22772,7 +25291,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶80.1",
-            "quote": "On January 20th of 2017, the day I take the oath of office, Americans will finally wake up in a country where the laws of the United States are enforced."
+            "quote": "On January 20th of 2017, the day I take the oath of office, Americans will finally wake up in a country where the laws of the United States are enforced.",
+            "context": "On January 20th of 2017, the day I take the oath of office, Americans will finally wake up in a country where the laws of the United States are enforced.",
+            "mark": [
+              0,
+              153
+            ]
           }
         ],
         "protocol": {
@@ -22817,7 +25341,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶80.2",
-            "quote": "We are going to be considerate and compassionate to everyone."
+            "quote": "We are going to be considerate and compassionate to everyone.",
+            "context": "We are going to be considerate and compassionate to everyone.",
+            "mark": [
+              0,
+              61
+            ]
           }
         ],
         "protocol": {
@@ -22862,7 +25391,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶85.2-85.3",
-            "quote": "it will be a signature feature of my presidency from the moment I take the oath of office"
+            "quote": "it will be a signature feature of my presidency from the moment I take the oath of office",
+            "context": "It begins with a new, fair trade policy that protects our jobs and stands up to countries that cheat, of which there are many. It's been a signature message of my campaign from day one, and it will be a signature feature of my presidency from the moment I take the oath of office.",
+            "mark": [
+              190,
+              279
+            ]
           }
         ],
         "protocol": {
@@ -22907,7 +25441,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶86.1",
-            "quote": "now I'm going to make our country rich again"
+            "quote": "now I'm going to make our country rich again",
+            "context": "I have made billions of dollars in business making deals – now I'm going to make our country rich again.",
+            "mark": [
+              59,
+              103
+            ]
           },
           {
             "source": {
@@ -22922,7 +25461,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶18.4",
-            "quote": "We will bring back our wealth."
+            "quote": "We will bring back our wealth.",
+            "context": "We will bring back our wealth.",
+            "mark": [
+              0,
+              30
+            ]
           }
         ],
         "protocol": {
@@ -22967,7 +25511,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶89.1",
-            "quote": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America"
+            "quote": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America",
+            "context": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America – and I am not going to let companies move to other countries, firing their employees along the way, without consequences.",
+            "mark": [
+              0,
+              103
+            ]
           },
           {
             "source": {
@@ -22982,7 +25531,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶202.4",
-            "quote": "We're bringing our jobs back."
+            "quote": "We're bringing our jobs back.",
+            "context": "We're bringing our jobs back.",
+            "mark": [
+              0,
+              29
+            ]
           },
           {
             "source": {
@@ -22997,7 +25551,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶18.2",
-            "quote": "We will bring back our jobs."
+            "quote": "We will bring back our jobs.",
+            "context": "We will bring back our jobs.",
+            "mark": [
+              0,
+              28
+            ]
           }
         ],
         "protocol": {
@@ -23061,7 +25620,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶89.1",
-            "quote": "I am not going to let companies move to other countries, firing their employees along the way, without consequences"
+            "quote": "I am not going to let companies move to other countries, firing their employees along the way, without consequences",
+            "context": "I am going to bring our jobs back to Ohio and Pennsylvania and New York and Michigan and all of America – and I am not going to let companies move to other countries, firing their employees along the way, without consequences.",
+            "mark": [
+              110,
+              225
+            ]
           }
         ],
         "protocol": {
@@ -23125,7 +25689,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶91.3-91.4",
-            "quote": "The TPP will not only destroy our manufacturing, but it will make America subject to the rulings of foreign governments. And it's not going to happen."
+            "quote": "The TPP will not only destroy our manufacturing, but it will make America subject to the rulings of foreign governments. And it's not going to happen.",
+            "context": "The TPP will not only destroy our manufacturing, but it will make America subject to the rulings of foreign governments. And it's not going to happen.",
+            "mark": [
+              0,
+              150
+            ]
           }
         ],
         "protocol": {
@@ -23189,7 +25758,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶91.5-91.6",
-            "quote": "I pledge to never sign any trade agreement that hurts our workers, or that diminishes our freedom and independence. I will never, ever sign bad trade deals."
+            "quote": "I pledge to never sign any trade agreement that hurts our workers, or that diminishes our freedom and independence. I will never, ever sign bad trade deals.",
+            "context": "I pledge to never sign any trade agreement that hurts our workers, or that diminishes our freedom and independence. I will never, ever sign bad trade deals.",
+            "mark": [
+              0,
+              156
+            ]
           }
         ],
         "protocol": {
@@ -23234,7 +25808,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶91.9-92.1",
-            "quote": "Instead, I will make individual deals with individual countries. No longer will we enter into these massive transactions, with many countries"
+            "quote": "Instead, I will make individual deals with individual countries. No longer will we enter into these massive transactions, with many countries",
+            "context": "Instead, I will make individual deals with individual countries. No longer will we enter into these massive transactions, with many countries, that are thousands of pages long – and which no one from our country even reads or understands.",
+            "mark": [
+              0,
+              141
+            ]
           }
         ],
         "protocol": {
@@ -23305,7 +25884,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶92.2",
-            "quote": "We are going to enforce all trade violations against any country including through the use of taxes and tariffs, against any country that cheats."
+            "quote": "We are going to enforce all trade violations against any country including through the use of taxes and tariffs, against any country that cheats.",
+            "context": "We are going to enforce all trade violations against any country including through the use of taxes and tariffs, against any country that cheats.",
+            "mark": [
+              0,
+              145
+            ]
           }
         ],
         "protocol": {
@@ -23376,7 +25960,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶93.1",
-            "quote": "This includes stopping China's outrageous theft of intellectual property"
+            "quote": "This includes stopping China's outrageous theft of intellectual property",
+            "context": "This includes stopping China's outrageous theft of intellectual property, along with their illegal product dumping, and their devastating currency manipulation.",
+            "mark": [
+              0,
+              72
+            ]
           }
         ],
         "protocol": {
@@ -23440,7 +26029,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶93.1",
-            "quote": "along with their illegal product dumping"
+            "quote": "along with their illegal product dumping",
+            "context": "This includes stopping China's outrageous theft of intellectual property, along with their illegal product dumping, and their devastating currency manipulation.",
+            "mark": [
+              74,
+              114
+            ]
           }
         ],
         "protocol": {
@@ -23504,7 +26098,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶93.1",
-            "quote": "and their devastating currency manipulation"
+            "quote": "and their devastating currency manipulation",
+            "context": "This includes stopping China's outrageous theft of intellectual property, along with their illegal product dumping, and their devastating currency manipulation.",
+            "mark": [
+              116,
+              159
+            ]
           }
         ],
         "protocol": {
@@ -23580,7 +26179,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶93.3",
-            "quote": "Our horrible trade agreements with China and many others, will be totally renegotiated."
+            "quote": "Our horrible trade agreements with China and many others, will be totally renegotiated.",
+            "context": "Our horrible trade agreements with China and many others, will be totally renegotiated.",
+            "mark": [
+              0,
+              87
+            ]
           },
           {
             "source": {
@@ -23595,7 +26199,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶201.1",
-            "quote": "So my plan—we're going to renegotiate trade deals."
+            "quote": "So my plan—we're going to renegotiate trade deals.",
+            "context": "So my plan—we're going to renegotiate trade deals.",
+            "mark": [
+              0,
+              50
+            ]
           }
         ],
         "protocol": {
@@ -23671,7 +26280,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶93.4",
-            "quote": "That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want."
+            "quote": "That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want.",
+            "context": "That includes renegotiating NAFTA to get a much better deal for America – and we'll walk away if we don't get the deal that we want.",
+            "mark": [
+              0,
+              132
+            ]
           },
           {
             "source": {
@@ -23686,7 +26300,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶203.1-204.1",
-            "quote": "I am going to renegotiate NAFTA. And if I can't make a great deal—then we're going to terminate NAFTA and we're going to create new deals."
+            "quote": "I am going to renegotiate NAFTA. And if I can't make a great deal—then we're going to terminate NAFTA and we're going to create new deals.",
+            "context": "I am going to renegotiate NAFTA. And if I can't make a great deal—then we're going to terminate NAFTA and we're going to create new deals. We're going to have trade, but we're going—we're going to terminate it, we're going to make a great trade deal. And if we can't, we're going to do it—we're going to go a separate way, because it has been a disaster.",
+            "mark": [
+              0,
+              138
+            ]
           }
         ],
         "protocol": {
@@ -23755,7 +26374,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶94.1",
-            "quote": "We are going to start building and making things again."
+            "quote": "We are going to start building and making things again.",
+            "context": "We are going to start building and making things again.",
+            "mark": [
+              0,
+              55
+            ]
           },
           {
             "source": {
@@ -23770,7 +26394,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶463.11",
-            "quote": "But I'm going to create a—the kind of a country that we were from the standpoint of industry."
+            "quote": "But I'm going to create a—the kind of a country that we were from the standpoint of industry.",
+            "context": "But I'm going to create a—the kind of a country that we were from the standpoint of industry.",
+            "mark": [
+              0,
+              93
+            ]
           }
         ],
         "protocol": {
@@ -23834,7 +26463,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶95.3",
-            "quote": "Middle-income Americans and businesses will experience profound relief"
+            "quote": "Middle-income Americans and businesses will experience profound relief",
+            "context": "Middle-income Americans and businesses will experience profound relief, and taxes will be greatly simplified for everyone, and I mean everyone.",
+            "mark": [
+              0,
+              70
+            ]
           }
         ],
         "protocol": {
@@ -23905,7 +26539,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶95.3",
-            "quote": "taxes will be greatly simplified for everyone, and I mean everyone"
+            "quote": "taxes will be greatly simplified for everyone, and I mean everyone",
+            "context": "Middle-income Americans and businesses will experience profound relief, and taxes will be greatly simplified for everyone, and I mean everyone.",
+            "mark": [
+              76,
+              142
+            ]
           }
         ],
         "protocol": {
@@ -23983,7 +26622,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶96.4-96.5",
-            "quote": "Then we are going to deal with the issue of regulation, one of the greatest job-killers of them all. Excessive regulation is costing our country as much as $2 trillion a year, and we will end it very very quickly."
+            "quote": "Then we are going to deal with the issue of regulation, one of the greatest job-killers of them all. Excessive regulation is costing our country as much as $2 trillion a year, and we will end it very very quickly.",
+            "context": "Then we are going to deal with the issue of regulation, one of the greatest job-killers of them all. Excessive regulation is costing our country as much as $2 trillion a year, and we will end it very very quickly.",
+            "mark": [
+              0,
+              213
+            ]
           }
         ],
         "protocol": {
@@ -24047,7 +26691,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶96.6",
-            "quote": "We are going to lift the restrictions on the production of American energy."
+            "quote": "We are going to lift the restrictions on the production of American energy.",
+            "context": "We are going to lift the restrictions on the production of American energy.",
+            "mark": [
+              0,
+              75
+            ]
           }
         ],
         "protocol": {
@@ -24125,7 +26774,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶97.1-97.2",
-            "quote": "that will never happen with Donald Trump as President. Our steelworkers and our miners are going back to work again."
+            "quote": "that will never happen with Donald Trump as President. Our steelworkers and our miners are going back to work again.",
+            "context": "My opponent, on the other hand, wants to put the great miners and steel workers of our country out of work and out of business – that will never happen with Donald Trump as President. Our steelworkers and our miners are going back to work again.",
+            "mark": [
+              129,
+              245
+            ]
           }
         ],
         "protocol": {
@@ -24203,7 +26857,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶98.1",
-            "quote": "We will build the roads, highways, bridges, tunnels, airports, and the railways of tomorrow."
+            "quote": "We will build the roads, highways, bridges, tunnels, airports, and the railways of tomorrow.",
+            "context": "This new wealth will improve the quality of life for all Americans – We will build the roads, highways, bridges, tunnels, airports, and the railways of tomorrow.",
+            "mark": [
+              69,
+              161
+            ]
           },
           {
             "source": {
@@ -24218,7 +26877,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶19.1",
-            "quote": "We will build new roads and highways and bridges and airports and tunnels and railways all across our wonderful Nation."
+            "quote": "We will build new roads and highways and bridges and airports and tunnels and railways all across our wonderful Nation.",
+            "context": "We will build new roads and highways and bridges and airports and tunnels and railways all across our wonderful Nation.",
+            "mark": [
+              0,
+              119
+            ]
           }
         ],
         "protocol": {
@@ -24301,7 +26965,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶98.3",
-            "quote": "We will rescue kids from failing schools by helping their parents send them to a safe school of their choice."
+            "quote": "We will rescue kids from failing schools by helping their parents send them to a safe school of their choice.",
+            "context": "We will rescue kids from failing schools by helping their parents send them to a safe school of their choice.",
+            "mark": [
+              0,
+              109
+            ]
           }
         ],
         "protocol": {
@@ -24365,7 +27034,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶99.3",
-            "quote": "We will repeal and replace disastrous Obamacare."
+            "quote": "We will repeal and replace disastrous Obamacare.",
+            "context": "We will repeal and replace disastrous Obamacare.",
+            "mark": [
+              0,
+              48
+            ]
           },
           {
             "source": {
@@ -24380,7 +27054,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶488.2",
-            "quote": "Repeal and replace the disaster known as Obamacare."
+            "quote": "Repeal and replace the disaster known as Obamacare.",
+            "context": "And one thing we have to do: Repeal and replace the disaster known as Obamacare.",
+            "mark": [
+              29,
+              80
+            ]
           },
           {
             "source": {
@@ -24395,7 +27074,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶488.5",
-            "quote": "We have to repeal and replace Obamacare."
+            "quote": "We have to repeal and replace Obamacare.",
+            "context": "We have to repeal and replace Obamacare.",
+            "mark": [
+              0,
+              40
+            ]
           },
           {
             "source": {
@@ -24410,7 +27094,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶490.3",
-            "quote": "We have to repeal and replace Obamacare."
+            "quote": "We have to repeal and replace Obamacare.",
+            "context": "We have to repeal and replace Obamacare.",
+            "mark": [
+              0,
+              40
+            ]
           }
         ],
         "protocol": {
@@ -24481,7 +27170,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶99.3",
-            "quote": "We will repeal and replace disastrous Obamacare."
+            "quote": "We will repeal and replace disastrous Obamacare.",
+            "context": "We will repeal and replace disastrous Obamacare.",
+            "mark": [
+              0,
+              48
+            ]
           },
           {
             "source": {
@@ -24496,7 +27190,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶488.2",
-            "quote": "Repeal and replace the disaster known as Obamacare."
+            "quote": "Repeal and replace the disaster known as Obamacare.",
+            "context": "And one thing we have to do: Repeal and replace the disaster known as Obamacare.",
+            "mark": [
+              29,
+              80
+            ]
           },
           {
             "source": {
@@ -24511,7 +27210,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶488.5",
-            "quote": "We have to repeal and replace Obamacare."
+            "quote": "We have to repeal and replace Obamacare.",
+            "context": "We have to repeal and replace Obamacare.",
+            "mark": [
+              0,
+              40
+            ]
           },
           {
             "source": {
@@ -24526,7 +27230,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶490.3",
-            "quote": "We have to repeal and replace Obamacare."
+            "quote": "We have to repeal and replace Obamacare.",
+            "context": "We have to repeal and replace Obamacare.",
+            "mark": [
+              0,
+              40
+            ]
           }
         ],
         "protocol": {
@@ -24590,7 +27299,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶99.4",
-            "quote": "You will be able to choose your own doctor again."
+            "quote": "You will be able to choose your own doctor again.",
+            "context": "You will be able to choose your own doctor again.",
+            "mark": [
+              0,
+              49
+            ]
           }
         ],
         "protocol": {
@@ -24635,7 +27349,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶99.5",
-            "quote": "And we will fix TSA at the airports which is a total disaster!"
+            "quote": "And we will fix TSA at the airports which is a total disaster!",
+            "context": "And we will fix TSA at the airports which is a total disaster!",
+            "mark": [
+              0,
+              62
+            ]
           }
         ],
         "protocol": {
@@ -24680,7 +27399,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶101.1",
-            "quote": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people"
+            "quote": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people",
+            "context": "We are going to work with all of our students who are drowning in debt to take the pressure off these young people just starting out their adult lives.",
+            "mark": [
+              0,
+              114
+            ]
           }
         ],
         "protocol": {
@@ -24725,7 +27449,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶102.1",
-            "quote": "We will completely rebuild our depleted military"
+            "quote": "We will completely rebuild our depleted military",
+            "context": "We will completely rebuild our depleted military, and the countries that we protect, at a massive loss, will be asked to pay their fair share.",
+            "mark": [
+              0,
+              48
+            ]
           }
         ],
         "protocol": {
@@ -24794,7 +27523,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶102.1",
-            "quote": "the countries that we protect, at a massive loss, will be asked to pay their fair share"
+            "quote": "the countries that we protect, at a massive loss, will be asked to pay their fair share",
+            "context": "We will completely rebuild our depleted military, and the countries that we protect, at a massive loss, will be asked to pay their fair share.",
+            "mark": [
+              54,
+              141
+            ]
           },
           {
             "source": {
@@ -24809,7 +27543,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶175.1",
-            "quote": "we have to renegotiate these agreements, because our country cannot afford to defend Saudi Arabia, Japan, Germany, South Korea, and many other places"
+            "quote": "we have to renegotiate these agreements, because our country cannot afford to defend Saudi Arabia, Japan, Germany, South Korea, and many other places",
+            "context": "All I said is, we have to renegotiate these agreements, because our country cannot afford to defend Saudi Arabia, Japan, Germany, South Korea, and many other places.",
+            "mark": [
+              15,
+              164
+            ]
           },
           {
             "source": {
@@ -24824,7 +27563,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶200.1",
-            "quote": "We have to tell Japan in a very nice way, we have to tell Germany, all of these countries, South Korea, we have to say, you have to help us out."
+            "quote": "We have to tell Japan in a very nice way, we have to tell Germany, all of these countries, South Korea, we have to say, you have to help us out.",
+            "context": "We have to tell Japan in a very nice way, we have to tell Germany, all of these countries, South Korea, we have to say, you have to help us out.",
+            "mark": [
+              0,
+              144
+            ]
           }
         ],
         "protocol": {
@@ -24888,7 +27632,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶103.1",
-            "quote": "We will take care of our great veterans like they have never been taken care of before."
+            "quote": "We will take care of our great veterans like they have never been taken care of before.",
+            "context": "We will take care of our great veterans like they have never been taken care of before.",
+            "mark": [
+              0,
+              87
+            ]
           }
         ],
         "protocol": {
@@ -24938,7 +27687,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶103.3",
-            "quote": "We will guarantee those who serve this country will be able to visit the doctor or hospital of their choice without waiting five days in line and dying."
+            "quote": "We will guarantee those who serve this country will be able to visit the doctor or hospital of their choice without waiting five days in line and dying.",
+            "context": "We will guarantee those who serve this country will be able to visit the doctor or hospital of their choice without waiting five days in line and dying.",
+            "mark": [
+              0,
+              152
+            ]
           }
         ],
         "protocol": {
@@ -25007,7 +27761,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶104.2-104.3",
-            "quote": "We are going to ask every Department Head in government to provide a list of wasteful spending projects that we can eliminate in my first 100 days. The politicians have talked about it, I'm going to do it."
+            "quote": "We are going to ask every Department Head in government to provide a list of wasteful spending projects that we can eliminate in my first 100 days. The politicians have talked about it, I'm going to do it.",
+            "context": "We are going to ask every Department Head in government to provide a list of wasteful spending projects that we can eliminate in my first 100 days. The politicians have talked about it, I'm going to do it.",
+            "mark": [
+              0,
+              205
+            ]
           }
         ],
         "protocol": {
@@ -25071,7 +27830,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶105.1",
-            "quote": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution."
+            "quote": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution.",
+            "context": "We are also going to appoint justices to the United States Supreme Court who will uphold our laws and our Constitution.",
+            "mark": [
+              0,
+              119
+            ]
           },
           {
             "source": {
@@ -25086,7 +27850,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶22.2",
-            "quote": "They will have a conservative bent."
+            "quote": "They will have a conservative bent.",
+            "context": "They will have a conservative bent.",
+            "mark": [
+              0,
+              35
+            ]
           },
           {
             "source": {
@@ -25101,7 +27870,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶22.5",
-            "quote": "They will interpret the Constitution the way the founders wanted it interpreted."
+            "quote": "They will interpret the Constitution the way the founders wanted it interpreted.",
+            "context": "They will interpret the Constitution the way the founders wanted it interpreted.",
+            "mark": [
+              0,
+              80
+            ]
           },
           {
             "source": {
@@ -25116,7 +27890,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶23.1-23.3",
-            "quote": "And those are the people that I will appoint."
+            "quote": "And those are the people that I will appoint.",
+            "context": "I don't think we should have justices appointed that decide what they want to hear. It's all about the Constitution of—of—and so important, the Constitution the way it was meant to be. And those are the people that I will appoint.",
+            "mark": [
+              185,
+              230
+            ]
           }
         ],
         "protocol": {
@@ -25161,7 +27940,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶106.1",
-            "quote": "The replacement for our beloved Justice Scalia will be a person of similar views and judicial philosophies."
+            "quote": "The replacement for our beloved Justice Scalia will be a person of similar views and judicial philosophies.",
+            "context": "The replacement for our beloved Justice Scalia will be a person of similar views and judicial philosophies.",
+            "mark": [
+              0,
+              107
+            ]
           }
         ],
         "protocol": {
@@ -25225,7 +28009,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶106.5",
-            "quote": "and will protect the right of all Americans to keep their families safe"
+            "quote": "and will protect the right of all Americans to keep their families safe",
+            "context": "I, on the other hand, received the early and strong endorsement of the National Rifle Association and will protect the right of all Americans to keep their families safe.",
+            "mark": [
+              98,
+              169
+            ]
           }
         ],
         "protocol": {
@@ -25270,7 +28059,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶108.1",
-            "quote": "I am going to work very hard to repeal that language and protect free speech for all Americans."
+            "quote": "I am going to work very hard to repeal that language and protect free speech for all Americans.",
+            "context": "I am going to work very hard to repeal that language and protect free speech for all Americans.",
+            "mark": [
+              0,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -25341,7 +28135,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶113.3",
-            "quote": "we are going to start winning again"
+            "quote": "we are going to start winning again",
+            "context": "We don't win anymore, but we are going to start winning again.",
+            "mark": [
+              26,
+              61
+            ]
           },
           {
             "source": {
@@ -25356,7 +28155,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶18.1",
-            "quote": "America will start winning again, winning like never before."
+            "quote": "America will start winning again, winning like never before.",
+            "context": "America will start winning again, winning like never before.",
+            "mark": [
+              0,
+              60
+            ]
           }
         ],
         "protocol": {
@@ -25401,7 +28205,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶121.1",
-            "quote": "I'm With You, and I will fight for you, and I will win for you."
+            "quote": "I'm With You, and I will fight for you, and I will win for you.",
+            "context": "So to every parent who dreams for their child, and every child who dreams for their future, I say these words to you tonight: I'm With You, and I will fight for you, and I will win for you.",
+            "mark": [
+              126,
+              189
+            ]
           },
           {
             "source": {
@@ -25416,7 +28225,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶17.3",
-            "quote": "I will fight for you with every breath in my body, and I will never, ever let you down."
+            "quote": "I will fight for you with every breath in my body, and I will never, ever let you down.",
+            "context": "I will fight for you with every breath in my body, and I will never, ever let you down.",
+            "mark": [
+              0,
+              87
+            ]
           }
         ],
         "protocol": {
@@ -25461,7 +28275,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶122.1-126.1",
-            "quote": "We Will Make America Strong Again. We Will Make America Proud Again. We Will Make America Safe Again. And We Will Make America Great Again."
+            "quote": "We Will Make America Strong Again. We Will Make America Proud Again. We Will Make America Safe Again. And We Will Make America Great Again.",
+            "context": "To all Americans tonight, in all our cities and towns, I make this promise: We Will Make America Strong Again. We Will Make America Proud Again. We Will Make America Safe Again. And We Will Make America Great Again.",
+            "mark": [
+              76,
+              215
+            ]
           },
           {
             "source": {
@@ -25476,7 +28295,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶507.3",
-            "quote": "We're going to make America great."
+            "quote": "We're going to make America great.",
+            "context": "We're going to make America great.",
+            "mark": [
+              0,
+              34
+            ]
           },
           {
             "source": {
@@ -25491,7 +28315,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶509.2",
-            "quote": "We are going to make America strong again, and we are going to make America great again, and it has to start now."
+            "quote": "We are going to make America strong again, and we are going to make America great again, and it has to start now.",
+            "context": "We are going to make America strong again, and we are going to make America great again, and it has to start now.",
+            "mark": [
+              0,
+              113
+            ]
           },
           {
             "source": {
@@ -25506,7 +28335,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶31.1-32.1",
-            "quote": "Together, we will make America strong again. We will make America wealthy again. We will make America proud again. We will make America safe again. And, yes, together, we will make America great again."
+            "quote": "Together, we will make America strong again. We will make America wealthy again. We will make America proud again. We will make America safe again. And, yes, together, we will make America great again.",
+            "context": "Together, we will make America strong again. We will make America wealthy again. We will make America proud again. We will make America safe again. And, yes, together, we will make America great again.",
+            "mark": [
+              0,
+              201
+            ]
           }
         ],
         "protocol": {
@@ -25551,7 +28385,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶22.1",
-            "quote": "the justices that I'm going to appoint will be pro-life"
+            "quote": "the justices that I'm going to appoint will be pro-life",
+            "context": "I feel that the justices that I am going to appoint—and I've named 20 of them—the justices that I'm going to appoint will be pro-life.",
+            "mark": [
+              78,
+              133
+            ]
           },
           {
             "source": {
@@ -25566,7 +28405,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶44.1",
-            "quote": "because I am pro-life, and I will be appointing pro-life judges"
+            "quote": "because I am pro-life, and I will be appointing pro-life judges",
+            "context": "Well, if that would happen, because I am pro-life, and I will be appointing pro-life judges, I would think that that will go back to the individual states.",
+            "mark": [
+              28,
+              91
+            ]
           }
         ],
         "protocol": {
@@ -25637,7 +28481,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶22.3",
-            "quote": "They will be protecting the Second Amendment."
+            "quote": "They will be protecting the Second Amendment.",
+            "context": "They will be protecting the Second Amendment.",
+            "mark": [
+              0,
+              45
+            ]
           },
           {
             "source": {
@@ -25652,7 +28501,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶40.1-40.2",
-            "quote": "We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment."
+            "quote": "We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment.",
+            "context": "We are going to appoint justices—this is the best way to help the Second Amendment. We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment.",
+            "mark": [
+              84,
+              222
+            ]
           }
         ],
         "protocol": {
@@ -25716,7 +28570,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶72.6-72.7",
-            "quote": "we're going to secure the border"
+            "quote": "we're going to secure the border",
+            "context": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out; we're going to secure the border.",
+            "mark": [
+              174,
+              206
+            ]
           },
           {
             "source": {
@@ -25731,7 +28590,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶71.6",
-            "quote": "We have to have strong borders."
+            "quote": "We have to have strong borders.",
+            "context": "We have to have strong borders.",
+            "mark": [
+              0,
+              31
+            ]
           },
           {
             "source": {
@@ -25746,7 +28610,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶18.3",
-            "quote": "We will bring back our borders."
+            "quote": "We will bring back our borders.",
+            "context": "We will bring back our borders.",
+            "mark": [
+              0,
+              31
+            ]
           }
         ],
         "protocol": {
@@ -25810,7 +28679,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶72.6-72.7",
-            "quote": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out"
+            "quote": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out",
+            "context": "One of my first acts will be to get all of the drug lords, all of the bad ones—we have some bad, bad people in this country that have to go out. We're going to get them out; we're going to secure the border.",
+            "mark": [
+              0,
+              172
+            ]
           },
           {
             "source": {
@@ -25825,7 +28699,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶72.9",
-            "quote": "But we have some bad hombres here, and we're going to get them out."
+            "quote": "But we have some bad hombres here, and we're going to get them out.",
+            "context": "But we have some bad hombres here, and we're going to get them out.",
+            "mark": [
+              0,
+              67
+            ]
           }
         ],
         "protocol": {
@@ -25896,7 +28775,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶101.6",
-            "quote": "We're going to speed up the process, big league, because it's very inefficient."
+            "quote": "We're going to speed up the process, big league, because it's very inefficient.",
+            "context": "We're going to speed up the process, big league, because it's very inefficient.",
+            "mark": [
+              0,
+              79
+            ]
           }
         ],
         "protocol": {
@@ -25960,7 +28844,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶126.1",
-            "quote": "we are going to stop radical Islamic terrorism in this country"
+            "quote": "we are going to stop radical Islamic terrorism in this country",
+            "context": "And you see, we are going to stop radical Islamic terrorism in this country.",
+            "mark": [
+              13,
+              75
+            ]
           }
         ],
         "protocol": {
@@ -26031,7 +28920,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶195.5",
-            "quote": "We're going to do a lot of things for college tuition."
+            "quote": "We're going to do a lot of things for college tuition.",
+            "context": "We're going to do a lot of things for college tuition.",
+            "mark": [
+              0,
+              54
+            ]
           }
         ],
         "protocol": {
@@ -26076,7 +28970,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶201.2-201.3",
-            "quote": "We're going to have a lot of free trade. We're going to have free trade, more free trade than we have right now."
+            "quote": "We're going to have a lot of free trade. We're going to have free trade, more free trade than we have right now.",
+            "context": "We're going to have a lot of free trade. We're going to have free trade, more free trade than we have right now.",
+            "mark": [
+              0,
+              112
+            ]
           }
         ],
         "protocol": {
@@ -26140,7 +29039,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶204.2",
-            "quote": "We are going to cut taxes massively."
+            "quote": "We are going to cut taxes massively.",
+            "context": "We are going to cut taxes massively.",
+            "mark": [
+              0,
+              36
+            ]
           }
         ],
         "protocol": {
@@ -26216,7 +29120,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶204.3",
-            "quote": "We're going to cut business taxes massively."
+            "quote": "We're going to cut business taxes massively.",
+            "context": "We're going to cut business taxes massively.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -26285,7 +29194,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶204.5",
-            "quote": "We're going to bring the $2.5 trillion..."
+            "quote": "We're going to bring the $2.5 trillion...",
+            "context": "We're going to bring the $2.5 trillion...",
+            "mark": [
+              0,
+              41
+            ]
           },
           {
             "source": {
@@ -26300,7 +29214,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶206.1",
-            "quote": "that's offshore back into the country"
+            "quote": "that's offshore back into the country",
+            "context": "... that's offshore back into the country.",
+            "mark": [
+              4,
+              41
+            ]
           }
         ],
         "protocol": {
@@ -26371,7 +29290,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶206.2",
-            "quote": "We are going to start the engine rolling again"
+            "quote": "We are going to start the engine rolling again",
+            "context": "We are going to start the engine rolling again, because...",
+            "mark": [
+              0,
+              46
+            ]
           },
           {
             "source": {
@@ -26386,7 +29310,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶463.7",
-            "quote": "We will have created a tremendous economic machine once again."
+            "quote": "We will have created a tremendous economic machine once again.",
+            "context": "We will have created a tremendous economic machine once again.",
+            "mark": [
+              0,
+              62
+            ]
           },
           {
             "source": {
@@ -26401,7 +29330,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶466.1-466.3",
-            "quote": "we will create an economic machine the likes of which we haven't seen in many decades."
+            "quote": "we will create an economic machine the likes of which we haven't seen in many decades.",
+            "context": "But that being said, we will create an economic machine the likes of which we haven't seen in many decades. And people, Chris, will again go back to work and they'll make a lot of money. And we'll have companies that will grow and expand and start from new.",
+            "mark": [
+              21,
+              107
+            ]
           }
         ],
         "protocol": {
@@ -26446,7 +29380,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶463.1",
-            "quote": "I'm going to create tremendous jobs."
+            "quote": "I'm going to create tremendous jobs.",
+            "context": "Well, I say they're wrong, because I'm going to create tremendous jobs.",
+            "mark": [
+              35,
+              71
+            ]
           }
         ],
         "protocol": {
@@ -26491,7 +29430,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶463.2-463.3",
-            "quote": "And we're bringing GDP from, really, 1 percent, which is what it is now, and if she got in, it will be less than zero. But we're bringing it from 1 percent up to 4 percent."
+            "quote": "And we're bringing GDP from, really, 1 percent, which is what it is now, and if she got in, it will be less than zero. But we're bringing it from 1 percent up to 4 percent.",
+            "context": "And we're bringing GDP from, really, 1 percent, which is what it is now, and if she got in, it will be less than zero. But we're bringing it from 1 percent up to 4 percent.",
+            "mark": [
+              0,
+              172
+            ]
           }
         ],
         "protocol": {
@@ -26555,7 +29499,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶463.9",
-            "quote": "We're not going to let our companies be raided by other countries where we lose all our jobs, we don't make our product anymore."
+            "quote": "We're not going to let our companies be raided by other countries where we lose all our jobs, we don't make our product anymore.",
+            "context": "We're not going to let our companies be raided by other countries where we lose all our jobs, we don't make our product anymore.",
+            "mark": [
+              0,
+              128
+            ]
           }
         ],
         "protocol": {
@@ -26600,7 +29549,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶486.2-486.3",
-            "quote": "We're going to grow the economy. It's going to grow at a record rate of growth."
+            "quote": "We're going to grow the economy. It's going to grow at a record rate of growth.",
+            "context": "We're going to grow the economy. It's going to grow at a record rate of growth.",
+            "mark": [
+              0,
+              79
+            ]
           }
         ],
         "protocol": {
@@ -26645,7 +29599,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶508.7",
-            "quote": "I will do more for African-Americans and Latinos than she can ever do in 10 lifetimes."
+            "quote": "I will do more for African-Americans and Latinos than she can ever do in 10 lifetimes.",
+            "context": "I will do more for African-Americans and Latinos than she can ever do in 10 lifetimes.",
+            "mark": [
+              0,
+              86
+            ]
           }
         ],
         "protocol": {
@@ -26690,7 +29649,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶18.5",
-            "quote": "And we will bring back our dreams."
+            "quote": "And we will bring back our dreams.",
+            "context": "And we will bring back our dreams.",
+            "mark": [
+              0,
+              34
+            ]
           }
         ],
         "protocol": {
@@ -26735,7 +29699,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶20.1",
-            "quote": "We will get our people off of welfare and back to work"
+            "quote": "We will get our people off of welfare and back to work",
+            "context": "We will get our people off of welfare and back to work, rebuilding our country with American hands and American labor.",
+            "mark": [
+              0,
+              54
+            ]
           }
         ],
         "protocol": {
@@ -26806,7 +29775,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶20.2",
-            "quote": "We will follow two simple rules: Buy American and hire American."
+            "quote": "We will follow two simple rules: Buy American and hire American.",
+            "context": "We will follow two simple rules: Buy American and hire American.",
+            "mark": [
+              0,
+              64
+            ]
           }
         ],
         "protocol": {
@@ -26877,7 +29851,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶21.1",
-            "quote": "We will seek friendship and good will with the nations of the world"
+            "quote": "We will seek friendship and good will with the nations of the world",
+            "context": "We will seek friendship and good will with the nations of the world, but we do so with the understanding that it is the right of all nations to put their own interests first.",
+            "mark": [
+              0,
+              67
+            ]
           }
         ],
         "protocol": {
@@ -26922,7 +29901,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶21.2",
-            "quote": "We do not seek to impose our way of life on anyone, but rather to let it shine as an example—we will shine—for everyone to follow."
+            "quote": "We do not seek to impose our way of life on anyone, but rather to let it shine as an example—we will shine—for everyone to follow.",
+            "context": "We do not seek to impose our way of life on anyone, but rather to let it shine as an example—we will shine—for everyone to follow.",
+            "mark": [
+              0,
+              130
+            ]
           }
         ],
         "protocol": {
@@ -26967,7 +29951,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶22.1",
-            "quote": "unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth"
+            "quote": "unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth",
+            "context": "We will reinforce old alliances and form new ones and unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth.",
+            "mark": [
+              54,
+              176
+            ]
           }
         ],
         "protocol": {
@@ -27031,7 +30020,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶22.1",
-            "quote": "We will reinforce old alliances and form new ones"
+            "quote": "We will reinforce old alliances and form new ones",
+            "context": "We will reinforce old alliances and form new ones and unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth.",
+            "mark": [
+              0,
+              49
+            ]
           }
         ],
         "protocol": {
@@ -27076,7 +30070,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶22.1",
-            "quote": "unite the civilized world against radical Islamic terrorism"
+            "quote": "unite the civilized world against radical Islamic terrorism",
+            "context": "We will reinforce old alliances and form new ones and unite the civilized world against radical Islamic terrorism, which we will eradicate completely from the face of the Earth.",
+            "mark": [
+              54,
+              113
+            ]
           }
         ],
         "protocol": {
@@ -27123,7 +30122,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶67.1",
-            "quote": "We must have the best intelligence gathering operation in the world."
+            "quote": "We must have the best intelligence gathering operation in the world.",
+            "context": "We must have the best intelligence gathering operation in the world.",
+            "mark": [
+              0,
+              68
+            ]
           }
         ],
         "protocol": {
@@ -27168,7 +30172,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶67.2",
-            "quote": "We must abandon the failed policy of nation building and regime change"
+            "quote": "We must abandon the failed policy of nation building and regime change",
+            "context": "We must abandon the failed policy of nation building and regime change that Hillary Clinton pushed in Iraq, Libya, Egypt and Syria.",
+            "mark": [
+              0,
+              70
+            ]
           }
         ],
         "protocol": {
@@ -27213,7 +30222,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶67.3",
-            "quote": "we must work with all of our allies who share our goal of destroying ISIS and stamping out Islamic terrorism"
+            "quote": "we must work with all of our allies who share our goal of destroying ISIS and stamping out Islamic terrorism",
+            "context": "Instead, we must work with all of our allies who share our goal of destroying ISIS and stamping out Islamic terrorism and doing it now, doing it quickly.",
+            "mark": [
+              9,
+              117
+            ]
           }
         ],
         "protocol": {
@@ -27258,7 +30272,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶70.1",
-            "quote": "we must immediately suspend immigration from any nation that has been compromised by terrorism until such time as proven vetting mechanisms have been put in place"
+            "quote": "we must immediately suspend immigration from any nation that has been compromised by terrorism until such time as proven vetting mechanisms have been put in place",
+            "context": "Lastly, and very importantly, we must immediately suspend immigration from any nation that has been compromised by terrorism until such time as proven vetting mechanisms have been put in place.",
+            "mark": [
+              30,
+              192
+            ]
           }
         ],
         "protocol": {
@@ -27303,7 +30322,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶74.3-74.4",
-            "quote": "violence spilling across our border, which we can solve. We have to solve it."
+            "quote": "violence spilling across our border, which we can solve. We have to solve it.",
+            "context": "Of all my travels in this country, nothing has affected me more deeply than the time I have spent with the mothers and fathers who have lost their children to violence spilling across our border, which we can solve. We have to solve it.",
+            "mark": [
+              159,
+              236
+            ]
           }
         ],
         "protocol": {
@@ -27348,7 +30372,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 acceptance speech"
             },
             "ref": "¶113.4",
-            "quote": "we must break free from the petty politics of the past"
+            "quote": "we must break free from the petty politics of the past",
+            "context": "But to do that, we must break free from the petty politics of the past.",
+            "mark": [
+              16,
+              70
+            ]
           }
         ],
         "protocol": {
@@ -27393,7 +30422,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶71.7",
-            "quote": "We have to keep the drugs out of our country."
+            "quote": "We have to keep the drugs out of our country.",
+            "context": "We have to keep the drugs out of our country.",
+            "mark": [
+              0,
+              45
+            ]
           }
         ],
         "protocol": {
@@ -27438,7 +30472,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶464.6",
-            "quote": "We have to use them to negotiate our trade deals."
+            "quote": "We have to use them to negotiate our trade deals.",
+            "context": "We have to use them to negotiate our trade deals.",
+            "mark": [
+              0,
+              49
+            ]
           },
           {
             "source": {
@@ -27453,7 +30492,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2016 debate"
             },
             "ref": "¶465.3",
-            "quote": "So we have to use our great people."
+            "quote": "So we have to use our great people.",
+            "context": "So we have to use our great people.",
+            "mark": [
+              0,
+              35
+            ]
           }
         ],
         "protocol": {
@@ -27498,7 +30542,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2017 inaugural address"
             },
             "ref": "¶17.1",
-            "quote": "We must protect our borders from the ravages of other countries making our products, stealing our companies, and destroying our jobs."
+            "quote": "We must protect our borders from the ravages of other countries making our products, stealing our companies, and destroying our jobs.",
+            "context": "We must protect our borders from the ravages of other countries making our products, stealing our companies, and destroying our jobs.",
+            "mark": [
+              0,
+              133
+            ]
           }
         ],
         "protocol": {
@@ -27564,7 +30613,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶6.1-6.2",
-            "quote": "I will draw on the best of us not the worst. I will be an ally of the light not of the darkness."
+            "quote": "I will draw on the best of us not the worst. I will be an ally of the light not of the darkness.",
+            "context": "Here and now, I give you my word: If you entrust me with the presidency, I will draw on the best of us not the worst. I will be an ally of the light not of the darkness.",
+            "mark": [
+              73,
+              169
+            ]
           }
         ],
         "protocol": {
@@ -27609,7 +30663,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶8.3",
-            "quote": "We will choose hope over fear, facts over fiction, fairness over privilege."
+            "quote": "We will choose hope over fear, facts over fiction, fairness over privilege.",
+            "context": "We will choose hope over fear, facts over fiction, fairness over privilege.",
+            "mark": [
+              0,
+              75
+            ]
           },
           {
             "source": {
@@ -27624,7 +30683,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶355.4",
-            "quote": "I'm going to give you hope."
+            "quote": "I'm going to give you hope.",
+            "context": "I'm going to give you hope.",
+            "mark": [
+              0,
+              27
+            ]
           },
           {
             "source": {
@@ -27639,7 +30703,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶355.6-355.7",
-            "quote": "We're going to choose science over fiction. We're going to choose hope over fear."
+            "quote": "We're going to choose science over fiction. We're going to choose hope over fear.",
+            "context": "We're going to choose science over fiction. We're going to choose hope over fear.",
+            "mark": [
+              0,
+              81
+            ]
           }
         ],
         "protocol": {
@@ -27684,7 +30753,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶10.1",
-            "quote": "while I will be a Democratic candidate, I will be an American president."
+            "quote": "while I will be a Democratic candidate, I will be an American president.",
+            "context": "But while I will be a Democratic candidate, I will be an American president.",
+            "mark": [
+              4,
+              76
+            ]
           },
           {
             "source": {
@@ -27699,7 +30773,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶22.9",
-            "quote": "I will be a President for all Americans—all Americans."
+            "quote": "I will be a President for all Americans—all Americans.",
+            "context": "And I pledge this to you: I will be a President for all Americans—all Americans.",
+            "mark": [
+              26,
+              80
+            ]
           },
           {
             "source": {
@@ -27714,7 +30793,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶194.1",
-            "quote": "I'm running as a proud Democrat, but I'm gonna be an American president."
+            "quote": "I'm running as a proud Democrat, but I'm gonna be an American president.",
+            "context": "All right, if I get elected, I'm not gonna -- I'm running as a proud Democrat, but I'm gonna be an American president.",
+            "mark": [
+              46,
+              118
+            ]
           },
           {
             "source": {
@@ -27729,7 +30813,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶355.1-355.3",
-            "quote": "I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented."
+            "quote": "I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented.",
+            "context": "I will say, 'I'm the American president. I represent all of you whether you voted for me or against me. And I'm going to make sure that you're represented.",
+            "mark": [
+              41,
+              155
+            ]
           }
         ],
         "protocol": {
@@ -27774,7 +30863,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶10.2",
-            "quote": "I will work as hard for those who didn't support me as I will for those who did."
+            "quote": "I will work as hard for those who didn't support me as I will for those who did.",
+            "context": "I will work as hard for those who didn't support me as I will for those who did.",
+            "mark": [
+              0,
+              80
+            ]
           },
           {
             "source": {
@@ -27789,7 +30883,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶22.10",
-            "quote": "I will fight as hard for those who did not support me as for those who did."
+            "quote": "I will fight as hard for those who did not support me as for those who did.",
+            "context": "And I promise you, I will fight as hard for those who did not support me as for those who did.",
+            "mark": [
+              19,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -27834,7 +30933,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶37.2",
-            "quote": "I will always level with you."
+            "quote": "I will always level with you.",
+            "context": "Before God and all of you I give you my word: I will always level with you.",
+            "mark": [
+              46,
+              75
+            ]
           }
         ],
         "protocol": {
@@ -27879,7 +30983,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶37.3-37.4",
-            "quote": "I will defend the Constitution. I will defend our democracy."
+            "quote": "I will defend the Constitution. I will defend our democracy.",
+            "context": "I will defend the Constitution. I will defend our democracy.",
+            "mark": [
+              0,
+              60
+            ]
           }
         ],
         "protocol": {
@@ -27924,7 +31033,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶37.6",
-            "quote": "thinking not of power, but of possibilities; not of personal interest, but of the public good."
+            "quote": "thinking not of power, but of possibilities; not of personal interest, but of the public good.",
+            "context": "And I will give all, all of you, keep everything you—I do, in your service, thinking not of power, but of possibilities; not of personal interest, but of the public good.",
+            "mark": [
+              76,
+              170
+            ]
           }
         ],
         "protocol": {
@@ -27969,7 +31083,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶355.14-355.19",
-            "quote": "Now, I'm going to make sure you get that."
+            "quote": "Now, I'm going to make sure you get that.",
+            "context": "Decency. Honor. Respect. Treating people with dignity. Making sure that everyone has an even chance. Now, I'm going to make sure you get that.",
+            "mark": [
+              101,
+              142
+            ]
           }
         ],
         "protocol": {
@@ -28014,7 +31133,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶6.5",
-            "quote": "The dream of justice for all will be deferred no longer."
+            "quote": "The dream of justice for all will be deferred no longer.",
+            "context": "The dream of justice for all will be deferred no longer.",
+            "mark": [
+              0,
+              56
+            ]
           },
           {
             "source": {
@@ -28029,7 +31153,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶355.9-355.12",
-            "quote": "We can deal with a systemic racism."
+            "quote": "We can deal with a systemic racism.",
+            "context": "We can grow this economy. We can deal with a systemic racism. At the same time, we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs. And that's the fact, that's what we're going to do.",
+            "mark": [
+              26,
+              61
+            ]
           }
         ],
         "protocol": {
@@ -28074,7 +31203,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶110.4",
-            "quote": "With equal pay for women."
+            "quote": "With equal pay for women.",
+            "context": "With equal pay for women.",
+            "mark": [
+              0,
+              25
+            ]
           }
         ],
         "protocol": {
@@ -28150,7 +31284,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶6.7",
-            "quote": "a rise of political extremism, White supremacy, domestic terrorism that we must confront and we will defeat."
+            "quote": "a rise of political extremism, White supremacy, domestic terrorism that we must confront and we will defeat.",
+            "context": "And now, a rise of political extremism, White supremacy, domestic terrorism that we must confront and we will defeat.",
+            "mark": [
+              9,
+              117
+            ]
           }
         ],
         "protocol": {
@@ -28195,7 +31334,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶251.13",
-            "quote": "I'm offering $20 billion to states to change their state laws to eliminate minimum mandatories and set up drug courts."
+            "quote": "I'm offering $20 billion to states to change their state laws to eliminate minimum mandatories and set up drug courts.",
+            "context": "That's why I'm offering $20 billion to states to change their state laws to eliminate minimum mandatories and set up drug courts.",
+            "mark": [
+              11,
+              129
+            ]
           }
         ],
         "protocol": {
@@ -28259,7 +31403,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶251.16",
-            "quote": "We should fundamentally change the system and that's what I'm going to do."
+            "quote": "We should fundamentally change the system and that's what I'm going to do.",
+            "context": "We should fundamentally change the system and that's what I'm going to do.",
+            "mark": [
+              0,
+              74
+            ]
           }
         ],
         "protocol": {
@@ -28304,7 +31453,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶288.4",
-            "quote": "we should not send anyone to jail for a pure drug offense."
+            "quote": "we should not send anyone to jail for a pure drug offense.",
+            "context": "That's why I've been arguing that, in fact, we should not send anyone to jail for a pure drug offense.",
+            "mark": [
+              44,
+              102
+            ]
           },
           {
             "source": {
@@ -28319,7 +31473,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶288.12",
-            "quote": "That's what I'm going to get done"
+            "quote": "That's what I'm going to get done",
+            "context": "That's what I'm going to get done because they may-- the American people have now seen that in fact, it was a mistake to pass those laws where they do the drug.",
+            "mark": [
+              0,
+              33
+            ]
           }
         ],
         "protocol": {
@@ -28397,7 +31556,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶78.1",
-            "quote": "If I'm president on day one we'll implement the national strategy I've been laying out since March."
+            "quote": "If I'm president on day one we'll implement the national strategy I've been laying out since March.",
+            "context": "If I'm president on day one we'll implement the national strategy I've been laying out since March.",
+            "mark": [
+              0,
+              99
+            ]
           },
           {
             "source": {
@@ -28412,7 +31576,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.16",
-            "quote": "I will make sure we have a plan."
+            "quote": "I will make sure we have a plan.",
+            "context": "And so folks, I will take care of this, I will end this, I will make sure we have a plan.",
+            "mark": [
+              57,
+              89
+            ]
           }
         ],
         "protocol": {
@@ -28490,7 +31659,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶67.1",
-            "quote": "As president, the first step I will take will be to get control of the virus that's ruined so many lives."
+            "quote": "As president, the first step I will take will be to get control of the virus that's ruined so many lives.",
+            "context": "As president, the first step I will take will be to get control of the virus that's ruined so many lives.",
+            "mark": [
+              0,
+              105
+            ]
           },
           {
             "source": {
@@ -28505,7 +31679,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶42.1",
-            "quote": "I'm going to shut down the virus"
+            "quote": "I'm going to shut down the virus",
+            "context": "What I would say is I'm going to shut down the virus, not the country.",
+            "mark": [
+              20,
+              52
+            ]
           }
         ],
         "protocol": {
@@ -28569,7 +31748,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶42.1",
-            "quote": "not the country."
+            "quote": "not the country.",
+            "context": "What I would say is I'm going to shut down the virus, not the country.",
+            "mark": [
+              54,
+              70
+            ]
           },
           {
             "source": {
@@ -28584,7 +31768,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶44.1",
-            "quote": "I'm not shutting down the nation"
+            "quote": "I'm not shutting down the nation",
+            "context": "Oh no, I'm not shutting down the nation but there are, look, they need standards.",
+            "mark": [
+              7,
+              39
+            ]
           }
         ],
         "protocol": {
@@ -28648,7 +31837,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.16",
-            "quote": "I will take care of this, I will end this"
+            "quote": "I will take care of this, I will end this",
+            "context": "And so folks, I will take care of this, I will end this, I will make sure we have a plan.",
+            "mark": [
+              14,
+              55
+            ]
           },
           {
             "source": {
@@ -28663,7 +31857,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶27.7",
-            "quote": "We will get through this, together—together."
+            "quote": "We will get through this, together—together.",
+            "context": "We will get through this, together—together.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -28734,7 +31933,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶79.1",
-            "quote": "We'll develop and deploy rapid tests with results available immediately."
+            "quote": "We'll develop and deploy rapid tests with results available immediately.",
+            "context": "We'll develop and deploy rapid tests with results available immediately.",
+            "mark": [
+              0,
+              72
+            ]
           },
           {
             "source": {
@@ -28749,7 +31953,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.13",
-            "quote": "I would make sure we move in the direction of rapid testing, investing in rapid testing."
+            "quote": "I would make sure we move in the direction of rapid testing, investing in rapid testing.",
+            "context": "I would make sure we move in the direction of rapid testing, investing in rapid testing.",
+            "mark": [
+              0,
+              88
+            ]
           }
         ],
         "protocol": {
@@ -28820,7 +32029,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶80.1-80.3",
-            "quote": "We'll make the medical supplies and protective equipment our country needs. And we'll make them here in America."
+            "quote": "We'll make the medical supplies and protective equipment our country needs. And we'll make them here in America.",
+            "context": "We'll make the medical supplies and protective equipment our country needs. And we'll make them here in America. So we will never again be at the mercy of China and other foreign countries in order to protect our own people.",
+            "mark": [
+              0,
+              112
+            ]
           }
         ],
         "protocol": {
@@ -28891,7 +32105,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.14",
-            "quote": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe"
+            "quote": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe",
+            "context": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe, and give them the wherewithal and financial resources to be able to do that.",
+            "mark": [
+              0,
+              123
+            ]
           },
           {
             "source": {
@@ -28906,7 +32125,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶52.8",
-            "quote": "we're going to make sure that we open safely."
+            "quote": "we're going to make sure that we open safely.",
+            "context": "You need to be able to provide all the resources that are needed to do this and that is not inconsistent with saying that we're going to make sure that we open safely.",
+            "mark": [
+              122,
+              167
+            ]
           }
         ],
         "protocol": {
@@ -28984,7 +32208,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶81.1",
-            "quote": "We'll make sure our schools have the resources they need to be open, safe, and effective."
+            "quote": "We'll make sure our schools have the resources they need to be open, safe, and effective.",
+            "context": "We'll make sure our schools have the resources they need to be open, safe, and effective.",
+            "mark": [
+              0,
+              89
+            ]
           },
           {
             "source": {
@@ -28999,7 +32228,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.14",
-            "quote": "give them the wherewithal and financial resources to be able to do that."
+            "quote": "give them the wherewithal and financial resources to be able to do that.",
+            "context": "I would make sure that we set up national standards as to how to open up schools and open up businesses so they can be safe, and give them the wherewithal and financial resources to be able to do that.",
+            "mark": [
+              129,
+              201
+            ]
           }
         ],
         "protocol": {
@@ -29063,7 +32297,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶82.1",
-            "quote": "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve."
+            "quote": "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve.",
+            "context": "We'll put the politics aside and take the muzzle off our experts so the public gets the information they need and deserve.",
+            "mark": [
+              0,
+              122
+            ]
           }
         ],
         "protocol": {
@@ -29108,7 +32347,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶83.1",
-            "quote": "We'll have a national mandate to wear a mask-not as a burden, but to protect each other."
+            "quote": "We'll have a national mandate to wear a mask-not as a burden, but to protect each other.",
+            "context": "We'll have a national mandate to wear a mask-not as a burden, but to protect each other.",
+            "mark": [
+              0,
+              88
+            ]
           }
         ],
         "protocol": {
@@ -29186,7 +32430,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶7.12",
-            "quote": "What I would do is make sure we have everyone encouraged to wear a mask, all the time."
+            "quote": "What I would do is make sure we have everyone encouraged to wear a mask, all the time.",
+            "context": "What I would do is make sure we have everyone encouraged to wear a mask, all the time.",
+            "mark": [
+              0,
+              86
+            ]
           },
           {
             "source": {
@@ -29201,7 +32450,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶56.7",
-            "quote": "what we have to do is say, wear these masks"
+            "quote": "what we have to do is say, wear these masks",
+            "context": "They're all Americans and what we have to do is say, wear these masks, number one, make sure we get the help that the businesses need.",
+            "mark": [
+              26,
+              69
+            ]
           }
         ],
         "protocol": {
@@ -29246,7 +32500,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶106.2-106.3",
-            "quote": "Together, we can, and we will, rebuild our economy. And when we do, we'll not only build it back, we'll build it back better."
+            "quote": "Together, we can, and we will, rebuild our economy. And when we do, we'll not only build it back, we'll build it back better.",
+            "context": "Together, we can, and we will, rebuild our economy. And when we do, we'll not only build it back, we'll build it back better.",
+            "mark": [
+              0,
+              125
+            ]
           },
           {
             "source": {
@@ -29261,7 +32520,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶355.9-355.12",
-            "quote": "We can grow this economy."
+            "quote": "We can grow this economy.",
+            "context": "We can grow this economy. We can deal with a systemic racism. At the same time, we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs. And that's the fact, that's what we're going to do.",
+            "mark": [
+              0,
+              25
+            ]
           }
         ],
         "protocol": {
@@ -29306,7 +32570,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶107.1",
-            "quote": "With modern roads, bridges, highways, broadband, ports and airports as a new foundation for economic growth."
+            "quote": "With modern roads, bridges, highways, broadband, ports and airports as a new foundation for economic growth.",
+            "context": "With modern roads, bridges, highways, broadband, ports and airports as a new foundation for economic growth.",
+            "mark": [
+              0,
+              108
+            ]
           }
         ],
         "protocol": {
@@ -29375,7 +32644,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶107.2",
-            "quote": "With pipes that transport clean water to every community."
+            "quote": "With pipes that transport clean water to every community.",
+            "context": "With pipes that transport clean water to every community.",
+            "mark": [
+              0,
+              57
+            ]
           }
         ],
         "protocol": {
@@ -29446,7 +32720,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶107.3",
-            "quote": "With 5 million new manufacturing and technology jobs so the future is made in America."
+            "quote": "With 5 million new manufacturing and technology jobs so the future is made in America.",
+            "context": "With 5 million new manufacturing and technology jobs so the future is made in America.",
+            "mark": [
+              0,
+              86
+            ]
           }
         ],
         "protocol": {
@@ -29531,7 +32810,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶110.3",
-            "quote": "With newly empowered labor unions."
+            "quote": "With newly empowered labor unions.",
+            "context": "With newly empowered labor unions.",
+            "mark": [
+              0,
+              34
+            ]
           }
         ],
         "protocol": {
@@ -29602,7 +32886,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶110.5",
-            "quote": "With rising wages you can raise a family on."
+            "quote": "With rising wages you can raise a family on.",
+            "context": "With rising wages you can raise a family on.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -29680,7 +32969,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶110.6-110.7",
-            "quote": "Yes, we're going to do more than praise our essential workers. We're finally going to pay them."
+            "quote": "Yes, we're going to do more than praise our essential workers. We're finally going to pay them.",
+            "context": "Yes, we're going to do more than praise our essential workers. We're finally going to pay them.",
+            "mark": [
+              0,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -29751,7 +33045,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶115.1",
-            "quote": "I will not let it happen."
+            "quote": "I will not let it happen.",
+            "context": "I will not let it happen.",
+            "mark": [
+              0,
+              25
+            ]
           }
         ],
         "protocol": {
@@ -29815,7 +33114,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶115.2",
-            "quote": "If I'm your president, we're going to protect Social Security and Medicare."
+            "quote": "If I'm your president, we're going to protect Social Security and Medicare.",
+            "context": "If I'm your president, we're going to protect Social Security and Medicare.",
+            "mark": [
+              0,
+              75
+            ]
           }
         ],
         "protocol": {
@@ -29879,7 +33183,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶115.2",
-            "quote": "If I'm your president, we're going to protect Social Security and Medicare."
+            "quote": "If I'm your president, we're going to protect Social Security and Medicare.",
+            "context": "If I'm your president, we're going to protect Social Security and Medicare.",
+            "mark": [
+              0,
+              75
+            ]
           }
         ],
         "protocol": {
@@ -29943,7 +33252,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶150.1",
-            "quote": "What I'm going to do is pass Obamacare with a public option -- become Bidencare."
+            "quote": "What I'm going to do is pass Obamacare with a public option -- become Bidencare.",
+            "context": "What I'm going to do is pass Obamacare with a public option -- become Bidencare.",
+            "mark": [
+              0,
+              80
+            ]
           }
         ],
         "protocol": {
@@ -30007,7 +33321,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶150.4",
-            "quote": "by allowing Medicare to negotiate drug prices"
+            "quote": "by allowing Medicare to negotiate drug prices",
+            "context": "Secondly, we're going to make sure we reduce the premiums and reduce drug prices by making sure that there's competition that doesn't exist now by allowing Medicare to negotiate drug prices with the insurance companies.",
+            "mark": [
+              144,
+              189
+            ]
           }
         ],
         "protocol": {
@@ -30076,7 +33395,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶108.1",
-            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act",
+            "context": "With a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act he's trying to rip away.",
+            "mark": [
+              5,
+              115
+            ]
           },
           {
             "source": {
@@ -30091,7 +33415,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶150.4",
-            "quote": "we're going to make sure we reduce the premiums"
+            "quote": "we're going to make sure we reduce the premiums",
+            "context": "Secondly, we're going to make sure we reduce the premiums and reduce drug prices by making sure that there's competition that doesn't exist now by allowing Medicare to negotiate drug prices with the insurance companies.",
+            "mark": [
+              10,
+              57
+            ]
           },
           {
             "source": {
@@ -30106,7 +33435,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶152.10",
-            "quote": "We have to provide health insurance for people at an affordable rate, and that's what I do."
+            "quote": "We have to provide health insurance for people at an affordable rate, and that's what I do.",
+            "context": "We have to provide health insurance for people at an affordable rate, and that's what I do.",
+            "mark": [
+              0,
+              91
+            ]
           }
         ],
         "protocol": {
@@ -30189,7 +33523,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶108.1",
-            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act",
+            "context": "With a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act he's trying to rip away.",
+            "mark": [
+              5,
+              115
+            ]
           }
         ],
         "protocol": {
@@ -30260,7 +33599,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶108.1",
-            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act"
+            "quote": "a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act",
+            "context": "With a health care system that lowers premiums, deductibles, and drug prices by building on the Affordable Care Act he's trying to rip away.",
+            "mark": [
+              5,
+              115
+            ]
           },
           {
             "source": {
@@ -30275,7 +33619,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶150.4",
-            "quote": "reduce drug prices"
+            "quote": "reduce drug prices",
+            "context": "Secondly, we're going to make sure we reduce the premiums and reduce drug prices by making sure that there's competition that doesn't exist now by allowing Medicare to negotiate drug prices with the insurance companies.",
+            "mark": [
+              62,
+              80
+            ]
           }
         ],
         "protocol": {
@@ -30353,7 +33702,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶150.8",
-            "quote": "we're going to make sure we're in a situation that we've actually protect pre existing"
+            "quote": "we're going to make sure we're in a situation that we've actually protect pre existing",
+            "context": "Lastly, we're going to make sure we're in a situation that we've actually protect pre existing -- there's no way he can protect pre existing conditions.",
+            "mark": [
+              8,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -30417,7 +33771,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶109.1",
-            "quote": "With an education system that trains our people for the best jobs of the 21st century"
+            "quote": "With an education system that trains our people for the best jobs of the 21st century",
+            "context": "With an education system that trains our people for the best jobs of the 21st century, where cost doesn't prevent young people from going to college, and student debt doesn't crush them when they get out.",
+            "mark": [
+              0,
+              85
+            ]
           }
         ],
         "protocol": {
@@ -30462,7 +33821,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶109.1",
-            "quote": "where cost doesn't prevent young people from going to college"
+            "quote": "where cost doesn't prevent young people from going to college",
+            "context": "With an education system that trains our people for the best jobs of the 21st century, where cost doesn't prevent young people from going to college, and student debt doesn't crush them when they get out.",
+            "mark": [
+              87,
+              148
+            ]
           }
         ],
         "protocol": {
@@ -30533,7 +33897,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶109.1",
-            "quote": "student debt doesn't crush them when they get out"
+            "quote": "student debt doesn't crush them when they get out",
+            "context": "With an education system that trains our people for the best jobs of the 21st century, where cost doesn't prevent young people from going to college, and student debt doesn't crush them when they get out.",
+            "mark": [
+              154,
+              203
+            ]
           }
         ],
         "protocol": {
@@ -30604,7 +33973,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶110.1",
-            "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
+            "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity.",
+            "context": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity.",
+            "mark": [
+              0,
+              135
+            ]
           }
         ],
         "protocol": {
@@ -30675,7 +34049,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶110.1",
-            "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity."
+            "quote": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity.",
+            "context": "With child care and elder care that make it possible for parents to go to work and for the elderly to stay in their homes with dignity.",
+            "mark": [
+              0,
+              135
+            ]
           }
         ],
         "protocol": {
@@ -30746,7 +34125,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶110.2",
-            "quote": "With an immigration system that powers our economy and reflects our values."
+            "quote": "With an immigration system that powers our economy and reflects our values.",
+            "context": "With an immigration system that powers our economy and reflects our values.",
+            "mark": [
+              0,
+              75
+            ]
           }
         ],
         "protocol": {
@@ -30791,7 +34175,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶226.5",
-            "quote": "within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people."
+            "quote": "within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people.",
+            "context": "And the fact is, and I've made it very clear, within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people.",
+            "mark": [
+              46,
+              176
+            ]
           }
         ],
         "protocol": {
@@ -30855,7 +34244,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶226.6",
-            "quote": "they're going to be legally certified again, to be able to stay in this country"
+            "quote": "they're going to be legally certified again, to be able to stay in this country",
+            "context": "And all those so called Dreamers, those DACA kids, they're going to be legally certified again, to be able to stay in this country, and put on a path to citizenship.",
+            "mark": [
+              51,
+              130
+            ]
           }
         ],
         "protocol": {
@@ -30926,7 +34320,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶226.6",
-            "quote": "and put on a path to citizenship."
+            "quote": "and put on a path to citizenship.",
+            "context": "And all those so called Dreamers, those DACA kids, they're going to be legally certified again, to be able to stay in this country, and put on a path to citizenship.",
+            "mark": [
+              132,
+              165
+            ]
           }
         ],
         "protocol": {
@@ -30990,7 +34389,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶90.1-90.2",
-            "quote": "I will protect America. I will defend us from every attack."
+            "quote": "I will protect America. I will defend us from every attack.",
+            "context": "As president, I will make you this promise: I will protect America. I will defend us from every attack.",
+            "mark": [
+              44,
+              103
+            ]
           },
           {
             "source": {
@@ -31005,7 +34409,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶37.5",
-            "quote": "I will defend America."
+            "quote": "I will defend America.",
+            "context": "I will defend America.",
+            "mark": [
+              0,
+              22
+            ]
           }
         ],
         "protocol": {
@@ -31050,7 +34459,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶128.1",
-            "quote": "I will be a president who will stand with our allies and friends."
+            "quote": "I will be a president who will stand with our allies and friends.",
+            "context": "I will be a president who will stand with our allies and friends.",
+            "mark": [
+              0,
+              65
+            ]
           }
         ],
         "protocol": {
@@ -31100,7 +34514,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶28.4",
-            "quote": "We will repair our alliances"
+            "quote": "We will repair our alliances",
+            "context": "We will repair our alliances and engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges.",
+            "mark": [
+              0,
+              28
+            ]
           }
         ],
         "protocol": {
@@ -31145,7 +34564,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶28.4",
-            "quote": "engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges."
+            "quote": "engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges.",
+            "context": "We will repair our alliances and engage with the world once again, not to meet yesterday's challenges, but today's and tomorrow's challenges.",
+            "mark": [
+              33,
+              141
+            ]
           }
         ],
         "protocol": {
@@ -31190,7 +34614,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶28.5-28.6",
-            "quote": "And we'll lead not merely by the example of our power, but by the power of our example. We will be a strong and trusted partner for peace, progress, and security."
+            "quote": "And we'll lead not merely by the example of our power, but by the power of our example. We will be a strong and trusted partner for peace, progress, and security.",
+            "context": "And we'll lead not merely by the example of our power, but by the power of our example. We will be a strong and trusted partner for peace, progress, and security.",
+            "mark": [
+              0,
+              162
+            ]
           }
         ],
         "protocol": {
@@ -31235,7 +34664,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶128.2",
-            "quote": "I will make it clear to our adversaries the days of cozying up to dictators are over."
+            "quote": "I will make it clear to our adversaries the days of cozying up to dictators are over.",
+            "context": "I will make it clear to our adversaries the days of cozying up to dictators are over.",
+            "mark": [
+              0,
+              85
+            ]
           }
         ],
         "protocol": {
@@ -31280,7 +34714,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶129.1",
-            "quote": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers."
+            "quote": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers.",
+            "context": "Under President Biden, America will not turn a blind eye to Russian bounties on the heads of American soldiers.",
+            "mark": [
+              0,
+              111
+            ]
           }
         ],
         "protocol": {
@@ -31325,7 +34764,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶129.2",
-            "quote": "Nor will I put up with foreign interference in our most sacred democratic exercise -- voting."
+            "quote": "Nor will I put up with foreign interference in our most sacred democratic exercise -- voting.",
+            "context": "Nor will I put up with foreign interference in our most sacred democratic exercise -- voting.",
+            "mark": [
+              0,
+              93
+            ]
           },
           {
             "source": {
@@ -31340,7 +34784,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶70.7",
-            "quote": "They will pay a price if I'm elected."
+            "quote": "They will pay a price if I'm elected.",
+            "context": "They will pay a price if I'm elected.",
+            "mark": [
+              0,
+              37
+            ]
           },
           {
             "source": {
@@ -31355,7 +34804,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶70.28",
-            "quote": "Any country that interferes with us will, in fact, pay a price"
+            "quote": "Any country that interferes with us will, in fact, pay a price",
+            "context": "Any country that interferes with us will, in fact, pay a price because they're affecting our sovereignty.",
+            "mark": [
+              0,
+              62
+            ]
           }
         ],
         "protocol": {
@@ -31440,7 +34894,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶130.1-130.2",
-            "quote": "I will stand always for our values of human rights and dignity. And I will work in common purpose for a more secure, peaceful, and prosperous world."
+            "quote": "I will stand always for our values of human rights and dignity. And I will work in common purpose for a more secure, peaceful, and prosperous world.",
+            "context": "I will stand always for our values of human rights and dignity. And I will work in common purpose for a more secure, peaceful, and prosperous world.",
+            "mark": [
+              0,
+              148
+            ]
           }
         ],
         "protocol": {
@@ -31485,7 +34944,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶100.1",
-            "quote": "What I'd make China do is play by the international rules"
+            "quote": "What I'd make China do is play by the international rules",
+            "context": "What I'd make China do is play by the international rules, not like he has done.",
+            "mark": [
+              0,
+              57
+            ]
           },
           {
             "source": {
@@ -31500,7 +34964,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶100.15-100.17",
-            "quote": "We need to be having the rest of our friends with us, saying to China, these are the rules."
+            "quote": "We need to be having the rest of our friends with us, saying to China, these are the rules.",
+            "context": "We need to be having the rest of our friends with us, saying to China, these are the rules. You play by them or you're going to pay the price for not paying by them, economically. That's the way I will run it.",
+            "mark": [
+              0,
+              91
+            ]
           }
         ],
         "protocol": {
@@ -31545,7 +35014,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶111.1",
-            "quote": "We can, and we will, deal with climate change."
+            "quote": "We can, and we will, deal with climate change.",
+            "context": "We can, and we will, deal with climate change.",
+            "mark": [
+              0,
+              46
+            ]
           }
         ],
         "protocol": {
@@ -31595,7 +35069,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶350.1",
-            "quote": "I'm going to rejoin the Paris Accord"
+            "quote": "I'm going to rejoin the Paris Accord",
+            "context": "No, I'm going to rejoin the Paris Accord and get China to abide by what they agreed to",
+            "mark": [
+              4,
+              40
+            ]
           }
         ],
         "protocol": {
@@ -31666,7 +35145,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶350.1",
-            "quote": "get China to abide by what they agreed to"
+            "quote": "get China to abide by what they agreed to",
+            "context": "No, I'm going to rejoin the Paris Accord and get China to abide by what they agreed to",
+            "mark": [
+              45,
+              86
+            ]
           }
         ],
         "protocol": {
@@ -31711,7 +35195,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶305.8",
-            "quote": "We're going to invest in, for example, 500,000-- 50,000, excuse me, 50,000 charging stations on our highways"
+            "quote": "We're going to invest in, for example, 500,000-- 50,000, excuse me, 50,000 charging stations on our highways",
+            "context": "We're going to invest in, for example, 500,000-- 50,000, excuse me, 50,000 charging stations on our highways so that we can own the electric car market in the future.",
+            "mark": [
+              0,
+              108
+            ]
           }
         ],
         "protocol": {
@@ -31775,7 +35264,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶305.10",
-            "quote": "take 4 million existing billion, buildings"
+            "quote": "take 4 million existing billion, buildings",
+            "context": "We're going to be in a position where we're going to see to it that we're going to take 4 million existing billion, buildings and 2 million existing homes and retrofit them so they don't leak as much energy, saving hundreds of millions of barrels of oil in the process and creating a significant number of jobs.",
+            "mark": [
+              83,
+              125
+            ]
           }
         ],
         "protocol": {
@@ -31839,7 +35333,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶305.10",
-            "quote": "2 million existing homes and retrofit them so they don't leak as much energy"
+            "quote": "2 million existing homes and retrofit them so they don't leak as much energy",
+            "context": "We're going to be in a position where we're going to see to it that we're going to take 4 million existing billion, buildings and 2 million existing homes and retrofit them so they don't leak as much energy, saving hundreds of millions of barrels of oil in the process and creating a significant number of jobs.",
+            "mark": [
+              130,
+              206
+            ]
           }
         ],
         "protocol": {
@@ -31910,7 +35409,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶323.2",
-            "quote": "What I will do with fracking over time is make sure that we can capture the emissions from the fracking."
+            "quote": "What I will do with fracking over time is make sure that we can capture the emissions from the fracking.",
+            "context": "What I will do with fracking over time is make sure that we can capture the emissions from the fracking.",
+            "mark": [
+              0,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -31981,7 +35485,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶333.1",
-            "quote": "I would transition from the oil industry."
+            "quote": "I would transition from the oil industry.",
+            "context": "I would transition from the oil industry.",
+            "mark": [
+              0,
+              41
+            ]
           },
           {
             "source": {
@@ -31996,7 +35505,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶339.1",
-            "quote": "it has to be replaced by renewable energy over time."
+            "quote": "it has to be replaced by renewable energy over time.",
+            "context": "Well, if you let me finish the statement, because it has to be replaced by renewable energy over time.",
+            "mark": [
+              50,
+              102
+            ]
           }
         ],
         "protocol": {
@@ -32041,7 +35555,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶339.3",
-            "quote": "I'd stop giving them federal subsidies."
+            "quote": "I'd stop giving them federal subsidies.",
+            "context": "And I'd stop giving to the oil industry-- I'd stop giving them federal subsidies.",
+            "mark": [
+              42,
+              81
+            ]
           }
         ],
         "protocol": {
@@ -32110,7 +35629,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶355.9-355.12",
-            "quote": "we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs."
+            "quote": "we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs.",
+            "context": "We can grow this economy. We can deal with a systemic racism. At the same time, we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs. And that's the fact, that's what we're going to do.",
+            "mark": [
+              80,
+              200
+            ]
           }
         ],
         "protocol": {
@@ -32157,7 +35681,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2021 inaugural address"
             },
             "ref": "¶25.8",
-            "quote": "We must end this uncivil war that pits red against blue, rural versus urban, conservative versus liberal."
+            "quote": "We must end this uncivil war that pits red against blue, rural versus urban, conservative versus liberal.",
+            "context": "We must end this uncivil war that pits red against blue, rural versus urban, conservative versus liberal.",
+            "mark": [
+              0,
+              105
+            ]
           }
         ],
         "protocol": {
@@ -32202,7 +35731,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶247.18",
-            "quote": "We have to provide for economic opportunity, better education, better health care, better access to schooling, better access to opportunity to borrow money to start businesses."
+            "quote": "We have to provide for economic opportunity, better education, better health care, better access to schooling, better access to opportunity to borrow money to start businesses.",
+            "context": "We have to provide for economic opportunity, better education, better health care, better access to schooling, better access to opportunity to borrow money to start businesses.",
+            "mark": [
+              0,
+              176
+            ]
           }
         ],
         "protocol": {
@@ -32247,7 +35781,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶251.12",
-            "quote": "there should be no, no minimum mandatories in the law."
+            "quote": "there should be no, no minimum mandatories in the law.",
+            "context": "And one of the things we should be doing is there should be no, no minimum mandatories in the law.",
+            "mark": [
+              44,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -32292,7 +35831,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶56.7",
-            "quote": "make sure we get the help that the businesses need."
+            "quote": "make sure we get the help that the businesses need.",
+            "context": "They're all Americans and what we have to do is say, wear these masks, number one, make sure we get the help that the businesses need.",
+            "mark": [
+              83,
+              134
+            ]
           },
           {
             "source": {
@@ -32307,7 +35851,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶196.1-196.2",
-            "quote": "we're gonna have to bail them out, too. We should be bailing them out now, those small businesses."
+            "quote": "we're gonna have to bail them out, too. We should be bailing them out now, those small businesses.",
+            "context": "I do, because I think one of the things we're gonna have to do is we're gonna have to bail them out, too. We should be bailing them out now, those small businesses.",
+            "mark": [
+              66,
+              164
+            ]
           }
         ],
         "protocol": {
@@ -32352,7 +35901,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶112.1",
-            "quote": "we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent"
+            "quote": "we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent",
+            "context": "And we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent and the biggest, most profitable corporations, some of which pay no tax at all.",
+            "mark": [
+              4,
+              131
+            ]
           },
           {
             "source": {
@@ -32367,7 +35921,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶113.4",
-            "quote": "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share."
+            "quote": "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share.",
+            "context": "But it's long past time the wealthiest people and the biggest corporations in this country paid their fair share.",
+            "mark": [
+              4,
+              113
+            ]
           }
         ],
         "protocol": {
@@ -32412,7 +35971,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶112.1",
-            "quote": "the biggest, most profitable corporations, some of which pay no tax at all."
+            "quote": "the biggest, most profitable corporations, some of which pay no tax at all.",
+            "context": "And we can pay for these investments by ending loopholes and the president's $1.3 trillion tax giveaway to the wealthiest 1 percent and the biggest, most profitable corporations, some of which pay no tax at all.",
+            "mark": [
+              136,
+              211
+            ]
           },
           {
             "source": {
@@ -32427,7 +35991,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 acceptance speech"
             },
             "ref": "¶113.4",
-            "quote": "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share."
+            "quote": "it's long past time the wealthiest people and the biggest corporations in this country paid their fair share.",
+            "context": "But it's long past time the wealthiest people and the biggest corporations in this country paid their fair share.",
+            "mark": [
+              4,
+              113
+            ]
           }
         ],
         "protocol": {
@@ -32472,7 +36041,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶346.1-346.3",
-            "quote": "The first place to do that by the year 2025 is in energy production."
+            "quote": "The first place to do that by the year 2025 is in energy production.",
+            "context": "He takes everything out of context, but the point is, look, we have to move toward a net zero emissions. The first place to do that by the year 2025 is in energy production. By 2050, totally.",
+            "mark": [
+              105,
+              173
+            ]
           }
         ],
         "protocol": {
@@ -32517,7 +36091,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2020 debate"
             },
             "ref": "¶346.1-346.3",
-            "quote": "By 2050, totally."
+            "quote": "By 2050, totally.",
+            "context": "He takes everything out of context, but the point is, look, we have to move toward a net zero emissions. The first place to do that by the year 2025 is in energy production. By 2050, totally.",
+            "mark": [
+              174,
+              191
+            ]
           }
         ],
         "protocol": {
@@ -32583,7 +36162,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶3.1",
-            "quote": "Together, we will launch a new era of safety, prosperity and freedom for citizens of every race, religion, color and creed."
+            "quote": "Together, we will launch a new era of safety, prosperity and freedom for citizens of every race, religion, color and creed.",
+            "context": "Together, we will launch a new era of safety, prosperity and freedom for citizens of every race, religion, color and creed.",
+            "mark": [
+              0,
+              123
+            ]
           },
           {
             "source": {
@@ -32598,7 +36182,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶19.2",
-            "quote": "We will move with purpose and speed to bring back hope, prosperity, safety, and peace for citizens of every race, religion, color, and creed."
+            "quote": "We will move with purpose and speed to bring back hope, prosperity, safety, and peace for citizens of every race, religion, color, and creed.",
+            "context": "We will move with purpose and speed to bring back hope, prosperity, safety, and peace for citizens of every race, religion, color, and creed.",
+            "mark": [
+              0,
+              141
+            ]
           }
         ],
         "protocol": {
@@ -32648,7 +36237,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶4.1-4.2",
-            "quote": "We must heal it quickly."
+            "quote": "We must heal it quickly.",
+            "context": "The discord and division in our society must be healed. We must heal it quickly.",
+            "mark": [
+              56,
+              80
+            ]
           },
           {
             "source": {
@@ -32663,7 +36257,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶232.3-232.6",
-            "quote": "We will unite."
+            "quote": "We will unite.",
+            "context": "We must instead take that energy and use it to realize our country's true potential — and write our own thrilling chapter of the American story. We can do it together. We will unite. We are going to come together and success will bring us together.",
+            "mark": [
+              168,
+              182
+            ]
           },
           {
             "source": {
@@ -32678,7 +36277,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶236.1",
-            "quote": "we must now come together, rise above past differences."
+            "quote": "we must now come together, rise above past differences.",
+            "context": "Just like our ancestors, we must now come together, rise above past differences.",
+            "mark": [
+              25,
+              80
+            ]
           },
           {
             "source": {
@@ -32693,7 +36297,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶44.1-44.2",
-            "quote": "That's what I want to be: a peacemaker and a unifier."
+            "quote": "That's what I want to be: a peacemaker and a unifier.",
+            "context": "My proudest legacy will be that of a peacemaker and unifier. That's what I want to be: a peacemaker and a unifier.",
+            "mark": [
+              61,
+              114
+            ]
           }
         ],
         "protocol": {
@@ -32738,7 +36347,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶43.3",
-            "quote": "I will never stop fighting for you, your family and our magnificent country."
+            "quote": "I will never stop fighting for you, your family and our magnificent country.",
+            "context": "We will not back down and I will never stop fighting for you, your family and our magnificent country.",
+            "mark": [
+              26,
+              102
+            ]
           },
           {
             "source": {
@@ -32753,7 +36367,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶44.1-44.3",
-            "quote": "everything I have to give with all of the energy and fight in my heart and soul, I pledge to our nation tonight."
+            "quote": "everything I have to give with all of the energy and fight in my heart and soul, I pledge to our nation tonight.",
+            "context": "And everything I have to give with all of the energy and fight in my heart and soul, I pledge to our nation tonight. Thank you very much. I pledge that to our nation.",
+            "mark": [
+              4,
+              116
+            ]
           },
           {
             "source": {
@@ -32768,7 +36387,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶237.4-237.6",
-            "quote": "I will never, ever let you down."
+            "quote": "I will never, ever let you down.",
+            "context": "Every day, I will strive to honor the trust you have placed in me, and I will never, ever let you down. I promise that. I will never let you down.",
+            "mark": [
+              71,
+              103
+            ]
           },
           {
             "source": {
@@ -32783,7 +36407,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶63.2",
-            "quote": "I am with you, I will fight for you, and I will win for you."
+            "quote": "I am with you, I will fight for you, and I will win for you.",
+            "context": "So, to every parent who dreams for their child and every child who dreams for their future, I am with you, I will fight for you, and I will win for you.",
+            "mark": [
+              92,
+              152
+            ]
           }
         ],
         "protocol": {
@@ -32833,7 +36462,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶44.4",
-            "quote": "We're going to turn our nation around and we're going to do it very quickly."
+            "quote": "We're going to turn our nation around and we're going to do it very quickly.",
+            "context": "We're going to turn our nation around and we're going to do it very quickly.",
+            "mark": [
+              0,
+              76
+            ]
           },
           {
             "source": {
@@ -32848,7 +36482,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶71.1",
-            "quote": "Together, we will lead America to new heights of greatness like the world has never seen before."
+            "quote": "Together, we will lead America to new heights of greatness like the world has never seen before.",
+            "context": "Together, we will lead America to new heights of greatness like the world has never seen before.",
+            "mark": [
+              0,
+              96
+            ]
           },
           {
             "source": {
@@ -32863,7 +36502,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶105.2-105.3",
-            "quote": "we will soon be a great nation again."
+            "quote": "we will soon be a great nation again.",
+            "context": "Less than four years ago, we were a great nation, and we will soon be a great nation again. We're going to be a great nation again.",
+            "mark": [
+              54,
+              91
+            ]
           },
           {
             "source": {
@@ -32878,7 +36522,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶219.1-219.2",
-            "quote": "we're going to bring this into a golden age like never seen before."
+            "quote": "we're going to bring this into a golden age like never seen before.",
+            "context": "America's on the cusp of a new golden age, but we will have the courage to seize it. We're going to take it, we're going to make it a current — I mean, we're going to bring this into a golden age like never seen before.",
+            "mark": [
+              152,
+              219
+            ]
           },
           {
             "source": {
@@ -32893,7 +36542,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶237.3",
-            "quote": "We're going to make our country great again."
+            "quote": "We're going to make our country great again.",
+            "context": "We're going to make our country great again.",
+            "mark": [
+              0,
+              44
+            ]
           },
           {
             "source": {
@@ -32908,7 +36562,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶242.1",
-            "quote": "Together, we will save this country, we will restore the republic"
+            "quote": "Together, we will save this country, we will restore the republic",
+            "context": "Together, we will save this country, we will restore the republic, and we will usher in the rich and wonderful tomorrows that our people so truly deserve.",
+            "mark": [
+              0,
+              65
+            ]
           },
           {
             "source": {
@@ -32923,7 +36582,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶244.1",
-            "quote": "we will very quickly make America great again."
+            "quote": "we will very quickly make America great again.",
+            "context": "And quite simply put, we will very quickly make America great again.",
+            "mark": [
+              22,
+              68
+            ]
           },
           {
             "source": {
@@ -32938,7 +36602,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶5.1-5.2",
-            "quote": "America will soon be greater, stronger, and far more exceptional than ever before."
+            "quote": "America will soon be greater, stronger, and far more exceptional than ever before.",
+            "context": "And our top priority will be to create a nation that is proud, prosperous, and free. America will soon be greater, stronger, and far more exceptional than ever before.",
+            "mark": [
+              85,
+              167
+            ]
           },
           {
             "source": {
@@ -32953,7 +36622,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶51.1",
-            "quote": "we will lead it to new heights of victory and success."
+            "quote": "we will lead it to new heights of victory and success.",
+            "context": "So, as we liberate our Nation, we will lead it to new heights of victory and success.",
+            "mark": [
+              31,
+              85
+            ]
           },
           {
             "source": {
@@ -32968,7 +36642,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶62.2",
-            "quote": "we will restore America promise and we will rebuild the nation that we love"
+            "quote": "we will restore America promise and we will rebuild the nation that we love",
+            "context": "With your help, we will restore America promise and we will rebuild the nation that we love, and we love it so much.",
+            "mark": [
+              16,
+              91
+            ]
           },
           {
             "source": {
@@ -32983,7 +36662,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶64.2",
-            "quote": "But we are going to bring it back and make it great again, greater than ever before."
+            "quote": "But we are going to bring it back and make it great again, greater than ever before.",
+            "context": "But we are going to bring it back and make it great again, greater than ever before.",
+            "mark": [
+              0,
+              84
+            ]
           },
           {
             "source": {
@@ -32998,7 +36682,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶65.2",
-            "quote": "We will be prosperous, we will be proud, we will be strong, and we will win like never before."
+            "quote": "We will be prosperous, we will be proud, we will be strong, and we will win like never before.",
+            "context": "We will be prosperous, we will be proud, we will be strong, and we will win like never before.",
+            "mark": [
+              0,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -33048,7 +36737,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶69.5-69.6",
-            "quote": "And I promise we will make Wisconsin great again."
+            "quote": "And I promise we will make Wisconsin great again.",
+            "context": "And I promise we will make Wisconsin great again. We're going to make this ...",
+            "mark": [
+              0,
+              49
+            ]
           }
         ],
         "protocol": {
@@ -33093,7 +36787,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶75.1-75.3",
-            "quote": "Under our leadership, the United States will be respected again."
+            "quote": "Under our leadership, the United States will be respected again.",
+            "context": "Under our leadership, the United States will be respected again. No nation will question our power. No enemy will doubt our might.",
+            "mark": [
+              0,
+              64
+            ]
           },
           {
             "source": {
@@ -33108,7 +36807,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶3.1",
-            "quote": "From this day forward, our country will flourish and be respected again all over the world."
+            "quote": "From this day forward, our country will flourish and be respected again all over the world.",
+            "context": "From this day forward, our country will flourish and be respected again all over the world.",
+            "mark": [
+              0,
+              91
+            ]
           },
           {
             "source": {
@@ -33123,7 +36827,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶45.1",
-            "quote": "America will reclaim its rightful place as the greatest, most powerful, most respected nation on Earth"
+            "quote": "America will reclaim its rightful place as the greatest, most powerful, most respected nation on Earth",
+            "context": "America will reclaim its rightful place as the greatest, most powerful, most respected nation on Earth, inspiring the awe and admiration of the entire world.",
+            "mark": [
+              0,
+              102
+            ]
           },
           {
             "source": {
@@ -33138,7 +36847,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶65.1",
-            "quote": "America will be respected again and admired again"
+            "quote": "America will be respected again and admired again",
+            "context": "America will be respected again and admired again, including by people of religion, faith, and good will.",
+            "mark": [
+              0,
+              49
+            ]
           }
         ],
         "protocol": {
@@ -33183,7 +36897,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶75.4",
-            "quote": "Our borders will be totally secure."
+            "quote": "Our borders will be totally secure.",
+            "context": "Our borders will be totally secure.",
+            "mark": [
+              0,
+              35
+            ]
           },
           {
             "source": {
@@ -33198,7 +36917,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶87.1",
-            "quote": "I will end the illegal immigration crisis by closing our border"
+            "quote": "I will end the illegal immigration crisis by closing our border",
+            "context": "I will end the illegal immigration crisis by closing our border and finishing the wall, most of which I've already built.",
+            "mark": [
+              0,
+              63
+            ]
           },
           {
             "source": {
@@ -33213,7 +36937,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶88.6-88.7",
-            "quote": "We're not going to let that happen."
+            "quote": "We're not going to let that happen.",
+            "context": "We have to stop the invasion into our country that's killing hundreds of thousands of people a year. We're not going to let that happen.",
+            "mark": [
+              101,
+              136
+            ]
           },
           {
             "source": {
@@ -33228,7 +36957,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶150.5",
-            "quote": "The invasion at our southern border, we will stop it and we will stop it quickly."
+            "quote": "The invasion at our southern border, we will stop it and we will stop it quickly.",
+            "context": "The invasion at our southern border, we will stop it and we will stop it quickly.",
+            "mark": [
+              0,
+              81
+            ]
           },
           {
             "source": {
@@ -33243,7 +36977,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶157.1-157.2",
-            "quote": "And we're going to do that on Day 1."
+            "quote": "And we're going to do that on Day 1.",
+            "context": "At the heart of the Republican platform is our pledge to end this border nightmare, and fully restore the sacred and sovereign borders of the United States of America. And we're going to do that on Day 1.",
+            "mark": [
+              168,
+              204
+            ]
           },
           {
             "source": {
@@ -33258,7 +36997,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶158.1-158.2",
-            "quote": "close our borders."
+            "quote": "close our borders.",
+            "context": "That means two things on Day 1, right? Drill, baby, drill and close our borders.",
+            "mark": [
+              62,
+              80
+            ]
           },
           {
             "source": {
@@ -33273,7 +37017,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶165.8-165.9",
-            "quote": "We're not going to stand for it."
+            "quote": "We're not going to stand for it.",
+            "context": "And we're not going to do it. We're not going to stand for it.",
+            "mark": [
+              30,
+              62
+            ]
           },
           {
             "source": {
@@ -33288,7 +37037,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶128.15",
-            "quote": "We have to have borders."
+            "quote": "We have to have borders.",
+            "context": "We have to have borders.",
+            "mark": [
+              0,
+              24
+            ]
           },
           {
             "source": {
@@ -33303,7 +37057,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶26.2",
-            "quote": "All illegal entry will immediately be halted"
+            "quote": "All illegal entry will immediately be halted",
+            "context": "All illegal entry will immediately be halted, and we will begin the process of returning millions and millions of criminal aliens back to the places from which they came.",
+            "mark": [
+              0,
+              44
+            ]
           }
         ],
         "protocol": {
@@ -33379,7 +37138,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶75.5",
-            "quote": "Our economy will soar."
+            "quote": "Our economy will soar.",
+            "context": "Our economy will soar.",
+            "mark": [
+              0,
+              22
+            ]
           },
           {
             "source": {
@@ -33394,7 +37158,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶86.12",
-            "quote": "We'll do it again, but we'll do it even better."
+            "quote": "We'll do it again, but we'll do it even better.",
+            "context": "We'll do it again, but we'll do it even better.",
+            "mark": [
+              0,
+              47
+            ]
           },
           {
             "source": {
@@ -33409,7 +37178,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶121.18",
-            "quote": "We want growth in our country."
+            "quote": "We want growth in our country.",
+            "context": "We want growth in our country.",
+            "mark": [
+              0,
+              30
+            ]
           },
           {
             "source": {
@@ -33424,7 +37198,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶17.37",
-            "quote": "I'll do it again and even better."
+            "quote": "I'll do it again and even better.",
+            "context": "I'll do it again and even better.",
+            "mark": [
+              0,
+              33
+            ]
           },
           {
             "source": {
@@ -33439,7 +37218,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶21.10-21.12",
-            "quote": "And create a great economy like I did before."
+            "quote": "And create a great economy like I did before.",
+            "context": "Everybody knows what I'm going to do. Cut taxes very substantially. And create a great economy like I did before.",
+            "mark": [
+              68,
+              113
+            ]
           },
           {
             "source": {
@@ -33454,7 +37238,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶202.9-202.10",
-            "quote": "I built one of the greatest economies in the history of the world and I'm gonna build it again."
+            "quote": "I built one of the greatest economies in the history of the world and I'm gonna build it again.",
+            "context": "I built one of the greatest economies in the history of the world and I'm gonna build it again. It's going to be bigger, better and stronger.",
+            "mark": [
+              0,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -33504,7 +37293,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶75.6",
-            "quote": "We will return law and order to our streets"
+            "quote": "We will return law and order to our streets",
+            "context": "We will return law and order to our streets, patriotism to our schools, and importantly, we will restore peace, stability and harmony all throughout the world.",
+            "mark": [
+              0,
+              43
+            ]
           },
           {
             "source": {
@@ -33519,7 +37313,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶39.5",
-            "quote": "And we are going to bring law and order back to our cities."
+            "quote": "And we are going to bring law and order back to our cities.",
+            "context": "And we are going to bring law and order back to our cities.",
+            "mark": [
+              0,
+              59
+            ]
           }
         ],
         "protocol": {
@@ -33588,7 +37387,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶75.6",
-            "quote": "patriotism to our schools"
+            "quote": "patriotism to our schools",
+            "context": "We will return law and order to our streets, patriotism to our schools, and importantly, we will restore peace, stability and harmony all throughout the world.",
+            "mark": [
+              45,
+              70
+            ]
           }
         ],
         "protocol": {
@@ -33633,7 +37437,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶75.6",
-            "quote": "we will restore peace, stability and harmony all throughout the world."
+            "quote": "we will restore peace, stability and harmony all throughout the world.",
+            "context": "We will return law and order to our streets, patriotism to our schools, and importantly, we will restore peace, stability and harmony all throughout the world.",
+            "mark": [
+              89,
+              159
+            ]
           },
           {
             "source": {
@@ -33648,7 +37457,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶181.1",
-            "quote": "we will help bring stability to the world."
+            "quote": "we will help bring stability to the world.",
+            "context": "As we bring security to our streets, we will help bring stability to the world.",
+            "mark": [
+              37,
+              79
+            ]
           },
           {
             "source": {
@@ -33663,7 +37477,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶209.1",
-            "quote": "With our victory in November, the years of war, weakness and chaos will be over."
+            "quote": "With our victory in November, the years of war, weakness and chaos will be over.",
+            "context": "With our victory in November, the years of war, weakness and chaos will be over.",
+            "mark": [
+              0,
+              80
+            ]
           },
           {
             "source": {
@@ -33678,7 +37497,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶64.4",
-            "quote": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable."
+            "quote": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable.",
+            "context": "Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent, and totally unpredictable.",
+            "mark": [
+              0,
+              128
+            ]
           }
         ],
         "protocol": {
@@ -33723,7 +37547,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶83.1",
-            "quote": "I will end the devastating inflation crisis immediately"
+            "quote": "I will end the devastating inflation crisis immediately",
+            "context": "I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy.",
+            "mark": [
+              0,
+              55
+            ]
           },
           {
             "source": {
@@ -33738,7 +37567,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶149.1",
-            "quote": "inflation will vanish completely"
+            "quote": "inflation will vanish completely",
+            "context": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly.",
+            "mark": [
+              39,
+              71
+            ]
           },
           {
             "source": {
@@ -33753,7 +37587,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶30.1",
-            "quote": "I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation"
+            "quote": "I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation",
+            "context": "Next, I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation and rapidly bring down costs and prices.",
+            "mark": [
+              6,
+              126
+            ]
           }
         ],
         "protocol": {
@@ -33817,7 +37656,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶83.1",
-            "quote": "bring down interest rates"
+            "quote": "bring down interest rates",
+            "context": "I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy.",
+            "mark": [
+              57,
+              82
+            ]
           }
         ],
         "protocol": {
@@ -33881,7 +37725,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶83.1",
-            "quote": "lower the cost of energy."
+            "quote": "lower the cost of energy.",
+            "context": "I will end the devastating inflation crisis immediately, bring down interest rates and lower the cost of energy.",
+            "mark": [
+              87,
+              112
+            ]
           },
           {
             "source": {
@@ -33896,7 +37745,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶120.2",
-            "quote": "By slashing energy costs"
+            "quote": "By slashing energy costs",
+            "context": "By slashing energy costs, we will in turn reduce the cost of transportation, manufacturing and all household goods.",
+            "mark": [
+              0,
+              24
+            ]
           },
           {
             "source": {
@@ -33911,7 +37765,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶32.1",
-            "quote": "We will bring prices down"
+            "quote": "We will bring prices down",
+            "context": "We will bring prices down, fill our strategic reserves up again right to the top, and export American energy all over the world.",
+            "mark": [
+              0,
+              25
+            ]
           }
         ],
         "protocol": {
@@ -33975,7 +37834,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶83.2",
-            "quote": "We will drill, baby, drill."
+            "quote": "We will drill, baby, drill.",
+            "context": "We will drill, baby, drill.",
+            "mark": [
+              0,
+              27
+            ]
           },
           {
             "source": {
@@ -33990,7 +37854,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶85.3",
-            "quote": "But we will do it at levels that nobody's ever seen before"
+            "quote": "But we will do it at levels that nobody's ever seen before",
+            "context": "But we will do it at levels that nobody's ever seen before, and we'll end lots of different things.",
+            "mark": [
+              0,
+              58
+            ]
           },
           {
             "source": {
@@ -34005,7 +37874,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶158.1-158.2",
-            "quote": "Drill, baby, drill"
+            "quote": "Drill, baby, drill",
+            "context": "That means two things on Day 1, right? Drill, baby, drill and close our borders.",
+            "mark": [
+              39,
+              57
+            ]
           },
           {
             "source": {
@@ -34020,7 +37894,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶30.3",
-            "quote": "We will drill, baby, drill."
+            "quote": "We will drill, baby, drill.",
+            "context": "We will drill, baby, drill.",
+            "mark": [
+              0,
+              27
+            ]
           },
           {
             "source": {
@@ -34035,7 +37914,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶31.1-31.2",
-            "quote": "the largest amount of oil and gas of any country on earth, and we are going to use it."
+            "quote": "the largest amount of oil and gas of any country on earth, and we are going to use it.",
+            "context": "America will be a manufacturing nation once again, and we have something that no other manufacturing nation will ever have, the largest amount of oil and gas of any country on earth, and we are going to use it. We'll use it.",
+            "mark": [
+              124,
+              210
+            ]
           }
         ],
         "protocol": {
@@ -34099,7 +37983,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶84.1-84.2",
-            "quote": "we will lead a large-scale decline in prices."
+            "quote": "we will lead a large-scale decline in prices.",
+            "context": "But by doing that, we will lead a large-scale decline in prices. Prices will start to come down.",
+            "mark": [
+              19,
+              64
+            ]
           },
           {
             "source": {
@@ -34114,7 +38003,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶118.1-118.3",
-            "quote": "Starting on Day 1, we will drive down prices and make America affordable again."
+            "quote": "Starting on Day 1, we will drive down prices and make America affordable again.",
+            "context": "First, we must get economic relief to our citizens. Starting on Day 1, we will drive down prices and make America affordable again. We have to make it affordable.",
+            "mark": [
+              52,
+              131
+            ]
           },
           {
             "source": {
@@ -34129,7 +38023,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶30.1",
-            "quote": "rapidly bring down costs and prices."
+            "quote": "rapidly bring down costs and prices.",
+            "context": "Next, I will direct all members of my Cabinet to marshal the vast powers at their disposal to defeat what was record inflation and rapidly bring down costs and prices.",
+            "mark": [
+              131,
+              167
+            ]
           }
         ],
         "protocol": {
@@ -34193,7 +38092,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶85.4",
-            "quote": "We'll start paying off debt"
+            "quote": "We'll start paying off debt",
+            "context": "We'll start paying off debt and start lowering taxes even further.",
+            "mark": [
+              0,
+              27
+            ]
           },
           {
             "source": {
@@ -34208,7 +38112,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶121.1-121.2",
-            "quote": "we will reduce our debt, $36 trillion."
+            "quote": "we will reduce our debt, $36 trillion.",
+            "context": "With numbers that nobody has ever seen and we will reduce our debt, $36 trillion. We will start reducing that.",
+            "mark": [
+              43,
+              81
+            ]
           }
         ],
         "protocol": {
@@ -34272,7 +38181,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶85.4",
-            "quote": "start lowering taxes even further."
+            "quote": "start lowering taxes even further.",
+            "context": "We'll start paying off debt and start lowering taxes even further.",
+            "mark": [
+              32,
+              66
+            ]
           },
           {
             "source": {
@@ -34287,7 +38201,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶85.6",
-            "quote": "We'll do it more."
+            "quote": "We'll do it more.",
+            "context": "We'll do it more.",
+            "mark": [
+              0,
+              17
+            ]
           },
           {
             "source": {
@@ -34302,7 +38221,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶121.3",
-            "quote": "And we will also reduce your taxes still further."
+            "quote": "And we will also reduce your taxes still further.",
+            "context": "And we will also reduce your taxes still further.",
+            "mark": [
+              0,
+              49
+            ]
           },
           {
             "source": {
@@ -34317,7 +38241,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶121.15",
-            "quote": "we're going to reduce your taxes still further."
+            "quote": "we're going to reduce your taxes still further.",
+            "context": "You're paying too much, we're going to reduce your taxes still further.",
+            "mark": [
+              24,
+              71
+            ]
           },
           {
             "source": {
@@ -34332,7 +38261,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶121.17",
-            "quote": "We're going to give you more"
+            "quote": "We're going to give you more",
+            "context": "We're going to give you more and it's going to lead to tremendous growth.",
+            "mark": [
+              0,
+              28
+            ]
           },
           {
             "source": {
@@ -34347,7 +38281,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶21.10-21.12",
-            "quote": "Cut taxes very substantially."
+            "quote": "Cut taxes very substantially.",
+            "context": "Everybody knows what I'm going to do. Cut taxes very substantially. And create a great economy like I did before.",
+            "mark": [
+              38,
+              67
+            ]
           }
         ],
         "protocol": {
@@ -34416,7 +38355,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶87.1",
-            "quote": "finishing the wall"
+            "quote": "finishing the wall",
+            "context": "I will end the illegal immigration crisis by closing our border and finishing the wall, most of which I've already built.",
+            "mark": [
+              68,
+              86
+            ]
           },
           {
             "source": {
@@ -34431,7 +38375,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶128.14",
-            "quote": "We need--and we have to have it."
+            "quote": "We need--and we have to have it.",
+            "context": "We need--and we have to have it.",
+            "mark": [
+              0,
+              32
+            ]
           }
         ],
         "protocol": {
@@ -34507,7 +38456,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶89.1-89.2",
-            "quote": "I will end every single international crisis that the current administration has created"
+            "quote": "I will end every single international crisis that the current administration has created",
+            "context": "I will end every single international crisis that the current administration has created, including the horrible war with Russia and Ukraine, which would have never happened if I was president. And the war caused by the attack on Israel, which would never have happened if I was president.",
+            "mark": [
+              0,
+              88
+            ]
           }
         ],
         "protocol": {
@@ -34552,7 +38506,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶89.1-89.2",
-            "quote": "including the horrible war with Russia and Ukraine"
+            "quote": "including the horrible war with Russia and Ukraine",
+            "context": "I will end every single international crisis that the current administration has created, including the horrible war with Russia and Ukraine, which would have never happened if I was president. And the war caused by the attack on Israel, which would never have happened if I was president.",
+            "mark": [
+              90,
+              140
+            ]
           },
           {
             "source": {
@@ -34567,7 +38526,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶146.34-146.35",
-            "quote": "And I'll get the war with Ukraine and Russia ended."
+            "quote": "And I'll get the war with Ukraine and Russia ended.",
+            "context": "And I'll get the war with Ukraine and Russia ended. If I'm President-Elect, I'll get it done before even becoming President.",
+            "mark": [
+              0,
+              51
+            ]
           },
           {
             "source": {
@@ -34582,7 +38546,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶158.1",
-            "quote": "I want the war to stop."
+            "quote": "I want the war to stop.",
+            "context": "I want the war to stop.",
+            "mark": [
+              0,
+              23
+            ]
           },
           {
             "source": {
@@ -34597,7 +38566,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶158.27",
-            "quote": "I will get it settled before I even become President."
+            "quote": "I will get it settled before I even become President.",
+            "context": "I will get it settled before I even become President.",
+            "mark": [
+              0,
+              53
+            ]
           },
           {
             "source": {
@@ -34612,7 +38586,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶166.2",
-            "quote": "Because we have to stop all of these human lives from being destroyed."
+            "quote": "Because we have to stop all of these human lives from being destroyed.",
+            "context": "Because we have to stop all of these human lives from being destroyed.",
+            "mark": [
+              0,
+              70
+            ]
           }
         ],
         "protocol": {
@@ -34676,7 +38655,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶89.1-89.2",
-            "quote": "And the war caused by the attack on Israel"
+            "quote": "And the war caused by the attack on Israel",
+            "context": "I will end every single international crisis that the current administration has created, including the horrible war with Russia and Ukraine, which would have never happened if I was president. And the war caused by the attack on Israel, which would never have happened if I was president.",
+            "mark": [
+              194,
+              236
+            ]
           },
           {
             "source": {
@@ -34691,7 +38675,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶146.33",
-            "quote": "I will get that settled and fast."
+            "quote": "I will get that settled and fast.",
+            "context": "I will get that settled and fast.",
+            "mark": [
+              0,
+              33
+            ]
           }
         ],
         "protocol": {
@@ -34755,7 +38744,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶91.1-91.5",
-            "quote": "We're never going to let that happen again."
+            "quote": "We're never going to let that happen again.",
+            "context": "And then we had that horrible, horrible result that we'll never let happen again. The election result. We're never going to let that happen again. They used Covid to cheat. We're never going to let it happen again.",
+            "mark": [
+              103,
+              146
+            ]
           },
           {
             "source": {
@@ -34770,7 +38764,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶128.16",
-            "quote": "And we have to have good elections."
+            "quote": "And we have to have good elections.",
+            "context": "And we have to have good elections.",
+            "mark": [
+              0,
+              35
+            ]
           }
         ],
         "protocol": {
@@ -34815,7 +38814,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶93.1",
-            "quote": "Together, we will restore vision, strength, competence and we're going to have a thing called common sense making most of our decisions actually."
+            "quote": "Together, we will restore vision, strength, competence and we're going to have a thing called common sense making most of our decisions actually.",
+            "context": "Together, we will restore vision, strength, competence and we're going to have a thing called common sense making most of our decisions actually.",
+            "mark": [
+              0,
+              145
+            ]
           },
           {
             "source": {
@@ -34830,7 +38834,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶16.2",
-            "quote": "And we will immediately restore the integrity, competency, and loyalty of America's Government."
+            "quote": "And we will immediately restore the integrity, competency, and loyalty of America's Government.",
+            "context": "And we will immediately restore the integrity, competency, and loyalty of America's Government.",
+            "mark": [
+              0,
+              95
+            ]
           }
         ],
         "protocol": {
@@ -34875,7 +38884,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶107.1-107.2",
-            "quote": "I will bring back the American dream."
+            "quote": "I will bring back the American dream.",
+            "context": "So tonight, whether you've supported me in the past or not, I hope you will support me in the future, because I will bring back the American dream. That's what we're going to do.",
+            "mark": [
+              110,
+              147
+            ]
           },
           {
             "source": {
@@ -34890,7 +38904,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶36.3",
-            "quote": "The American dream will soon be back and thriving like never before."
+            "quote": "The American dream will soon be back and thriving like never before.",
+            "context": "The American dream will soon be back and thriving like never before.",
+            "mark": [
+              0,
+              68
+            ]
           }
         ],
         "protocol": {
@@ -34940,7 +38959,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶116.1",
-            "quote": "It's a series of bold promises that we will swiftly implement when you give us a Republican House."
+            "quote": "It's a series of bold promises that we will swiftly implement when you give us a Republican House.",
+            "context": "It's a series of bold promises that we will swiftly implement when you give us a Republican House.",
+            "mark": [
+              0,
+              98
+            ]
           }
         ],
         "protocol": {
@@ -34985,7 +39009,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶120.8-120.9",
-            "quote": "We will be energy dominant and supply not only ourselves, but we will supply the rest of the world."
+            "quote": "We will be energy dominant and supply not only ourselves, but we will supply the rest of the world.",
+            "context": "But soon we will actually be better than that. We will be energy dominant and supply not only ourselves, but we will supply the rest of the world.",
+            "mark": [
+              47,
+              146
+            ]
           },
           {
             "source": {
@@ -35000,7 +39029,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶32.1",
-            "quote": "export American energy all over the world."
+            "quote": "export American energy all over the world.",
+            "context": "We will bring prices down, fill our strategic reserves up again right to the top, and export American energy all over the world.",
+            "mark": [
+              86,
+              128
+            ]
           }
         ],
         "protocol": {
@@ -35064,7 +39098,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶122.1",
-            "quote": "we will end the ridiculous and actually incredible waste of taxpayer dollars that is fueling the inflation crisis."
+            "quote": "we will end the ridiculous and actually incredible waste of taxpayer dollars that is fueling the inflation crisis.",
+            "context": "And next, we will end the ridiculous and actually incredible waste of taxpayer dollars that is fueling the inflation crisis.",
+            "mark": [
+              10,
+              124
+            ]
           }
         ],
         "protocol": {
@@ -35109,7 +39148,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶123.1",
-            "quote": "we will redirect that money for important projects like roads, bridges, dams and we will not allow it to be spent on the meaningless Green New scam ideas."
+            "quote": "we will redirect that money for important projects like roads, bridges, dams and we will not allow it to be spent on the meaningless Green New scam ideas.",
+            "context": "And all of the trillions of dollars that are sitting there not yet spent, we will redirect that money for important projects like roads, bridges, dams and we will not allow it to be spent on the meaningless Green New scam ideas.",
+            "mark": [
+              74,
+              228
+            ]
           }
         ],
         "protocol": {
@@ -35173,7 +39217,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶124.1",
-            "quote": "And I will end the electric vehicle mandate on day one."
+            "quote": "And I will end the electric vehicle mandate on day one.",
+            "context": "And I will end the electric vehicle mandate on day one.",
+            "mark": [
+              0,
+              55
+            ]
           },
           {
             "source": {
@@ -35188,7 +39237,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶221.9-221.10",
-            "quote": "And we're going to make that change on Day 1."
+            "quote": "And we're going to make that change on Day 1.",
+            "context": "But if somebody wants to buy a gas-powered car, gasoline-powered car, or a hybrid, they're going to be able to do it. And we're going to make that change on Day 1.",
+            "mark": [
+              118,
+              163
+            ]
           },
           {
             "source": {
@@ -35203,7 +39257,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶33.1",
-            "quote": "we will revoke the electric vehicle mandate"
+            "quote": "we will revoke the electric vehicle mandate",
+            "context": "With my actions today, we will end the \"green new deal,\" and we will revoke the electric vehicle mandate, saving our auto industry and keeping my sacred pledge to our great American autoworkers.",
+            "mark": [
+              61,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -35274,7 +39333,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶125.3",
-            "quote": "we're going to bring back car manufacturing and we're going to bring it back fast."
+            "quote": "we're going to bring back car manufacturing and we're going to bring it back fast.",
+            "context": "The United Autoworkers ought to be ashamed for allowing this to happen and the leader of the United Auto Workers should be fired immediately and every single autoworker, union and nonunion, should be voting for Donald Trump because we're going to bring back car manufacturing and we're going to bring it back fast.",
+            "mark": [
+              232,
+              314
+            ]
           },
           {
             "source": {
@@ -35289,7 +39353,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶126.4-126.5",
-            "quote": "And we are going to bring it back."
+            "quote": "And we are going to bring it back.",
+            "context": "And we are going to bring it back. We're going to make them.",
+            "mark": [
+              0,
+              34
+            ]
           },
           {
             "source": {
@@ -35304,7 +39373,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶131.5",
-            "quote": "We will take over the auto industry again and many many, hundreds of thousands of jobs"
+            "quote": "We will take over the auto industry again and many many, hundreds of thousands of jobs",
+            "context": "We will take over the auto industry again and many many, hundreds of thousands of jobs, we lost so many jobs over the years.",
+            "mark": [
+              0,
+              86
+            ]
           },
           {
             "source": {
@@ -35319,7 +39393,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶31.1-31.2",
-            "quote": "America will be a manufacturing nation once again"
+            "quote": "America will be a manufacturing nation once again",
+            "context": "America will be a manufacturing nation once again, and we have something that no other manufacturing nation will ever have, the largest amount of oil and gas of any country on earth, and we are going to use it. We'll use it.",
+            "mark": [
+              0,
+              49
+            ]
           },
           {
             "source": {
@@ -35334,7 +39413,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶34.1",
-            "quote": "We will build automobiles in America again at a rate that nobody could have dreamt possible just a few years ago."
+            "quote": "We will build automobiles in America again at a rate that nobody could have dreamt possible just a few years ago.",
+            "context": "We will build automobiles in America again at a rate that nobody could have dreamt possible just a few years ago.",
+            "mark": [
+              0,
+              113
+            ]
           }
         ],
         "protocol": {
@@ -35405,7 +39489,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶127.2",
-            "quote": "And if they don't agree with us, we'll put a tariff of approximately 100 to 200 percent on each car and they will be unsellable in the United States."
+            "quote": "And if they don't agree with us, we'll put a tariff of approximately 100 to 200 percent on each car and they will be unsellable in the United States.",
+            "context": "And if they don't agree with us, we'll put a tariff of approximately 100 to 200 percent on each car and they will be unsellable in the United States.",
+            "mark": [
+              0,
+              149
+            ]
           },
           {
             "source": {
@@ -35420,7 +39509,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶229.8-229.9",
-            "quote": "We'll put tariffs on those cars so they can't come into our country."
+            "quote": "We'll put tariffs on those cars so they can't come into our country.",
+            "context": "But we're not going to let that. We'll put tariffs on those cars so they can't come into our country.",
+            "mark": [
+              33,
+              101
+            ]
           }
         ],
         "protocol": {
@@ -35484,7 +39578,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶130.1",
-            "quote": "We will not let countries come in, take our jobs, and plunder our nation."
+            "quote": "We will not let countries come in, take our jobs, and plunder our nation.",
+            "context": "We will not let countries come in, take our jobs, and plunder our nation.",
+            "mark": [
+              0,
+              73
+            ]
           },
           {
             "source": {
@@ -35499,7 +39598,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶3.2",
-            "quote": "we will not allow ourselves to be taken advantage of any longer."
+            "quote": "we will not allow ourselves to be taken advantage of any longer.",
+            "context": "We will be the envy of every nation, and we will not allow ourselves to be taken advantage of any longer.",
+            "mark": [
+              41,
+              105
+            ]
           }
         ],
         "protocol": {
@@ -35549,7 +39653,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶131.8-131.9",
-            "quote": "We're going to get them all back, every single one of them."
+            "quote": "We're going to get them all back, every single one of them.",
+            "context": "We're going to get them all back. We're going to get them all back, every single one of them.",
+            "mark": [
+              34,
+              93
+            ]
           }
         ],
         "protocol": {
@@ -35618,7 +39727,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶148.1",
-            "quote": "I am going to protect Social Security"
+            "quote": "I am going to protect Social Security",
+            "context": "I am going to protect Social Security and Medicare.",
+            "mark": [
+              0,
+              37
+            ]
           }
         ],
         "protocol": {
@@ -35682,7 +39796,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶148.1",
-            "quote": "I am going to protect Social Security and Medicare."
+            "quote": "I am going to protect Social Security and Medicare.",
+            "context": "I am going to protect Social Security and Medicare.",
+            "mark": [
+              0,
+              51
+            ]
           }
         ],
         "protocol": {
@@ -35746,7 +39865,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶149.1",
-            "quote": "Under my plan, incomes will skyrocket"
+            "quote": "Under my plan, incomes will skyrocket",
+            "context": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly.",
+            "mark": [
+              0,
+              37
+            ]
           }
         ],
         "protocol": {
@@ -35810,7 +39934,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶149.1",
-            "quote": "jobs will come roaring back"
+            "quote": "jobs will come roaring back",
+            "context": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly.",
+            "mark": [
+              73,
+              100
+            ]
           }
         ],
         "protocol": {
@@ -35860,7 +39989,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶149.1",
-            "quote": "the middle class will prosper like never, ever before"
+            "quote": "the middle class will prosper like never, ever before",
+            "context": "Under my plan, incomes will skyrocket, inflation will vanish completely, jobs will come roaring back, and the middle class will prosper like never, ever before and we're going to do it very rapidly.",
+            "mark": [
+              106,
+              159
+            ]
           }
         ],
         "protocol": {
@@ -35905,7 +40039,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶163.4",
-            "quote": "We want them to stay on their soil."
+            "quote": "We want them to stay on their soil.",
+            "context": "We want them to stay on their soil.",
+            "mark": [
+              0,
+              35
+            ]
           },
           {
             "source": {
@@ -35920,7 +40059,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶26.3",
-            "quote": "We will reinstate my \"Remain in Mexico\" policy."
+            "quote": "We will reinstate my \"Remain in Mexico\" policy.",
+            "context": "We will reinstate my \"Remain in Mexico\" policy.",
+            "mark": [
+              0,
+              47
+            ]
           }
         ],
         "protocol": {
@@ -35991,7 +40135,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶176.2",
-            "quote": "the Republican platform promises to launch the largest deportation operation in the history of our country."
+            "quote": "the Republican platform promises to launch the largest deportation operation in the history of our country.",
+            "context": "That's why, to keep our family safe, the Republican platform promises to launch the largest deportation operation in the history of our country.",
+            "mark": [
+              37,
+              144
+            ]
           },
           {
             "source": {
@@ -36006,7 +40155,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶17.34-17.35",
-            "quote": "We have to get 'em out fast."
+            "quote": "We have to get 'em out fast.",
+            "context": "And we have to get 'em out. We have to get 'em out fast.",
+            "mark": [
+              28,
+              56
+            ]
           },
           {
             "source": {
@@ -36021,7 +40175,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶26.2",
-            "quote": "we will begin the process of returning millions and millions of criminal aliens back to the places from which they came."
+            "quote": "we will begin the process of returning millions and millions of criminal aliens back to the places from which they came.",
+            "context": "All illegal entry will immediately be halted, and we will begin the process of returning millions and millions of criminal aliens back to the places from which they came.",
+            "mark": [
+              50,
+              170
+            ]
           }
         ],
         "protocol": {
@@ -36085,7 +40244,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶180.2",
-            "quote": "I will not let these killers and criminals into our country."
+            "quote": "I will not let these killers and criminals into our country.",
+            "context": "I will not let these killers and criminals into our country.",
+            "mark": [
+              0,
+              60
+            ]
           }
         ],
         "protocol": {
@@ -36130,7 +40294,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶180.3",
-            "quote": "I will keep our sons and daughters safe."
+            "quote": "I will keep our sons and daughters safe.",
+            "context": "I will keep our sons and daughters safe.",
+            "mark": [
+              0,
+              40
+            ]
           },
           {
             "source": {
@@ -36145,7 +40314,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶4.2",
-            "quote": "Our safety will be restored."
+            "quote": "Our safety will be restored.",
+            "context": "Our safety will be restored.",
+            "mark": [
+              0,
+              28
+            ]
           }
         ],
         "protocol": {
@@ -36190,7 +40364,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶210.7",
-            "quote": "We will replenish our military"
+            "quote": "We will replenish our military",
+            "context": "We will replenish our military and build an iron dome missile defense system to ensure that no enemy can strike our homeland.",
+            "mark": [
+              0,
+              30
+            ]
           },
           {
             "source": {
@@ -36205,7 +40384,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶43.1",
-            "quote": "we will again build the strongest military the world has ever seen."
+            "quote": "we will again build the strongest military the world has ever seen.",
+            "context": "Like in 2017, we will again build the strongest military the world has ever seen.",
+            "mark": [
+              14,
+              81
+            ]
           }
         ],
         "protocol": {
@@ -36274,7 +40458,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶210.7",
-            "quote": "build an iron dome missile defense system to ensure that no enemy can strike our homeland."
+            "quote": "build an iron dome missile defense system to ensure that no enemy can strike our homeland.",
+            "context": "We will replenish our military and build an iron dome missile defense system to ensure that no enemy can strike our homeland.",
+            "mark": [
+              35,
+              125
+            ]
           },
           {
             "source": {
@@ -36289,7 +40478,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶214.3",
-            "quote": "we're going to build an iron dome over our country"
+            "quote": "we're going to build an iron dome over our country",
+            "context": "No, no, we're going to build an iron dome over our country, and we're going to be sure that nothing can come and harm our people.",
+            "mark": [
+              8,
+              58
+            ]
           }
         ],
         "protocol": {
@@ -36360,7 +40554,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶211.1",
-            "quote": "this great iron dome will be built entirely in the U.S.A."
+            "quote": "this great iron dome will be built entirely in the U.S.A.",
+            "context": "And this great iron dome will be built entirely in the U.S.A. We're going to build it in the U.S.A. And Wisconsin, Wisconsin, just like I gave you that massive ship contract, and you're doing a very nice job, governor, right?",
+            "mark": [
+              4,
+              61
+            ]
           },
           {
             "source": {
@@ -36375,7 +40574,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶214.4",
-            "quote": "I'm going to make it all right here."
+            "quote": "I'm going to make it all right here.",
+            "context": "And again, from an economic development standpoint, I'm going to make it all right here.",
+            "mark": [
+              52,
+              88
+            ]
           }
         ],
         "protocol": {
@@ -36439,7 +40643,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶212.6",
-            "quote": "we're going to have a lot of that built right here in the state of Wisconsin and all other states."
+            "quote": "we're going to have a lot of that built right here in the state of Wisconsin and all other states.",
+            "context": "I gave it to Wisconsin, but we're going to have a lot of that built right here in the state of Wisconsin and all other states.",
+            "mark": [
+              28,
+              126
+            ]
           }
         ],
         "protocol": {
@@ -36503,7 +40712,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶215.1-215.2",
-            "quote": "We will unleash the power of American innovation, and as we do, we will soon be on the verge of finding the cures to cancer, Alzheimer's disease and many other diseases."
+            "quote": "We will unleash the power of American innovation, and as we do, we will soon be on the verge of finding the cures to cancer, Alzheimer's disease and many other diseases.",
+            "context": "We will unleash the power of American innovation, and as we do, we will soon be on the verge of finding the cures to cancer, Alzheimer's disease and many other diseases. We're going to get to the bottom of it.",
+            "mark": [
+              0,
+              169
+            ]
           },
           {
             "source": {
@@ -36518,7 +40732,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶216.2",
-            "quote": "We're going to get to the cure for cancer and Alzheimer's and so many other things."
+            "quote": "We're going to get to the cure for cancer and Alzheimer's and so many other things.",
+            "context": "We're going to get to the cure for cancer and Alzheimer's and so many other things.",
+            "mark": [
+              0,
+              83
+            ]
           }
         ],
         "protocol": {
@@ -36563,7 +40782,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶217.1-217.2",
-            "quote": "We will not have men playing in women's sports."
+            "quote": "We will not have men playing in women's sports.",
+            "context": "We will not have men playing in women's sports. That will end immediately.",
+            "mark": [
+              0,
+              47
+            ]
           }
         ],
         "protocol": {
@@ -36627,7 +40851,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶218.1",
-            "quote": "And we will restore and renovate our nation's once-great cities, making them safe, clean and beautiful again."
+            "quote": "And we will restore and renovate our nation's once-great cities, making them safe, clean and beautiful again.",
+            "context": "And we will restore and renovate our nation's once-great cities, making them safe, clean and beautiful again.",
+            "mark": [
+              0,
+              109
+            ]
           }
         ],
         "protocol": {
@@ -36672,7 +40901,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶218.4",
-            "quote": "We will be, very soon, very proud of our capital again, Washington, D.C."
+            "quote": "We will be, very soon, very proud of our capital again, Washington, D.C.",
+            "context": "We will be, very soon, very proud of our capital again, Washington, D.C.",
+            "mark": [
+              0,
+              72
+            ]
           }
         ],
         "protocol": {
@@ -36717,7 +40951,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶238.1",
-            "quote": "you will be forgotten no longer."
+            "quote": "you will be forgotten no longer.",
+            "context": "To all of the forgotten men and women who have been neglected, abandoned and left behind, you will be forgotten no longer.",
+            "mark": [
+              90,
+              122
+            ]
           }
         ],
         "protocol": {
@@ -36767,7 +41006,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶238.2",
-            "quote": "together, we will win, win, win."
+            "quote": "together, we will win, win, win.",
+            "context": "We will press forward, and together, we will win, win, win.",
+            "mark": [
+              27,
+              59
+            ]
           },
           {
             "source": {
@@ -36782,7 +41026,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶63.3",
-            "quote": "We're going to win like never before."
+            "quote": "We're going to win like never before.",
+            "context": "We're going to win like never before.",
+            "mark": [
+              0,
+              37
+            ]
           }
         ],
         "protocol": {
@@ -36832,7 +41081,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶17.4-17.6",
-            "quote": "We're doing tariffs on other countries."
+            "quote": "We're doing tariffs on other countries.",
+            "context": "We're doing tariffs on other countries. Other countries are going to finally, after 75 years, pay us back for all that we've done for the world. And the tariff will be substantial in some cases.",
+            "mark": [
+              0,
+              39
+            ]
           },
           {
             "source": {
@@ -36847,7 +41101,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶35.2",
-            "quote": "we will tariff and tax foreign countries to enrich our citizens."
+            "quote": "we will tariff and tax foreign countries to enrich our citizens.",
+            "context": "Instead of taxing our citizens to enrich other countries, we will tariff and tax foreign countries to enrich our citizens.",
+            "mark": [
+              58,
+              122
+            ]
           }
         ],
         "protocol": {
@@ -36925,7 +41184,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶26.3",
-            "quote": "We are gonna take in billions of dollars, hundreds of billions of dollars."
+            "quote": "We are gonna take in billions of dollars, hundreds of billions of dollars.",
+            "context": "We are gonna take in billions of dollars, hundreds of billions of dollars.",
+            "mark": [
+              0,
+              74
+            ]
           },
           {
             "source": {
@@ -36940,7 +41204,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶36.1-36.2",
-            "quote": "It will be massive amounts of money pouring into our Treasury, coming from foreign sources."
+            "quote": "It will be massive amounts of money pouring into our Treasury, coming from foreign sources.",
+            "context": "For this purpose, we are establishing the External Revenue Service to collect all tariffs, duties, and revenues. It will be massive amounts of money pouring into our Treasury, coming from foreign sources.",
+            "mark": [
+              113,
+              204
+            ]
           }
         ],
         "protocol": {
@@ -37009,7 +41278,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶41.3-41.4",
-            "quote": "I'm not signing a ban."
+            "quote": "I'm not signing a ban.",
+            "context": "I'm not signing a ban. And there's no reason to sign a ban.",
+            "mark": [
+              0,
+              22
+            ]
           }
         ],
         "protocol": {
@@ -37080,7 +41354,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶158.28",
-            "quote": "If I win, when I'm President-Elect, and what I'll do is I'll speak to one, I'll speak to the other, I'll get 'em together."
+            "quote": "If I win, when I'm President-Elect, and what I'll do is I'll speak to one, I'll speak to the other, I'll get 'em together.",
+            "context": "If I win, when I'm President-Elect, and what I'll do is I'll speak to one, I'll speak to the other, I'll get 'em together.",
+            "mark": [
+              0,
+              122
+            ]
           }
         ],
         "protocol": {
@@ -37144,7 +41423,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶215.4",
-            "quote": "And what I said, that if we come up with something, and we are working on things, we're going to do it and we're going to replace it."
+            "quote": "And what I said, that if we come up with something, and we are working on things, we're going to do it and we're going to replace it.",
+            "context": "And what I said, that if we come up with something, and we are working on things, we're going to do it and we're going to replace it.",
+            "mark": [
+              0,
+              133
+            ]
           },
           {
             "source": {
@@ -37159,7 +41443,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶215.28-215.30",
-            "quote": "But until then, I'd run it as good as it can be run."
+            "quote": "But until then, I'd run it as good as it can be run.",
+            "context": "And what we will do is we're looking at different plans. If we can come up with a plan that's going to cost our people, our population, less money and be better health care than Obamacare, then I would absolutely do it. But until then, I'd run it as good as it can be run.",
+            "mark": [
+              220,
+              272
+            ]
           },
           {
             "source": {
@@ -37174,7 +41463,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 debate"
             },
             "ref": "¶217.3-217.5",
-            "quote": "But if we come up with something I would only change it if we come up with something that's better and less expensive."
+            "quote": "But if we come up with something I would only change it if we come up with something that's better and less expensive.",
+            "context": "But if we come up with something I would only change it if we come up with something that's better and less expensive. And there are concepts and options we we have to do that. And you'll be hearing about it in the not-too-distant future.",
+            "mark": [
+              0,
+              118
+            ]
           }
         ],
         "protocol": {
@@ -37219,7 +41513,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶3.3",
-            "quote": "During every single day of the Trump administration, I will, very simply, put America first."
+            "quote": "During every single day of the Trump administration, I will, very simply, put America first.",
+            "context": "During every single day of the Trump administration, I will, very simply, put America first.",
+            "mark": [
+              0,
+              92
+            ]
           }
         ],
         "protocol": {
@@ -37269,7 +41568,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶4.1",
-            "quote": "Our sovereignty will be reclaimed."
+            "quote": "Our sovereignty will be reclaimed.",
+            "context": "Our sovereignty will be reclaimed.",
+            "mark": [
+              0,
+              34
+            ]
           },
           {
             "source": {
@@ -37284,7 +41588,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶66.2",
-            "quote": "From this day on, the United States of America will be a free, sovereign, and independent nation."
+            "quote": "From this day on, the United States of America will be a free, sovereign, and independent nation.",
+            "context": "From this day on, the United States of America will be a free, sovereign, and independent nation.",
+            "mark": [
+              0,
+              97
+            ]
           }
         ],
         "protocol": {
@@ -37329,7 +41638,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶4.3",
-            "quote": "The scales of justice will be rebalanced."
+            "quote": "The scales of justice will be rebalanced.",
+            "context": "The scales of justice will be rebalanced.",
+            "mark": [
+              0,
+              41
+            ]
           },
           {
             "source": {
@@ -37344,7 +41658,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶39.4",
-            "quote": "Under my leadership, we will restore fair, equal, and impartial justice under the constitutional rule of law."
+            "quote": "Under my leadership, we will restore fair, equal, and impartial justice under the constitutional rule of law.",
+            "context": "Under my leadership, we will restore fair, equal, and impartial justice under the constitutional rule of law.",
+            "mark": [
+              0,
+              109
+            ]
           }
         ],
         "protocol": {
@@ -37389,7 +41708,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶4.4",
-            "quote": "The vicious, violent, and unfair weaponization of the Justice Department and our Government will end."
+            "quote": "The vicious, violent, and unfair weaponization of the Justice Department and our Government will end.",
+            "context": "The vicious, violent, and unfair weaponization of the Justice Department and our Government will end.",
+            "mark": [
+              0,
+              101
+            ]
           },
           {
             "source": {
@@ -37404,7 +41728,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶39.1-39.3",
-            "quote": "We will not allow that to happen."
+            "quote": "We will not allow that to happen.",
+            "context": "Never again will the immense power of the state be weaponized to persecute political opponents, something I know something about. We will not allow that to happen. It will not happen again.",
+            "mark": [
+              130,
+              163
+            ]
           }
         ],
         "protocol": {
@@ -37449,7 +41778,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶12.5-12.7",
-            "quote": "That's going to change."
+            "quote": "That's going to change.",
+            "context": "But we can't let this happen. Everyone is unable to do anything about it. That's going to change.",
+            "mark": [
+              74,
+              97
+            ]
           }
         ],
         "protocol": {
@@ -37494,7 +41828,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶19.1",
-            "quote": "we will be working to meet every crisis with dignity and power and strength."
+            "quote": "we will be working to meet every crisis with dignity and power and strength.",
+            "context": "That is why each day under our administration of American patriots, we will be working to meet every crisis with dignity and power and strength.",
+            "mark": [
+              68,
+              144
+            ]
           },
           {
             "source": {
@@ -37509,7 +41848,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶24.2",
-            "quote": "In everything we do, my administration will be inspired by a strong pursuit of excellence and unrelenting success."
+            "quote": "In everything we do, my administration will be inspired by a strong pursuit of excellence and unrelenting success.",
+            "context": "In everything we do, my administration will be inspired by a strong pursuit of excellence and unrelenting success.",
+            "mark": [
+              0,
+              114
+            ]
           }
         ],
         "protocol": {
@@ -37554,7 +41898,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶23.3-23.4",
-            "quote": "We will make his dream come true."
+            "quote": "We will make his dream come true.",
+            "context": "But in his honor, we will strive together to make his dream a reality. We will make his dream come true.",
+            "mark": [
+              71,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -37599,7 +41948,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶26.1",
-            "quote": "First, I will declare a national emergency at our southern border."
+            "quote": "First, I will declare a national emergency at our southern border.",
+            "context": "First, I will declare a national emergency at our southern border.",
+            "mark": [
+              0,
+              66
+            ]
           }
         ],
         "protocol": {
@@ -37663,7 +42017,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶27.1",
-            "quote": "I will end the practice of catch-and-release."
+            "quote": "I will end the practice of catch-and-release.",
+            "context": "I will end the practice of catch-and-release.",
+            "mark": [
+              0,
+              45
+            ]
           }
         ],
         "protocol": {
@@ -37739,7 +42098,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶27.2",
-            "quote": "And I will send troops to the southern border to repel the disastrous invasion of our country."
+            "quote": "And I will send troops to the southern border to repel the disastrous invasion of our country.",
+            "context": "And I will send troops to the southern border to repel the disastrous invasion of our country.",
+            "mark": [
+              0,
+              94
+            ]
           }
         ],
         "protocol": {
@@ -37810,7 +42174,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶27.3",
-            "quote": "we will also be designating the cartels as foreign terrorist organizations."
+            "quote": "we will also be designating the cartels as foreign terrorist organizations.",
+            "context": "Under the orders I sign today, we will also be designating the cartels as foreign terrorist organizations.",
+            "mark": [
+              31,
+              106
+            ]
           }
         ],
         "protocol": {
@@ -37881,7 +42250,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶28.1",
-            "quote": "by invoking the Alien Enemies Act of 1798"
+            "quote": "by invoking the Alien Enemies Act of 1798",
+            "context": "And by invoking the Alien Enemies Act of 1798, I will direct our Government to use the full and immense power of Federal and State law enforcement to eliminate the presence of all foreign gangs and criminal networks bringing devastating crime to U.S. soil, including our cities and inner cities.",
+            "mark": [
+              4,
+              45
+            ]
           }
         ],
         "protocol": {
@@ -37945,7 +42319,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶28.1",
-            "quote": "to eliminate the presence of all foreign gangs and criminal networks bringing devastating crime to U.S. soil"
+            "quote": "to eliminate the presence of all foreign gangs and criminal networks bringing devastating crime to U.S. soil",
+            "context": "And by invoking the Alien Enemies Act of 1798, I will direct our Government to use the full and immense power of Federal and State law enforcement to eliminate the presence of all foreign gangs and criminal networks bringing devastating crime to U.S. soil, including our cities and inner cities.",
+            "mark": [
+              147,
+              255
+            ]
           }
         ],
         "protocol": {
@@ -37990,7 +42369,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶29.1-29.2",
-            "quote": "We will do it at a level that nobody has ever seen before."
+            "quote": "We will do it at a level that nobody has ever seen before.",
+            "context": "As Commander in Chief, I have no higher responsibility than to defend our country from threats and invasions, and that is exactly what I am going to do. We will do it at a level that nobody has ever seen before.",
+            "mark": [
+              153,
+              211
+            ]
           }
         ],
         "protocol": {
@@ -38035,7 +42419,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶30.2",
-            "quote": "today I will also declare a national energy emergency."
+            "quote": "today I will also declare a national energy emergency.",
+            "context": "The inflation crisis was caused by massive overspending and escalating energy prices, and that is why today I will also declare a national energy emergency.",
+            "mark": [
+              102,
+              156
+            ]
           }
         ],
         "protocol": {
@@ -38099,7 +42488,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶32.1",
-            "quote": "fill our strategic reserves up again right to the top"
+            "quote": "fill our strategic reserves up again right to the top",
+            "context": "We will bring prices down, fill our strategic reserves up again right to the top, and export American energy all over the world.",
+            "mark": [
+              27,
+              80
+            ]
           }
         ],
         "protocol": {
@@ -38163,7 +42557,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶32.2",
-            "quote": "We will be a rich nation again"
+            "quote": "We will be a rich nation again",
+            "context": "We will be a rich nation again, and it is that liquid gold under our feet that will help to do it.",
+            "mark": [
+              0,
+              30
+            ]
           }
         ],
         "protocol": {
@@ -38213,7 +42612,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶33.1",
-            "quote": "we will end the \"green new deal,\""
+            "quote": "we will end the \"green new deal,\"",
+            "context": "With my actions today, we will end the \"green new deal,\" and we will revoke the electric vehicle mandate, saving our auto industry and keeping my sacred pledge to our great American autoworkers.",
+            "mark": [
+              23,
+              56
+            ]
           }
         ],
         "protocol": {
@@ -38258,7 +42662,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶35.1",
-            "quote": "I will immediately begin the overhaul of our trade system to protect American workers and families."
+            "quote": "I will immediately begin the overhaul of our trade system to protect American workers and families.",
+            "context": "I will immediately begin the overhaul of our trade system to protect American workers and families.",
+            "mark": [
+              0,
+              99
+            ]
           }
         ],
         "protocol": {
@@ -38329,7 +42738,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶36.1-36.2",
-            "quote": "we are establishing the External Revenue Service to collect all tariffs, duties, and revenues."
+            "quote": "we are establishing the External Revenue Service to collect all tariffs, duties, and revenues.",
+            "context": "For this purpose, we are establishing the External Revenue Service to collect all tariffs, duties, and revenues. It will be massive amounts of money pouring into our Treasury, coming from foreign sources.",
+            "mark": [
+              18,
+              112
+            ]
           }
         ],
         "protocol": {
@@ -38393,7 +42807,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶37.1",
-            "quote": "my administration will establish the brandnew Department of Government Efficiency."
+            "quote": "my administration will establish the brandnew Department of Government Efficiency.",
+            "context": "To restore competence and effectiveness to our Federal Government, my administration will establish the brandnew Department of Government Efficiency.",
+            "mark": [
+              67,
+              149
+            ]
           }
         ],
         "protocol": {
@@ -38457,7 +42876,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶38.1",
-            "quote": "I also will sign an Executive order to immediately stop all Government censorship and bring back free speech to America."
+            "quote": "I also will sign an Executive order to immediately stop all Government censorship and bring back free speech to America.",
+            "context": "After years and years of illegal and unconstitutional Federal efforts to restrict free expression, I also will sign an Executive order to immediately stop all Government censorship and bring back free speech to America.",
+            "mark": [
+              99,
+              219
+            ]
           }
         ],
         "protocol": {
@@ -38521,7 +42945,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶40.1",
-            "quote": "This week, I will also end the Government policy of trying to socially engineer race and gender into every aspect of public and private life."
+            "quote": "This week, I will also end the Government policy of trying to socially engineer race and gender into every aspect of public and private life.",
+            "context": "This week, I will also end the Government policy of trying to socially engineer race and gender into every aspect of public and private life.",
+            "mark": [
+              0,
+              141
+            ]
           }
         ],
         "protocol": {
@@ -38592,7 +43021,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶40.2",
-            "quote": "We will forge a society that is colorblind and merit based."
+            "quote": "We will forge a society that is colorblind and merit based.",
+            "context": "We will forge a society that is colorblind and merit based.",
+            "mark": [
+              0,
+              59
+            ]
           }
         ],
         "protocol": {
@@ -38637,7 +43071,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶40.3",
-            "quote": "As of today, it will henceforth be the official policy of the United States Government that there are only two genders: male and female."
+            "quote": "As of today, it will henceforth be the official policy of the United States Government that there are only two genders: male and female.",
+            "context": "As of today, it will henceforth be the official policy of the United States Government that there are only two genders: male and female.",
+            "mark": [
+              0,
+              136
+            ]
           }
         ],
         "protocol": {
@@ -38701,7 +43140,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶41.1",
-            "quote": "This week, I will reinstate any servicemembers who were unjustly expelled from our military for objecting to the COVID vaccine mandate with full backpay."
+            "quote": "This week, I will reinstate any servicemembers who were unjustly expelled from our military for objecting to the COVID vaccine mandate with full backpay.",
+            "context": "This week, I will reinstate any servicemembers who were unjustly expelled from our military for objecting to the COVID vaccine mandate with full backpay.",
+            "mark": [
+              0,
+              153
+            ]
           }
         ],
         "protocol": {
@@ -38765,7 +43209,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶42.1-42.2",
-            "quote": "And I will sign an order to stop our warriors from being subjected to radical political theories and social experiments while on duty."
+            "quote": "And I will sign an order to stop our warriors from being subjected to radical political theories and social experiments while on duty.",
+            "context": "And I will sign an order to stop our warriors from being subjected to radical political theories and social experiments while on duty. It's going to end immediately.",
+            "mark": [
+              0,
+              134
+            ]
           }
         ],
         "protocol": {
@@ -38829,7 +43278,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶43.2",
-            "quote": "We will measure our success not only by the battles we win, but also by the wars that we end and, perhaps most importantly, the wars we never get into."
+            "quote": "We will measure our success not only by the battles we win, but also by the wars that we end and, perhaps most importantly, the wars we never get into.",
+            "context": "We will measure our success not only by the battles we win, but also by the wars that we end and, perhaps most importantly, the wars we never get into.",
+            "mark": [
+              0,
+              151
+            ]
           }
         ],
         "protocol": {
@@ -38874,7 +43328,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶46.1",
-            "quote": "we are going to be changing the name of the Gulf of Mexico to the Gulf of America"
+            "quote": "we are going to be changing the name of the Gulf of Mexico to the Gulf of America",
+            "context": "A short time from now, we are going to be changing the name of the Gulf of Mexico to the Gulf of America, and we will restore the name of a great President, William McKinley, to Mount McKinley, where it should be and where it belongs.",
+            "mark": [
+              23,
+              104
+            ]
           }
         ],
         "protocol": {
@@ -38938,7 +43397,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶46.1",
-            "quote": "we will restore the name of a great President, William McKinley, to Mount McKinley"
+            "quote": "we will restore the name of a great President, William McKinley, to Mount McKinley",
+            "context": "A short time from now, we are going to be changing the name of the Gulf of Mexico to the Gulf of America, and we will restore the name of a great President, William McKinley, to Mount McKinley, where it should be and where it belongs.",
+            "mark": [
+              110,
+              192
+            ]
           }
         ],
         "protocol": {
@@ -39002,7 +43466,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶49.3",
-            "quote": "We gave it to Panama, and we're taking it back."
+            "quote": "We gave it to Panama, and we're taking it back.",
+            "context": "We gave it to Panama, and we're taking it back.",
+            "mark": [
+              0,
+              47
+            ]
           }
         ],
         "protocol": {
@@ -39066,7 +43535,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶51.3",
-            "quote": "Together, we will end the chronic disease epidemic and keep our children safe, healthy, and disease-free."
+            "quote": "Together, we will end the chronic disease epidemic and keep our children safe, healthy, and disease-free.",
+            "context": "Together, we will end the chronic disease epidemic and keep our children safe, healthy, and disease-free.",
+            "mark": [
+              0,
+              105
+            ]
           }
         ],
         "protocol": {
@@ -39130,7 +43604,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶53.1",
-            "quote": "And we will pursue our manifest destiny into the stars, launching American astronauts to plant the Stars and Stripes on the planet Mars."
+            "quote": "And we will pursue our manifest destiny into the stars, launching American astronauts to plant the Stars and Stripes on the planet Mars.",
+            "context": "And we will pursue our manifest destiny into the stars, launching American astronauts to plant the Stars and Stripes on the planet Mars.",
+            "mark": [
+              0,
+              136
+            ]
           }
         ],
         "protocol": {
@@ -39194,7 +43673,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2025 inaugural address"
             },
             "ref": "¶64.3",
-            "quote": "We will be a nation like no other, full of compassion, courage, and exceptionalism."
+            "quote": "We will be a nation like no other, full of compassion, courage, and exceptionalism.",
+            "context": "We will be a nation like no other, full of compassion, courage, and exceptionalism.",
+            "mark": [
+              0,
+              83
+            ]
           }
         ],
         "protocol": {
@@ -39241,7 +43725,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶208.1",
-            "quote": "we want our hostages back — and they better be back before I assume office, or you will be paying a very big price."
+            "quote": "we want our hostages back — and they better be back before I assume office, or you will be paying a very big price.",
+            "context": "And to the entire world, I tell you this, we want our hostages back — and they better be back before I assume office, or you will be paying a very big price.",
+            "mark": [
+              42,
+              157
+            ]
           }
         ],
         "protocol": {
@@ -39286,7 +43775,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
               "label": "2024 acceptance speech"
             },
             "ref": "¶220.1",
-            "quote": "We have to produce massive amounts of energy."
+            "quote": "We have to produce massive amounts of energy.",
+            "context": "We have to produce massive amounts of energy.",
+            "mark": [
+              0,
+              45
+            ]
           }
         ],
         "protocol": {

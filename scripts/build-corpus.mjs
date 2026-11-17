@@ -22,6 +22,7 @@ import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
+import { parseSource, resolveRef } from './validate-corpus.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -76,6 +77,25 @@ function verdictFields(v) {
 }
 const unquote = (s) => s.replace(/^["'](.*)["']$/, '$1');
 
+/**
+ * The full sentence(s) a ref points at, and where the quote sits inside them.
+ * A quote is often one part of a split sentence (PROTOCOL.md §3), so the app
+ * shows the whole sentence for context and highlights the promise's own part.
+ * Apostrophes are straightened one-for-one, so indices into the straightened
+ * text are indices into the shown text.
+ */
+const straighten = (s) => s.replace(/[\u2018\u2019\u02bc]/g, "'");
+const squash = (s) => String(s).replace(/\s+/g, ' ').trim();
+function citeContext(parsed, ref, quote, where) {
+  const resolved = resolveRef(parsed, ref);
+  if (resolved.error) throw new Error(`${where}: ${resolved.error}`);
+  const context = squash(resolved.text);
+  const q = straighten(squash(quote));
+  const at = straighten(context).indexOf(q);
+  if (!q || at < 0) throw new Error(`${where}: quote is not part of ${ref}`);
+  return { context, mark: [at, at + q.length] };
+}
+
 /** Parse a source document's YAML front-matter into a flat key -> value map. */
 function parseFrontMatter(md) {
   const m = md.match(/^---\r?\n([\s\S]*?)\r?\n---/);
@@ -100,12 +120,15 @@ for (const name of readdirSync(CORPUS)) {
   // Every source document in the term is "<year>-<kind>.md"; read each one's
   // front-matter into the rich source (a promise occurrence's context).
   const docs = {};
+  const parsedDocs = {};
   for (const f of files) {
     const sm = f.match(/^(\d{4})-([a-z]+)\.md$/);
     if (!sm) continue;
     const kind = sm[2];
     const year = Number(sm[1]);
-    const fm = parseFrontMatter(readFileSync(join(dir, f), 'utf8'));
+    const md = readFileSync(join(dir, f), 'utf8');
+    const fm = parseFrontMatter(md);
+    parsedDocs[kind] = parseSource(md);
     docs[kind] = {
       kind,
       medium: fm.type || 'speech',
@@ -138,7 +161,9 @@ for (const name of readdirSync(CORPUS)) {
     const occurrences = (p.sources ?? []).map((s) => {
       const src = docs[s.in];
       if (!src) throw new Error(`${name}/${p.id}: no "${s.in}" source document in this term`);
-      return { source: src, ref: String(s.ref ?? ''), quote: String(s.quote ?? '') };
+      const ref = String(s.ref ?? '');
+      const quote = String(s.quote ?? '');
+      return { source: src, ref, quote, ...citeContext(parsedDocs[s.in], ref, quote, `${name}/${p.id}`) };
     });
     if (!occurrences.length) throw new Error(`${name}/${p.id}: no sources`);
     return {
@@ -225,6 +250,10 @@ export interface PromiseOccurrence {
   source: PromiseSource;
   ref: string;
   quote: string;
+  /** The full sentence(s) the ref points at. */
+  context: string;
+  /** [start, end) of the quote inside \`context\`. */
+  mark: [number, number];
 }
 
 /** A firm commitment ("we will") or a wish/obligation ("we must"). Only promises get verdicts. */

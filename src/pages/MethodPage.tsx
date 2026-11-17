@@ -145,7 +145,8 @@ export function MethodPage() {
           <ul>
             <li>
               <strong>Split:</strong> “We will reform Social Security and Medicare” becomes two
-              promises, because one could be kept and the other not.
+              promises, because one could be kept and the other not. Each part still shows the whole
+              sentence, with its own words highlighted.
             </li>
             <li><strong>Join:</strong> consecutive sentences stating one commitment are cited together.</li>
             <li>
