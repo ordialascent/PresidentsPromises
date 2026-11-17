@@ -568,7 +568,7 @@ verdicts:
   - promise: trump-2016-repeal-obamacare
     verdict: broken
     as_of: 2026-11-16
-    summary: The Affordable Care Act was not repealed. The House passed the American Health Care Act in May 2017; the Senate rejected repeal in July 2017. The 2017 tax law set the individual-mandate penalty to zero from 2019.
+    summary: The Affordable Care Act was neither repealed nor replaced. The House passed the American Health Care Act, a repeal-and-replace bill, in May 2017; the Senate rejected repeal in July 2017. The 2017 tax law only set the individual-mandate penalty to zero from 2019.
     attempt: passed-chamber
     evidence:
       - what: H.R. 1628, American Health Care Act of 2017 (passed House 4 May 2017)
@@ -579,18 +579,6 @@ verdicts:
         url: https://www.govinfo.gov/content/pkg/PLAW-115publ97/html/PLAW-115publ97.htm
         publisher: GovInfo (U.S. Government Publishing Office)
         date: 2017-12-22
-    uncertainty: { verdict: clear }
-
-  - promise: trump-2016-replace-obamacare
-    verdict: broken
-    as_of: 2026-11-16
-    summary: No law replaced the ACA's marketplaces and subsidies. The House-passed American Health Care Act would have, but it did not pass the Senate.
-    attempt: passed-chamber
-    evidence:
-      - what: H.R. 1628, American Health Care Act of 2017 (passed House 4 May 2017)
-        url: https://www.congress.gov/bill/115th-congress/house-bill/1628
-        publisher: Congress.gov
-        date: 2017-05-04
     uncertainty: { verdict: clear }
 
   - promise: trump-2016-veterans-choice

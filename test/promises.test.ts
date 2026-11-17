@@ -63,13 +63,13 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the current extraction (82 / 181 / 232)', () => {
+  it('the corpus-wide tier split matches the current extraction (81 / 181 / 232)', () => {
     // Snapshot anchor — update when the corpus changes. All seven terms are re-extracted
     // under protocol 1 (their promises only; levels stand in for tiers).
     const c = { high: 0, medium: 0, low: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ high: 82, medium: 181, low: 232 });
-    expect(c.high + c.medium + c.low).toBe(495);
+    expect(c).toEqual({ high: 81, medium: 181, low: 232 });
+    expect(c.high + c.medium + c.low).toBe(494);
   });
 
   it('shares are a proper distribution within each term', () => {
@@ -134,7 +134,7 @@ describe('promises overview aggregation', () => {
   it('topic counts follow the tier filter, and the tiers still sum to the whole', () => {
     // What the page draws when only "high" is left selected in the chart legend.
     const high = topicCounts(filterByTiers(CORPUS_TERMS, new Set(['high'] as const)));
-    expect(high.reduce((n, t) => n + t.count, 0)).toBe(82);
+    expect(high.reduce((n, t) => n + t.count, 0)).toBe(81);
     for (const t of high) {
       const manual = CORPUS_TERMS.flatMap((x) => x.promises).filter(
         (p) => p.theme === t.theme && p.quality === 'high',

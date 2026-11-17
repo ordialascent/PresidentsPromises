@@ -169,7 +169,7 @@ rows:
   - { ref: "\u00b698.3", decision: include, promises: [trump-2016-school-choice] }
   - ref: "\u00b699.3"
     decision: include
-    promises: [trump-2016-repeal-obamacare, trump-2016-replace-obamacare]
+    promises: [trump-2016-repeal-obamacare]
     note: "Two acts that could get different verdicts; split into repeal and replace."
   - ref: "\u00b699.4"
     decision: include
