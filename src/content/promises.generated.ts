@@ -9919,56 +9919,6 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         }
       },
       {
-        "id": "bush-2004-raise-standards",
-        "kind": "promise",
-        "theme": "education",
-        "restatement": "Keep raising school standards.",
-        "quality": "low",
-        "occurrences": [
-          {
-            "source": {
-              "kind": "debate",
-              "medium": "debate",
-              "speaker": "George W. Bush",
-              "event": "Presidential Debate in Tempe, Arizona",
-              "year": 2004,
-              "date": "2004-10-13",
-              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
-              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
-              "label": "2004 debate"
-            },
-            "ref": "¶52.3",
-            "quote": "to continue to raise standards",
-            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
-            "mark": [
-              42,
-              72
-            ]
-          }
-        ],
-        "protocol": {
-          "type": "ongoing",
-          "group": null,
-          "deadline": {
-            "stated": null,
-            "applied": "2009-01-20"
-          },
-          "verifiability": {
-            "level": "low",
-            "object": null,
-            "record": null,
-            "criterion": null,
-            "ambiguity": null
-          },
-          "uncertainty": {
-            "extraction": "probable",
-            "note": "Untriggered; \"4 more years, I've got more to do to …\" is read as conditioned on re-election."
-          },
-          "links": []
-        },
-        "verdict": null
-      },
-      {
         "id": "bush-2004-reward-teachers",
         "kind": "promise",
         "theme": "education",
@@ -11432,9 +11382,29 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "bush-2004-school-standards",
         "kind": "promise",
         "theme": "education",
-        "restatement": "Bring the highest standards to schools.",
+        "restatement": "Keep raising school standards, to the highest level.",
         "quality": "low",
         "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George W. Bush",
+              "event": "Presidential Debate in Tempe, Arizona",
+              "year": 2004,
+              "date": "2004-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-tempe-arizona",
+              "label": "2004 debate"
+            },
+            "ref": "¶52.3",
+            "quote": "to continue to raise standards",
+            "context": "You got—4 more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell grants, to make sure that people have an opportunity to start their career with a college diploma.",
+            "mark": [
+              42,
+              72
+            ]
+          },
           {
             "source": {
               "kind": "inaugural",
@@ -43681,7 +43651,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 494;
+export const CORPUS_PROMISE_COUNT = 493;
 
 /** Total ambitions across the corpus. */
 export const CORPUS_AMBITION_COUNT = 148;

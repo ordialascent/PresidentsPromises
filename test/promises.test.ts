@@ -63,13 +63,13 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the current extraction (81 / 181 / 232)', () => {
+  it('the corpus-wide tier split matches the current extraction (81 / 181 / 231)', () => {
     // Snapshot anchor — update when the corpus changes. All seven terms are re-extracted
     // under protocol 1 (their promises only; levels stand in for tiers).
     const c = { high: 0, medium: 0, low: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ high: 81, medium: 181, low: 232 });
-    expect(c.high + c.medium + c.low).toBe(494);
+    expect(c).toEqual({ high: 81, medium: 181, low: 231 });
+    expect(c.high + c.medium + c.low).toBe(493);
   });
 
   it('shares are a proper distribution within each term', () => {
