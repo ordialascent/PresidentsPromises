@@ -8,17 +8,18 @@ import {
   QUALITIES,
   VERDICT_PLACEHOLDER,
   deltaBetween,
-  filterByTiers,
-  filterByTopics,
+  FACETS,
+  NO_FILTERS,
+  facetCounts,
+  filterRows,
   share,
   summarize,
   topicCounts,
-  topicCountsIn,
   trackRecords,
-  filterByVerdict,
   flattenPromises,
   verdictFor,
   VERDICT_STATUSES,
+  type Filters,
 } from '../src/promises/model.js';
 
 /**
@@ -94,135 +95,48 @@ describe('promises overview aggregation', () => {
     expect(topics.find((t) => t.theme === 'health')!.count).toBe(health);
   });
 
-  it('filtering terms to one topic keeps only that topic and preserves tiers', () => {
-    const filtered = filterByTopics(CORPUS_TERMS, new Set(['taxes']));
-    const s = summarize(filtered);
-    const total = s.reduce((n, x) => n + x.total, 0);
-    expect(total).toBe(topicCounts(CORPUS_TERMS).find((t) => t.theme === 'taxes')!.count);
-    for (const term of filtered) for (const p of term.promises) expect(p.theme).toBe('taxes');
-  });
-
-  it('a multi-topic selection is the union of its topics, and an empty one is everything', () => {
-    const counts = topicCounts(CORPUS_TERMS);
-    const of = (theme: string) => counts.find((t) => t.theme === theme)!.count;
-
-    const picked = new Set(['taxes', 'energy', 'health']);
-    const filtered = filterByTopics(CORPUS_TERMS, picked);
-    const total = summarize(filtered).reduce((n, s) => n + s.total, 0);
-    expect(total).toBe(of('taxes') + of('energy') + of('health'));
-    for (const term of filtered) for (const p of term.promises) expect(picked.has(p.theme)).toBe(true);
-
-    // picking two topics is the sum of picking each — a union, never an
-    // intersection, so a second pick can't empty out the first one's bars
-    const taxes = summarize(filterByTopics(CORPUS_TERMS, new Set(['taxes'])));
-    const energy = summarize(filterByTopics(CORPUS_TERMS, new Set(['energy'])));
-    const both = summarize(filterByTopics(CORPUS_TERMS, new Set(['taxes', 'energy'])));
-    for (let i = 0; i < both.length; i += 1) {
-      expect(both[i]!.total).toBe(taxes[i]!.total + energy[i]!.total);
-      for (const q of QUALITIES) {
-        expect(both[i]!.counts[q]).toBe(taxes[i]!.counts[q] + energy[i]!.counts[q]);
-      }
-    }
-
-    // no selection is no filter: same terms, untouched
-    expect(filterByTopics(CORPUS_TERMS, new Set())).toBe(CORPUS_TERMS);
-    // selecting every topic is the same as selecting none
-    const allPicked = filterByTopics(CORPUS_TERMS, new Set(counts.map((t) => t.theme)));
-    expect(summarize(allPicked)).toEqual(summarize(CORPUS_TERMS));
-  });
-
-  it('topic counts follow the tier filter, and the tiers still sum to the whole', () => {
-    // What the page draws when only "high" is left selected in the chart legend.
-    const high = topicCounts(filterByTiers(CORPUS_TERMS, new Set(['high'] as const)));
-    expect(high.reduce((n, t) => n + t.count, 0)).toBe(81);
-    for (const t of high) {
-      const manual = CORPUS_TERMS.flatMap((x) => x.promises).filter(
-        (p) => p.theme === t.theme && p.quality === 'high',
-      ).length;
-      expect(t.count).toBe(manual);
-    }
-    // a topic with no high promises drops out of the donut entirely
-    const all = topicCounts(CORPUS_TERMS);
-    expect(high.length).toBeLessThanOrEqual(all.length);
-    for (const t of high) expect(all.some((a) => a.theme === t.theme)).toBe(true);
-
-    // splitting the corpus by tier partitions it: the per-tier topic counts add
-    // back up to the unfiltered ones, so no promise is double-counted or lost.
-    const perTopic = new Map<string, number>();
-    for (const q of QUALITIES) {
-      for (const t of topicCounts(filterByTiers(CORPUS_TERMS, new Set([q])))) {
-        perTopic.set(t.theme, (perTopic.get(t.theme) ?? 0) + t.count);
-      }
-    }
-    expect([...perTopic.entries()].sort()).toEqual(
-      all.map((t) => [t.theme, t.count] as [string, number]).sort(),
+  it('the filter bar: picks within a facet are alternatives, facets narrow together', () => {
+    const rows = flattenPromises(CORPUS_TERMS);
+    const f = (patch: Partial<Filters>): Filters => ({ ...NO_FILTERS, ...patch });
+    // nothing picked is no filter at all
+    expect(filterRows(rows, NO_FILTERS)).toBe(rows);
+    // one topic keeps exactly that topic
+    const taxes = filterRows(rows, f({ topic: new Set(['taxes']) }));
+    expect(taxes.length).toBe(topicCounts(CORPUS_TERMS).find((t) => t.theme === 'taxes')!.count);
+    for (const r of taxes) expect(r.promise.theme).toBe('taxes');
+    // two topics are the union of both
+    const energy = filterRows(rows, f({ topic: new Set(['energy']) }));
+    expect(filterRows(rows, f({ topic: new Set(['taxes', 'energy']) })).length).toBe(
+      taxes.length + energy.length,
     );
-  });
-
-  it('the topic legend keeps every topic, and its order, as the category filter moves', () => {
-    const order = topicCounts(CORPUS_TERMS).map((t) => t.theme);
-    for (const q of QUALITIES) {
-      const listed = topicCountsIn(filterByTiers(CORPUS_TERMS, new Set([q])), order);
-      // same topics, same positions — only the numbers move, so nothing reflows
-      expect(listed.map((t) => t.theme)).toEqual(order);
-      // the ones this tier has nothing for are present at zero, not missing
-      const live = new Set(
-        topicCounts(filterByTiers(CORPUS_TERMS, new Set([q]))).map((t) => t.theme),
-      );
-      for (const t of listed) expect(t.count === 0).toBe(!live.has(t.theme));
-      expect(listed.reduce((n, t) => n + t.count, 0)).toBe(
-        CORPUS_TERMS.flatMap((x) => x.promises).filter((p) => p.quality === q).length,
-      );
-    }
-    // with every tier shown it is exactly the unfiltered list again
-    expect(topicCountsIn(CORPUS_TERMS, order)).toEqual(topicCounts(CORPUS_TERMS));
-
-    // Why a greyed chip must not stay in the topic selection: it has nothing to
-    // filter to, so the two filters together would leave the reader an empty
-    // board with a chip they can no longer click off. The page drops such a
-    // topic from the selection as the category filter empties it.
-    for (const q of QUALITIES) {
-      const tier = filterByTiers(CORPUS_TERMS, new Set([q]));
-      for (const t of topicCountsIn(tier, order).filter((x) => x.count === 0)) {
-        const both = summarize(filterByTopics(tier, new Set([t.theme])));
-        expect(both.reduce((n, s) => n + s.total, 0)).toBe(0);
-      }
-    }
-  });
-
-  it('no category selection can empty the board — picking none means all of them', () => {
-    // Categories are picked like topics, so the *selection* can be empty — and
-    // an empty selection is read as all three. Every subset the page can turn
-    // into a filter therefore leaves promises to draw.
-    const subsets = [
-      ['high'], ['medium'], ['low'],
-      ['high', 'medium'], ['high', 'low'], ['medium', 'low'],
-      ['high', 'medium', 'low'],
-    ] as const;
-    for (const shown of subsets) {
-      const total = summarize(filterByTiers(CORPUS_TERMS, new Set(shown))).reduce(
-        (n, s) => n + s.total,
-        0,
-      );
-      expect(total).toBeGreaterThan(0);
-    }
-    // and the reset state is the whole corpus again
-    expect(
-      summarize(filterByTiers(CORPUS_TERMS, new Set(QUALITIES))).reduce((n, s) => n + s.total, 0),
-    ).toBe(CORPUS_PROMISE_COUNT);
-  });
-
-  it('the two filters commute — topic then tier is the same set as tier then topic', () => {
-    const tiers = new Set(['high', 'medium'] as const);
-    const picked = new Set(['health']);
-    const a = summarize(filterByTiers(filterByTopics(CORPUS_TERMS, picked), tiers));
-    const b = summarize(filterByTopics(filterByTiers(CORPUS_TERMS, tiers), picked));
-    expect(a).toEqual(b);
-    const total = a.reduce((n, s) => n + s.total, 0);
-    expect(total).toBe(
-      topicCounts(filterByTiers(CORPUS_TERMS, tiers)).find((t) => t.theme === 'health')!.count,
+    // topic and tier together are the intersection, in either order
+    const both = filterRows(rows, f({ topic: new Set(['health']), tier: new Set(['high']) }));
+    expect(both).toEqual(
+      filterRows(filterRows(rows, f({ tier: new Set(['high']) })), f({ topic: new Set(['health']) })),
     );
-    for (const term of a) expect(term.counts.low).toBe(0);
+    for (const r of both) expect([r.promise.theme, r.promise.quality]).toEqual(['health', 'high']);
+    // a president covers all of their terms
+    const bush = filterRows(rows, f({ president: new Set(['Bush']) }));
+    const bushTerms = CORPUS_TERMS.filter((t) => t.surname === 'Bush');
+    expect(bushTerms.length).toBeGreaterThan(1);
+    expect(bush.length).toBe(bushTerms.reduce((n, t) => n + t.promises.length, 0));
+  });
+
+  it('facet counts never count against their own facet, and add up', () => {
+    const rows = flattenPromises(CORPUS_TERMS);
+    const filters: Filters = { ...NO_FILTERS, tier: new Set(['high']), topic: new Set(['health']) };
+    // the tier menu, with "high" picked, still says what medium and low would add
+    const tiers = facetCounts(rows, filters, 'tier');
+    for (const q of QUALITIES) {
+      const alone = filterRows(rows, { ...filters, tier: new Set([q]) }).length;
+      expect(tiers.get(q) ?? 0).toBe(alone);
+    }
+    // every facet's counts sum to what the other facets leave
+    for (const facet of FACETS) {
+      const counts = facetCounts(rows, filters, facet);
+      const sum = [...counts.values()].reduce((n, c) => n + c, 0);
+      expect(sum).toBe(filterRows(rows, { ...filters, [facet]: new Set() }).length);
+    }
   });
 
   it('deltas are the difference between adjacent terms, both count and points', () => {
@@ -310,12 +224,15 @@ describe('verdicts on the board', () => {
     const rows = flattenPromises(CORPUS_TERMS);
     for (const r of trackRecords(CORPUS_TERMS)) {
       for (const status of VERDICT_STATUSES) {
-        const picked = filterByVerdict(rows, { termKey: r.key, status });
+        const picked = filterRows(rows, {
+          ...NO_FILTERS,
+          term: new Set([r.key]),
+          verdict: new Set([status]),
+        });
         expect(picked).toHaveLength(r.counts[status]);
         for (const row of picked) expect(row.termKey).toBe(r.key);
       }
     }
-    expect(filterByVerdict(rows, null)).toBe(rows);
   });
 });
 

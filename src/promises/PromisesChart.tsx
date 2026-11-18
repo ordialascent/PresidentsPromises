@@ -3,7 +3,6 @@ import {
   QUALITIES,
   QUALITY_META,
   deltaBetween,
-  filterByTiers,
   summarize,
   type CorpusTerm,
   type Quality,
@@ -74,7 +73,7 @@ function fmtDelta(value: number, mode: Mode): string {
  * releasing the last one picked returns to all, which is worth saying before
  * the click rather than after.
  */
-function legendHint(q: Quality, picked: ReadonlySet<Quality>): string {
+function legendHint(q: Quality, picked: ReadonlySet<string>): string {
   const name = QUALITY_META[q].label.toLowerCase();
   if (!picked.has(q)) {
     return picked.size === 0 ? `Show only ${name} promises` : `Add ${name} promises`;
@@ -82,48 +81,39 @@ function legendHint(q: Quality, picked: ReadonlySet<Quality>): string {
   return picked.size === 1 ? 'Show every category again' : `Remove ${name} promises`;
 }
 
-/** One bar block: one president's promises in one tier. */
-export interface Segment {
-  termKey: string;
-  quality: Quality;
-}
-
 /**
- * Neither filter is owned by this chart. The tier legend, the topic donut and
- * the promise list all count the same promises, so every filter lives on the
- * board above and each view is a rendering of that one state — clicking a block
- * here narrows the list below exactly as clicking a topic chip does.
+ * The chart always draws the whole corpus of the current kind; it owns no
+ * filter. The tier legend toggles the list's tier filter, and a block sets the
+ * list's term and tier filters to that one cell (clicking it again clears
+ * them). Blocks the list's filters leave out are dimmed.
  */
 export function PromisesChart({
   terms,
-  activeTiers,
   pickedTiers,
   onToggleTier,
-  selected,
+  lit,
+  picked,
   onSelect,
 }: {
   terms: CorpusTerm[];
-  /** The categories the bars draw — every one of them when none is picked. */
-  activeTiers: ReadonlySet<Quality>;
-  /** The categories the reader actually picked, which is what the legend lights. */
-  pickedTiers: ReadonlySet<Quality>;
+  /** The tiers the list is filtered to, which is what the legend lights. */
+  pickedTiers: ReadonlySet<string>;
   onToggleTier: (quality: Quality) => void;
-  selected: Segment | null;
-  onSelect: (segment: Segment | null) => void;
+  /** Which blocks the list's filters cover; null when they don't narrow by term or tier. */
+  lit: ((termKey: string, q: Quality) => boolean) | null;
+  /** Whether this exact block, and nothing else, is what the filters hold. */
+  picked: (termKey: string, q: Quality) => boolean;
+  onSelect: (termKey: string, q: Quality) => void;
 }) {
   const [mode, setMode] = useState<Mode>('absolute');
 
-  // Legend counts are the tier totals over the topics above, never narrowed by
-  // the category selection itself — so a category left out of the filter still
-  // shows what picking it would get you, and can always be picked back.
   const totals = useMemo(() => {
     const c: Record<Quality, number> = { high: 0, medium: 0, low: 0 };
     for (const t of terms) for (const p of t.promises) c[p.quality] += 1;
     return c;
   }, [terms]);
 
-  const shownTerms = useMemo(() => filterByTiers(terms, activeTiers), [terms, activeTiers]);
-  const summaries = useMemo(() => summarize(shownTerms), [shownTerms]);
+  const summaries = useMemo(() => summarize(terms), [terms]);
   const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
 
   return (
@@ -195,8 +185,8 @@ export function PromisesChart({
         {bars.map((bar) => (
           <g key={bar.summary.key} className="pc-bar">
             {bar.segs.map((s) => {
-              const on =
-                selected?.termKey === bar.summary.key && selected?.quality === s.quality;
+              const on = picked(bar.summary.key, s.quality);
+              const dim = lit != null && !lit(bar.summary.key, s.quality);
               if (s.count === 0) return null;
               return (
                 <g key={s.quality} className="pc-seg-g">
@@ -204,13 +194,12 @@ export function PromisesChart({
                     className="pc-seg"
                     data-q={s.quality}
                     data-on={on}
+                    data-dim={dim}
                     x={s.x}
                     y={s.y}
                     width={s.w}
                     height={s.h}
-                    onClick={() =>
-                      onSelect(on ? null : { termKey: bar.summary.key, quality: s.quality })
-                    }
+                    onClick={() => onSelect(bar.summary.key, s.quality)}
                   >
                     <title>
                       {bar.summary.label} · {QUALITY_META[s.quality].label}: {s.count}

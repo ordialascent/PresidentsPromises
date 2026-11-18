@@ -1,25 +1,28 @@
-import { useEffect, useMemo, useState } from 'react';
-import { PromisesChart, type Segment } from '../promises/PromisesChart.js';
-import { TopicDonut } from '../promises/TopicDonut.js';
-import { PromiseList, type FilterChip } from '../promises/PromiseList.js';
+import { useMemo, useState } from 'react';
+import { PromisesChart } from '../promises/PromisesChart.js';
+import { PromiseList } from '../promises/PromiseList.js';
 import { TrackRecord } from '../promises/TrackRecord.js';
+import { FilterBar, type FacetControl } from '../promises/FilterBar.js';
 import { searchPromises } from '../promises/search.js';
 import {
+  FACETS,
   KIND_META,
+  NO_FILTERS,
   QUALITIES,
   QUALITY_META,
-  termsOfKind,
-  filterBySegment,
-  filterByTiers,
-  filterByVerdict,
   VERDICT_META,
-  filterByTopics,
+  VERDICT_STATUSES,
+  facetCounts,
+  facetValue,
+  filterRows,
   flattenPromises,
+  isFiltered,
+  termsOfKind,
   topicCounts,
-  topicCountsIn,
+  type Facet,
+  type Filters,
   type Kind,
   type Quality,
-  type VerdictPick,
 } from '../promises/model.js';
 import {
   CORPUS_AMBITION_COUNT,
@@ -32,237 +35,156 @@ const KIND_TOTAL: Record<Kind, number> = {
   promise: CORPUS_PROMISE_COUNT,
   ambition: CORPUS_AMBITION_COUNT,
 };
+const KIND_HINT: Record<Kind, string> = {
+  promise:
+    'Firm commitments ("we will", "I\u2019m going to"). Only promises can be kept or broken, and only high and medium ones get a verdict.',
+  ambition:
+    'Wishes and obligations ("we must", "I want"). A direction, not a commitment, so never given a verdict.',
+};
 const BY_KIND: Record<Kind, typeof CORPUS_TERMS> = {
   promise: CORPUS_TERMS,
   ambition: termsOfKind(CORPUS_TERMS, 'ambition'),
 };
+const ROWS: Record<Kind, ReturnType<typeof flattenPromises>> = {
+  promise: flattenPromises(BY_KIND.promise),
+  ambition: flattenPromises(BY_KIND.ambition),
+};
+
+const SURNAME_OF = new Map(CORPUS_TERMS.map((t) => [t.key, t.surname]));
+const PRESIDENTS = [...new Set(CORPUS_TERMS.map((t) => t.surname))];
+
+/** Each facet's options, in a fixed order, so the menus never reshuffle. */
+function optionsFor(kind: Kind, facet: Facet): { value: string; label: string }[] {
+  switch (facet) {
+    case 'topic':
+      return topicCounts(BY_KIND[kind]).map((t) => ({ value: t.theme, label: t.theme }));
+    case 'president':
+      return PRESIDENTS.map((p) => ({ value: p, label: p }));
+    case 'term':
+      return CORPUS_TERMS.map((t) => ({ value: t.key, label: `${t.label} (${t.termLabel})` }));
+    case 'tier':
+      return QUALITIES.map((q) => ({ value: q, label: QUALITY_META[q].label }));
+    case 'verdict': {
+      // every verdict status, then "no verdict" for low promises, if any exist
+      const present = new Set(ROWS[kind].map((r) => facetValue(r, 'verdict')));
+      const out: { value: string; label: string }[] = VERDICT_STATUSES.map((v) => ({
+        value: v,
+        label: VERDICT_META[v].label,
+      }));
+      if (present.has('unjudged')) out.push({ value: 'unjudged', label: 'Not judged yet' });
+      if (present.has('infeasible')) out.push({ value: 'infeasible', label: 'No verdict (low)' });
+      return out;
+    }
+  }
+}
+
+const FACET_LABEL: Record<Facet, string> = {
+  topic: 'Topic',
+  president: 'President',
+  term: 'Term',
+  tier: 'Verifiability',
+  verdict: 'Verdict',
+};
+
+const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(v);
 
 /**
- * Every topic in the corpus, ordered once by its unfiltered size. The legend is
- * drawn from this fixed list, so picking a category only ever changes the
- * numbers on the chips — it never removes one or re-sorts the rows, which would
- * shove the whole page around under the reader's cursor.
- */
-const CORPUS_TOPICS = topicCounts(CORPUS_TERMS);
-const AMBITION_TOPICS = topicCounts(BY_KIND.ambition);
-/** Promise topics by size, then any topic only ambitions use. One order for both kinds. */
-const TOPIC_ORDER = [
-  ...CORPUS_TOPICS.map((t) => t.theme),
-  ...AMBITION_TOPICS.map((t) => t.theme).filter((t) => !CORPUS_TOPICS.some((c) => c.theme === t)),
-];
-
-/**
- * Digits to pad every chip's count to, fixed by the largest count in the corpus.
- * Without it a count falling from 25 to 1 narrows its chip by a character, the
- * row fits one more, and the legend repacks — the same jump the fixed list was
- * meant to remove, arriving one layer down.
- */
-const COUNT_WIDTH = String(
-  Math.max(...CORPUS_TOPICS.map((t) => t.count), ...AMBITION_TOPICS.map((t) => t.count)),
-).length;
-
-/**
- * Front page: every nomination-acceptance promise since 2000, one stacked bar
- * per president, split by how measurable each promise is. The point is not a
- * scorecard — it is how much of what candidates promise can even be checked.
+ * Front page: the promises of every president since 2000, as two overview
+ * charts and the searchable list beneath them.
  *
- * Every filter lives here, because all four views read the same promises, and
- * they narrow in this order — **topics, then categories (tiers), then bar
- * blocks, then search**:
+ * Every filter belongs to the list and sits in one place: the filter bar under
+ * the search box (topic, president, term, verifiability, verdict; each a
+ * multi-select). The charts above always draw the whole corpus and act as
+ * shortcuts into that bar: a bar block sets term and verifiability to that one
+ * cell, a track-record section sets term and verdict. Clicking the same cell
+ * again clears it. Cells the filters leave out are dimmed, so the charts show
+ * what the list is showing.
  *
- * - the donut counts the promises in the shown categories, by topic;
- * - the category legend counts the promises on the selected topics;
- * - the bars draw what both leave, and a block picks one president's share;
- * - the track record counts the same promises by verdict, and a section picks
- *   one president's kept (or broken, …) promises. A block and a section are
- *   both "one cell" pointers, so holding one releases the other;
- * - the search box narrows the list alone, and nothing else.
- *
- * The first two count each other on purpose: a category with no promises on a
- * topic should not offer that topic, and a topic with none in a category should
- * not offer that category. Each view therefore counts what the *other* filter
- * leaves and never what its own does, or picking a chip would erase the way
- * back. The legend's shape is fixed against that movement — same chips, same
- * order, only the numbers change — so nothing reflows mid-click.
- *
- * Both are *picked*, and identically: nothing picked means all of them, a click
- * picks one, clicking it again releases it, and picking every one is the same
- * as picking none. So no click is a dead end in either control, and neither
- * needs a rule the other doesn't have.
- *
- * Search stays out of it entirely. It is the reader's own question, not a claim
- * about the corpus, so it must not re-proportion the donut or re-scale the bars
- * behind it. And the promises are no longer hidden inside a bar block waiting
- * for a click — they are the standing view, and everything above narrows it.
- *
- * Above all four sits the kind: promises (firm language) or ambitions (wishes
+ * Above everything sits the kind: promises (firm language) or ambitions (wishes
  * and obligations). It swaps the whole board's subject rather than mixing the
  * two, because only promises can ever be kept or broken.
  */
 export function PromisesPage() {
   const [kind, setKind] = useState<Kind>('promise');
   const corpus = BY_KIND[kind];
-  // Topics are multi-select and additive: an empty selection means every topic,
-  // so un-picking the last one is the way back to the whole corpus.
-  const [selectedTopics, setSelectedTopics] = useState<ReadonlySet<string>>(() => new Set());
-  // Categories are picked exactly like topics: nothing picked means all of
-  // them, a click picks one, and clicking it again releases it. `activeTiers` is
-  // what the chart and the list are narrowed to; `pickedTiers` is what the
-  // reader actually clicked, which is what the legend lights.
-  const [pickedTiers, setPickedTiers] = useState<ReadonlySet<Quality>>(() => new Set());
-  const activeTiers = useMemo<ReadonlySet<Quality>>(
-    () => (pickedTiers.size ? pickedTiers : new Set(QUALITIES)),
-    [pickedTiers],
-  );
-  // Picking every category is no narrowing at all — same promises as picking
-  // none — so it names no filter and draws no chip.
-  const tierFilterOn = pickedTiers.size > 0 && pickedTiers.size < QUALITIES.length;
-
-  // Topics as counted inside the picked categories: pick "high" and the donut is
-  // the topic mix of the most verifiable promises alone. Topics with nothing
-  // left stay in the list at zero — greyed out and unpickable, not gone.
-  const topics = useMemo(
-    () => topicCountsIn(filterByTiers(corpus, activeTiers), TOPIC_ORDER),
-    [corpus, activeTiers],
-  );
-  const topicTotal = useMemo(() => topics.reduce((n, t) => n + t.count, 0), [topics]);
-  // One bar block — a president crossed with a tier. Single-select: it is a
-  // pointer at one cell of the chart, so a second click elsewhere moves it.
-  const [segment, setSegmentState] = useState<Segment | null>(null);
-  // One track-record cell — a president crossed with a verdict. It is the same
-  // kind of pointer as a bar block, so only one of the two is ever held:
-  // picking either releases the other, and the list never shows the empty
-  // intersection of two cells from different charts.
-  const [verdictPick, setVerdictPickState] = useState<VerdictPick | null>(null);
-  const setSegment = (s: Segment | null) => {
-    setSegmentState(s);
-    if (s) setVerdictPickState(null);
-  };
-  const setVerdictPick = (v: VerdictPick | null) => {
-    setVerdictPickState(v);
-    if (v) setSegmentState(null);
-  };
+  const rows = ROWS[kind];
+  const [filters, setFilters] = useState<Filters>(NO_FILTERS);
   const [query, setQuery] = useState('');
 
-  // The bars get the topic filter; the chart applies the category filter itself,
-  // so its legend still counts what picking a category *would* get you, even one
-  // currently left out. Neither view narrows its own counts — only the other's.
-  const terms = useMemo(() => filterByTopics(corpus, selectedTopics), [corpus, selectedTopics]);
+  const filtered = useMemo(() => filterRows(rows, filters), [rows, filters]);
+  const hits = useMemo(() => searchPromises(filtered, query), [filtered, query]);
 
-  // What the list draws from: both filters, then the picked block, then ranked
-  // against the search box.
-  const shownTerms = useMemo(() => filterByTiers(terms, activeTiers), [terms, activeTiers]);
-  const rows = useMemo(
-    () => filterByVerdict(filterBySegment(flattenPromises(shownTerms), segment), verdictPick),
-    [shownTerms, segment, verdictPick],
-  );
-  const hits = useMemo(() => searchPromises(rows, query), [rows, query]);
-
-  // A block the other filters have emptied can't be un-clicked in the chart —
-  // it isn't drawn any more — so drop the selection rather than strand it.
-  useEffect(() => {
-    if (!segment) return;
-    const term = shownTerms.find((t) => t.key === segment.termKey);
-    const left = term ? term.promises.filter((p) => p.quality === segment.quality).length : 0;
-    if (left === 0) setSegmentState(null);
-  }, [shownTerms, segment]);
-
-  // The same for a track-record cell the topic or category filter has emptied.
-  useEffect(() => {
-    if (!verdictPick) return;
-    const left = filterByVerdict(flattenPromises(shownTerms), verdictPick).length;
-    if (left === 0) setVerdictPickState(null);
-  }, [shownTerms, verdictPick]);
-
-  const toggleTopic = (theme: string) => {
-    const next = new Set(selectedTopics);
-    if (next.has(theme)) next.delete(theme);
-    else next.add(theme);
-    setSelectedTopics(next);
+  const setFacet = (facet: Facet, next: ReadonlySet<string>) =>
+    setFilters((f) => ({ ...f, [facet]: next }));
+  const toggle = (facet: Facet, value: string) => {
+    const next = new Set(filters[facet]);
+    if (next.has(value)) next.delete(value);
+    else next.add(value);
+    setFacet(facet, next);
   };
 
-  const toggleTier = (q: Quality) => {
-    const next = new Set(pickedTiers);
-    if (next.has(q)) next.delete(q);
-    else next.add(q);
-    setPickedTiers(next);
-    // un-picking the last one is the way back to all of them, so the chart is
-    // never left empty and no click is a dead end
-    const shown = next.size ? next : new Set(QUALITIES);
-    // topics with nothing left in the shown categories drop out of the
-    // selection — their chip stays put, just greyed and unpickable — and if that
-    // empties the selection, the bars widen back to every topic on their own.
-    // Without this a greyed chip could still be filtering, with no way to click
-    // it off.
-    const surviving = new Set(topicCounts(filterByTiers(corpus, shown)).map((t) => t.theme));
-    const kept = new Set([...selectedTopics].filter((t) => surviving.has(t)));
-    if (kept.size !== selectedTopics.size) setSelectedTopics(kept);
-  };
+  const facets: Facet[] = kind === 'promise' ? FACETS : FACETS.filter((f) => f !== 'verdict');
+  const controls: FacetControl[] = facets.map((facet) => {
+    const counts = facetCounts(rows, filters, facet);
+    return {
+      key: facet,
+      label: FACET_LABEL[facet],
+      options: optionsFor(kind, facet).map((o) => ({ ...o, count: counts.get(o.value) ?? 0 })),
+      picked: filters[facet],
+      onToggle: (v) => toggle(facet, v),
+      onClear: () => setFacet(facet, new Set()),
+    };
+  });
 
-  // Which categories the topic counts are drawn from, when it isn't all of them.
-  const scope = tierFilterOn
-    ? QUALITIES.filter((q) => pickedTiers.has(q))
-        .map((q) => QUALITY_META[q].label.toLowerCase())
-        .join(' + ')
-    : null;
+  // A bar block: one term crossed with one tier.
+  const blockPicked = (termKey: string, q: Quality) =>
+    only(filters.term, termKey) &&
+    only(filters.tier, q) &&
+    filters.president.size === 0 &&
+    filters.verdict.size === 0;
+  const blockLit =
+    filters.term.size || filters.president.size || filters.tier.size
+      ? (termKey: string, q: Quality) =>
+          (filters.term.size === 0 || filters.term.has(termKey)) &&
+          (filters.president.size === 0 || filters.president.has(SURNAME_OF.get(termKey)!)) &&
+          (filters.tier.size === 0 || filters.tier.has(q))
+      : null;
+  const selectBlock = (termKey: string, q: Quality) =>
+    setFilters((f) =>
+      blockPicked(termKey, q)
+        ? { ...f, term: new Set(), tier: new Set() }
+        : { ...f, term: new Set([termKey]), tier: new Set([q]), president: new Set(), verdict: new Set() },
+    );
 
-  // Every narrowing currently in force, said in words above the list. The chart
-  // and the donut already show their own state, but a filter set three views ago
-  // is easy to lose track of — and a bar block scrolled out of sight has no
-  // visible "off" switch at all. Each chip is that switch.
-  const filters = useMemo<FilterChip[]>(() => {
-    const chips: FilterChip[] = [];
-    for (const theme of TOPIC_ORDER) {
-      if (!selectedTopics.has(theme)) continue;
-      chips.push({
-        key: `topic:${theme}`,
-        label: `topic: ${theme}`,
-        onClear: () => toggleTopic(theme),
-      });
-    }
-    if (tierFilterOn) {
-      chips.push({
-        key: 'tiers',
-        label: `${QUALITIES.filter((q) => pickedTiers.has(q))
-          .map((q) => QUALITY_META[q].label.toLowerCase())
-          .join(' + ')} only`,
-        onClear: () => setPickedTiers(new Set()),
-      });
-    }
-    if (segment) {
-      const term = CORPUS_TERMS.find((t) => t.key === segment.termKey);
-      chips.push({
-        key: 'segment',
-        label: `${term?.label ?? segment.termKey} · ${QUALITY_META[segment.quality].label}`,
-        onClear: () => setSegment(null),
-      });
-    }
-    if (verdictPick) {
-      const term = CORPUS_TERMS.find((t) => t.key === verdictPick.termKey);
-      chips.push({
-        key: 'verdict',
-        label: `${term?.label ?? verdictPick.termKey} · ${VERDICT_META[verdictPick.status].label}`,
-        onClear: () => setVerdictPick(null),
-      });
-    }
-    return chips;
-  }, [selectedTopics, pickedTiers, tierFilterOn, segment, verdictPick]);
+  // A track-record cell: one term crossed with one verdict.
+  const cellPicked = (termKey: string, v: string) =>
+    only(filters.term, termKey) &&
+    only(filters.verdict, v) &&
+    filters.president.size === 0 &&
+    filters.tier.size === 0;
+  const cellLit =
+    filters.term.size || filters.president.size || filters.verdict.size
+      ? (termKey: string, v: string) =>
+          (filters.term.size === 0 || filters.term.has(termKey)) &&
+          (filters.president.size === 0 || filters.president.has(SURNAME_OF.get(termKey)!)) &&
+          (filters.verdict.size === 0 || filters.verdict.has(v))
+      : null;
+  const selectCell = (termKey: string, v: string) =>
+    setFilters((f) =>
+      cellPicked(termKey, v)
+        ? { ...f, term: new Set(), verdict: new Set() }
+        : { ...f, term: new Set([termKey]), verdict: new Set([v]), president: new Set(), tier: new Set() },
+    );
 
-  // The other kind is a different corpus: its topics and blocks don't carry over.
+  // The other kind is a different corpus: its topics don't carry over.
   const switchKind = (k: Kind) => {
     if (k === kind) return;
     setKind(k);
-    setSelectedTopics(new Set());
-    setPickedTiers(new Set());
-    setSegment(null);
-    setVerdictPick(null);
+    setFilters(NO_FILTERS);
   };
 
   const clearAll = () => {
-    setSelectedTopics(new Set());
-    setPickedTiers(new Set());
-    setSegment(null);
-    setVerdictPick(null);
+    setFilters(NO_FILTERS);
     setQuery('');
   };
 
@@ -271,7 +193,8 @@ export function PromisesPage() {
       <header className="masthead">
         <h1>The Promises Presidents Make</h1>
         <p className="subtitle">
-          A collection of promises from comparable and authoritative sources, starting in 2000, categorized by verifiability.
+          A collection of promises from comparable and authoritative sources, starting in 2000,
+          categorized by verifiability. <a href="#method">How promises are chosen, rated and judged</a>
         </p>
       </header>
 
@@ -284,6 +207,7 @@ export function PromisesPage() {
                 type="button"
                 data-on={kind === k}
                 aria-pressed={kind === k}
+                title={KIND_HINT[k]}
                 onClick={() => switchKind(k)}
               >
                 {KIND_META[k].plural}
@@ -291,37 +215,15 @@ export function PromisesPage() {
               </button>
             ))}
           </div>
-          <p className="kind-note">
-            {kind === 'promise' ? (
-              <>Firm commitments: “we will”, “I’m going to”. Only promises can be kept or broken, and only the high and medium ones get a verdict.</>
-            ) : (
-              <>
-                Wishes and obligations: “we must”, “I want”. A direction, not a commitment, so
-                never given a verdict.
-              </>
-            )}
-          </p>
-
-          <TopicDonut
-            topics={topics}
-            total={topicTotal}
-            countWidth={COUNT_WIDTH}
-            scope={scope}
-            selected={selectedTopics}
-            onToggle={toggleTopic}
-          />
-
-          <hr className="board-rule" />
-
           <div className="board-promises">
             <span className="board-label">{KIND_META[kind].plural}</span>
             <PromisesChart
-              terms={terms}
-              activeTiers={activeTiers}
-              pickedTiers={pickedTiers}
-              onToggleTier={toggleTier}
-              selected={segment}
-              onSelect={setSegment}
+              terms={corpus}
+              pickedTiers={filters.tier}
+              onToggleTier={(q) => toggle('tier', q)}
+              lit={blockLit}
+              picked={blockPicked}
+              onSelect={selectBlock}
             />
           </div>
 
@@ -330,7 +232,12 @@ export function PromisesPage() {
               <hr className="board-rule" />
               <div className="board-promises">
                 <span className="board-label">Track record</span>
-                <TrackRecord terms={shownTerms} selected={verdictPick} onSelect={setVerdictPick} />
+                <TrackRecord
+                  terms={corpus}
+                  lit={cellLit}
+                  picked={cellPicked}
+                  onSelect={selectCell}
+                />
               </div>
             </>
           )}
@@ -343,7 +250,13 @@ export function PromisesPage() {
             noun={KIND_META[kind].plural.toLowerCase()}
             query={query}
             onQuery={setQuery}
-            filters={filters}
+            filterBar={
+              <FilterBar
+                controls={controls}
+                active={isFiltered(filters) || query.trim() !== ''}
+                onClearAll={clearAll}
+              />
+            }
             onClearFilters={clearAll}
           />
         </section>
@@ -389,9 +302,6 @@ export function PromisesPage() {
               <p>
                 <em>Object:</em> what it is about. <em>Record:</em> where the outcome shows.{' '}
                 <em>Criterion:</em> what counts as kept. A <em>call</em> is a stated judgement.
-              </p>
-              <p>
-                <a href="#method">How promises are chosen, rated and judged</a>
               </p>
             </section>
 

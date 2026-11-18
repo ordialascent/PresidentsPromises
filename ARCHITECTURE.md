@@ -16,8 +16,8 @@ src/
   content/      the domain. types.ts (Topic, PromiseSpec, Term), one file per
                 topic (deficit.ts), and index.ts as a plain registry.
   data/         snapshot.ts parses the committed append-only CSV.
-  promises/     the front-page board: the donut, the stacked chart, and the
-                searchable list of every promise. fuzzy.ts is a domain-neutral
+  promises/     the front-page board: the stacked chart, the track record,
+                and the searchable, filterable list of every promise. fuzzy.ts is a domain-neutral
                 string matcher; search.ts is the policy that ranks promises
                 with it.
   App.tsx       renders the promises board.
@@ -42,9 +42,9 @@ engine: a reading drawn from a series is always computed from the series.
 `verdictFor` turns it into what the list and detail show, and `trackRecords`
 counts them per term for the board's track-record table. A verdict with a
 `review` note is provisional: it shows as "under review" and stays out of the
-kept share until the note is removed. The track record counts what the topic
-and category filters leave, and clicking a section picks one term × verdict for
-the list (`filterByVerdict`); it and a bar-chart block are mutually exclusive.
+kept share until the note is removed. The track record always counts the whole
+corpus; clicking a section sets the list's term and verdict filters to that
+cell.
 
 ## Invariant 2 — the data snapshot is append-only
 
@@ -72,65 +72,29 @@ A record's tier (`quality`) is its protocol verifiability level: `high`,
 `medium` or `low`. Every term is extracted under the same protocol, so bars
 compare directly and deltas are drawn between every pair of adjacent terms.
 
-## One filter state, four views
+## One filter state, owned by the list
 
-The board's page owns every filter — picked topics, picked categories, the
-picked bar block, the search text — and the donut, the category legend, the
-chart and the promise list are all renderings of it. None of them filters
-itself.
+The page owns one filter state: a multi-select per facet (topic, president,
+term, verifiability, verdict; `Filters` in `model.ts`) plus the search text.
+It narrows **the list only**. The filter bar under the search box is where it
+is shown and changed.
 
-They narrow in this order:
+- Within a facet the picks are alternatives (Bush *or* Obama); across facets
+  they narrow together (`filterRows`). Nothing picked means the facet is off.
+- Each option shows how many rows it would leave given the *other* facets
+  (`facetCounts`). A facet never counts against itself, so picking one option
+  still shows what another would add. Options at zero are greyed but stay in
+  place: menus never reshuffle under the cursor.
+- The charts above always draw the whole corpus of the current kind. They are
+  shortcuts into the filter bar: a bar block sets term + verifiability to that
+  cell, a track-record section sets term + verdict, the tier legend toggles
+  verifiability. Clicking the same cell again clears it. Cells the filters
+  leave out are dimmed, so the charts show what the list is showing.
+- Search narrows the list alone. It is the reader's own question, not a claim
+  about the corpus.
 
-```
-topics  →  categories (tiers)  →  bar blocks  →  search
-```
-
-The first two **count each other**, and that is deliberate: a category with no
-promises on a topic should not offer that topic, and a topic with none in a
-category should not offer that category. So the donut counts what the category
-filter leaves — leaving only "high" re-proportions the ring and greys the topics
-that tier has nothing for — while the legend counts what the topic filter
-leaves.
-
-The rule that keeps this from eating itself: **a view never narrows its own
-counts.** The donut is counted over categories only, the legend over topics
-only. Narrow your own counts and the click that got you there disappears, so
-there is no way back.
-
-Two things follow, and both are load-bearing:
-
-- The legend's *shape* is fixed against the movement — a topic the categories
-  have emptied stays in place at zero, greyed and unpickable, and every count is
-  padded to the corpus's widest, so only the numbers ever change. A chip must
-  never move out from under the cursor that is about to click it.
-- A greyed chip must never still be filtering. When a category empties a topic
-  that is currently picked, the page drops it from the selection — otherwise the
-  reader is left with an unclickable control holding the board empty.
-
-The last two levels only ever narrow downward. A bar block picks one president's
-share of what the filters above leave, and the search box narrows the list
-alone: it is the reader's own question, not a claim about the corpus, so it must
-not re-proportion the donut or re-scale the bars behind it.
-
-The list underneath the chart is the standing view: it starts with **every**
-promise and everything above narrows it. That is the inversion of the earlier
-flow, where the promises existed only inside a bar block and a click was the
-only way to see any of them.
-
-Both filters are **picked**, and identically: nothing picked means all of them,
-a click picks one, clicking it again releases it, and picking every one is the
-same as picking none. No click is a dead end in either, and neither needs a rule
-the other doesn't have.
-
-Their chips look the same for the same reason, and each is lit in the colour of
-the thing it filters — topics in the red of their donut slices, categories in
-the navy the bars are drawn in. A category chip keeps its swatch, because that
-is the only thing tying it to the colour of the blocks it draws in the chart.
-
-(The category legend was briefly a visibility toggle — all three lit, a click
-hiding one — inherited from when the chart was the whole feature. Two controls,
-side by side, that answered a click in opposite directions was the confusing
-part, not either rule on its own.)
+The list is the standing view: it starts with every promise, and everything
+above narrows it.
 
 ## The content model (shallow on purpose)
 

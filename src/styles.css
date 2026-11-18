@@ -25,9 +25,6 @@
   --q-high-ink: #ffffff;
   --q-medium-ink: #10243c;
   --q-low-ink: #2b2117;
-  /* Topics are a single accent (Old Glory Red); the selected slice holds it at
-     full strength and the rest wash back to a tint. */
-  --topic: #b31942;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Code", "Roboto Mono", monospace;
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   /* a period old-style serif for the masthead — Baskerville dates to the 1750s,
@@ -82,6 +79,13 @@ h1 {
   font-size: 15.5px;
   line-height: 1.55;
 }
+.subtitle a {
+  color: var(--series);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--series) 40%, transparent);
+  white-space: nowrap;
+}
+.subtitle a:hover { border-bottom-color: var(--series); }
 
 main {
   display: flex;
@@ -306,6 +310,7 @@ main {
 .pc-seg[data-q="medium"] { fill: var(--q-medium); }
 .pc-seg[data-q="low"] { fill: var(--q-low); }
 .pc-svg:hover .pc-seg:not(:hover) { opacity: 0.72; }
+.pc-seg[data-dim="true"] { opacity: 0.3; }
 .pc-seg[data-on="true"] {
   stroke: var(--ink);
   stroke-width: 2.5;
@@ -449,47 +454,6 @@ main {
 }
 .pl-back:hover { text-decoration: underline; }
 .pl-count strong { color: var(--ink); }
-/* a filter switched on in another view, and its off switch */
-.pl-filter {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--ink);
-  background: color-mix(in srgb, var(--topic) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--topic) 55%, transparent);
-  border-radius: 999px;
-  padding: 3px 9px;
-  cursor: pointer;
-}
-.pl-filter:hover { border-color: var(--topic); }
-.pl-filter-x { color: var(--dim); }
-.pl-filter:hover .pl-filter-x { color: var(--topic); }
-.pl-reset {
-  margin-left: auto;
-  border: 0;
-  background: transparent;
-  color: var(--series);
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  cursor: pointer;
-  padding: 3px 2px;
-}
-.pl-reset:hover { text-decoration: underline; }
-/* the way to the methodology page sits at the right end of the status row;
-   when "Show all" is there it takes the push, and this follows it */
-.pl-method {
-  margin-left: auto;
-  color: var(--series);
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  text-decoration: none;
-  padding: 3px 2px;
-}
-.pl-reset + .pl-method { margin-left: 12px; }
-.pl-method:hover { text-decoration: underline; }
-
 .pl-empty {
   margin: 0;
   padding: 22px 4px;
@@ -653,148 +617,6 @@ main {
 }
 /* one panel under the whole list, never between the rows */
 .pl-detail { scroll-margin-top: 12px; }
-
-/* ---- Topic donut ---------------------------------------------------- */
-
-.tp {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.tp-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.tp-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
-/* caption under the donut: which categories the topic counts are drawn from,
-   shown only when they aren't all of them. It keeps its line when empty
-   (visibility, not display) so the legend below never shifts. */
-.tp-scope {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--dim);
-  margin-top: -6px;
-  /* Fixed box, not min-height: an empty caption's line box is 1em, a filled
-     one's is line-height, and the 2px between them nudged the whole legend
-     down as the caption appeared. */
-  line-height: 14px;
-  height: 14px;
-}
-.tp-scope[data-on='false'] { visibility: hidden; }
-
-.tp-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-.tp-svg {
-  width: 172px;
-  height: 172px;
-  flex: 0 0 auto;
-}
-.tp-slice {
-  cursor: pointer;
-  fill: var(--topic);
-  stroke: var(--panel);
-  stroke-width: 1.5;
-  transition: opacity 120ms ease, fill 120ms ease;
-}
-/* one accent for every slice: the hovered/selected one holds the full flag red,
-   the rest wash out to a tint of it */
-.tp-slice[data-dim="true"] { opacity: 0.26; }
-.tp-slice[data-active="true"] {
-  opacity: 1;
-  stroke: var(--panel);
-  stroke-width: 2.5;
-}
-
-.tp-center-n {
-  fill: var(--ink);
-  font-family: var(--font-mono);
-  font-size: 22px;
-  font-weight: 700;
-  text-anchor: middle;
-  font-variant-numeric: tabular-nums;
-}
-/* the centre reads out the lit slice, so it takes the accent with it */
-.tp-center-n[data-active="true"] { fill: var(--topic); }
-.tp-center-l {
-  fill: var(--ink);
-  font-family: var(--font-sans);
-  font-size: 11px;
-  text-anchor: middle;
-}
-.tp-center-p {
-  fill: var(--dim);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  text-anchor: middle;
-}
-
-.tp-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-  width: 100%;
-}
-.tp-chip {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--dim);
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 3px 9px;
-  cursor: pointer;
-  transition: color 120ms ease, border-color 120ms ease;
-}
-/* the chips carry the same accent as the slices, so "selected" reads the same
-   in both views of the selection */
-.tp-chip:not(:disabled):hover,
-.tp-chip[data-active="true"] {
-  color: var(--ink);
-  border-color: var(--topic);
-}
-.tp-chip[data-selected="true"] {
-  color: var(--ink);
-  border-color: var(--topic);
-  background: color-mix(in srgb, var(--topic) 14%, transparent);
-}
-/* emptied by the category filter: still there, holding its place in the row,
-   but plainly out of play — nothing to filter to */
-.tp-chip[data-empty="true"],
-.tp-chip[data-empty="true"] .tp-chip-n {
-  color: color-mix(in srgb, var(--dim) 45%, var(--panel));
-}
-.tp-chip[data-empty="true"] {
-  border-color: color-mix(in srgb, var(--border) 55%, var(--panel));
-  background: transparent;
-  cursor: default;
-}
-.tp-chip-n {
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-}
-.tp-chip[data-active="false"] .tp-chip-n { color: var(--dim); }
-
-.tp-hint {
-  margin: 0;
-  color: var(--dim);
-  font-size: 13px;
-  line-height: 1.5;
-}
 
 /* ---- Promise detail (opens underneath the promise list) -------------- */
 
@@ -973,6 +795,108 @@ main {
 }
 .pc-detail-method:hover { text-decoration: underline; }
 
+/* ---- Filter bar ------------------------------------------------------ */
+
+/* One row of multi-select dropdowns under the search box. A set dropdown is
+   filled navy, so what is narrowing the list reads at a glance. */
+.fb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.fb-facet { position: relative; }
+.fb-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 260px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 11px;
+  cursor: pointer;
+}
+.fb-button:hover { border-color: var(--series); }
+.fb-button[data-on="true"] {
+  background: var(--series);
+  border-color: var(--series);
+  color: #fff;
+}
+.fb-button-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fb-caret { font-size: 10px; opacity: 0.7; }
+.fb-menu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 200px;
+  max-width: min(320px, calc(100vw - 32px));
+  max-height: 340px;
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(16, 36, 60, 0.14);
+  padding: 6px;
+}
+.fb-menu ul { list-style: none; margin: 0; padding: 0; }
+.fb-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.fb-option:hover { background: color-mix(in srgb, var(--series) 8%, transparent); }
+.fb-option input { accent-color: var(--series); margin: 0; }
+.fb-option-label { flex: 1; }
+.fb-option-n {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+.fb-option[data-empty="true"] { color: var(--dim); opacity: 0.55; cursor: default; }
+.fb-menu-clear {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  border: 0;
+  border-top: 1px solid var(--border);
+  background: transparent;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-align: left;
+  padding: 8px 8px 4px;
+  cursor: pointer;
+}
+.fb-menu-clear:hover { text-decoration: underline; }
+.fb-reset {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: var(--series);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  cursor: pointer;
+  padding: 5px 2px;
+}
+.fb-reset:hover { text-decoration: underline; }
+/* on a phone a menu under a right-hand button would run off the screen, so
+   every menu spans the bar instead */
+@media (max-width: 560px) {
+  .fb { position: relative; }
+  .fb-facet { position: static; }
+  .fb-menu { left: 0; right: 0; max-width: none; }
+}
+
 /* ---- Kind switch, protocol facts -------------------- */
 
 /* Promises or ambitions: swaps the whole board's subject. Built like the
@@ -1009,13 +933,6 @@ main {
   color: var(--dim);
   font-variant-numeric: tabular-nums;
 }
-.kind-note {
-  margin: -4px 0 0;
-  color: var(--dim);
-  font-size: 13px;
-  line-height: 1.5;
-}
-
 .pl-meta {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -1332,7 +1249,6 @@ main {
   font-size: 12.5px;
   line-height: 1.5;
 }
-.tr-note a { color: var(--series); }
 
 @media (max-width: 560px) {
   .tr-table thead .tr-n:not(.tr-share),

@@ -3,7 +3,8 @@ import { CORPUS_PROMISE_COUNT, CORPUS_TERMS } from '../src/content/promises.gene
 import { fuzzyMatch, mergeIndices, nearestWord, toSpans, wordIndices } from '../src/promises/fuzzy.js';
 import { searchPromises } from '../src/promises/search.js';
 import {
-  filterBySegment,
+  NO_FILTERS,
+  filterRows,
   flattenPromises,
   summarize,
   type CorpusPromise,
@@ -262,7 +263,11 @@ describe('the promise list under the chart', () => {
     const rows = flattenPromises(CORPUS_TERMS);
     const term = CORPUS_TERMS.find((t) => t.promises.some((p) => p.quality === 'medium'))!;
     const segment = { termKey: term.key, quality: 'medium' as Quality };
-    const inBlock = filterBySegment(rows, segment);
+    const inBlock = filterRows(rows, {
+      ...NO_FILTERS,
+      term: new Set([segment.termKey]),
+      tier: new Set([segment.quality]),
+    });
     for (const r of inBlock) {
       expect(r.termKey).toBe(term.key);
       expect(r.promise.quality).toBe('medium');
@@ -270,7 +275,5 @@ describe('the promise list under the chart', () => {
     // and it is the number the block itself draws
     const summary = summarize(CORPUS_TERMS).find((s) => s.key === term.key)!;
     expect(inBlock.length).toBe(summary.counts.medium);
-    // no block picked is no filter
-    expect(filterBySegment(rows, null)).toBe(rows);
   });
 });

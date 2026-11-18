@@ -4,14 +4,6 @@ import { toSpans } from './fuzzy.js';
 import { QUALITY_META, verdictFor } from './model.js';
 import type { PromiseHit } from './search.js';
 
-/** A filter the reader switched on elsewhere on the board, and can switch off here. */
-export interface FilterChip {
-  key: string;
-  /** What the chip reads, e.g. "topic: health" or "Obama 2008 · Medium". */
-  label: string;
-  onClear: () => void;
-}
-
 /** `text` with the matched characters wrapped, so a fuzzy hit shows its work. */
 function Marked({ text, indices }: { text: string; indices: readonly number[] }) {
   if (indices.length === 0) return <>{text}</>;
@@ -32,9 +24,9 @@ function Marked({ text, indices }: { text: string; indices: readonly number[] })
  *
  * This replaces the old flow, where the promises existed only inside a bar
  * block and a click was the only way to see any of them. The list is now the
- * standing view — it starts complete — and the chart, the donut and the tier
- * legend are ways of narrowing it. Nothing here filters anything; the board
- * owns every filter, so the same click means the same thing in all three views.
+ * standing view — it starts complete — and the filter bar under the search
+ * box narrows it. Nothing here filters anything; the board owns every filter,
+ * so a click on a chart and a pick in the filter bar set the same state.
  *
  * Opening a promise makes it the subject: the row goes to the top of the
  * screen, the rest of the list gets out of the way, and the detail opens
@@ -48,7 +40,7 @@ export function PromiseList({
   total,
   query,
   onQuery,
-  filters,
+  filterBar,
   onClearFilters,
   noun = 'promises',
 }: {
@@ -59,7 +51,8 @@ export function PromiseList({
   noun?: string;
   query: string;
   onQuery: (q: string) => void;
-  filters: FilterChip[];
+  /** The filter bar, drawn between the search box and the list. */
+  filterBar: React.ReactNode;
   onClearFilters: () => void;
 }) {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -104,8 +97,6 @@ export function PromiseList({
     }
   }, [openId]);
 
-  const filtered = filters.length > 0 || query.trim() !== '';
-
   return (
     <div className="pl">
       <div className="pl-search">
@@ -140,6 +131,8 @@ export function PromiseList({
         )}
       </div>
 
+      {filterBar}
+
       <div className="pl-status">
         {openHit ? (
           <button type="button" className="pl-back" onClick={() => setOpenId(null)}>
@@ -150,28 +143,6 @@ export function PromiseList({
             <strong>{hits.length}</strong> of {total} {noun}
           </span>
         )}
-        {filters.map((f) => (
-          <button
-            key={f.key}
-            type="button"
-            className="pl-filter"
-            onClick={f.onClear}
-            title={`Remove this filter: ${f.label}`}
-          >
-            {f.label}
-            <span className="pl-filter-x" aria-hidden="true">
-              ✕
-            </span>
-          </button>
-        ))}
-        {filtered && (
-          <button type="button" className="pl-reset" onClick={onClearFilters}>
-            Show all
-          </button>
-        )}
-        <a className="pl-method" href="#method">
-          How promises are chosen, rated and judged
-        </a>
       </div>
 
       {hits.length === 0 ? (
