@@ -260,62 +260,6 @@ export function PromisesPage() {
             onClearFilters={clearAll}
           />
         </section>
-
-        <footer className="colophon">
-          <div className="colophon-cols">
-            <section className="colophon-box">
-              <p>Verifiability judges the proposition, not the president.</p>
-              <table className="veri-table">
-                <thead>
-                  <tr>
-                    <th className="veri-swatch-col" aria-hidden="true" />
-                    <th scope="col" aria-label="Verifiability tier" />
-                    <th scope="col">Object</th>
-                    <th scope="col">Record</th>
-                    <th scope="col">Criterion</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="veri-swatch" data-q="high" aria-hidden="true" />
-                    <th scope="row">High</th>
-                    <td className="veri-yes">✓</td>
-                    <td className="veri-yes">✓</td>
-                    <td className="veri-yes">✓</td>
-                  </tr>
-                  <tr>
-                    <td className="veri-swatch" data-q="medium" aria-hidden="true" />
-                    <th scope="row">Medium</th>
-                    <td className="veri-yes">✓</td>
-                    <td className="veri-yes">✓</td>
-                    <td className="veri-q">1 call</td>
-                  </tr>
-                  <tr>
-                    <td className="veri-swatch" data-q="low" aria-hidden="true" />
-                    <th scope="row">Low</th>
-                    <td className="veri-q">?</td>
-                    <td className="veri-q">?</td>
-                    <td className="veri-q">?</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>
-                <em>Object:</em> what it is about. <em>Record:</em> where the outcome shows.{' '}
-                <em>Criterion:</em> what counts as kept. A <em>call</em> is a stated judgement.
-              </p>
-            </section>
-
-            <section className="colophon-box">
-              <p>Sources currently in use:</p>
-              <ul>
-                <li>Nomination acceptance speech from <em>The American Presidency Project</em></li>
-                <li>Inaugural address from <em>The American Presidency Project</em></li>
-                <li>Final general-election debate from <em>The American Presidency Project</em></li>
-              </ul>
-              <p>All sources are treated identically.</p>
-            </section>
-          </div>
-        </footer>
       </main>
     </div>
   );
