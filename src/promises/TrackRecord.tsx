@@ -4,8 +4,10 @@ import {
   VERDICT_STATUSES,
   trackRecords,
   type CorpusTerm,
-  type VerdictPick,
+  type VerdictValue,
 } from './model.js';
+
+type Status = VerdictValue | 'review';
 
 /**
  * Each president's verdicts in one row: a bar split by verdict, and the
@@ -14,25 +16,27 @@ import {
  * counted apart until their figure is confirmed, and pending ones (term still
  * running) are never counted as kept or broken.
  *
- * It counts the promises the topic and category filters leave, like the bars
- * above it, and a click on a bar section or a count picks that one cell (one
- * president, one verdict) for the list. Clicking it again releases it.
+ * It always counts the whole corpus. A click on a bar section or a count sets
+ * the list's term and verdict filters to that cell; clicking it again clears
+ * them. `lit` says which cells the list's filters currently cover, or is null
+ * when they don't narrow by term or verdict.
  */
 export function TrackRecord({
   terms,
-  selected,
+  lit,
+  picked,
   onSelect,
 }: {
   terms: CorpusTerm[];
-  selected: VerdictPick | null;
-  onSelect: (pick: VerdictPick | null) => void;
+  lit: ((termKey: string, s: Status) => boolean) | null;
+  /** Whether this exact cell, and nothing else, is what the filters hold. */
+  picked: (termKey: string, s: Status) => boolean;
+  onSelect: (termKey: string, s: Status) => void;
 }) {
   const rows = useMemo(() => trackRecords(terms), [terms]);
   const widest = Math.max(...rows.map((r) => r.verifiable), 1);
-  const isOn = (termKey: string, s: VerdictPick['status']) =>
-    selected?.termKey === termKey && selected.status === s;
-  const pick = (termKey: string, s: VerdictPick['status']) =>
-    onSelect(isOn(termKey, s) ? null : { termKey, status: s });
+  const isOn = picked;
+  const pick = onSelect;
 
   if (rows.every((r) => r.verifiable === 0)) {
     return (
@@ -65,7 +69,7 @@ export function TrackRecord({
                 <span className="sr-only">{VERDICT_META[s].label}</span>
               </th>
             ))}
-            <th scope="col" className="tr-n" title="Kept as a share of kept, partly and broken">
+            <th scope="col" className="tr-n" title="Kept as a share of kept, partly and broken. Under review, indeterminate and pending are left out. High and medium promises only.">
               Kept
             </th>
           </tr>
@@ -87,7 +91,7 @@ export function TrackRecord({
                         className="tr-seg"
                         data-v={s}
                         data-on={isOn(r.key, s)}
-                        data-dim={selected != null && !isOn(r.key, s)}
+                        data-dim={lit != null && !lit(r.key, s)}
                         aria-pressed={isOn(r.key, s)}
                         style={{ flexGrow: r.counts[s] }}
                         title={`${r.label}: ${r.counts[s]} ${VERDICT_META[s].label.toLowerCase()}`}
@@ -123,13 +127,6 @@ export function TrackRecord({
           ))}
         </tbody>
       </table>
-      <p className="tr-note">
-        High and medium promises only. Click a bar section or a count to list just those
-        promises. <em>Kept</em> is the share of kept among kept, partly and
-        broken; under-review, indeterminate and pending verdicts are left out of it. Open any
-        promise for its verdict and evidence.{' '}
-        <a href="#method">How verdicts are reached</a>
-      </p>
     </div>
   );
 }

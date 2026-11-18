@@ -238,53 +238,72 @@ export function flattenPromises(terms: CorpusTerm[]): PromiseRow[] {
   );
 }
 
-/** The promises of one president in one tier — what clicking a bar block means. */
-export function filterBySegment(
-  rows: PromiseRow[],
-  segment: { termKey: string; quality: Quality } | null,
-): PromiseRow[] {
-  if (!segment) return rows;
-  return rows.filter(
-    (r) => r.termKey === segment.termKey && r.promise.quality === segment.quality,
-  );
+/**
+ * The list's filter bar: one multi-select per facet. Within a facet the picks
+ * are alternatives (Bush *or* Obama); across facets they narrow together
+ * (Bush, *and* health). An empty pick means the facet is off.
+ */
+export type Facet = 'topic' | 'president' | 'term' | 'tier' | 'verdict';
+export const FACETS: Facet[] = ['topic', 'president', 'term', 'tier', 'verdict'];
+export type Filters = Record<Facet, ReadonlySet<string>>;
+
+export const NO_FILTERS: Filters = {
+  topic: new Set(),
+  president: new Set(),
+  term: new Set(),
+  tier: new Set(),
+  verdict: new Set(),
+};
+
+/** The value a row has on one facet: what a pick on that facet is compared with. */
+export function facetValue(row: PromiseRow, facet: Facet): string {
+  switch (facet) {
+    case 'topic':
+      return row.promise.theme;
+    case 'president':
+      return row.surname;
+    case 'term':
+      return row.termKey;
+    case 'tier':
+      return row.promise.quality;
+    case 'verdict':
+      return verdictFor(row.promise).status;
+  }
 }
 
-/** One cell of the track record: a president's term crossed with a verdict. */
-export interface VerdictPick {
-  termKey: string;
-  status: VerdictValue | 'review';
+/** Whether a row passes every facet, leaving out `except` when given. */
+export function matchesFilters(row: PromiseRow, filters: Filters, except?: Facet): boolean {
+  for (const f of FACETS) {
+    if (f === except) continue;
+    const picked = filters[f];
+    if (picked.size > 0 && !picked.has(facetValue(row, f))) return false;
+  }
+  return true;
 }
 
-/** The promises of one term with one verdict status — what clicking a track-record cell means. */
-export function filterByVerdict(rows: PromiseRow[], pick: VerdictPick | null): PromiseRow[] {
-  if (!pick) return rows;
-  return rows.filter((r) => r.termKey === pick.termKey && verdictFor(r.promise).status === pick.status);
+/** The rows that pass every facet. No facet set returns `rows` itself. */
+export function filterRows(rows: PromiseRow[], filters: Filters): PromiseRow[] {
+  if (!isFiltered(filters)) return rows;
+  return rows.filter((r) => matchesFilters(r, filters));
 }
 
-/** Terms carrying only the promises whose tier is in `tiers`. */
-export function filterByTiers(terms: CorpusTerm[], tiers: ReadonlySet<Quality>): CorpusTerm[] {
-  return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => tiers.has(p.quality)) }));
+export function isFiltered(filters: Filters): boolean {
+  return FACETS.some((f) => filters[f].size > 0);
 }
 
 /**
- * Terms carrying only the promises on the selected `themes`. An empty selection
- * is no filter at all: picking topics narrows, and un-picking the last one is
- * how you get back to everything.
+ * How many rows each option of `facet` would show, given every *other* facet.
+ * A facet never counts against itself, so picking Bush still shows how many
+ * Obama would add.
  */
-export function filterByTopics(terms: CorpusTerm[], themes: ReadonlySet<string>): CorpusTerm[] {
-  if (themes.size === 0) return terms;
-  return terms.map((t) => ({ ...t, promises: t.promises.filter((p) => themes.has(p.theme)) }));
-}
-
-/**
- * Promise count per topic over `terms`, listed in `order` and zero-filled: a
- * topic the category filter has emptied comes back as 0 rather than vanishing,
- * so the legend keeps both its shape and its ordering while the filter moves.
- * Only the numbers change — never which chips exist, or where they sit.
- */
-export function topicCountsIn(terms: CorpusTerm[], order: readonly string[]): TopicCount[] {
-  const counted = new Map(topicCounts(terms).map((t) => [t.theme, t.count]));
-  return order.map((theme) => ({ theme, count: counted.get(theme) ?? 0 }));
+export function facetCounts(rows: PromiseRow[], filters: Filters, facet: Facet): Map<string, number> {
+  const out = new Map<string, number>();
+  for (const r of rows) {
+    if (!matchesFilters(r, filters, facet)) continue;
+    const v = facetValue(r, facet);
+    out.set(v, (out.get(v) ?? 0) + 1);
+  }
+  return out;
 }
 
 /** Promise count per topic across all terms, largest first (ties alphabetical). */
