@@ -10,9 +10,9 @@ verdicts:
   # ---- pandemic ------------------------------------------------------------------
 
   - promise: biden-2020-covid-strategy
-    verdict: kept
-    as_of: 2026-11-16
-    summary: On 20 January 2021 Biden signed orders that set up the federal COVID-19 response and required masks on federal property. The 200-page national strategy was published the next day, with further orders that week.
+    verdict: partly
+    as_of: 2026-11-19
+    summary: On 20 January 2021 Biden signed orders that set up the federal COVID-19 response and required masks on federal property. The national strategy itself was published on 21 January, one day after the deadline, with further orders that week.
     evidence:
       - what: Executive Order 13987, Organizing and Mobilizing the United States Government to Provide a Unified and Effective Response to Combat COVID-19
         url: https://www.federalregister.gov/executive-order/13987
@@ -28,7 +28,7 @@ verdicts:
         date: 2021-01-21
     uncertainty:
       verdict: contested
-      note: The strategy document itself came out on day two. A reader who requires the full strategy on day one would call this partly.
+      note: A one-day slip is not rounded up (as with trump-2024-reinstate-vaccine-refusers). A reader who counts the day-one orders as implementing the strategy would call this kept.
 
   - promise: biden-2020-control-virus
     verdict: kept

@@ -220,21 +220,21 @@ promises:
     - in: inaugural
       ref: "¶26.2"
       quote: "All illegal entry will immediately be halted"
-    restatement: "Close the southern border and stop the illegal \"invasion\", on Day 1."
+    restatement: "Close the southern border and stop the illegal \"invasion\", starting on Day 1."
     type: outcome
     theme: immigration
     deadline:
       stated: "on Day 1"
-      applied: 2025-01-20
+      applied: 2029-01-20
     verifiability:
       level: medium
       object: "illegal crossings at the southern border"
       record: "CBP southwest border encounters"
-      criterion: "illegal crossings fall to near zero from the first day"
+      criterion: "southwest border apprehensions fall to record lows and are still there at the end of the term"
       ambiguity: "\"Closed\" and \"halted\" are read as a sharp fall to record lows, not literally zero."
     uncertainty:
       extraction: probable
-      note: "Day 1 is stated in the acceptance speech (¶157.2, ¶158.1-158.2) and \"immediately\" in the inaugural; the other occurrences have no date."
+      note: "Day 1 is stated in the acceptance speech (¶157.2, ¶158.1-158.2) and \"immediately\" in the inaugural; the other occurrences have no date. Day 1 marks when the effort starts, not a date by which crossings can be measured, so the applied deadline is the end of the term (§4 Deadline, as with trump-2016-restore-law-and-order)."
     links:
     - kind: repeats
       to: trump-2016-secure-border

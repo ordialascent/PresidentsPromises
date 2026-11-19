@@ -22,10 +22,9 @@ verdicts:
     uncertainty: { verdict: clear }
 
   - promise: trump-2024-close-border
-    verdict: kept
-    review: 'Southwest Border Patrol apprehensions, December 2024 about 47,000 and February 2025 about 8,300 (CBP; from memory).'
-    as_of: 2026-11-16
-    summary: Orders on 20 January 2025 suspended entry at the southern border and ended routine release. Border Patrol apprehensions at the southwest border fell from about 47,000 in December 2024 to about 8,000 in February 2025, the lowest monthly count on record, and stayed near that level.
+    verdict: pending
+    as_of: 2026-11-19
+    summary: Orders on 20 January 2025 suspended entry at the southern border and ended routine release. Border Patrol apprehensions at the southwest border fell from about 47,000 in December 2024 to about 8,000 in February 2025, the lowest monthly count on record, and have stayed near that level. Judged on the last full month before the end of the term.
     evidence:
       - what: Proclamation 10888, Guaranteeing the States Protection Against Invasion, and Executive Order 14165, Securing Our Borders
         url: https://www.federalregister.gov/executive-order/14165
@@ -36,8 +35,8 @@ verdicts:
         publisher: U.S. Customs and Border Protection
         date: 2026-11-16
     uncertainty:
-      verdict: contested
-      note: The monthly figures are from memory (cbp.gov blocks scripts). Crossings reached record lows within weeks, not literally on the first day; a reader holding to "from the first day" would call this partly.
+      verdict: probable
+      note: The monthly figures are from memory (cbp.gov blocks scripts) and must be read from CBP when the verdict is settled.
 
   - promise: trump-2024-end-catch-and-release
     verdict: kept

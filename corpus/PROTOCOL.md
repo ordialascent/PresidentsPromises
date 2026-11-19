@@ -135,6 +135,12 @@ The stated words are kept in `deadline.stated`; the applied date in
 `deadline.applied`. "Immediately" and "very quickly" are recorded as stated, and
 the applied deadline is end of term (the words give no checkable date).
 
+For an `outcome`, words that name a start ("on day one", "starting on Day 1",
+"when I take the oath") mark when the effort begins, not a date by which a
+state of the world can be measured: the applied deadline is end of term. For
+an `action`, a stated day is the deadline, and a slip of even one day is not
+rounded up.
+
 ### Verifiability
 
 Three questions, the same for every type:

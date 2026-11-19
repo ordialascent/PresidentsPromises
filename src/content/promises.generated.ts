@@ -31446,9 +31446,9 @@ export const CORPUS_TERMS: CorpusTerm[] = [
           "links": []
         },
         "verdict": {
-          "verdict": "kept",
-          "asOf": "2026-11-16",
-          "summary": "On 20 January 2021 Biden signed orders that set up the federal COVID-19 response and required masks on federal property. The 200-page national strategy was published the next day, with further orders that week.",
+          "verdict": "partly",
+          "asOf": "2026-11-19",
+          "summary": "On 20 January 2021 Biden signed orders that set up the federal COVID-19 response and required masks on federal property. The national strategy itself was published on 21 January, one day after the deadline, with further orders that week.",
           "attempt": null,
           "review": null,
           "evidence": [
@@ -31476,7 +31476,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
           ],
           "uncertainty": {
             "verdict": "contested",
-            "note": "The strategy document itself came out on day two. A reader who requires the full strategy on day one would call this partly."
+            "note": "A one-day slip is not rounded up (as with trump-2024-reinstate-vaccine-refusers). A reader who counts the day-one orders as implementing the strategy would call this kept."
           }
         }
       },
@@ -36722,7 +36722,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
         "id": "trump-2024-close-border",
         "kind": "promise",
         "theme": "immigration",
-        "restatement": "Close the southern border and stop the illegal \"invasion\", on Day 1.",
+        "restatement": "Close the southern border and stop the illegal \"invasion\", starting on Day 1.",
         "quality": "medium",
         "occurrences": [
           {
@@ -36911,18 +36911,18 @@ export const CORPUS_TERMS: CorpusTerm[] = [
           "group": null,
           "deadline": {
             "stated": "on Day 1",
-            "applied": "2025-01-20"
+            "applied": "2029-01-20"
           },
           "verifiability": {
             "level": "medium",
             "object": "illegal crossings at the southern border",
             "record": "CBP southwest border encounters",
-            "criterion": "illegal crossings fall to near zero from the first day",
+            "criterion": "southwest border apprehensions fall to record lows and are still there at the end of the term",
             "ambiguity": "\"Closed\" and \"halted\" are read as a sharp fall to record lows, not literally zero."
           },
           "uncertainty": {
             "extraction": "probable",
-            "note": "Day 1 is stated in the acceptance speech (¶157.2, ¶158.1-158.2) and \"immediately\" in the inaugural; the other occurrences have no date."
+            "note": "Day 1 is stated in the acceptance speech (¶157.2, ¶158.1-158.2) and \"immediately\" in the inaugural; the other occurrences have no date. Day 1 marks when the effort starts, not a date by which crossings can be measured, so the applied deadline is the end of the term (§4 Deadline, as with trump-2016-restore-law-and-order)."
           },
           "links": [
             {
@@ -36932,11 +36932,11 @@ export const CORPUS_TERMS: CorpusTerm[] = [
           ]
         },
         "verdict": {
-          "verdict": "kept",
-          "asOf": "2026-11-16",
-          "summary": "Orders on 20 January 2025 suspended entry at the southern border and ended routine release. Border Patrol apprehensions at the southwest border fell from about 47,000 in December 2024 to about 8,000 in February 2025, the lowest monthly count on record, and stayed near that level.",
+          "verdict": "pending",
+          "asOf": "2026-11-19",
+          "summary": "Orders on 20 January 2025 suspended entry at the southern border and ended routine release. Border Patrol apprehensions at the southwest border fell from about 47,000 in December 2024 to about 8,000 in February 2025, the lowest monthly count on record, and have stayed near that level. Judged on the last full month before the end of the term.",
           "attempt": null,
-          "review": "Southwest Border Patrol apprehensions, December 2024 about 47,000 and February 2025 about 8,300 (CBP; from memory).",
+          "review": null,
           "evidence": [
             {
               "what": "Proclamation 10888, Guaranteeing the States Protection Against Invasion, and Executive Order 14165, Securing Our Borders",
@@ -36954,8 +36954,8 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             }
           ],
           "uncertainty": {
-            "verdict": "contested",
-            "note": "The monthly figures are from memory (cbp.gov blocks scripts). Crossings reached record lows within weeks, not literally on the first day; a reader holding to \"from the first day\" would call this partly."
+            "verdict": "probable",
+            "note": "The monthly figures are from memory (cbp.gov blocks scripts) and must be read from CBP when the verdict is settled."
           }
         }
       },
