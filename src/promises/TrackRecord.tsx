@@ -14,7 +14,9 @@ type Status = VerdictValue | 'review';
  * counts. Only high and medium promises get a verdict, so the bar's length is
  * the term's verifiable promises, not all of them. Under-review verdicts are
  * counted apart until their figure is confirmed, and pending ones (term still
- * running) are never counted as kept or broken.
+ * running) are never counted as kept or broken. While a term has pending
+ * verdicts its kept share covers only what is decided so far, so it is marked
+ * as provisional and says how many verdicts it rests on.
  *
  * It always counts the whole corpus. A click on a bar section or a count sets
  * the list's term and verdict filters to that cell; clicking it again clears
@@ -120,13 +122,35 @@ export function TrackRecord({
                   )}
                 </td>
               ))}
-              <td className="tr-n tr-share">
+              <td
+                className="tr-n tr-share"
+                data-provisional={r.counts.pending > 0}
+                title={
+                  r.counts.pending > 0
+                    ? `So far: ${r.counts.kept} kept of ${r.settled} decided. ${r.counts.pending} of ${r.verifiable} are still pending, so this share can change a lot by the end of the term.`
+                    : undefined
+                }
+              >
                 {r.settled ? `${Math.round((r.counts.kept / r.settled) * 100)}%` : '–'}
+                {r.counts.pending > 0 && (
+                  <span className="tr-share-sub">
+                    so far
+                    <br />
+                    {r.settled} of {r.verifiable}
+                  </span>
+                )}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      {rows.some((r) => r.counts.pending > 0) && (
+        <p className="tr-note">
+          For a term still running, the kept share covers only the verdicts decided so far. These are
+          mostly quick actions taken early in the term; promises that take longer are still pending, so
+          the share is provisional and not comparable with finished terms until the term ends.
+        </p>
+      )}
     </div>
   );
 }
