@@ -347,7 +347,10 @@ export function MethodPage() {
             </li>
             <li>
               Verdicts on a term still running are mostly pending. They are reviewed when their
-              deadline passes.
+              deadline passes, which is the end of the term unless the promise names another date.
+              Until then the term’s kept share counts only what is decided so far, mostly early, quick
+              actions, so it is shown as provisional (“so far”) and should not be compared with
+              finished terms.
             </li>
             <li>
               Debates differ from cycle to cycle in format and length; only the final one is used.

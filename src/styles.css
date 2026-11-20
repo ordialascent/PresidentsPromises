@@ -1174,6 +1174,15 @@ main {
 }
 .tr-n[data-zero="true"] { color: var(--border); }
 .tr-share { font-weight: 700; padding-left: 10px; }
+.tr-share[data-provisional="true"] { color: var(--dim); font-style: italic; }
+.tr-share-sub {
+  display: block;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10.5px;
+  color: var(--dim);
+}
+.tr-table + .tr-note { margin-top: 8px; }
 .tr-note {
   margin: 0;
   color: var(--dim);
