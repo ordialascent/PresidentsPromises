@@ -1,0 +1,1200 @@
+# Draft: promises and ambitions of Bill Clinton's 1997-2001 term from the
+# 1996 acceptance speech and the 1997 inaugural. Becomes promises.yaml once
+# the 1996 debate is screened (the validator needs all three ledgers).
+# Deadlines default to the end of the term (2001-01-20).
+
+protocol: 1
+promises:
+  # ---- inaugural ----------------------------------------------------------
+  - id: clinton-1996-overcome-prejudice
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶11.2-11.4
+      quote: "We cannot, we will not, succumb to the dark impulses that lurk in the far regions of the soul everywhere. We shall overcome them. And we shall replace them with the generous spirit of a people who feel at home with one another."
+    restatement: "Overcome racial, religious and political prejudice and replace it with a generous spirit."
+    type: ongoing
+    theme: rights
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"We\" is the nation, including the government he leads; read as a commitment of both."
+    links: []
+
+  - id: clinton-1996-stand-for-peace
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶16.1
+      quote: "We will stand mighty for peace and freedom"
+    restatement: "Stand mighty for peace and freedom."
+    group: clinton-1996-peace-and-defense
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-defense-against-terror
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶16.1
+      quote: "maintain a strong defense against terror and destruction"
+    restatement: "Maintain a strong defense against terror and destruction."
+    group: clinton-1996-peace-and-defense
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-reform-politics
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶17.2
+      quote: "And in this land of new promise, we will have reformed our politics so that the voice of the people will always speak louder than the din of narrow interests, regaining the participation and deserving the trust of all Americans."
+    restatement: "Reform politics so that the people's voice is louder than narrow interests."
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "the law on money in federal politics (campaign finance)"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a campaign finance reform law is enacted"
+      ambiguity: "The inaugural says \"reformed our politics\" without naming campaign finance; read with the acceptance speech (¶12.3), where the reform still to be done in the next 4 years is campaign finance reform."
+    uncertainty:
+      extraction: probable
+      note: "The future perfect (\"will have reformed\") sits inside the vision of ¶14-17, but \"we will\" names the government he leads as the actor."
+    links:
+      - { kind: refines, to: clinton-1996-campaign-finance }
+
+  - id: clinton-1996-maintain-prosperity
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶18.2
+      quote: "Prosperity and power, yes, they are important, and we must maintain them."
+    restatement: "Maintain America's prosperity and power."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  # ---- acceptance ---------------------------------------------------------
+  - id: clinton-1996-campaign-finance
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶12.3
+      quote: "Will you help me get campaign finance reform in the next 4 years?"
+    restatement: "Get campaign finance reform passed in the next four years."
+    type: action
+    theme: government
+    deadline: { stated: "in the next 4 years", applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal campaign finance law"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a campaign finance reform law is enacted by the end of the term"
+    uncertainty:
+      extraction: probable
+      note: "Phrased as a question to the audience; read as his intention."
+    links: []
+
+  - id: clinton-1996-hiv-aids
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶13.6
+      quote: "We'll keep going until normal life is returned to people who deal with this."
+    restatement: "Keep pushing HIV/AIDS treatment until people with it can live normal lives."
+    type: ongoing
+    theme: health
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"This\" refers to HIV and AIDS (¶13.4)."
+    links: []
+
+  - id: clinton-1996-balance-budget
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶17.3-17.4
+      quote: "down 60 percent on the way to zero. We will do it."
+    - in: acceptance
+      ref: ¶35.1
+      quote: "Tonight let us proclaim to the American people, we will balance the budget."
+    restatement: "Balance the federal budget."
+    group: clinton-1996-budget
+    type: outcome
+    theme: budget
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal budget balance (unified deficit or surplus)"
+      record: "Treasury Final Monthly Treasury Statement / Financial Report (FYFSD); OMB Historical Tables"
+      criterion: "the federal budget is in balance or surplus in the last full fiscal year of the term (FY2000)"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-education-bridge
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶23.1
+      quote: "I want to build a bridge to the 21st century in which we expand opportunity through education, where computers are as much a part of the classroom as blackboards, where highly trained teachers demand peak performance from our students, where every 8-year-old can point to a book and say, \"I can read it myself.\""
+    restatement: "Expand opportunity through education: computers in every classroom, highly trained teachers, every 8-year-old reading."
+    type: outcome
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-universal-college
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶24.2
+      quote: "We must make 2 years of college just as universal in 4 years as a high school education is today."
+    restatement: "Within four years, make two years of college as universal as high school."
+    type: outcome
+    theme: education
+    deadline: { stated: "in 4 years", applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "share of young adults completing two years of college"
+      record: "Census CPS educational attainment; NCES Digest"
+      criterion: "the share of young adults with at least two years of college reaches the high-school completion rate of 1996"
+      ambiguity: "\"As universal as\" needs a measure; the completion rates for ages 25-29 are the proxy."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-college-tax-cuts
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶24.4
+      quote: "We can do it, and we should cut taxes to do it."
+    - in: acceptance
+      ref: ¶41.1
+      quote: "We should cut taxes for the family sending a child to college, for the worker returning to college"
+    restatement: "Cut taxes for families paying for college and workers returning to college."
+    group: clinton-1996-tax-cuts
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal tax credit or deduction for college costs"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a tax cut for college tuition costs is enacted"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-no-tax-on-college
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶25.4
+      quote: "We should not tax middle income Americans for the money they spend on college."
+    restatement: "Stop taxing middle-income Americans on money they spend on college."
+    group: clinton-1996-tax-cuts
+    type: action
+    theme: taxes
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "income tax treatment of college spending"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "middle-income families can deduct or credit their college spending"
+      ambiguity: "\"Not tax\" read as a deduction or credit for tuition; ¶25.2 names a deduction of up to $10,000."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-demand-excellence
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶28.1-28.2
+      quote: "But we must demand excellence at every level of education. We must insist that our students learn the old basics we learned and the new basics they have to know for the next century."
+    restatement: "Demand excellence at every level of education, old basics and new."
+    type: ongoing
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-reading-tutors
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶28.5
+      quote: "I want to send 30,000 reading specialists and national service corps members to mobilize a volunteer army of one million reading tutors for third graders all across America."
+    restatement: "Send 30,000 reading specialists and national service members to mobilize one million reading tutors."
+    group: clinton-1996-reading
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federally funded reading specialists and national service members (America Reads)"
+      record: "appropriations acts; Corporation for National Service and Education Department reports"
+      criterion: "30,000 reading specialists and national service members are funded and sent, and one million tutors mobilized"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-every-child-reads
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶29.5
+      quote: "But we're going to help the parents of this country make every child able to read for himself or herself by the age of 8, by the third grade."
+    restatement: "Help parents make every child able to read independently by the third grade."
+    group: clinton-1996-reading
+    type: outcome
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "reading ability of children at the end of third grade"
+      record: "NAEP 4th-grade reading (NCES)"
+      criterion: "every child reads independently by the third grade, measured as nearly all 4th graders at or above NAEP Basic"
+      ambiguity: "\"Able to read for himself\" needs a measure; NAEP 4th-grade Basic is the closest national proxy (no national 3rd-grade test exists)."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-public-school-choice
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶30.1
+      quote: "We must give parents, all parents, the right to choose which public school their children will attend"
+    restatement: "Give all parents the right to choose their children's public school."
+    group: clinton-1996-school-choice
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: clinton-1996-charter-schools
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶30.1
+      quote: "to let teachers form new charter schools with a charter they can keep only if they do a good job"
+    restatement: "Let teachers form charter schools that keep their charter only if they perform."
+    group: clinton-1996-school-choice
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "federal support for charter schools"
+      record: "enacted legislation and appropriations (Congress.gov); Education Department charter school data"
+      criterion: "federal law or funding expands charter schools with performance-based renewal"
+      ambiguity: "Charters are granted by states; read as federal support for charter schools."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-schools-open-late
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶30.2
+      quote: "We must keep our schools open late so that young people have someplace to go and something to say yes to and stay off the street."
+    restatement: "Keep schools open late for young people."
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "federal funding for after-school programmes"
+      record: "appropriations acts (21st Century Community Learning Centers)"
+      criterion: "federal funding for after-school programmes in schools is provided"
+      ambiguity: "No scale is named; any federal funding of after-school programmes counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-tough-tests
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶31.1
+      quote: "We must require that our students pass tough tests to keep moving up in school."
+    restatement: "Require students to pass tough tests to move up in school."
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-reward-teachers
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶31.3
+      quote: "We should reward teachers that are doing a good job, remove those who don't measure up"
+    restatement: "Reward good teachers and remove those who don't measure up."
+    type: ongoing
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-school-construction
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶32.2
+      quote: "We need schools that are rebuilt and modernized with an unprecedented commitment from the National Government to increase school construction"
+    restatement: "Commit federal money to rebuild and modernize schools."
+    group: clinton-1996-schools
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "federal school construction funding"
+      record: "enacted legislation and appropriations (Congress.gov)"
+      criterion: "a federal school construction or modernization programme is enacted"
+      ambiguity: "\"Unprecedented\" is not quantified; any new federal school construction programme counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-connect-classrooms
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶32.2
+      quote: "with every single library and classroom in America connected to the information superhighway by the year 2000"
+    restatement: "Connect every library and classroom to the Internet by 2000."
+    group: clinton-1996-schools
+    type: outcome
+    theme: education
+    deadline: { stated: "by the year 2000", applied: 2000-12-31 }
+    verifiability:
+      level: high
+      object: "Internet access in public school classrooms and libraries"
+      record: "NCES Internet Access in U.S. Public Schools and Classrooms; NCLIS library surveys"
+      criterion: "every public school classroom and public library is connected to the Internet by 2000"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-homeownership
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶34.1
+      quote: "ensuring that every family will be able to own and protect the value of their most important asset, their home"
+    - in: acceptance
+      ref: ¶39.4
+      quote: "I want every American to be able to hear those beautiful words, \"Welcome home.\""
+    restatement: "Make it possible for every family to own a home."
+    type: outcome
+    theme: economy
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-budget-protects-priorities
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶35.2
+      quote: "And let us also proclaim, we will do it in a way that preserves Medicare, Medicaid, education, the environment, the integrity of our pensions, the strength of our people."
+    restatement: "Balance the budget in a way that preserves Medicare, Medicaid, education, the environment and pensions."
+    group: clinton-1996-budget
+    type: ongoing
+    theme: budget
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-block-deep-cuts
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶36.5
+      quote: "As long as I'm President, I'll never let it happen."
+    - in: acceptance
+      ref: ¶36.8
+      quote: "We won't let it happen again."
+    restatement: "Never let cuts become law that end Medicaid's guarantee of health care or break Medicare's duty to seniors."
+    group: clinton-1996-budget
+    type: ongoing
+    theme: health
+    deadline: { stated: "as long as I'm President", applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "Medicaid's entitlement guarantee and Medicare's guaranteed benefit, as in the 1995 budget he vetoed"
+      record: "enacted legislation (Congress.gov); vetoes"
+      criterion: "no law is enacted during the term that ends Medicaid's guarantee of coverage or turns Medicare's guaranteed benefit into a fixed contribution"
+      ambiguity: "\"It\" covers cuts that \"devastate\" education and \"pollute\" the environment as well (¶36.3); only the two concrete items, the Medicaid guarantee and Medicare, are checkable."
+    uncertainty:
+      extraction: probable
+      note: "\"It\" refers back to the cuts of ¶36.3 in the 1995 Republican budget."
+    links: []
+
+  - id: clinton-1996-cut-waste
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶38.1
+      quote: "I want to balance the budget with real cuts in Government, in waste."
+    restatement: "Balance the budget with real cuts in government waste."
+    group: clinton-1996-budget
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-invest-education-research
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶38.2
+      quote: "I want a plan that invests in education, as mine does, in technology, and yes, in research"
+    restatement: "Invest in education, technology and research."
+    type: ongoing
+    theme: budget
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-ira-first-home
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶39.2
+      quote: "I want to expand IRA's so that young people can save tax-free to buy a first home."
+    - in: acceptance
+      ref: ¶41.1
+      quote: "for the family saving to buy a home or for long-term health care"
+    restatement: "Expand IRAs so people can save tax-free for a first home."
+    group: clinton-1996-tax-cuts
+    type: action
+    theme: taxes
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "IRA rules for first-home purchases"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law lets IRA savings be used tax- or penalty-free for a first home"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-child-credit
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶41.1
+      quote: "a $500-perchild credit for middle income families raising their children"
+    restatement: "Enact a $500-per-child tax credit for middle-income families."
+    group: clinton-1996-tax-cuts
+    type: action
+    theme: taxes
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal child tax credit"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a $500-per-child tax credit for middle-income families is enacted"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-community-at-work
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶56.3
+      quote: "I want our Nation to take responsibility to make sure that every single child can look out the window in the morning and see a whole community getting up and going to work."
+    restatement: "Make sure every child grows up in a community where people work."
+    type: outcome
+    theme: welfare
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-welfare-jobs
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶58.2-58.3
+      quote: "We must make sure the jobs are there. There should be one million new jobs for welfare recipients by the year 2000."
+    restatement: "Make sure there are one million new jobs for welfare recipients by 2000."
+    group: clinton-1996-welfare
+    type: outcome
+    theme: welfare
+    deadline: { stated: "by the year 2000", applied: 2000-12-31 }
+    verifiability:
+      level: medium
+      object: "welfare recipients moving into jobs"
+      record: "HHS TANF reports (recipients employed); Welfare to Work Partnership counts"
+      criterion: "one million welfare recipients are hired into new jobs by 2000"
+      ambiguity: "\"New jobs for welfare recipients\" needs a count; the number of recipients entering employment is the proxy."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-welfare-community-work
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶59.3
+      quote: "And more important, I want to help communities put welfare recipients to work right now, without delay, repairing schools, making their neighborhoods clean and safe, making them shine again."
+    restatement: "Help communities put welfare recipients to work on local projects now."
+    group: clinton-1996-welfare
+    type: action
+    theme: welfare
+    deadline: { stated: "right now, without delay", applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-end-underclass
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶62.9
+      quote: "I want to build a bridge to the 21st century that ends the permanent under class, that lifts up the poor and ends their isolation, their exile."
+    restatement: "End the permanent underclass and lift up the poor."
+    group: clinton-1996-welfare
+    type: outcome
+    theme: welfare
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-youth-violence
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶64.1
+      quote: "I want to build a bridge to the 21st century where our children are not killing other children anymore, where children's lives are not shattered by violence at home or in the schoolyard"
+    restatement: "End violence by and against children."
+    type: outcome
+    theme: crime-justice
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-brady-domestic-violence
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶67.1
+      quote: "But now I say we should extend the Brady bill, because anyone who has committed an act of domestic violence against a spouse or a child should not buy a gun."
+    restatement: "Extend the Brady law to bar people who committed domestic violence from buying guns."
+    group: clinton-1996-guns
+    type: action
+    theme: crime-justice
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal gun purchase ban for domestic violence offenders"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law bars people convicted of domestic violence from buying guns"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-ban-cop-killer-bullets
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶67.2
+      quote: "And we must ban those cop-killer bullets."
+    restatement: "Ban armor-piercing (cop-killer) bullets."
+    group: clinton-1996-guns
+    type: action
+    theme: crime-justice
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal ban on armor-piercing ammunition"
+      record: "enacted legislation (Congress.gov); ATF rules"
+      criterion: "a new law or rule bans armor-piercing bullets beyond the existing 1986 ban"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-victims-rights-amendment
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶68.1
+      quote: "We should pass a victims' rights constitutional amendment because victims deserve to be heard"
+    restatement: "Pass a victims' rights amendment to the Constitution."
+    type: action
+    theme: crime-justice
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "a victims' rights amendment to the Constitution"
+      record: "Congress.gov (joint resolutions)"
+      criterion: "Congress passes a victims' rights constitutional amendment and sends it to the states"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-drug-test-parolees
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶71.2
+      quote: "We should say to parolees: We will test you for drugs; if you go back on them, we will send you back to jail."
+    restatement: "Drug-test parolees and send those who use drugs back to jail."
+    group: clinton-1996-drugs
+    type: action
+    theme: crime-justice
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "drug testing of parolees"
+      record: "enacted legislation (Congress.gov); Justice Department rules"
+      criterion: "a federal law or rule requires drug testing of parolees, with revocation for drug use"
+      ambiguity: "Most parolees are under state supervision; read as a federal requirement or a condition on federal prison funds."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-racketeering-gangs
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶71.3
+      quote: "We will say to gangs: We will break you with the same antiracketeering law we used to put mob bosses in jail."
+    restatement: "Break gangs with the anti-racketeering law used against the mob."
+    group: clinton-1996-drugs
+    type: ongoing
+    theme: crime-justice
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-strong-families
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶72.1
+      quote: "I want to build a bridge to the 21st century with a strong American community, beginning with strong families, an America where all children are cherished and protected from destructive forces, where parents can succeed at home and at work."
+    restatement: "Build strong families, where children are protected and parents succeed at home and at work."
+    type: outcome
+    theme: welfare
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-extend-family-leave
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶74.3
+      quote: "We should extend the family and medical leave law to give parents some time off to take their children to regular doctor's appointments or attend those parent-teacher conferences at school."
+    restatement: "Extend family and medical leave to doctor's appointments and parent-teacher conferences."
+    group: clinton-1996-families-work
+    type: action
+    theme: welfare
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "Family and Medical Leave Act"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "the FMLA is amended to cover time off for children's routine doctor's visits and school conferences"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-flextime
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶74.5
+      quote: "We should pass a flextime law that allows employees to take their overtime pay in money or in time off, depending on what's better for their family."
+    restatement: "Pass a flextime law letting workers take overtime as pay or time off."
+    group: clinton-1996-families-work
+    type: action
+    theme: welfare
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "overtime compensation rules (Fair Labor Standards Act)"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law lets private-sector employees take overtime as paid time off"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-tobacco-children
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶75.4
+      quote: "I pledge to America's parents that I will see this effort all the way through."
+    restatement: "See the FDA's effort to curb cigarette advertising and sales to children all the way through."
+    type: action
+    theme: health
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "the FDA's 1996 rule restricting cigarette sales and advertising to children"
+      record: "Federal Register; court rulings; enacted legislation"
+      criterion: "the restrictions are in force (by the rule or by law) at the end of the term"
+      ambiguity: "\"See it all the way through\" read as the restrictions taking effect, not only defending them."
+    uncertainty:
+      extraction: clear
+    links: []
+
+  - id: clinton-1996-health-unemployed
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶77.4
+      quote: "The first thing we ought to do is to extend the benefits of health care to people who are unemployed."
+    restatement: "Extend health coverage to people who are unemployed."
+    group: clinton-1996-health
+    type: action
+    theme: health
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "health insurance for unemployed workers"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a federal programme helps unemployed families keep health insurance"
+      ambiguity: "Scope taken from ¶77.5 (help for up to 6 months, an untriggered proposal)."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-newborn-stays
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶77.7
+      quote: "we should protect mothers and newborn babies from being forced out of the hospital in less than 48 hours"
+    restatement: "Protect mothers and newborns from being discharged within 48 hours."
+    group: clinton-1996-health
+    type: action
+    theme: health
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "minimum hospital stay after childbirth"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law guarantees mothers and newborns at least 48 hours in hospital"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-promote-adoption
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶78.3
+      quote: "that is why we must promote adoption"
+    restatement: "Promote adoption."
+    type: ongoing
+    theme: welfare
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-clean-environment
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶80.1
+      quote: "I want to build a bridge to the 21st century with a clean and safe environment."
+    restatement: "Build a clean and safe environment."
+    group: clinton-1996-environment
+    type: outcome
+    theme: environment
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-toxic-cleanup
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶81.4
+      quote: "In the next 4 years, we propose to clean up 500 more, two-thirds of all that are left and the most dangerous ones."
+    restatement: "Clean up 500 more toxic waste sites in four years."
+    group: clinton-1996-environment
+    type: outcome
+    theme: environment
+    deadline: { stated: "in the next 4 years", applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "Superfund toxic waste sites"
+      record: "EPA Superfund construction completions"
+      criterion: "500 more Superfund sites reach construction completion in the four years after 1996"
+    uncertainty:
+      extraction: probable
+      note: "\"Clean up\" read as EPA construction completion, the measure behind the \"197 … in the last 3 years\" of ¶81.3."
+    links: []
+
+  - id: clinton-1996-attempt-to-pollute
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶82.1
+      quote: "We should make it a crime even to attempt to pollute."
+    restatement: "Make attempted pollution a crime."
+    group: clinton-1996-environment
+    type: action
+    theme: environment
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal environmental criminal law"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law makes attempted pollution a federal crime"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-freeze-polluter-property
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶82.2
+      quote: "We should freeze the serious polluter's property until they clean up the problems they create."
+    restatement: "Freeze serious polluters' property until they clean up."
+    group: clinton-1996-environment
+    type: action
+    theme: environment
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "federal power to freeze polluters' assets"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law lets the government freeze serious polluters' property until cleanup"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-right-to-know
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶82.3
+      quote: "We should make it easier for families to find out about toxic chemicals in their neighborhoods so they can do more to protect their own children."
+    restatement: "Make it easier for families to learn about toxic chemicals nearby."
+    group: clinton-1996-environment
+    type: action
+    theme: environment
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "EPA Toxics Release Inventory"
+      record: "Federal Register (EPA rules); EPA TRI programme history"
+      criterion: "the public reporting of toxic chemicals is expanded"
+      ambiguity: "\"Easier\" is not quantified; any expansion of required public reporting counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-strongest-defense
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶83.1
+      quote: "I want to build a bridge to the 21st century that makes sure we are still the nation with the world's strongest defense"
+    restatement: "Keep the world's strongest defense."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-values-abroad
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶83.1
+      quote: "that our foreign policy still advances the values of our American community in the community of nations"
+    restatement: "Make foreign policy advance American values."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-russia-partnership
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶85.3
+      quote: "And I will continue our strong partnership with a democratic Russia."
+    restatement: "Continue a strong partnership with a democratic Russia."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-nato-enlargement
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶85.4
+      quote: "And we will bring some of Central Europe's new democracies into NATO so that they will never question their own freedom in the future."
+    restatement: "Bring some of Central Europe's new democracies into NATO."
+    type: action
+    theme: foreign-policy
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "NATO membership of Central European states"
+      record: "NATO accession records; Senate treaty ratification"
+      criterion: "at least two Central European democracies become NATO members by the end of the term"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-open-export-markets
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶86.2
+      quote: "In the next 4 years, we have to break down even more barriers to them, reaching out to Latin America, to Africa, to other countries in Asia, making sure that our workers and our products, the world's finest, have the benefit of free and fair trade."
+    restatement: "Break down more barriers to U.S. exports in Latin America, Africa and Asia."
+    type: action
+    theme: trade
+    deadline: { stated: "in the next 4 years", applied: 2001-01-20 }
+    verifiability:
+      level: medium
+      object: "trade agreements opening markets to U.S. exports"
+      record: "USTR agreements; enacted trade legislation"
+      criterion: "new agreements lower barriers to U.S. exports in Latin America, Africa or Asia"
+      ambiguity: "\"Even more barriers\" is not quantified; any new market-opening agreement in those regions counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-reduce-nuclear-arsenals
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶87.3
+      quote: "Now we must enforce and ratify without delay measures that further reduce nuclear arsenals"
+    restatement: "Ratify and enforce further cuts in nuclear arsenals."
+    group: clinton-1996-arms-control
+    type: action
+    theme: defense
+    deadline: { stated: "without delay", applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "START II"
+      record: "treaty ratification records (Senate, Russian Duma)"
+      criterion: "START II is ratified and enters into force"
+    uncertainty:
+      extraction: probable
+      note: "No treaty is named; START II was the pending arsenal-reduction treaty in August 1996."
+    links: []
+
+  - id: clinton-1996-ban-poison-gas
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶87.3
+      quote: "banish poison gas"
+    restatement: "Ratify the ban on poison gas (Chemical Weapons Convention)."
+    group: clinton-1996-arms-control
+    type: action
+    theme: defense
+    deadline: { stated: "without delay", applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "Chemical Weapons Convention"
+      record: "Senate treaty ratification records"
+      criterion: "the Senate ratifies the Chemical Weapons Convention"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-ban-nuclear-tests
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶87.3
+      quote: "ban nuclear tests once and for all"
+    restatement: "Ratify a ban on nuclear tests."
+    group: clinton-1996-arms-control
+    type: action
+    theme: defense
+    deadline: { stated: "without delay", applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "Comprehensive Nuclear-Test-Ban Treaty"
+      record: "Senate treaty ratification records"
+      criterion: "the Senate ratifies the Comprehensive Nuclear-Test-Ban Treaty"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-weapons-modernization
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶88.2
+      quote: "By the year 2000, we also will have increased funding to modernize our weapons systems by 40 percent."
+    restatement: "Raise weapons modernization funding by 40 percent by 2000."
+    type: outcome
+    theme: defense
+    deadline: { stated: "by the year 2000", applied: 2000-12-31 }
+    verifiability:
+      level: high
+      object: "Defense Department procurement budget authority"
+      record: "DoD National Defense Budget Estimates (Green Book)"
+      criterion: "procurement funding for fiscal 2000 is at least 40 percent above fiscal 1996"
+    uncertainty:
+      extraction: probable
+      note: "The base year is not stated; fiscal 1996 (the year of the speech) is used."
+    links: []
+
+  - id: clinton-1996-no-star-wars
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶88.4
+      quote: "but we must not, not now, not by the year 2000, squander $60 billion on an unproved, ineffective Star Wars program that could be obsolete tomorrow"
+    restatement: "Do not spend $60 billion on an unproven missile defense by 2000."
+    type: ongoing
+    theme: defense
+    deadline: { stated: "not by the year 2000", applied: 2000-12-31 }
+    verifiability:
+      level: medium
+      object: "national missile defense deployment"
+      record: "DoD budgets; enacted legislation"
+      criterion: "no commitment to deploy a $60 billion missile defense is made by 2000"
+      ambiguity: "The $60 billion is the cost of the Republicans' plan; read as not committing to deploy it."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-antiterror-tools
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶90.1
+      quote: "Second, we must give law enforcement the tools they need to take the fight to terrorists."
+    restatement: "Give law enforcement the tools to fight terrorists."
+    group: clinton-1996-terrorism
+    type: action
+    theme: crime-justice
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-airport-security
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶91.1
+      quote: "Third, we will improve airport and air travel security."
+    restatement: "Improve airport and air travel security."
+    group: clinton-1996-terrorism
+    type: action
+    theme: infrastructure
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-bomb-detection
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶91.3
+      quote: "But now we will install the most sophisticated bomb-detection equipment in all our major airports."
+    restatement: "Install the most advanced bomb-detection equipment in all major airports."
+    group: clinton-1996-terrorism
+    type: action
+    theme: infrastructure
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "FAA-certified explosives detection systems at major airports"
+      record: "FAA and GAO/DOT Inspector General reports on deployment"
+      criterion: "certified explosives detection equipment is installed at all major (Category X and I) airports"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-search-every-plane
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶91.4
+      quote: "We will search every airplane flying to or from America from another nation, every flight, every cargo hold, every cabin, every time."
+    restatement: "Search every international flight to or from the U.S., every cargo hold and cabin, every time."
+    group: clinton-1996-terrorism
+    type: action
+    theme: infrastructure
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: high
+      object: "security searches of international flights"
+      record: "FAA security directives; GAO and DOT Inspector General reports"
+      criterion: "every flight to or from the U.S. from another nation is searched, cargo hold and cabin, every time"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1996-lead-abroad
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶92.4
+      quote: "We cannot become the world's policeman, but where our values and our interests are at stake and where we can make a difference, we must act and we must lead."
+    restatement: "Act and lead abroad where American values and interests are at stake."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 2001-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []

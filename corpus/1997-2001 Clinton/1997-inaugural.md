@@ -11,7 +11,7 @@ source_publisher: Gerhard Peters and John T. Woolley, The American Presidency Pr
 ## ¶1
 1. My fellow citizens, at this last Presidential Inauguration of the 20th century, let us lift our eyes toward the challenges that await us in the next century.
 2. It is our great good fortune that time and chance have put us not only at the edge of a new century, in a new millennium, but on the edge of a bright new prospect in human affairs, a moment that will define our course and our character for decades to comes.
-3. [See APP Note.] We must keep our old democracy forever young.
+3. We must keep our old democracy forever young.
 4. Guided by the ancient vision of a promised land, let us set our sights upon a land of new promise.
 
 ## ¶2
