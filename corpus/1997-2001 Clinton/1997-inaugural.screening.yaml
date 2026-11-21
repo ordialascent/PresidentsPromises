@@ -1,0 +1,49 @@
+# Screening ledger for 1997-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row. ¶14.2-17.1 describe the country
+# of the coming century in the future tense ("education will be …", "our
+# schools will have …") without naming the speaker, his administration or
+# his plan as the actor; they are a vision, not candidates (PROTOCOL.md §1).
+# ¶16.1 and ¶17.2, which say "we will", are screened.
+source: 1997-inaugural
+protocol: 1
+rows:
+  - ref: "¶1.3"
+    decision: describe
+    note: "Rhetoric (\"keep our old democracy forever young\"); no object."
+  - ref: "¶9.3"
+    decision: describe
+    note: "Rhetoric; no object."
+  - ref: "¶11.2-11.4"
+    decision: include
+    promises: [clinton-1996-overcome-prejudice]
+    note: "Three sentences, one commitment (not to succumb to prejudice, to overcome it and replace it); joined."
+  - ref: "¶13.4"
+    decision: describe
+    note: "Rhetoric (\"we will sustain America's journey\")."
+  - ref: "¶14.1"
+    decision: describe
+    note: "Rhetoric; introduces the vision of ¶14.2-17.1."
+  - ref: "¶16.1"
+    decision: include
+    promises: [clinton-1996-stand-for-peace, clinton-1996-defense-against-terror]
+    note: "Two objects; split."
+  - ref: "¶17.2"
+    decision: include
+    promises: [clinton-1996-reform-politics]
+  - ref: "¶18.2"
+    decision: include
+    promises: [clinton-1996-maintain-prosperity]
+  - ref: "¶19.6"
+    decision: describe
+    note: "Rhetoric (\"we will redeem the promise of America\")."
+  - ref: "¶20.1"
+    decision: describe
+    note: "Pledges effort to the aim of ¶19.6; no object of its own."
+  - ref: "¶21.1"
+    decision: describe
+    note: "Rhetoric; no object."
+  - ref: "¶22.1"
+    decision: describe
+    note: "Rhetoric; no object."
+
+#   12 rows: 4 include, 8 excluded (describe 8)

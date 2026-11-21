@@ -1,0 +1,225 @@
+# Verdicts for Bill Clinton's 1997-2001 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 2001-01-20
+# unless the promise states another.
+#
+# Complete: high 7/7, medium 7/7.
+
+protocol: 1
+verdicts:
+
+  # ---- budget ---------------------------------------------------------------
+
+  - promise: clinton-1996-balance-budget
+    verdict: kept
+    as_of: 2026-11-21
+    summary: The unified budget was in surplus in FY1998 ($69.3bn), FY1999 ($125.6bn) and FY2000 ($236.2bn), the last full fiscal year before the deadline.
+    evidence:
+      - what: Historical Tables, Table 1.1 (surplus or deficit FY1996 -$107.4bn, FY1997 -$21.9bn, FY1998 $69.3bn, FY1999 $125.6bn, FY2000 $236.2bn)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2010-TAB/xls/BUDGET-2010-TAB-1-1.xls
+        publisher: Office of Management and Budget (via GovInfo)
+    uncertainty: { verdict: clear }
+
+  # ---- health and retirement -----------------------------------------------
+
+  - promise: clinton-1996-block-deep-cuts
+    verdict: kept
+    as_of: 2026-11-21
+    summary: The one budget law of the term that cut Medicare and Medicaid, the Balanced Budget Act of 1997, kept Medicaid an entitlement and kept Medicare's defined benefit; no law ending either guarantee was enacted.
+    evidence:
+      - what: Balanced Budget Act of 1997, Pub. L. 105-33, Title IV (Medicare) and Title IV, Subtitle H (Medicaid)
+        url: https://www.govinfo.gov/content/pkg/PLAW-105publ33/pdf/PLAW-105publ33.pdf
+        publisher: GovInfo
+        date: 1997-08-05
+    uncertainty:
+      verdict: probable
+      note: The Act cut provider payments by about $115bn over five years; a reader who counts those cuts as the kind he vetoed in 1995 could call this partly.
+
+  - promise: clinton-1996-medicare-commission
+    verdict: kept
+    as_of: 2026-11-21
+    summary: The Balanced Budget Act of 1997 created the National Bipartisan Commission on the Future of Medicare (section 4021), which met in 1998-1999.
+    evidence:
+      - what: Balanced Budget Act of 1997, Pub. L. 105-33, section 4021 (National Bipartisan Commission on the Future of Medicare)
+        url: https://www.govinfo.gov/content/pkg/PLAW-105publ33/pdf/PLAW-105publ33.pdf
+        publisher: GovInfo
+        date: 1997-08-05
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1996-social-security-fix
+    verdict: broken
+    as_of: 2026-11-21
+    summary: No law changing Social Security benefits or financing was enacted in 1997-2001. He proposed in 1999 to set aside most of the budget surplus for the trust fund; Congress did not pass it.
+    attempt: initiated
+    evidence:
+      - what: 1999 State of the Union, proposing to transfer 62 percent of projected surpluses to Social Security
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-6
+        publisher: The American Presidency Project
+        date: 1999-01-19
+      - what: Social Security Administration, legislative history (no financing law between 1983 and 2001 of the 1983 kind)
+        url: https://www.ssa.gov/history/tally.html
+        publisher: Social Security Administration
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1996-tobacco-children
+    verdict: broken
+    as_of: 2026-11-21
+    summary: The FDA rule of August 1996 was struck down by the Supreme Court in March 2000, which held the FDA had no authority over tobacco; no law restored the restrictions before the deadline.
+    attempt: initiated
+    evidence:
+      - what: FDA final rule restricting the sale and distribution of cigarettes and smokeless tobacco to protect children and adolescents, 61 FR 44396
+        url: https://www.govinfo.gov/content/pkg/FR-1996-08-28/pdf/96-21011.pdf
+        publisher: Federal Register (via GovInfo)
+        date: 1996-08-28
+      - what: FDA v. Brown & Williamson Tobacco Corp., 529 U.S. 120 (2000)
+        url: https://www.law.cornell.edu/supct/html/98-1152.ZS.html
+        publisher: Legal Information Institute, Cornell Law School
+        date: 2000-03-21
+        secondary: true
+    uncertainty:
+      verdict: contested
+      note: He defended the rule all the way to the Supreme Court and backed tobacco legislation in 1998, so a reader who reads "see this effort through" as pursuing it to the end would call it kept.
+
+  # ---- education ------------------------------------------------------------
+
+  - promise: clinton-1996-every-child-reads
+    verdict: broken
+    as_of: 2026-11-21
+    summary: In 2000, 63 percent of 4th graders read at or above NAEP Basic, against 62 percent in 1998; 37 percent were below Basic. The Reading Excellence Act of 1998 funded reading programmes, but nearly all children reading was not reached.
+    attempt: passed-chamber
+    evidence:
+      - what: The Nation's Report Card, Fourth-Grade Reading 2000 (NCES 2001-499), figure 1.4 (at or above Basic 62% in 1992, 60% in 1994, 62% in 1998, 63% in 2000)
+        url: https://nces.ed.gov/nationsreportcard/pdf/main2000/2001499.pdf
+        publisher: National Center for Education Statistics
+    uncertainty: { verdict: clear }
+
+  # ---- welfare --------------------------------------------------------------
+
+  - promise: clinton-1996-welfare-jobs
+    verdict: kept
+    as_of: 2026-11-21
+    summary: By 1999, 6.8 million people had left welfare since 1993, three-quarters of them after the 1996 law, and the Welfare to Work Partnership's firms reported hiring more than a million welfare recipients by 2000.
+    review: "Welfare to Work Partnership (or HHS TANF annual report): number of welfare recipients hired into jobs by end of 2000 (about 1.1 million, from memory)."
+    evidence:
+      - what: Remarks at the National Welfare to Work Forum, Chicago (6.8 million left welfare since 1993; three-quarters after August 1996)
+        url: https://www.presidency.ucsb.edu/documents/opening-remarks-the-national-welfare-work-forum-chicago-illinois
+        publisher: The American Presidency Project
+        date: 1999-08-03
+      - what: 1999 State of the Union (Welfare to Work Partnership of 10,000 companies had hired "hundreds of thousands")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-6
+        publisher: The American Presidency Project
+        date: 1999-01-19
+    uncertainty:
+      verdict: probable
+      note: People leaving welfare are not the same as people hired into new jobs; the verdict rests on the hiring count still to be confirmed.
+
+  # ---- crime ----------------------------------------------------------------
+
+  - promise: clinton-1996-keep-gun-laws
+    verdict: kept
+    as_of: 2026-11-21
+    summary: The Brady Act's checks (permanent through NICS from November 1998) and the 1994 assault weapons ban, which ran until 13 September 2004, were both in force for the whole term.
+    evidence:
+      - what: Violent Crime Control and Law Enforcement Act of 1994, Pub. L. 103-322, Title XI, Subtitle A (assault weapons ban, section 110105 sunset after 10 years)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-108/pdf/STATUTE-108-Pg1796.pdf
+        publisher: GovInfo
+        date: 1994-09-13
+      - what: Brady Handgun Violence Prevention Act, Pub. L. 103-159
+        url: https://www.govinfo.gov/content/pkg/STATUTE-107/pdf/STATUTE-107-Pg1536.pdf
+        publisher: GovInfo
+        date: 1993-11-30
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1996-hundred-thousand-police
+    verdict: partly
+    as_of: 2026-11-21
+    summary: The COPS programme funded its 100,000th officer in 1999, ahead of schedule, but fewer officers than that were actually on the street by January 2001.
+    review: "DOJ COPS Office or DOJ Inspector General: number of COPS-funded officers actually deployed by end of 2000 (well under 100,000, from memory)."
+    evidence:
+      - what: 1999 State of the Union ("This year, we will reach our goal of 100,000 community police officers ahead of schedule and under budget")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-6
+        publisher: The American Presidency Project
+        date: 1999-01-19
+    uncertainty:
+      verdict: contested
+      note: Counted by funded positions, which is how the administration counted, the goal was met and the verdict would be kept.
+
+  # ---- government -----------------------------------------------------------
+
+  - promise: clinton-1996-reform-politics
+    verdict: broken
+    as_of: 2026-11-21
+    summary: No campaign finance reform law was enacted during the term. The Shays-Meehan bill passed the House in 1998 and 1999 but died in the Senate; the McCain-Feingold law came only in March 2002.
+    attempt: passed-chamber
+    evidence:
+      - what: Bipartisan Campaign Reform Act of 1998 (H.R. 2183, 105th Congress), passed the House on 6 August 1998
+        url: https://www.congress.gov/bill/105th-congress/house-bill/2183
+        publisher: Congress.gov
+        date: 1998-08-06
+      - what: Bipartisan Campaign Reform Act of 1999 (H.R. 417, 106th Congress), passed the House on 14 September 1999
+        url: https://www.congress.gov/bill/106th-congress/house-bill/417
+        publisher: Congress.gov
+        date: 1999-09-14
+    uncertainty: { verdict: clear }
+
+  # ---- defense and foreign policy -------------------------------------------
+
+  - promise: clinton-1996-nato-enlargement
+    verdict: kept
+    as_of: 2026-11-21
+    summary: Poland, Hungary and the Czech Republic joined NATO on 12 March 1999, after the Senate approved their accession in April 1998.
+    evidence:
+      - what: NATO, Enlargement and Article 10 (accession of the Czech Republic, Hungary and Poland, 12 March 1999)
+        url: https://www.nato.int/cps/en/natohq/topics_52044.htm
+        publisher: NATO
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1996-weapons-modernization
+    verdict: kept
+    as_of: 2026-11-21
+    summary: Procurement budget authority rose from about $43bn in FY1996 to about $63bn for FY2001, enacted in August 2000, about 45 percent more; for FY2000 alone the rise was about 29 percent.
+    review: "DoD Green Book (National Defense Budget Estimates FY2002), Table 6-8: procurement budget authority FY1996, FY2000 and FY2001 (about $42.6bn, $55bn, $62.6bn, from memory)."
+    evidence:
+      - what: Department of Defense Appropriations Act, 2001, Pub. L. 106-259 (signed 9 August 2000)
+        url: https://www.govinfo.gov/content/pkg/PLAW-106publ259/pdf/PLAW-106publ259.pdf
+        publisher: GovInfo
+        date: 2000-08-09
+      - what: National Defense Budget Estimates for FY2002 (Green Book), procurement budget authority by year
+        url: https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2002/fy2002_greenbook.pdf
+        publisher: Under Secretary of Defense (Comptroller)
+    uncertainty:
+      verdict: contested
+      note: If "by the year 2000" means fiscal 2000 funding, the rise was about 29 percent and the verdict would be partly.
+
+  # ---- aviation security ----------------------------------------------------
+
+  - promise: clinton-1996-bomb-detection
+    verdict: indeterminate
+    as_of: 2026-11-21
+    summary: The FAA bought and installed certified explosives detection machines at large airports from 1997 on, but whether every major airport had them by January 2001 could not be confirmed from a readable record.
+    review: "DOT Inspector General or GAO (e.g. GAO/RCED-00-75): number of certified explosives detection systems installed by airport, and whether all Category X airports had one by end of 2000."
+    evidence:
+      - what: Remarks announcing measures to improve aviation safety and security (field tests of explosive detection machines; plan to bring them to all airports)
+        url: https://www.presidency.ucsb.edu/documents/remarks-announcing-measures-improve-aviation-safety-and-security-jamaica-new-york
+        publisher: The American Presidency Project
+        date: 1996-07-25
+      - what: GAO, Aviation Security, Long-Standing Problems Impair Airport Screeners' Performance (GAO/RCED-00-75)
+        url: https://www.gao.gov/products/rced-00-75
+        publisher: U.S. Government Accountability Office
+        date: 2000-06-28
+    uncertainty:
+      verdict: contested
+      note: Settled once the deployment count is read; kept if every major airport had a certified machine, partly if only some did.
+
+  - promise: clinton-1996-search-every-plane
+    verdict: indeterminate
+    as_of: 2026-11-21
+    summary: In July 1996 he ordered preflight inspections of every plane flying to or from the United States, every cabin and cargo hold, but no readable record shows whether the order held for every flight through the term.
+    review: "FAA security directives or GAO/DOT IG: whether preflight searches of all international flights (cabin and hold) stayed required through 2000."
+    evidence:
+      - what: Remarks announcing measures to improve aviation safety and security ("we will require preflight inspections for any plane flying to or from the United States, every plane, every cabin, every cargo hold, every time")
+        url: https://www.presidency.ucsb.edu/documents/remarks-announcing-measures-improve-aviation-safety-and-security-jamaica-new-york
+        publisher: The American Presidency Project
+        date: 1996-07-25
+    uncertainty:
+      verdict: contested
+      note: Kept if the requirement stayed in force; the record of its enforcement is not public in readable form.

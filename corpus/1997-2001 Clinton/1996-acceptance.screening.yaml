@@ -1,0 +1,154 @@
+# Screening ledger for 1996-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row; rows marked `added` were not
+# matched by the lexicon but state in the future tense, or for a stated
+# future period, what he or his administration will do (PROTOCOL.md §1).
+# Ids shared with the other two ledgers are further occurrences of the same
+# promise.
+#
+# Not candidates: "I propose …" sentences that describe a proposal in the
+# present tense (¶25.1, ¶39.3, ¶59.1-59.2, ¶61.1-61.2, ¶77.5), as "I propose
+# a real prescription drug benefit" in the 2000 debate (Bush ¶23.16), and
+# "I believe … ought to" positions (¶25.2-25.3). ¶81.4 is added because it
+# names a period ("in the next 4 years") and a target, as an intention.
+source: 1996-acceptance
+protocol: 1
+rows:
+  - ref: "¶12.3"
+    decision: include
+    added: true
+    promises: [clinton-1996-campaign-finance]
+    note: "Untriggered; a request for help to get campaign finance reform \"in the next 4 years\". Recorded as an ambition (intention, not a firm commitment)."
+  - { ref: "¶13.6", decision: include, promises: [clinton-1996-hiv-aids] }
+  - ref: "¶17.3-17.4"
+    decision: include
+    promises: [clinton-1996-balance-budget]
+    note: "\"We will do it\" refers to the deficit \"on the way to zero\" (¶17.3); joined."
+  - ref: "¶19.4-19.5"
+    decision: describe
+    note: "Campaign conduct before the election (no personal attacks); not a commitment for the term."
+  - { ref: "¶20.3", decision: describe, note: "Rhetoric (bridge to the future)." }
+  - { ref: "¶20.4", decision: describe, note: "Commits to the bridge of ¶20.3; no object." }
+  - { ref: "¶22.3", decision: describe, note: "Call to act; the tools are not named." }
+  - { ref: "¶22.4", decision: describe, note: "Call to act; no object (\"the basic bargain\")." }
+  - { ref: "¶23.1", decision: include, promises: [clinton-1996-education-bridge] }
+  - { ref: "¶24.2", decision: include, promises: [clinton-1996-universal-college] }
+  - { ref: "¶24.4", decision: include, promises: [clinton-1996-college-tax-cuts] }
+  - { ref: "¶25.4", decision: include, promises: [clinton-1996-no-tax-on-college] }
+  - { ref: "¶25.5", decision: describe, note: "Prediction." }
+  - { ref: "¶26.1", decision: describe, note: "Description of his plan (tax cuts paid for)." }
+  - ref: "¶28.1-28.2"
+    decision: include
+    promises: [clinton-1996-demand-excellence]
+    note: "Two sentences, one commitment (excellence; old and new basics); joined."
+  - { ref: "¶28.4", decision: describe, note: "\"We have to do something\"; the act follows in ¶28.5." }
+  - { ref: "¶28.5", decision: include, promises: [clinton-1996-reading-tutors] }
+  - { ref: "¶29.5", decision: include, promises: [clinton-1996-every-child-reads] }
+  - ref: "¶30.1"
+    decision: include
+    promises: [clinton-1996-public-school-choice, clinton-1996-charter-schools]
+    note: "Two objects; split."
+  - { ref: "¶30.2", decision: include, promises: [clinton-1996-schools-open-late] }
+  - { ref: "¶31.1", decision: include, promises: [clinton-1996-tough-tests] }
+  - { ref: "¶31.3", decision: include, promises: [clinton-1996-reward-teachers] }
+  - { ref: "¶31.5", decision: describe, note: "Rhetoric (\"lift them up\")." }
+  - ref: "¶32.2"
+    decision: include
+    promises: [clinton-1996-school-construction, clinton-1996-connect-classrooms]
+    note: "Matched by \"commitment\"; \"we need\" is soft. Two objects; split."
+  - ref: "¶34.1"
+    decision: include
+    promises: [clinton-1996-homeownership]
+    note: "\"By balancing our budget\" is the means; the budget is covered by the firm promise in ¶17.3-17.4 and ¶35.1."
+  - { ref: "¶35.1", decision: include, promises: [clinton-1996-balance-budget] }
+  - { ref: "¶35.2", decision: include, promises: [clinton-1996-budget-protects-priorities] }
+  - { ref: "¶36.5", decision: include, promises: [clinton-1996-block-deep-cuts] }
+  - ref: "¶36.8"
+    decision: include
+    promises: [clinton-1996-block-deep-cuts]
+    note: "\"It\" is forcing the cuts of ¶36.3 through a shutdown threat (¶36.6); same object as ¶36.5."
+  - { ref: "¶38.1", decision: include, promises: [clinton-1996-cut-waste] }
+  - { ref: "¶38.2", decision: include, promises: [clinton-1996-invest-education-research] }
+  - { ref: "¶39.2", decision: include, promises: [clinton-1996-ira-first-home] }
+  - { ref: "¶39.4", decision: include, promises: [clinton-1996-homeownership] }
+  - ref: "¶41.1"
+    decision: include
+    promises: [clinton-1996-college-tax-cuts, clinton-1996-ira-first-home, clinton-1996-child-credit]
+    note: "Four tax cuts in one list: college (family and returning worker) is a further occurrence of ¶24.4, saving for a home of ¶39.2; the $500 child credit is new. Long-term care savings is part of the same IRA clause."
+  - { ref: "¶42.3", decision: attack }
+  - { ref: "¶49.1", decision: attack, note: "Rhetorical question about the opponent's plan." }
+  - { ref: "¶51.1", decision: attack, note: "Rhetorical question about the opponent's plan." }
+  - { ref: "¶55.2", decision: attack }
+  - { ref: "¶55.3", decision: describe, note: "Rhetoric (\"stay on the right track\")." }
+  - { ref: "¶56.2", decision: others, note: "Responsibility placed on all Americans." }
+  - { ref: "¶56.3", decision: include, promises: [clinton-1996-community-at-work] }
+  - { ref: "¶57.1", decision: describe, note: "Illustrates ¶56.3." }
+  - ref: "¶58.2-58.3"
+    decision: include
+    promises: [clinton-1996-welfare-jobs]
+    note: "\"The jobs\" are quantified in the next sentence; joined."
+  - { ref: "¶59.3", decision: include, promises: [clinton-1996-welfare-community-work] }
+  - { ref: "¶62.3", decision: others, note: "Challenge to business people." }
+  - { ref: "¶62.9", decision: include, promises: [clinton-1996-end-underclass] }
+  - { ref: "¶64.1", decision: include, promises: [clinton-1996-youth-violence] }
+  - { ref: "¶67.1", decision: include, promises: [clinton-1996-brady-domestic-violence] }
+  - { ref: "¶67.2", decision: include, promises: [clinton-1996-ban-cop-killer-bullets] }
+  - { ref: "¶68.1", decision: include, promises: [clinton-1996-victims-rights-amendment] }
+  - { ref: "¶69.9", decision: others, note: "A task for parents and everyone, \"without regard to our party\"." }
+  - { ref: "¶71.1", decision: describe, note: "Introduces ¶71.2-71.3." }
+  - ref: "¶71.2"
+    decision: include
+    promises: [clinton-1996-drug-test-parolees]
+    note: "\"We should say … we will test\": the frame is soft, so an ambition."
+  - { ref: "¶71.3", decision: include, promises: [clinton-1996-racketeering-gangs] }
+  - { ref: "¶71.5", decision: describe, note: "Rhetoric (\"if we're going to build that bridge\")." }
+  - { ref: "¶72.1", decision: include, promises: [clinton-1996-strong-families] }
+  - { ref: "¶74.2", decision: describe, note: "\"We must do more\"; the acts follow in ¶74.3 and ¶74.5." }
+  - { ref: "¶74.3", decision: include, promises: [clinton-1996-extend-family-leave] }
+  - { ref: "¶74.5", decision: include, promises: [clinton-1996-flextime] }
+  - { ref: "¶75.4", decision: include, promises: [clinton-1996-tobacco-children] }
+  - { ref: "¶77.3", decision: describe, note: "Introduces ¶77.4-77.7." }
+  - { ref: "¶77.4", decision: include, promises: [clinton-1996-health-unemployed] }
+  - { ref: "¶77.7", decision: include, promises: [clinton-1996-newborn-stays] }
+  - { ref: "¶78.3", decision: include, promises: [clinton-1996-promote-adoption] }
+  - { ref: "¶80.1", decision: include, promises: [clinton-1996-clean-environment] }
+  - { ref: "¶81.1", decision: describe, note: "\"We must do more\"; the act follows in ¶81.4." }
+  - ref: "¶81.4"
+    decision: include
+    added: true
+    promises: [clinton-1996-toxic-cleanup]
+    note: "Untriggered; \"we propose to\" with a period and a number. Recorded as an ambition (intention)."
+  - { ref: "¶82.1", decision: include, promises: [clinton-1996-attempt-to-pollute] }
+  - { ref: "¶82.2", decision: include, promises: [clinton-1996-freeze-polluter-property] }
+  - { ref: "¶82.3", decision: include, promises: [clinton-1996-right-to-know] }
+  - { ref: "¶82.4", decision: describe, note: "Summarises ¶82.1-82.3." }
+  - ref: "¶83.1"
+    decision: include
+    promises: [clinton-1996-strongest-defense, clinton-1996-values-abroad]
+    note: "Two objects; split."
+  - { ref: "¶85.3", decision: include, promises: [clinton-1996-russia-partnership] }
+  - { ref: "¶85.4", decision: include, promises: [clinton-1996-nato-enlargement] }
+  - { ref: "¶86.2", decision: include, promises: [clinton-1996-open-export-markets] }
+  - ref: "¶87.3"
+    decision: include
+    promises: [clinton-1996-reduce-nuclear-arsenals, clinton-1996-ban-poison-gas, clinton-1996-ban-nuclear-tests]
+    note: "Three objects; split."
+  - ref: "¶88.2"
+    decision: include
+    added: true
+    promises: [clinton-1996-weapons-modernization]
+    note: "Untriggered; \"by the year 2000, we also will have increased\" states what his administration will do."
+  - { ref: "¶88.4", decision: include, promises: [clinton-1996-no-star-wars] }
+  - ref: "¶90.1"
+    decision: include
+    promises: [clinton-1996-antiterror-tools]
+    note: "The tools are listed in ¶90.2 (\"we need new laws\", no trigger)."
+  - { ref: "¶91.1", decision: include, promises: [clinton-1996-airport-security] }
+  - { ref: "¶91.3", decision: include, promises: [clinton-1996-bomb-detection] }
+  - { ref: "¶91.4", decision: include, promises: [clinton-1996-search-every-plane] }
+  - { ref: "¶92.4", decision: include, promises: [clinton-1996-lead-abroad] }
+  - { ref: "¶96.2", decision: describe, note: "Rhetoric; what Americans must be willing to say." }
+  - { ref: "¶99.2", decision: describe, note: "About the election." }
+  - { ref: "¶99.4", decision: describe, note: "About the choice in the election." }
+  - { ref: "¶100.1", decision: describe, note: "Rhetoric; no object." }
+  - { ref: "¶100.3", decision: describe, note: "Rhetoric; no object." }
+  - { ref: "¶100.4", decision: describe, note: "Rhetoric; no object." }

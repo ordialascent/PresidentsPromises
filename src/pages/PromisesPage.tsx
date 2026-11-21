@@ -31,6 +31,8 @@ import {
 } from '../content/promises.generated.js';
 
 const KINDS: Kind[] = ['promise', 'ambition'];
+/** Election year of the oldest term in the corpus (terms are oldest first). */
+const FIRST_ELECTION = CORPUS_TERMS[0].from - 1;
 const KIND_TOTAL: Record<Kind, number> = {
   promise: CORPUS_PROMISE_COUNT,
   ambition: CORPUS_AMBITION_COUNT,
@@ -89,7 +91,7 @@ const FACET_LABEL: Record<Facet, string> = {
 const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(v);
 
 /**
- * Front page: the promises of every president since 2000, as two overview
+ * Front page: the promises of every president in the corpus, as two overview
  * charts and the searchable list beneath them.
  *
  * Every filter belongs to the list and sits in one place: the filter bar under
@@ -193,7 +195,7 @@ export function PromisesPage() {
       <header className="masthead">
         <h1>The Promises Presidents Make</h1>
         <p className="subtitle">
-          A collection of promises from comparable and authoritative sources, starting in 2000,
+          A collection of promises from comparable and authoritative sources, starting in {FIRST_ELECTION},
           categorized by verifiability. <a href="#method">How promises are chosen, rated and judged</a>
         </p>
       </header>
