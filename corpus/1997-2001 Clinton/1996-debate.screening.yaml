@@ -1,0 +1,99 @@
+# Screening ledger for 1996-debate.md (protocol v1).
+# Only Clinton's turns (speaker_label "The President") are screened. Every
+# trigger-matched sentence has a row. Ids shared with the other two ledgers
+# are further occurrences of the same promise; a soft restatement of a firm
+# promise is an occurrence of it.
+#
+# ¶321.3-321.4 list what voters "decide whether we're going to" do on
+# 5 November. Conditionals tied to the election count as firm (PROTOCOL.md
+# §2), so these are promises. Not candidates: ¶117.3 ("I've got a plan …
+# at least a million"), a present-tense description of a plan.
+source: 1996-debate
+protocol: 1
+rows:
+  - { ref: "¶16.2", decision: describe, note: "Debate conduct (ideas, not insults)." }
+  - ref: "¶19.5"
+    decision: include
+    promises: [clinton-1996-balance-budget, clinton-1996-budget-protects-priorities]
+    note: "Soft restatement of the firm acceptance promises (¶35.1, ¶35.2). Two objects; split."
+  - ref: "¶20.1"
+    decision: include
+    promises: [clinton-1996-child-credit, clinton-1996-college-tax-cuts, clinton-1996-ira-first-home]
+    note: "Same targeted tax cuts as acceptance ¶41.1; \"paying for health care\" is not cut out on its own (no object beyond the IRA clause)."
+  - { ref: "¶20.2", decision: include, promises: [clinton-1996-protect-kids], note: "Soft restatement of ¶321.4." }
+  - { ref: "¶20.3", decision: include, promises: [clinton-1996-welfare-jobs], note: "Soft restatement of ¶321.4." }
+  - { ref: "¶20.4", decision: include, promises: [clinton-1996-world-class-education], note: "Soft restatement of ¶321.4." }
+  - { ref: "¶20.6", decision: describe, note: "About the debate." }
+  - { ref: "¶34.8", decision: describe, note: "Rhetoric; no object." }
+  - { ref: "¶41.1", decision: describe, note: "\"I will\" answers the request to explain his plans." }
+  - ref: "¶43.1"
+    decision: include
+    promises: [clinton-1996-insure-children, clinton-1996-state-coverage, clinton-1996-health-unemployed, clinton-1996-protect-hospitals]
+    note: "Four numbered objects; split. Cover people between jobs is a further occurrence of acceptance ¶77.4."
+  - { ref: "¶47.2", decision: include, promises: [clinton-1996-health-unemployed] }
+  - { ref: "¶47.3", decision: include, promises: [clinton-1996-insure-children] }
+  - { ref: "¶47.4", decision: include, promises: [clinton-1996-preventive-care] }
+  - ref: "¶58.1"
+    decision: include
+    promises: [clinton-1996-military-families]
+    note: "\"Do better\" refers to support for military families (¶57.6: child care, housing)."
+  - { ref: "¶58.2", decision: describe }
+  - { ref: "¶68.6", decision: describe, note: "Prediction that the parties will honour their agreements." }
+  - { ref: "¶72.2", decision: others, note: "Quotes the people of Israel." }
+  - { ref: "¶86.3", decision: past }
+  - ref: "¶98.1-98.3"
+    decision: include
+    promises: [clinton-1996-social-security-fix]
+    note: "Three sentences, one commitment (adjustments as in 1983); \"we will do that\" makes it firm. Joined."
+  - ref: "¶100.2"
+    decision: include
+    promises: [clinton-1996-medicare-commission]
+    note: "\"What we're going to do\": a bipartisan group to look at saving Medicare."
+  - { ref: "¶100.3", decision: include, promises: [clinton-1996-medicare-ten-years] }
+  - { ref: "¶104.4", decision: include, promises: [clinton-1996-reform-medicare] }
+  - { ref: "¶118.5", decision: describe, note: "Illustration of the welfare plan (¶117.3, ¶118.6)." }
+  - { ref: "¶126.3", decision: describe, note: "About how he has explained his plan." }
+  - { ref: "¶133.2", decision: describe, note: "Argument about paying for tax cuts." }
+  - { ref: "¶134.4", decision: include, promises: [clinton-1996-balance-budget], note: "Soft restatement of the firm promise." }
+  - { ref: "¶134.5", decision: describe, note: "Campaign conduct (explaining costs)." }
+  - { ref: "¶158.2", decision: include, promises: [clinton-1996-affirmative-action] }
+  - { ref: "¶177.6", decision: describe, note: "About how he has explained his plan." }
+  - { ref: "¶187.2", decision: past }
+  - ref: "¶189.4"
+    decision: include
+    promises: [clinton-1996-extend-family-leave, clinton-1996-flextime]
+    note: "Same two proposals as acceptance ¶74.3 and ¶74.5; split."
+  - { ref: "¶191.2", decision: include, promises: [clinton-1996-strong-families] }
+  - { ref: "¶207.1", decision: attack, note: "About the opponent's tax plan." }
+  - { ref: "¶208.2", decision: describe, note: "Prediction." }
+  - { ref: "¶214.4", decision: describe, note: "Debate conduct." }
+  - { ref: "¶214.6", decision: describe, note: "About the debate." }
+  - { ref: "¶214.10", decision: describe, note: "\"Work on it some more\"; no object." }
+  - { ref: "¶215.1", decision: describe, note: "Debate conduct." }
+  - { ref: "¶224.3", decision: describe, note: "About the debate." }
+  - { ref: "¶248.1", decision: include, promises: [clinton-1996-accessible-elections] }
+  - { ref: "¶249.3", decision: describe, note: "\"I promise you\" asserts a fact; no commitment." }
+  - { ref: "¶250.1", decision: describe, note: "\"Change the nature of politics\"; no object." }
+  - { ref: "¶250.2", decision: describe, note: "Describes a practice he already follows." }
+  - { ref: "¶255.2", decision: describe }
+  - { ref: "¶265.3", decision: include, promises: [clinton-1996-pension-coverage] }
+  - { ref: "¶279.2", decision: include, promises: [clinton-1996-fair-trade] }
+  - { ref: "¶291.3", decision: describe, note: "Sums up past actions (¶291.1-291.2)." }
+  - { ref: "¶298.1", decision: describe }
+  - { ref: "¶301.3", decision: describe, note: "Describes what he has tried to tell Americans." }
+  - { ref: "¶306.1", decision: describe }
+  - { ref: "¶307.5", decision: describe, note: "Debate conduct." }
+  - { ref: "¶318.1", decision: describe }
+  - { ref: "¶318.3", decision: ceremony }
+  - { ref: "¶319.1", decision: describe, note: "About the election." }
+  - { ref: "¶319.2", decision: describe, note: "Rhetorical question about the election." }
+  - { ref: "¶321.2", decision: describe }
+  - ref: "¶321.3"
+    decision: include
+    promises: [clinton-1996-balance-budget, clinton-1996-budget-protects-priorities]
+    note: "Election-conditioned (\"you're going to decide whether we're going to\"); firm. Two objects; split."
+  - ref: "¶321.4"
+    decision: include
+    promises: [clinton-1996-keep-gun-laws, clinton-1996-hundred-thousand-police, clinton-1996-welfare-jobs, clinton-1996-protect-kids, clinton-1996-world-class-education]
+    note: "Election-conditioned; firm. Five objects; split. The welfare-to-work pledge makes acceptance ¶58.2-58.3 an occurrence of a promise."
+  - { ref: "¶322.1", decision: describe, note: "Prediction." }
