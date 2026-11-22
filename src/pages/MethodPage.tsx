@@ -14,6 +14,8 @@ const PROTOCOL_URL = `${REPO}/blob/main/corpus/PROTOCOL.md`;
 const CORPUS_URL = `${REPO}/tree/main/corpus`;
 
 const ROWS = methodRows(CORPUS_TERMS);
+const FIRST = CORPUS_TERMS[0];
+const LAST = CORPUS_TERMS[CORPUS_TERMS.length - 1];
 
 /** When each verdict is given (corpus/PROTOCOL.md §6). */
 const VERDICT_RULE: Record<VerdictValue | 'review', string> = {
@@ -66,6 +68,11 @@ export function MethodPage() {
             has a comparable one. The texts are kept verbatim from{' '}
             <em>The American Presidency Project</em> (UC Santa Barbara), with each sentence numbered,
             so every promise can cite the exact sentence it came from.
+          </p>
+          <p>
+            The collection covers {CORPUS_TERMS.length} terms, from {FIRST.label} ({FIRST.termLabel}) to{' '}
+            {LAST.label} ({LAST.termLabel}). Earlier terms are added one at a time, back to the 1976
+            election, the first since 1960 with televised debates between the nominees.
           </p>
         </section>
 

@@ -127,6 +127,4959 @@ export interface CorpusTerm {
 /** Every term with its aggregated promise set, oldest first. */
 export const CORPUS_TERMS: CorpusTerm[] = [
   {
+    "key": "1997-2001 Clinton",
+    "surname": "Clinton",
+    "from": 1997,
+    "to": 2001,
+    "termLabel": "1997–2001",
+    "speechYear": 1996,
+    "label": "Clinton 1996",
+    "screening": {
+      "include": 86,
+      "others": 4,
+      "past": 2,
+      "describe": 62,
+      "conditional": 0,
+      "attack": 5,
+      "ceremony": 1
+    },
+    "screenedAdded": 3,
+    "promises": [
+      {
+        "id": "clinton-1996-overcome-prejudice",
+        "kind": "promise",
+        "theme": "rights",
+        "restatement": "Overcome racial, religious and political prejudice and replace it with a generous spirit.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1997,
+              "date": "1997-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-12",
+              "label": "1997 inaugural address"
+            },
+            "ref": "¶11.2-11.4",
+            "quote": "We cannot, we will not, succumb to the dark impulses that lurk in the far regions of the soul everywhere. We shall overcome them. And we shall replace them with the generous spirit of a people who feel at home with one another.",
+            "context": "We cannot, we will not, succumb to the dark impulses that lurk in the far regions of the soul everywhere. We shall overcome them. And we shall replace them with the generous spirit of a people who feel at home with one another.",
+            "mark": [
+              0,
+              227
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We\" is the nation, including the government he leads; read as a commitment of both."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-stand-for-peace",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Stand mighty for peace and freedom.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1997,
+              "date": "1997-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-12",
+              "label": "1997 inaugural address"
+            },
+            "ref": "¶16.1",
+            "quote": "We will stand mighty for peace and freedom",
+            "context": "We will stand mighty for peace and freedom and maintain a strong defense against terror and destruction.",
+            "mark": [
+              0,
+              42
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-peace-and-defense",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-defense-against-terror",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Maintain a strong defense against terror and destruction.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1997,
+              "date": "1997-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-12",
+              "label": "1997 inaugural address"
+            },
+            "ref": "¶16.1",
+            "quote": "maintain a strong defense against terror and destruction",
+            "context": "We will stand mighty for peace and freedom and maintain a strong defense against terror and destruction.",
+            "mark": [
+              47,
+              103
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-peace-and-defense",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-reform-politics",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Reform politics so that the people's voice is louder than narrow interests.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1997,
+              "date": "1997-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-12",
+              "label": "1997 inaugural address"
+            },
+            "ref": "¶17.2",
+            "quote": "And in this land of new promise, we will have reformed our politics so that the voice of the people will always speak louder than the din of narrow interests, regaining the participation and deserving the trust of all Americans.",
+            "context": "And in this land of new promise, we will have reformed our politics so that the voice of the people will always speak louder than the din of narrow interests, regaining the participation and deserving the trust of all Americans.",
+            "mark": [
+              0,
+              228
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the law on money in federal politics (campaign finance)",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a campaign finance reform law is enacted",
+            "ambiguity": "The inaugural says \"reformed our politics\" without naming campaign finance; read with the acceptance speech (¶12.3), where the reform still to be done in the next 4 years is campaign finance reform."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The future perfect (\"will have reformed\") sits inside the vision of ¶14-17, but \"we will\" names the government he leads as the actor."
+          },
+          "links": [
+            {
+              "kind": "refines",
+              "to": "clinton-1996-campaign-finance"
+            }
+          ]
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-21",
+          "summary": "No campaign finance reform law was enacted during the term. The Shays-Meehan bill passed the House in 1998 and 1999 but died in the Senate; the McCain-Feingold law came only in March 2002.",
+          "attempt": "passed-chamber",
+          "review": null,
+          "evidence": [
+            {
+              "what": "Bipartisan Campaign Reform Act of 1998 (H.R. 2183, 105th Congress), passed the House on 6 August 1998",
+              "url": "https://www.congress.gov/bill/105th-congress/house-bill/2183",
+              "publisher": "Congress.gov",
+              "date": "1998-08-06",
+              "secondary": false
+            },
+            {
+              "what": "Bipartisan Campaign Reform Act of 1999 (H.R. 417, 106th Congress), passed the House on 14 September 1999",
+              "url": "https://www.congress.gov/bill/106th-congress/house-bill/417",
+              "publisher": "Congress.gov",
+              "date": "1999-09-14",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-hiv-aids",
+        "kind": "promise",
+        "theme": "health",
+        "restatement": "Keep pushing HIV/AIDS treatment until people with it can live normal lives.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶13.6",
+            "quote": "We'll keep going until normal life is returned to people who deal with this.",
+            "context": "We'll keep going until normal life is returned to people who deal with this.",
+            "mark": [
+              0,
+              76
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"This\" refers to HIV and AIDS (¶13.4)."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-balance-budget",
+        "kind": "promise",
+        "theme": "budget",
+        "restatement": "Balance the federal budget.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶17.3-17.4",
+            "quote": "down 60 percent on the way to zero. We will do it.",
+            "context": "And the deficit has come down for 4 years in a row for the first time since before the Civil War, down 60 percent on the way to zero. We will do it.",
+            "mark": [
+              98,
+              148
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶35.1",
+            "quote": "Tonight let us proclaim to the American people, we will balance the budget.",
+            "context": "Tonight let us proclaim to the American people, we will balance the budget.",
+            "mark": [
+              0,
+              75
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶19.5",
+            "quote": "we have to go on and balance this budget",
+            "context": "To me, that means we have to go on and balance this budget while we protect Medicare and Medicaid and education and the environment.",
+            "mark": [
+              18,
+              58
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶134.4",
+            "quote": "That's why we have to balance the budget.",
+            "context": "That's why we have to balance the budget.",
+            "mark": [
+              0,
+              41
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶321.3",
+            "quote": "whether we're going to balance the budget now",
+            "context": "Your responsibility is to show up on November 5th, because you're going to decide whether we're going to balance the budget now but protect Medicare, Medicaid, education, and the environment.",
+            "mark": [
+              82,
+              127
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-budget",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal budget balance (unified deficit or surplus)",
+            "record": "Treasury Final Monthly Treasury Statement / Financial Report (FYFSD); OMB Historical Tables",
+            "criterion": "the federal budget is in balance or surplus in the last full fiscal year of the term (FY2000)",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-21",
+          "summary": "The unified budget was in surplus in FY1998 ($69.3bn), FY1999 ($125.6bn) and FY2000 ($236.2bn), the last full fiscal year before the deadline.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Historical Tables, Table 1.1 (surplus or deficit FY1996 -$107.4bn, FY1997 -$21.9bn, FY1998 $69.3bn, FY1999 $125.6bn, FY2000 $236.2bn)",
+              "url": "https://www.govinfo.gov/content/pkg/BUDGET-2010-TAB/xls/BUDGET-2010-TAB-1-1.xls",
+              "publisher": "Office of Management and Budget (via GovInfo)",
+              "date": null,
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-every-child-reads",
+        "kind": "promise",
+        "theme": "education",
+        "restatement": "Help parents make every child able to read independently by the third grade.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶29.5",
+            "quote": "But we're going to help the parents of this country make every child able to read for himself or herself by the age of 8, by the third grade.",
+            "context": "But we're going to help the parents of this country make every child able to read for himself or herself by the age of 8, by the third grade.",
+            "mark": [
+              0,
+              141
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-reading",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "reading ability of children at the end of third grade",
+            "record": "NAEP 4th-grade reading (NCES)",
+            "criterion": "every child reads independently by the third grade, measured as nearly all 4th graders at or above NAEP Basic",
+            "ambiguity": "\"Able to read for himself\" needs a measure; NAEP 4th-grade Basic is the closest national proxy (no national 3rd-grade test exists)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-21",
+          "summary": "In 2000, 63 percent of 4th graders read at or above NAEP Basic, against 62 percent in 1998; 37 percent were below Basic. The Reading Excellence Act of 1998 funded reading programmes, but nearly all children reading was not reached.",
+          "attempt": "passed-chamber",
+          "review": null,
+          "evidence": [
+            {
+              "what": "The Nation's Report Card, Fourth-Grade Reading 2000 (NCES 2001-499), figure 1.4 (at or above Basic 62% in 1992, 60% in 1994, 62% in 1998, 63% in 2000)",
+              "url": "https://nces.ed.gov/nationsreportcard/pdf/main2000/2001499.pdf",
+              "publisher": "National Center for Education Statistics",
+              "date": null,
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-budget-protects-priorities",
+        "kind": "promise",
+        "theme": "budget",
+        "restatement": "Balance the budget in a way that preserves Medicare, Medicaid, education, the environment and pensions.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶35.2",
+            "quote": "And let us also proclaim, we will do it in a way that preserves Medicare, Medicaid, education, the environment, the integrity of our pensions, the strength of our people.",
+            "context": "And let us also proclaim, we will do it in a way that preserves Medicare, Medicaid, education, the environment, the integrity of our pensions, the strength of our people.",
+            "mark": [
+              0,
+              170
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶19.5",
+            "quote": "while we protect Medicare and Medicaid and education and the environment",
+            "context": "To me, that means we have to go on and balance this budget while we protect Medicare and Medicaid and education and the environment.",
+            "mark": [
+              59,
+              131
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶321.3",
+            "quote": "but protect Medicare, Medicaid, education, and the environment",
+            "context": "Your responsibility is to show up on November 5th, because you're going to decide whether we're going to balance the budget now but protect Medicare, Medicaid, education, and the environment.",
+            "mark": [
+              128,
+              190
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-budget",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-block-deep-cuts",
+        "kind": "promise",
+        "theme": "health",
+        "restatement": "Never let cuts become law that end Medicaid's guarantee of health care or break Medicare's duty to seniors.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶36.5",
+            "quote": "As long as I'm President, I'll never let it happen.",
+            "context": "As long as I'm President, I'll never let it happen.",
+            "mark": [
+              0,
+              51
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶36.8",
+            "quote": "We won't let it happen again.",
+            "context": "We won't let it happen again.",
+            "mark": [
+              0,
+              29
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-budget",
+          "deadline": {
+            "stated": "as long as I'm President",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Medicaid's entitlement guarantee and Medicare's guaranteed benefit, as in the 1995 budget he vetoed",
+            "record": "enacted legislation (Congress.gov); vetoes",
+            "criterion": "no law is enacted during the term that ends Medicaid's guarantee of coverage or turns Medicare's guaranteed benefit into a fixed contribution",
+            "ambiguity": "\"It\" covers cuts that \"devastate\" education and \"pollute\" the environment as well (¶36.3); only the two concrete items, the Medicaid guarantee and Medicare, are checkable."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"It\" refers back to the cuts of ¶36.3 in the 1995 Republican budget."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-21",
+          "summary": "The one budget law of the term that cut Medicare and Medicaid, the Balanced Budget Act of 1997, kept Medicaid an entitlement and kept Medicare's defined benefit; no law ending either guarantee was enacted.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Balanced Budget Act of 1997, Pub. L. 105-33, Title IV (Medicare) and Title IV, Subtitle H (Medicaid)",
+              "url": "https://www.govinfo.gov/content/pkg/PLAW-105publ33/pdf/PLAW-105publ33.pdf",
+              "publisher": "GovInfo",
+              "date": "1997-08-05",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "The Act cut provider payments by about $115bn over five years; a reader who counts those cuts as the kind he vetoed in 1995 could call this partly."
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-welfare-jobs",
+        "kind": "promise",
+        "theme": "welfare",
+        "restatement": "Move a million people from welfare to work by 2000.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶58.2-58.3",
+            "quote": "We must make sure the jobs are there. There should be one million new jobs for welfare recipients by the year 2000.",
+            "context": "We must make sure the jobs are there. There should be one million new jobs for welfare recipients by the year 2000.",
+            "mark": [
+              0,
+              115
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶20.3",
+            "quote": "We ought to help move a million people from welfare to work.",
+            "context": "We ought to help move a million people from welfare to work.",
+            "mark": [
+              0,
+              60
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶321.4",
+            "quote": "whether we're going to move a million people from welfare to work",
+            "context": "You'll decide whether we're going to keep fighting crime with the Brady bill, the assault weapons, and finish putting those 100,000 police; whether we're going to move a million people from welfare to work; whether we're going to give our families more protection for their kids against drugs and tobacco and gangs and guns; whether we're going to give our children world-class education where every 8-year-old can read, every 12-yearold can log in on the Internet, every 18-yearold can go to college.",
+            "mark": [
+              140,
+              205
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-welfare",
+          "deadline": {
+            "stated": "by the year 2000",
+            "applied": "2000-12-31"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "welfare recipients moving into jobs",
+            "record": "HHS TANF reports (recipients employed); Welfare to Work Partnership counts",
+            "criterion": "one million welfare recipients are hired into new jobs by 2000",
+            "ambiguity": "\"New jobs for welfare recipients\" needs a count; the number of recipients entering employment is the proxy."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Firm only in debate ¶321.4, an election-conditioned list (\"you'll decide whether we're going to\"); the other occurrences are soft."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-21",
+          "summary": "By 1999, 6.8 million people had left welfare since 1993, three-quarters of them after the 1996 law, and the Welfare to Work Partnership's firms reported hiring more than a million welfare recipients by 2000.",
+          "attempt": null,
+          "review": "Welfare to Work Partnership (or HHS TANF annual report): number of welfare recipients hired into jobs by end of 2000 (about 1.1 million, from memory).",
+          "evidence": [
+            {
+              "what": "Remarks at the National Welfare to Work Forum, Chicago (6.8 million left welfare since 1993; three-quarters after August 1996)",
+              "url": "https://www.presidency.ucsb.edu/documents/opening-remarks-the-national-welfare-work-forum-chicago-illinois",
+              "publisher": "The American Presidency Project",
+              "date": "1999-08-03",
+              "secondary": false
+            },
+            {
+              "what": "1999 State of the Union (Welfare to Work Partnership of 10,000 companies had hired \"hundreds of thousands\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-6",
+              "publisher": "The American Presidency Project",
+              "date": "1999-01-19",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "People leaving welfare are not the same as people hired into new jobs; the verdict rests on the hiring count still to be confirmed."
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-racketeering-gangs",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Break gangs with the anti-racketeering law used against the mob.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶71.3",
+            "quote": "We will say to gangs: We will break you with the same antiracketeering law we used to put mob bosses in jail.",
+            "context": "We will say to gangs: We will break you with the same antiracketeering law we used to put mob bosses in jail.",
+            "mark": [
+              0,
+              109
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-drugs",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-tobacco-children",
+        "kind": "promise",
+        "theme": "health",
+        "restatement": "See the FDA's effort to curb cigarette advertising and sales to children all the way through.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶75.4",
+            "quote": "I pledge to America's parents that I will see this effort all the way through.",
+            "context": "I pledge to America's parents that I will see this effort all the way through.",
+            "mark": [
+              0,
+              78
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the FDA's 1996 rule restricting cigarette sales and advertising to children",
+            "record": "Federal Register; court rulings; enacted legislation",
+            "criterion": "the restrictions are in force (by the rule or by law) at the end of the term",
+            "ambiguity": "\"See it all the way through\" read as the restrictions taking effect, not only defending them."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-21",
+          "summary": "The FDA rule of August 1996 was struck down by the Supreme Court in March 2000, which held the FDA had no authority over tobacco; no law restored the restrictions before the deadline.",
+          "attempt": "initiated",
+          "review": null,
+          "evidence": [
+            {
+              "what": "FDA final rule restricting the sale and distribution of cigarettes and smokeless tobacco to protect children and adolescents, 61 FR 44396",
+              "url": "https://www.govinfo.gov/content/pkg/FR-1996-08-28/pdf/96-21011.pdf",
+              "publisher": "Federal Register (via GovInfo)",
+              "date": "1996-08-28",
+              "secondary": false
+            },
+            {
+              "what": "FDA v. Brown & Williamson Tobacco Corp., 529 U.S. 120 (2000)",
+              "url": "https://www.law.cornell.edu/supct/html/98-1152.ZS.html",
+              "publisher": "Legal Information Institute, Cornell Law School",
+              "date": "2000-03-21",
+              "secondary": true
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "He defended the rule all the way to the Supreme Court and backed tobacco legislation in 1998, so a reader who reads \"see this effort through\" as pursuing it to the end would call it kept."
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-russia-partnership",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Continue a strong partnership with a democratic Russia.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶85.3",
+            "quote": "And I will continue our strong partnership with a democratic Russia.",
+            "context": "And I will continue our strong partnership with a democratic Russia.",
+            "mark": [
+              0,
+              68
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-nato-enlargement",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Bring some of Central Europe's new democracies into NATO.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶85.4",
+            "quote": "And we will bring some of Central Europe's new democracies into NATO so that they will never question their own freedom in the future.",
+            "context": "And we will bring some of Central Europe's new democracies into NATO so that they will never question their own freedom in the future.",
+            "mark": [
+              0,
+              134
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "NATO membership of Central European states",
+            "record": "NATO accession records; Senate treaty ratification",
+            "criterion": "at least two Central European democracies become NATO members by the end of the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-21",
+          "summary": "Poland, Hungary and the Czech Republic joined NATO on 12 March 1999, after the Senate approved their accession in April 1998.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "NATO, Enlargement and Article 10 (accession of the Czech Republic, Hungary and Poland, 12 March 1999)",
+              "url": "https://www.nato.int/cps/en/natohq/topics_52044.htm",
+              "publisher": "NATO",
+              "date": null,
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-weapons-modernization",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Raise weapons modernization funding by 40 percent by 2000.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶88.2",
+            "quote": "By the year 2000, we also will have increased funding to modernize our weapons systems by 40 percent.",
+            "context": "By the year 2000, we also will have increased funding to modernize our weapons systems by 40 percent.",
+            "mark": [
+              0,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "by the year 2000",
+            "applied": "2000-12-31"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Defense Department procurement budget authority",
+            "record": "DoD National Defense Budget Estimates (Green Book)",
+            "criterion": "procurement funding for fiscal 2000 is at least 40 percent above fiscal 1996",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The base year is not stated; fiscal 1996 (the year of the speech) is used."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-21",
+          "summary": "Procurement budget authority rose from about $43bn in FY1996 to about $63bn for FY2001, enacted in August 2000, about 45 percent more; for FY2000 alone the rise was about 29 percent.",
+          "attempt": null,
+          "review": "DoD Green Book (National Defense Budget Estimates FY2002), Table 6-8: procurement budget authority FY1996, FY2000 and FY2001 (about $42.6bn, $55bn, $62.6bn, from memory).",
+          "evidence": [
+            {
+              "what": "Department of Defense Appropriations Act, 2001, Pub. L. 106-259 (signed 9 August 2000)",
+              "url": "https://www.govinfo.gov/content/pkg/PLAW-106publ259/pdf/PLAW-106publ259.pdf",
+              "publisher": "GovInfo",
+              "date": "2000-08-09",
+              "secondary": false
+            },
+            {
+              "what": "National Defense Budget Estimates for FY2002 (Green Book), procurement budget authority by year",
+              "url": "https://comptroller.defense.gov/Portals/45/Documents/defbudget/fy2002/fy2002_greenbook.pdf",
+              "publisher": "Under Secretary of Defense (Comptroller)",
+              "date": null,
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "If \"by the year 2000\" means fiscal 2000 funding, the rise was about 29 percent and the verdict would be partly."
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-airport-security",
+        "kind": "promise",
+        "theme": "infrastructure",
+        "restatement": "Improve airport and air travel security.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶91.1",
+            "quote": "Third, we will improve airport and air travel security.",
+            "context": "Third, we will improve airport and air travel security.",
+            "mark": [
+              0,
+              55
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-bomb-detection",
+        "kind": "promise",
+        "theme": "infrastructure",
+        "restatement": "Install the most advanced bomb-detection equipment in all major airports.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶91.3",
+            "quote": "But now we will install the most sophisticated bomb-detection equipment in all our major airports.",
+            "context": "But now we will install the most sophisticated bomb-detection equipment in all our major airports.",
+            "mark": [
+              0,
+              98
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "FAA-certified explosives detection systems at major airports",
+            "record": "FAA and GAO/DOT Inspector General reports on deployment",
+            "criterion": "certified explosives detection equipment is installed at all major (Category X and I) airports",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "indeterminate",
+          "asOf": "2026-11-21",
+          "summary": "The FAA bought and installed certified explosives detection machines at large airports from 1997 on, but whether every major airport had them by January 2001 could not be confirmed from a readable record.",
+          "attempt": null,
+          "review": "DOT Inspector General or GAO (e.g. GAO/RCED-00-75): number of certified explosives detection systems installed by airport, and whether all Category X airports had one by end of 2000.",
+          "evidence": [
+            {
+              "what": "Remarks announcing measures to improve aviation safety and security (field tests of explosive detection machines; plan to bring them to all airports)",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-announcing-measures-improve-aviation-safety-and-security-jamaica-new-york",
+              "publisher": "The American Presidency Project",
+              "date": "1996-07-25",
+              "secondary": false
+            },
+            {
+              "what": "GAO, Aviation Security, Long-Standing Problems Impair Airport Screeners' Performance (GAO/RCED-00-75)",
+              "url": "https://www.gao.gov/products/rced-00-75",
+              "publisher": "U.S. Government Accountability Office",
+              "date": "2000-06-28",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "Settled once the deployment count is read; kept if every major airport had a certified machine, partly if only some did."
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-search-every-plane",
+        "kind": "promise",
+        "theme": "infrastructure",
+        "restatement": "Search every international flight to or from the U.S., every cargo hold and cabin, every time.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶91.4",
+            "quote": "We will search every airplane flying to or from America from another nation, every flight, every cargo hold, every cabin, every time.",
+            "context": "We will search every airplane flying to or from America from another nation, every flight, every cargo hold, every cabin, every time.",
+            "mark": [
+              0,
+              133
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "security searches of international flights",
+            "record": "FAA security directives; GAO and DOT Inspector General reports",
+            "criterion": "every flight to or from the U.S. from another nation is searched, cargo hold and cabin, every time",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "indeterminate",
+          "asOf": "2026-11-21",
+          "summary": "In July 1996 he ordered preflight inspections of every plane flying to or from the United States, every cabin and cargo hold, but no readable record shows whether the order held for every flight through the term.",
+          "attempt": null,
+          "review": "FAA security directives or GAO/DOT IG: whether preflight searches of all international flights (cabin and hold) stayed required through 2000.",
+          "evidence": [
+            {
+              "what": "Remarks announcing measures to improve aviation safety and security (\"we will require preflight inspections for any plane flying to or from the United States, every plane, every cabin, every cargo hold, every time\")",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-announcing-measures-improve-aviation-safety-and-security-jamaica-new-york",
+              "publisher": "The American Presidency Project",
+              "date": "1996-07-25",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "Kept if the requirement stayed in force; the record of its enforcement is not public in readable form."
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-protect-kids",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Give families more protection for their children against drugs, tobacco, gangs and guns.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶20.2",
+            "quote": "We ought to help protect our kids from drugs and guns and gangs and tobacco.",
+            "context": "We ought to help protect our kids from drugs and guns and gangs and tobacco.",
+            "mark": [
+              0,
+              76
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶321.4",
+            "quote": "whether we're going to give our families more protection for their kids against drugs and tobacco and gangs and guns",
+            "context": "You'll decide whether we're going to keep fighting crime with the Brady bill, the assault weapons, and finish putting those 100,000 police; whether we're going to move a million people from welfare to work; whether we're going to give our families more protection for their kids against drugs and tobacco and gangs and guns; whether we're going to give our children world-class education where every 8-year-old can read, every 12-yearold can log in on the Internet, every 18-yearold can go to college.",
+            "mark": [
+              207,
+              323
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-world-class-education",
+        "kind": "promise",
+        "theme": "education",
+        "restatement": "Give children a world-class education: every 8-year-old reading, every 12-year-old online, every 18-year-old able to go to college.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶20.4",
+            "quote": "And we ought to create the finest education system in the world, where every 18-year-old can go on to college and all of our younger children have great educational opportunities.",
+            "context": "And we ought to create the finest education system in the world, where every 18-year-old can go on to college and all of our younger children have great educational opportunities.",
+            "mark": [
+              0,
+              179
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶321.4",
+            "quote": "whether we're going to give our children world-class education where every 8-year-old can read, every 12-yearold can log in on the Internet, every 18-yearold can go to college",
+            "context": "You'll decide whether we're going to keep fighting crime with the Brady bill, the assault weapons, and finish putting those 100,000 police; whether we're going to move a million people from welfare to work; whether we're going to give our families more protection for their kids against drugs and tobacco and gangs and guns; whether we're going to give our children world-class education where every 8-year-old can read, every 12-yearold can log in on the Internet, every 18-yearold can go to college.",
+            "mark": [
+              325,
+              500
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-military-families",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Do more for military families (child care, housing).",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶58.1",
+            "quote": "So we're going to do better, and we'll do better still.",
+            "context": "So we're going to do better, and we'll do better still.",
+            "mark": [
+              0,
+              55
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The object comes from ¶57.6 (child care, housing and support for military families)."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-social-security-fix",
+        "kind": "promise",
+        "theme": "retirement",
+        "restatement": "Make modest changes to Social Security, as in 1983, so it lasts for the baby boomers.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶98.1-98.3",
+            "quote": "What we have to do is simply to make some adjustments that take account of the fact that the baby boomers, people like me, are bigger in number than the people that went just before us and the people that come just after us. And I think what we'll plainly do is what we did in 1983, when Senator Dole served—and this is something I think he did a good job on— when he served on the Social Security Commission and they made some modest changes in Social Security to make sure that it would be alive and well into the 21st century. And we will do that.",
+            "context": "What we have to do is simply to make some adjustments that take account of the fact that the baby boomers, people like me, are bigger in number than the people that went just before us and the people that come just after us. And I think what we'll plainly do is what we did in 1983, when Senator Dole served—and this is something I think he did a good job on— when he served on the Social Security Commission and they made some modest changes in Social Security to make sure that it would be alive and well into the 21st century. And we will do that.",
+            "mark": [
+              0,
+              550
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Social Security financing (benefits or taxes)",
+            "record": "enacted legislation (Congress.gov); Social Security Trustees Reports",
+            "criterion": "a law is enacted that changes Social Security benefits or financing to extend the trust fund's life",
+            "ambiguity": "\"Modest changes\" is not specified; any enacted change that lengthens solvency counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-21",
+          "summary": "No law changing Social Security benefits or financing was enacted in 1997-2001. He proposed in 1999 to set aside most of the budget surplus for the trust fund; Congress did not pass it.",
+          "attempt": "initiated",
+          "review": null,
+          "evidence": [
+            {
+              "what": "1999 State of the Union, proposing to transfer 62 percent of projected surpluses to Social Security",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-6",
+              "publisher": "The American Presidency Project",
+              "date": "1999-01-19",
+              "secondary": false
+            },
+            {
+              "what": "Social Security Administration, legislative history (no financing law between 1983 and 2001 of the 1983 kind)",
+              "url": "https://www.ssa.gov/history/tally.html",
+              "publisher": "Social Security Administration",
+              "date": null,
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-medicare-commission",
+        "kind": "promise",
+        "theme": "health",
+        "restatement": "Set up a bipartisan group to work out how to save Medicare for the baby boomers.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶100.2",
+            "quote": "Then that will give us 10 years to do with Medicare what we're going to do with Social Security: have a bipartisan group look at what we have to do to save it when the baby boomers retire.",
+            "context": "Then that will give us 10 years to do with Medicare what we're going to do with Social Security: have a bipartisan group look at what we have to do to save it when the baby boomers retire.",
+            "mark": [
+              0,
+              188
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-medicare",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "a bipartisan commission on Medicare's future",
+            "record": "enacted legislation (Congress.gov); commission records",
+            "criterion": "a bipartisan commission on Medicare's long-term future is created",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-21",
+          "summary": "The Balanced Budget Act of 1997 created the National Bipartisan Commission on the Future of Medicare (section 4021), which met in 1998-1999.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Balanced Budget Act of 1997, Pub. L. 105-33, section 4021 (National Bipartisan Commission on the Future of Medicare)",
+              "url": "https://www.govinfo.gov/content/pkg/PLAW-105publ33/pdf/PLAW-105publ33.pdf",
+              "publisher": "GovInfo",
+              "date": "1997-08-05",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-keep-gun-laws",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Keep the Brady law and the assault weapons ban.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶321.4",
+            "quote": "You'll decide whether we're going to keep fighting crime with the Brady bill, the assault weapons",
+            "context": "You'll decide whether we're going to keep fighting crime with the Brady bill, the assault weapons, and finish putting those 100,000 police; whether we're going to move a million people from welfare to work; whether we're going to give our families more protection for their kids against drugs and tobacco and gangs and guns; whether we're going to give our children world-class education where every 8-year-old can read, every 12-yearold can log in on the Internet, every 18-yearold can go to college.",
+            "mark": [
+              0,
+              97
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-guns",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "the Brady Act background checks and the 1994 assault weapons ban",
+            "record": "U.S. Code; enacted legislation (Congress.gov)",
+            "criterion": "both laws stay in force for the whole term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Election-conditioned list; \"the assault weapons\" is read as the 1994 ban (acceptance ¶15.4)."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-21",
+          "summary": "The Brady Act's checks (permanent through NICS from November 1998) and the 1994 assault weapons ban, which ran until 13 September 2004, were both in force for the whole term.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Violent Crime Control and Law Enforcement Act of 1994, Pub. L. 103-322, Title XI, Subtitle A (assault weapons ban, section 110105 sunset after 10 years)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-108/pdf/STATUTE-108-Pg1796.pdf",
+              "publisher": "GovInfo",
+              "date": "1994-09-13",
+              "secondary": false
+            },
+            {
+              "what": "Brady Handgun Violence Prevention Act, Pub. L. 103-159",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-107/pdf/STATUTE-107-Pg1536.pdf",
+              "publisher": "GovInfo",
+              "date": "1993-11-30",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1996-hundred-thousand-police",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Finish putting 100,000 more police on the streets.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶321.4",
+            "quote": "and finish putting those 100,000 police",
+            "context": "You'll decide whether we're going to keep fighting crime with the Brady bill, the assault weapons, and finish putting those 100,000 police; whether we're going to move a million people from welfare to work; whether we're going to give our families more protection for their kids against drugs and tobacco and gangs and guns; whether we're going to give our children world-class education where every 8-year-old can read, every 12-yearold can log in on the Internet, every 18-yearold can go to college.",
+            "mark": [
+              99,
+              138
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "officers funded under the COPS programme (1994 crime law)",
+            "record": "Justice Department COPS Office reports; GAO and DOJ Inspector General audits",
+            "criterion": "100,000 additional officers are funded and deployed by the end of the term",
+            "ambiguity": "\"Putting … police\" read as officers funded and on the street; COPS counts funded positions, which differ from officers deployed."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Election-conditioned list (\"you'll decide whether we're going to\")."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "partly",
+          "asOf": "2026-11-21",
+          "summary": "The COPS programme funded its 100,000th officer in 1999, ahead of schedule, but fewer officers than that were actually on the street by January 2001.",
+          "attempt": null,
+          "review": "DOJ COPS Office or DOJ Inspector General: number of COPS-funded officers actually deployed by end of 2000 (well under 100,000, from memory).",
+          "evidence": [
+            {
+              "what": "1999 State of the Union (\"This year, we will reach our goal of 100,000 community police officers ahead of schedule and under budget\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-6",
+              "publisher": "The American Presidency Project",
+              "date": "1999-01-19",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "Counted by funded positions, which is how the administration counted, the goal was met and the verdict would be kept."
+          }
+        }
+      }
+    ],
+    "ambitions": [
+      {
+        "id": "clinton-1996-maintain-prosperity",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Maintain America's prosperity and power.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1997,
+              "date": "1997-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-12",
+              "label": "1997 inaugural address"
+            },
+            "ref": "¶18.2",
+            "quote": "Prosperity and power, yes, they are important, and we must maintain them.",
+            "context": "Prosperity and power, yes, they are important, and we must maintain them.",
+            "mark": [
+              0,
+              73
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-campaign-finance",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Get campaign finance reform passed in the next four years.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶12.3",
+            "quote": "Will you help me get campaign finance reform in the next 4 years?",
+            "context": "Will you help me get campaign finance reform in the next 4 years?",
+            "mark": [
+              0,
+              65
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "in the next 4 years",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal campaign finance law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a campaign finance reform law is enacted by the end of the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Phrased as a question to the audience; read as his intention."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-education-bridge",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Expand opportunity through education: computers in every classroom, highly trained teachers, every 8-year-old reading.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶23.1",
+            "quote": "I want to build a bridge to the 21st century in which we expand opportunity through education, where computers are as much a part of the classroom as blackboards, where highly trained teachers demand peak performance from our students, where every 8-year-old can point to a book and say, \"I can read it myself.\"",
+            "context": "I want to build a bridge to the 21st century in which we expand opportunity through education, where computers are as much a part of the classroom as blackboards, where highly trained teachers demand peak performance from our students, where every 8-year-old can point to a book and say, \"I can read it myself.\"",
+            "mark": [
+              0,
+              311
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-universal-college",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Within four years, make two years of college as universal as high school.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶24.2",
+            "quote": "We must make 2 years of college just as universal in 4 years as a high school education is today.",
+            "context": "We must make 2 years of college just as universal in 4 years as a high school education is today.",
+            "mark": [
+              0,
+              97
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "in 4 years",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "share of young adults completing two years of college",
+            "record": "Census CPS educational attainment; NCES Digest",
+            "criterion": "the share of young adults with at least two years of college reaches the high-school completion rate of 1996",
+            "ambiguity": "\"As universal as\" needs a measure; the completion rates for ages 25-29 are the proxy."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-college-tax-cuts",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Cut taxes for families paying for college and workers returning to college.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶24.4",
+            "quote": "We can do it, and we should cut taxes to do it.",
+            "context": "We can do it, and we should cut taxes to do it.",
+            "mark": [
+              0,
+              47
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶41.1",
+            "quote": "We should cut taxes for the family sending a child to college, for the worker returning to college",
+            "context": "We should cut taxes for the family sending a child to college, for the worker returning to college, for the family saving to buy a home or for long-term health care, and a $500-perchild credit for middle income families raising their children who need help with child care and what the children will do after school.",
+            "mark": [
+              0,
+              98
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶20.1",
+            "quote": "a tax cut targeted to childrearing and education",
+            "context": "We should give a tax cut targeted to childrearing and education, to buying a first home and paying for health care.",
+            "mark": [
+              15,
+              63
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-tax-cuts",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal tax credit or deduction for college costs",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a tax cut for college tuition costs is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-no-tax-on-college",
+        "kind": "ambition",
+        "theme": "taxes",
+        "restatement": "Stop taxing middle-income Americans on money they spend on college.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶25.4",
+            "quote": "We should not tax middle income Americans for the money they spend on college.",
+            "context": "We should not tax middle income Americans for the money they spend on college.",
+            "mark": [
+              0,
+              78
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-tax-cuts",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "income tax treatment of college spending",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "middle-income families can deduct or credit their college spending",
+            "ambiguity": "\"Not tax\" read as a deduction or credit for tuition; ¶25.2 names a deduction of up to $10,000."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-demand-excellence",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Demand excellence at every level of education, old basics and new.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶28.1-28.2",
+            "quote": "But we must demand excellence at every level of education. We must insist that our students learn the old basics we learned and the new basics they have to know for the next century.",
+            "context": "But we must demand excellence at every level of education. We must insist that our students learn the old basics we learned and the new basics they have to know for the next century.",
+            "mark": [
+              0,
+              182
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-reading-tutors",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Send 30,000 reading specialists and national service members to mobilize one million reading tutors.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶28.5",
+            "quote": "I want to send 30,000 reading specialists and national service corps members to mobilize a volunteer army of one million reading tutors for third graders all across America.",
+            "context": "I want to send 30,000 reading specialists and national service corps members to mobilize a volunteer army of one million reading tutors for third graders all across America.",
+            "mark": [
+              0,
+              173
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-reading",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federally funded reading specialists and national service members (America Reads)",
+            "record": "appropriations acts; Corporation for National Service and Education Department reports",
+            "criterion": "30,000 reading specialists and national service members are funded and sent, and one million tutors mobilized",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-public-school-choice",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Give all parents the right to choose their children's public school.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶30.1",
+            "quote": "We must give parents, all parents, the right to choose which public school their children will attend",
+            "context": "We must give parents, all parents, the right to choose which public school their children will attend and to let teachers form new charter schools with a charter they can keep only if they do a good job.",
+            "mark": [
+              0,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-school-choice",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-charter-schools",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Let teachers form charter schools that keep their charter only if they perform.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶30.1",
+            "quote": "to let teachers form new charter schools with a charter they can keep only if they do a good job",
+            "context": "We must give parents, all parents, the right to choose which public school their children will attend and to let teachers form new charter schools with a charter they can keep only if they do a good job.",
+            "mark": [
+              106,
+              202
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-school-choice",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal support for charter schools",
+            "record": "enacted legislation and appropriations (Congress.gov); Education Department charter school data",
+            "criterion": "federal law or funding expands charter schools with performance-based renewal",
+            "ambiguity": "Charters are granted by states; read as federal support for charter schools."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-schools-open-late",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Keep schools open late for young people.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶30.2",
+            "quote": "We must keep our schools open late so that young people have someplace to go and something to say yes to and stay off the street.",
+            "context": "We must keep our schools open late so that young people have someplace to go and something to say yes to and stay off the street.",
+            "mark": [
+              0,
+              129
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal funding for after-school programmes",
+            "record": "appropriations acts (21st Century Community Learning Centers)",
+            "criterion": "federal funding for after-school programmes in schools is provided",
+            "ambiguity": "No scale is named; any federal funding of after-school programmes counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-tough-tests",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Require students to pass tough tests to move up in school.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶31.1",
+            "quote": "We must require that our students pass tough tests to keep moving up in school.",
+            "context": "We must require that our students pass tough tests to keep moving up in school.",
+            "mark": [
+              0,
+              79
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-reward-teachers",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Reward good teachers and remove those who don't measure up.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶31.3",
+            "quote": "We should reward teachers that are doing a good job, remove those who don't measure up",
+            "context": "We should reward teachers that are doing a good job, remove those who don't measure up, but in every case, never forget that none of us would be here tonight if it weren't for our teachers.",
+            "mark": [
+              0,
+              86
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-school-construction",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Commit federal money to rebuild and modernize schools.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶32.2",
+            "quote": "We need schools that are rebuilt and modernized with an unprecedented commitment from the National Government to increase school construction",
+            "context": "We need schools that are rebuilt and modernized with an unprecedented commitment from the National Government to increase school construction and with every single library and classroom in America connected to the information superhighway by the year 2000.",
+            "mark": [
+              0,
+              141
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-schools",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal school construction funding",
+            "record": "enacted legislation and appropriations (Congress.gov)",
+            "criterion": "a federal school construction or modernization programme is enacted",
+            "ambiguity": "\"Unprecedented\" is not quantified; any new federal school construction programme counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-connect-classrooms",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Connect every library and classroom to the Internet by 2000.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶32.2",
+            "quote": "with every single library and classroom in America connected to the information superhighway by the year 2000",
+            "context": "We need schools that are rebuilt and modernized with an unprecedented commitment from the National Government to increase school construction and with every single library and classroom in America connected to the information superhighway by the year 2000.",
+            "mark": [
+              146,
+              255
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-schools",
+          "deadline": {
+            "stated": "by the year 2000",
+            "applied": "2000-12-31"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Internet access in public school classrooms and libraries",
+            "record": "NCES Internet Access in U.S. Public Schools and Classrooms; NCLIS library surveys",
+            "criterion": "every public school classroom and public library is connected to the Internet by 2000",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-homeownership",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Make it possible for every family to own a home.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶34.1",
+            "quote": "ensuring that every family will be able to own and protect the value of their most important asset, their home",
+            "context": "I want to build a bridge to the 21st century in which we create a strong and growing economy to preserve the legacy of opportunity for the next generation, by balancing our budget in a way that protects our values and ensuring that every family will be able to own and protect the value of their most important asset, their home.",
+            "mark": [
+              218,
+              328
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶39.4",
+            "quote": "I want every American to be able to hear those beautiful words, \"Welcome home.\"",
+            "context": "I want every American to be able to hear those beautiful words, \"Welcome home.\"",
+            "mark": [
+              0,
+              79
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-cut-waste",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Balance the budget with real cuts in government waste.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶38.1",
+            "quote": "I want to balance the budget with real cuts in Government, in waste.",
+            "context": "I want to balance the budget with real cuts in Government, in waste.",
+            "mark": [
+              0,
+              68
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-budget",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-invest-education-research",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Invest in education, technology and research.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶38.2",
+            "quote": "I want a plan that invests in education, as mine does, in technology, and yes, in research",
+            "context": "I want a plan that invests in education, as mine does, in technology, and yes, in research, as Christopher Reeve so powerfully reminded us we must do.",
+            "mark": [
+              0,
+              90
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-ira-first-home",
+        "kind": "ambition",
+        "theme": "taxes",
+        "restatement": "Expand IRAs so people can save tax-free for a first home.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶39.2",
+            "quote": "I want to expand IRA's so that young people can save tax-free to buy a first home.",
+            "context": "I want to expand IRA's so that young people can save tax-free to buy a first home.",
+            "mark": [
+              0,
+              82
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶41.1",
+            "quote": "for the family saving to buy a home or for long-term health care",
+            "context": "We should cut taxes for the family sending a child to college, for the worker returning to college, for the family saving to buy a home or for long-term health care, and a $500-perchild credit for middle income families raising their children who need help with child care and what the children will do after school.",
+            "mark": [
+              100,
+              164
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶20.1",
+            "quote": "to buying a first home",
+            "context": "We should give a tax cut targeted to childrearing and education, to buying a first home and paying for health care.",
+            "mark": [
+              65,
+              87
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-tax-cuts",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "IRA rules for first-home purchases",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law lets IRA savings be used tax- or penalty-free for a first home",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-child-credit",
+        "kind": "ambition",
+        "theme": "taxes",
+        "restatement": "Enact a $500-per-child tax credit for middle-income families.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶41.1",
+            "quote": "a $500-perchild credit for middle income families raising their children",
+            "context": "We should cut taxes for the family sending a child to college, for the worker returning to college, for the family saving to buy a home or for long-term health care, and a $500-perchild credit for middle income families raising their children who need help with child care and what the children will do after school.",
+            "mark": [
+              170,
+              242
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶20.1",
+            "quote": "We should give a tax cut targeted to childrearing",
+            "context": "We should give a tax cut targeted to childrearing and education, to buying a first home and paying for health care.",
+            "mark": [
+              0,
+              49
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-tax-cuts",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal child tax credit",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a $500-per-child tax credit for middle-income families is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-community-at-work",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Make sure every child grows up in a community where people work.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶56.3",
+            "quote": "I want our Nation to take responsibility to make sure that every single child can look out the window in the morning and see a whole community getting up and going to work.",
+            "context": "I want our Nation to take responsibility to make sure that every single child can look out the window in the morning and see a whole community getting up and going to work.",
+            "mark": [
+              0,
+              172
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-welfare-community-work",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Help communities put welfare recipients to work on local projects now.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶59.3",
+            "quote": "And more important, I want to help communities put welfare recipients to work right now, without delay, repairing schools, making their neighborhoods clean and safe, making them shine again.",
+            "context": "And more important, I want to help communities put welfare recipients to work right now, without delay, repairing schools, making their neighborhoods clean and safe, making them shine again.",
+            "mark": [
+              0,
+              190
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-welfare",
+          "deadline": {
+            "stated": "right now, without delay",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-end-underclass",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "End the permanent underclass and lift up the poor.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶62.9",
+            "quote": "I want to build a bridge to the 21st century that ends the permanent under class, that lifts up the poor and ends their isolation, their exile.",
+            "context": "I want to build a bridge to the 21st century that ends the permanent under class, that lifts up the poor and ends their isolation, their exile.",
+            "mark": [
+              0,
+              143
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-welfare",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-youth-violence",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "End violence by and against children.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶64.1",
+            "quote": "I want to build a bridge to the 21st century where our children are not killing other children anymore, where children's lives are not shattered by violence at home or in the schoolyard",
+            "context": "I want to build a bridge to the 21st century where our children are not killing other children anymore, where children's lives are not shattered by violence at home or in the schoolyard, where a generation of young people are not left to raise themselves on the streets.",
+            "mark": [
+              0,
+              185
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-brady-domestic-violence",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "Extend the Brady law to bar people who committed domestic violence from buying guns.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶67.1",
+            "quote": "But now I say we should extend the Brady bill, because anyone who has committed an act of domestic violence against a spouse or a child should not buy a gun.",
+            "context": "But now I say we should extend the Brady bill, because anyone who has committed an act of domestic violence against a spouse or a child should not buy a gun.",
+            "mark": [
+              0,
+              157
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-guns",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal gun purchase ban for domestic violence offenders",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law bars people convicted of domestic violence from buying guns",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-ban-cop-killer-bullets",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "Ban armor-piercing (cop-killer) bullets.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶67.2",
+            "quote": "And we must ban those cop-killer bullets.",
+            "context": "And we must ban those cop-killer bullets.",
+            "mark": [
+              0,
+              41
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-guns",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal ban on armor-piercing ammunition",
+            "record": "enacted legislation (Congress.gov); ATF rules",
+            "criterion": "a new law or rule bans armor-piercing bullets beyond the existing 1986 ban",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-victims-rights-amendment",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "Pass a victims' rights amendment to the Constitution.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶68.1",
+            "quote": "We should pass a victims' rights constitutional amendment because victims deserve to be heard",
+            "context": "We should pass a victims' rights constitutional amendment because victims deserve to be heard; they need to know when an assailant is released.",
+            "mark": [
+              0,
+              93
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "a victims' rights amendment to the Constitution",
+            "record": "Congress.gov (joint resolutions)",
+            "criterion": "Congress passes a victims' rights constitutional amendment and sends it to the states",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-drug-test-parolees",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "Drug-test parolees and send those who use drugs back to jail.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶71.2",
+            "quote": "We should say to parolees: We will test you for drugs; if you go back on them, we will send you back to jail.",
+            "context": "We should say to parolees: We will test you for drugs; if you go back on them, we will send you back to jail.",
+            "mark": [
+              0,
+              109
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-drugs",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "drug testing of parolees",
+            "record": "enacted legislation (Congress.gov); Justice Department rules",
+            "criterion": "a federal law or rule requires drug testing of parolees, with revocation for drug use",
+            "ambiguity": "Most parolees are under state supervision; read as a federal requirement or a condition on federal prison funds."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-strong-families",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Build strong families, where children are protected and parents succeed at home and at work.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶72.1",
+            "quote": "I want to build a bridge to the 21st century with a strong American community, beginning with strong families, an America where all children are cherished and protected from destructive forces, where parents can succeed at home and at work.",
+            "context": "I want to build a bridge to the 21st century with a strong American community, beginning with strong families, an America where all children are cherished and protected from destructive forces, where parents can succeed at home and at work.",
+            "mark": [
+              0,
+              240
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶191.2",
+            "quote": "We have to help people succeed at home and at work.",
+            "context": "We have to help people succeed at home and at work.",
+            "mark": [
+              0,
+              51
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-extend-family-leave",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Extend family and medical leave to doctor's appointments and parent-teacher conferences.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶74.3",
+            "quote": "We should extend the family and medical leave law to give parents some time off to take their children to regular doctor's appointments or attend those parent-teacher conferences at school.",
+            "context": "We should extend the family and medical leave law to give parents some time off to take their children to regular doctor's appointments or attend those parent-teacher conferences at school.",
+            "mark": [
+              0,
+              189
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶189.4",
+            "quote": "I'd like to say you can also take a little time off without losing your job to go to a regular parent-teacher conference or to go to a regular doctor's appointment with a family member",
+            "context": "I'd like to see it expanded in two ways: I'd like to say you can also take a little time off without losing your job to go to a regular parent-teacher conference or to go to a regular doctor's appointment with a family member; I'd also like to see the overtime laws change so that we could have some more flextime so that at the discretion of the worker— the worker—if you earn overtime you could decide whether you want that time to be taken in cash or in time with your family if you've got a family problem.",
+            "mark": [
+              41,
+              225
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-families-work",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Family and Medical Leave Act",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "the FMLA is amended to cover time off for children's routine doctor's visits and school conferences",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-flextime",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Pass a flextime law letting workers take overtime as pay or time off.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶74.5",
+            "quote": "We should pass a flextime law that allows employees to take their overtime pay in money or in time off, depending on what's better for their family.",
+            "context": "We should pass a flextime law that allows employees to take their overtime pay in money or in time off, depending on what's better for their family.",
+            "mark": [
+              0,
+              148
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶189.4",
+            "quote": "I'd also like to see the overtime laws change so that we could have some more flextime",
+            "context": "I'd like to see it expanded in two ways: I'd like to say you can also take a little time off without losing your job to go to a regular parent-teacher conference or to go to a regular doctor's appointment with a family member; I'd also like to see the overtime laws change so that we could have some more flextime so that at the discretion of the worker— the worker—if you earn overtime you could decide whether you want that time to be taken in cash or in time with your family if you've got a family problem.",
+            "mark": [
+              227,
+              313
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-families-work",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "overtime compensation rules (Fair Labor Standards Act)",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law lets private-sector employees take overtime as paid time off",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-health-unemployed",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Extend health coverage to people who are unemployed.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶77.4",
+            "quote": "The first thing we ought to do is to extend the benefits of health care to people who are unemployed.",
+            "context": "The first thing we ought to do is to extend the benefits of health care to people who are unemployed.",
+            "mark": [
+              0,
+              101
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶43.1",
+            "quote": "cover people who are between jobs for up to 6 months—that could protect 3 million families, 700,000 kids",
+            "context": "In the next 4 years, I want to focus on the following things: Number one, add another million children to the insured ranks through the Medicaid program; number two, keep working with the States, as we are now, to add 2.2 million more people to the insurance system; number three, cover people who are between jobs for up to 6 months—that could protect 3 million families, 700,000 kids; and number four, make sure we protect the integrity of the Medicare program and the Medicaid program and not do anything in cutting costs which would cause hundreds of hospitals to close, as could have been the case if the $270 billion Medicare cut that I vetoed had been enacted into law.",
+            "mark": [
+              281,
+              385
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶47.2",
+            "quote": "We need to help people who are between jobs.",
+            "context": "We need to help people who are between jobs.",
+            "mark": [
+              0,
+              44
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-health",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "health insurance for unemployed workers",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a federal programme helps unemployed families keep health insurance",
+            "ambiguity": "Scope taken from ¶77.5 (help for up to 6 months, an untriggered proposal)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-newborn-stays",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Protect mothers and newborns from being discharged within 48 hours.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶77.7",
+            "quote": "we should protect mothers and newborn babies from being forced out of the hospital in less than 48 hours",
+            "context": "And let me say again, as the First Lady did on Tuesday, we should protect mothers and newborn babies from being forced out of the hospital in less than 48 hours.",
+            "mark": [
+              56,
+              160
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-health",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "minimum hospital stay after childbirth",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law guarantees mothers and newborns at least 48 hours in hospital",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-promote-adoption",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Promote adoption.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶78.3",
+            "quote": "that is why we must promote adoption",
+            "context": "That's why I helped to establish and support a national effort to reduce out-of-wedlock teen pregnancy, and that is why we must promote adoption.",
+            "mark": [
+              108,
+              144
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-clean-environment",
+        "kind": "ambition",
+        "theme": "environment",
+        "restatement": "Build a clean and safe environment.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶80.1",
+            "quote": "I want to build a bridge to the 21st century with a clean and safe environment.",
+            "context": "I want to build a bridge to the 21st century with a clean and safe environment.",
+            "mark": [
+              0,
+              79
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-environment",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-toxic-cleanup",
+        "kind": "ambition",
+        "theme": "environment",
+        "restatement": "Clean up 500 more toxic waste sites in four years.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶81.4",
+            "quote": "In the next 4 years, we propose to clean up 500 more, two-thirds of all that are left and the most dangerous ones.",
+            "context": "In the next 4 years, we propose to clean up 500 more, two-thirds of all that are left and the most dangerous ones.",
+            "mark": [
+              0,
+              114
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-environment",
+          "deadline": {
+            "stated": "in the next 4 years",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Superfund toxic waste sites",
+            "record": "EPA Superfund construction completions",
+            "criterion": "500 more Superfund sites reach construction completion in the four years after 1996",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"Clean up\" read as EPA construction completion, the measure behind the \"197 … in the last 3 years\" of ¶81.3."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-attempt-to-pollute",
+        "kind": "ambition",
+        "theme": "environment",
+        "restatement": "Make attempted pollution a crime.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶82.1",
+            "quote": "We should make it a crime even to attempt to pollute.",
+            "context": "We should make it a crime even to attempt to pollute.",
+            "mark": [
+              0,
+              53
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-environment",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal environmental criminal law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law makes attempted pollution a federal crime",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-freeze-polluter-property",
+        "kind": "ambition",
+        "theme": "environment",
+        "restatement": "Freeze serious polluters' property until they clean up.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶82.2",
+            "quote": "We should freeze the serious polluter's property until they clean up the problems they create.",
+            "context": "We should freeze the serious polluter's property until they clean up the problems they create.",
+            "mark": [
+              0,
+              94
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-environment",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal power to freeze polluters' assets",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law lets the government freeze serious polluters' property until cleanup",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-right-to-know",
+        "kind": "ambition",
+        "theme": "environment",
+        "restatement": "Make it easier for families to learn about toxic chemicals nearby.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶82.3",
+            "quote": "We should make it easier for families to find out about toxic chemicals in their neighborhoods so they can do more to protect their own children.",
+            "context": "We should make it easier for families to find out about toxic chemicals in their neighborhoods so they can do more to protect their own children.",
+            "mark": [
+              0,
+              145
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-environment",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "EPA Toxics Release Inventory",
+            "record": "Federal Register (EPA rules); EPA TRI programme history",
+            "criterion": "the public reporting of toxic chemicals is expanded",
+            "ambiguity": "\"Easier\" is not quantified; any expansion of required public reporting counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-strongest-defense",
+        "kind": "ambition",
+        "theme": "defense",
+        "restatement": "Keep the world's strongest defense.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶83.1",
+            "quote": "I want to build a bridge to the 21st century that makes sure we are still the nation with the world's strongest defense",
+            "context": "My fellow Americans, I want to build a bridge to the 21st century that makes sure we are still the nation with the world's strongest defense, that our foreign policy still advances the values of our American community in the community of nations.",
+            "mark": [
+              21,
+              140
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-values-abroad",
+        "kind": "ambition",
+        "theme": "foreign-policy",
+        "restatement": "Make foreign policy advance American values.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶83.1",
+            "quote": "that our foreign policy still advances the values of our American community in the community of nations",
+            "context": "My fellow Americans, I want to build a bridge to the 21st century that makes sure we are still the nation with the world's strongest defense, that our foreign policy still advances the values of our American community in the community of nations.",
+            "mark": [
+              142,
+              245
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-open-export-markets",
+        "kind": "ambition",
+        "theme": "trade",
+        "restatement": "Break down more barriers to U.S. exports in Latin America, Africa and Asia.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶86.2",
+            "quote": "In the next 4 years, we have to break down even more barriers to them, reaching out to Latin America, to Africa, to other countries in Asia, making sure that our workers and our products, the world's finest, have the benefit of free and fair trade.",
+            "context": "In the next 4 years, we have to break down even more barriers to them, reaching out to Latin America, to Africa, to other countries in Asia, making sure that our workers and our products, the world's finest, have the benefit of free and fair trade.",
+            "mark": [
+              0,
+              248
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "in the next 4 years",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "trade agreements opening markets to U.S. exports",
+            "record": "USTR agreements; enacted trade legislation",
+            "criterion": "new agreements lower barriers to U.S. exports in Latin America, Africa or Asia",
+            "ambiguity": "\"Even more barriers\" is not quantified; any new market-opening agreement in those regions counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-reduce-nuclear-arsenals",
+        "kind": "ambition",
+        "theme": "defense",
+        "restatement": "Ratify and enforce further cuts in nuclear arsenals.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶87.3",
+            "quote": "Now we must enforce and ratify without delay measures that further reduce nuclear arsenals",
+            "context": "Now we must enforce and ratify without delay measures that further reduce nuclear arsenals, banish poison gas, and ban nuclear tests once and for all.",
+            "mark": [
+              0,
+              90
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-arms-control",
+          "deadline": {
+            "stated": "without delay",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "START II",
+            "record": "treaty ratification records (Senate, Russian Duma)",
+            "criterion": "START II is ratified and enters into force",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "No treaty is named; START II was the pending arsenal-reduction treaty in August 1996."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-ban-poison-gas",
+        "kind": "ambition",
+        "theme": "defense",
+        "restatement": "Ratify the ban on poison gas (Chemical Weapons Convention).",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶87.3",
+            "quote": "banish poison gas",
+            "context": "Now we must enforce and ratify without delay measures that further reduce nuclear arsenals, banish poison gas, and ban nuclear tests once and for all.",
+            "mark": [
+              92,
+              109
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-arms-control",
+          "deadline": {
+            "stated": "without delay",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Chemical Weapons Convention",
+            "record": "Senate treaty ratification records",
+            "criterion": "the Senate ratifies the Chemical Weapons Convention",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-ban-nuclear-tests",
+        "kind": "ambition",
+        "theme": "defense",
+        "restatement": "Ratify a ban on nuclear tests.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶87.3",
+            "quote": "ban nuclear tests once and for all",
+            "context": "Now we must enforce and ratify without delay measures that further reduce nuclear arsenals, banish poison gas, and ban nuclear tests once and for all.",
+            "mark": [
+              115,
+              149
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-arms-control",
+          "deadline": {
+            "stated": "without delay",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Comprehensive Nuclear-Test-Ban Treaty",
+            "record": "Senate treaty ratification records",
+            "criterion": "the Senate ratifies the Comprehensive Nuclear-Test-Ban Treaty",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-no-star-wars",
+        "kind": "ambition",
+        "theme": "defense",
+        "restatement": "Do not spend $60 billion on an unproven missile defense by 2000.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶88.4",
+            "quote": "but we must not, not now, not by the year 2000, squander $60 billion on an unproved, ineffective Star Wars program that could be obsolete tomorrow",
+            "context": "We are developing a sensible national missile defense, but we must not, not now, not by the year 2000, squander $60 billion on an unproved, ineffective Star Wars program that could be obsolete tomorrow.",
+            "mark": [
+              55,
+              201
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": "not by the year 2000",
+            "applied": "2000-12-31"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "national missile defense deployment",
+            "record": "DoD budgets; enacted legislation",
+            "criterion": "no commitment to deploy a $60 billion missile defense is made by 2000",
+            "ambiguity": "The $60 billion is the cost of the Republicans' plan; read as not committing to deploy it."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-antiterror-tools",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "Give law enforcement the tools to fight terrorists.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶90.1",
+            "quote": "Second, we must give law enforcement the tools they need to take the fight to terrorists.",
+            "context": "Second, we must give law enforcement the tools they need to take the fight to terrorists.",
+            "mark": [
+              0,
+              89
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-terrorism",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-lead-abroad",
+        "kind": "ambition",
+        "theme": "foreign-policy",
+        "restatement": "Act and lead abroad where American values and interests are at stake.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Remarks Accepting the Presidential Nomination at the Democratic National Convention in Chicago",
+              "year": 1996,
+              "date": "1996-08-29",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-democratic-national-convention-chicago",
+              "label": "1996 acceptance speech"
+            },
+            "ref": "¶92.4",
+            "quote": "We cannot become the world's policeman, but where our values and our interests are at stake and where we can make a difference, we must act and we must lead.",
+            "context": "We cannot become the world's policeman, but where our values and our interests are at stake and where we can make a difference, we must act and we must lead.",
+            "mark": [
+              0,
+              157
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-insure-children",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Insure another million children through Medicaid.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶43.1",
+            "quote": "Number one, add another million children to the insured ranks through the Medicaid program",
+            "context": "In the next 4 years, I want to focus on the following things: Number one, add another million children to the insured ranks through the Medicaid program; number two, keep working with the States, as we are now, to add 2.2 million more people to the insurance system; number three, cover people who are between jobs for up to 6 months—that could protect 3 million families, 700,000 kids; and number four, make sure we protect the integrity of the Medicare program and the Medicaid program and not do anything in cutting costs which would cause hundreds of hospitals to close, as could have been the case if the $270 billion Medicare cut that I vetoed had been enacted into law.",
+            "mark": [
+              62,
+              152
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶47.3",
+            "quote": "We need to cover more kids.",
+            "context": "We need to cover more kids.",
+            "mark": [
+              0,
+              27
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-health",
+          "deadline": {
+            "stated": "in the next 4 years",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "children with health insurance through Medicaid",
+            "record": "CMS Medicaid enrollment; Census CPS health insurance coverage",
+            "criterion": "one million more children are insured through Medicaid by the end of the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-state-coverage",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Work with the states to insure 2.2 million more people.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶43.1",
+            "quote": "number two, keep working with the States, as we are now, to add 2.2 million more people to the insurance system",
+            "context": "In the next 4 years, I want to focus on the following things: Number one, add another million children to the insured ranks through the Medicaid program; number two, keep working with the States, as we are now, to add 2.2 million more people to the insurance system; number three, cover people who are between jobs for up to 6 months—that could protect 3 million families, 700,000 kids; and number four, make sure we protect the integrity of the Medicare program and the Medicaid program and not do anything in cutting costs which would cause hundreds of hospitals to close, as could have been the case if the $270 billion Medicare cut that I vetoed had been enacted into law.",
+            "mark": [
+              154,
+              265
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-health",
+          "deadline": {
+            "stated": "in the next 4 years",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "people newly insured through state Medicaid waivers",
+            "record": "HCFA/CMS section 1115 waiver enrollment; Census CPS",
+            "criterion": "2.2 million more people are insured through federal-state programmes",
+            "ambiguity": "\"Working with the States\" read as Medicaid section 1115 waivers, the programme in place in 1996."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-protect-hospitals",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Protect Medicare and Medicaid without cost cuts that close hospitals.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶43.1",
+            "quote": "number four, make sure we protect the integrity of the Medicare program and the Medicaid program and not do anything in cutting costs which would cause hundreds of hospitals to close",
+            "context": "In the next 4 years, I want to focus on the following things: Number one, add another million children to the insured ranks through the Medicaid program; number two, keep working with the States, as we are now, to add 2.2 million more people to the insurance system; number three, cover people who are between jobs for up to 6 months—that could protect 3 million families, 700,000 kids; and number four, make sure we protect the integrity of the Medicare program and the Medicaid program and not do anything in cutting costs which would cause hundreds of hospitals to close, as could have been the case if the $270 billion Medicare cut that I vetoed had been enacted into law.",
+            "mark": [
+              391,
+              573
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-health",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-preventive-care",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Provide more preventive care.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶47.4",
+            "quote": "We need to provide more preventive care.",
+            "context": "We need to provide more preventive care.",
+            "mark": [
+              0,
+              40
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "clinton-1996-health",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-medicare-ten-years",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Pass a budget that adds 10 years to the Medicare trust fund.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶100.3",
+            "quote": "But now we ought to pass this budget now and put 10 years on it right away so no one has to worry about it.",
+            "context": "But now we ought to pass this budget now and put 10 years on it right away so no one has to worry about it.",
+            "mark": [
+              0,
+              107
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1996-medicare",
+          "deadline": {
+            "stated": "right away",
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Medicare Hospital Insurance trust fund depletion date",
+            "record": "Medicare Trustees Reports",
+            "criterion": "the projected depletion date moves at least 10 years later than in the 1996 report (2001)",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-reform-medicare",
+        "kind": "ambition",
+        "theme": "health",
+        "restatement": "Reform Medicare without wrecking it.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶104.4",
+            "quote": "We need to reform it, not wreck it.",
+            "context": "We need to reform it, not wreck it.",
+            "mark": [
+              0,
+              35
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1996-medicare",
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"It\" is Medicare (¶104.1)."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-affirmative-action",
+        "kind": "ambition",
+        "theme": "rights",
+        "restatement": "Keep affirmative action programs in federal law and policy.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶158.2",
+            "quote": "We ought to keep making those extra-effort affirmative action programs the law and the policy of the land.",
+            "context": "We ought to keep making those extra-effort affirmative action programs the law and the policy of the land.",
+            "mark": [
+              0,
+              106
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal affirmative action programmes",
+            "record": "executive orders; federal regulations; enacted legislation",
+            "criterion": "federal affirmative action programmes remain in law and policy through the term",
+            "ambiguity": "\"Extra-effort\" programmes are not listed; read as outreach and contracting programmes, not quotas."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-accessible-elections",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Make elections more accessible.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶248.1",
+            "quote": "Secondly, I think we need to look at making the elections more accessible.",
+            "context": "Secondly, I think we need to look at making the elections more accessible.",
+            "mark": [
+              0,
+              74
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-pension-coverage",
+        "kind": "ambition",
+        "theme": "retirement",
+        "restatement": "Get more people covered by pension plans.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶265.3",
+            "quote": "So we've got to figure out how we're going to have more people with pension plans.",
+            "context": "So we've got to figure out how we're going to have more people with pension plans.",
+            "mark": [
+              0,
+              82
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "share of workers with an employer pension plan",
+            "record": "BLS / Census CPS pension coverage",
+            "criterion": "the share of workers covered by a pension plan rises over the term",
+            "ambiguity": "No number is given; any rise in the coverage rate counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1996-fair-trade",
+        "kind": "ambition",
+        "theme": "trade",
+        "restatement": "Focus trade policy on what America does best and make sure it gets a fair deal.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in San Diego",
+              "year": 1996,
+              "date": "1996-10-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-san-diego",
+              "label": "1996 debate"
+            },
+            "ref": "¶279.2",
+            "quote": "And now what we have to do is to focus on those things we're real good at and make sure we're getting a fair deal.",
+            "context": "And now what we have to do is to focus on those things we're real good at and make sure we're getting a fair deal.",
+            "mark": [
+              0,
+              114
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "2001-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      }
+    ]
+  },
+  {
     "key": "2001-2005 Bush",
     "surname": "Bush",
     "from": 2001,
@@ -43651,10 +48604,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 493;
+export const CORPUS_PROMISE_COUNT = 518;
 
 /** Total ambitions across the corpus. */
-export const CORPUS_AMBITION_COUNT = 148;
+export const CORPUS_AMBITION_COUNT = 206;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 716;
+export const CORPUS_OCCURRENCE_COUNT = 752;

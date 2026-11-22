@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   QUALITIES,
   QUALITY_META,
@@ -11,12 +11,30 @@ import {
 
 type Mode = 'absolute' | 'percent';
 
-// Geometry in SVG user units; the viewBox scales to the container width.
-const VB_W = 960;
+// Geometry in CSS pixels: the chart is drawn at the width of its container,
+// one user unit per pixel, so labels keep their CSS size on every screen. When
+// the container is too narrow for every term at MIN_STEP, the chart keeps that
+// step and scrolls sideways instead of shrinking.
+const DEFAULT_W = 860;
 const PLOT_H = 340;
 const PAD_TOP = 20;
 const PAD_BOTTOM = 54; // room for the x-axis label rows
-const BAR_W = 84;
+const MAX_BAR_W = 84;
+const MIN_STEP = 64; // narrowest column that still fits a surname and a delta label
+
+export interface Geometry {
+  /** Width of the drawing; wider than the container when it has to scroll. */
+  width: number;
+  step: number;
+  barW: number;
+}
+
+export function geometry(containerWidth: number, n: number): Geometry {
+  const count = Math.max(1, n);
+  const step = Math.max(MIN_STEP, containerWidth / count);
+  const barW = Math.min(MAX_BAR_W, Math.round(step * 0.62));
+  return { width: step * count, step, barW };
+}
 
 interface SegBox {
   quality: Quality;
@@ -35,10 +53,9 @@ interface BarLayout {
   segs: SegBox[];
 }
 
-function layout(summaries: TermSummary[], mode: Mode): BarLayout[] {
+function layout(summaries: TermSummary[], mode: Mode, geo: Geometry): BarLayout[] {
   const maxTotal = Math.max(1, ...summaries.map((s) => s.total));
-  const n = summaries.length;
-  const step = VB_W / n;
+  const { step, barW: BAR_W } = geo;
   const baseY = PAD_TOP + PLOT_H;
 
   return summaries.map((summary, i) => {
@@ -114,7 +131,33 @@ export function PromisesChart({
   }, [terms]);
 
   const summaries = useMemo(() => summarize(terms), [terms]);
-  const bars = useMemo(() => layout(summaries, mode), [summaries, mode]);
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [containerW, setContainerW] = useState(DEFAULT_W);
+  const [atEnd, setAtEnd] = useState(false);
+  const checkEnd = () => {
+    const el = scrollRef.current;
+    if (el) setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 2);
+  };
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const measure = () => {
+      setContainerW(el.clientWidth || DEFAULT_W);
+      checkEnd();
+    };
+    measure();
+    if (typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const geo = useMemo(() => geometry(containerW, summaries.length), [containerW, summaries.length]);
+  const bars = useMemo(() => layout(summaries, mode, geo), [summaries, mode, geo]);
+  useLayoutEffect(checkEnd, [geo.width]);
+  const BAR_W = geo.barW;
+  const height = PAD_TOP + PLOT_H + PAD_BOTTOM;
 
   return (
     <div className="pc">
@@ -150,10 +193,17 @@ export function PromisesChart({
         </div>
       </div>
 
+      <div
+        ref={scrollRef}
+        className="pc-scroll"
+        data-more={geo.width > containerW + 1 && !atEnd}
+        onScroll={checkEnd}
+      >
       <svg
         className="pc-svg"
-        viewBox={`0 0 ${VB_W} ${PAD_TOP + PLOT_H + PAD_BOTTOM}`}
-        preserveAspectRatio="xMidYMid meet"
+        width={geo.width}
+        height={height}
+        viewBox={`0 0 ${geo.width} ${height}`}
         role="img"
         aria-label="Promises by president, stacked by measurability tier"
       >
@@ -228,6 +278,7 @@ export function PromisesChart({
           </g>
         ))}
       </svg>
+      </div>
     </div>
   );
 }
