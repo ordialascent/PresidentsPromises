@@ -1,9 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { PromiseFunnel, type Scale } from '../promises/PromiseFunnel.js';
-import { ScaleToggle } from '../promises/ScaleToggle.js';
+import { BoardSettings } from '../promises/BoardSettings.js';
 import { PromiseList } from '../promises/PromiseList.js';
 import { FilterBar, type FacetControl } from '../promises/FilterBar.js';
-import { TermScope } from '../promises/TermScope.js';
 import { searchPromises } from '../promises/search.js';
 import {
   FACETS,
@@ -31,7 +30,6 @@ import {
   CORPUS_TERMS,
 } from '../content/promises.generated.js';
 
-const KINDS: Kind[] = ['promise', 'ambition'];
 /** Election year of the oldest term in the corpus (terms are oldest first). */
 const FIRST_ELECTION = CORPUS_TERMS[0].from - 1;
 const KIND_HINT: Record<Kind, string> = {
@@ -235,25 +233,18 @@ export function PromisesPage() {
 
       <main>
         <section className="board">
-          <TermScope terms={CORPUS_TERMS} scope={scope} onScope={changeScope} />
-          <div className="board-top">
-            <div className="kind-switch" role="group" aria-label="Promises or ambitions">
-              {KINDS.map((k) => (
-                <button
-                  key={k}
-                  type="button"
-                  data-on={kind === k}
-                  aria-pressed={kind === k}
-                  title={KIND_HINT[k]}
-                  onClick={() => switchKind(k)}
-                >
-                  {KIND_META[k].plural}
-                  <span className="kind-switch-n">{kindTotal(k)}</span>
-                </button>
-              ))}
-            </div>
-            <ScaleToggle scale={scale} onScale={setScale} />
-          </div>
+          <BoardSettings
+            terms={CORPUS_TERMS}
+            scope={scope}
+            onScope={changeScope}
+            kind={kind}
+            kindLabel={(k) => KIND_META[k].plural}
+            kindCount={kindTotal}
+            kindHint={(k) => KIND_HINT[k]}
+            onKind={switchKind}
+            scale={scale}
+            onScale={setScale}
+          />
           <div className="board-promises">
             <PromiseFunnel
               terms={corpus}

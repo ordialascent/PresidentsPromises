@@ -781,6 +781,43 @@ main {
   .scope .kind-switch button { flex: 1 1 auto; justify-content: center; }
 }
 .scope-menu { min-width: 240px; }
+
+/* the board's settings: a titled bar of three controls */
+.settings { position: relative; display: flex; }
+.settings .kind-switch button { color: var(--ink); align-items: center; white-space: nowrap; }
+.settings .kind-switch button + button { border-left: 1px solid var(--border); }
+.settings .kind-switch button:hover { background: color-mix(in srgb, var(--series) 8%, transparent); }
+.settings .kind-switch button[aria-expanded="true"] { background: color-mix(in srgb, var(--series) 12%, transparent); }
+.settings-title {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ink) 9%, transparent);
+  border-right: 1px solid var(--border);
+}
+.settings-flip { font-size: 12px; color: var(--dim); }
+.settings-menu { min-width: 260px; }
+.settings-terms { margin-top: 4px !important; padding-top: 4px !important; border-top: 1px solid var(--border); }
+@media (max-width: 560px) {
+  /* phones: title on top, then three equal buttons with the value under each label */
+  .settings .kind-switch { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; }
+  .settings-title { grid-column: 1 / -1; justify-content: center; border-right: 0; border-bottom: 1px solid var(--border); }
+  .settings .kind-switch button {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    padding: 8px 4px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    position: relative;
+  }
+  .settings .fb-caret, .settings-flip { position: absolute; top: 6px; right: 6px; }
+}
 .pl-meta {
   font-family: var(--font-mono);
   font-size: 10px;
