@@ -175,7 +175,7 @@ export function PromiseFunnel({
                         : 'Kept as a share of kept, partly and broken. Under review, indeterminate and pending are left out.'
                     }
                   >
-                    {keptShare} <small>kept{pending > 0 ? ' so far' : ''}</small>
+                    {keptShare} <small>kept{pending > 0 ? ' so far' : ''}*</small>
                   </span>
                 )}
               </div>
@@ -290,10 +290,12 @@ export function PromiseFunnel({
 
       {withVerdicts && (
         <p className="tr-note">
-          Only high and medium promises can be checked, so only they get a verdict (bottom row of each
-          term). Kept share = kept ÷ (kept + partly + broken).
+          * Kept share = kept ÷ (kept + partly + broken). Under review, indeterminate and pending
+          promises are left out, so it can differ from the green segment, which counts every checkable
+          promise. Only high and medium promises can be checked, so only they get a verdict (bottom row
+          of each term).
           {anyPending &&
-            ' For a term still running it covers only the verdicts decided so far, mostly quick actions taken early in the term, so it is provisional and not comparable with finished terms until the term ends.'}
+            ' For a term still running, the kept share covers only the verdicts decided so far, mostly quick actions taken early in the term, so it is provisional and not comparable with finished terms until the term ends.'}
         </p>
       )}
     </div>
