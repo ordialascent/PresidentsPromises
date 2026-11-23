@@ -15,15 +15,36 @@ import {
 type Status = VerdictValue | 'review';
 export type Scale = 'count' | 'percent';
 
-/** Narrowest segment, in pixels, that still carries its number. */
-const LABEL_MIN_PX = 18;
+/** Narrowest segment, in pixels, that still carries a label this long. */
+const fits = (px: number, label: string) => px >= 8 + 7 * label.length;
+
+/**
+ * Whole-number percentages of `counts` that add up to exactly 100 (largest
+ * remainder), so a row's labels never read 99% or 101% in total.
+ */
+export function percentShares(counts: number[]): number[] {
+  const total = counts.reduce((a, b) => a + b, 0);
+  if (total === 0) return counts.map(() => 0);
+  const raw = counts.map((n) => (n / total) * 100);
+  const out = raw.map(Math.floor);
+  let left = 100 - out.reduce((a, b) => a + b, 0);
+  const order = raw.map((r, i) => [r - out[i], i] as const).sort((a, b) => b[0] - a[0]);
+  for (const [, i] of order) {
+    if (left <= 0) break;
+    if (counts[i] > 0) {
+      out[i] += 1;
+      left -= 1;
+    }
+  }
+  return out;
+}
 
 /**
  * Where each row ends, as a share of the drawing's width. In `count` both rows
  * share one scale (the term with the most promises fills the width), so the
  * verdict row sits exactly under the checkable part it judges. In `percent`
- * every row fills the width, so lengths are shares and the numbers carry the
- * absolute counts.
+ * every row fills the width, so lengths are shares and the segments read as
+ * percentages of their row (the exact counts stay in each segment's hint).
  */
 export function rowWidths(
   scale: Scale,
@@ -131,6 +152,8 @@ export function PromiseFunnel({
           const showVerdicts = withVerdicts && r != null && judged > 0;
           const keptShare = r && r.settled ? `${Math.round((r.counts.kept / r.settled) * 100)}%` : '–';
           const pending = r?.counts.pending ?? 0;
+          const topShares = percentShares(QUALITIES.map((q) => t.counts[q]));
+          const bottomShares = percentShares(VERDICT_STATUSES.map((v) => r?.counts[v] ?? 0));
           const x = w.checkableEnd * 100;
           const xb = w.bottom * 100;
           return (
@@ -152,16 +175,18 @@ export function PromiseFunnel({
                         : 'Kept as a share of kept, partly and broken. Under review, indeterminate and pending are left out.'
                     }
                   >
-                    {keptShare} <small>kept{pending > 0 ? ' so far' : ''}</small>
+                    {keptShare} <small>kept{pending > 0 ? ' so far' : ''}*</small>
                   </span>
                 )}
               </div>
               <div className="pf-bars">
                 <div className="pf-row" style={{ width: `${w.top * 100}%` }}>
-                  {QUALITIES.map((q) => {
+                  {QUALITIES.map((q, i) => {
                     const n = t.counts[q];
                     if (!n) return null;
                     const px = (n / t.total) * w.top * rowPx;
+                    const pct = topShares[i];
+                    const text = scale === 'percent' ? `${pct}%` : String(n);
                     return (
                       <button
                         type="button"
@@ -172,11 +197,11 @@ export function PromiseFunnel({
                         data-dim={tierLit != null && !tierLit(t.key, q)}
                         aria-pressed={tierPicked(t.key, q)}
                         style={{ flexGrow: n }}
-                        title={`${t.label} · ${QUALITY_META[q].label}: ${n}`}
+                        title={`${t.label} · ${QUALITY_META[q].label}: ${n} (${pct}%)`}
                         aria-label={`${t.label}: show the ${n} ${QUALITY_META[q].label.toLowerCase()} ${noun}`}
                         onClick={() => onSelectTier(t.key, q)}
                       >
-                        {px >= LABEL_MIN_PX ? n : ''}
+                        {fits(px, text) ? text : ''}
                       </button>
                     );
                   })}
@@ -189,10 +214,12 @@ export function PromiseFunnel({
                       <line x1={x} y1="0" x2={xb} y2="22" />
                     </svg>
                     <div className="pf-row" style={{ width: `${w.bottom * 100}%` }}>
-                      {VERDICT_STATUSES.map((s) => {
+                      {VERDICT_STATUSES.map((s, i) => {
                         const n = r!.counts[s];
                         if (!n) return null;
                         const px = (n / judged) * w.bottom * rowPx;
+                        const pct = bottomShares[i];
+                        const text = scale === 'percent' ? `${pct}%` : String(n);
                         const label = VERDICT_META[s].label.toLowerCase();
                         return (
                           <button
@@ -204,11 +231,11 @@ export function PromiseFunnel({
                             data-dim={verdictLit != null && !verdictLit(t.key, s)}
                             aria-pressed={verdictPicked(t.key, s)}
                             style={{ flexGrow: n }}
-                            title={`${t.label}: ${n} ${label}`}
+                            title={`${t.label}: ${n} ${label} (${pct}%)`}
                             aria-label={`${t.label}: show the ${n} ${label}`}
                             onClick={() => onSelectVerdict(t.key, s)}
                           >
-                            {px >= LABEL_MIN_PX ? <span>{n}</span> : ''}
+                            {fits(px, text) ? <span>{text}</span> : ''}
                           </button>
                         );
                       })}
@@ -263,10 +290,12 @@ export function PromiseFunnel({
 
       {withVerdicts && (
         <p className="tr-note">
-          Only high and medium promises can be checked, so only they get a verdict (bottom row of each
-          term). Kept share = kept ÷ (kept + partly + broken).
+          * Kept share = kept ÷ (kept + partly + broken). Under review, indeterminate and pending
+          promises are left out, so it can differ from the green segment, which counts every checkable
+          promise. Only high and medium promises can be checked, so only they get a verdict (bottom row
+          of each term).
           {anyPending &&
-            ' For a term still running it covers only the verdicts decided so far, mostly quick actions taken early in the term, so it is provisional and not comparable with finished terms until the term ends.'}
+            ' For a term still running, the kept share covers only the verdicts decided so far, mostly quick actions taken early in the term, so it is provisional and not comparable with finished terms until the term ends.'}
         </p>
       )}
     </div>

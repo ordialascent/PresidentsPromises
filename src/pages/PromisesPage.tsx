@@ -112,10 +112,9 @@ const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(
 export function PromisesPage() {
   const [kind, setKind] = useState<Kind>('promise');
   const [scope, setScope] = useState<ReadonlySet<string>>(scopeFromUrl);
-  const [scale, setScale] = useState<Scale>('percent');
+  const [scale, setScale] = useState<Scale>('count');
   const corpus = useMemo(() => BY_KIND[kind].filter((t) => scope.has(t.key)), [kind, scope]);
   const rows = useMemo(() => ROWS[kind].filter((r) => scope.has(r.termKey)), [kind, scope]);
-  const kindTotal = (k: Kind) => ROWS[k].reduce((n, r) => n + (scope.has(r.termKey) ? 1 : 0), 0);
   const [filters, setFilters] = useState<Filters>(NO_FILTERS);
   const [query, setQuery] = useState('');
 
@@ -239,7 +238,6 @@ export function PromisesPage() {
             onScope={changeScope}
             kind={kind}
             kindLabel={(k) => KIND_META[k].plural}
-            kindCount={kindTotal}
             kindHint={(k) => KIND_HINT[k]}
             onKind={switchKind}
             scale={scale}

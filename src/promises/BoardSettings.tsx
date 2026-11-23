@@ -16,7 +16,6 @@ export function BoardSettings({
   onScope,
   kind,
   kindLabel,
-  kindCount,
   kindHint,
   onKind,
   scale,
@@ -28,7 +27,6 @@ export function BoardSettings({
   onScope: (next: Set<string>) => void;
   kind: Kind;
   kindLabel: (k: Kind) => string;
-  kindCount: (k: Kind) => number;
   kindHint: (k: Kind) => string;
   onKind: (k: Kind) => void;
   scale: Scale;
@@ -38,6 +36,7 @@ export function BoardSettings({
   const ref = useRef<HTMLDivElement | null>(null);
   const preset = scopePreset(scope, terms);
   const latestN = Math.min(LATEST_TERMS, terms.length);
+  const span = scopeSpan(scope, terms);
   const otherKind: Kind = kind === 'promise' ? 'ambition' : 'promise';
   const otherScale: Scale = scale === 'count' ? 'percent' : 'count';
 
@@ -78,18 +77,16 @@ export function BoardSettings({
           type="button"
           aria-expanded={open}
           aria-haspopup="true"
-          title="Choose which terms the board covers"
+          title={`Covers ${span}. Choose which terms the board covers`}
           onClick={() => setOpen((o) => !o)}
         >
-          Terms
-          <span className="kind-switch-n">{scopeSpan(scope, terms)}</span>
+          Terms ({scope.size})
           <span className="fb-caret" aria-hidden="true">
             ▾
           </span>
         </button>
         <button type="button" title={`Switch to ${kindLabel(otherKind).toLowerCase()}. ${kindHint(otherKind)}`} onClick={() => onKind(otherKind)}>
           {kindLabel(kind)}
-          <span className="kind-switch-n">{kindCount(kind)}</span>
           <span className="settings-flip" aria-hidden="true">
             ⇄
           </span>
