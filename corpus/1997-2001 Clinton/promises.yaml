@@ -116,7 +116,9 @@ promises:
     uncertainty:
       extraction: probable
       note: "Phrased as a question to the audience; read as his intention."
-    links: []
+    links:
+    - kind: repeats
+      to: clinton-1992-campaign-finance
 
   - id: clinton-1996-hiv-aids
     kind: promise
@@ -1563,4 +1565,6 @@ promises:
     uncertainty:
       extraction: probable
       note: "Election-conditioned list (\"you'll decide whether we're going to\")."
-    links: []
+    links:
+    - kind: repeats
+      to: clinton-1992-hundred-thousand-police

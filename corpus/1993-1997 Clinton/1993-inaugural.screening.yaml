@@ -1,0 +1,39 @@
+# Screening ledger for 1993-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row. "Let us …" sentences (¶6.9,
+# ¶9.7, ¶10.6-10.9, ¶16.1-16.2) ask the whole country to act and match no
+# trigger; they are not candidates. ¶7.3 ("we pledge an end to the era of
+# deadlock and drift") is added: a pledge by a "we" that includes the new
+# government.
+source: 1993-inaugural
+protocol: 1
+rows:
+  - { ref: "¶6.1", decision: past, note: "About what the country has not done (\"instead, we have drifted\")." }
+  - { ref: "¶6.5", decision: describe, note: "Rhetoric; no object." }
+  - ref: "¶7.3"
+    decision: include
+    added: true
+    promises: [clinton-1992-end-deadlock]
+  - { ref: "¶8.1", decision: describe, note: "Rhetoric (\"we must be bold\")." }
+  - { ref: "¶8.2", decision: describe, note: "Rhetoric; no object." }
+  - ref: "¶8.3"
+    decision: include
+    promises: [clinton-1992-invest-in-people, clinton-1992-cut-debt]
+    note: "Two objects; split."
+  - { ref: "¶8.4", decision: describe, note: "Sets the scene for ¶8.3; no object of its own." }
+  - { ref: "¶8.7", decision: describe, note: "Rhetoric; no object." }
+  - { ref: "¶9.5", decision: include, promises: [clinton-1992-opportunity-responsibility] }
+  - ref: "¶10.1"
+    decision: include
+    promises: [clinton-1992-revitalize-democracy]
+  - { ref: "¶11.1", decision: describe, note: "Introduces ¶12.1-12.3; no object of its own." }
+  - ref: "¶12.1-12.2"
+    decision: include
+    promises: [clinton-1992-engage-the-world]
+    note: "Two sentences, one commitment (meet the new world and work with allies to shape it); joined."
+  - { ref: "¶12.3", decision: include, promises: [clinton-1992-act-on-vital-interests] }
+  - { ref: "¶13.6", decision: describe, note: "Rhetoric; no object." }
+  - { ref: "¶14.4", decision: describe, note: "Rhetoric (\"we must care for one another\")." }
+  - { ref: "¶16.3", decision: describe, note: "Quotes Scripture." }
+  - { ref: "¶16.7", decision: describe, note: "Rhetoric; no object." }
+
+#   17 rows: 6 include, 11 excluded (past 1, describe 10)

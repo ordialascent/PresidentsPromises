@@ -1,0 +1,97 @@
+# Screening ledger for 1992-debate.md (protocol v1).
+# Only Clinton's turns (speaker_label "Governor Clinton") are screened.
+# Every trigger-matched sentence has a row. Ids shared with the other two
+# ledgers are further occurrences of the same promise; a soft restatement
+# of a firm promise is an occurrence of it.
+#
+# Not candidates: ¶9.1-10.1 ("I propose …", "invest and grow: raise some
+# more money …") and ¶283.3 ("My passion is to pass …"), which describe the
+# plan in the present tense. ¶294.2 ("My plan says that we want …")
+# matches a trigger and is screened as such a description, as the Bush 2000
+# (¶23.16) and Clinton 1996 (¶117.3) debates were.
+#
+# Added: ¶107.1 ("We also ought to …", an ambition the lexicon misses
+# because of "also") and ¶265.1 ("… and that will be my policy").
+#
+# The source transcript breaks off inside ¶265.3 ("and not >") and resumes
+# in ¶266.1 ("em, but …"); the text is kept as published.
+source: 1992-debate
+protocol: 1
+rows:
+  - ref: "¶76.1"
+    decision: include
+    promises: [clinton-1992-hundred-days-programs]
+    note: "Election-conditioned (\"elect a President … who will send programs …\"); firm."
+  - { ref: "¶76.3", decision: include, promises: [clinton-1992-hundred-days-programs], note: "\"them\" are the issues of ¶76.1." }
+  - { ref: "¶91.2", decision: describe, note: "About the question." }
+  - { ref: "¶91.3", decision: describe, note: "Comment on carmakers; no commitment." }
+  - { ref: "¶92.7", decision: include, promises: [clinton-1992-industrial-strategy] }
+  - { ref: "¶93.4", decision: include, promises: [clinton-1992-industrial-strategy], note: "\"one of the things\" is the missing government partnership of ¶93.2." }
+  - { ref: "¶104.4", decision: include, promises: [clinton-1992-fuel-efficiency] }
+  - { ref: "¶104.6", decision: describe, note: "About what he said earlier." }
+  - { ref: "¶105.1", decision: include, promises: [clinton-1992-fuel-efficiency] }
+  - { ref: "¶105.2", decision: include, promises: [clinton-1992-fuel-efficiency-incentives] }
+  - { ref: "¶105.3", decision: include, promises: [clinton-1992-fuel-efficiency] }
+  - { ref: "¶105.4", decision: describe, note: "Says what the aim does not mean." }
+  - ref: "¶107.1"
+    decision: include
+    added: true
+    promises: [clinton-1992-natural-gas-vehicles]
+  - { ref: "¶123.1", decision: describe, note: "Asks to respond." }
+  - ref: "¶124.4"
+    decision: include
+    promises: [clinton-1992-nafta-side-agreements, clinton-1992-nafta-retraining]
+    note: "States the conditions of his support for NAFTA (environmental and labor standards; retraining); read as intentions. Two objects; split."
+  - { ref: "¶125.2", decision: include, promises: [clinton-1992-more-trade] }
+  - ref: "¶126.1"
+    decision: include
+    promises: [clinton-1992-fair-trade]
+    note: "Reported as what Prestowitz \"knows\", but \"I'll have a free and fair trade policy\" is Clinton's own claim about his term."
+  - { ref: "¶126.4", decision: describe, note: "Rhetoric (\"I want to change it\")." }
+  - { ref: "¶134.2", decision: describe, note: "About the debate." }
+  - { ref: "¶134.3", decision: describe, note: "About the debate." }
+  - ref: "¶156.2"
+    decision: include
+    promises: [clinton-1992-lobbyist-testimony-disclosure]
+  - { ref: "¶156.3", decision: include, promises: [clinton-1992-lawyers-loophole] }
+  - { ref: "¶156.4", decision: include, promises: [clinton-1992-foreign-lobbying-ban] }
+  - { ref: "¶157.2", decision: describe, note: "Prediction." }
+  - { ref: "¶158.1", decision: include, promises: [clinton-1992-more-trade] }
+  - { ref: "¶197.3", decision: attack, note: "What Bush should have said." }
+  - { ref: "¶207.5", decision: include, promises: [clinton-1992-town-halls] }
+  - ref: "¶243.1"
+    decision: include
+    promises: [clinton-1992-cabinet-like-america]
+    note: "\"that\" is the appointment of women and minorities to high positions (¶242.4)."
+  - { ref: "¶243.3", decision: include, promises: [clinton-1992-cabinet-like-america] }
+  - { ref: "¶264.2", decision: include, promises: [clinton-1992-enforce-banking-law] }
+  - ref: "¶265.1"
+    decision: include
+    added: true
+    promises: [clinton-1992-banks-pay-for-failures]
+  - { ref: "¶282.1", decision: include, promises: [clinton-1992-cut-congress-spending] }
+  - { ref: "¶294.2", decision: describe, note: "Present-tense description of the plan (\"My plan says that we want …\")." }
+  - { ref: "¶295.1", decision: include, promises: [clinton-1992-no-middle-class-tax] }
+  - ref: "¶295.2"
+    decision: include
+    promises: [clinton-1992-fallback-cuts]
+    note: "Conditioned on a shortfall during the term; kept as its own promise."
+  - { ref: "¶295.3", decision: include, promises: [clinton-1992-no-middle-class-tax] }
+  - { ref: "¶296.1", decision: describe, note: "About promising itself (\"I am not going to tell you 'Read my lips' …\")." }
+  - { ref: "¶297.1", decision: include, promises: [clinton-1992-no-middle-class-tax] }
+  - { ref: "¶297.6", decision: include, promises: [clinton-1992-own-economic-policy] }
+  - ref: "¶297.7"
+    decision: include
+    promises: [clinton-1992-own-economic-policy, clinton-1992-no-middle-class-tax]
+  - { ref: "¶328.6", decision: describe, note: "Rhetoric (\"I am going to change this country\")." }
+  - { ref: "¶330.1", decision: ceremony }
+  - { ref: "¶331.1", decision: describe, note: "Respect for Perot." }
+  - { ref: "¶331.2", decision: ceremony }
+  - ref: "¶332.6-332.7"
+    decision: include
+    promises: [clinton-1992-put-people-first, clinton-1992-control-health-costs, clinton-1992-health-care-for-all, clinton-1992-education-second-to-none, clinton-1992-revitalize-economy]
+    note: "¶332.7 (\"That is my commitment to you\") makes the list of ¶332.6 a commitment; joined. \"invest and grow\" names the approach, not an object."
+  - { ref: "¶332.9", decision: include, promises: [clinton-1992-reward-work] }
+  - { ref: "¶332.10", decision: include, promises: [clinton-1992-come-together] }
+
+#   47 rows: 33 include, 14 excluded (attack 1, describe 11, ceremony 2)
