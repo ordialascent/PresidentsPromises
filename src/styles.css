@@ -115,13 +115,6 @@ main {
   flex-direction: column;
   gap: 12px;
 }
-.board-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
 
 /* the tier swatch, used on the method page */
 .veri-swatch { width: 16px; padding: 0; }
@@ -135,14 +128,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 14px;
-}
-
-.pc-bar-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /* The categories read as chips, not as a colour key you can dim: they are
@@ -193,6 +178,15 @@ main {
 .pc-swatch[data-q="high"] { background: var(--q-high); }
 .pc-swatch[data-q="medium"] { background: var(--q-medium); }
 .pc-swatch[data-q="low"] { background: var(--q-low); }
+.pc-swatch[data-v="kept"] { background: var(--v-kept); }
+.pc-swatch[data-v="partly"] { background: var(--v-partly); }
+.pc-swatch[data-v="broken"] { background: var(--v-broken); }
+.pc-swatch[data-v="indeterminate"] { background: var(--v-indeterminate); }
+.pc-swatch[data-v="review"] {
+  background: repeating-linear-gradient(135deg, var(--v-review) 0 2px, transparent 2px 5px);
+  box-shadow: inset 0 0 0 1px var(--v-review);
+}
+.pc-swatch[data-v="pending"] { background: var(--v-pending); }
 .pc-legend-n {
   color: var(--ink);
   font-variant-numeric: tabular-nums;
@@ -201,6 +195,7 @@ main {
 
 .pc-toggle {
   display: inline-flex;
+  align-self: flex-start;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
@@ -787,12 +782,25 @@ main {
   gap: 6px 10px;
 }
 .scope .kind-switch button { padding: 8px 12px; align-items: center; }
+/* the span the switch covers: its first segment, fixed, on a darker ground */
 .scope-span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--dim);
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ink) 9%, transparent);
+  border-right: 1px solid var(--border);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+}
+.scope .kind-switch button { white-space: nowrap; }
+@media (max-width: 560px) {
+  /* on phones the span sits on top of the switch, so all four fit the width */
+  .scope .kind-switch { flex-wrap: wrap; }
+  .scope-span { flex-basis: 100%; justify-content: center; border-right: 0; border-bottom: 1px solid var(--border); }
+  .scope .kind-switch button { flex: 1 1 auto; justify-content: center; }
 }
 .scope-menu { min-width: 240px; }
 .pl-meta {
@@ -1010,37 +1018,6 @@ main {
   flex-direction: column;
   gap: 10px;
 }
-.tr-legend {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 14px;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
-.tr-legend li { display: inline-flex; align-items: center; gap: 6px; }
-.tr-swatch {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  vertical-align: middle;
-}
-.tr-swatch[data-v="kept"], .tr-seg[data-v="kept"] { background: var(--v-kept); }
-.tr-swatch[data-v="partly"], .tr-seg[data-v="partly"] { background: var(--v-partly); }
-.tr-swatch[data-v="broken"], .tr-seg[data-v="broken"] { background: var(--v-broken); }
-.tr-swatch[data-v="indeterminate"], .tr-seg[data-v="indeterminate"] { background: var(--v-indeterminate); }
-.tr-swatch[data-v="review"], .tr-seg[data-v="review"] {
-  background: repeating-linear-gradient(135deg, var(--v-review) 0 2px, transparent 2px 5px);
-  box-shadow: inset 0 0 0 1px var(--v-review);
-}
-.tr-swatch[data-v="pending"], .tr-seg[data-v="pending"] { background: var(--v-pending); }
-
 .tr-note {
   margin: 0;
   color: var(--dim);
@@ -1050,7 +1027,6 @@ main {
 
 /* ---- promise funnel: each term's promises, fanning out into their track record ---- */
 .pf { display: flex; flex-direction: column; gap: 12px; }
-.pf .tr-legend { margin: 0; }
 .pf-terms { list-style: none; margin: 0; padding: 0; }
 .pf-term {
   display: grid;

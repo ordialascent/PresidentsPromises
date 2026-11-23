@@ -252,14 +252,13 @@ export function PromisesPage() {
             <TermScope terms={CORPUS_TERMS} scope={scope} onScope={changeScope} />
           </div>
           <div className="board-promises">
-            <span className="board-label">
-              {kind === 'promise' ? 'Promises and what became of them' : 'Ambitions'}
-            </span>
             <PromiseFunnel
               terms={corpus}
               kind={kind}
               pickedTiers={filters.tier}
               onToggleTier={(q) => toggle('tier', q)}
+              pickedVerdicts={filters.verdict}
+              onToggleVerdict={(v) => toggle('verdict', v)}
               tierLit={blockLit}
               tierPicked={blockPicked}
               onSelectTier={selectBlock}

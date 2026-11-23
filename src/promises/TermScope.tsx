@@ -4,8 +4,9 @@ import { LATEST_TERMS, latestTermKeys, scopePreset, scopeSpan } from './model.js
 
 /**
  * Which terms the board covers: the latest few (the default), all of them, or
- * a hand-picked set from a checklist. A short line beside it names the span,
- * so the reader always knows what the charts and counts are about.
+ * a hand-picked set from a checklist. The switch opens with a fixed segment
+ * naming the span, so the reader always knows what the charts and counts are
+ * about.
  */
 export function TermScope({
   terms,
@@ -50,6 +51,9 @@ export function TermScope({
   return (
     <div className="scope" ref={ref} role="group" aria-label="Terms shown">
       <div className="kind-switch">
+        <span className="scope-span" aria-live="polite">
+          {scope.size === 1 ? '1 term' : `${scope.size} terms`} · {scopeSpan(scope, terms)}
+        </span>
         <button
           type="button"
           data-on={preset === 'latest'}
@@ -79,9 +83,6 @@ export function TermScope({
           </span>
         </button>
       </div>
-      <span className="scope-span">
-        {scope.size === 1 ? '1 term' : `${scope.size} terms`} · {scopeSpan(scope, terms)}
-      </span>
       {open && (
         <div className="fb-menu scope-menu" role="group" aria-label="Choose terms">
           <ul>

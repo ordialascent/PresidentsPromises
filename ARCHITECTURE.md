@@ -87,8 +87,8 @@ is shown and changed.
   place: menus never reshuffle under the cursor.
 - The charts above always draw the whole corpus of the current kind. They are
   shortcuts into the filter bar: a bar block sets term + verifiability to that
-  cell, a track-record section sets term + verdict, the tier legend toggles
-  verifiability. Clicking the same cell again clears it. Cells the filters
+  cell, a track-record section sets term + verdict, the tier and verdict
+  legends toggle verifiability and verdict. Clicking the same cell again clears it. Cells the filters
   leave out are dimmed, so the charts show what the list is showing.
 - Search narrows the list alone. It is the reader's own question, not a claim
   about the corpus.
