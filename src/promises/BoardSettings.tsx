@@ -6,7 +6,8 @@ import type { Scale } from './PromiseFunnel.js';
 /**
  * The board's three settings in one bar: which terms it covers, which kind of
  * record it shows, and how the chart measures its bars. Terms opens a menu
- * (all, the latest few, or any hand-picked set); the other two flip between
+ * (all, the latest few, or any hand-picked set: ticking terms selects Custom,
+ * and a set that equals a preset snaps back to it); the other two flip between
  * their two values on each click.
  */
 export function BoardSettings({
@@ -123,6 +124,14 @@ export function BoardSettings({
                 <input type="radio" checked={preset === 'latest'} onChange={() => pickPreset(latestTermKeys(terms))} />
                 <span className="fb-option-label">Latest {latestN}</span>
                 <span className="fb-option-n">{latestN} terms</span>
+              </label>
+            </li>
+            <li>
+              {/* Not a choice of its own: it lights up when the ticks below match neither preset. */}
+              <label className="fb-option" data-auto="true" data-empty={preset !== 'custom'}>
+                <input type="radio" checked={preset === 'custom'} readOnly tabIndex={-1} aria-disabled="true" />
+                <span className="fb-option-label">Custom</span>
+                <span className="fb-option-n">{preset === 'custom' ? `${scope.size} ${scope.size === 1 ? 'term' : 'terms'}` : 'tick terms below'}</span>
               </label>
             </li>
           </ul>
