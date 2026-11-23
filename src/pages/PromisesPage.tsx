@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
-import { PromiseFunnel } from '../promises/PromiseFunnel.js';
+import { PromiseFunnel, type Scale } from '../promises/PromiseFunnel.js';
+import { BoardSettings } from '../promises/BoardSettings.js';
 import { PromiseList } from '../promises/PromiseList.js';
 import { FilterBar, type FacetControl } from '../promises/FilterBar.js';
-import { TermScope } from '../promises/TermScope.js';
 import { searchPromises } from '../promises/search.js';
 import {
   FACETS,
@@ -30,7 +30,6 @@ import {
   CORPUS_TERMS,
 } from '../content/promises.generated.js';
 
-const KINDS: Kind[] = ['promise', 'ambition'];
 /** Election year of the oldest term in the corpus (terms are oldest first). */
 const FIRST_ELECTION = CORPUS_TERMS[0].from - 1;
 const KIND_HINT: Record<Kind, string> = {
@@ -113,6 +112,7 @@ const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(
 export function PromisesPage() {
   const [kind, setKind] = useState<Kind>('promise');
   const [scope, setScope] = useState<ReadonlySet<string>>(scopeFromUrl);
+  const [scale, setScale] = useState<Scale>('percent');
   const corpus = useMemo(() => BY_KIND[kind].filter((t) => scope.has(t.key)), [kind, scope]);
   const rows = useMemo(() => ROWS[kind].filter((r) => scope.has(r.termKey)), [kind, scope]);
   const kindTotal = (k: Kind) => ROWS[k].reduce((n, r) => n + (scope.has(r.termKey) ? 1 : 0), 0);
@@ -233,33 +233,27 @@ export function PromisesPage() {
 
       <main>
         <section className="board">
-          <div className="board-top">
-            <div className="kind-switch" role="group" aria-label="Promises or ambitions">
-              {KINDS.map((k) => (
-                <button
-                  key={k}
-                  type="button"
-                  data-on={kind === k}
-                  aria-pressed={kind === k}
-                  title={KIND_HINT[k]}
-                  onClick={() => switchKind(k)}
-                >
-                  {KIND_META[k].plural}
-                  <span className="kind-switch-n">{kindTotal(k)}</span>
-                </button>
-              ))}
-            </div>
-            <TermScope terms={CORPUS_TERMS} scope={scope} onScope={changeScope} />
-          </div>
+          <BoardSettings
+            terms={CORPUS_TERMS}
+            scope={scope}
+            onScope={changeScope}
+            kind={kind}
+            kindLabel={(k) => KIND_META[k].plural}
+            kindCount={kindTotal}
+            kindHint={(k) => KIND_HINT[k]}
+            onKind={switchKind}
+            scale={scale}
+            onScale={setScale}
+          />
           <div className="board-promises">
-            <span className="board-label">
-              {kind === 'promise' ? 'Promises and what became of them' : 'Ambitions'}
-            </span>
             <PromiseFunnel
               terms={corpus}
               kind={kind}
+              scale={scale}
               pickedTiers={filters.tier}
               onToggleTier={(q) => toggle('tier', q)}
+              pickedVerdicts={filters.verdict}
+              onToggleVerdict={(v) => toggle('verdict', v)}
               tierLit={blockLit}
               tierPicked={blockPicked}
               onSelectTier={selectBlock}

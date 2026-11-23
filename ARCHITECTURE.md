@@ -16,7 +16,7 @@ src/
   content/      the domain. types.ts (Topic, PromiseSpec, Term), one file per
                 topic (deficit.ts), and index.ts as a plain registry.
   data/         snapshot.ts parses the committed append-only CSV.
-  promises/     the front-page board: the stacked chart, the track record,
+  promises/     the front-page board: the settings bar (terms, kind, scale), the chart,
                 and the searchable, filterable list of every promise. fuzzy.ts is a domain-neutral
                 string matcher; search.ts is the policy that ranks promises
                 with it.
@@ -65,7 +65,7 @@ cell.
 
 Every record is a `promise` (firm language) or an `ambition` (wishes and
 obligations, see `corpus/PROTOCOL.md`). The board shows one kind at a time: the
-kind switch swaps what sits in each term's `promises` slot (`termsOfKind`), and
+kind setting swaps what sits in each term's `promises` slot (`termsOfKind`), and
 every view below reads that slot unchanged. Only promises can get a verdict.
 
 A record's tier (`quality`) is its protocol verifiability level: `high`,
@@ -87,8 +87,8 @@ is shown and changed.
   place: menus never reshuffle under the cursor.
 - The charts above always draw the whole corpus of the current kind. They are
   shortcuts into the filter bar: a bar block sets term + verifiability to that
-  cell, a track-record section sets term + verdict, the tier legend toggles
-  verifiability. Clicking the same cell again clears it. Cells the filters
+  cell, a track-record section sets term + verdict, the tier and verdict
+  legends toggle verifiability and verdict. Clicking the same cell again clears it. Cells the filters
   leave out are dimmed, so the charts show what the list is showing.
 - Search narrows the list alone. It is the reader's own question, not a claim
   about the corpus.
