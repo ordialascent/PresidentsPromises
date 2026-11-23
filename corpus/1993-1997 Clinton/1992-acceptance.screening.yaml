@@ -1,0 +1,101 @@
+# Screening ledger for 1992-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row.
+#
+# ¶57.1-67.1 contrast Bush with Clinton ("He won't …, but I will."). The
+# "I will" turns the sentence into Clinton's own commitment to what Bush
+# is said not to do; the object is read from the first half.
+#
+# ¶85.1-103.1 describe the "New Covenant" as a vision ("An America in which
+# …") with no future verb and no named actor; like the 1997 inaugural's
+# vision of the next century, they are not candidates, except where a
+# sentence adds "we will" (¶86.1, ¶88.2, ¶98.2). ¶98.1 is joined to ¶98.2,
+# which states how it will be done.
+#
+# Added (no trigger, but future and tied to the election): ¶7.1 and ¶50.3
+# ("when I am President …").
+source: 1992-acceptance
+protocol: 1
+rows:
+  - { ref: "¶3.2", decision: describe, note: "About Cuomo's speech." }
+  - { ref: "¶3.3", decision: describe, note: "About this speech." }
+  - ref: "¶7.1"
+    decision: include
+    added: true
+    promises: [clinton-1992-middle-class-not-forgotten]
+  - { ref: "¶15.1", decision: describe, note: "About this speech." }
+  - { ref: "¶21.1", decision: include, promises: [clinton-1992-fight-for-jobs] }
+  - { ref: "¶23.1", decision: include, promises: [clinton-1992-respect-for-women] }
+  - { ref: "¶28.1", decision: describe, note: "Where his commitment comes from; no object to be done." }
+  - { ref: "¶34.1", decision: describe, note: "Rhetoric (family values \"in our actions\"); no object." }
+  - ref: "¶35.1"
+    decision: include
+    promises: [clinton-1992-child-support]
+    note: "Addressed to absent fathers, but \"we will force you\" is a commitment of the government he will lead."
+  - { ref: "¶36.1", decision: describe, note: "Introduces an address to children." }
+  - ref: "¶45.2"
+    decision: include
+    promises: [clinton-1992-use-power-to-help]
+    note: "\"I will\" answers ¶45.1 (\"use our power to help America\")."
+  - ref: "¶50.3"
+    decision: include
+    added: true
+    promises: [clinton-1992-respect-abroad]
+  - ref: "¶57.1"
+    decision: include
+    promises: [clinton-1992-control-health-costs, clinton-1992-health-care-for-all]
+    note: "Two objects that could get different verdicts (cost growth, coverage); split."
+  - { ref: "¶58.1", decision: include, promises: [clinton-1992-aids-commission] }
+  - ref: "¶59.1"
+    decision: include
+    promises: [clinton-1992-streamline-government, clinton-1992-cut-bureaucrats, clinton-1992-hundred-thousand-police]
+    note: "Three objects; split."
+  - ref: "¶61.1"
+    decision: include
+    promises: [clinton-1992-campaign-finance, clinton-1992-lobbying-reform]
+    note: "Elections (campaign money) and government (lobbyists) are two objects; split."
+  - { ref: "¶62.1", decision: include, promises: [clinton-1992-family-leave] }
+  - ref: "¶63.1"
+    decision: include
+    promises: [clinton-1992-family-farms]
+    note: "\"but I do\" states a commitment he holds; read as firm."
+  - ref: "¶64.1-64.2"
+    decision: include
+    promises: [clinton-1992-war-on-drugs]
+    note: "¶64.2 (\"But I will.\") takes its object from ¶64.1; joined."
+  - ref: "¶65.1"
+    decision: include
+    promises: [clinton-1992-environment-lead]
+    note: "Protecting the environment and creating jobs in environmental technologies; both parts are low, so they stay one promise."
+  - { ref: "¶67.1", decision: include, promises: [clinton-1992-right-to-choose] }
+  - ref: "¶69.1"
+    decision: include
+    promises: [clinton-1992-protect-privacy]
+    note: "\"I hope …\" frames the whole sentence; an ambition."
+  - { ref: "¶71.1", decision: include, promises: [clinton-1992-put-people-first] }
+  - { ref: "¶71.4", decision: describe, note: "Prediction (\"we'll continue to pour billions … down the drain\")." }
+  - ref: "¶73.2"
+    decision: include
+    promises: [clinton-1992-streamline-government]
+    note: "Soft restatement of ¶59.1 (make government work again)."
+  - { ref: "¶75.2", decision: describe, note: "Rhetoric (\"together we will revitalize America\")." }
+  - { ref: "¶79.4", decision: include, promises: [clinton-1992-build-community] }
+  - { ref: "¶86.1", decision: include, promises: [clinton-1992-business-incentives] }
+  - ref: "¶88.2"
+    decision: include
+    promises: [clinton-1992-college-loans]
+    note: "¶88.3-88.4 (\"you must pay it back, from your paychecks or … by … serving your communities\") place the duty on students; they give the repayment terms of this promise."
+  - ref: "¶98.1-98.2"
+    decision: include
+    promises: [clinton-1992-end-welfare]
+    note: "¶98.1 names the aim (\"end welfare as we know it\"), ¶98.2 how; one commitment, joined."
+  - ref: "¶104.1"
+    decision: include
+    promises: [clinton-1992-defense-cuts-reinvested]
+  - { ref: "¶107.1", decision: others, note: "Asks every American to look beyond stereotypes." }
+  - { ref: "¶122.3", decision: describe, note: "Rhetoric; no object." }
+  - { ref: "¶122.5", decision: describe, note: "Prediction (\"we won't get out of it overnight\")." }
+  - { ref: "¶122.6", decision: describe, note: "Rhetoric (\"with commitment, creativity …\")." }
+  - { ref: "¶125.1", decision: others, note: "Asks listeners to join." }
+  - { ref: "¶130.3", decision: describe, note: "Rhetoric; no object." }
+
+#   37 rows: 23 include, 14 excluded (others 2, describe 12)

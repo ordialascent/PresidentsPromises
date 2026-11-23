@@ -1,0 +1,1035 @@
+# Promises and ambitions of Bill Clinton's 1993-1997 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 1992 acceptance
+# speech, the 1992 final debate (Clinton's turns) and the 1993 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
+#
+# 37 promises (high 4, medium 13, low 20)
+# 20 ambitions (high 4, medium 5, low 11)
+# Deadlines default to the end of the term (1997-01-20).
+
+protocol: 1
+promises:
+  # ---- inaugural ----------------------------------------------------------
+  - id: clinton-1992-end-deadlock
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶7.3
+      quote: "And so today we pledge an end to the era of deadlock and drift, and a new season of American renewal has begun."
+    restatement: "End the era of deadlock and drift."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"We\" is the country and the government he now leads; read as a commitment of both."
+    links: []
+
+  - id: clinton-1992-invest-in-people
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶8.3
+      quote: "We must invest more in our own people, in their jobs, and in their future"
+    restatement: "Invest more in Americans, their jobs and their future."
+    group: clinton-1992-invest-and-cut-debt
+    type: action
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-cut-debt
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶8.3
+      quote: "and at the same time cut our massive debt."
+    restatement: "Cut the national debt."
+    group: clinton-1992-invest-and-cut-debt
+    type: outcome
+    theme: budget
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal debt"
+      record: "OMB Historical Tables (Table 7.1, federal debt at end of year)"
+      criterion: "federal debt held by the public is lower at the end of the term than at its start"
+      ambiguity: "\"Cut our massive debt\" may mean the debt itself or, loosely, the yearly deficit that adds to it; read as the debt."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-opportunity-responsibility
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶9.5
+      quote: "We must do what America does best: offer more opportunity to all and demand more responsibility from all."
+    restatement: "Offer more opportunity to all and demand more responsibility from all."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-revitalize-democracy
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶10.1
+      quote: "To renew America, we must revitalize our democracy."
+    restatement: "Revitalize American democracy."
+    type: outcome
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-engage-the-world
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶12.1-12.2
+      quote: "While America rebuilds at home, we will not shrink from the challenges nor fail to seize the opportunities of this new world. Together with our friends and allies, we will work to shape change, lest it engulf us."
+    restatement: "Meet the challenges of the post-Cold War world and work with allies to shape change."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-act-on-vital-interests
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶12.3
+      quote: "When our vital interests are challenged or the will and conscience of the international community is defied, we will act, with peaceful diplomacy whenever possible, with force when necessary."
+    restatement: "Act when vital interests are challenged: by diplomacy where possible, by force when necessary."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  # ---- acceptance ---------------------------------------------------------
+  - id: clinton-1992-middle-class-not-forgotten
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶7.1
+      quote: "when I am President, you will be forgotten no more."
+    restatement: "The middle class will be forgotten no more."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-fight-for-jobs
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶21.1
+      quote: "That's why I'll fight to create high-paying jobs so that parents can afford to raise their children today."
+    restatement: "Fight to create high-paying jobs."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-respect-for-women
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶23.1
+      quote: "That's why I'll fight to make sure women in this country receive respect and dignity, whether they work in the home, out of the home, or both."
+    restatement: "Fight to make sure women receive respect and dignity, at home and at work."
+    type: ongoing
+    theme: rights
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-child-support
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶35.1
+      quote: "Take responsibility for your children or we will force you to do so."
+    restatement: "Force parents who neglect their child support to pay it."
+    type: action
+    theme: welfare
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal child support enforcement"
+      record: "enacted legislation (Congress.gov); HHS Office of Child Support Enforcement"
+      criterion: "a federal law with new tools to make non-paying parents pay child support is enacted"
+      ambiguity: "\"We will force you\" names no measure; any enacted federal law that adds enforcement tools counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-use-power-to-help
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶45.2
+      quote: "I will."
+    restatement: "Use the power of the presidency to help America."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"I will\" takes its object from ¶45.1 (\"use our power to help America\")."
+    links: []
+
+  - id: clinton-1992-respect-abroad
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶50.3
+      quote: "When I am your President , the rest of the world will not look down on us with pity but up to us with respect again."
+    restatement: "Make the rest of the world look up to America with respect again."
+    type: outcome
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-control-health-costs
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶57.1
+      quote: "He won't take on the big insurance companies and the bureaucracies to control health costs"
+    - in: debate
+      ref: ¶332.6-332.7
+      quote: "control health care costs"
+    restatement: "Take on insurers and bureaucracies to control health costs."
+    group: clinton-1992-health-care
+    type: outcome
+    theme: health
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "national health spending"
+      record: "CMS National Health Expenditure Accounts"
+      criterion: "national health expenditure grows more slowly during the term than in the years before it"
+      ambiguity: "\"Control\" fixes no number; read as a slower growth rate of national health spending than in the four years before the term."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-health-care-for-all
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶57.1
+      quote: "give us affordable health care for all Americans, but I will."
+    - in: debate
+      ref: ¶332.6-332.7
+      quote: "provide basic health care to all Americans"
+    restatement: "Give all Americans affordable health care."
+    group: clinton-1992-health-care
+    type: outcome
+    theme: health
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "health insurance coverage of the population"
+      record: "Census Bureau, Current Population Survey (health insurance coverage); enacted legislation (Congress.gov)"
+      criterion: "every American has health coverage by the end of the term, or a law guaranteeing it is enacted"
+      ambiguity: "\"Affordable\" and \"basic\" are not defined; read as coverage for all."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-aids-commission
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶58.1
+      quote: "He won't even implement the recommendations of his own commission on AIDS, but I will."
+    restatement: "Implement the recommendations of the National Commission on AIDS."
+    type: action
+    theme: health
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "the recommendations of the National Commission on AIDS (reports 1991-1993)"
+      record: "the Commission's reports; federal budgets and laws"
+      criterion: "the Commission's main recommendations are carried out by law, budget or executive action"
+      ambiguity: "The Commission made many recommendations; read as its central ones (a national AIDS plan and leadership, more funding for care, research and prevention, health coverage for people with HIV, federal support for needle exchange)."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-streamline-government
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶59.1
+      quote: "He won't streamline the federal government and change the way it works"
+    - in: acceptance
+      ref: ¶73.2
+      quote: "if we want to use government to help people, we have got to make it work again."
+    restatement: "Streamline the federal government and change the way it works."
+    group: clinton-1992-government-and-police
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-cut-bureaucrats
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶59.1
+      quote: "cut 100,000 bureaucrats"
+    restatement: "Cut 100,000 federal bureaucrats."
+    group: clinton-1992-government-and-police
+    type: outcome
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "federal civilian employment"
+      record: "OPM federal civilian employment statistics"
+      criterion: "federal civilian employment is at least 100,000 lower at the end of the term than at its start"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-hundred-thousand-police
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶59.1
+      quote: "put 100,000 new police officers on the streets of American cities, but I will."
+    restatement: "Put 100,000 new police officers on the streets."
+    group: clinton-1992-government-and-police
+    type: outcome
+    theme: crime-justice
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "new police officers on the street"
+      record: "DOJ COPS Office grant and hiring data; DOJ Inspector General audits"
+      criterion: "100,000 additional police officers are on the streets by the end of the term"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-campaign-finance
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶61.1
+      quote: "He won't break the stranglehold the special interests have on our elections"
+    restatement: "Break special interests' hold on elections (campaign finance reform)."
+    group: clinton-1992-special-interests
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal campaign finance law"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a campaign finance reform law is enacted"
+      ambiguity: "\"Break the stranglehold … on our elections\" names no measure; read as campaign finance reform, the measure his campaign tied it to."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-lobbying-reform
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶61.1
+      quote: "and the lobbyists have on our government, but I will."
+    restatement: "Break lobbyists' hold on government (lobbying reform)."
+    group: clinton-1992-special-interests
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal lobbying rules"
+      record: "enacted legislation (Congress.gov); executive orders (Federal Register)"
+      criterion: "a law or executive order that tightens the rules on lobbying the federal government is in force"
+      ambiguity: "\"Break the stranglehold\" names no measure; any binding new restriction on lobbying counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-family-leave
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶62.1
+      quote: "He won't give mothers and fathers the simple chance to take some time off from work when a baby is born or a parent it sick, but I will."
+    restatement: "Give parents the right to take time off work for a birth or a sick parent (family leave)."
+    type: action
+    theme: welfare
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "federal family and medical leave law"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law giving workers job-protected leave for a birth or a sick family member is enacted"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-family-farms
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶63.1
+      quote: "he has no commitment to keep family farms in the family, but I do."
+    restatement: "Keep family farms in the family."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "States a commitment he holds (\"but I do\") rather than an act; read as firm."
+    links: []
+
+  - id: clinton-1992-war-on-drugs
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶64.1-64.2
+      quote: "he hasn't helped people on the front line to wage that war on drugs and crime. But I will."
+    restatement: "Help the people on the front line of the fight against drugs and crime."
+    type: ongoing
+    theme: crime-justice
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-environment-lead
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶65.1
+      quote: "He won't take the lead in protecting the environment and creating new jobs in environmental technologies for the 21st century, but I will."
+    restatement: "Lead in protecting the environment and in creating jobs in environmental technologies."
+    type: ongoing
+    theme: environment
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-right-to-choose
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶67.1
+      quote: "And George Bush- George Bush won't guarantee a women's right to choose; I will."
+    restatement: "Guarantee a woman's right to choose (abortion)."
+    type: action
+    theme: rights
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "the legal right to abortion"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a federal law guaranteeing the right to choose abortion is enacted"
+      ambiguity: "\"Guarantee\" names no means; read as a federal statute (the Freedom of Choice Act then before Congress), since a president cannot guarantee the right by order and court rulings are not his act."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-protect-privacy
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶69.1
+      quote: "I hope the right to privacy can be protected and we will never again have to discuss this issue on political platforms."
+    restatement: "Protect the right to privacy so that abortion leaves political platforms."
+    type: outcome
+    theme: rights
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-put-people-first
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶71.1
+      quote: "Our priorities must be clear; we will put our people first again."
+    - in: debate
+      ref: ¶332.6-332.7
+      quote: "put our people first"
+    restatement: "Put the American people first again."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-build-community
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶79.4
+      quote: "We will build an American community again."
+    restatement: "Build an American community again."
+    type: outcome
+    theme: rights
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-business-incentives
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶86.1
+      quote: "We will give you more incentives and more opportunity than ever before to develop the skills of your workers and to create American jobs and American wealth in the new global economy."
+    restatement: "Give businesses more incentives than ever to train workers and create jobs in America."
+    type: action
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-college-loans
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶88.2
+      quote: "We will say: Everybody can borrow money to go to college."
+    restatement: "Let everybody borrow money for college, to be paid back from paychecks or by national service."
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal college loans and their repayment terms"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law is enacted that lets any student borrow for college and repay as a share of later earnings or through community service"
+      ambiguity: "The next sentences (¶88.3-88.4) give the repayment terms (\"from your paychecks or … by … serving your communities\") without naming a programme; read as income-based repayment plus a service option."
+    uncertainty:
+      extraction: probable
+      note: "The cited sentence says only that everybody can borrow; the repayment terms are read from ¶88.4, which places the duty on students."
+    links: []
+
+  - id: clinton-1992-end-welfare
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶98.1-98.2
+      quote: "An America where we end welfare as we know it. We will say to those on welfare: You will have, and you deserve, the opportunity, through training and education, through child care and medical coverage, to liberate yourself."
+    restatement: "End welfare as we know it: training, education, child care and medical coverage, then work."
+    type: action
+    theme: welfare
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "the federal welfare programme (AFDC)"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law replaces cash welfare as it was with time-limited support tied to work, with training, child care and medical coverage"
+      ambiguity: "\"As we know it\" does not say what replaces welfare; read with ¶98.2-98.3 (support for training, child care and medical coverage, then work)."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-defense-cuts-reinvested
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶104.1
+      quote: "we must plow back every dollar of defense cuts into building American jobs right here at home."
+    restatement: "Reinvest every dollar of defense cuts in jobs at home."
+    type: action
+    theme: budget
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "defense savings and federal domestic investment"
+      record: "OMB Historical Tables; defense conversion budgets"
+      criterion: "the amount of defense cuts is matched by new domestic job programmes"
+      ambiguity: "Which spending counts as \"building American jobs\" is not defined."
+    uncertainty: { extraction: clear }
+    links: []
+
+  # ---- debate -------------------------------------------------------------
+  - id: clinton-1992-hundred-days-programs
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶76.1
+      quote: "who will send programs to the Congress in the first 100 days to deal with the critical issues that America's crying out for leadership on: jobs, incomes, the health care crisis, the need to control the economy."
+    - in: debate
+      ref: ¶76.3
+      quote: "I will deal with them from day one."
+    restatement: "Send Congress programs on jobs, incomes and health care in the first 100 days."
+    type: action
+    theme: economy
+    deadline: { stated: "in the first 100 days", applied: 1993-04-30 }
+    verifiability:
+      level: medium
+      object: "legislative proposals sent to Congress"
+      record: "Public Papers of the Presidents (messages to Congress); Congress.gov"
+      criterion: "by the 100th day, programmes on jobs and incomes and on health care have been sent to Congress"
+      ambiguity: "\"The need to control the economy\" has no object of its own; read as covered by the jobs and incomes programme."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-industrial-strategy
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶92.7
+      quote: "We ought to have a strategy that will build the economic and industrial base."
+    - in: debate
+      ref: ¶93.4
+      quote: "That's one of the things I want to change."
+    restatement: "Have a national strategy to build the economic and industrial base."
+    type: action
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-fuel-efficiency
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶104.4
+      quote: "I said that we ought to have a goal of raising the fuel efficiency standards to 40 miles a gallon."
+    - in: debate
+      ref: ¶105.1
+      quote: "I think we should try to raise the fuel efficiency."
+    - in: debate
+      ref: ¶105.3
+      quote: "I think we ought to push to do it."
+    restatement: "Raise fuel efficiency standards, with 40 miles a gallon as a goal."
+    type: action
+    theme: energy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal fuel economy (CAFE) standards, then 27.5 mpg for cars"
+      record: "NHTSA CAFE standards (Federal Register)"
+      criterion: "the car fuel economy standard is raised above 27.5 mpg"
+      ambiguity: "40 mpg is named as a goal without a date, and he says it need not be written into law; read as any raise of the standard."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-fuel-efficiency-incentives
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶105.2
+      quote: "I think we ought to have incentives to do it."
+    restatement: "Give incentives for better fuel efficiency."
+    type: action
+    theme: energy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-natural-gas-vehicles
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶107.1
+      quote: "We also ought to convert more vehicles to compressed natural gas."
+    restatement: "Convert more vehicles to compressed natural gas."
+    type: outcome
+    theme: energy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-nafta-side-agreements
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶124.4
+      quote: "if we could get some protection for the environment so that the Mexicans have to follow their own environmental standards, their own labor law standards"
+    restatement: "Get NAFTA protections that make Mexico follow its own environmental and labor laws."
+    group: clinton-1992-nafta-conditions
+    type: action
+    theme: trade
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "environmental and labor agreements alongside NAFTA"
+      record: "the signed agreements (USTR; Federal Register)"
+      criterion: "agreements binding Mexico to enforce its own environmental and labor laws are concluded"
+    uncertainty:
+      extraction: probable
+      note: "Stated as a condition of his support for NAFTA; read as his intention."
+    links: []
+
+  - id: clinton-1992-nafta-retraining
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶124.4
+      quote: "if we have a genuine commitment to reeducate and retrain the American workers who lose their jobs and reinvest in this economy."
+    restatement: "Retrain American workers who lose their jobs because of NAFTA."
+    group: clinton-1992-nafta-conditions
+    type: action
+    theme: trade
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal retraining for workers displaced by trade"
+      record: "enacted legislation (Congress.gov); DOL trade adjustment assistance data"
+      criterion: "a retraining programme for workers who lose their jobs to NAFTA is in place"
+      ambiguity: "\"Genuine commitment\" fixes no size; any dedicated federal programme counts."
+    uncertainty:
+      extraction: probable
+      note: "Stated as a condition of his support for NAFTA; read as his intention."
+    links: []
+
+  - id: clinton-1992-more-trade
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶125.2
+      quote: "I want more trade."
+    - in: debate
+      ref: ¶158.1
+      quote: "What I want America to do is to trade more, but to compete and win by investing in competitive ways."
+    restatement: "Trade more, and compete by investing."
+    type: outcome
+    theme: trade
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-fair-trade
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶126.1
+      quote: "I'll have a free and fair trade policy, a hard-headed realistic policy, and not get caught up in rubber-stamping everything the Bush administration did."
+    restatement: "Have a free, fair and hard-headed trade policy."
+    type: ongoing
+    theme: trade
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Said as what an endorser \"knows\" about him; read as his own claim."
+    links: []
+
+  - id: clinton-1992-lobbyist-testimony-disclosure
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶156.2
+      quote: "We ought to make them disclose the people they've given money to when they're testifying before congressional committees."
+    restatement: "Make lobbyists disclose whom they gave money to when they testify before Congress."
+    group: clinton-1992-lobbying-rules
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "disclosure rules for lobbyists testifying before Congress"
+      record: "enacted legislation and House/Senate rules (Congress.gov)"
+      criterion: "a law or rule requires witnesses who lobby to disclose their political contributions"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-lawyers-loophole
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶156.3
+      quote: "We ought to close the lawyers' loophole; they ought to have to disclose when they're really lobbying."
+    restatement: "Close the lawyers' loophole: lawyers who lobby must disclose it."
+    group: clinton-1992-lobbying-rules
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "lobbying registration rules for lawyers"
+      record: "enacted legislation (Congress.gov)"
+      criterion: "a law requires lawyers who lobby to register and disclose it"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-foreign-lobbying-ban
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶156.4
+      quote: "We ought to have a much longer period of time, about 5 years, between the time when people can leave executive branch offices and then go out and start lobbying for foreign interest."
+    restatement: "Bar former executive branch officials from lobbying for foreign interests for about five years."
+    group: clinton-1992-lobbying-rules
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "post-employment lobbying rules for executive branch officials"
+      record: "enacted legislation (Congress.gov); executive orders (Federal Register)"
+      criterion: "a law or order bars former executive branch officials from lobbying for foreign interests for about five years or more"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-town-halls
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶207.5
+      quote: "I've done a lot of them, and I'll continue to do them as President."
+    restatement: "Keep holding town hall meetings as President."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "presidential town hall meetings"
+      record: "Public Papers of the Presidents (The American Presidency Project)"
+      criterion: "he holds town hall meetings repeatedly over the term as President"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-cabinet-like-america
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶243.1
+      quote: "So that's what I'll do as President."
+    - in: debate
+      ref: ¶243.3
+      quote: "I think I owe the American people a White House staff, a Cabinet, and appointments that look like America, but that meet high standards of excellence, and that's what I'll do."
+    restatement: "Appoint a Cabinet, White House staff and officials that look like America."
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "the composition of the Cabinet and senior appointments"
+      record: "Senate confirmations; official Cabinet lists; appointment statistics"
+      criterion: "women and minorities hold a clearly larger share of Cabinet posts and senior appointments than under the previous administrations"
+      ambiguity: "\"Look like America\" fixes no share; read as a clear rise in the share of women and minorities over earlier administrations, not as an exact match to the population."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-enforce-banking-law
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶264.2
+      quote: "I think that our goal ought to be, first of all, not to politicize it, not to frighten people; secondly, to say that we have to enforce the law in two ways."
+    restatement: "Enforce banking law prudently: not too hard on good banks, firmly on troubled ones."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-banks-pay-for-failures
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶265.1
+      quote: "We also want to say that, insofar as is humanly possible, the banking industry itself should pay for the cost of any bank failures, the taxpayers should not, and that will be my policy."
+    restatement: "Make the banking industry, not taxpayers, pay for bank failures."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "the cost of bank failures"
+      record: "FDIC annual reports (Bank Insurance Fund); enacted legislation (Congress.gov)"
+      criterion: "no taxpayer money is spent on bank failures during the term; the cost is met by the industry's deposit insurance premiums"
+      ambiguity: "\"Bank failures\" may or may not include savings and loans (thrifts); read as commercial and savings banks insured by the FDIC's Bank Insurance Fund, the subject of the question."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-cut-congress-spending
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶282.1
+      quote: "I would just point out on the point Mr. Perot made, I agree that we need to cut spending in Congress."
+    restatement: "Cut Congress's own spending."
+    type: outcome
+    theme: budget
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "legislative branch spending"
+      record: "OMB Historical Tables (outlays by agency: legislative branch)"
+      criterion: "legislative branch outlays are lower at the end of the term than at its start"
+      ambiguity: "\"Spending in Congress\" may mean Congress's own budget or the spending it votes for; read as its own budget (the next sentence names staff and expenditures)."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-no-middle-class-tax
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶295.1
+      quote: "I will not raise taxes on the middle class to pay for these programs."
+    - in: debate
+      ref: ¶295.3
+      quote: "I am not going to raise taxes on the middle class to pay for these programs."
+    - in: debate
+      ref: ¶297.1
+      quote: "I'm not going to raise taxes on middle class Americans to pay for the programs I've recommended."
+    - in: debate
+      ref: ¶297.7
+      quote: "I won't raise taxes in the middle class to pay for my program."
+    restatement: "Not raise taxes on the middle class to pay for his programs."
+    type: ongoing
+    theme: taxes
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: medium
+      object: "federal taxes paid by middle-income Americans"
+      record: "enacted tax legislation (Congress.gov); JCT and Treasury distribution tables"
+      criterion: "no tax increase that falls on middle-income households is enacted during the term"
+      ambiguity: "\"The middle class\" is not defined, and \"to pay for these programs\" may or may not cover a tax raised for deficit reduction; read as any enacted tax increase that falls on middle-income households."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-fallback-cuts
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶295.2
+      quote: "If the money does not come in there to pay for these programs, we will cut other Government spending, or we will slow down the phase-in to the programs."
+    restatement: "If revenue falls short, cut other spending or slow the programmes rather than raise middle-class taxes."
+    type: ongoing
+    theme: budget
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-own-economic-policy
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶297.6
+      quote: "The person responsible for domestic economic policy in my administration will be Bill Clinton."
+    - in: debate
+      ref: ¶297.7
+      quote: "I'm going to make those decisions"
+    restatement: "Be personally responsible for domestic economic policy."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-education-second-to-none
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶332.6-332.7
+      quote: "have an education system second to none"
+    restatement: "Have an education system second to none."
+    type: outcome
+    theme: education
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-revitalize-economy
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶332.6-332.7
+      quote: "and revitalize the private economy. That is my commitment to you."
+    restatement: "Revitalize the private economy."
+    type: outcome
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-reward-work
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶332.9
+      quote: "I want a country where people who work hard and play by the rules are rewarded, not punished."
+    restatement: "Reward people who work hard and play by the rules."
+    type: outcome
+    theme: economy
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: clinton-1992-come-together
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶332.10
+      quote: "I want a country where people are coming together across the lines of race and region and income."
+    restatement: "Bring people together across race, region and income."
+    type: outcome
+    theme: rights
+    deadline: { stated: null, applied: 1997-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
