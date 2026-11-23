@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { PromisesChart } from '../promises/PromisesChart.js';
+import { PromiseFunnel } from '../promises/PromiseFunnel.js';
 import { PromiseList } from '../promises/PromiseList.js';
-import { TrackRecord } from '../promises/TrackRecord.js';
 import { FilterBar, type FacetControl } from '../promises/FilterBar.js';
 import { TermScope } from '../promises/TermScope.js';
 import { searchPromises } from '../promises/search.js';
@@ -92,22 +91,23 @@ const FACET_LABEL: Record<Facet, string> = {
 const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(v);
 
 /**
- * Front page: the promises of every president in the corpus, as two overview
- * charts and the searchable list beneath them.
+ * Front page: the promises of every president in the corpus, as one overview
+ * chart (promises and their track record, per term) and the searchable list
+ * beneath it.
  *
  * Above everything sit two choices that set the whole board's subject. The
  * kind: promises (firm language) or ambitions (wishes and obligations), never
  * mixed, because only promises can ever be kept or broken. And the term scope:
  * the latest few terms by default, or all, or a hand-picked set (kept in the
- * URL as `?terms=`). The charts, the counts and the list all cover the scope,
+ * URL as `?terms=`). The chart, the counts and the list all cover the scope,
  * so the board stays short however many terms the corpus holds.
  *
  * Every other filter belongs to the list and sits in one place: the filter bar
  * under the search box (topic, president, verifiability, verdict; each a
- * multi-select). The charts act as shortcuts into that bar: a bar block sets
- * one term and verifiability, a track-record section one term and verdict
+ * multi-select). The chart acts as a shortcut into that bar: a top block sets
+ * one term and verifiability, a verdict block one term and verdict
  * (the bar then shows a Term pick to clear). Clicking the same cell again
- * clears it. Cells the filters leave out are dimmed, so the charts show what
+ * clears it. Blocks the filters leave out are dimmed, so the chart shows what
  * the list is showing.
  */
 export function PromisesPage() {
@@ -252,31 +252,22 @@ export function PromisesPage() {
             <TermScope terms={CORPUS_TERMS} scope={scope} onScope={changeScope} />
           </div>
           <div className="board-promises">
-            <span className="board-label">{KIND_META[kind].plural}</span>
-            <PromisesChart
+            <span className="board-label">
+              {kind === 'promise' ? 'Promises and what became of them' : 'Ambitions'}
+            </span>
+            <PromiseFunnel
               terms={corpus}
+              kind={kind}
               pickedTiers={filters.tier}
               onToggleTier={(q) => toggle('tier', q)}
-              lit={blockLit}
-              picked={blockPicked}
-              onSelect={selectBlock}
+              tierLit={blockLit}
+              tierPicked={blockPicked}
+              onSelectTier={selectBlock}
+              verdictLit={cellLit}
+              verdictPicked={cellPicked}
+              onSelectVerdict={selectCell}
             />
           </div>
-
-          {kind === 'promise' && (
-            <>
-              <hr className="board-rule" />
-              <div className="board-promises">
-                <span className="board-label">Track record</span>
-                <TrackRecord
-                  terms={corpus}
-                  lit={cellLit}
-                  picked={cellPicked}
-                  onSelect={selectCell}
-                />
-              </div>
-            </>
-          )}
 
           <hr className="board-rule" />
 
