@@ -139,7 +139,6 @@ export function PromiseFunnel({
   }, [summaries.length]);
 
   const noun = kind === 'promise' ? 'promises' : 'ambitions';
-  const anyPending = withVerdicts && [...records.values()].some((r) => r.counts.pending > 0);
 
   return (
     <div className="pf" ref={ref}>
@@ -292,10 +291,7 @@ export function PromiseFunnel({
         <p className="tr-note">
           * Kept share = kept ÷ (kept + partly + broken). Under review, indeterminate and pending
           promises are left out, so it can differ from the green segment, which counts every checkable
-          promise. Only high and medium promises can be checked, so only they get a verdict (bottom row
-          of each term).
-          {anyPending &&
-            ' For a term still running, the kept share covers only the verdicts decided so far, mostly quick actions taken early in the term, so it is provisional and not comparable with finished terms until the term ends.'}
+          promise.
         </p>
       )}
     </div>
