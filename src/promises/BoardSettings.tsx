@@ -38,6 +38,10 @@ export function BoardSettings({
   const ref = useRef<HTMLDivElement | null>(null);
   const preset = scopePreset(scope, terms);
   const latestN = Math.min(LATEST_TERMS, terms.length);
+  const span = scopeSpan(scope, terms);
+  // Years read well for one unbroken run; a gappy pick would list every run and
+  // swamp the bar, so it shows how many terms instead (the years stay in the hint).
+  const spanLabel = span.includes(',') ? `${scope.size} picked` : span;
   const otherKind: Kind = kind === 'promise' ? 'ambition' : 'promise';
   const otherScale: Scale = scale === 'count' ? 'percent' : 'count';
 
@@ -78,11 +82,11 @@ export function BoardSettings({
           type="button"
           aria-expanded={open}
           aria-haspopup="true"
-          title="Choose which terms the board covers"
+          title={`Covers ${span}. Choose which terms the board covers`}
           onClick={() => setOpen((o) => !o)}
         >
           Terms
-          <span className="kind-switch-n">{scopeSpan(scope, terms)}</span>
+          <span className="kind-switch-n">{spanLabel}</span>
           <span className="fb-caret" aria-hidden="true">
             ▾
           </span>

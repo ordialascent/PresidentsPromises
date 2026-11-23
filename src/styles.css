@@ -83,9 +83,10 @@ h1 {
   color: var(--series);
   text-decoration: none;
   border-bottom: 1px solid color-mix(in srgb, var(--series) 40%, transparent);
-  white-space: nowrap;
 }
 .subtitle a:hover { border-bottom-color: var(--series); }
+/* keep the link on one line where it fits, wrap it where it would not */
+@media (min-width: 400px) { .subtitle a { white-space: nowrap; } }
 
 main {
   display: flex;
@@ -767,7 +768,7 @@ main {
 .settings-terms { margin-top: 4px !important; padding-top: 4px !important; border-top: 1px solid var(--border); }
 @media (max-width: 560px) {
   /* phones: title on top, then three equal buttons with the value under each label */
-  .settings .kind-switch { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; }
+  .settings .kind-switch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
   .settings-title { grid-column: 1 / -1; justify-content: center; border-right: 0; border-bottom: 1px solid var(--border); }
   .settings .kind-switch button {
     flex-direction: column;
@@ -777,7 +778,9 @@ main {
     font-size: 11px;
     letter-spacing: 0.06em;
     position: relative;
+    min-width: 0;
   }
+  .settings .kind-switch button .kind-switch-n { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
   .settings .fb-caret, .settings-flip { position: absolute; top: 6px; right: 6px; }
 }
 .pl-meta {
