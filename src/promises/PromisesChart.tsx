@@ -134,10 +134,14 @@ export function PromisesChart({
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const [containerW, setContainerW] = useState(DEFAULT_W);
-  const [atEnd, setAtEnd] = useState(false);
+  // Which sides have more to scroll to; each gets a soft edge.
+  const [more, setMore] = useState({ left: false, right: false });
   const checkEnd = () => {
     const el = scrollRef.current;
-    if (el) setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 2);
+    if (!el) return;
+    const left = el.scrollLeft > 2;
+    const right = el.scrollLeft + el.clientWidth < el.scrollWidth - 2;
+    setMore((m) => (m.left === left && m.right === right ? m : { left, right }));
   };
   useLayoutEffect(() => {
     const el = scrollRef.current;
@@ -155,7 +159,14 @@ export function PromisesChart({
 
   const geo = useMemo(() => geometry(containerW, summaries.length), [containerW, summaries.length]);
   const bars = useMemo(() => layout(summaries, mode, geo), [summaries, mode, geo]);
-  useLayoutEffect(checkEnd, [geo.width]);
+  // Newest terms first: when the chart is wider than its box, open it scrolled
+  // to the right end, and again whenever the terms or the width change.
+  const termKeys = terms.map((t) => t.key).join('|');
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    if (el) el.scrollLeft = el.scrollWidth;
+    checkEnd();
+  }, [geo.width, termKeys]);
   const BAR_W = geo.barW;
   const height = PAD_TOP + PLOT_H + PAD_BOTTOM;
 
@@ -196,7 +207,8 @@ export function PromisesChart({
       <div
         ref={scrollRef}
         className="pc-scroll"
-        data-more={geo.width > containerW + 1 && !atEnd}
+        data-more-left={more.left}
+        data-more-right={more.right}
         onScroll={checkEnd}
       >
       <svg
