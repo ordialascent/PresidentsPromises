@@ -16,7 +16,6 @@ export function BoardSettings({
   onScope,
   kind,
   kindLabel,
-  kindCount,
   kindHint,
   onKind,
   scale,
@@ -28,7 +27,6 @@ export function BoardSettings({
   onScope: (next: Set<string>) => void;
   kind: Kind;
   kindLabel: (k: Kind) => string;
-  kindCount: (k: Kind) => number;
   kindHint: (k: Kind) => string;
   onKind: (k: Kind) => void;
   scale: Scale;
@@ -39,9 +37,6 @@ export function BoardSettings({
   const preset = scopePreset(scope, terms);
   const latestN = Math.min(LATEST_TERMS, terms.length);
   const span = scopeSpan(scope, terms);
-  // Years read well for one unbroken run; a gappy pick would list every run and
-  // swamp the bar, so it shows how many terms instead (the years stay in the hint).
-  const spanLabel = span.includes(',') ? `${scope.size} picked` : span;
   const otherKind: Kind = kind === 'promise' ? 'ambition' : 'promise';
   const otherScale: Scale = scale === 'count' ? 'percent' : 'count';
 
@@ -85,15 +80,13 @@ export function BoardSettings({
           title={`Covers ${span}. Choose which terms the board covers`}
           onClick={() => setOpen((o) => !o)}
         >
-          Terms
-          <span className="kind-switch-n">{spanLabel}</span>
+          Terms ({scope.size})
           <span className="fb-caret" aria-hidden="true">
             ▾
           </span>
         </button>
         <button type="button" title={`Switch to ${kindLabel(otherKind).toLowerCase()}. ${kindHint(otherKind)}`} onClick={() => onKind(otherKind)}>
           {kindLabel(kind)}
-          <span className="kind-switch-n">{kindCount(kind)}</span>
           <span className="settings-flip" aria-hidden="true">
             ⇄
           </span>
