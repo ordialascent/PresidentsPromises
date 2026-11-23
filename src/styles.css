@@ -873,6 +873,29 @@ main {
   color: var(--dim);
   font-variant-numeric: tabular-nums;
 }
+/* the kind and the term scope: one row on wide screens, two on phones */
+.board-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+.scope {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.scope .kind-switch button { padding: 8px 12px; align-items: center; }
+.scope-span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.scope-menu { min-width: 240px; }
 .pl-meta {
   font-family: var(--font-mono);
   font-size: 10px;

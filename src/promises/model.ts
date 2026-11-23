@@ -45,6 +45,67 @@ export function termsOfKind(terms: CorpusTerm[], kind: Kind): CorpusTerm[] {
 }
 
 /**
+ * The terms the whole board covers: both charts, the counts and the list.
+ * By default the latest few terms, so the board stays readable as the corpus
+ * grows back in time and forward with each election; every term is one click
+ * away. The window rolls: a new term pushes the oldest one out.
+ */
+export const LATEST_TERMS = 5;
+export type ScopePreset = 'latest' | 'all' | 'custom';
+
+/** Keys of the latest `n` terms (`terms` are oldest first). */
+export function latestTermKeys(terms: CorpusTerm[], n = LATEST_TERMS): Set<string> {
+  return new Set(terms.slice(-n).map((t) => t.key));
+}
+
+const sameKeys = (a: ReadonlySet<string>, b: ReadonlySet<string>) =>
+  a.size === b.size && [...a].every((k) => b.has(k));
+
+/** Which preset a scope matches, if any. */
+export function scopePreset(scope: ReadonlySet<string>, terms: CorpusTerm[], n = LATEST_TERMS): ScopePreset {
+  if (sameKeys(scope, latestTermKeys(terms, n))) return 'latest';
+  if (sameKeys(scope, new Set(terms.map((t) => t.key)))) return 'all';
+  return 'custom';
+}
+
+/**
+ * The years a scope covers: "2009–2029" for neighbouring terms, and each run
+ * apart when there are gaps ("2001–2005, 2017–2021").
+ */
+export function scopeSpan(scope: ReadonlySet<string>, terms: CorpusTerm[]): string {
+  const runs: [number, number][] = [];
+  for (const t of terms) {
+    if (!scope.has(t.key)) continue;
+    const last = runs[runs.length - 1];
+    if (last && last[1] === t.from) last[1] = t.to;
+    else runs.push([t.from, t.to]);
+  }
+  return runs.map(([a, b]) => `${a}\u2013${b}`).join(', ');
+}
+
+/**
+ * The scope as a URL value: nothing for the default, `all`, or the terms'
+ * first years (`2009,2013`), which are unique and read well in a link.
+ */
+export function scopeToParam(scope: ReadonlySet<string>, terms: CorpusTerm[]): string | null {
+  const preset = scopePreset(scope, terms);
+  if (preset === 'latest') return null;
+  if (preset === 'all') return 'all';
+  return terms.filter((t) => scope.has(t.key)).map((t) => t.from).join(',');
+}
+
+/** Read a scope back from the URL. Anything unknown or empty gives the default. */
+export function scopeFromParam(param: string | null, terms: CorpusTerm[]): Set<string> {
+  if (param === 'all') return new Set(terms.map((t) => t.key));
+  if (param) {
+    const years = new Set(param.split(',').map((s) => Number(s.trim())));
+    const picked = terms.filter((t) => years.has(t.from)).map((t) => t.key);
+    if (picked.length > 0) return new Set(picked);
+  }
+  return latestTermKeys(terms);
+}
+
+/**
  * What the list row and the detail panel say about keeping a record. For a
  * judged promise that is its verdict; a verdict whose evidence still needs a
  * human check is shown as "under review"; otherwise it says why there is none.

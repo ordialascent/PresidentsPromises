@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { PromisesChart } from '../promises/PromisesChart.js';
 import { PromiseList } from '../promises/PromiseList.js';
 import { TrackRecord } from '../promises/TrackRecord.js';
 import { FilterBar, type FacetControl } from '../promises/FilterBar.js';
+import { TermScope } from '../promises/TermScope.js';
 import { searchPromises } from '../promises/search.js';
 import {
   FACETS,
@@ -17,6 +18,8 @@ import {
   filterRows,
   flattenPromises,
   isFiltered,
+  scopeFromParam,
+  scopeToParam,
   termsOfKind,
   topicCounts,
   type Facet,
@@ -25,18 +28,12 @@ import {
   type Quality,
 } from '../promises/model.js';
 import {
-  CORPUS_AMBITION_COUNT,
-  CORPUS_PROMISE_COUNT,
   CORPUS_TERMS,
 } from '../content/promises.generated.js';
 
 const KINDS: Kind[] = ['promise', 'ambition'];
 /** Election year of the oldest term in the corpus (terms are oldest first). */
 const FIRST_ELECTION = CORPUS_TERMS[0].from - 1;
-const KIND_TOTAL: Record<Kind, number> = {
-  promise: CORPUS_PROMISE_COUNT,
-  ambition: CORPUS_AMBITION_COUNT,
-};
 const KIND_HINT: Record<Kind, string> = {
   promise:
     'Firm commitments ("we will", "I\u2019m going to"). Only promises can be kept or broken, and only high and medium ones get a verdict.',
@@ -53,17 +50,21 @@ const ROWS: Record<Kind, ReturnType<typeof flattenPromises>> = {
 };
 
 const SURNAME_OF = new Map(CORPUS_TERMS.map((t) => [t.key, t.surname]));
-const PRESIDENTS = [...new Set(CORPUS_TERMS.map((t) => t.surname))];
+
+/** The term scope as it stands in the address bar (`?terms=`). */
+const scopeFromUrl = () =>
+  scopeFromParam(new URLSearchParams(window.location.search).get('terms'), CORPUS_TERMS);
 
 /** Each facet's options, in a fixed order, so the menus never reshuffle. */
-function optionsFor(kind: Kind, facet: Facet): { value: string; label: string }[] {
+function optionsFor(kind: Kind, facet: Facet, scope: ReadonlySet<string>): { value: string; label: string }[] {
+  const inScope = CORPUS_TERMS.filter((t) => scope.has(t.key));
   switch (facet) {
     case 'topic':
       return topicCounts(BY_KIND[kind]).map((t) => ({ value: t.theme, label: t.theme }));
     case 'president':
-      return PRESIDENTS.map((p) => ({ value: p, label: p }));
+      return [...new Set(inScope.map((t) => t.surname))].map((p) => ({ value: p, label: p }));
     case 'term':
-      return CORPUS_TERMS.map((t) => ({ value: t.key, label: `${t.label} (${t.termLabel})` }));
+      return inScope.map((t) => ({ value: t.key, label: `${t.label} (${t.termLabel})` }));
     case 'tier':
       return QUALITIES.map((q) => ({ value: q, label: QUALITY_META[q].label }));
     case 'verdict': {
@@ -94,24 +95,50 @@ const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(
  * Front page: the promises of every president in the corpus, as two overview
  * charts and the searchable list beneath them.
  *
- * Every filter belongs to the list and sits in one place: the filter bar under
- * the search box (topic, president, term, verifiability, verdict; each a
- * multi-select). The charts above always draw the whole corpus and act as
- * shortcuts into that bar: a bar block sets term and verifiability to that one
- * cell, a track-record section sets term and verdict. Clicking the same cell
- * again clears it. Cells the filters leave out are dimmed, so the charts show
- * what the list is showing.
+ * Above everything sit two choices that set the whole board's subject. The
+ * kind: promises (firm language) or ambitions (wishes and obligations), never
+ * mixed, because only promises can ever be kept or broken. And the term scope:
+ * the latest few terms by default, or all, or a hand-picked set (kept in the
+ * URL as `?terms=`). The charts, the counts and the list all cover the scope,
+ * so the board stays short however many terms the corpus holds.
  *
- * Above everything sits the kind: promises (firm language) or ambitions (wishes
- * and obligations). It swaps the whole board's subject rather than mixing the
- * two, because only promises can ever be kept or broken.
+ * Every other filter belongs to the list and sits in one place: the filter bar
+ * under the search box (topic, president, verifiability, verdict; each a
+ * multi-select). The charts act as shortcuts into that bar: a bar block sets
+ * one term and verifiability, a track-record section one term and verdict
+ * (the bar then shows a Term pick to clear). Clicking the same cell again
+ * clears it. Cells the filters leave out are dimmed, so the charts show what
+ * the list is showing.
  */
 export function PromisesPage() {
   const [kind, setKind] = useState<Kind>('promise');
-  const corpus = BY_KIND[kind];
-  const rows = ROWS[kind];
+  const [scope, setScope] = useState<ReadonlySet<string>>(scopeFromUrl);
+  const corpus = useMemo(() => BY_KIND[kind].filter((t) => scope.has(t.key)), [kind, scope]);
+  const rows = useMemo(() => ROWS[kind].filter((r) => scope.has(r.termKey)), [kind, scope]);
+  const kindTotal = (k: Kind) => ROWS[k].reduce((n, r) => n + (scope.has(r.termKey) ? 1 : 0), 0);
   const [filters, setFilters] = useState<Filters>(NO_FILTERS);
   const [query, setQuery] = useState('');
+
+  // Keep the scope in the address bar, so a link opens the same view.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const param = scopeToParam(scope, CORPUS_TERMS);
+    if (param === null) url.searchParams.delete('terms');
+    else url.searchParams.set('terms', param);
+    url.search = url.searchParams.toString().replace(/%2C/g, ','); // keep "2001,2017" readable
+    if (url.href !== window.location.href) window.history.replaceState(window.history.state, '', url);
+  }, [scope]);
+
+  // Picks for terms or presidents outside the new scope would hide every row.
+  const changeScope = (next: Set<string>) => {
+    setScope(next);
+    const presidents = new Set(CORPUS_TERMS.filter((t) => next.has(t.key)).map((t) => t.surname));
+    setFilters((f) => ({
+      ...f,
+      term: new Set([...f.term].filter((k) => next.has(k))),
+      president: new Set([...f.president].filter((p) => presidents.has(p))),
+    }));
+  };
 
   const filtered = useMemo(() => filterRows(rows, filters), [rows, filters]);
   const hits = useMemo(() => searchPromises(filtered, query), [filtered, query]);
@@ -125,13 +152,17 @@ export function PromisesPage() {
     setFacet(facet, next);
   };
 
-  const facets: Facet[] = kind === 'promise' ? FACETS : FACETS.filter((f) => f !== 'verdict');
+  // Terms are chosen by the scope above; the bar shows a Term pick only when a
+  // chart click has narrowed the list to one term, so it can be cleared there.
+  const facets: Facet[] = FACETS.filter(
+    (f) => (f !== 'verdict' || kind === 'promise') && (f !== 'term' || filters.term.size > 0),
+  );
   const controls: FacetControl[] = facets.map((facet) => {
     const counts = facetCounts(rows, filters, facet);
     return {
       key: facet,
       label: FACET_LABEL[facet],
-      options: optionsFor(kind, facet).map((o) => ({ ...o, count: counts.get(o.value) ?? 0 })),
+      options: optionsFor(kind, facet, scope).map((o) => ({ ...o, count: counts.get(o.value) ?? 0 })),
       picked: filters[facet],
       onToggle: (v) => toggle(facet, v),
       onClear: () => setFacet(facet, new Set()),
@@ -202,20 +233,23 @@ export function PromisesPage() {
 
       <main>
         <section className="board">
-          <div className="kind-switch" role="group" aria-label="Promises or ambitions">
-            {KINDS.map((k) => (
-              <button
-                key={k}
-                type="button"
-                data-on={kind === k}
-                aria-pressed={kind === k}
-                title={KIND_HINT[k]}
-                onClick={() => switchKind(k)}
-              >
-                {KIND_META[k].plural}
-                <span className="kind-switch-n">{KIND_TOTAL[k]}</span>
-              </button>
-            ))}
+          <div className="board-top">
+            <div className="kind-switch" role="group" aria-label="Promises or ambitions">
+              {KINDS.map((k) => (
+                <button
+                  key={k}
+                  type="button"
+                  data-on={kind === k}
+                  aria-pressed={kind === k}
+                  title={KIND_HINT[k]}
+                  onClick={() => switchKind(k)}
+                >
+                  {KIND_META[k].plural}
+                  <span className="kind-switch-n">{kindTotal(k)}</span>
+                </button>
+              ))}
+            </div>
+            <TermScope terms={CORPUS_TERMS} scope={scope} onScope={changeScope} />
           </div>
           <div className="board-promises">
             <span className="board-label">{KIND_META[kind].plural}</span>
@@ -248,7 +282,7 @@ export function PromisesPage() {
 
           <PromiseList
             hits={hits}
-            total={KIND_TOTAL[kind]}
+            total={rows.length}
             noun={KIND_META[kind].plural.toLowerCase()}
             query={query}
             onQuery={setQuery}
