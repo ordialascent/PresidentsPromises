@@ -127,6 +127,3573 @@ export interface CorpusTerm {
 /** Every term with its aggregated promise set, oldest first. */
 export const CORPUS_TERMS: CorpusTerm[] = [
   {
+    "key": "1993-1997 Clinton",
+    "surname": "Clinton",
+    "from": 1993,
+    "to": 1997,
+    "termLabel": "1993–1997",
+    "speechYear": 1992,
+    "label": "Clinton 1992",
+    "screening": {
+      "include": 60,
+      "others": 2,
+      "past": 1,
+      "describe": 35,
+      "conditional": 0,
+      "attack": 1,
+      "ceremony": 2
+    },
+    "screenedAdded": 5,
+    "promises": [
+      {
+        "id": "clinton-1992-end-deadlock",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "End the era of deadlock and drift.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1993,
+              "date": "1993-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+              "label": "1993 inaugural address"
+            },
+            "ref": "¶7.3",
+            "quote": "And so today we pledge an end to the era of deadlock and drift, and a new season of American renewal has begun.",
+            "context": "And so today we pledge an end to the era of deadlock and drift, and a new season of American renewal has begun.",
+            "mark": [
+              0,
+              111
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We\" is the country and the government he now leads; read as a commitment of both."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-engage-the-world",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Meet the challenges of the post-Cold War world and work with allies to shape change.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1993,
+              "date": "1993-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+              "label": "1993 inaugural address"
+            },
+            "ref": "¶12.1-12.2",
+            "quote": "While America rebuilds at home, we will not shrink from the challenges nor fail to seize the opportunities of this new world. Together with our friends and allies, we will work to shape change, lest it engulf us.",
+            "context": "While America rebuilds at home, we will not shrink from the challenges nor fail to seize the opportunities of this new world. Together with our friends and allies, we will work to shape change, lest it engulf us.",
+            "mark": [
+              0,
+              212
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-act-on-vital-interests",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Act when vital interests are challenged: by diplomacy where possible, by force when necessary.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1993,
+              "date": "1993-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+              "label": "1993 inaugural address"
+            },
+            "ref": "¶12.3",
+            "quote": "When our vital interests are challenged or the will and conscience of the international community is defied, we will act, with peaceful diplomacy whenever possible, with force when necessary.",
+            "context": "When our vital interests are challenged or the will and conscience of the international community is defied, we will act, with peaceful diplomacy whenever possible, with force when necessary.",
+            "mark": [
+              0,
+              191
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-middle-class-not-forgotten",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "The middle class will be forgotten no more.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶7.1",
+            "quote": "when I am President, you will be forgotten no more.",
+            "context": "I am a product of that middle class, and when I am President, you will be forgotten no more.",
+            "mark": [
+              41,
+              92
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-fight-for-jobs",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Fight to create high-paying jobs.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶21.1",
+            "quote": "That's why I'll fight to create high-paying jobs so that parents can afford to raise their children today.",
+            "context": "That's why I'll fight to create high-paying jobs so that parents can afford to raise their children today.",
+            "mark": [
+              0,
+              106
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-respect-for-women",
+        "kind": "promise",
+        "theme": "rights",
+        "restatement": "Fight to make sure women receive respect and dignity, at home and at work.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶23.1",
+            "quote": "That's why I'll fight to make sure women in this country receive respect and dignity, whether they work in the home, out of the home, or both.",
+            "context": "That's why I'll fight to make sure women in this country receive respect and dignity, whether they work in the home, out of the home, or both.",
+            "mark": [
+              0,
+              142
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-child-support",
+        "kind": "promise",
+        "theme": "welfare",
+        "restatement": "Force parents who neglect their child support to pay it.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶35.1",
+            "quote": "Take responsibility for your children or we will force you to do so.",
+            "context": "I do want to say something to the fathers in this country who have chosen to abandon their children by neglecting their child support: Take responsibility for your children or we will force you to do so.",
+            "mark": [
+              135,
+              203
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal child support enforcement",
+            "record": "enacted legislation (Congress.gov); HHS Office of Child Support Enforcement",
+            "criterion": "a federal law with new tools to make non-paying parents pay child support is enacted",
+            "ambiguity": "\"We will force you\" names no measure; any enacted federal law that adds enforcement tools counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "The 1996 welfare law added national new-hire reporting, wage withholding and the suspension of driver's and professional licenses for parents who do not pay child support.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Personal Responsibility and Work Opportunity Reconciliation Act of 1996, Pub. L. 104-193, Title III (child support)",
+              "url": "https://www.congress.gov/bill/104th-congress/house-bill/3734",
+              "publisher": "Congress.gov",
+              "date": "1996-08-22",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-use-power-to-help",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Use the power of the presidency to help America.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶45.2",
+            "quote": "I will.",
+            "context": "I will.",
+            "mark": [
+              0,
+              7
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"I will\" takes its object from ¶45.1 (\"use our power to help America\")."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-respect-abroad",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Make the rest of the world look up to America with respect again.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶50.3",
+            "quote": "When I am your President , the rest of the world will not look down on us with pity but up to us with respect again.",
+            "context": "When I am your President , the rest of the world will not look down on us with pity but up to us with respect again.",
+            "mark": [
+              0,
+              116
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-control-health-costs",
+        "kind": "promise",
+        "theme": "health",
+        "restatement": "Take on insurers and bureaucracies to control health costs.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶57.1",
+            "quote": "He won't take on the big insurance companies and the bureaucracies to control health costs",
+            "context": "He won't take on the big insurance companies and the bureaucracies to control health costs and give us affordable health care for all Americans, but I will.",
+            "mark": [
+              0,
+              90
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶332.6-332.7",
+            "quote": "control health care costs",
+            "context": "It's invest and grow, put our people first, control health care costs and provide basic health care to all Americans, have an education system second to none, and revitalize the private economy. That is my commitment to you.",
+            "mark": [
+              44,
+              69
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1992-health-care",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "national health spending",
+            "record": "CMS National Health Expenditure Accounts",
+            "criterion": "national health expenditure grows more slowly during the term than in the years before it",
+            "ambiguity": "\"Control\" fixes no number; read as a slower growth rate of national health spending than in the four years before the term."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "National health spending grew more slowly in 1993-1996 than in any 4 years since 1960, down to 4.4 percent in 1996, after double-digit growth in the 1980s.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Levit et al., National Health Expenditures, 1996 (Health Care Financing Review, Fall 1997)",
+              "url": "https://www.cms.gov/files/document/1997fall-08pdf",
+              "publisher": "Health Care Financing Administration, Office of the Actuary",
+              "date": "1997-10-01",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "The source credits managed care and low inflation, not federal policy, and the plan to \"take on\" insurers failed; a reader who judges the means could call this broken."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-health-care-for-all",
+        "kind": "promise",
+        "theme": "health",
+        "restatement": "Give all Americans affordable health care.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶57.1",
+            "quote": "give us affordable health care for all Americans, but I will.",
+            "context": "He won't take on the big insurance companies and the bureaucracies to control health costs and give us affordable health care for all Americans, but I will.",
+            "mark": [
+              95,
+              156
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶332.6-332.7",
+            "quote": "provide basic health care to all Americans",
+            "context": "It's invest and grow, put our people first, control health care costs and provide basic health care to all Americans, have an education system second to none, and revitalize the private economy. That is my commitment to you.",
+            "mark": [
+              74,
+              116
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1992-health-care",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "health insurance coverage of the population",
+            "record": "Census Bureau, Current Population Survey (health insurance coverage); enacted legislation (Congress.gov)",
+            "criterion": "every American has health coverage by the end of the term, or a law guaranteeing it is enacted",
+            "ambiguity": "\"Affordable\" and \"basic\" are not defined; read as coverage for all."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-23",
+          "summary": "The Health Security Act never came to a floor vote, and the number of uninsured rose; 41.7 million people (15.6 percent) had no coverage for all of 1996.",
+          "attempt": "initiated",
+          "review": null,
+          "evidence": [
+            {
+              "what": "H.R. 3600, Health Security Act, 103rd Congress (introduced at the President's request; no floor vote)",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/3600",
+              "publisher": "Congress.gov",
+              "date": "1993-11-20",
+              "secondary": false
+            },
+            {
+              "what": "Census Bureau, Health Insurance Coverage 1996 (P60-199)",
+              "url": "https://www.census.gov/library/publications/1997/demo/p60-199.html",
+              "publisher": "U.S. Census Bureau",
+              "date": "1997-09-01",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-aids-commission",
+        "kind": "promise",
+        "theme": "health",
+        "restatement": "Implement the recommendations of the National Commission on AIDS.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶58.1",
+            "quote": "He won't even implement the recommendations of his own commission on AIDS, but I will.",
+            "context": "He won't even implement the recommendations of his own commission on AIDS, but I will.",
+            "mark": [
+              0,
+              86
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the recommendations of the National Commission on AIDS (reports 1991-1993)",
+            "record": "the Commission's reports; federal budgets and laws",
+            "criterion": "the Commission's main recommendations are carried out by law, budget or executive action",
+            "ambiguity": "The Commission made many recommendations; read as its central ones (a national AIDS plan and leadership, more funding for care, research and prevention, health coverage for people with HIV, federal support for needle exchange)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "partly",
+          "asOf": "2026-11-23",
+          "summary": "Some of the Commission's main recommendations were carried out (a national AIDS policy coordinator in 1993, a White House conference in 1995, more money for care and research), but not health coverage for all people with HIV, and the ban on federal money for needle exchange stayed.",
+          "attempt": null,
+          "review": "Confirm against the Commission's 1993 final report which recommendations were met by Jan 1997: AIDS coordinator appointed June 1993; Ryan White CARE Act funding about $350M (FY1993) to about $750M (FY1996); needle-exchange funding ban unchanged (from memory).",
+          "evidence": [
+            {
+              "what": "National Commission on AIDS, final report \"AIDS - An Expanding Tragedy\" (June 1993) and earlier recommendations",
+              "url": "https://profiles.nlm.nih.gov/spotlight/ncaids/feature/ncaids-year-4-august-1992-september-1993",
+              "publisher": "National Library of Medicine",
+              "date": null,
+              "secondary": false
+            },
+            {
+              "what": "Remarks to the White House Conference on HIV and AIDS",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-the-white-house-conference-hiv-and-aids",
+              "publisher": "The American Presidency Project",
+              "date": "1995-12-06",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "Which recommendations count as central is a judgement call (see the promise's ambiguity)."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-streamline-government",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Streamline the federal government and change the way it works.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶59.1",
+            "quote": "He won't streamline the federal government and change the way it works",
+            "context": "He won't streamline the federal government and change the way it works, cut 100,000 bureaucrats and put 100,000 new police officers on the streets of American cities, but I will.",
+            "mark": [
+              0,
+              70
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶73.2",
+            "quote": "if we want to use government to help people, we have got to make it work again.",
+            "context": "There is not a program in government for every problem, and if we want to use government to help people, we have got to make it work again.",
+            "mark": [
+              60,
+              139
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-government-and-police",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-cut-bureaucrats",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Cut 100,000 federal bureaucrats.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶59.1",
+            "quote": "cut 100,000 bureaucrats",
+            "context": "He won't streamline the federal government and change the way it works, cut 100,000 bureaucrats and put 100,000 new police officers on the streets of American cities, but I will.",
+            "mark": [
+              72,
+              95
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1992-government-and-police",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal civilian employment",
+            "record": "OPM federal civilian employment statistics",
+            "criterion": "federal civilian employment is at least 100,000 lower at the end of the term than at its start",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "Executive branch civilian employment fell from 2,225,000 (end of FY1992) to 1,934,000 (end of FY1996), about 291,000 fewer; the Federal Workforce Restructuring Act of 1994 required a cut of 272,900.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Historical Tables, Table 17.1, Total Executive Branch Civilian Employees 1940-2002 (thousands, end of fiscal year)",
+              "url": "https://www.govinfo.gov/content/pkg/BUDGET-2004-TAB/html/BUDGET-2004-TAB-19-1.htm",
+              "publisher": "Office of Management and Budget (via GovInfo)",
+              "date": null,
+              "secondary": false
+            },
+            {
+              "what": "Federal Workforce Restructuring Act of 1994, Pub. L. 103-226",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/3345",
+              "publisher": "Congress.gov",
+              "date": "1994-03-30",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-hundred-thousand-police",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Put 100,000 new police officers on the streets.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶59.1",
+            "quote": "put 100,000 new police officers on the streets of American cities, but I will.",
+            "context": "He won't streamline the federal government and change the way it works, cut 100,000 bureaucrats and put 100,000 new police officers on the streets of American cities, but I will.",
+            "mark": [
+              100,
+              178
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1992-government-and-police",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "new police officers on the street",
+            "record": "DOJ COPS Office grant and hiring data; DOJ Inspector General audits",
+            "criterion": "100,000 additional police officers are on the streets by the end of the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "partly",
+          "asOf": "2026-11-23",
+          "summary": "The 1994 crime law funded 100,000 community police officers, but far fewer were on the streets by the deadline; even by February 1999 the Justice Department counted 50,139 hired and deployed.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Violent Crime Control and Law Enforcement Act of 1994, Pub. L. 103-322, Title I (Public Safety Partnership and Community Policing)",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/3355",
+              "publisher": "Congress.gov",
+              "date": "1994-09-13",
+              "secondary": false
+            },
+            {
+              "what": "DOJ Office of the Inspector General, Audit Report 99-14, Police Hiring and Redeployment Grants (Executive Summary)",
+              "url": "https://oig.justice.gov/archives/reports/COPS/a9914/exec.htm",
+              "publisher": "U.S. Department of Justice, Office of the Inspector General",
+              "date": "1999-04-01",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-campaign-finance",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Break special interests' hold on elections (campaign finance reform).",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶61.1",
+            "quote": "He won't break the stranglehold the special interests have on our elections",
+            "context": "He won't break the stranglehold the special interests have on our elections and the lobbyists have on our government, but I will.",
+            "mark": [
+              0,
+              75
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-special-interests",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal campaign finance law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a campaign finance reform law is enacted",
+            "ambiguity": "\"Break the stranglehold … on our elections\" names no measure; read as campaign finance reform, the measure his campaign tied it to."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-23",
+          "summary": "No campaign finance reform law was enacted. The Senate (June 1993) and the House (November 1993) each passed a bill, but no final version was agreed.",
+          "attempt": "passed-chamber",
+          "review": null,
+          "evidence": [
+            {
+              "what": "S. 3, Congressional Spending Limit and Election Reform Act of 1993 (passed Senate; no conference agreement)",
+              "url": "https://www.congress.gov/bill/103rd-congress/senate-bill/3",
+              "publisher": "Congress.gov",
+              "date": "1993-06-17",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-lobbying-reform",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Break lobbyists' hold on government (lobbying reform).",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶61.1",
+            "quote": "and the lobbyists have on our government, but I will.",
+            "context": "He won't break the stranglehold the special interests have on our elections and the lobbyists have on our government, but I will.",
+            "mark": [
+              76,
+              129
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-special-interests",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal lobbying rules",
+            "record": "enacted legislation (Congress.gov); executive orders (Federal Register)",
+            "criterion": "a law or executive order that tightens the rules on lobbying the federal government is in force",
+            "ambiguity": "\"Break the stranglehold\" names no measure; any binding new restriction on lobbying counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "On his first day he ordered a 5-year lobbying ban on his senior appointees, and in December 1995 he signed the Lobbying Disclosure Act, which widened who must register and disclose.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Executive Order 12834, Ethics Commitments by Executive Branch Appointees",
+              "url": "https://www.presidency.ucsb.edu/documents/executive-order-12834-ethics-commitments-executive-branch-appointees",
+              "publisher": "The American Presidency Project",
+              "date": "1993-01-20",
+              "secondary": false
+            },
+            {
+              "what": "Lobbying Disclosure Act of 1995, Pub. L. 104-65",
+              "url": "https://www.congress.gov/bill/104th-congress/senate-bill/1060",
+              "publisher": "Congress.gov",
+              "date": "1995-12-19",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-family-leave",
+        "kind": "promise",
+        "theme": "welfare",
+        "restatement": "Give parents the right to take time off work for a birth or a sick parent (family leave).",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶62.1",
+            "quote": "He won't give mothers and fathers the simple chance to take some time off from work when a baby is born or a parent it sick, but I will.",
+            "context": "He won't give mothers and fathers the simple chance to take some time off from work when a baby is born or a parent it sick, but I will.",
+            "mark": [
+              0,
+              136
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal family and medical leave law",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law giving workers job-protected leave for a birth or a sick family member is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "He signed the Family and Medical Leave Act on 5 February 1993, giving up to 12 weeks of job-protected leave for a birth or a seriously ill family member.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Family and Medical Leave Act of 1993, Pub. L. 103-3",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/1",
+              "publisher": "Congress.gov",
+              "date": "1993-02-05",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-family-farms",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Keep family farms in the family.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶63.1",
+            "quote": "he has no commitment to keep family farms in the family, but I do.",
+            "context": "We're losing our farms at a rapid rate, and he has no commitment to keep family farms in the family, but I do.",
+            "mark": [
+              44,
+              110
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "States a commitment he holds (\"but I do\") rather than an act; read as firm."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-war-on-drugs",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Help the people on the front line of the fight against drugs and crime.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶64.1-64.2",
+            "quote": "he hasn't helped people on the front line to wage that war on drugs and crime. But I will.",
+            "context": "He's talked a lot about drugs, but he hasn't helped people on the front line to wage that war on drugs and crime. But I will.",
+            "mark": [
+              35,
+              125
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-environment-lead",
+        "kind": "promise",
+        "theme": "environment",
+        "restatement": "Lead in protecting the environment and in creating jobs in environmental technologies.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶65.1",
+            "quote": "He won't take the lead in protecting the environment and creating new jobs in environmental technologies for the 21st century, but I will.",
+            "context": "He won't take the lead in protecting the environment and creating new jobs in environmental technologies for the 21st century, but I will.",
+            "mark": [
+              0,
+              138
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-right-to-choose",
+        "kind": "promise",
+        "theme": "rights",
+        "restatement": "Guarantee a woman's right to choose (abortion).",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶67.1",
+            "quote": "And George Bush- George Bush won't guarantee a women's right to choose; I will.",
+            "context": "And George Bush- George Bush won't guarantee a women's right to choose; I will.",
+            "mark": [
+              0,
+              79
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the legal right to abortion",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a federal law guaranteeing the right to choose abortion is enacted",
+            "ambiguity": "\"Guarantee\" names no means; read as a federal statute (the Freedom of Choice Act then before Congress), since a president cannot guarantee the right by order and court rulings are not his act."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-23",
+          "summary": "The Freedom of Choice Act was reported by committees in 1993 but never reached a floor vote, and no law guaranteeing the right was enacted. He did lift several federal abortion restrictions by memorandum (22 January 1993) and signed the clinic-access law (FACE Act, 1994).",
+          "attempt": "none",
+          "review": null,
+          "evidence": [
+            {
+              "what": "S. 25, Freedom of Choice Act of 1993, 103rd Congress (reported; no floor vote)",
+              "url": "https://www.congress.gov/bill/103rd-congress/senate-bill/25",
+              "publisher": "Congress.gov",
+              "date": null,
+              "secondary": false
+            },
+            {
+              "what": "Freedom of Access to Clinic Entrances Act of 1994, Pub. L. 103-259",
+              "url": "https://www.congress.gov/bill/103rd-congress/senate-bill/636",
+              "publisher": "Congress.gov",
+              "date": "1994-05-26",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "Roe v. Wade stood throughout the term; a reader who counts keeping the right in place as \"guaranteeing\" it could call this kept."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-put-people-first",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Put the American people first again.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶71.1",
+            "quote": "Our priorities must be clear; we will put our people first again.",
+            "context": "Our priorities must be clear; we will put our people first again.",
+            "mark": [
+              0,
+              65
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶332.6-332.7",
+            "quote": "put our people first",
+            "context": "It's invest and grow, put our people first, control health care costs and provide basic health care to all Americans, have an education system second to none, and revitalize the private economy. That is my commitment to you.",
+            "mark": [
+              22,
+              42
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-build-community",
+        "kind": "promise",
+        "theme": "rights",
+        "restatement": "Build an American community again.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶79.4",
+            "quote": "We will build an American community again.",
+            "context": "We will build an American community again.",
+            "mark": [
+              0,
+              42
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-business-incentives",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Give businesses more incentives than ever to train workers and create jobs in America.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶86.1",
+            "quote": "We will give you more incentives and more opportunity than ever before to develop the skills of your workers and to create American jobs and American wealth in the new global economy.",
+            "context": "An America that says to entrepreneurs and businesspeople: We will give you more incentives and more opportunity than ever before to develop the skills of your workers and to create American jobs and American wealth in the new global economy.",
+            "mark": [
+              58,
+              241
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-college-loans",
+        "kind": "promise",
+        "theme": "education",
+        "restatement": "Let everybody borrow money for college, to be paid back from paychecks or by national service.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶88.2",
+            "quote": "We will say: Everybody can borrow money to go to college.",
+            "context": "We will say: Everybody can borrow money to go to college.",
+            "mark": [
+              0,
+              57
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal college loans and their repayment terms",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law is enacted that lets any student borrow for college and repay as a share of later earnings or through community service",
+            "ambiguity": "The next sentences (¶88.3-88.4) give the repayment terms (\"from your paychecks or … by … serving your communities\") without naming a programme; read as income-based repayment plus a service option."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The cited sentence says only that everybody can borrow; the repayment terms are read from ¶88.4, which places the duty on students."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "The Student Loan Reform Act of 1993 created direct federal loans with income-contingent repayment, and the National and Community Service Trust Act of 1993 created AmeriCorps, whose members earn awards to pay for college or repay loans.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Omnibus Budget Reconciliation Act of 1993, Pub. L. 103-66, Title IV, Subtitle A (Student Loan Reform Act of 1993)",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/2264",
+              "publisher": "Congress.gov",
+              "date": "1993-08-10",
+              "secondary": false
+            },
+            {
+              "what": "National and Community Service Trust Act of 1993, Pub. L. 103-82",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/2010",
+              "publisher": "Congress.gov",
+              "date": "1993-09-21",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "Repayment by service covers a limited number of AmeriCorps members, not every borrower."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-end-welfare",
+        "kind": "promise",
+        "theme": "welfare",
+        "restatement": "End welfare as we know it: training, education, child care and medical coverage, then work.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶98.1-98.2",
+            "quote": "An America where we end welfare as we know it. We will say to those on welfare: You will have, and you deserve, the opportunity, through training and education, through child care and medical coverage, to liberate yourself.",
+            "context": "An America where we end welfare as we know it. We will say to those on welfare: You will have, and you deserve, the opportunity, through training and education, through child care and medical coverage, to liberate yourself.",
+            "mark": [
+              0,
+              223
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the federal welfare programme (AFDC)",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law replaces cash welfare as it was with time-limited support tied to work, with training, child care and medical coverage",
+            "ambiguity": "\"As we know it\" does not say what replaces welfare; read with ¶98.2-98.3 (support for training, child care and medical coverage, then work)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "The 1996 welfare law ended AFDC and replaced it with time-limited TANF block grants tied to work, with more child care money and Medicaid kept for families leaving welfare.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Personal Responsibility and Work Opportunity Reconciliation Act of 1996, Pub. L. 104-193, Titles I (TANF), VI (child care) and Title I sec. 114 (Medicaid)",
+              "url": "https://www.congress.gov/bill/104th-congress/house-bill/3734",
+              "publisher": "Congress.gov",
+              "date": "1996-08-22",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "The law limited how far education and training count as work; a reader who weighs the promised \"training and education\" could call this partly."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-hundred-days-programs",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Send Congress programs on jobs, incomes and health care in the first 100 days.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶76.1",
+            "quote": "who will send programs to the Congress in the first 100 days to deal with the critical issues that America's crying out for leadership on: jobs, incomes, the health care crisis, the need to control the economy.",
+            "context": "I think it's important to elect a President who is committed to getting this economy going again and who realizes we have to abandon trickle-down economics and put the American people first again and who will send programs to the Congress in the first 100 days to deal with the critical issues that America's crying out for leadership on: jobs, incomes, the health care crisis, the need to control the economy.",
+            "mark": [
+              200,
+              410
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶76.3",
+            "quote": "I will deal with them from day one.",
+            "context": "I will deal with them from day one.",
+            "mark": [
+              0,
+              35
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "in the first 100 days",
+            "applied": "1993-04-30"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "legislative proposals sent to Congress",
+            "record": "Public Papers of the Presidents (messages to Congress); Congress.gov",
+            "criterion": "by the 100th day, programmes on jobs and incomes and on health care have been sent to Congress",
+            "ambiguity": "\"The need to control the economy\" has no object of its own; read as covered by the jobs and incomes programme."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "partly",
+          "asOf": "2026-11-23",
+          "summary": "The jobs and incomes programme went to Congress on 17 February 1993, within the 100 days; the health care plan did not go until the autumn (the Health Security Act was introduced on 20 November 1993).",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Address Before a Joint Session of Congress on Administration Goals (economic plan, 17 Feb 1993)",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-administration-goals",
+              "publisher": "The American Presidency Project",
+              "date": "1993-02-17",
+              "secondary": false
+            },
+            {
+              "what": "H.R. 3600, Health Security Act, 103rd Congress (introduced 20 Nov 1993)",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/3600",
+              "publisher": "Congress.gov",
+              "date": "1993-11-20",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-fair-trade",
+        "kind": "promise",
+        "theme": "trade",
+        "restatement": "Have a free, fair and hard-headed trade policy.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶126.1",
+            "quote": "I'll have a free and fair trade policy, a hard-headed realistic policy, and not get caught up in rubber-stamping everything the Bush administration did.",
+            "context": "Let me just point out, just today in the Los Angeles Times, Clyde Prestowitz, who was one of President Reagan's leading trade advisers, and a lifelong conservative Republican, endorsed my candidacy because he knows that I'll have a free and fair trade policy, a hard-headed realistic policy, and not get caught up in rubber-stamping everything the Bush administration did.",
+            "mark": [
+              220,
+              372
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Said as what an endorser \"knows\" about him; read as his own claim."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-town-halls",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Keep holding town hall meetings as President.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶207.5",
+            "quote": "I've done a lot of them, and I'll continue to do them as President.",
+            "context": "I've done a lot of them, and I'll continue to do them as President.",
+            "mark": [
+              0,
+              67
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "presidential town hall meetings",
+            "record": "Public Papers of the Presidents (The American Presidency Project)",
+            "criterion": "he holds town hall meetings repeatedly over the term as President",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "He held town meetings as President in Detroit (February 1993), Charlotte and Cranston (1994) and Billings (1995), among others.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Remarks at a Town Meeting in Detroit",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-town-meeting-detroit",
+              "publisher": "The American Presidency Project",
+              "date": "1993-02-10",
+              "secondary": false
+            },
+            {
+              "what": "Remarks in a Town Meeting in Charlotte, North Carolina",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-town-meeting-charlotte-north-carolina",
+              "publisher": "The American Presidency Project",
+              "date": "1994-04-05",
+              "secondary": false
+            },
+            {
+              "what": "Remarks at a Town Meeting in Billings, Montana",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-town-meeting-billings-montana",
+              "publisher": "The American Presidency Project",
+              "date": "1995-06-01",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "No town meeting in 1996, the campaign year, is cited; the criterion asks for repeated meetings over the term, not one each year."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-cabinet-like-america",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Appoint a Cabinet, White House staff and officials that look like America.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶243.1",
+            "quote": "So that's what I'll do as President.",
+            "context": "So that's what I'll do as President.",
+            "mark": [
+              0,
+              36
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶243.3",
+            "quote": "I think I owe the American people a White House staff, a Cabinet, and appointments that look like America, but that meet high standards of excellence, and that's what I'll do.",
+            "context": "I think I owe the American people a White House staff, a Cabinet, and appointments that look like America, but that meet high standards of excellence, and that's what I'll do.",
+            "mark": [
+              0,
+              175
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the composition of the Cabinet and senior appointments",
+            "record": "Senate confirmations; official Cabinet lists; appointment statistics",
+            "criterion": "women and minorities hold a clearly larger share of Cabinet posts and senior appointments than under the previous administrations",
+            "ambiguity": "\"Look like America\" fixes no share; read as a clear rise in the share of women and minorities over earlier administrations, not as an exact match to the population."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "His first Cabinet had more women and minorities than any before it; by early 1994 the White House counted six women, five African Americans and two Hispanics in Cabinet-rank posts, against two women and two minorities when he took office.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Fact Sheet on Administration Civil Rights Accomplishments (Cabinet and appointee counts)",
+              "url": "https://clintonwhitehouse6.archives.gov/1994/02/1994-02-01-fact-sheet-on-administration-civil-rights-accomplishments.html",
+              "publisher": "The White House (National Archives)",
+              "date": "1994-02-01",
+              "secondary": false
+            },
+            {
+              "what": "Brookings, The changing faces of Cabinet diversity, George Washington through Joe Biden",
+              "url": "https://www.brookings.edu/articles/the-changing-faces-of-cabinet-diversity-george-washington-through-joe-biden/",
+              "publisher": "Brookings Institution",
+              "date": null,
+              "secondary": true
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "Counts differ by date and by which posts are Cabinet rank; the rise over earlier administrations holds in every count."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-banks-pay-for-failures",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Make the banking industry, not taxpayers, pay for bank failures.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶265.1",
+            "quote": "We also want to say that, insofar as is humanly possible, the banking industry itself should pay for the cost of any bank failures, the taxpayers should not, and that will be my policy.",
+            "context": "We also want to say that, insofar as is humanly possible, the banking industry itself should pay for the cost of any bank failures, the taxpayers should not, and that will be my policy.",
+            "mark": [
+              0,
+              185
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the cost of bank failures",
+            "record": "FDIC annual reports (Bank Insurance Fund); enacted legislation (Congress.gov)",
+            "criterion": "no taxpayer money is spent on bank failures during the term; the cost is met by the industry's deposit insurance premiums",
+            "ambiguity": "\"Bank failures\" may or may not include savings and loans (thrifts); read as commercial and savings banks insured by the FDIC's Bank Insurance Fund, the subject of the question."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-23",
+          "summary": "Bank failures in 1993-1996 were paid from the FDIC's Bank Insurance Fund, financed by bank premiums; the Fund repaid its earlier Treasury borrowing and reached its target reserve ratio in 1995. Taxpayer money did go to the separate savings and loan cleanup (RTC Completion Act, December 1993).",
+          "attempt": null,
+          "review": "Confirm in the FDIC 1995 annual report that the Bank Insurance Fund drew no Treasury funds in 1993-1996 and had repaid its earlier borrowing (from memory).",
+          "evidence": [
+            {
+              "what": "FDIC Financial Institution Letter FIL-58-95 (Bank Insurance Fund recapitalised at end of May 1995, 1.267 percent of insured deposits)",
+              "url": "https://www.fdic.gov/news/inactive-financial-institution-letters/1995/fil9558a.html",
+              "publisher": "Federal Deposit Insurance Corporation",
+              "date": "1995-08-16",
+              "secondary": false
+            },
+            {
+              "what": "FDIC Annual Report 1995 (Bank Insurance Fund financial statements)",
+              "url": "https://www.fdic.gov/about/financial-reports/reports/archives/fdic-ar-1995.pdf",
+              "publisher": "Federal Deposit Insurance Corporation",
+              "date": null,
+              "secondary": false
+            },
+            {
+              "what": "Statement on Signing the Resolution Trust Corporation Completion Act (S. 714, Pub. L. 103-204; taxpayer funds for thrift failures)",
+              "url": "https://www.presidency.ucsb.edu/documents/statement-signing-the-resolution-trust-corporation-completion-act",
+              "publisher": "The American Presidency Project",
+              "date": "1993-12-17",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "If savings and loans count as \"banks\", the RTC Completion Act's taxpayer money makes this broken."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-no-middle-class-tax",
+        "kind": "promise",
+        "theme": "taxes",
+        "restatement": "Not raise taxes on the middle class to pay for his programs.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶295.1",
+            "quote": "I will not raise taxes on the middle class to pay for these programs.",
+            "context": "Now, I can tell you this: I will not raise taxes on the middle class to pay for these programs.",
+            "mark": [
+              26,
+              95
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶295.3",
+            "quote": "I am not going to raise taxes on the middle class to pay for these programs.",
+            "context": "I am not going to raise taxes on the middle class to pay for these programs.",
+            "mark": [
+              0,
+              76
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶297.1",
+            "quote": "I'm not going to raise taxes on middle class Americans to pay for the programs I've recommended.",
+            "context": "But I can tell you this: I'm not going to raise taxes on middle class Americans to pay for the programs I've recommended.",
+            "mark": [
+              25,
+              121
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶297.7",
+            "quote": "I won't raise taxes in the middle class to pay for my program.",
+            "context": "I'm going to make those decisions, and I won't raise taxes in the middle class to pay for my program.",
+            "mark": [
+              39,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal taxes paid by middle-income Americans",
+            "record": "enacted tax legislation (Congress.gov); JCT and Treasury distribution tables",
+            "criterion": "no tax increase that falls on middle-income households is enacted during the term",
+            "ambiguity": "\"The middle class\" is not defined, and \"to pay for these programs\" may or may not cover a tax raised for deficit reduction; read as any enacted tax increase that falls on middle-income households."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-23",
+          "summary": "The 1993 budget law raised the federal gasoline tax by 4.3 cents a gallon, which falls on middle-income households, and taxed more of the Social Security benefits of retirees above $34,000/$44,000 of income; income tax rates for the middle were not raised, and the EITC was expanded for low earners.",
+          "attempt": "none",
+          "review": null,
+          "evidence": [
+            {
+              "what": "Omnibus Budget Reconciliation Act of 1993, Pub. L. 103-66, sec. 13241 (motor fuels tax) and sec. 13215 (Social Security benefits)",
+              "url": "https://www.congress.gov/bill/103rd-congress/house-bill/2264",
+              "publisher": "Congress.gov",
+              "date": "1993-08-10",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "The law was passed for deficit reduction, not \"to pay for these programs\", and the gas tax cost a typical family a few dollars a month; a reader who reads the promise as income tax rates on the middle class could call it kept."
+          }
+        }
+      },
+      {
+        "id": "clinton-1992-fallback-cuts",
+        "kind": "promise",
+        "theme": "budget",
+        "restatement": "If revenue falls short, cut other spending or slow the programmes rather than raise middle-class taxes.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶295.2",
+            "quote": "If the money does not come in there to pay for these programs, we will cut other Government spending, or we will slow down the phase-in to the programs.",
+            "context": "If the money does not come in there to pay for these programs, we will cut other Government spending, or we will slow down the phase-in to the programs.",
+            "mark": [
+              0,
+              152
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-own-economic-policy",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Be personally responsible for domestic economic policy.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶297.6",
+            "quote": "The person responsible for domestic economic policy in my administration will be Bill Clinton.",
+            "context": "Well, I'll tell you, I'll make some news in the third debate: The person responsible for domestic economic policy in my administration will be Bill Clinton.",
+            "mark": [
+              62,
+              156
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶297.7",
+            "quote": "I'm going to make those decisions",
+            "context": "I'm going to make those decisions, and I won't raise taxes in the middle class to pay for my program.",
+            "mark": [
+              0,
+              33
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-education-second-to-none",
+        "kind": "promise",
+        "theme": "education",
+        "restatement": "Have an education system second to none.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶332.6-332.7",
+            "quote": "have an education system second to none",
+            "context": "It's invest and grow, put our people first, control health care costs and provide basic health care to all Americans, have an education system second to none, and revitalize the private economy. That is my commitment to you.",
+            "mark": [
+              118,
+              157
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-revitalize-economy",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Revitalize the private economy.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶332.6-332.7",
+            "quote": "and revitalize the private economy. That is my commitment to you.",
+            "context": "It's invest and grow, put our people first, control health care costs and provide basic health care to all Americans, have an education system second to none, and revitalize the private economy. That is my commitment to you.",
+            "mark": [
+              159,
+              224
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      }
+    ],
+    "ambitions": [
+      {
+        "id": "clinton-1992-invest-in-people",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Invest more in Americans, their jobs and their future.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1993,
+              "date": "1993-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+              "label": "1993 inaugural address"
+            },
+            "ref": "¶8.3",
+            "quote": "We must invest more in our own people, in their jobs, and in their future",
+            "context": "We must invest more in our own people, in their jobs, and in their future, and at the same time cut our massive debt.",
+            "mark": [
+              0,
+              73
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-invest-and-cut-debt",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-cut-debt",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Cut the national debt.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1993,
+              "date": "1993-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+              "label": "1993 inaugural address"
+            },
+            "ref": "¶8.3",
+            "quote": "and at the same time cut our massive debt.",
+            "context": "We must invest more in our own people, in their jobs, and in their future, and at the same time cut our massive debt.",
+            "mark": [
+              75,
+              117
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "clinton-1992-invest-and-cut-debt",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal debt",
+            "record": "OMB Historical Tables (Table 7.1, federal debt at end of year)",
+            "criterion": "federal debt held by the public is lower at the end of the term than at its start",
+            "ambiguity": "\"Cut our massive debt\" may mean the debt itself or, loosely, the yearly deficit that adds to it; read as the debt."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-opportunity-responsibility",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Offer more opportunity to all and demand more responsibility from all.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1993,
+              "date": "1993-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+              "label": "1993 inaugural address"
+            },
+            "ref": "¶9.5",
+            "quote": "We must do what America does best: offer more opportunity to all and demand more responsibility from all.",
+            "context": "We must do what America does best: offer more opportunity to all and demand more responsibility from all.",
+            "mark": [
+              0,
+              105
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-revitalize-democracy",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Revitalize American democracy.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Inaugural Address",
+              "year": 1993,
+              "date": "1993-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+              "label": "1993 inaugural address"
+            },
+            "ref": "¶10.1",
+            "quote": "To renew America, we must revitalize our democracy.",
+            "context": "To renew America, we must revitalize our democracy.",
+            "mark": [
+              0,
+              51
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-protect-privacy",
+        "kind": "ambition",
+        "theme": "rights",
+        "restatement": "Protect the right to privacy so that abortion leaves political platforms.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶69.1",
+            "quote": "I hope the right to privacy can be protected and we will never again have to discuss this issue on political platforms.",
+            "context": "I hope the right to privacy can be protected and we will never again have to discuss this issue on political platforms.",
+            "mark": [
+              0,
+              119
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-defense-cuts-reinvested",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Reinvest every dollar of defense cuts in jobs at home.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "William J. Clinton",
+              "event": "Address Accepting the Presidential Nomination at the Democratic National Convention in New York",
+              "year": 1992,
+              "date": "1992-07-16",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-democratic-national-convention-new-york",
+              "label": "1992 acceptance speech"
+            },
+            "ref": "¶104.1",
+            "quote": "we must plow back every dollar of defense cuts into building American jobs right here at home.",
+            "context": "The end of the Cold War permits us to reduce defense spending while still maintaining the strongest defense in the world, but we must plow back every dollar of defense cuts into building American jobs right here at home.",
+            "mark": [
+              126,
+              220
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "defense savings and federal domestic investment",
+            "record": "OMB Historical Tables; defense conversion budgets",
+            "criterion": "the amount of defense cuts is matched by new domestic job programmes",
+            "ambiguity": "Which spending counts as \"building American jobs\" is not defined."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-industrial-strategy",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Have a national strategy to build the economic and industrial base.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶92.7",
+            "quote": "We ought to have a strategy that will build the economic and industrial base.",
+            "context": "We ought to have a strategy that will build the economic and industrial base.",
+            "mark": [
+              0,
+              77
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶93.4",
+            "quote": "That's one of the things I want to change.",
+            "context": "That's one of the things I want to change.",
+            "mark": [
+              0,
+              42
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-fuel-efficiency",
+        "kind": "ambition",
+        "theme": "energy",
+        "restatement": "Raise fuel efficiency standards, with 40 miles a gallon as a goal.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶104.4",
+            "quote": "I said that we ought to have a goal of raising the fuel efficiency standards to 40 miles a gallon.",
+            "context": "I said that we ought to have a goal of raising the fuel efficiency standards to 40 miles a gallon.",
+            "mark": [
+              0,
+              98
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶105.1",
+            "quote": "I think we should try to raise the fuel efficiency.",
+            "context": "I think we should try to raise the fuel efficiency.",
+            "mark": [
+              0,
+              51
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶105.3",
+            "quote": "I think we ought to push to do it.",
+            "context": "I think we ought to push to do it.",
+            "mark": [
+              0,
+              34
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal fuel economy (CAFE) standards, then 27.5 mpg for cars",
+            "record": "NHTSA CAFE standards (Federal Register)",
+            "criterion": "the car fuel economy standard is raised above 27.5 mpg",
+            "ambiguity": "40 mpg is named as a goal without a date, and he says it need not be written into law; read as any raise of the standard."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-fuel-efficiency-incentives",
+        "kind": "ambition",
+        "theme": "energy",
+        "restatement": "Give incentives for better fuel efficiency.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶105.2",
+            "quote": "I think we ought to have incentives to do it.",
+            "context": "And let me say this: I think we ought to have incentives to do it.",
+            "mark": [
+              21,
+              66
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-natural-gas-vehicles",
+        "kind": "ambition",
+        "theme": "energy",
+        "restatement": "Convert more vehicles to compressed natural gas.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶107.1",
+            "quote": "We also ought to convert more vehicles to compressed natural gas.",
+            "context": "We also ought to convert more vehicles to compressed natural gas.",
+            "mark": [
+              0,
+              65
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-nafta-side-agreements",
+        "kind": "ambition",
+        "theme": "trade",
+        "restatement": "Get NAFTA protections that make Mexico follow its own environmental and labor laws.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶124.4",
+            "quote": "if we could get some protection for the environment so that the Mexicans have to follow their own environmental standards, their own labor law standards",
+            "context": "I say, on balance, it does more good than harm if we could get some protection for the environment so that the Mexicans have to follow their own environmental standards, their own labor law standards, and if we have a genuine commitment to reeducate and retrain the American workers who lose their jobs and reinvest in this economy.",
+            "mark": [
+              47,
+              199
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-nafta-conditions",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "environmental and labor agreements alongside NAFTA",
+            "record": "the signed agreements (USTR; Federal Register)",
+            "criterion": "agreements binding Mexico to enforce its own environmental and labor laws are concluded",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Stated as a condition of his support for NAFTA; read as his intention."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-nafta-retraining",
+        "kind": "ambition",
+        "theme": "trade",
+        "restatement": "Retrain American workers who lose their jobs because of NAFTA.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶124.4",
+            "quote": "if we have a genuine commitment to reeducate and retrain the American workers who lose their jobs and reinvest in this economy.",
+            "context": "I say, on balance, it does more good than harm if we could get some protection for the environment so that the Mexicans have to follow their own environmental standards, their own labor law standards, and if we have a genuine commitment to reeducate and retrain the American workers who lose their jobs and reinvest in this economy.",
+            "mark": [
+              205,
+              332
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-nafta-conditions",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal retraining for workers displaced by trade",
+            "record": "enacted legislation (Congress.gov); DOL trade adjustment assistance data",
+            "criterion": "a retraining programme for workers who lose their jobs to NAFTA is in place",
+            "ambiguity": "\"Genuine commitment\" fixes no size; any dedicated federal programme counts."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Stated as a condition of his support for NAFTA; read as his intention."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-more-trade",
+        "kind": "ambition",
+        "theme": "trade",
+        "restatement": "Trade more, and compete by investing.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶125.2",
+            "quote": "I want more trade.",
+            "context": "I want more trade.",
+            "mark": [
+              0,
+              18
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶158.1",
+            "quote": "What I want America to do is to trade more, but to compete and win by investing in competitive ways.",
+            "context": "What I want America to do is to trade more, but to compete and win by investing in competitive ways.",
+            "mark": [
+              0,
+              100
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-lobbyist-testimony-disclosure",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Make lobbyists disclose whom they gave money to when they testify before Congress.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶156.2",
+            "quote": "We ought to make them disclose the people they've given money to when they're testifying before congressional committees.",
+            "context": "We ought to make them disclose the people they've given money to when they're testifying before congressional committees.",
+            "mark": [
+              0,
+              121
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-lobbying-rules",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "disclosure rules for lobbyists testifying before Congress",
+            "record": "enacted legislation and House/Senate rules (Congress.gov)",
+            "criterion": "a law or rule requires witnesses who lobby to disclose their political contributions",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-lawyers-loophole",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Close the lawyers' loophole: lawyers who lobby must disclose it.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶156.3",
+            "quote": "We ought to close the lawyers' loophole; they ought to have to disclose when they're really lobbying.",
+            "context": "We ought to close the lawyers' loophole; they ought to have to disclose when they're really lobbying.",
+            "mark": [
+              0,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-lobbying-rules",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "lobbying registration rules for lawyers",
+            "record": "enacted legislation (Congress.gov)",
+            "criterion": "a law requires lawyers who lobby to register and disclose it",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-foreign-lobbying-ban",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Bar former executive branch officials from lobbying for foreign interests for about five years.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶156.4",
+            "quote": "We ought to have a much longer period of time, about 5 years, between the time when people can leave executive branch offices and then go out and start lobbying for foreign interest.",
+            "context": "We ought to have a much longer period of time, about 5 years, between the time when people can leave executive branch offices and then go out and start lobbying for foreign interest.",
+            "mark": [
+              0,
+              182
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "clinton-1992-lobbying-rules",
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "post-employment lobbying rules for executive branch officials",
+            "record": "enacted legislation (Congress.gov); executive orders (Federal Register)",
+            "criterion": "a law or order bars former executive branch officials from lobbying for foreign interests for about five years or more",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-enforce-banking-law",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Enforce banking law prudently: not too hard on good banks, firmly on troubled ones.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶264.2",
+            "quote": "I think that our goal ought to be, first of all, not to politicize it, not to frighten people; secondly, to say that we have to enforce the law in two ways.",
+            "context": "I think that our goal ought to be, first of all, not to politicize it, not to frighten people; secondly, to say that we have to enforce the law in two ways.",
+            "mark": [
+              0,
+              156
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-cut-congress-spending",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Cut Congress's own spending.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶282.1",
+            "quote": "I would just point out on the point Mr. Perot made, I agree that we need to cut spending in Congress.",
+            "context": "I would just point out on the point Mr. Perot made, I agree that we need to cut spending in Congress.",
+            "mark": [
+              0,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "legislative branch spending",
+            "record": "OMB Historical Tables (outlays by agency: legislative branch)",
+            "criterion": "legislative branch outlays are lower at the end of the term than at its start",
+            "ambiguity": "\"Spending in Congress\" may mean Congress's own budget or the spending it votes for; read as its own budget (the next sentence names staff and expenditures)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-reward-work",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Reward people who work hard and play by the rules.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶332.9",
+            "quote": "I want a country where people who work hard and play by the rules are rewarded, not punished.",
+            "context": "I want a country where people who work hard and play by the rules are rewarded, not punished.",
+            "mark": [
+              0,
+              93
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "clinton-1992-come-together",
+        "kind": "ambition",
+        "theme": "rights",
+        "restatement": "Bring people together across race, region and income.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "William J. Clinton",
+              "event": "Presidential Debate in East Lansing, Michigan",
+              "year": 1992,
+              "date": "1992-10-19",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-east-lansing-michigan",
+              "label": "1992 debate"
+            },
+            "ref": "¶332.10",
+            "quote": "I want a country where people are coming together across the lines of race and region and income.",
+            "context": "I want a country where people are coming together across the lines of race and region and income.",
+            "mark": [
+              0,
+              97
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      }
+    ]
+  },
+  {
     "key": "1997-2001 Clinton",
     "surname": "Clinton",
     "from": 1997,
@@ -1912,7 +5479,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "extraction": "probable",
             "note": "Election-conditioned list (\"you'll decide whether we're going to\")."
           },
-          "links": []
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "clinton-1992-hundred-thousand-police"
+            }
+          ]
         },
         "verdict": {
           "verdict": "partly",
@@ -2033,7 +5605,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "extraction": "probable",
             "note": "Phrased as a question to the audience; read as his intention."
           },
-          "links": []
+          "links": [
+            {
+              "kind": "repeats",
+              "to": "clinton-1992-campaign-finance"
+            }
+          ]
         },
         "verdict": null
       },
@@ -48604,10 +52181,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 518;
+export const CORPUS_PROMISE_COUNT = 555;
 
 /** Total ambitions across the corpus. */
-export const CORPUS_AMBITION_COUNT = 206;
+export const CORPUS_AMBITION_COUNT = 226;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 752;
+export const CORPUS_OCCURRENCE_COUNT = 799;

@@ -1,0 +1,279 @@
+# Verdicts for Bill Clinton's 1993-1997 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 1997-01-20
+# unless the promise states another.
+#
+# Complete: high 4/4, medium 13/13.
+
+protocol: 1
+verdicts:
+
+  # ---- economy and taxes ----------------------------------------------------
+
+  - promise: clinton-1992-hundred-days-programs
+    verdict: partly
+    as_of: 2026-11-23
+    summary: The jobs and incomes programme went to Congress on 17 February 1993, within the 100 days; the health care plan did not go until the autumn (the Health Security Act was introduced on 20 November 1993).
+    evidence:
+      - what: Address Before a Joint Session of Congress on Administration Goals (economic plan, 17 Feb 1993)
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-administration-goals
+        publisher: The American Presidency Project
+        date: 1993-02-17
+      - what: H.R. 3600, Health Security Act, 103rd Congress (introduced 20 Nov 1993)
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/3600
+        publisher: Congress.gov
+        date: 1993-11-20
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1992-no-middle-class-tax
+    verdict: broken
+    as_of: 2026-11-23
+    summary: The 1993 budget law raised the federal gasoline tax by 4.3 cents a gallon, which falls on middle-income households, and taxed more of the Social Security benefits of retirees above $34,000/$44,000 of income; income tax rates for the middle were not raised, and the EITC was expanded for low earners.
+    attempt: none
+    evidence:
+      - what: Omnibus Budget Reconciliation Act of 1993, Pub. L. 103-66, sec. 13241 (motor fuels tax) and sec. 13215 (Social Security benefits)
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/2264
+        publisher: Congress.gov
+        date: 1993-08-10
+    uncertainty:
+      verdict: contested
+      note: The law was passed for deficit reduction, not "to pay for these programs", and the gas tax cost a typical family a few dollars a month; a reader who reads the promise as income tax rates on the middle class could call it kept.
+
+  - promise: clinton-1992-banks-pay-for-failures
+    verdict: kept
+    as_of: 2026-11-23
+    summary: Bank failures in 1993-1996 were paid from the FDIC's Bank Insurance Fund, financed by bank premiums; the Fund repaid its earlier Treasury borrowing and reached its target reserve ratio in 1995. Taxpayer money did go to the separate savings and loan cleanup (RTC Completion Act, December 1993).
+    evidence:
+      - what: FDIC Financial Institution Letter FIL-58-95 (Bank Insurance Fund recapitalised at end of May 1995, 1.267 percent of insured deposits)
+        url: https://www.fdic.gov/news/inactive-financial-institution-letters/1995/fil9558a.html
+        publisher: Federal Deposit Insurance Corporation
+        date: 1995-08-16
+      - what: FDIC Annual Report 1995 (Bank Insurance Fund financial statements)
+        url: https://www.fdic.gov/about/financial-reports/reports/archives/fdic-ar-1995.pdf
+        publisher: Federal Deposit Insurance Corporation
+      - what: Statement on Signing the Resolution Trust Corporation Completion Act (S. 714, Pub. L. 103-204; taxpayer funds for thrift failures)
+        url: https://www.presidency.ucsb.edu/documents/statement-signing-the-resolution-trust-corporation-completion-act
+        publisher: The American Presidency Project
+        date: 1993-12-17
+    review: "Confirm in the FDIC 1995 annual report that the Bank Insurance Fund drew no Treasury funds in 1993-1996 and had repaid its earlier borrowing (from memory)."
+    uncertainty:
+      verdict: contested
+      note: If savings and loans count as "banks", the RTC Completion Act's taxpayer money makes this broken.
+
+  # ---- health ---------------------------------------------------------------
+
+  - promise: clinton-1992-health-care-for-all
+    verdict: broken
+    as_of: 2026-11-23
+    summary: The Health Security Act never came to a floor vote, and the number of uninsured rose; 41.7 million people (15.6 percent) had no coverage for all of 1996.
+    attempt: initiated
+    evidence:
+      - what: H.R. 3600, Health Security Act, 103rd Congress (introduced at the President's request; no floor vote)
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/3600
+        publisher: Congress.gov
+        date: 1993-11-20
+      - what: Census Bureau, Health Insurance Coverage 1996 (P60-199)
+        url: https://www.census.gov/library/publications/1997/demo/p60-199.html
+        publisher: U.S. Census Bureau
+        date: 1997-09-01
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1992-control-health-costs
+    verdict: kept
+    as_of: 2026-11-23
+    summary: National health spending grew more slowly in 1993-1996 than in any 4 years since 1960, down to 4.4 percent in 1996, after double-digit growth in the 1980s.
+    evidence:
+      - what: Levit et al., National Health Expenditures, 1996 (Health Care Financing Review, Fall 1997)
+        url: https://www.cms.gov/files/document/1997fall-08pdf
+        publisher: Health Care Financing Administration, Office of the Actuary
+        date: 1997-10-01
+    uncertainty:
+      verdict: probable
+      note: The source credits managed care and low inflation, not federal policy, and the plan to "take on" insurers failed; a reader who judges the means could call this broken.
+
+  - promise: clinton-1992-aids-commission
+    verdict: partly
+    as_of: 2026-11-23
+    summary: Some of the Commission's main recommendations were carried out (a national AIDS policy coordinator in 1993, a White House conference in 1995, more money for care and research), but not health coverage for all people with HIV, and the ban on federal money for needle exchange stayed.
+    review: "Confirm against the Commission's 1993 final report which recommendations were met by Jan 1997: AIDS coordinator appointed June 1993; Ryan White CARE Act funding about $350M (FY1993) to about $750M (FY1996); needle-exchange funding ban unchanged (from memory)."
+    evidence:
+      - what: National Commission on AIDS, final report "AIDS - An Expanding Tragedy" (June 1993) and earlier recommendations
+        url: https://profiles.nlm.nih.gov/spotlight/ncaids/feature/ncaids-year-4-august-1992-september-1993
+        publisher: National Library of Medicine
+      - what: Remarks to the White House Conference on HIV and AIDS
+        url: https://www.presidency.ucsb.edu/documents/remarks-the-white-house-conference-hiv-and-aids
+        publisher: The American Presidency Project
+        date: 1995-12-06
+    uncertainty:
+      verdict: probable
+      note: Which recommendations count as central is a judgement call (see the promise's ambiguity).
+
+  # ---- government -----------------------------------------------------------
+
+  - promise: clinton-1992-cut-bureaucrats
+    verdict: kept
+    as_of: 2026-11-23
+    summary: Executive branch civilian employment fell from 2,225,000 (end of FY1992) to 1,934,000 (end of FY1996), about 291,000 fewer; the Federal Workforce Restructuring Act of 1994 required a cut of 272,900.
+    evidence:
+      - what: Historical Tables, Table 17.1, Total Executive Branch Civilian Employees 1940-2002 (thousands, end of fiscal year)
+        url: https://www.govinfo.gov/content/pkg/BUDGET-2004-TAB/html/BUDGET-2004-TAB-19-1.htm
+        publisher: Office of Management and Budget (via GovInfo)
+      - what: Federal Workforce Restructuring Act of 1994, Pub. L. 103-226
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/3345
+        publisher: Congress.gov
+        date: 1994-03-30
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1992-campaign-finance
+    verdict: broken
+    as_of: 2026-11-23
+    summary: No campaign finance reform law was enacted. The Senate (June 1993) and the House (November 1993) each passed a bill, but no final version was agreed.
+    attempt: passed-chamber
+    evidence:
+      - what: S. 3, Congressional Spending Limit and Election Reform Act of 1993 (passed Senate; no conference agreement)
+        url: https://www.congress.gov/bill/103rd-congress/senate-bill/3
+        publisher: Congress.gov
+        date: 1993-06-17
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1992-lobbying-reform
+    verdict: kept
+    as_of: 2026-11-23
+    summary: On his first day he ordered a 5-year lobbying ban on his senior appointees, and in December 1995 he signed the Lobbying Disclosure Act, which widened who must register and disclose.
+    evidence:
+      - what: Executive Order 12834, Ethics Commitments by Executive Branch Appointees
+        url: https://www.presidency.ucsb.edu/documents/executive-order-12834-ethics-commitments-executive-branch-appointees
+        publisher: The American Presidency Project
+        date: 1993-01-20
+      - what: Lobbying Disclosure Act of 1995, Pub. L. 104-65
+        url: https://www.congress.gov/bill/104th-congress/senate-bill/1060
+        publisher: Congress.gov
+        date: 1995-12-19
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1992-town-halls
+    verdict: kept
+    as_of: 2026-11-23
+    summary: He held town meetings as President in Detroit (February 1993), Charlotte and Cranston (1994) and Billings (1995), among others.
+    evidence:
+      - what: Remarks at a Town Meeting in Detroit
+        url: https://www.presidency.ucsb.edu/documents/remarks-town-meeting-detroit
+        publisher: The American Presidency Project
+        date: 1993-02-10
+      - what: Remarks in a Town Meeting in Charlotte, North Carolina
+        url: https://www.presidency.ucsb.edu/documents/remarks-town-meeting-charlotte-north-carolina
+        publisher: The American Presidency Project
+        date: 1994-04-05
+      - what: Remarks at a Town Meeting in Billings, Montana
+        url: https://www.presidency.ucsb.edu/documents/remarks-town-meeting-billings-montana
+        publisher: The American Presidency Project
+        date: 1995-06-01
+    uncertainty:
+      verdict: probable
+      note: No town meeting in 1996, the campaign year, is cited; the criterion asks for repeated meetings over the term, not one each year.
+
+  - promise: clinton-1992-cabinet-like-america
+    verdict: kept
+    as_of: 2026-11-23
+    summary: His first Cabinet had more women and minorities than any before it; by early 1994 the White House counted six women, five African Americans and two Hispanics in Cabinet-rank posts, against two women and two minorities when he took office.
+    evidence:
+      - what: Fact Sheet on Administration Civil Rights Accomplishments (Cabinet and appointee counts)
+        url: https://clintonwhitehouse6.archives.gov/1994/02/1994-02-01-fact-sheet-on-administration-civil-rights-accomplishments.html
+        publisher: The White House (National Archives)
+        date: 1994-02-01
+      - what: Brookings, The changing faces of Cabinet diversity, George Washington through Joe Biden
+        url: https://www.brookings.edu/articles/the-changing-faces-of-cabinet-diversity-george-washington-through-joe-biden/
+        publisher: Brookings Institution
+        secondary: true
+    uncertainty:
+      verdict: probable
+      note: Counts differ by date and by which posts are Cabinet rank; the rise over earlier administrations holds in every count.
+
+  # ---- crime ----------------------------------------------------------------
+
+  - promise: clinton-1992-hundred-thousand-police
+    verdict: partly
+    as_of: 2026-11-23
+    summary: The 1994 crime law funded 100,000 community police officers, but far fewer were on the streets by the deadline; even by February 1999 the Justice Department counted 50,139 hired and deployed.
+    evidence:
+      - what: Violent Crime Control and Law Enforcement Act of 1994, Pub. L. 103-322, Title I (Public Safety Partnership and Community Policing)
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/3355
+        publisher: Congress.gov
+        date: 1994-09-13
+      - what: DOJ Office of the Inspector General, Audit Report 99-14, Police Hiring and Redeployment Grants (Executive Summary)
+        url: https://oig.justice.gov/archives/reports/COPS/a9914/exec.htm
+        publisher: U.S. Department of Justice, Office of the Inspector General
+        date: 1999-04-01
+    uncertainty: { verdict: clear }
+
+  # ---- welfare and rights ---------------------------------------------------
+
+  - promise: clinton-1992-child-support
+    verdict: kept
+    as_of: 2026-11-23
+    summary: The 1996 welfare law added national new-hire reporting, wage withholding and the suspension of driver's and professional licenses for parents who do not pay child support.
+    evidence:
+      - what: Personal Responsibility and Work Opportunity Reconciliation Act of 1996, Pub. L. 104-193, Title III (child support)
+        url: https://www.congress.gov/bill/104th-congress/house-bill/3734
+        publisher: Congress.gov
+        date: 1996-08-22
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1992-end-welfare
+    verdict: kept
+    as_of: 2026-11-23
+    summary: The 1996 welfare law ended AFDC and replaced it with time-limited TANF block grants tied to work, with more child care money and Medicaid kept for families leaving welfare.
+    evidence:
+      - what: Personal Responsibility and Work Opportunity Reconciliation Act of 1996, Pub. L. 104-193, Titles I (TANF), VI (child care) and Title I sec. 114 (Medicaid)
+        url: https://www.congress.gov/bill/104th-congress/house-bill/3734
+        publisher: Congress.gov
+        date: 1996-08-22
+    uncertainty:
+      verdict: contested
+      note: The law limited how far education and training count as work; a reader who weighs the promised "training and education" could call this partly.
+
+  - promise: clinton-1992-family-leave
+    verdict: kept
+    as_of: 2026-11-23
+    summary: He signed the Family and Medical Leave Act on 5 February 1993, giving up to 12 weeks of job-protected leave for a birth or a seriously ill family member.
+    evidence:
+      - what: Family and Medical Leave Act of 1993, Pub. L. 103-3
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/1
+        publisher: Congress.gov
+        date: 1993-02-05
+    uncertainty: { verdict: clear }
+
+  - promise: clinton-1992-right-to-choose
+    verdict: broken
+    as_of: 2026-11-23
+    summary: The Freedom of Choice Act was reported by committees in 1993 but never reached a floor vote, and no law guaranteeing the right was enacted. He did lift several federal abortion restrictions by memorandum (22 January 1993) and signed the clinic-access law (FACE Act, 1994).
+    attempt: none
+    evidence:
+      - what: S. 25, Freedom of Choice Act of 1993, 103rd Congress (reported; no floor vote)
+        url: https://www.congress.gov/bill/103rd-congress/senate-bill/25
+        publisher: Congress.gov
+      - what: Freedom of Access to Clinic Entrances Act of 1994, Pub. L. 103-259
+        url: https://www.congress.gov/bill/103rd-congress/senate-bill/636
+        publisher: Congress.gov
+        date: 1994-05-26
+    uncertainty:
+      verdict: probable
+      note: Roe v. Wade stood throughout the term; a reader who counts keeping the right in place as "guaranteeing" it could call this kept.
+
+  # ---- education ------------------------------------------------------------
+
+  - promise: clinton-1992-college-loans
+    verdict: kept
+    as_of: 2026-11-23
+    summary: The Student Loan Reform Act of 1993 created direct federal loans with income-contingent repayment, and the National and Community Service Trust Act of 1993 created AmeriCorps, whose members earn awards to pay for college or repay loans.
+    evidence:
+      - what: Omnibus Budget Reconciliation Act of 1993, Pub. L. 103-66, Title IV, Subtitle A (Student Loan Reform Act of 1993)
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/2264
+        publisher: Congress.gov
+        date: 1993-08-10
+      - what: National and Community Service Trust Act of 1993, Pub. L. 103-82
+        url: https://www.congress.gov/bill/103rd-congress/house-bill/2010
+        publisher: Congress.gov
+        date: 1993-09-21
+    uncertainty:
+      verdict: probable
+      note: Repayment by service covers a limited number of AmeriCorps members, not every borrower.
