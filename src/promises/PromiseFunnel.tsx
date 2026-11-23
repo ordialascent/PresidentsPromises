@@ -61,6 +61,7 @@ function legendHint(value: string, name: string, picked: ReadonlySet<string>): s
 export function PromiseFunnel({
   terms,
   kind,
+  scale,
   pickedTiers,
   onToggleTier,
   pickedVerdicts,
@@ -74,6 +75,7 @@ export function PromiseFunnel({
 }: {
   terms: CorpusTerm[];
   kind: Kind;
+  scale: Scale;
   pickedTiers: ReadonlySet<string>;
   onToggleTier: (quality: Quality) => void;
   pickedVerdicts: ReadonlySet<string>;
@@ -85,7 +87,6 @@ export function PromiseFunnel({
   verdictPicked: (termKey: string, s: Status) => boolean;
   onSelectVerdict: (termKey: string, s: Status) => void;
 }) {
-  const [scale, setScale] = useState<Scale>('percent');
   const withVerdicts = kind === 'promise';
 
   const summaries = useMemo(() => summarize(terms), [terms]);
@@ -121,46 +122,6 @@ export function PromiseFunnel({
 
   return (
     <div className="pf" ref={ref}>
-      <div className="pc-legend" role="group" aria-label="Filter by verifiability">
-        {QUALITIES.map((q) => (
-          <button
-            key={q}
-            type="button"
-            className="pc-legend-item"
-            data-picked={pickedTiers.has(q)}
-            aria-pressed={pickedTiers.has(q)}
-            onClick={() => onToggleTier(q)}
-            title={legendHint(q, QUALITY_META[q].label.toLowerCase(), pickedTiers)}
-          >
-            <span className="pc-swatch" data-q={q} />
-            {QUALITY_META[q].label}
-            <span className="pc-legend-n">{totals[q]}</span>
-          </button>
-        ))}
-      </div>
-      {withVerdicts && (
-        <div className="pc-legend" role="group" aria-label="Filter by verdict (high and medium promises only)">
-          {VERDICT_STATUSES.map((v) => {
-            const name = VERDICT_META[v].label.toLowerCase();
-            return (
-              <button
-                key={v}
-                type="button"
-                className="pc-legend-item"
-                data-picked={pickedVerdicts.has(v)}
-                aria-pressed={pickedVerdicts.has(v)}
-                onClick={() => onToggleVerdict(v)}
-                title={`${VERDICT_META[v].label}: ${VERDICT_META[v].blurb}. ${legendHint(v, name, pickedVerdicts)}.`}
-              >
-                <span className="pc-swatch" data-v={v} />
-                {VERDICT_META[v].label}
-                <span className="pc-legend-n">{verdictTotals[v]}</span>
-              </button>
-            );
-          })}
-        </div>
-      )}
-
       <ol className="pf-terms">
         {summaries.map((t) => {
           const r = records.get(t.key);
@@ -260,24 +221,45 @@ export function PromiseFunnel({
         })}
       </ol>
 
-      <div className="pc-toggle" role="group" aria-label="Chart scale">
-        {(['count', 'percent'] as Scale[]).map((m) => (
+      <div className="pc-legend" role="group" aria-label="Filter by verifiability">
+        {QUALITIES.map((q) => (
           <button
-            key={m}
+            key={q}
             type="button"
-            data-on={scale === m}
-            aria-pressed={scale === m}
-            title={
-              m === 'count'
-                ? 'One scale for every bar: longer means more promises'
-                : 'Every bar fills the width: lengths are shares'
-            }
-            onClick={() => setScale(m)}
+            className="pc-legend-item"
+            data-picked={pickedTiers.has(q)}
+            aria-pressed={pickedTiers.has(q)}
+            onClick={() => onToggleTier(q)}
+            title={legendHint(q, QUALITY_META[q].label.toLowerCase(), pickedTiers)}
           >
-            {m === 'count' ? 'Count' : 'Percent'}
+            <span className="pc-swatch" data-q={q} />
+            {QUALITY_META[q].label}
+            <span className="pc-legend-n">{totals[q]}</span>
           </button>
         ))}
       </div>
+      {withVerdicts && (
+        <div className="pc-legend" role="group" aria-label="Filter by verdict (high and medium promises only)">
+          {VERDICT_STATUSES.map((v) => {
+            const name = VERDICT_META[v].label.toLowerCase();
+            return (
+              <button
+                key={v}
+                type="button"
+                className="pc-legend-item"
+                data-picked={pickedVerdicts.has(v)}
+                aria-pressed={pickedVerdicts.has(v)}
+                onClick={() => onToggleVerdict(v)}
+                title={`${VERDICT_META[v].label}: ${VERDICT_META[v].blurb}. ${legendHint(v, name, pickedVerdicts)}.`}
+              >
+                <span className="pc-swatch" data-v={v} />
+                {VERDICT_META[v].label}
+                <span className="pc-legend-n">{verdictTotals[v]}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {withVerdicts && (
         <p className="tr-note">

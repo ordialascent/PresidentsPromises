@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { PromiseFunnel } from '../promises/PromiseFunnel.js';
+import { PromiseFunnel, type Scale } from '../promises/PromiseFunnel.js';
+import { ScaleToggle } from '../promises/ScaleToggle.js';
 import { PromiseList } from '../promises/PromiseList.js';
 import { FilterBar, type FacetControl } from '../promises/FilterBar.js';
 import { TermScope } from '../promises/TermScope.js';
@@ -113,6 +114,7 @@ const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(
 export function PromisesPage() {
   const [kind, setKind] = useState<Kind>('promise');
   const [scope, setScope] = useState<ReadonlySet<string>>(scopeFromUrl);
+  const [scale, setScale] = useState<Scale>('percent');
   const corpus = useMemo(() => BY_KIND[kind].filter((t) => scope.has(t.key)), [kind, scope]);
   const rows = useMemo(() => ROWS[kind].filter((r) => scope.has(r.termKey)), [kind, scope]);
   const kindTotal = (k: Kind) => ROWS[k].reduce((n, r) => n + (scope.has(r.termKey) ? 1 : 0), 0);
@@ -233,6 +235,7 @@ export function PromisesPage() {
 
       <main>
         <section className="board">
+          <TermScope terms={CORPUS_TERMS} scope={scope} onScope={changeScope} />
           <div className="board-top">
             <div className="kind-switch" role="group" aria-label="Promises or ambitions">
               {KINDS.map((k) => (
@@ -249,12 +252,13 @@ export function PromisesPage() {
                 </button>
               ))}
             </div>
-            <TermScope terms={CORPUS_TERMS} scope={scope} onScope={changeScope} />
+            <ScaleToggle scale={scale} onScale={setScale} />
           </div>
           <div className="board-promises">
             <PromiseFunnel
               terms={corpus}
               kind={kind}
+              scale={scale}
               pickedTiers={filters.tier}
               onToggleTier={(q) => toggle('tier', q)}
               pickedVerdicts={filters.verdict}
