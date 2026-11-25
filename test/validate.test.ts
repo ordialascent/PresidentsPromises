@@ -261,7 +261,7 @@ verdicts:
 describe('the corpus', () => {
   it('passes the validator', () => {
     const r = validateCorpus(decodeURIComponent(new URL('../corpus', import.meta.url).pathname));
-    expect(r.terms).toBe(9);
+    expect(r.terms).toBe(10);
     expect(r.errors).toEqual([]);
   });
 });

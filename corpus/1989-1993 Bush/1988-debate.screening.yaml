@@ -1,0 +1,102 @@
+# Screening ledger for 1988-debate.md (protocol v1).
+# Only Bush's turns (speaker_label "BUSH") are screened.
+# Every trigger-matched sentence has a row. Ids shared with the other two
+# ledgers are further occurrences of the same promise; a soft restatement
+# of a firm promise is an occurrence of it.
+#
+# Added: ¶16.17 ("So I'm pledged to do that", holding the line on taxes)
+# and ¶114.2 ("what I would do is appoint people … who will interpret the
+# Constitution").
+#
+# Not candidates: ¶16.10 describes the flexible freeze ("what I call a
+# flexible freeze that allows growth about 4 percent"), and ¶162.8 is a
+# past proposal ("I've made some proposals"). ¶139.9-139.10 ("never go back
+# to that … grain embargo"; "We never should go back to that") carry no
+# trigger.
+#
+# The source transcript breaks Bush's turns at ¶62/¶64 and ¶162/¶164 around
+# interruptions; the text is kept as published.
+source: 1988-debate
+protocol: 1
+rows:
+  - { ref: "¶10.16", decision: describe, note: "About his running mate." }
+  - { ref: "¶16.3", decision: include, promises: [bush-1988-keep-expansion] }
+  - { ref: "¶16.4", decision: include, promises: [bush-1988-no-new-taxes] }
+  - { ref: "¶16.7", decision: include, promises: [bush-1988-no-new-taxes], note: "\"That\" is raising taxes (¶16.6)." }
+  - ref: "¶16.17"
+    decision: include
+    added: true
+    promises: [bush-1988-no-new-taxes]
+    note: "\"That\" is holding the line on taxes (¶16.16)."
+  - { ref: "¶25.4", decision: include, promises: [bush-1988-line-item-veto] }
+  - ref: "¶25.5-25.6"
+    decision: include
+    promises: [bush-1988-protect-trust-fund]
+    note: "¶25.6 restates ¶25.5; joined."
+  - { ref: "¶40.10", decision: describe, note: "About the campaign." }
+  - { ref: "¶45.3", decision: describe, note: "Example of a weapons system Congress added; no commitment." }
+  - { ref: "¶45.19", decision: include, promises: [bush-1988-modernize] }
+  - { ref: "¶55.2", decision: attack, note: "Paraphrase of the opponent." }
+  - { ref: "¶55.4", decision: past }
+  - { ref: "¶60.11", decision: describe, note: "Credit to President Reagan." }
+  - { ref: "¶87.8", decision: describe, note: "Defense budget choices in general; no commitment." }
+  - { ref: "¶100.6", decision: include, promises: [bush-1988-restrain-spending] }
+  - { ref: "¶106.7", decision: include, promises: [bush-1988-no-socialsecurity-changes] }
+  - { ref: "¶106.13", decision: others, note: "About what Congress should not do." }
+  - { ref: "¶106.14", decision: others, note: "Restates ¶106.13." }
+  - { ref: "¶106.15", decision: include, promises: [bush-1988-no-socialsecurity-changes] }
+  - { ref: "¶106.18", decision: include, promises: [bush-1988-socialsecurity-sound] }
+  - ref: "¶114.2"
+    decision: include
+    added: true
+    promises: [bush-1988-judges]
+  - { ref: "¶114.5", decision: include, promises: [bush-1988-judges] }
+  - { ref: "¶114.7", decision: include, promises: [bush-1988-judges] }
+  - { ref: "¶127.5", decision: describe, note: "Rejects the questioner's suggestion." }
+  - { ref: "¶127.6", decision: include, promises: [bush-1988-socialsecurity-sound] }
+  - ref: "¶127.10-127.12"
+    decision: include
+    promises: [bush-1988-child-care-choice]
+    note: "¶127.11-127.12 state the same wish negatively; joined."
+  - { ref: "¶127.13", decision: attack, note: "Voices the federal approach he opposes." }
+  - { ref: "¶127.14", decision: include, promises: [bush-1988-child-care-choice] }
+  - { ref: "¶127.16", decision: include, promises: [bush-1988-points-of-light] }
+  - { ref: "¶139.11", decision: include, promises: [bush-1988-farm-exports] }
+  - { ref: "¶139.12", decision: include, promises: [bush-1988-rural-enterprise-zones] }
+  - { ref: "¶139.13", decision: include, promises: [bush-1988-ethanol] }
+  - { ref: "¶144.16", decision: describe, note: "\"commitment\" refers to measuring others' commitment." }
+  - { ref: "¶144.18", decision: describe, note: "Will keep calling himself an environmentalist." }
+  - { ref: "¶144.19", decision: attack, note: "Jab at Boston Harbor sludge." }
+  - { ref: "¶144.20", decision: attack, note: "Restates ¶144.19." }
+  - { ref: "¶144.25", decision: attack, note: "Restates ¶144.19." }
+  - { ref: "¶144.29", decision: include, promises: [bush-1988-environment-job] }
+  - { ref: "¶150.2", decision: describe, note: "About campaign debates." }
+  - { ref: "¶150.6", decision: describe, note: "About the campaign." }
+  - { ref: "¶150.8", decision: describe, note: "About negative campaigning." }
+  - { ref: "¶150.11", decision: describe, note: "About the campaign's tone." }
+  - { ref: "¶162.6", decision: include, promises: [bush-1988-energy-mix] }
+  - { ref: "¶162.9", decision: include, promises: [bush-1988-energy-mix] }
+  - ref: "¶167.1-167.3"
+    decision: include
+    promises: [bush-1988-revolving-door]
+    note: "Answer to ¶166.4 (\"will you lock that revolving door\"); ¶167.2-167.3 repeat \"I'll do both\"."
+  - { ref: "¶167.12", decision: include, promises: [bush-1988-ethics-office] }
+  - { ref: "¶167.13", decision: include, promises: [bush-1988-congress-ethics] }
+  - { ref: "¶167.14", decision: include, promises: [bush-1988-public-service] }
+  - { ref: "¶167.16", decision: include, promises: [bush-1988-clean-up] }
+  - ref: "¶173.4"
+    decision: include
+    promises: [bush-1988-no-new-taxes, bush-1988-keep-expansion]
+  - { ref: "¶173.5", decision: include, promises: [bush-1988-invest-in-children] }
+  - { ref: "¶173.6", decision: include, promises: [bush-1988-kinder-gentler] }
+  - { ref: "¶173.7", decision: include, promises: [bush-1988-child-care-choice] }
+  - ref: "¶173.8"
+    decision: include
+    promises: [bush-1988-safer-neighborhoods, bush-1988-judges]
+  - { ref: "¶173.10", decision: include, promises: [bush-1988-disabled-mainstream] }
+  - { ref: "¶173.17", decision: include, promises: [bush-1988-arms-cuts] }
+  - ref: "¶173.18"
+    decision: include
+    promises: [bush-1988-ban-chemical-weapons]
+    note: "Soft restatement (\"I'd like to say … was able to ban\") of the firm promise in the acceptance speech."
+  - { ref: "¶173.22", decision: include, promises: [bush-1988-good-president] }

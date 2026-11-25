@@ -1,0 +1,82 @@
+# Screening ledger for 1988-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row. Ids shared with the other two
+# ledgers are further occurrences of the same promise.
+#
+# Added: ¶66.1 ("I'm the one who will not raise taxes") and ¶68.1 ("my
+# mission is 30 in eight"), commitments without a trigger word.
+#
+# Not candidates: the "My opponent says no, and I say yes" answers
+# (¶58-62) and "I'm the one who believes/says …" (¶64-65) state positions,
+# not things to be done. ¶32.5 ("With the right leadership, it will remain
+# strong") is a prediction.
+source: 1988-acceptance
+protocol: 1
+rows:
+  - { ref: "¶4.1", decision: describe, note: "About winning the election." }
+  - { ref: "¶8.2", decision: describe, note: "About the tone of the speech and campaign." }
+  - { ref: "¶8.3", decision: describe, note: "About the tone of the speech and campaign." }
+  - { ref: "¶29.3", decision: include, promises: [bush-1988-protect-gains] }
+  - { ref: "¶30.3", decision: include, promises: [bush-1988-protect-gains] }
+  - { ref: "¶31.2", decision: include, promises: [bush-1988-inflation], note: "\"It\" is inflation (¶31.1)." }
+  - ref: "¶31.3"
+    decision: include
+    promises: [bush-1988-socialsecurity-sound, bush-1988-protect-trust-fund]
+    note: "Split: \"sound\" and \"out of reach of the big spenders\" could get different verdicts."
+  - { ref: "¶31.4", decision: include, promises: [bush-1988-protect-gains] }
+  - { ref: "¶33.8", decision: include, promises: [bush-1988-help-left-behind] }
+  - { ref: "¶34.1", decision: describe, note: "States that growth is the key; no commitment." }
+  - { ref: "¶35.1", decision: include, promises: [bush-1988-broad-growth] }
+  - { ref: "¶36.5", decision: describe, note: "Prediction conditioned on continued growth; the jobs goal itself is recorded at ¶68.1." }
+  - { ref: "¶36.6", decision: include, promises: [bush-1988-growth-policies] }
+  - { ref: "¶41.4", decision: include, promises: [bush-1988-peace-through-strength] }
+  - { ref: "¶43.3", decision: include, promises: [bush-1988-keep-peace] }
+  - { ref: "¶44.2", decision: others, note: "The voters must decide." }
+  - { ref: "¶44.3", decision: describe, note: "Prediction about the election." }
+  - { ref: "¶50.2", decision: describe, note: "Religious tradition: \"We must be good to one another.\"" }
+  - { ref: "¶63.1", decision: include, promises: [bush-1988-abortion-to-adoption] }
+  - ref: "¶66.1"
+    decision: include
+    added: true
+    promises: [bush-1988-no-new-taxes]
+  - { ref: "¶66.4", decision: include, promises: [bush-1988-no-new-taxes] }
+  - ref: "¶68.1"
+    decision: include
+    added: true
+    promises: [bush-1988-thirty-million-jobs]
+    note: "\"My mission is\" states a goal: an ambition."
+  - { ref: "¶69.2", decision: include, promises: [bush-1988-parent-power] }
+  - { ref: "¶69.3", decision: include, promises: [bush-1988-merit-schools] }
+  - { ref: "¶69.4", decision: include, promises: [bush-1988-head-start] }
+  - { ref: "¶69.5", decision: include, promises: [bush-1988-college-savings] }
+  - { ref: "¶70.1", decision: include, promises: [bush-1988-drug-free] }
+  - { ref: "¶70.2", decision: others, note: "Introduces the challenge to young people (¶70.3)." }
+  - { ref: "¶71.2", decision: include, promises: [bush-1988-fight-dealers] }
+  - ref: "¶72.1-72.3"
+    decision: include
+    promises: [bush-1988-disabled-mainstream]
+    note: "¶72.3 restates ¶72.1; joined."
+  - { ref: "¶73.1", decision: include, promises: [bush-1988-ocean-dumping] }
+  - { ref: "¶73.3", decision: include, promises: [bush-1988-medical-waste] }
+  - { ref: "¶73.4", decision: include, promises: [bush-1988-clean-air] }
+  - { ref: "¶73.5", decision: include, promises: [bush-1988-acid-rain] }
+  - { ref: "¶74.1", decision: include, promises: [bush-1988-energy-incentives] }
+  - { ref: "¶75.1", decision: include, promises: [bush-1988-peace-through-strength] }
+  - { ref: "¶75.2", decision: include, promises: [bush-1988-arms-cuts] }
+  - ref: "¶75.3"
+    decision: include
+    promises: [bush-1988-modernize, bush-1988-strategic-defense]
+    note: "Split: strategic defense is a checkable part of a vaguer whole."
+  - ref: "¶75.4-75.5"
+    decision: include
+    promises: [bush-1988-ban-chemical-weapons]
+    note: "¶75.5 (\"That will be a priority with me\") makes the fragment in ¶75.4 firm."
+  - { ref: "¶75.6", decision: include, promises: [bush-1988-speak-for-freedom] }
+  - { ref: "¶77.1", decision: include, promises: [bush-1988-new-harmony] }
+  - { ref: "¶83.7", decision: describe, note: "Rhetorical question." }
+  - { ref: "¶84.2", decision: include, promises: [bush-1988-kinder-gentler] }
+  - { ref: "¶99.2", decision: describe, note: "About the campaign." }
+  - ref: "¶100.1-101.1"
+    decision: include
+    promises: [bush-1988-move-forward]
+    note: "¶101.1 (\"This is my mission, and I will complete it\") closes ¶100.1; joined."
+  - { ref: "¶103.1", decision: ceremony, note: "Pledge of Allegiance." }

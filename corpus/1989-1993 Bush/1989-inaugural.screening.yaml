@@ -1,0 +1,36 @@
+# Screening ledger for 1989-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row.
+#
+# Added: ¶25.4 ("take my word for it: This scourge will stop!"), a future
+# commitment without a trigger word.
+#
+# Not candidates: ¶19.8-19.9 ("Let us negotiate soon and hard. But in the
+# end, let us produce.") address Congress jointly and carry no trigger.
+source: 1989-inaugural
+protocol: 1
+rows:
+  - { ref: "¶9.5", decision: include, promises: [bush-1988-act-on-what-we-know] }
+  - { ref: "¶11.5", decision: describe, note: "Reflection on what parents hope to give their children." }
+  - { ref: "¶11.6", decision: describe, note: "Rhetorical question." }
+  - { ref: "¶14.6", decision: include, promises: [bush-1988-hard-choices] }
+  - ref: "¶14.7-14.8"
+    decision: include
+    promises: [bush-1988-turn-to-people]
+    note: "¶14.7 announces what ¶14.8 states; joined."
+  - { ref: "¶15.2", decision: include, promises: [bush-1988-engage-generations] }
+  - ref: "¶16.2-16.4"
+    decision: include
+    promises: [bush-1988-points-of-light]
+    note: "Three sentences on one commitment: working with the community organizations of ¶16.1."
+  - { ref: "¶16.5", decision: describe, note: "\"commitment\" names a value." }
+  - { ref: "¶17.3", decision: include, promises: [bush-1988-balance-budget] }
+  - { ref: "¶17.4", decision: include, promises: [bush-1988-strong-and-sound] }
+  - { ref: "¶17.6", decision: include, promises: [bush-1988-compromise-with-congress] }
+  - { ref: "¶19.5", decision: describe, note: "Does not want to turn back clocks; no commitment." }
+  - { ref: "¶20.1", decision: include, promises: [bush-1988-peace-through-strength] }
+  - { ref: "¶21.3", decision: include, promises: [bush-1988-speak-clearly] }
+  - { ref: "¶21.4", decision: include, promises: [bush-1988-soviet-closeness] }
+  - ref: "¶25.4"
+    decision: include
+    added: true
+    promises: [bush-1988-stop-drugs]

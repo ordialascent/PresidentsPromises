@@ -195,6 +195,7 @@ for (const name of readdirSync(CORPUS)) {
   const speechYear = acceptance ? acceptance.year : null;
   terms.push({
     key: name,
+    name: acceptance.speaker || surname,
     surname,
     from: Number(fromStr),
     to: Number(toStr),
@@ -209,6 +210,31 @@ for (const name of readdirSync(CORPUS)) {
 }
 
 terms.sort((a, b) => a.from - b.from || (a.speechYear ?? 0) - (b.speechYear ?? 0));
+
+// Two presidents can share a surname (George H. W. Bush, George W. Bush). The
+// surname is what the President filter groups by and what every label shows,
+// so it must name one person: when different people share it, prefix the
+// part of their given names that tells them apart ("H. W. Bush", "W. Bush").
+const fullNames = new Map(); // surname -> Set of full names
+for (const t of terms) {
+  if (!fullNames.has(t.surname)) fullNames.set(t.surname, new Set());
+  fullNames.get(t.surname).add(t.name);
+}
+for (const [surname, names] of fullNames) {
+  if (names.size < 2) continue;
+  const given = new Map(
+    [...names].map((n) => [n, n.replace(/,.*$/, '').trim().split(/\s+/).slice(0, -1)]),
+  );
+  let shared = 0; // leading given names that all of them share
+  while ([...given.values()].every((g, _, all) => g.length > shared && g[shared] === all[0][shared])) shared++;
+  for (const t of terms) {
+    if (t.surname !== surname) continue;
+    const rest = given.get(t.name).slice(shared);
+    if (!rest.length) throw new Error(`${t.key}: cannot tell "${t.name}" apart from the other ${surname}`);
+    t.surname = `${rest.join(' ')} ${surname}`;
+    t.label = t.speechYear ? `${t.surname} ${t.speechYear}` : t.surname;
+  }
+}
 
 const total = terms.reduce((n, t) => n + t.promises.length, 0);
 const ambitionTotal = terms.reduce((n, t) => n + t.ambitions.length, 0);
@@ -320,6 +346,10 @@ export type Decision = ${DECISIONS.map((d) => `'${d}'`).join(' | ')};
 export interface CorpusTerm {
   /** Corpus directory name, e.g. "2009-2013 Obama". Stable key. */
   key: string;
+  /** The president's full name, from the acceptance speech, e.g. "George H. W. Bush". */
+  name: string;
+  /** What the President filter groups by: the surname, with the distinguishing
+   *  given names when two presidents share it ("H. W. Bush", "W. Bush"). */
   surname: string;
   /** Inauguration year that opened the term. */
   from: number;
