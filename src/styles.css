@@ -178,7 +178,7 @@ main {
 }
 .pc-swatch[data-c="verifiable"] { background: var(--q-high); }
 .pc-swatch[data-c="unverifiable"] { background: var(--q-low); }
-.pc-swatch[data-v="other"] { background: var(--v-partly); }
+.pc-swatch[data-v="other"] { background: var(--v-other); }
 .pc-swatch[data-q="high"] { background: var(--q-high); }
 .pc-swatch[data-q="medium"] { background: var(--q-medium); }
 .pc-swatch[data-q="low"] { background: var(--q-low); }
@@ -938,6 +938,8 @@ main {
   --v-indeterminate: #9a9a9a;
   --v-review: #5b6f8a;
   --v-pending: #d6d6d6;
+  /* the graph's "other" line and its key: a mid grey, between indeterminate and the ink */
+  --v-other: #7d7d7d;
 }
 
 .sr-only {
@@ -1103,12 +1105,26 @@ main {
 .tg-line[data-line="kept"] circle { fill: var(--v-kept); }
 .tg-line[data-line="broken"] polyline { stroke: var(--v-broken); }
 .tg-line[data-line="broken"] circle { fill: var(--v-broken); }
-.tg-line[data-line="other"] polyline { stroke: var(--v-partly); }
-.tg-line[data-line="other"] circle { fill: var(--v-partly); }
+.tg-line[data-line="other"] polyline { stroke: var(--v-other); }
+.tg-line[data-line="other"] circle { fill: var(--v-other); }
 .tg-hit { fill: transparent; }
 .tg-hit:hover { fill: color-mix(in srgb, var(--series) 5%, transparent); }
 
 /* the legend under it: one key for the graph and the bars */
 .bl { display: flex; flex-direction: column; gap: 6px; }
-.bl-other { align-items: center; }
-.bl-paren { color: var(--dim); font-size: 14px; line-height: 1; }
+/* "Other" is one bubble holding its four parts, so they read as one category */
+.bl-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--v-other) 8%, transparent);
+  max-width: 100%;
+}
+.bl-group[data-picked='true'] { border-color: var(--series); }
+.bl-group .pc-legend-item { background: var(--panel); }
+.bl-group .pc-legend-item[data-picked='true'] { background: color-mix(in srgb, var(--series) 14%, var(--panel)); }
+.bl-group-head { border-color: transparent; background: transparent !important; font-weight: 600; color: var(--ink); }

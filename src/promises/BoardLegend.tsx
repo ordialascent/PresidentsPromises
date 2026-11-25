@@ -90,22 +90,22 @@ export function BoardLegend({
         {withVerdicts && verdictChip('broken')}
       </div>
       {withVerdicts && (
-        <div className="pc-legend bl-other">
-          <button
-            type="button"
-            className="pc-legend-item"
-            data-picked={otherOn}
-            aria-pressed={otherOn}
-            onClick={toggleOther}
-            title={`Other: partly kept, indeterminate, under review and pending. ${otherOn ? 'Remove all four' : 'Show all four'}.`}
-          >
-            <span className="pc-swatch" data-v="other" />
-            Other
-            <span className="pc-legend-n">{otherN}</span>
-          </button>
-          <span className="bl-paren" aria-hidden="true">(</span>
-          {OTHER_STATUSES.map((s) => verdictChip(s))}
-          <span className="bl-paren" aria-hidden="true">)</span>
+        <div className="pc-legend">
+          <div className="bl-group" data-picked={otherOn} role="group" aria-label="Other: everything not kept or broken">
+            <button
+              type="button"
+              className="pc-legend-item bl-group-head"
+              data-picked={otherOn}
+              aria-pressed={otherOn}
+              onClick={toggleOther}
+              title={`Other: partly kept, indeterminate, under review and pending. ${otherOn ? 'Remove all four' : 'Show all four'}.`}
+            >
+              <span className="pc-swatch" data-v="other" />
+              Other
+              <span className="pc-legend-n">{otherN}</span>
+            </button>
+            {OTHER_STATUSES.map((s) => verdictChip(s))}
+          </div>
         </div>
       )}
     </div>
