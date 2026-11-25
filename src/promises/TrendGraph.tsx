@@ -2,7 +2,9 @@ import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { countAxis, trendPoints, type CorpusTerm, type Kind } from './model.js';
 
 const HEIGHT = 200;
-const PAD = { top: 12, right: 8, bottom: 38, left: 34 };
+// No side padding: the plot runs edge to edge, flush with the settings bar
+// above it, and the axis numbers sit inside it, just above their gridlines.
+const PAD = { top: 12, right: 0, bottom: 38, left: 0 };
 
 type Line = 'kept' | 'broken' | 'other';
 const LINES: { key: Line; label: string }[] = [
@@ -10,6 +12,8 @@ const LINES: { key: Line; label: string }[] = [
   { key: 'broken', label: 'broken' },
   { key: 'other', label: 'other' },
 ];
+/** Paint order: where lines cross, other sits at the back and broken in front. */
+const DRAW_ORDER: Line[] = ['other', 'kept', 'broken'];
 
 /**
  * The board at a glance: one column per term, oldest on the left. The shaded
@@ -95,9 +99,11 @@ export function TrendGraph({ terms, kind }: { terms: CorpusTerm[]; kind: Kind })
         {ticks.map((n) => (
           <g key={n}>
             <line className="tg-grid" x1={PAD.left} x2={PAD.left + plotW} y1={y(n)} y2={y(n)} />
-            <text className="tg-tick" x={PAD.left - 6} y={y(n)} dy="0.32em" textAnchor="end">
-              {n}
-            </text>
+            {n > 0 && (
+              <text className="tg-tick" x={PAD.left + 2} y={y(n) - 4}>
+                {n}
+              </text>
+            )}
           </g>
         ))}
 
@@ -105,7 +111,7 @@ export function TrendGraph({ terms, kind }: { terms: CorpusTerm[]; kind: Kind })
         <polyline className="tg-area-edge" points={edge} />
 
         {withVerdicts &&
-          LINES.map(({ key }) => (
+          DRAW_ORDER.map((key) => (
             <g key={key} className="tg-line" data-line={key}>
               {points.length > 1 && <polyline points={points.map((p, i) => `${x(i)},${y(p[key])}`).join(' ')} />}
               {points.map((p, i) => (
