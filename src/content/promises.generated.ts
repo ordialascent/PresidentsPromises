@@ -103,6 +103,10 @@ export type Decision = 'include' | 'others' | 'past' | 'describe' | 'conditional
 export interface CorpusTerm {
   /** Corpus directory name, e.g. "2009-2013 Obama". Stable key. */
   key: string;
+  /** The president's full name, from the acceptance speech, e.g. "George H. W. Bush". */
+  name: string;
+  /** What the President filter groups by: the surname, with the distinguishing
+   *  given names when two presidents share it ("H. W. Bush", "W. Bush"). */
   surname: string;
   /** Inauguration year that opened the term. */
   from: number;
@@ -127,7 +131,4057 @@ export interface CorpusTerm {
 /** Every term with its aggregated promise set, oldest first. */
 export const CORPUS_TERMS: CorpusTerm[] = [
   {
+    "key": "1989-1993 Bush",
+    "name": "George H. W. Bush",
+    "surname": "H. W. Bush",
+    "from": 1989,
+    "to": 1993,
+    "termLabel": "1989–1993",
+    "speechYear": 1988,
+    "label": "H. W. Bush 1988",
+    "screening": {
+      "include": 84,
+      "others": 4,
+      "past": 1,
+      "describe": 25,
+      "conditional": 0,
+      "attack": 5,
+      "ceremony": 1
+    },
+    "screenedAdded": 5,
+    "promises": [
+      {
+        "id": "bush-1988-hard-choices",
+        "kind": "promise",
+        "theme": "budget",
+        "restatement": "Make hard budget choices and reallocate spending by need.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶14.6",
+            "quote": "We will make the hard choices, looking at what we have and perhaps allocating it differently, making our decisions based on honest need and prudent safety.",
+            "context": "We will make the hard choices, looking at what we have and perhaps allocating it differently, making our decisions based on honest need and prudent safety.",
+            "mark": [
+              0,
+              155
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-turn-to-people",
+        "kind": "promise",
+        "theme": "welfare",
+        "restatement": "Turn to Americans' goodness and courage to meet social needs.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶14.7-14.8",
+            "quote": "We will turn to the only resource we have that in times of need always grows: the goodness and the courage of the American people.",
+            "context": "And then we will do the wisest thing of all. We will turn to the only resource we have that in times of need always grows: the goodness and the courage of the American people.",
+            "mark": [
+              45,
+              175
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-points-of-light",
+        "kind": "promise",
+        "theme": "welfare",
+        "restatement": "Work from the White House and the Cabinet agencies with volunteer and community organizations (the \"points of light\").",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶16.2-16.4",
+            "quote": "We will work on this in the White House, in the Cabinet agencies.",
+            "context": "We will work hand in hand, encouraging, sometimes leading, sometimes being led, rewarding. We will work on this in the White House, in the Cabinet agencies. I will go to the people and the programs that are the brighter points of light, and I'll ask every member of my government to become involved.",
+            "mark": [
+              91,
+              156
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶127.16",
+            "quote": "And I want to keep it alive in child care and in other entitlements.",
+            "context": "And I want to keep it alive in child care and in other entitlements.",
+            "mark": [
+              0,
+              68
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a federal effort to encourage volunteer community service",
+            "record": "Statutes at Large (National and Community Service Act of 1990); the President's public papers",
+            "criterion": "the White House sets up a standing effort to encourage and recognise volunteer community organizations",
+            "ambiguity": "\"Work hand in hand\" does not say what form the effort takes; a White House office or a federally backed programme for community service counts."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "In the debate, \"it\" is the volunteer sector of ¶127.15."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "The National and Community Service Act of 1990, which he signed, set up federal support for the Points of Light Foundation and a Commission on National and Community Service to back volunteer and community service.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "National and Community Service Act of 1990, Pub. L. 101-610, Title III (Points of Light Foundation)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg3127.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1990-11-16",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-peace-through-strength",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Keep the country strong to protect the peace (peace through strength).",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶20.1",
+            "quote": "We will stay strong to protect the peace.",
+            "context": "To the world, too, we offer new engagement and a renewed vow: We will stay strong to protect the peace.",
+            "mark": [
+              62,
+              103
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶41.4",
+            "quote": "I will not allow this country to be made weak again, never.",
+            "context": "I will not allow this country to be made weak again, never.",
+            "mark": [
+              0,
+              59
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶75.1",
+            "quote": "In foreign affairs, I'll continue our policy of peace through strength.",
+            "context": "In foreign affairs, I'll continue our policy of peace through strength.",
+            "mark": [
+              0,
+              71
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-speak-clearly",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Speak clearly to the world.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶21.3",
+            "quote": "We will always try to speak clearly, for candor is a compliment; but subtlety, too, is good and has its place.",
+            "context": "We will always try to speak clearly, for candor is a compliment; but subtlety, too, is good and has its place.",
+            "mark": [
+              0,
+              110
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-soviet-closeness",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Keep alliances strong and continue the new closeness with the Soviet Union.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶21.4",
+            "quote": "While keeping our alliances and friendships around the world strong, ever strong, we will continue the new closeness with the Soviet Union, consistent both with our security and with progress.",
+            "context": "While keeping our alliances and friendships around the world strong, ever strong, we will continue the new closeness with the Soviet Union, consistent both with our security and with progress.",
+            "mark": [
+              0,
+              192
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-stop-drugs",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Stop the scourge of drugs.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶25.4",
+            "quote": "This scourge will stop!",
+            "context": "And there is much to be done and to be said, but take my word for it: This scourge will stop!",
+            "mark": [
+              70,
+              93
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "No trigger word; read as a commitment because of \"take my word for it\". What counts as the scourge stopping is not said."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-protect-gains",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Not let opponents take away the opportunity, economic gains and security that young people, women and the elderly have.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶29.3",
+            "quote": "and I'm not going to let them take it away from you.",
+            "context": "And to those young people I say, \"You have the opportunity you deserve, and I'm not going to let them take it away from you.\"",
+            "mark": [
+              72,
+              124
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶30.3",
+            "quote": "You're gaining economic power, and I'm not going to let them take it away from you.",
+            "context": "You're gaining economic power, and I'm not going to let them take it away from you.\"",
+            "mark": [
+              0,
+              83
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶31.4",
+            "quote": "and I'm not going to let them take it away from you.",
+            "context": "To America's elderly, I say, \"Once again, you have the security that is your right, and I'm not going to let them take it away from you.\"",
+            "mark": [
+              84,
+              136
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"Them\" are the liberal Democrats; read as a commitment to protect these gains in office, not only to win the election."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-inflation",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Not let inflation come back.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶31.2",
+            "quote": "We arrested it, and we're not going to let it out on furlough.",
+            "context": "We arrested it, and we're not going to let it out on furlough.",
+            "mark": [
+              0,
+              62
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "consumer price inflation",
+            "record": "BLS Consumer Price Index (CPI-U), annual averages",
+            "criterion": "annual CPI-U inflation stays below the double-digit rates of 1979-1981 in every year of the term",
+            "ambiguity": "\"Let it out\" is read as a return to the double-digit inflation of 1979-1981, the comparison the speech makes (¶25.1); a stricter reading (no year above 1988's rate) is possible."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "Annual CPI-U inflation was 4.8% in 1989, 5.4% in 1990, 4.2% in 1991 and 3.0% in 1992, never near the double-digit rates of 1979-1981.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Consumer Price Index for All Urban Consumers (CPIAUCNS), annual averages 1988-1992 (118.3, 124.0, 130.7, 136.2, 140.3)",
+              "url": "https://fred.stlouisfed.org/series/CPIAUCNS",
+              "publisher": "Federal Reserve Bank of St. Louis (FRED), from BLS data",
+              "date": "1993-01-14",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "Under the stricter reading (no year above 1988's 4.1%), inflation rose in 1989-1991, and the verdict would be broken."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-socialsecurity-sound",
+        "kind": "promise",
+        "theme": "retirement",
+        "restatement": "Keep the Social Security trust funds sound.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶31.3",
+            "quote": "And we're going to keep that Social Security trust fund sound",
+            "context": "And we're going to keep that Social Security trust fund sound and out of reach of the big spenders.",
+            "mark": [
+              0,
+              61
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶106.18",
+            "quote": "And I am going to keep that Social Security Trust Fund sound and keep our commitment to the elderly",
+            "context": "And I am going to keep that Social Security Trust Fund sound and keep our commitment to the elderly and maybe down the line, maybe when you get two decades or one into the next century, you're going to have to take another look at it, but not now.",
+            "mark": [
+              0,
+              99
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶127.6",
+            "quote": "And I've said that I'm going to keep this Social Security entitlement, to keep that trust fund sound.",
+            "context": "And I've said that I'm going to keep this Social Security entitlement, to keep that trust fund sound.",
+            "mark": [
+              0,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "bush-1988-socialsecurity-trust",
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the Social Security (OASI and DI) trust funds",
+            "record": "Annual Reports of the Social Security Board of Trustees",
+            "criterion": "trust fund reserves grow, and the Trustees do not project either fund to run out within ten years, through the term",
+            "ambiguity": "\"Sound\" is read as the Trustees' short-range (ten-year) test; reading it as 75-year balance would be stricter."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "partly",
+          "asOf": "2026-11-25",
+          "summary": "Combined trust fund reserves tripled, from $109.8 billion at the end of 1988 to $331.5 billion at the end of 1992, but the 1992 Trustees Report projected the Disability Insurance fund to run out in 1997, within ten years, so DI failed the short-range test (OASI passed).",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "CRS RL33028, Social Security - The Trust Funds, accumulated reserves by year and Table A-1 (depletion years in each Trustees Report; 1988 report DI 2027, 1992 report DI 1997)",
+              "url": "https://www.everycrsreport.com/reports/RL33028.html",
+              "publisher": "Congressional Research Service (via EveryCRSReport)",
+              "date": "2024-05-23",
+              "secondary": true
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "A reader who judges the combined OASDI funds could call it kept; the combined funds stayed above the short-range test."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-protect-trust-fund",
+        "kind": "promise",
+        "theme": "retirement",
+        "restatement": "Not take money out of the Social Security trust fund for other spending.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶31.3",
+            "quote": "and out of reach of the big spenders.",
+            "context": "And we're going to keep that Social Security trust fund sound and out of reach of the big spenders.",
+            "mark": [
+              62,
+              99
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶25.5-25.6",
+            "quote": "I'm not going to do that; I won't do that.",
+            "context": "And I won't do one other thing that he's had to do: took $29 million out of his state pension fund that's equivalent at the federal level of taking out of the Social Security trust fund. I'm not going to do that; I won't do that.",
+            "mark": [
+              187,
+              229
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "bush-1988-socialsecurity-trust",
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the Social Security trust funds",
+            "record": "Statutes at Large; Social Security Trustees Reports",
+            "criterion": "no law or executive action moves Social Security trust fund money to other uses during the term",
+            "ambiguity": "By law the surpluses are lent to the Treasury, as they had been for decades; that lending is not read as taking money out."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "In the debate, \"that\" is taking money out of the trust fund, the federal equivalent he names in ¶25.5."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "No money was moved out of the trust funds; the 1990 budget law took the Social Security trust funds off budget and added points of order against using them in budget bills.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Omnibus Budget Reconciliation Act of 1990, Pub. L. 101-508, secs. 13301-13303 (off-budget status and protection of the OASDI trust funds)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1388.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1990-11-05",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-growth-policies",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Keep free and fair trade, low government spending and low taxes.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶36.6",
+            "quote": "And we will do it by maintaining our commitment to free and fair trade, by keeping government spending down and by keeping taxes down.",
+            "context": "And we will do it by maintaining our commitment to free and fair trade, by keeping government spending down and by keeping taxes down.",
+            "mark": [
+              0,
+              134
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-keep-peace",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Not let anyone take the peace away.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶43.3",
+            "quote": "And we have peace, and I am not going to let anyone take it away from us.",
+            "context": "And we have peace, and I am not going to let anyone take it away from us.",
+            "mark": [
+              0,
+              73
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-no-new-taxes",
+        "kind": "promise",
+        "theme": "taxes",
+        "restatement": "No new taxes: not raise taxes.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶66.1",
+            "quote": "And I'm the one who will not raise taxes.",
+            "context": "And I'm the one who will not raise taxes.",
+            "mark": [
+              0,
+              41
+            ]
+          },
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶66.4",
+            "quote": "Read my lips: no new taxes.",
+            "context": "My opponent won't rule out raising taxes, but I will, and the Congress will push me to raise taxes, and I'll say no, and they'll push, and I'll say no, and they'll push again, and I'll say to them, \"Read my lips: no new taxes.\"",
+            "mark": [
+              199,
+              226
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶16.4",
+            "quote": "I don't want to kill it off by a tax increase.",
+            "context": "I don't want to kill it off by a tax increase.",
+            "mark": [
+              0,
+              46
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶16.7",
+            "quote": "And I don't want to do that, and I won't do that.",
+            "context": "And I don't want to do that, and I won't do that.",
+            "mark": [
+              0,
+              49
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶16.17",
+            "quote": "So I'm pledged to do that.",
+            "context": "So I'm pledged to do that.",
+            "mark": [
+              0,
+              26
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.4",
+            "quote": "I want to hold the line on taxes",
+            "context": "I want to hold the line on taxes, and keep this the longest expansion in modern history going until everybody in America benefits.",
+            "mark": [
+              0,
+              32
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal taxes",
+            "record": "Statutes at Large (enacted tax laws)",
+            "criterion": "no law that raises a federal tax rate or creates a new federal tax is signed during the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-25",
+          "summary": "The 1990 budget law he signed raised the top income tax rate from 28% to 31%, raised the federal gasoline tax by 5 cents a gallon and added new excise taxes, including a luxury tax.",
+          "attempt": "none",
+          "review": null,
+          "evidence": [
+            {
+              "what": "Omnibus Budget Reconciliation Act of 1990, Pub. L. 101-508, sec. 11101 (top rate) and sec. 11211 (highway fuel taxes)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1388.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1990-11-05",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-merit-schools",
+        "kind": "promise",
+        "theme": "education",
+        "restatement": "Encourage merit schools.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶69.3",
+            "quote": "And I will encourage merit schools.",
+            "context": "And I will encourage merit schools.",
+            "mark": [
+              0,
+              35
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a federal merit schools programme",
+            "record": "Statutes at Large; Congress.gov bill records",
+            "criterion": "a federal programme that rewards merit schools is enacted",
+            "ambiguity": "\"Encourage\" could be met by speeches alone; read as the merit schools award programme he went on to propose being enacted."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-25",
+          "summary": "He proposed a $500 million merit schools programme in February 1989 and sent Congress the Educational Excellence Act, but no merit schools programme was enacted.",
+          "attempt": "passed-chamber",
+          "review": "Congress.gov S. 695 (101st Congress), Educational Excellence Act of 1989: Senate passage (Feb 1990) and no enactment (from memory)",
+          "evidence": [
+            {
+              "what": "Address on Administration Goals Before a Joint Session of Congress (proposes \"a $500 million program to reward America's best schools, merit schools\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-administration-goals-before-joint-session-congress",
+              "publisher": "The American Presidency Project",
+              "date": "1989-02-09",
+              "secondary": false
+            },
+            {
+              "what": "Remarks to the American Farm Bureau Federation (\"The administration has sent the Educational Excellence Act to the Congress\")",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-the-american-farm-bureau-federation-orlando-florida",
+              "publisher": "The American Presidency Project",
+              "date": "1990-01-08",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-head-start",
+        "kind": "promise",
+        "theme": "education",
+        "restatement": "Enroll more children in Head Start.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶69.4",
+            "quote": "I will give more kids a head start.",
+            "context": "I will give more kids a head start.",
+            "mark": [
+              0,
+              35
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "Head Start enrollment",
+            "record": "HHS Administration for Children and Families, Head Start funded enrollment",
+            "criterion": "Head Start enrolls more children in FY1992, the last full year of the term, than in FY1988",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"A head start\" is read as the federal Head Start programme, the usual sense in a list of education commitments."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "Head Start funding rose from $1.552 billion in FY1990 to $2.202 billion in FY1992, after he asked for record increases, and the 1990 Head Start Expansion and Quality Improvement Act set aside money to expand it; funded enrollment rose from about 450,000 to about 620,000.",
+          "attempt": null,
+          "review": "ACF Head Start Program Facts: funded enrollment FY1988 (~448,000) and FY1992 (~621,000) (from memory)",
+          "evidence": [
+            {
+              "what": "CRS RL30952, Head Start - Background and Funding, Table 3 (Head Start funding FY1990-FY2013)",
+              "url": "https://www.everycrsreport.com/reports/RL30952.html",
+              "publisher": "Congressional Research Service (via EveryCRSReport)",
+              "date": "2014-01-02",
+              "secondary": true
+            },
+            {
+              "what": "Human Services Reauthorization Act of 1990, Pub. L. 101-501, Title I, Subtitle A (Head Start Expansion and Quality Improvement Act)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1222.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1990-11-03",
+              "secondary": false
+            },
+            {
+              "what": "Address on the State of the Union, 31 Jan 1990 (\"a record increase in funds ... for ... Head Start\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-2",
+              "publisher": "The American Presidency Project",
+              "date": "1990-01-31",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-college-savings",
+        "kind": "promise",
+        "theme": "education",
+        "restatement": "Make it easier to save for college.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶69.5",
+            "quote": "And I'll make it easier to save for college.",
+            "context": "And I'll make it easier to save for college.",
+            "mark": [
+              0,
+              44
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal incentives for college saving",
+            "record": "Statutes at Large (tax law)",
+            "criterion": "a law that adds a new federal incentive for college saving is enacted during the term",
+            "ambiguity": "\"Easier\" names no measure; any new tax or savings incentive aimed at college costs counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-25",
+          "summary": "No new college-saving incentive was enacted in the term. He proposed tax-free family savings accounts (1991) and penalty-free IRA withdrawals for education (1992), but neither became law; the savings bond exclusion for tuition was signed in November 1988, before he took office.",
+          "attempt": "initiated",
+          "review": null,
+          "evidence": [
+            {
+              "what": "Address on the State of the Union, 28 Jan 1992 (asks Congress to let people use IRA money for education expenses without penalty)",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-0",
+              "publisher": "The American Presidency Project",
+              "date": "1992-01-28",
+              "secondary": false
+            },
+            {
+              "what": "Technical and Miscellaneous Revenue Act of 1988, Pub. L. 100-647, sec. 6009 (savings bond interest excluded when used for higher education; signed 10 Nov 1988)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-102/pdf/STATUTE-102-Pg3342.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1988-11-10",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "The 1988 savings bond exclusion took effect for bonds bought from 1990, during the term; a reader who counts its start could call the promise kept."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-fight-dealers",
+        "kind": "promise",
+        "theme": "crime-justice",
+        "restatement": "Do whatever it takes against drug dealers.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶71.2",
+            "quote": "my administration will be telling the dealers: \"Whatever we have to do, we'll do, but your day is over; you are history.\"",
+            "context": "And while you're doing that, my administration will be telling the dealers: \"Whatever we have to do, we'll do, but your day is over; you are history.\"",
+            "mark": [
+              29,
+              150
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-disabled-mainstream",
+        "kind": "promise",
+        "theme": "rights",
+        "restatement": "Do whatever it takes to include people with disabilities in the mainstream.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶72.1-72.3",
+            "quote": "I am going to do whatever it takes to make sure the disabled are included in the mainstream.",
+            "context": "I am going to do whatever it takes to make sure the disabled are included in the mainstream. For too long, they've been left out. But they're not going to be left out anymore.",
+            "mark": [
+              0,
+              92
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.10",
+            "quote": "I want to help those with disabilities fit into the mainstream.",
+            "context": "I want to help those with disabilities fit into the mainstream.",
+            "mark": [
+              0,
+              63
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal disability rights",
+            "record": "Statutes at Large",
+            "criterion": "a federal law barring discrimination against people with disabilities in jobs and public life is enacted",
+            "ambiguity": "\"Whatever it takes\" names no measure; read as a civil rights law for people with disabilities."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "He signed the Americans with Disabilities Act, which bars discrimination against people with disabilities in employment, public services, public accommodations and telecommunications.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Americans with Disabilities Act of 1990, Pub. L. 101-336",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg327.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1990-07-26",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-ocean-dumping",
+        "kind": "promise",
+        "theme": "environment",
+        "restatement": "Stop ocean dumping.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶73.1",
+            "quote": "And I am going to stop ocean dumping.",
+            "context": "And I am going to stop ocean dumping.",
+            "mark": [
+              0,
+              37
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "ocean dumping of sewage sludge and industrial waste",
+            "record": "EPA ocean dumping records; Ocean Dumping Ban Act of 1988",
+            "criterion": "no sewage sludge or industrial waste is being dumped in U.S. ocean waters at the end of the term",
+            "ambiguity": "\"Ocean dumping\" is read as the sludge and waste dumping the next sentence describes (beaches and harbours), not the permitted disposal of dredged material."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "The 1988 Ocean Dumping Ban Act made dumping sewage sludge and industrial waste in the ocean unlawful after 31 December 1991; the last sludge dumping (New York and New Jersey) ended in June 1992.",
+          "attempt": null,
+          "review": "EPA: date the last sewage sludge dumping at the 106-Mile Site ended (June 1992, from memory)",
+          "evidence": [
+            {
+              "what": "Ocean Dumping Ban Act of 1988, Pub. L. 100-688, Title I (sec. 104B, unlawful after 31 Dec 1991)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-102/pdf/STATUTE-102-Pg4139.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1988-11-18",
+              "secondary": false
+            },
+            {
+              "what": "EPA, Learn about Ocean Dumping (history of the MPRSA and the 1988 amendments)",
+              "url": "https://www.epa.gov/ocean-dumping/learn-about-ocean-dumping",
+              "publisher": "U.S. Environmental Protection Agency",
+              "date": "2026-11-25",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "The ban was signed by his predecessor in November 1988; the verdict judges the outcome, which is what the promise names."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-medical-waste",
+        "kind": "promise",
+        "theme": "environment",
+        "restatement": "Have the FBI trace medical waste and punish those who dump it.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶73.3",
+            "quote": "And I am going to have the FBI trace the medical wastes, and we're going to punish the people who dump those infected needles into our oceans, lakes and rivers.",
+            "context": "And I am going to have the FBI trace the medical wastes, and we're going to punish the people who dump those infected needles into our oceans, lakes and rivers.",
+            "mark": [
+              0,
+              160
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-energy-incentives",
+        "kind": "promise",
+        "theme": "energy",
+        "restatement": "Restore incentives for domestic energy production.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶74.1",
+            "quote": "And I'll put incentives back into the domestic energy industry",
+            "context": "And I'll put incentives back into the domestic energy industry, for I know from personal experience there is no security for the United States in further dependence on foreign oil.",
+            "mark": [
+              0,
+              62
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal incentives for domestic oil and gas production",
+            "record": "Statutes at Large (tax law)",
+            "criterion": "a law adding tax incentives for domestic oil and gas production is enacted",
+            "ambiguity": "\"Incentives\" are not named; read as tax incentives, the usual form, for the oil industry the sentence points to."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "The 1990 budget law added a tax credit for enhanced oil recovery, raised percentage depletion for marginal oil and gas wells and gave producers a special energy deduction under the minimum tax.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Omnibus Budget Reconciliation Act of 1990, Pub. L. 101-508, sec. 11511 (enhanced oil recovery credit), secs. 11521-11523 (percentage depletion), sec. 11531 (minimum tax energy deduction)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1388.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1990-11-05",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-arms-cuts",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Cut strategic and conventional arms further, by agreement with the Soviet Union and the Eastern Bloc.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶75.2",
+            "quote": "I'll move toward further cuts in the strategic and conventional arsenals of both the United States and the Soviet Union and the Eastern Bloc and NATO",
+            "context": "I'll move toward further cuts in the strategic and conventional arsenals of both the United States and the Soviet Union and the Eastern Bloc and NATO {North Atlantic Treaty Organization}.",
+            "mark": [
+              0,
+              149
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.17",
+            "quote": "I want to build on that.",
+            "context": "I want to build on that.",
+            "mark": [
+              0,
+              24
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "strategic and conventional arms reduction agreements",
+            "record": "treaty texts and signature records",
+            "criterion": "a treaty cutting U.S. and Soviet strategic arms and a treaty cutting NATO and Warsaw Pact conventional forces are signed",
+            "ambiguity": "\"Move toward\" could be met by negotiating alone; read as signed agreements."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "In the debate, \"that\" is the arms control agreement of ¶173.16."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "He signed the Treaty on Conventional Armed Forces in Europe (19 Nov 1990) with the Warsaw Pact states and the START I treaty cutting U.S. and Soviet strategic arms (31 Jul 1991); START II followed in January 1993.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Treaty on Conventional Armed Forces in Europe, signed 19 November 1990",
+              "url": "https://www.osce.org/library/14087",
+              "publisher": "Organization for Security and Co-operation in Europe",
+              "date": "1990-11-19",
+              "secondary": false
+            },
+            {
+              "what": "START I at a Glance (signed 31 July 1991)",
+              "url": "https://www.armscontrol.org/factsheets/start1",
+              "publisher": "Arms Control Association",
+              "date": "2022-07-01",
+              "secondary": true
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-modernize",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Modernize the forces and keep the technological edge.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶75.3",
+            "quote": "I'll modernize and preserve our technological edge",
+            "context": "I'll modernize and preserve our technological edge, and that includes strategic defense.",
+            "mark": [
+              0,
+              50
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶45.19",
+            "quote": "We have to have modernization",
+            "context": "We have to have modernization, especially if we achieve the 50 percent reduction in strategic weapons that our President is taking the leadership to attain.",
+            "mark": [
+              0,
+              29
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-strategic-defense",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Keep developing strategic missile defense (SDI).",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶75.3",
+            "quote": "and that includes strategic defense.",
+            "context": "I'll modernize and preserve our technological edge, and that includes strategic defense.",
+            "mark": [
+              52,
+              88
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the Strategic Defense Initiative",
+            "record": "defense authorization acts; SDI budget",
+            "criterion": "strategic missile defense research continues to be funded and pursued throughout the term",
+            "ambiguity": "The sentence sets no level or goal; read as SDI continuing, not as a deployed system."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "Strategic defense research continued through the term; the Missile Defense Act of 1991, in the defense authorization he signed, set the goal of deploying a treaty-compliant missile defense.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "National Defense Authorization Act for Fiscal Years 1992 and 1993, Pub. L. 102-190, Title II, Part C (Missile Defense Act of 1991)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-105/pdf/STATUTE-105-Pg1290.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1991-12-05",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-ban-chemical-weapons",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Ban chemical and biological weapons worldwide, as a priority.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶75.4-75.5",
+            "quote": "And a priority: Ban chemical and biological weapons from the face of the Earth.",
+            "context": "And a priority: Ban chemical and biological weapons from the face of the Earth. That will be a priority with me.",
+            "mark": [
+              0,
+              79
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.18",
+            "quote": "was able to ban chemical and biological weapons from the face of the earth.",
+            "context": "I'd love to be able to say to my grandchildren, four years after my first term, I'd like to say, your grandfather, working with the leaders of the Soviet Union, working with the leaders of Europe, was able to ban chemical and biological weapons from the face of the earth.",
+            "mark": [
+              197,
+              272
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a global ban on chemical weapons",
+            "record": "treaty texts and signature records (UN Treaty Collection)",
+            "criterion": "a global treaty banning chemical weapons is concluded and signed by the United States within the term",
+            "ambiguity": "Biological weapons were already banned by the 1972 convention, so the promise is read as a global chemical weapons ban; \"from the face of the Earth\" could also mean the stocks destroyed, which takes years."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "The Chemical Weapons Convention, a global ban, was concluded in 1992, and the United States signed it on 13 January 1993, a week before the deadline.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on their Destruction, status (United States signature 13 Jan 1993)",
+              "url": "https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26&clang=_en",
+              "publisher": "United Nations Treaty Collection",
+              "date": "1993-01-13",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "The convention entered into force only in 1997, and nothing new was agreed on biological weapons; a reader who holds the promise to both weapon types could call it partly."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-move-forward",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Keep America moving forward and complete his mission.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶100.1-101.1",
+            "quote": "I will keep America moving forward, always forward",
+            "context": "I will keep America moving forward, always forward—for a better America, for an endless, enduring dream and a thousand points of light. This is my mission, and I will complete it.",
+            "mark": [
+              0,
+              50
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-no-socialsecurity-changes",
+        "kind": "promise",
+        "theme": "retirement",
+        "restatement": "Not propose changes to Social Security.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶106.7",
+            "quote": "So, I don't want to fool around with it.",
+            "context": "So, I don't want to fool around with it.",
+            "mark": [
+              0,
+              40
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶106.15",
+            "quote": "And I will not go in there and suggest changes in Social Security.",
+            "context": "And I will not go in there and suggest changes in Social Security.",
+            "mark": [
+              0,
+              66
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": "bush-1988-socialsecurity-trust",
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "Social Security benefits",
+            "record": "the President's budgets and messages to Congress",
+            "criterion": "he sends Congress no proposal to cut Social Security benefits or cost-of-living adjustments",
+            "ambiguity": "\"Changes\" is read as cuts to benefits or COLAs, the subject of the question (¶105-106); technical changes do not count."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "His first budget funded Social Security in full with a full cost-of-living adjustment, and in the 1990 and 1992 State of the Union addresses he again ruled out changes (\"I will not tamper with Social Security\").",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Address on Administration Goals Before a Joint Session of Congress (\"Social Security is fully funded, including a full cost-of-living adjustment\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-administration-goals-before-joint-session-congress",
+              "publisher": "The American Presidency Project",
+              "date": "1989-02-09",
+              "secondary": false
+            },
+            {
+              "what": "Address on the State of the Union, 31 Jan 1990 (\"we made a promise to you, and we are going to keep it\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-2",
+              "publisher": "The American Presidency Project",
+              "date": "1990-01-31",
+              "secondary": false
+            },
+            {
+              "what": "Address on the State of the Union, 28 Jan 1992 (\"I will not tamper with Social Security\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-0",
+              "publisher": "The American Presidency Project",
+              "date": "1992-01-28",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "The 1990 budget law, negotiated with the administration, made technical Social Security changes (Title V); none cut benefits or COLAs."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-judges",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Appoint judges who interpret the Constitution rather than legislate from the bench.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶114.2",
+            "quote": "But what I would do is appoint people to the Federal Bench that will not legislate from the Bench, who will interpret the Constitution.",
+            "context": "But what I would do is appoint people to the Federal Bench that will not legislate from the Bench, who will interpret the Constitution.",
+            "mark": [
+              0,
+              135
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶114.5",
+            "quote": "I won't support judges like that.",
+            "context": "I won't support judges like that.",
+            "mark": [
+              0,
+              33
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶114.7",
+            "quote": "But I will go out there and find men and women to interpret.",
+            "context": "But I will go out there and find men and women to interpret.",
+            "mark": [
+              0,
+              60
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.8",
+            "quote": "and that's why I would appoint judges that have a little more sympathy for the victims of crime and a little less for the criminals.",
+            "context": "I want to keep our neighborhoods much, much better in terms of anti-crime, and that's why I would appoint judges that have a little more sympathy for the victims of crime and a little less for the criminals.",
+            "mark": [
+              75,
+              207
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-environment-job",
+        "kind": "promise",
+        "theme": "environment",
+        "restatement": "Do a good job on the environment.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶144.29",
+            "quote": "And I'll do a good job, because I am committed.",
+            "context": "And I'll do a good job, because I am committed.",
+            "mark": [
+              0,
+              47
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The object, the environment, comes from the question (¶143) and ¶144.26."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-revolving-door",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Lock the revolving door between government and lobbying, for the executive branch and Congress.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶167.1-167.3",
+            "quote": "Yes, and I'll apply it to Congress too.",
+            "context": "Yes, and I'll apply it to Congress too. I'll do both. I'll do both.",
+            "mark": [
+              0,
+              39
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "post-employment lobbying limits",
+            "record": "Statutes at Large (18 U.S.C. 207)",
+            "criterion": "stricter limits on lobbying by former senior executive officials are enacted and extended to former Members of Congress",
+            "ambiguity": "\"Lock\" could mean a full ban; read as tighter, enforceable limits."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"It\" is locking the revolving door, from the question (¶166.4)."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "The Ethics Reform Act of 1989, which he signed, tightened the post-employment lobbying limits for senior executive officials and extended a one-year lobbying ban to former Members of Congress and senior congressional staff.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Ethics Reform Act of 1989, Pub. L. 101-194, Title I, sec. 101 (18 U.S.C. 207, restrictions on former officers, employees and elected officials)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-103/pdf/STATUTE-103-Pg1716.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1989-11-30",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "bush-1988-ethics-office",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Have an ethics office in the White House under the President's personal concern.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶167.12",
+            "quote": "I will have an ethical office in the White House that will be under the President's personal concern.",
+            "context": "I will have an ethical office in the White House that will be under the President's personal concern.",
+            "mark": [
+              0,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a White House ethics office",
+            "record": "Executive orders; White House staff records",
+            "criterion": "an office or officer in the White House is charged with ethics, reporting to the President",
+            "ambiguity": "\"Ethical office\" could be a separate office or an ethics function in the Counsel's office; either counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "In his first week he set up the President's Commission on Federal Ethics Law Reform and charged the Counsel to the President with reporting to him on carrying out its reforms; no separate ethics office was created.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Executive Order 12668, President's Commission on Federal Ethics Law Reform (the Counsel to the President reports to the President on the reforms)",
+              "url": "https://www.presidency.ucsb.edu/documents/executive-order-12668-presidents-commission-federal-ethics-law-reform",
+              "publisher": "The American Presidency Project",
+              "date": "1989-01-25",
+              "secondary": false
+            },
+            {
+              "what": "Executive Order 12674, Principles of Ethical Conduct for Government Officers and Employees",
+              "url": "https://www.presidency.ucsb.edu/documents/executive-order-12674-principles-ethical-conduct-for-government-officers-and-employees",
+              "publisher": "The American Presidency Project",
+              "date": "1989-04-12",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "contested",
+            "note": "The ethics function sat in the Counsel's office, not in an office of its own; a reader who expects a separate White House ethics office could call it broken."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-congress-ethics",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "See that ethics standards apply to Congress.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶167.13",
+            "quote": "I will see that these standards apply to the United States Congress.",
+            "context": "I will see that these standards apply to the United States Congress.",
+            "mark": [
+              0,
+              68
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "congressional ethics rules",
+            "record": "Statutes at Large",
+            "criterion": "a law extends executive-branch ethics standards (lobbying, gifts, outside income) to Members of Congress",
+            "ambiguity": "\"These standards\" are \"the highest possible ethical standards\" (¶167.11); read as the post-employment, gift and outside-income rules then being set for the executive branch."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-25",
+          "summary": "The Ethics Reform Act of 1989 applied post-employment limits, gift and travel rules, financial disclosure and limits on outside earned income and honoraria to Members of Congress as well as to the executive branch.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Ethics Reform Act of 1989, Pub. L. 101-194, Titles I-III and VI",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-103/pdf/STATUTE-103-Pg1716.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1989-11-30",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "The ban on honoraria for Senators came only in 1991, in a separate law."
+          }
+        }
+      },
+      {
+        "id": "bush-1988-clean-up",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Do his best to clean up corruption in government.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶167.16",
+            "quote": "And it's a disgrace, and I will do my level best to clean it up, recognizing that you can't legislate morality.",
+            "context": "And it's a disgrace, and I will do my level best to clean it up, recognizing that you can't legislate morality.",
+            "mark": [
+              0,
+              111
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-good-president",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Be a good president.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.22",
+            "quote": "And I will be a good president.",
+            "context": "And I will be a good president.",
+            "mark": [
+              0,
+              31
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      }
+    ],
+    "ambitions": [
+      {
+        "id": "bush-1988-act-on-what-we-know",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Act on what the country knows works: free markets, free speech, free elections.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶9.5",
+            "quote": "We must act on what we know.",
+            "context": "We must act on what we know.",
+            "mark": [
+              0,
+              28
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We\" is the nation; read as including the government he now leads."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-engage-generations",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Bring the old and the young into community service.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶15.2",
+            "quote": "We must bring in the generations, harnessing the unused talent of the elderly and the unfocused energy of the young.",
+            "context": "We must bring in the generations, harnessing the unused talent of the elderly and the unfocused energy of the young.",
+            "mark": [
+              0,
+              116
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-balance-budget",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Balance the federal budget.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶17.3",
+            "quote": "And we must bring the Federal budget into balance.",
+            "context": "And we must bring the Federal budget into balance.",
+            "mark": [
+              0,
+              50
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal budget balance",
+            "record": "OMB Historical Tables, Table 1.1",
+            "criterion": "the federal budget is in balance or surplus in the last fiscal year of the term (FY1992)",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-strong-and-sound",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Keep America united, strong, at peace and fiscally sound.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶17.4",
+            "quote": "And we must ensure that America stands before the world united, strong, at peace, and fiscally sound.",
+            "context": "And we must ensure that America stands before the world united, strong, at peace, and fiscally sound.",
+            "mark": [
+              0,
+              101
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-compromise-with-congress",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Compromise with Congress instead of dissension.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Inaugural Address",
+              "year": 1989,
+              "date": "1989-01-20",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+              "label": "1989 inaugural address"
+            },
+            "ref": "¶17.6",
+            "quote": "We need to compromise; we've had dissension.",
+            "context": "We need to compromise; we've had dissension.",
+            "mark": [
+              0,
+              44
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-help-left-behind",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Help the farmers, workers, poor children and homeless the expansion has missed.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶33.8",
+            "quote": "They're there, and we have to help them.",
+            "context": "They're there, and we have to help them.",
+            "mark": [
+              0,
+              40
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-broad-growth",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Growth that lasts and reaches all Americans.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶35.1",
+            "quote": "I want growth that stays, that broadens, that touches, finally, all Americans",
+            "context": "I want growth that stays, that broadens, that touches, finally, all Americans, from the hollows of Kentucky to the sunlit streets of Denver, from the suburbs of Chicago to the broad avenues of New York, from the oil fields of Oklahoma to the farms of the Great Plains.",
+            "mark": [
+              0,
+              77
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-abortion-to-adoption",
+        "kind": "ambition",
+        "theme": "rights",
+        "restatement": "Move the country from abortion to adoption.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶63.1",
+            "quote": "You see, we must change, we've got to change from abortion to adoption.",
+            "context": "You see, we must change, we've got to change from abortion to adoption.",
+            "mark": [
+              0,
+              71
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We\" is the society; read as including the government he would lead."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-thirty-million-jobs",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "30 million new jobs in eight years.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶68.1",
+            "quote": "On jobs, my mission is 30 in eight, 30 million jobs in the next eight years.",
+            "context": "On jobs, my mission is 30 in eight, 30 million jobs in the next eight years.",
+            "mark": [
+              0,
+              76
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": "in the next eight years",
+            "applied": "1997-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "U.S. employment",
+            "record": "BLS Current Employment Statistics, total nonfarm payrolls",
+            "criterion": "nonfarm payroll employment is 30 million higher in January 1997 than in January 1989",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"My mission is\" states a goal, not a firm commitment, so this is an ambition. The eight years reach beyond the term."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-parent-power",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Put power over schools in the hands of parents.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶69.2",
+            "quote": "and I want power in the hands of the parents.",
+            "context": "The liberal Democrats want power in the hands of the federal government, and I want power in the hands of the parents.",
+            "mark": [
+              73,
+              118
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-drug-free",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "A drug-free America.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶70.1",
+            "quote": "I want a drug-free America",
+            "context": "I want a drug-free America, and this ill not be easy to achieve.",
+            "mark": [
+              0,
+              26
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-clean-air",
+        "kind": "ambition",
+        "theme": "environment",
+        "restatement": "Clean the air.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶73.4",
+            "quote": "And we must clean the air.",
+            "context": "And we must clean the air.",
+            "mark": [
+              0,
+              26
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-acid-rain",
+        "kind": "ambition",
+        "theme": "environment",
+        "restatement": "Reduce the harm done by acid rain.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶73.5",
+            "quote": "We must reduce the harm done by acid rain.",
+            "context": "We must reduce the harm done by acid rain.",
+            "mark": [
+              0,
+              42
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "acid rain (sulfur dioxide and nitrogen oxide emissions)",
+            "record": "Statutes at Large; EPA emissions data",
+            "criterion": "a law or rule that caps or cuts the emissions that cause acid rain is adopted",
+            "ambiguity": "\"Reduce the harm\" names no amount; any binding cut in the emissions that cause acid rain counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-speak-for-freedom",
+        "kind": "ambition",
+        "theme": "foreign-policy",
+        "restatement": "Speak and stand for freedom abroad.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶75.6",
+            "quote": "And I intend to speak for freedom, stand for freedom and be a patient friend to anyone, East or West, who will fight for freedom.",
+            "context": "And I intend to speak for freedom, stand for freedom and be a patient friend to anyone, East or West, who will fight for freedom.",
+            "mark": [
+              0,
+              129
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-new-harmony",
+        "kind": "ambition",
+        "theme": "rights",
+        "restatement": "Stand for harmony and tolerance among the races.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶77.1",
+            "quote": "And I hope to stand for a new harmony, a greater tolerance.",
+            "context": "And I hope to stand for a new harmony, a greater tolerance.",
+            "mark": [
+              0,
+              59
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-kinder-gentler",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "A kinder and gentler nation.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "George H. W. Bush",
+              "event": "Address Accepting the Presidential Nomination at the Republican National Convention in New Orleans",
+              "year": 1988,
+              "date": "1988-08-18",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/address-accepting-the-presidential-nomination-the-republican-national-convention-new",
+              "label": "1988 acceptance speech"
+            },
+            "ref": "¶84.2",
+            "quote": "I want a kinder and gentler nation.",
+            "context": "I want a kinder and gentler nation.",
+            "mark": [
+              0,
+              35
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.6",
+            "quote": "Because I mean it when I say I want a kinder and gentler nation.",
+            "context": "Because I mean it when I say I want a kinder and gentler nation.",
+            "mark": [
+              0,
+              64
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-keep-expansion",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Keep the economic expansion going.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶16.3",
+            "quote": "And so what I want to do is keep this expansion going.",
+            "context": "And so what I want to do is keep this expansion going.",
+            "mark": [
+              0,
+              54
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.4",
+            "quote": "and keep this the longest expansion in modern history going until everybody in America benefits.",
+            "context": "I want to hold the line on taxes, and keep this the longest expansion in modern history going until everybody in America benefits.",
+            "mark": [
+              34,
+              130
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "the U.S. economic expansion",
+            "record": "NBER business cycle dates",
+            "criterion": "no recession begins during the term",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-line-item-veto",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "A line-item veto for the President.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶25.4",
+            "quote": "I'd like to have that line-item veto for the president",
+            "context": "(Applause) I'd like to have that line-item veto for the president, because I think that would be extraordinarily helpful.",
+            "mark": [
+              11,
+              65
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "presidential line-item veto",
+            "record": "Statutes at Large; Congress.gov",
+            "criterion": "a law or amendment giving the President a line-item veto is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-restrain-spending",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Restrain the growth of federal spending.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶100.6",
+            "quote": "And what we have to do is restrain the growth of spending.",
+            "context": "And what we have to do is restrain the growth of spending.",
+            "mark": [
+              0,
+              58
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal outlays",
+            "record": "OMB Historical Tables",
+            "criterion": "federal outlays grow no faster than inflation over the term",
+            "ambiguity": "\"Restrain\" names no rate; read as the flexible freeze he describes (¶16.10): growth at about the rate of inflation."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-child-care-choice",
+        "kind": "ambition",
+        "theme": "welfare",
+        "restatement": "Child care in which parents choose, without federal licensing of family carers.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶127.10-127.12",
+            "quote": "You see, I want the families to have the choice.",
+            "context": "You see, I want the families to have the choice. I don't want to see the Federal Government licensing grandmothers. I don't want to see the Federal Government saying to communities, well, you can't do this any more.",
+            "mark": [
+              0,
+              48
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶127.14",
+            "quote": "I want flexibility",
+            "context": "I want flexibility, and I do you know, these people laugh about the thousand points of light.",
+            "mark": [
+              0,
+              18
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.7",
+            "quote": "And by that I want to have child care where the families, the parents, have control.",
+            "context": "And by that I want to have child care where the families, the parents, have control.",
+            "mark": [
+              0,
+              84
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal child care assistance",
+            "record": "Statutes at Large",
+            "criterion": "federal child care aid is enacted that lets parents choose the provider, including relatives and church-based care",
+            "ambiguity": "\"Choice\" and \"control\" are not defined; read as aid paid to or chosen by parents rather than only to licensed centres."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-farm-exports",
+        "kind": "ambition",
+        "theme": "trade",
+        "restatement": "Expand farm markets abroad.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶139.11",
+            "quote": "And we ought to expand our markets abroad.",
+            "context": "And we ought to expand our markets abroad.",
+            "mark": [
+              0,
+              42
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-rural-enterprise-zones",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Create rural enterprise zones.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶139.12",
+            "quote": "We ought to have rural enterprise zones.",
+            "context": "We ought to have rural enterprise zones.",
+            "mark": [
+              0,
+              40
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "rural enterprise zones",
+            "record": "Statutes at Large",
+            "criterion": "a law creating rural enterprise zones is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-ethanol",
+        "kind": "ambition",
+        "theme": "energy",
+        "restatement": "Move swiftly on ethanol to create a bigger market for corn.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶139.13",
+            "quote": "We ought to move forward swiftly on my ideas of ethanol which would use more corn, and therefore, create a bigger market for our agricultural products.",
+            "context": "We ought to move forward swiftly on my ideas of ethanol which would use more corn, and therefore, create a bigger market for our agricultural products.",
+            "mark": [
+              0,
+              151
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-energy-mix",
+        "kind": "ambition",
+        "theme": "energy",
+        "restatement": "Use more gas, coal and safe nuclear power.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶162.6",
+            "quote": "I believe that we must use clean, safe nuclear power.",
+            "context": "I believe that we must use clean, safe nuclear power.",
+            "mark": [
+              0,
+              53
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶162.9",
+            "quote": "But we're going to have to use more gas, more coal and more safe nuclear power for our energy base.",
+            "context": "But we're going to have to use more gas, more coal and more safe nuclear power for our energy base.",
+            "mark": [
+              0,
+              99
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-public-service",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Encourage young people to go into public service.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶167.14",
+            "quote": "I hope I will do a good job as one who has had a relatively clean record with no conflicts of interest in his own public life, as has the Governor, to exhort young people to get into public service.",
+            "context": "I hope I will do a good job as one who has had a relatively clean record with no conflicts of interest in his own public life, as has the Governor, to exhort young people to get into public service.",
+            "mark": [
+              0,
+              198
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-invest-in-children",
+        "kind": "ambition",
+        "theme": "education",
+        "restatement": "Invest in children.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.5",
+            "quote": "I want to invest in our children.",
+            "context": "I want to invest in our children.",
+            "mark": [
+              0,
+              33
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "bush-1988-safer-neighborhoods",
+        "kind": "ambition",
+        "theme": "crime-justice",
+        "restatement": "Make neighbourhoods safer from crime.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "George H. W. Bush",
+              "event": "Presidential Debate at the University of California in Los Angeles",
+              "year": 1988,
+              "date": "1988-10-13",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/presidential-debate-the-university-california-los-angeles",
+              "label": "1988 debate"
+            },
+            "ref": "¶173.8",
+            "quote": "I want to keep our neighborhoods much, much better in terms of anti-crime",
+            "context": "I want to keep our neighborhoods much, much better in terms of anti-crime, and that's why I would appoint judges that have a little more sympathy for the victims of crime and a little less for the criminals.",
+            "mark": [
+              0,
+              73
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1993-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      }
+    ]
+  },
+  {
     "key": "1993-1997 Clinton",
+    "name": "William J. Clinton",
     "surname": "Clinton",
     "from": 1993,
     "to": 1997,
@@ -3695,6 +7749,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "1997-2001 Clinton",
+    "name": "William J. Clinton",
     "surname": "Clinton",
     "from": 1997,
     "to": 2001,
@@ -7930,7 +11985,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "extraction": "clear",
             "note": null
           },
-          "links": []
+          "links": [
+            {
+              "kind": "shared",
+              "to": "bush-1988-ban-chemical-weapons"
+            }
+          ]
         },
         "verdict": null
       },
@@ -8658,12 +12718,13 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "2001-2005 Bush",
-    "surname": "Bush",
+    "name": "George W. Bush",
+    "surname": "W. Bush",
     "from": 2001,
     "to": 2005,
     "termLabel": "2001–2005",
     "speechYear": 2000,
-    "label": "Bush 2000",
+    "label": "W. Bush 2000",
     "screening": {
       "include": 133,
       "others": 2,
@@ -15650,12 +19711,13 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "2005-2009 Bush",
-    "surname": "Bush",
+    "name": "George W. Bush",
+    "surname": "W. Bush",
     "from": 2005,
     "to": 2009,
     "termLabel": "2005–2009",
     "speechYear": 2004,
-    "label": "Bush 2004",
+    "label": "W. Bush 2004",
     "screening": {
       "include": 81,
       "others": 0,
@@ -21042,6 +25104,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "2009-2013 Obama",
+    "name": "Barack Obama",
     "surname": "Obama",
     "from": 2009,
     "to": 2013,
@@ -26682,6 +30745,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "2013-2017 Obama",
+    "name": "Barack Obama",
     "surname": "Obama",
     "from": 2013,
     "to": 2017,
@@ -32184,6 +36248,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "2017-2021 Trump",
+    "name": "Donald J. Trump",
     "surname": "Trump",
     "from": 2017,
     "to": 2021,
@@ -38947,6 +43012,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "2021-2025 Biden",
+    "name": "Joseph R. Biden, Jr.",
     "surname": "Biden",
     "from": 2021,
     "to": 2025,
@@ -44496,6 +48562,7 @@ export const CORPUS_TERMS: CorpusTerm[] = [
   },
   {
     "key": "2025-2029 Trump",
+    "name": "Donald J. Trump",
     "surname": "Trump",
     "from": 2025,
     "to": 2029,
@@ -52181,10 +56248,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 555;
+export const CORPUS_PROMISE_COUNT = 590;
 
 /** Total ambitions across the corpus. */
-export const CORPUS_AMBITION_COUNT = 226;
+export const CORPUS_AMBITION_COUNT = 253;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 799;
+export const CORPUS_OCCURRENCE_COUNT = 855;

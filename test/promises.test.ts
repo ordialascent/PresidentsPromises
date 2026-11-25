@@ -64,13 +64,13 @@ describe('promises overview aggregation', () => {
     expect(grand).toBe(CORPUS_PROMISE_COUNT);
   });
 
-  it('the corpus-wide tier split matches the current extraction (92 / 201 / 262)', () => {
+  it('the corpus-wide tier split matches the current extraction (94 / 217 / 279)', () => {
     // Snapshot anchor — update when the corpus changes. All nine terms are re-extracted
     // under protocol 1 (their promises only; levels stand in for tiers).
     const c = { high: 0, medium: 0, low: 0 };
     for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    expect(c).toEqual({ high: 92, medium: 201, low: 262 });
-    expect(c.high + c.medium + c.low).toBe(555);
+    expect(c).toEqual({ high: 94, medium: 217, low: 279 });
+    expect(c.high + c.medium + c.low).toBe(590);
   });
 
   it('shares are a proper distribution within each term', () => {
@@ -116,10 +116,18 @@ describe('promises overview aggregation', () => {
     );
     for (const r of both) expect([r.promise.theme, r.promise.quality]).toEqual(['health', 'high']);
     // a president covers all of their terms
-    const bush = filterRows(rows, f({ president: new Set(['Bush']) }));
-    const bushTerms = CORPUS_TERMS.filter((t) => t.surname === 'Bush');
+    const bush = filterRows(rows, f({ president: new Set(['W. Bush']) }));
+    const bushTerms = CORPUS_TERMS.filter((t) => t.surname === 'W. Bush');
     expect(bushTerms.length).toBeGreaterThan(1);
     expect(bush.length).toBe(bushTerms.reduce((n, t) => n + t.promises.length, 0));
+  });
+
+  it('gives each president one name, even when two share a surname', () => {
+    const byName = new Map<string, Set<string>>();
+    for (const t of CORPUS_TERMS) byName.set(t.surname, (byName.get(t.surname) ?? new Set()).add(t.name));
+    for (const names of byName.values()) expect(names.size).toBe(1);
+    const bushes = CORPUS_TERMS.filter((t) => t.name.endsWith('Bush')).map((t) => t.surname);
+    expect(new Set(bushes)).toEqual(new Set(['H. W. Bush', 'W. Bush']));
   });
 
   it('facet counts never count against their own facet, and add up', () => {

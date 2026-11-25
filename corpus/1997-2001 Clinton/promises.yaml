@@ -1108,7 +1108,9 @@ promises:
       record: "Senate treaty ratification records"
       criterion: "the Senate ratifies the Chemical Weapons Convention"
     uncertainty: { extraction: clear }
-    links: []
+    links:
+    - kind: shared
+      to: bush-1988-ban-chemical-weapons
 
   - id: clinton-1996-ban-nuclear-tests
     kind: ambition

@@ -1,0 +1,279 @@
+# Verdicts for George H. W. Bush's 1989-1993 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 1993-01-20
+# unless the promise states another.
+#
+# Complete: high 2/2, medium 16/16.
+
+protocol: 1
+verdicts:
+
+  # ---- taxes, budget and economy -------------------------------------------
+
+  - promise: bush-1988-no-new-taxes
+    verdict: broken
+    as_of: 2026-11-25
+    summary: The 1990 budget law he signed raised the top income tax rate from 28% to 31%, raised the federal gasoline tax by 5 cents a gallon and added new excise taxes, including a luxury tax.
+    attempt: none
+    evidence:
+      - what: Omnibus Budget Reconciliation Act of 1990, Pub. L. 101-508, sec. 11101 (top rate) and sec. 11211 (highway fuel taxes)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1388.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1990-11-05
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-inflation
+    verdict: kept
+    as_of: 2026-11-25
+    summary: Annual CPI-U inflation was 4.8% in 1989, 5.4% in 1990, 4.2% in 1991 and 3.0% in 1992, never near the double-digit rates of 1979-1981.
+    evidence:
+      - what: Consumer Price Index for All Urban Consumers (CPIAUCNS), annual averages 1988-1992 (118.3, 124.0, 130.7, 136.2, 140.3)
+        url: https://fred.stlouisfed.org/series/CPIAUCNS
+        publisher: Federal Reserve Bank of St. Louis (FRED), from BLS data
+        date: 1993-01-14
+    uncertainty:
+      verdict: probable
+      note: Under the stricter reading (no year above 1988's 4.1%), inflation rose in 1989-1991, and the verdict would be broken.
+
+  - promise: bush-1988-energy-incentives
+    verdict: kept
+    as_of: 2026-11-25
+    summary: The 1990 budget law added a tax credit for enhanced oil recovery, raised percentage depletion for marginal oil and gas wells and gave producers a special energy deduction under the minimum tax.
+    evidence:
+      - what: Omnibus Budget Reconciliation Act of 1990, Pub. L. 101-508, sec. 11511 (enhanced oil recovery credit), secs. 11521-11523 (percentage depletion), sec. 11531 (minimum tax energy deduction)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1388.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1990-11-05
+    uncertainty: { verdict: clear }
+
+  # ---- Social Security ----------------------------------------------------------
+
+  - promise: bush-1988-socialsecurity-sound
+    verdict: partly
+    as_of: 2026-11-25
+    summary: Combined trust fund reserves tripled, from $109.8 billion at the end of 1988 to $331.5 billion at the end of 1992, but the 1992 Trustees Report projected the Disability Insurance fund to run out in 1997, within ten years, so DI failed the short-range test (OASI passed).
+    evidence:
+      - what: CRS RL33028, Social Security - The Trust Funds, accumulated reserves by year and Table A-1 (depletion years in each Trustees Report; 1988 report DI 2027, 1992 report DI 1997)
+        url: https://www.everycrsreport.com/reports/RL33028.html
+        publisher: Congressional Research Service (via EveryCRSReport)
+        date: 2024-05-23
+        secondary: true
+    uncertainty:
+      verdict: probable
+      note: A reader who judges the combined OASDI funds could call it kept; the combined funds stayed above the short-range test.
+
+  - promise: bush-1988-protect-trust-fund
+    verdict: kept
+    as_of: 2026-11-25
+    summary: No money was moved out of the trust funds; the 1990 budget law took the Social Security trust funds off budget and added points of order against using them in budget bills.
+    evidence:
+      - what: Omnibus Budget Reconciliation Act of 1990, Pub. L. 101-508, secs. 13301-13303 (off-budget status and protection of the OASDI trust funds)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1388.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1990-11-05
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-no-socialsecurity-changes
+    verdict: kept
+    as_of: 2026-11-25
+    summary: His first budget funded Social Security in full with a full cost-of-living adjustment, and in the 1990 and 1992 State of the Union addresses he again ruled out changes ("I will not tamper with Social Security").
+    evidence:
+      - what: Address on Administration Goals Before a Joint Session of Congress ("Social Security is fully funded, including a full cost-of-living adjustment")
+        url: https://www.presidency.ucsb.edu/documents/address-administration-goals-before-joint-session-congress
+        publisher: The American Presidency Project
+        date: 1989-02-09
+      - what: Address on the State of the Union, 31 Jan 1990 ("we made a promise to you, and we are going to keep it")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-2
+        publisher: The American Presidency Project
+        date: 1990-01-31
+      - what: Address on the State of the Union, 28 Jan 1992 ("I will not tamper with Social Security")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-0
+        publisher: The American Presidency Project
+        date: 1992-01-28
+    uncertainty:
+      verdict: probable
+      note: The 1990 budget law, negotiated with the administration, made technical Social Security changes (Title V); none cut benefits or COLAs.
+
+  # ---- education and welfare ----------------------------------------------------
+
+  - promise: bush-1988-merit-schools
+    verdict: broken
+    as_of: 2026-11-25
+    summary: He proposed a $500 million merit schools programme in February 1989 and sent Congress the Educational Excellence Act, but no merit schools programme was enacted.
+    attempt: passed-chamber
+    review: "Congress.gov S. 695 (101st Congress), Educational Excellence Act of 1989: Senate passage (Feb 1990) and no enactment (from memory)"
+    evidence:
+      - what: Address on Administration Goals Before a Joint Session of Congress (proposes "a $500 million program to reward America's best schools, merit schools")
+        url: https://www.presidency.ucsb.edu/documents/address-administration-goals-before-joint-session-congress
+        publisher: The American Presidency Project
+        date: 1989-02-09
+      - what: Remarks to the American Farm Bureau Federation ("The administration has sent the Educational Excellence Act to the Congress")
+        url: https://www.presidency.ucsb.edu/documents/remarks-the-american-farm-bureau-federation-orlando-florida
+        publisher: The American Presidency Project
+        date: 1990-01-08
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-head-start
+    verdict: kept
+    as_of: 2026-11-25
+    summary: Head Start funding rose from $1.552 billion in FY1990 to $2.202 billion in FY1992, after he asked for record increases, and the 1990 Head Start Expansion and Quality Improvement Act set aside money to expand it; funded enrollment rose from about 450,000 to about 620,000.
+    review: "ACF Head Start Program Facts: funded enrollment FY1988 (~448,000) and FY1992 (~621,000) (from memory)"
+    evidence:
+      - what: CRS RL30952, Head Start - Background and Funding, Table 3 (Head Start funding FY1990-FY2013)
+        url: https://www.everycrsreport.com/reports/RL30952.html
+        publisher: Congressional Research Service (via EveryCRSReport)
+        date: 2014-01-02
+        secondary: true
+      - what: Human Services Reauthorization Act of 1990, Pub. L. 101-501, Title I, Subtitle A (Head Start Expansion and Quality Improvement Act)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg1222.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1990-11-03
+      - what: Address on the State of the Union, 31 Jan 1990 ("a record increase in funds ... for ... Head Start")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-2
+        publisher: The American Presidency Project
+        date: 1990-01-31
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-college-savings
+    verdict: broken
+    as_of: 2026-11-25
+    summary: No new college-saving incentive was enacted in the term. He proposed tax-free family savings accounts (1991) and penalty-free IRA withdrawals for education (1992), but neither became law; the savings bond exclusion for tuition was signed in November 1988, before he took office.
+    attempt: initiated
+    evidence:
+      - what: Address on the State of the Union, 28 Jan 1992 (asks Congress to let people use IRA money for education expenses without penalty)
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-0
+        publisher: The American Presidency Project
+        date: 1992-01-28
+      - what: Technical and Miscellaneous Revenue Act of 1988, Pub. L. 100-647, sec. 6009 (savings bond interest excluded when used for higher education; signed 10 Nov 1988)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-102/pdf/STATUTE-102-Pg3342.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1988-11-10
+    uncertainty:
+      verdict: contested
+      note: The 1988 savings bond exclusion took effect for bonds bought from 1990, during the term; a reader who counts its start could call the promise kept.
+
+  - promise: bush-1988-points-of-light
+    verdict: kept
+    as_of: 2026-11-25
+    summary: The National and Community Service Act of 1990, which he signed, set up federal support for the Points of Light Foundation and a Commission on National and Community Service to back volunteer and community service.
+    evidence:
+      - what: National and Community Service Act of 1990, Pub. L. 101-610, Title III (Points of Light Foundation)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg3127.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1990-11-16
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-disabled-mainstream
+    verdict: kept
+    as_of: 2026-11-25
+    summary: He signed the Americans with Disabilities Act, which bars discrimination against people with disabilities in employment, public services, public accommodations and telecommunications.
+    evidence:
+      - what: Americans with Disabilities Act of 1990, Pub. L. 101-336
+        url: https://www.govinfo.gov/content/pkg/STATUTE-104/pdf/STATUTE-104-Pg327.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1990-07-26
+    uncertainty: { verdict: clear }
+
+  # ---- environment ----------------------------------------------------------------
+
+  - promise: bush-1988-ocean-dumping
+    verdict: kept
+    as_of: 2026-11-25
+    summary: The 1988 Ocean Dumping Ban Act made dumping sewage sludge and industrial waste in the ocean unlawful after 31 December 1991; the last sludge dumping (New York and New Jersey) ended in June 1992.
+    review: "EPA: date the last sewage sludge dumping at the 106-Mile Site ended (June 1992, from memory)"
+    evidence:
+      - what: Ocean Dumping Ban Act of 1988, Pub. L. 100-688, Title I (sec. 104B, unlawful after 31 Dec 1991)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-102/pdf/STATUTE-102-Pg4139.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1988-11-18
+      - what: EPA, Learn about Ocean Dumping (history of the MPRSA and the 1988 amendments)
+        url: https://www.epa.gov/ocean-dumping/learn-about-ocean-dumping
+        publisher: U.S. Environmental Protection Agency
+        date: 2026-11-25
+    uncertainty:
+      verdict: probable
+      note: The ban was signed by his predecessor in November 1988; the verdict judges the outcome, which is what the promise names.
+
+  # ---- defense and arms control -----------------------------------------------------
+
+  - promise: bush-1988-arms-cuts
+    verdict: kept
+    as_of: 2026-11-25
+    summary: He signed the Treaty on Conventional Armed Forces in Europe (19 Nov 1990) with the Warsaw Pact states and the START I treaty cutting U.S. and Soviet strategic arms (31 Jul 1991); START II followed in January 1993.
+    evidence:
+      - what: Treaty on Conventional Armed Forces in Europe, signed 19 November 1990
+        url: https://www.osce.org/library/14087
+        publisher: Organization for Security and Co-operation in Europe
+        date: 1990-11-19
+      - what: START I at a Glance (signed 31 July 1991)
+        url: https://www.armscontrol.org/factsheets/start1
+        publisher: Arms Control Association
+        date: 2022-07-01
+        secondary: true
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-strategic-defense
+    verdict: kept
+    as_of: 2026-11-25
+    summary: Strategic defense research continued through the term; the Missile Defense Act of 1991, in the defense authorization he signed, set the goal of deploying a treaty-compliant missile defense.
+    evidence:
+      - what: National Defense Authorization Act for Fiscal Years 1992 and 1993, Pub. L. 102-190, Title II, Part C (Missile Defense Act of 1991)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-105/pdf/STATUTE-105-Pg1290.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1991-12-05
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-ban-chemical-weapons
+    verdict: kept
+    as_of: 2026-11-25
+    summary: The Chemical Weapons Convention, a global ban, was concluded in 1992, and the United States signed it on 13 January 1993, a week before the deadline.
+    evidence:
+      - what: Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on their Destruction, status (United States signature 13 Jan 1993)
+        url: https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-3&chapter=26&clang=_en
+        publisher: United Nations Treaty Collection
+        date: 1993-01-13
+    uncertainty:
+      verdict: contested
+      note: The convention entered into force only in 1997, and nothing new was agreed on biological weapons; a reader who holds the promise to both weapon types could call it partly.
+
+  # ---- ethics -------------------------------------------------------------------------
+
+  - promise: bush-1988-revolving-door
+    verdict: kept
+    as_of: 2026-11-25
+    summary: The Ethics Reform Act of 1989, which he signed, tightened the post-employment lobbying limits for senior executive officials and extended a one-year lobbying ban to former Members of Congress and senior congressional staff.
+    evidence:
+      - what: Ethics Reform Act of 1989, Pub. L. 101-194, Title I, sec. 101 (18 U.S.C. 207, restrictions on former officers, employees and elected officials)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-103/pdf/STATUTE-103-Pg1716.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1989-11-30
+    uncertainty: { verdict: clear }
+
+  - promise: bush-1988-ethics-office
+    verdict: kept
+    as_of: 2026-11-25
+    summary: In his first week he set up the President's Commission on Federal Ethics Law Reform and charged the Counsel to the President with reporting to him on carrying out its reforms; no separate ethics office was created.
+    evidence:
+      - what: Executive Order 12668, President's Commission on Federal Ethics Law Reform (the Counsel to the President reports to the President on the reforms)
+        url: https://www.presidency.ucsb.edu/documents/executive-order-12668-presidents-commission-federal-ethics-law-reform
+        publisher: The American Presidency Project
+        date: 1989-01-25
+      - what: Executive Order 12674, Principles of Ethical Conduct for Government Officers and Employees
+        url: https://www.presidency.ucsb.edu/documents/executive-order-12674-principles-ethical-conduct-for-government-officers-and-employees
+        publisher: The American Presidency Project
+        date: 1989-04-12
+    uncertainty:
+      verdict: contested
+      note: The ethics function sat in the Counsel's office, not in an office of its own; a reader who expects a separate White House ethics office could call it broken.
+
+  - promise: bush-1988-congress-ethics
+    verdict: kept
+    as_of: 2026-11-25
+    summary: The Ethics Reform Act of 1989 applied post-employment limits, gift and travel rules, financial disclosure and limits on outside earned income and honoraria to Members of Congress as well as to the executive branch.
+    evidence:
+      - what: Ethics Reform Act of 1989, Pub. L. 101-194, Titles I-III and VI
+        url: https://www.govinfo.gov/content/pkg/STATUTE-103/pdf/STATUTE-103-Pg1716.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1989-11-30
+    uncertainty:
+      verdict: probable
+      note: The ban on honoraria for Senators came only in 1991, in a separate law.

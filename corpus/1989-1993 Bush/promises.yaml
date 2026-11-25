@@ -1,0 +1,1144 @@
+# Promises and ambitions of George H. W. Bush's 1989-1993 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 1988 acceptance
+# speech, the 1988 final debate (Bush's turns) and the 1989 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
+#
+# 35 promises (high 2, medium 16, low 17)
+# 27 ambitions (high 5, medium 3, low 19)
+# Deadlines default to the end of the term (1993-01-20).
+
+protocol: 1
+promises:
+  # ---- inaugural ----------------------------------------------------------
+  - id: bush-1988-act-on-what-we-know
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶9.5
+      quote: "We must act on what we know."
+    restatement: "Act on what the country knows works: free markets, free speech, free elections."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"We\" is the nation; read as including the government he now leads."
+    links: []
+
+  - id: bush-1988-hard-choices
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶14.6
+      quote: "We will make the hard choices, looking at what we have and perhaps allocating it differently, making our decisions based on honest need and prudent safety."
+    restatement: "Make hard budget choices and reallocate spending by need."
+    type: ongoing
+    theme: budget
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-turn-to-people
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶14.7-14.8
+      quote: "We will turn to the only resource we have that in times of need always grows: the goodness and the courage of the American people."
+    restatement: "Turn to Americans' goodness and courage to meet social needs."
+    type: ongoing
+    theme: welfare
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-engage-generations
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶15.2
+      quote: "We must bring in the generations, harnessing the unused talent of the elderly and the unfocused energy of the young."
+    restatement: "Bring the old and the young into community service."
+    type: ongoing
+    theme: welfare
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-points-of-light
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶16.2-16.4
+      quote: "We will work on this in the White House, in the Cabinet agencies."
+    - in: debate
+      ref: ¶127.16
+      quote: "And I want to keep it alive in child care and in other entitlements."
+    restatement: "Work from the White House and the Cabinet agencies with volunteer and community organizations (the \"points of light\")."
+    type: action
+    theme: welfare
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "a federal effort to encourage volunteer community service"
+      record: "Statutes at Large (National and Community Service Act of 1990); the President's public papers"
+      criterion: "the White House sets up a standing effort to encourage and recognise volunteer community organizations"
+      ambiguity: "\"Work hand in hand\" does not say what form the effort takes; a White House office or a federally backed programme for community service counts."
+    uncertainty:
+      extraction: probable
+      note: "In the debate, \"it\" is the volunteer sector of ¶127.15."
+    links: []
+
+  - id: bush-1988-balance-budget
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶17.3
+      quote: "And we must bring the Federal budget into balance."
+    restatement: "Balance the federal budget."
+    type: outcome
+    theme: budget
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: high
+      object: "federal budget balance"
+      record: "OMB Historical Tables, Table 1.1"
+      criterion: "the federal budget is in balance or surplus in the last fiscal year of the term (FY1992)"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-strong-and-sound
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶17.4
+      quote: "And we must ensure that America stands before the world united, strong, at peace, and fiscally sound."
+    restatement: "Keep America united, strong, at peace and fiscally sound."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-compromise-with-congress
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶17.6
+      quote: "We need to compromise; we've had dissension."
+    restatement: "Compromise with Congress instead of dissension."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-peace-through-strength
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶20.1
+      quote: "We will stay strong to protect the peace."
+    - in: acceptance
+      ref: ¶41.4
+      quote: "I will not allow this country to be made weak again, never."
+    - in: acceptance
+      ref: ¶75.1
+      quote: "In foreign affairs, I'll continue our policy of peace through strength."
+    restatement: "Keep the country strong to protect the peace (peace through strength)."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-speak-clearly
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.3
+      quote: "We will always try to speak clearly, for candor is a compliment; but subtlety, too, is good and has its place."
+    restatement: "Speak clearly to the world."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-soviet-closeness
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶21.4
+      quote: "While keeping our alliances and friendships around the world strong, ever strong, we will continue the new closeness with the Soviet Union, consistent both with our security and with progress."
+    restatement: "Keep alliances strong and continue the new closeness with the Soviet Union."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-stop-drugs
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶25.4
+      quote: "This scourge will stop!"
+    restatement: "Stop the scourge of drugs."
+    type: outcome
+    theme: crime-justice
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "No trigger word; read as a commitment because of \"take my word for it\". What counts as the scourge stopping is not said."
+    links: []
+
+  # ---- acceptance -----------------------------------------------------------
+  - id: bush-1988-protect-gains
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶29.3
+      quote: "and I'm not going to let them take it away from you."
+    - in: acceptance
+      ref: ¶30.3
+      quote: "You're gaining economic power, and I'm not going to let them take it away from you."
+    - in: acceptance
+      ref: ¶31.4
+      quote: "and I'm not going to let them take it away from you."
+    restatement: "Not let opponents take away the opportunity, economic gains and security that young people, women and the elderly have."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"Them\" are the liberal Democrats; read as a commitment to protect these gains in office, not only to win the election."
+    links: []
+
+  - id: bush-1988-inflation
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.2
+      quote: "We arrested it, and we're not going to let it out on furlough."
+    restatement: "Not let inflation come back."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "consumer price inflation"
+      record: "BLS Consumer Price Index (CPI-U), annual averages"
+      criterion: "annual CPI-U inflation stays below the double-digit rates of 1979-1981 in every year of the term"
+      ambiguity: "\"Let it out\" is read as a return to the double-digit inflation of 1979-1981, the comparison the speech makes (¶25.1); a stricter reading (no year above 1988's rate) is possible."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-socialsecurity-sound
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.3
+      quote: "And we're going to keep that Social Security trust fund sound"
+    - in: debate
+      ref: ¶106.18
+      quote: "And I am going to keep that Social Security Trust Fund sound and keep our commitment to the elderly"
+    - in: debate
+      ref: ¶127.6
+      quote: "And I've said that I'm going to keep this Social Security entitlement, to keep that trust fund sound."
+    restatement: "Keep the Social Security trust funds sound."
+    group: bush-1988-socialsecurity-trust
+    type: ongoing
+    theme: retirement
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "the Social Security (OASI and DI) trust funds"
+      record: "Annual Reports of the Social Security Board of Trustees"
+      criterion: "trust fund reserves grow, and the Trustees do not project either fund to run out within ten years, through the term"
+      ambiguity: "\"Sound\" is read as the Trustees' short-range (ten-year) test; reading it as 75-year balance would be stricter."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-protect-trust-fund
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶31.3
+      quote: "and out of reach of the big spenders."
+    - in: debate
+      ref: ¶25.5-25.6
+      quote: "I'm not going to do that; I won't do that."
+    restatement: "Not take money out of the Social Security trust fund for other spending."
+    group: bush-1988-socialsecurity-trust
+    type: ongoing
+    theme: retirement
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "the Social Security trust funds"
+      record: "Statutes at Large; Social Security Trustees Reports"
+      criterion: "no law or executive action moves Social Security trust fund money to other uses during the term"
+      ambiguity: "By law the surpluses are lent to the Treasury, as they had been for decades; that lending is not read as taking money out."
+    uncertainty:
+      extraction: probable
+      note: "In the debate, \"that\" is taking money out of the trust fund, the federal equivalent he names in ¶25.5."
+    links: []
+
+  - id: bush-1988-help-left-behind
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶33.8
+      quote: "They're there, and we have to help them."
+    restatement: "Help the farmers, workers, poor children and homeless the expansion has missed."
+    type: ongoing
+    theme: welfare
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-broad-growth
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶35.1
+      quote: "I want growth that stays, that broadens, that touches, finally, all Americans"
+    restatement: "Growth that lasts and reaches all Americans."
+    type: outcome
+    theme: economy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-growth-policies
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶36.6
+      quote: "And we will do it by maintaining our commitment to free and fair trade, by keeping government spending down and by keeping taxes down."
+    restatement: "Keep free and fair trade, low government spending and low taxes."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-keep-peace
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶43.3
+      quote: "And we have peace, and I am not going to let anyone take it away from us."
+    restatement: "Not let anyone take the peace away."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-abortion-to-adoption
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶63.1
+      quote: "You see, we must change, we've got to change from abortion to adoption."
+    restatement: "Move the country from abortion to adoption."
+    type: outcome
+    theme: rights
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"We\" is the society; read as including the government he would lead."
+    links: []
+
+  - id: bush-1988-no-new-taxes
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶66.1
+      quote: "And I'm the one who will not raise taxes."
+    - in: acceptance
+      ref: ¶66.4
+      quote: "Read my lips: no new taxes."
+    - in: debate
+      ref: ¶16.4
+      quote: "I don't want to kill it off by a tax increase."
+    - in: debate
+      ref: ¶16.7
+      quote: "And I don't want to do that, and I won't do that."
+    - in: debate
+      ref: ¶16.17
+      quote: "So I'm pledged to do that."
+    - in: debate
+      ref: ¶173.4
+      quote: "I want to hold the line on taxes"
+    restatement: "No new taxes: not raise taxes."
+    type: ongoing
+    theme: taxes
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: high
+      object: "federal taxes"
+      record: "Statutes at Large (enacted tax laws)"
+      criterion: "no law that raises a federal tax rate or creates a new federal tax is signed during the term"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-thirty-million-jobs
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶68.1
+      quote: "On jobs, my mission is 30 in eight, 30 million jobs in the next eight years."
+    restatement: "30 million new jobs in eight years."
+    type: outcome
+    theme: economy
+    deadline: { stated: "in the next eight years", applied: 1997-01-20 }
+    verifiability:
+      level: high
+      object: "U.S. employment"
+      record: "BLS Current Employment Statistics, total nonfarm payrolls"
+      criterion: "nonfarm payroll employment is 30 million higher in January 1997 than in January 1989"
+    uncertainty:
+      extraction: probable
+      note: "\"My mission is\" states a goal, not a firm commitment, so this is an ambition. The eight years reach beyond the term."
+    links: []
+
+  - id: bush-1988-parent-power
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶69.2
+      quote: "and I want power in the hands of the parents."
+    restatement: "Put power over schools in the hands of parents."
+    type: ongoing
+    theme: education
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-merit-schools
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶69.3
+      quote: "And I will encourage merit schools."
+    restatement: "Encourage merit schools."
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "a federal merit schools programme"
+      record: "Statutes at Large; Congress.gov bill records"
+      criterion: "a federal programme that rewards merit schools is enacted"
+      ambiguity: "\"Encourage\" could be met by speeches alone; read as the merit schools award programme he went on to propose being enacted."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-head-start
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶69.4
+      quote: "I will give more kids a head start."
+    restatement: "Enroll more children in Head Start."
+    type: outcome
+    theme: education
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: high
+      object: "Head Start enrollment"
+      record: "HHS Administration for Children and Families, Head Start funded enrollment"
+      criterion: "Head Start enrolls more children in FY1992, the last full year of the term, than in FY1988"
+    uncertainty:
+      extraction: probable
+      note: "\"A head start\" is read as the federal Head Start programme, the usual sense in a list of education commitments."
+    links: []
+
+  - id: bush-1988-college-savings
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶69.5
+      quote: "And I'll make it easier to save for college."
+    restatement: "Make it easier to save for college."
+    type: action
+    theme: education
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "federal incentives for college saving"
+      record: "Statutes at Large (tax law)"
+      criterion: "a law that adds a new federal incentive for college saving is enacted during the term"
+      ambiguity: "\"Easier\" names no measure; any new tax or savings incentive aimed at college costs counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-drug-free
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶70.1
+      quote: "I want a drug-free America"
+    restatement: "A drug-free America."
+    type: outcome
+    theme: crime-justice
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-fight-dealers
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶71.2
+      quote: 'my administration will be telling the dealers: "Whatever we have to do, we''ll do, but your day is over; you are history."'
+    restatement: "Do whatever it takes against drug dealers."
+    type: ongoing
+    theme: crime-justice
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-disabled-mainstream
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶72.1-72.3
+      quote: "I am going to do whatever it takes to make sure the disabled are included in the mainstream."
+    - in: debate
+      ref: ¶173.10
+      quote: "I want to help those with disabilities fit into the mainstream."
+    restatement: "Do whatever it takes to include people with disabilities in the mainstream."
+    type: action
+    theme: rights
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "federal disability rights"
+      record: "Statutes at Large"
+      criterion: "a federal law barring discrimination against people with disabilities in jobs and public life is enacted"
+      ambiguity: "\"Whatever it takes\" names no measure; read as a civil rights law for people with disabilities."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-ocean-dumping
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶73.1
+      quote: "And I am going to stop ocean dumping."
+    restatement: "Stop ocean dumping."
+    type: outcome
+    theme: environment
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "ocean dumping of sewage sludge and industrial waste"
+      record: "EPA ocean dumping records; Ocean Dumping Ban Act of 1988"
+      criterion: "no sewage sludge or industrial waste is being dumped in U.S. ocean waters at the end of the term"
+      ambiguity: "\"Ocean dumping\" is read as the sludge and waste dumping the next sentence describes (beaches and harbours), not the permitted disposal of dredged material."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-medical-waste
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶73.3
+      quote: "And I am going to have the FBI trace the medical wastes, and we're going to punish the people who dump those infected needles into our oceans, lakes and rivers."
+    restatement: "Have the FBI trace medical waste and punish those who dump it."
+    type: action
+    theme: environment
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-clean-air
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶73.4
+      quote: "And we must clean the air."
+    restatement: "Clean the air."
+    type: outcome
+    theme: environment
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-acid-rain
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶73.5
+      quote: "We must reduce the harm done by acid rain."
+    restatement: "Reduce the harm done by acid rain."
+    type: outcome
+    theme: environment
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "acid rain (sulfur dioxide and nitrogen oxide emissions)"
+      record: "Statutes at Large; EPA emissions data"
+      criterion: "a law or rule that caps or cuts the emissions that cause acid rain is adopted"
+      ambiguity: "\"Reduce the harm\" names no amount; any binding cut in the emissions that cause acid rain counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-energy-incentives
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶74.1
+      quote: "And I'll put incentives back into the domestic energy industry"
+    restatement: "Restore incentives for domestic energy production."
+    type: action
+    theme: energy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "federal incentives for domestic oil and gas production"
+      record: "Statutes at Large (tax law)"
+      criterion: "a law adding tax incentives for domestic oil and gas production is enacted"
+      ambiguity: "\"Incentives\" are not named; read as tax incentives, the usual form, for the oil industry the sentence points to."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-arms-cuts
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶75.2
+      quote: "I'll move toward further cuts in the strategic and conventional arsenals of both the United States and the Soviet Union and the Eastern Bloc and NATO"
+    - in: debate
+      ref: ¶173.17
+      quote: "I want to build on that."
+    restatement: "Cut strategic and conventional arms further, by agreement with the Soviet Union and the Eastern Bloc."
+    type: action
+    theme: defense
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "strategic and conventional arms reduction agreements"
+      record: "treaty texts and signature records"
+      criterion: "a treaty cutting U.S. and Soviet strategic arms and a treaty cutting NATO and Warsaw Pact conventional forces are signed"
+      ambiguity: "\"Move toward\" could be met by negotiating alone; read as signed agreements."
+    uncertainty:
+      extraction: probable
+      note: "In the debate, \"that\" is the arms control agreement of ¶173.16."
+    links: []
+
+  - id: bush-1988-modernize
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶75.3
+      quote: "I'll modernize and preserve our technological edge"
+    - in: debate
+      ref: ¶45.19
+      quote: "We have to have modernization"
+    restatement: "Modernize the forces and keep the technological edge."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-strategic-defense
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶75.3
+      quote: "and that includes strategic defense."
+    restatement: "Keep developing strategic missile defense (SDI)."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "the Strategic Defense Initiative"
+      record: "defense authorization acts; SDI budget"
+      criterion: "strategic missile defense research continues to be funded and pursued throughout the term"
+      ambiguity: "The sentence sets no level or goal; read as SDI continuing, not as a deployed system."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-ban-chemical-weapons
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶75.4-75.5
+      quote: "And a priority: Ban chemical and biological weapons from the face of the Earth."
+    - in: debate
+      ref: ¶173.18
+      quote: "was able to ban chemical and biological weapons from the face of the earth."
+    restatement: "Ban chemical and biological weapons worldwide, as a priority."
+    type: action
+    theme: defense
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "a global ban on chemical weapons"
+      record: "treaty texts and signature records (UN Treaty Collection)"
+      criterion: "a global treaty banning chemical weapons is concluded and signed by the United States within the term"
+      ambiguity: "Biological weapons were already banned by the 1972 convention, so the promise is read as a global chemical weapons ban; \"from the face of the Earth\" could also mean the stocks destroyed, which takes years."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-speak-for-freedom
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶75.6
+      quote: "And I intend to speak for freedom, stand for freedom and be a patient friend to anyone, East or West, who will fight for freedom."
+    restatement: "Speak and stand for freedom abroad."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-new-harmony
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶77.1
+      quote: "And I hope to stand for a new harmony, a greater tolerance."
+    restatement: "Stand for harmony and tolerance among the races."
+    type: ongoing
+    theme: rights
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-kinder-gentler
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶84.2
+      quote: "I want a kinder and gentler nation."
+    - in: debate
+      ref: ¶173.6
+      quote: "Because I mean it when I say I want a kinder and gentler nation."
+    restatement: "A kinder and gentler nation."
+    type: outcome
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-move-forward
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶100.1-101.1
+      quote: "I will keep America moving forward, always forward"
+    restatement: "Keep America moving forward and complete his mission."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  # ---- debate (Bush's turns) --------------------------------------------------
+  - id: bush-1988-keep-expansion
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶16.3
+      quote: "And so what I want to do is keep this expansion going."
+    - in: debate
+      ref: ¶173.4
+      quote: "and keep this the longest expansion in modern history going until everybody in America benefits."
+    restatement: "Keep the economic expansion going."
+    type: outcome
+    theme: economy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: high
+      object: "the U.S. economic expansion"
+      record: "NBER business cycle dates"
+      criterion: "no recession begins during the term"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-line-item-veto
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶25.4
+      quote: "I'd like to have that line-item veto for the president"
+    restatement: "A line-item veto for the President."
+    type: action
+    theme: budget
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: high
+      object: "presidential line-item veto"
+      record: "Statutes at Large; Congress.gov"
+      criterion: "a law or amendment giving the President a line-item veto is enacted"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-restrain-spending
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶100.6
+      quote: "And what we have to do is restrain the growth of spending."
+    restatement: "Restrain the growth of federal spending."
+    type: outcome
+    theme: budget
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "federal outlays"
+      record: "OMB Historical Tables"
+      criterion: "federal outlays grow no faster than inflation over the term"
+      ambiguity: "\"Restrain\" names no rate; read as the flexible freeze he describes (¶16.10): growth at about the rate of inflation."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-no-socialsecurity-changes
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶106.7
+      quote: "So, I don't want to fool around with it."
+    - in: debate
+      ref: ¶106.15
+      quote: "And I will not go in there and suggest changes in Social Security."
+    restatement: "Not propose changes to Social Security."
+    group: bush-1988-socialsecurity-trust
+    type: ongoing
+    theme: retirement
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "Social Security benefits"
+      record: "the President's budgets and messages to Congress"
+      criterion: "he sends Congress no proposal to cut Social Security benefits or cost-of-living adjustments"
+      ambiguity: "\"Changes\" is read as cuts to benefits or COLAs, the subject of the question (¶105-106); technical changes do not count."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-judges
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶114.2
+      quote: "But what I would do is appoint people to the Federal Bench that will not legislate from the Bench, who will interpret the Constitution."
+    - in: debate
+      ref: ¶114.5
+      quote: "I won't support judges like that."
+    - in: debate
+      ref: ¶114.7
+      quote: "But I will go out there and find men and women to interpret."
+    - in: debate
+      ref: ¶173.8
+      quote: "and that's why I would appoint judges that have a little more sympathy for the victims of crime and a little less for the criminals."
+    restatement: "Appoint judges who interpret the Constitution rather than legislate from the bench."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-child-care-choice
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶127.10-127.12
+      quote: "You see, I want the families to have the choice."
+    - in: debate
+      ref: ¶127.14
+      quote: "I want flexibility"
+    - in: debate
+      ref: ¶173.7
+      quote: "And by that I want to have child care where the families, the parents, have control."
+    restatement: "Child care in which parents choose, without federal licensing of family carers."
+    type: action
+    theme: welfare
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "federal child care assistance"
+      record: "Statutes at Large"
+      criterion: "federal child care aid is enacted that lets parents choose the provider, including relatives and church-based care"
+      ambiguity: "\"Choice\" and \"control\" are not defined; read as aid paid to or chosen by parents rather than only to licensed centres."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-farm-exports
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶139.11
+      quote: "And we ought to expand our markets abroad."
+    restatement: "Expand farm markets abroad."
+    type: outcome
+    theme: trade
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-rural-enterprise-zones
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶139.12
+      quote: "We ought to have rural enterprise zones."
+    restatement: "Create rural enterprise zones."
+    type: action
+    theme: economy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: high
+      object: "rural enterprise zones"
+      record: "Statutes at Large"
+      criterion: "a law creating rural enterprise zones is enacted"
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-ethanol
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶139.13
+      quote: "We ought to move forward swiftly on my ideas of ethanol which would use more corn, and therefore, create a bigger market for our agricultural products."
+    restatement: "Move swiftly on ethanol to create a bigger market for corn."
+    type: action
+    theme: energy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-environment-job
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶144.29
+      quote: "And I'll do a good job, because I am committed."
+    restatement: "Do a good job on the environment."
+    type: ongoing
+    theme: environment
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "The object, the environment, comes from the question (¶143) and ¶144.26."
+    links: []
+
+  - id: bush-1988-energy-mix
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶162.6
+      quote: "I believe that we must use clean, safe nuclear power."
+    - in: debate
+      ref: ¶162.9
+      quote: "But we're going to have to use more gas, more coal and more safe nuclear power for our energy base."
+    restatement: "Use more gas, coal and safe nuclear power."
+    type: outcome
+    theme: energy
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-revolving-door
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶167.1-167.3
+      quote: "Yes, and I'll apply it to Congress too."
+    restatement: "Lock the revolving door between government and lobbying, for the executive branch and Congress."
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "post-employment lobbying limits"
+      record: "Statutes at Large (18 U.S.C. 207)"
+      criterion: "stricter limits on lobbying by former senior executive officials are enacted and extended to former Members of Congress"
+      ambiguity: "\"Lock\" could mean a full ban; read as tighter, enforceable limits."
+    uncertainty:
+      extraction: probable
+      note: "\"It\" is locking the revolving door, from the question (¶166.4)."
+    links: []
+
+  - id: bush-1988-ethics-office
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶167.12
+      quote: "I will have an ethical office in the White House that will be under the President's personal concern."
+    restatement: "Have an ethics office in the White House under the President's personal concern."
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "a White House ethics office"
+      record: "Executive orders; White House staff records"
+      criterion: "an office or officer in the White House is charged with ethics, reporting to the President"
+      ambiguity: "\"Ethical office\" could be a separate office or an ethics function in the Counsel's office; either counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-congress-ethics
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶167.13
+      quote: "I will see that these standards apply to the United States Congress."
+    restatement: "See that ethics standards apply to Congress."
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: medium
+      object: "congressional ethics rules"
+      record: "Statutes at Large"
+      criterion: "a law extends executive-branch ethics standards (lobbying, gifts, outside income) to Members of Congress"
+      ambiguity: "\"These standards\" are \"the highest possible ethical standards\" (¶167.11); read as the post-employment, gift and outside-income rules then being set for the executive branch."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-public-service
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶167.14
+      quote: "I hope I will do a good job as one who has had a relatively clean record with no conflicts of interest in his own public life, as has the Governor, to exhort young people to get into public service."
+    restatement: "Encourage young people to go into public service."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-clean-up
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶167.16
+      quote: "And it's a disgrace, and I will do my level best to clean it up, recognizing that you can't legislate morality."
+    restatement: "Do his best to clean up corruption in government."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-invest-in-children
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶173.5
+      quote: "I want to invest in our children."
+    restatement: "Invest in children."
+    type: ongoing
+    theme: education
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-safer-neighborhoods
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶173.8
+      quote: "I want to keep our neighborhoods much, much better in terms of anti-crime"
+    restatement: "Make neighbourhoods safer from crime."
+    type: outcome
+    theme: crime-justice
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: bush-1988-good-president
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶173.22
+      quote: "And I will be a good president."
+    restatement: "Be a good president."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1993-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
