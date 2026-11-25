@@ -1098,7 +1098,7 @@ main {
 }
 .tg-term { font-size: 11.5px; font-weight: 600; fill: var(--ink); }
 .tg-area { fill: color-mix(in srgb, var(--q-high) 16%, transparent); }
-.tg-area-edge { fill: none; stroke: color-mix(in srgb, var(--q-high) 55%, transparent); stroke-width: 1.5; }
+.tg-area-edge { fill: none; stroke: var(--q-high); stroke-width: 1.5; }
 .tg-line polyline { fill: none; stroke-width: 2.25; stroke-linejoin: round; stroke-linecap: round; }
 .tg-line circle { stroke: var(--panel); stroke-width: 1.5; }
 .tg-line[data-line="kept"] polyline { stroke: var(--v-kept); }
