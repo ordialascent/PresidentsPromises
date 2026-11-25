@@ -1,6 +1,6 @@
 import { CORPUS_TERMS } from '../content/promises.generated.js';
 import type { PromiseOccurrence } from '../content/promises.generated.js';
-import { QUALITY_META, VERDICT_META, verdictFor, type CorpusPromise, type Verdict } from './model.js';
+import { CHECK_META, QUALITY_META, VERDICT_META, checkOf, verdictFor, type CorpusPromise, type Verdict } from './model.js';
 
 /** Every record by id, so a link can name what it points at. */
 const BY_ID = new Map(
@@ -35,7 +35,10 @@ function ProtocolFacts({ promise }: { promise: CorpusPromise }) {
         <>{f.deadline.applied} (end of term)</>
       ),
     ],
-    ['Verifiability', QUALITY_META[promise.quality].label],
+    [
+      'Verifiability',
+      `${CHECK_META[checkOf(promise.quality)].label} (${QUALITY_META[promise.quality].label.toLowerCase()} on the method page\u2019s scale)`,
+    ],
   ];
   if (v.object) rows.push(['Object', v.object]);
   if (v.record) rows.push(['Record', v.record]);

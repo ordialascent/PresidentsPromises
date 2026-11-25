@@ -259,21 +259,20 @@ describe('the promise list under the chart', () => {
     expect(rows.slice(0, first.promises.length).every((r) => r.termKey === first.key)).toBe(true);
   });
 
-  it('a bar block is exactly one president crossed with one tier', () => {
+  it('a bar block is exactly one president crossed with verifiable or not', () => {
     const rows = flattenPromises(CORPUS_TERMS);
     const term = CORPUS_TERMS.find((t) => t.promises.some((p) => p.quality === 'medium'))!;
-    const segment = { termKey: term.key, quality: 'medium' as Quality };
     const inBlock = filterRows(rows, {
       ...NO_FILTERS,
-      term: new Set([segment.termKey]),
-      tier: new Set([segment.quality]),
+      term: new Set([term.key]),
+      tier: new Set(['verifiable']),
     });
     for (const r of inBlock) {
       expect(r.termKey).toBe(term.key);
-      expect(r.promise.quality).toBe('medium');
+      expect(r.promise.quality).not.toBe('low');
     }
     // and it is the number the block itself draws
     const summary = summarize(CORPUS_TERMS).find((s) => s.key === term.key)!;
-    expect(inBlock.length).toBe(summary.counts.medium);
+    expect(inBlock.length).toBe(summary.counts.high + summary.counts.medium);
   });
 });

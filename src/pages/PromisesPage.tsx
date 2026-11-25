@@ -1,15 +1,17 @@
 import { useEffect, useMemo, useState } from 'react';
 import { PromiseFunnel, type Scale } from '../promises/PromiseFunnel.js';
 import { BoardSettings } from '../promises/BoardSettings.js';
+import { BoardLegend } from '../promises/BoardLegend.js';
+import { TrendGraph } from '../promises/TrendGraph.js';
 import { PromiseList } from '../promises/PromiseList.js';
 import { FilterBar, type FacetControl } from '../promises/FilterBar.js';
 import { searchPromises } from '../promises/search.js';
 import {
+  CHECKS,
+  CHECK_META,
   FACETS,
   KIND_META,
   NO_FILTERS,
-  QUALITIES,
-  QUALITY_META,
   VERDICT_META,
   VERDICT_STATUSES,
   facetCounts,
@@ -21,10 +23,11 @@ import {
   scopeToParam,
   termsOfKind,
   topicCounts,
+  checkOf,
+  type Check,
   type Facet,
   type Filters,
   type Kind,
-  type Quality,
 } from '../promises/model.js';
 import {
   CORPUS_TERMS,
@@ -34,7 +37,7 @@ import {
 const FIRST_ELECTION = CORPUS_TERMS[0].from - 1;
 const KIND_HINT: Record<Kind, string> = {
   promise:
-    'Firm commitments ("we will", "I\u2019m going to"). Only promises can be kept or broken, and only high and medium ones get a verdict.',
+    'Firm commitments ("we will", "I\u2019m going to"). Only promises can be kept or broken, and only verifiable ones get a verdict.',
   ambition:
     'Wishes and obligations ("we must", "I want"). A direction, not a commitment, so never given a verdict.',
 };
@@ -64,7 +67,7 @@ function optionsFor(kind: Kind, facet: Facet, scope: ReadonlySet<string>): { val
     case 'term':
       return inScope.map((t) => ({ value: t.key, label: `${t.label} (${t.termLabel})` }));
     case 'tier':
-      return QUALITIES.map((q) => ({ value: q, label: QUALITY_META[q].label }));
+      return CHECKS.map((c) => ({ value: c, label: CHECK_META[c].label }));
     case 'verdict': {
       // every verdict status, then "no verdict" for low promises, if any exist
       const present = new Set(ROWS[kind].map((r) => facetValue(r, 'verdict')));
@@ -73,7 +76,7 @@ function optionsFor(kind: Kind, facet: Facet, scope: ReadonlySet<string>): { val
         label: VERDICT_META[v].label,
       }));
       if (present.has('unjudged')) out.push({ value: 'unjudged', label: 'Not judged yet' });
-      if (present.has('infeasible')) out.push({ value: 'infeasible', label: 'No verdict (low)' });
+      if (present.has('infeasible')) out.push({ value: 'infeasible', label: 'No verdict (unverifiable)' });
       return out;
     }
   }
@@ -94,6 +97,10 @@ const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(
  * chart (promises and their track record, per term) and the searchable list
  * beneath it.
  *
+ * Under the settings, a graph gives the board at a glance (verifiable
+ * promises per term as an area, kept, broken and other as lines), then one
+ * legend serves both it and the bars below.
+ *
  * Above everything sit two choices that set the whole board's subject. The
  * kind: promises (firm language) or ambitions (wishes and obligations), never
  * mixed, because only promises can ever be kept or broken. And the term scope:
@@ -104,7 +111,7 @@ const only = (set: ReadonlySet<string>, v: string) => set.size === 1 && set.has(
  * Every other filter belongs to the list and sits in one place: the filter bar
  * under the search box (topic, president, verifiability, verdict; each a
  * multi-select). The chart acts as a shortcut into that bar: a top block sets
- * one term and verifiability, a verdict block one term and verdict
+ * one term and verifiability (verifiable or not), a verdict block one term and verdict
  * (the bar then shows a Term pick to clear). Clicking the same cell again
  * clears it. Blocks the filters leave out are dimmed, so the chart shows what
  * the list is showing.
@@ -169,19 +176,19 @@ export function PromisesPage() {
   });
 
   // A bar block: one term crossed with one tier.
-  const blockPicked = (termKey: string, q: Quality) =>
+  const blockPicked = (termKey: string, q: Check) =>
     only(filters.term, termKey) &&
     only(filters.tier, q) &&
     filters.president.size === 0 &&
     filters.verdict.size === 0;
   const blockLit =
     filters.term.size || filters.president.size || filters.tier.size
-      ? (termKey: string, q: Quality) =>
+      ? (termKey: string, q: Check) =>
           (filters.term.size === 0 || filters.term.has(termKey)) &&
           (filters.president.size === 0 || filters.president.has(SURNAME_OF.get(termKey)!)) &&
           (filters.tier.size === 0 || filters.tier.has(q))
       : null;
-  const selectBlock = (termKey: string, q: Quality) =>
+  const selectBlock = (termKey: string, q: Check) =>
     setFilters((f) =>
       blockPicked(termKey, q)
         ? { ...f, term: new Set(), tier: new Set() }
@@ -207,6 +214,22 @@ export function PromisesPage() {
         ? { ...f, term: new Set(), verdict: new Set() }
         : { ...f, term: new Set([termKey]), verdict: new Set([v]), president: new Set(), tier: new Set() },
     );
+
+  // The legend's numbers: the whole scope, whatever the list's filters.
+  const checkCounts = useMemo(() => {
+    const c: Record<Check, number> = { verifiable: 0, unverifiable: 0 };
+    for (const r of rows) c[checkOf(r.promise.quality)] += 1;
+    return c;
+  }, [rows]);
+  const verdictCounts = useMemo(() => {
+    const c = Object.fromEntries(VERDICT_STATUSES.map((v) => [v, 0])) as Record<(typeof VERDICT_STATUSES)[number], number>;
+    for (const r of rows) {
+      const v = r.promise.verdict;
+      if (r.promise.quality === 'low' || !v) continue;
+      c[v.review ? 'review' : v.verdict] += 1;
+    }
+    return c;
+  }, [rows]);
 
   // The other kind is a different corpus: its topics don't carry over.
   const switchKind = (k: Kind) => {
@@ -244,14 +267,21 @@ export function PromisesPage() {
             onScale={setScale}
           />
           <div className="board-promises">
+            <TrendGraph terms={corpus} kind={kind} />
+            <BoardLegend
+              withVerdicts={kind === 'promise'}
+              checkCounts={checkCounts}
+              verdictCounts={verdictCounts}
+              pickedChecks={filters.tier}
+              onToggleCheck={(c) => toggle('tier', c)}
+              pickedVerdicts={filters.verdict}
+              onToggleVerdict={(v) => toggle('verdict', v)}
+              onSetVerdicts={(next) => setFacet('verdict', next)}
+            />
             <PromiseFunnel
               terms={corpus}
               kind={kind}
               scale={scale}
-              pickedTiers={filters.tier}
-              onToggleTier={(q) => toggle('tier', q)}
-              pickedVerdicts={filters.verdict}
-              onToggleVerdict={(v) => toggle('verdict', v)}
               tierLit={blockLit}
               tierPicked={blockPicked}
               onSelectTier={selectBlock}

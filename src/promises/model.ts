@@ -30,6 +30,22 @@ export const QUALITY_META: Record<Quality, QualityMeta> = {
   low: { key: 'low', label: 'Low', blurb: 'object or record missing, or several judgement calls' },
 };
 
+/**
+ * What the board shows of verifiability: whether a promise can be checked at
+ * all. High and medium promises can (they get a verdict); low ones cannot.
+ * The protocol's three levels stay in the data and on the method page; the
+ * board and the list's filter only draw this line.
+ */
+export type Check = 'verifiable' | 'unverifiable';
+export const CHECKS: Check[] = ['verifiable', 'unverifiable'];
+
+export const CHECK_META: Record<Check, { label: string; blurb: string }> = {
+  verifiable: { label: 'Verifiable', blurb: 'high or medium: can be checked against a public record, so it gets a verdict' },
+  unverifiable: { label: 'Unverifiable', blurb: 'low: too vague to check, so it never gets a verdict' },
+};
+
+export const checkOf = (q: Quality): Check => (q === 'low' ? 'unverifiable' : 'verifiable');
+
 export const KIND_META: Record<Kind, { label: string; plural: string }> = {
   promise: { label: 'promise', plural: 'Promises' },
   ambition: { label: 'ambition', plural: 'Ambitions' },
@@ -326,7 +342,7 @@ export function facetValue(row: PromiseRow, facet: Facet): string {
     case 'term':
       return row.termKey;
     case 'tier':
-      return row.promise.quality;
+      return checkOf(row.promise.quality);
     case 'verdict':
       return verdictFor(row.promise).status;
   }
@@ -456,4 +472,49 @@ export function methodRows(terms: CorpusTerm[]): MethodRow[] {
       ambitions: t.ambitions.length,
     };
   });
+}
+
+/** The verdicts the trend graph folds into one "other" line, in legend order. */
+export const OTHER_STATUSES: (VerdictValue | 'review')[] = ['partly', 'indeterminate', 'review', 'pending'];
+
+/** One term's point on the trend graph: verifiable promises, and how they turned out. */
+export interface TrendPoint {
+  key: string;
+  label: string;
+  surname: string;
+  termLabel: string;
+  from: number;
+  verifiable: number;
+  kept: number;
+  broken: number;
+  /** Partly kept, indeterminate, under review and pending together. */
+  other: number;
+}
+
+/** The trend graph's series, one point per term, in corpus (chronological) order. */
+export function trendPoints(terms: CorpusTerm[]): TrendPoint[] {
+  const records = trackRecords(terms);
+  return terms.map((t, i) => {
+    const r = records[i];
+    return {
+      key: t.key,
+      label: t.label,
+      surname: t.surname,
+      termLabel: t.termLabel,
+      from: t.from,
+      verifiable: r.verifiable,
+      kept: r.counts.kept,
+      broken: r.counts.broken,
+      other: OTHER_STATUSES.reduce((n, s) => n + r.counts[s], 0),
+    };
+  });
+}
+
+/** A round upper bound for a count axis, and the step between its gridlines. */
+export function countAxis(max: number): { top: number; step: number } {
+  if (max <= 0) return { top: 5, step: 5 };
+  const raw = max / 4;
+  const mag = 10 ** Math.floor(Math.log10(raw));
+  const step = Math.max(1, [1, 2, 5, 10].map((m) => m * mag).find((s) => s >= raw)!);
+  return { top: Math.ceil(max / step) * step, step };
 }

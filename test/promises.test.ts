@@ -5,8 +5,12 @@ import {
   CORPUS_OCCURRENCE_COUNT,
 } from '../src/content/promises.generated.js';
 import {
+  CHECKS,
   QUALITIES,
   VERDICT_PLACEHOLDER,
+  checkOf,
+  countAxis,
+  trendPoints,
   deltaBetween,
   FACETS,
   NO_FILTERS,
@@ -110,11 +114,19 @@ describe('promises overview aggregation', () => {
       taxes.length + energy.length,
     );
     // topic and tier together are the intersection, in either order
-    const both = filterRows(rows, f({ topic: new Set(['health']), tier: new Set(['high']) }));
+    const both = filterRows(rows, f({ topic: new Set(['health']), tier: new Set(['verifiable']) }));
+    expect(both.length).toBeGreaterThan(0);
     expect(both).toEqual(
-      filterRows(filterRows(rows, f({ tier: new Set(['high']) })), f({ topic: new Set(['health']) })),
+      filterRows(filterRows(rows, f({ tier: new Set(['verifiable']) })), f({ topic: new Set(['health']) })),
     );
-    for (const r of both) expect([r.promise.theme, r.promise.quality]).toEqual(['health', 'high']);
+    for (const r of both) {
+      expect(r.promise.theme).toBe('health');
+      expect(r.promise.quality).not.toBe('low');
+    }
+    // verifiable is high and medium together; unverifiable is low
+    const verifiable = filterRows(rows, f({ tier: new Set(['verifiable']) })).length;
+    expect(verifiable).toBe(rows.filter((r) => r.promise.quality !== 'low').length);
+    expect(filterRows(rows, f({ tier: new Set(['unverifiable']) })).length).toBe(rows.length - verifiable);
     // a president covers all of their terms
     const bush = filterRows(rows, f({ president: new Set(['W. Bush']) }));
     const bushTerms = CORPUS_TERMS.filter((t) => t.surname === 'W. Bush');
@@ -132,12 +144,13 @@ describe('promises overview aggregation', () => {
 
   it('facet counts never count against their own facet, and add up', () => {
     const rows = flattenPromises(CORPUS_TERMS);
-    const filters: Filters = { ...NO_FILTERS, tier: new Set(['high']), topic: new Set(['health']) };
-    // the tier menu, with "high" picked, still says what medium and low would add
+    const filters: Filters = { ...NO_FILTERS, tier: new Set(['verifiable']), topic: new Set(['health']) };
+    // the verifiability menu, with "verifiable" picked, still says what unverifiable would add
     const tiers = facetCounts(rows, filters, 'tier');
-    for (const q of QUALITIES) {
-      const alone = filterRows(rows, { ...filters, tier: new Set([q]) }).length;
-      expect(tiers.get(q) ?? 0).toBe(alone);
+    for (const c of CHECKS) {
+      const alone = filterRows(rows, { ...filters, tier: new Set([c]) }).length;
+      expect(alone).toBeGreaterThan(0);
+      expect(tiers.get(c) ?? 0).toBe(alone);
     }
     // every facet's counts sum to what the other facets leave
     for (const facet of FACETS) {
@@ -266,5 +279,30 @@ describe('cited sentences', () => {
     expect(o.quote).toBe('move toward elections');
     expect(o.context).toMatch(/^So our mission in Afghanistan and Iraq is clear: .* as quickly as possible\.$/);
     expect(o.context.slice(...o.mark)).toBe('move toward elections');
+  });
+});
+
+describe('the trend graph', () => {
+  it('has one point per term, and its lines never exceed the verifiable area', () => {
+    const points = trendPoints(CORPUS_TERMS);
+    const records = trackRecords(CORPUS_TERMS);
+    expect(points.map((p) => p.key)).toEqual(CORPUS_TERMS.map((t) => t.key));
+    points.forEach((p, i) => {
+      const t = CORPUS_TERMS[i];
+      expect(p.verifiable).toBe(t.promises.filter((q) => checkOf(q.quality) === 'verifiable').length);
+      expect(p.verifiable).toBe(records[i].verifiable);
+      // every verifiable promise has a verdict, so the three lines add up to the area
+      expect(p.kept + p.broken + p.other).toBe(p.verifiable);
+    });
+  });
+
+  it('rounds the count axis to whole, even steps that cover the maximum', () => {
+    for (const max of [0, 1, 3, 7, 18, 41, 64, 99, 250]) {
+      const { top, step } = countAxis(max);
+      expect(Number.isInteger(step)).toBe(true);
+      expect(top).toBeGreaterThanOrEqual(max);
+      expect(top % step).toBe(0);
+      expect(top / step).toBeLessThanOrEqual(5);
+    }
   });
 });
