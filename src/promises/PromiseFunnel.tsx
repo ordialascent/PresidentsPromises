@@ -1,14 +1,14 @@
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
-  QUALITIES,
-  QUALITY_META,
+  CHECKS,
+  CHECK_META,
   VERDICT_META,
   VERDICT_STATUSES,
   summarize,
   trackRecords,
+  type Check,
   type CorpusTerm,
   type Kind,
-  type Quality,
   type VerdictValue,
 } from './model.js';
 
@@ -58,24 +58,16 @@ export function rowWidths(
   return { top: total / m, checkableEnd: checkable / m, bottom: checkable / m };
 }
 
-function legendHint(value: string, name: string, picked: ReadonlySet<string>): string {
-  if (!picked.has(value)) {
-    return picked.size === 0 ? `Show only ${name} promises` : `Add ${name} promises`;
-  }
-  return picked.size === 1 ? 'Show every promise again' : `Remove ${name} promises`;
-}
-
 /**
  * Promises and what became of them, one block per term. The top row is every
- * promise the term made, by verifiability. Only high and medium promises can
- * be checked, so only they get a verdict: the bottom row is their track
- * record, and a light fan joins it to the checkable part above. Low promises,
- * too vague to check, visibly never reach the bottom row.
+ * promise the term made, verifiable or not. Only verifiable promises can be
+ * checked, so only they get a verdict: the bottom row is their track record,
+ * and a light fan joins it to the verifiable part above. Unverifiable
+ * promises, too vague to check, visibly never reach the bottom row.
  *
- * The chart owns no filter. Each legend toggles the list's filter for what it
- * names (the tier legend the tier, the verdict legend the verdict); a
- * top block sets the list's term and tier, a bottom block its term and
- * verdict (clicking the same block again clears it). Blocks the list's
+ * The chart owns no filter and no key (the board's legend above it is both).
+ * A top block sets the list's term and verifiability, a bottom block its term
+ * and verdict (clicking the same block again clears it). Blocks the list's
  * filters leave out are dimmed. Ambitions never get verdicts, so for them only
  * the top row is drawn.
  */
@@ -83,10 +75,6 @@ export function PromiseFunnel({
   terms,
   kind,
   scale,
-  pickedTiers,
-  onToggleTier,
-  pickedVerdicts,
-  onToggleVerdict,
   tierLit,
   tierPicked,
   onSelectTier,
@@ -97,13 +85,9 @@ export function PromiseFunnel({
   terms: CorpusTerm[];
   kind: Kind;
   scale: Scale;
-  pickedTiers: ReadonlySet<string>;
-  onToggleTier: (quality: Quality) => void;
-  pickedVerdicts: ReadonlySet<string>;
-  onToggleVerdict: (status: Status) => void;
-  tierLit: ((termKey: string, q: Quality) => boolean) | null;
-  tierPicked: (termKey: string, q: Quality) => boolean;
-  onSelectTier: (termKey: string, q: Quality) => void;
+  tierLit: ((termKey: string, c: Check) => boolean) | null;
+  tierPicked: (termKey: string, c: Check) => boolean;
+  onSelectTier: (termKey: string, c: Check) => void;
   verdictLit: ((termKey: string, s: Status) => boolean) | null;
   verdictPicked: (termKey: string, s: Status) => boolean;
   onSelectVerdict: (termKey: string, s: Status) => void;
@@ -113,17 +97,6 @@ export function PromiseFunnel({
   const summaries = useMemo(() => summarize(terms), [terms]);
   const records = useMemo(() => new Map(trackRecords(terms).map((r) => [r.key, r])), [terms]);
   const maxTotal = Math.max(1, ...summaries.map((s) => s.total));
-  const totals = useMemo(() => {
-    const c: Record<Quality, number> = { high: 0, medium: 0, low: 0 };
-    for (const s of summaries) for (const q of QUALITIES) c[q] += s.counts[q];
-    return c;
-  }, [summaries]);
-  const verdictTotals = useMemo(() => {
-    const c = Object.fromEntries(VERDICT_STATUSES.map((v) => [v, 0])) as Record<Status, number>;
-    for (const r of records.values()) for (const v of VERDICT_STATUSES) c[v] += r.counts[v];
-    return c;
-  }, [records]);
-
   // The drawing's width decides which segments are wide enough for a number.
   const ref = useRef<HTMLDivElement>(null);
   const [rowPx, setRowPx] = useState(600);
@@ -146,12 +119,13 @@ export function PromiseFunnel({
         {summaries.map((t) => {
           const r = records.get(t.key);
           const checkable = t.counts.high + t.counts.medium;
+          const byCheck: Record<Check, number> = { verifiable: checkable, unverifiable: t.counts.low };
           const w = rowWidths(scale, t.total, checkable, maxTotal);
           const judged = r ? VERDICT_STATUSES.reduce((n, s) => n + r.counts[s], 0) : 0;
           const showVerdicts = withVerdicts && r != null && judged > 0;
           const keptShare = r && r.settled ? `${Math.round((r.counts.kept / r.settled) * 100)}%` : '–';
           const pending = r?.counts.pending ?? 0;
-          const topShares = percentShares(QUALITIES.map((q) => t.counts[q]));
+          const topShares = percentShares(CHECKS.map((c) => byCheck[c]));
           const bottomShares = percentShares(VERDICT_STATUSES.map((v) => r?.counts[v] ?? 0));
           const x = w.checkableEnd * 100;
           const xb = w.bottom * 100;
@@ -162,7 +136,7 @@ export function PromiseFunnel({
                 <span className="pf-span">{t.termLabel}</span>
                 <span className="pf-n">
                   {t.total} {noun}
-                  {withVerdicts && <> · {checkable} checkable</>}
+                  {withVerdicts && <> · {checkable} verifiable</>}
                 </span>
                 {showVerdicts && (
                   <span
@@ -180,8 +154,8 @@ export function PromiseFunnel({
               </div>
               <div className="pf-bars">
                 <div className="pf-row" style={{ width: `${w.top * 100}%` }}>
-                  {QUALITIES.map((q, i) => {
-                    const n = t.counts[q];
+                  {CHECKS.map((q, i) => {
+                    const n = byCheck[q];
                     if (!n) return null;
                     const px = (n / t.total) * w.top * rowPx;
                     const pct = topShares[i];
@@ -191,13 +165,13 @@ export function PromiseFunnel({
                         type="button"
                         key={q}
                         className="pf-seg"
-                        data-q={q}
+                        data-c={q}
                         data-on={tierPicked(t.key, q)}
                         data-dim={tierLit != null && !tierLit(t.key, q)}
                         aria-pressed={tierPicked(t.key, q)}
                         style={{ flexGrow: n }}
-                        title={`${t.label} · ${QUALITY_META[q].label}: ${n} (${pct}%)`}
-                        aria-label={`${t.label}: show the ${n} ${QUALITY_META[q].label.toLowerCase()} ${noun}`}
+                        title={`${t.label} · ${CHECK_META[q].label}: ${n} (${pct}%)`}
+                        aria-label={`${t.label}: show the ${n} ${CHECK_META[q].label.toLowerCase()} ${noun}`}
                         onClick={() => onSelectTier(t.key, q)}
                       >
                         {fits(px, text) ? text : ''}
@@ -247,50 +221,10 @@ export function PromiseFunnel({
         })}
       </ol>
 
-      <div className="pc-legend" role="group" aria-label="Filter by verifiability">
-        {QUALITIES.map((q) => (
-          <button
-            key={q}
-            type="button"
-            className="pc-legend-item"
-            data-picked={pickedTiers.has(q)}
-            aria-pressed={pickedTiers.has(q)}
-            onClick={() => onToggleTier(q)}
-            title={legendHint(q, QUALITY_META[q].label.toLowerCase(), pickedTiers)}
-          >
-            <span className="pc-swatch" data-q={q} />
-            {QUALITY_META[q].label}
-            <span className="pc-legend-n">{totals[q]}</span>
-          </button>
-        ))}
-      </div>
-      {withVerdicts && (
-        <div className="pc-legend" role="group" aria-label="Filter by verdict (high and medium promises only)">
-          {VERDICT_STATUSES.map((v) => {
-            const name = VERDICT_META[v].label.toLowerCase();
-            return (
-              <button
-                key={v}
-                type="button"
-                className="pc-legend-item"
-                data-picked={pickedVerdicts.has(v)}
-                aria-pressed={pickedVerdicts.has(v)}
-                onClick={() => onToggleVerdict(v)}
-                title={`${VERDICT_META[v].label}: ${VERDICT_META[v].blurb}. ${legendHint(v, name, pickedVerdicts)}.`}
-              >
-                <span className="pc-swatch" data-v={v} />
-                {VERDICT_META[v].label}
-                <span className="pc-legend-n">{verdictTotals[v]}</span>
-              </button>
-            );
-          })}
-        </div>
-      )}
-
       {withVerdicts && (
         <p className="tr-note">
           * Kept share = kept ÷ (kept + partly + broken). Under review, indeterminate and pending
-          promises are left out, so it can differ from the green segment, which counts every checkable
+          promises are left out, so it can differ from the green segment, which counts every verifiable
           promise.
         </p>
       )}

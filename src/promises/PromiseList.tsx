@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { PromiseDetail } from './PromiseDetail.js';
 import { toSpans } from './fuzzy.js';
-import { QUALITY_META, verdictFor } from './model.js';
+import { CHECK_META, checkOf, verdictFor } from './model.js';
 import type { PromiseHit } from './search.js';
 
 /** `text` with the matched characters wrapped, so a fuzzy hit shows its work. */
@@ -198,8 +198,8 @@ export function PromiseList({
                         end so the two never separate across a wrap */}
                     <span className="pl-row-kind">
                       <span className="pl-meta">{p.protocol.type}</span>
-                      <span className="pl-tier" data-q={p.quality}>
-                        {QUALITY_META[p.quality].label}
+                      <span className="pl-tier" data-c={checkOf(p.quality)}>
+                        {CHECK_META[checkOf(p.quality)].label}
                       </span>
                       {p.occurrences.length > 1 && (
                         <span className="pl-mult" title={`promised ${p.occurrences.length}×`}>
