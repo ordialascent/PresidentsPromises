@@ -122,6 +122,8 @@ main {
 .veri-swatch[data-q='high'] { background: var(--q-high); }
 .veri-swatch[data-q='medium'] { background: var(--q-medium); }
 .veri-swatch[data-q='low'] { background: var(--q-low); }
+.veri-swatch[data-c='verifiable'] { background: var(--q-high); }
+.veri-swatch[data-c='unverifiable'] { background: var(--q-low); }
 
 /* ---- Promises overview chart ---------------------------------------- */
 
@@ -453,7 +455,7 @@ main {
   gap: 10px;
 }
 .pc-detail[data-q="high"] { box-shadow: inset 3px 0 0 var(--q-high); }
-.pc-detail[data-q="medium"] { box-shadow: inset 3px 0 0 var(--q-medium); }
+.pc-detail[data-q="medium"] { box-shadow: inset 3px 0 0 var(--q-high); }
 .pc-detail[data-q="low"] { box-shadow: inset 3px 0 0 var(--q-low); }
 
 /* The close control is all that is left up here, so it comes out of the flow
@@ -582,9 +584,9 @@ main {
   font-weight: 700;
   line-height: 1;
 }
-/* A high promise can be checked without any judgement call, so its mark is the
-   only one that carries the tier colour. */
-.pc-verdict-mark[data-q="high"] {
+/* Only verifiable promises get a verdict, so the mark carries their colour. */
+.pc-verdict-mark[data-q="high"],
+.pc-verdict-mark[data-q="medium"] {
   color: var(--q-high);
   border-color: color-mix(in srgb, var(--q-high) 55%, transparent);
 }
