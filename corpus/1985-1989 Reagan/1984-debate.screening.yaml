@@ -1,0 +1,54 @@
+# Screening ledger for 1984-debate.md (protocol v1).
+# Only Reagan's turns (speaker_label "The President") are screened.
+# Every trigger-matched sentence has a row. Ids shared with the other two
+# ledgers are further occurrences of the same promise; a soft restatement
+# of a firm promise is an occurrence of it.
+#
+# Added: ¶20.2 (joined with ¶20.3, "we certainly are going to do something
+# about that") and ¶38.4 ("We simply are going to provide a deterrent"),
+# where an adverb splits the trigger.
+#
+# Not candidates: ¶24.4 reports a 1981 executive order; ¶148.2 ("I predict
+# it'll be coming down") is a prediction. The topic headings of the
+# published transcript (e.g. ¶39.1, ¶100.1) are kept as published.
+source: 1984-debate
+protocol: 1
+rows:
+  - ref: "¶20.2-20.3"
+    decision: include
+    added: true
+    promises: [reagan-1984-cia-manual-action]
+    note: "\"That\" is the CIA manual for the contras (¶19.4-19.8)."
+  - { ref: "¶22.2", decision: include, promises: [reagan-1984-remove-guilty] }
+  - { ref: "¶30.2", decision: describe, note: "About his answer in the debate." }
+  - { ref: "¶30.3", decision: describe, note: "\"I will admit\" introduces a rebuttal." }
+  - { ref: "¶36.4", decision: describe, note: "States a necessity of coexistence; no act." }
+  - { ref: "¶36.7", decision: include, promises: [reagan-1984-not-change-soviet-system] }
+  - ref: "¶38.4"
+    decision: include
+    added: true
+    promises: [reagan-1984-deterrent]
+  - { ref: "¶41.2", decision: describe, note: "Declines a hypothetical question." }
+  - { ref: "¶42.4", decision: describe, note: "Declines a hypothetical question." }
+  - { ref: "¶42.5", decision: include, promises: [reagan-1984-no-troops] }
+  - { ref: "¶60.2", decision: describe, note: "About the debate." }
+  - { ref: "¶84.5", decision: include, promises: [reagan-1984-shoot-back] }
+  - { ref: "¶87.6", decision: include, promises: [reagan-1984-retaliate-terrorists] }
+  - ref: "¶95.3-95.5"
+    decision: include
+    promises: [reagan-1984-retaliate-terrorists]
+    note: "Three sentences on one commitment: retaliation, but only against those responsible."
+  - { ref: "¶99.1", decision: describe, note: "A joke about age in the campaign." }
+  - { ref: "¶99.2", decision: describe, note: "A joke about age in the campaign." }
+  - { ref: "¶139.5", decision: include, promises: [reagan-1984-employer-sanctions] }
+  - { ref: "¶140.1", decision: include, promises: [reagan-1984-immigration-bill] }
+  - { ref: "¶153.3", decision: describe, note: "Denies having said it." }
+  - { ref: "¶154.2", decision: describe, note: "Repeats an earlier statement; no act." }
+  - { ref: "¶159.4", decision: include, promises: [reagan-1984-share-defense], note: "Inside the offer he says he has made to the Soviet Union (¶159.2-159.5); \"it\" is a missile defense." }
+  - { ref: "¶173.3", decision: include, promises: [reagan-1984-share-defense] }
+  - { ref: "¶195.1", decision: describe, note: "About weighing an overthrow in the Philippines." }
+  - { ref: "¶204.2", decision: past, note: "Recalls his speech to the British Parliament." }
+  - { ref: "¶235.1", decision: include, promises: [reagan-1984-reduce-nuclear, reagan-1984-eliminate-nuclear] }
+  - { ref: "¶236.2", decision: describe, note: "Rhetorical question to voters." }
+  - { ref: "¶237.2", decision: describe, note: "Frames the election." }
+  - { ref: "¶241.1", decision: include, promises: [reagan-1984-unfinished-agenda] }

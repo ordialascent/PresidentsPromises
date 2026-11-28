@@ -1,0 +1,131 @@
+# Verdicts for Ronald Reagan's 1985-1989 term, judged under corpus/PROTOCOL.md §6.
+# One record per high or medium promise in promises.yaml. Deadline: 1989-01-20
+# unless the promise states another.
+#
+# Complete: high 2/2, medium 6/6.
+
+protocol: 1
+verdicts:
+
+  # ---- budget, taxes and economy ------------------------------------------
+
+  - promise: reagan-1984-freeze-budget
+    verdict: kept
+    as_of: 2026-11-28
+    summary: Two weeks after the inaugural he sent Congress the fiscal year 1986 budget, which proposed a one-year freeze in total spending other than debt service.
+    evidence:
+      - what: Message to the Congress Transmitting the Fiscal Year 1986 Budget ("The budget proposes a 1-year freeze in total spending other than debt service.")
+        url: https://www.presidency.ucsb.edu/documents/message-the-congress-transmitting-the-fiscal-year-1986-budget
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1985-02-04
+    uncertainty: { verdict: clear }
+
+  - promise: reagan-1984-keep-growth
+    verdict: kept
+    as_of: 2026-11-28
+    summary: Real GDP grew in every year of the term (4.2% in 1985, 3.5% in 1986, 3.5% in 1987, 4.2% in 1988) and in every quarter from 1985 to 1988; there was no recession.
+    evidence:
+      - what: Real gross domestic product, percent change from preceding year (A191RL1A225NBEA), 1985-1988
+        url: https://fred.stlouisfed.org/series/A191RL1A225NBEA
+        publisher: Federal Reserve Bank of St. Louis (FRED), from BEA data
+        date: 1989-01-27
+      - what: Real gross domestic product, percent change from preceding quarter (A191RL1Q225SBEA), 1985 Q1-1988 Q4 (lowest 1.8%, 1986 Q2)
+        url: https://fred.stlouisfed.org/series/A191RL1Q225SBEA
+        publisher: Federal Reserve Bank of St. Louis (FRED), from BEA data
+        date: 1989-01-27
+    uncertainty: { verdict: clear }
+
+  - promise: reagan-1984-balanced-budget-amendment
+    verdict: kept
+    as_of: 2026-11-28
+    summary: He asked Congress for a balanced budget amendment in the State of the Union addresses of 1986, 1987 and 1988.
+    evidence:
+      - what: Address Before a Joint Session of Congress on the State of the Union, 1986 ("we should lock in our gains with a balanced budget amendment to the Constitution")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1986-02-04
+      - what: Address Before a Joint Session of Congress on the State of the Union, 1987 ("pass a constitutional amendment that mandates a balanced budget")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union-1
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1987-01-27
+      - what: Address Before a Joint Session of Congress on the State of the Union, 1988 ("the line-item veto and balanced budget amendment")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union-0
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1988-01-25
+    uncertainty:
+      verdict: probable
+      note: The amendment never passed Congress. The promise is to fight for it, so the verdict rests on his requests; a reader who counts only success would call it broken.
+
+  - promise: reagan-1984-line-item-veto
+    verdict: kept
+    as_of: 2026-11-28
+    summary: He asked Congress for a line-item veto in the State of the Union addresses of 1985, 1986 and 1988.
+    evidence:
+      - what: Address Before a Joint Session of the Congress on the State of the Union, 1985 ("I hope you'll pass and send that legislation to my desk")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-5
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1985-02-06
+      - what: Address Before a Joint Session of Congress on the State of the Union, 1986 ("Give me a line-item veto this year")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1986-02-04
+      - what: Address Before a Joint Session of Congress on the State of the Union, 1988 ("Let's approve the line-item veto")
+        url: https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union-0
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1988-01-25
+    uncertainty:
+      verdict: probable
+      note: No line-item veto was enacted. The promise is to fight for it, so the verdict rests on his requests; a reader who counts only success would call it broken.
+
+  - promise: reagan-1984-stop-tax-increases
+    verdict: broken
+    as_of: 2026-11-28
+    summary: He signed the Omnibus Budget Reconciliation Act of 1987, whose Title X (the Revenue Act of 1987) raised revenue, among other things by extending the telephone excise tax and the top estate tax rates and by taxing some publicly traded partnerships as corporations.
+    attempt: none
+    evidence:
+      - what: Omnibus Budget Reconciliation Act of 1987, Pub. L. 100-203, Title X (Revenue Act of 1987), secs. 10211, 10401 and 10501
+        url: https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg1330.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1987-12-22
+    uncertainty:
+      verdict: probable
+      note: The 1986 tax reform was designed to be revenue-neutral and is not counted. Under the narrower reading (stopping the opponents' proposed increase), winning the election kept it.
+
+  # ---- foreign policy, defense and immigration -----------------------------
+
+  - promise: reagan-1984-meet-soviets
+    verdict: kept
+    as_of: 2026-11-28
+    summary: He met General Secretary Gorbachev in Geneva in November 1985, and the two issued a joint statement committing to faster nuclear arms negotiations.
+    evidence:
+      - what: Remarks on Issuing the Joint Soviet-United States Statement on the Summit Meeting in Geneva
+        url: https://www.presidency.ucsb.edu/documents/remarks-issuing-the-joint-soviet-united-states-statement-the-summit-meeting-geneva
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1985-11-21
+    uncertainty: { verdict: clear }
+
+  - promise: reagan-1984-reduce-nuclear
+    verdict: kept
+    as_of: 2026-11-28
+    summary: The Intermediate-Range Nuclear Forces Treaty, which eliminates all US and Soviet intermediate- and shorter-range missiles, entered into force when he and Gorbachev exchanged the instruments of ratification in Moscow on 1 June 1988.
+    evidence:
+      - what: Joint Statement Following the Soviet-United States Summit Meeting in Moscow (protocol on the exchange of instruments of ratification of the INF Treaty)
+        url: https://www.presidency.ucsb.edu/documents/joint-statement-following-the-soviet-united-states-summit-meeting-moscow
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1988-06-01
+      - what: Message to the Senate Transmitting the Soviet-United States Intermediate-Range Nuclear Forces Treaty
+        url: https://www.presidency.ucsb.edu/documents/message-the-senate-transmitting-the-soviet-united-states-intermediate-range-nuclear-forces
+        publisher: Gerhard Peters and John T. Woolley, The American Presidency Project
+        date: 1988-01-25
+    uncertainty: { verdict: clear }
+
+  - promise: reagan-1984-immigration-bill
+    verdict: kept
+    as_of: 2026-11-28
+    summary: He signed the Immigration Reform and Control Act of 1986, which made hiring unauthorized immigrants unlawful, funded more enforcement and gave legal status to long-term residents.
+    evidence:
+      - what: Immigration Reform and Control Act of 1986, Pub. L. 99-603, Title I (control of illegal immigration; sec. 101, control of unlawful employment of aliens)
+        url: https://www.govinfo.gov/content/pkg/STATUTE-100/pdf/STATUTE-100-Pg3445.pdf
+        publisher: govinfo (U.S. Government Publishing Office)
+        date: 1986-11-06
+    uncertainty: { verdict: clear }

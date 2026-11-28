@@ -1,0 +1,33 @@
+# Screening ledger for 1985-inaugural.md (protocol v1).
+# Every trigger-matched sentence has a row. Ids shared with the other two
+# ledgers are further occurrences of the same promise; a soft restatement
+# of a firm promise is an occurrence of it.
+#
+# Not candidates: "Let us …" sentences (¶26.4 on a balanced budget
+# amendment, ¶28.4, ¶29.1) ask the whole country to act and match no
+# trigger. ¶25.7 ("It must be done by all of us …"), ¶32.3 ("There must be
+# no wavering …") and ¶33.3-33.4 ("we seek … to reduce their number") carry
+# no trigger and are not stated in the future tense.
+source: 1985-inaugural
+protocol: 1
+rows:
+  - { ref: "¶6.2", decision: include, promises: [reagan-1984-deserve-trust] }
+  - { ref: "¶13.3", decision: include, promises: [reagan-1984-freedom-for-all] }
+  - { ref: "¶15.2", decision: include, promises: [reagan-1984-do-right] }
+  - ref: "¶20.2-20.3"
+    decision: include
+    promises: [reagan-1984-restrain-spending]
+    note: "¶20.3 names the errors of ¶20.2; joined."
+  - { ref: "¶22.1", decision: include, promises: [reagan-1984-simplify-taxes, reagan-1984-lower-tax-rates] }
+  - { ref: "¶22.2", decision: include, promises: [reagan-1984-work-for-all] }
+  - ref: "¶23.1-23.2"
+    decision: include
+    promises: [reagan-1984-revive-distressed-areas]
+    note: "\"This\" in ¶23.2 is the drive of ¶23.1; joined."
+  - { ref: "¶26.1", decision: include, promises: [reagan-1984-freeze-budget] }
+  - ref: "¶26.2-26.3"
+    decision: include
+    promises: [reagan-1984-control-tax-and-spend]
+    note: "Two sentences on one aim; joined."
+  - { ref: "¶30.1", decision: describe, note: "Refers back to the speech itself." }
+  - { ref: "¶35.5", decision: include, promises: [reagan-1984-meet-soviets] }

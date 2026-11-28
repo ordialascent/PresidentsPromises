@@ -1,0 +1,554 @@
+# Promises and ambitions of Ronald Reagan's 1985-1989 term, extracted under
+# corpus/PROTOCOL.md (protocol 1) from three sources: the 1984 acceptance
+# speech, the 1984 final debate (Reagan's turns) and the 1985 inaugural.
+# Every source occurrence is named by an include row in that source's
+# screening ledger (<year>-<kind>.screening.yaml); `npm run validate` checks both.
+#
+# 22 promises (high 2, medium 6, low 14)
+# 9 ambitions (high 2, medium 1, low 6)
+# Deadlines default to the end of the term (1989-01-20).
+
+protocol: 1
+promises:
+  # ---- inaugural ----------------------------------------------------------
+  - id: reagan-1984-deserve-trust
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶6.2
+      quote: "I'll do my utmost to be deserving of your trust."
+    restatement: "Do his utmost to deserve the people's trust."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-freedom-for-all
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶13.3
+      quote: "We will not rest until every American enjoys the fullness of freedom, dignity, and opportunity as our birthright."
+    restatement: "Keep working until every American enjoys full freedom, dignity and opportunity."
+    type: ongoing
+    theme: rights
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-do-right
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶15.2
+      quote: "We must do what we know is right, and do it with all our might."
+    restatement: "Do what is right, with all the country's might."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"We\" is the nation; read as including the government he leads."
+    links: []
+
+  - id: reagan-1984-restrain-spending
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶20.2-20.3
+      quote: "We must never again abuse the trust of working men and women by sending their earnings on a futile chase after the spiraling demands of a bloated Federal Establishment."
+    restatement: "Stop feeding the growing demands of the federal government with workers' earnings."
+    type: ongoing
+    theme: budget
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-simplify-taxes
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶80.2
+      quote: "We intend to simplify the entire tax system—to make taxes more fair, easier to understand"
+    - in: inaugural
+      ref: ¶22.1
+      quote: "We must simplify our tax system, make it more fair"
+    restatement: "Simplify the tax system and make it fairer."
+    group: reagan-1984-tax-reform
+    type: action
+    theme: taxes
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: medium
+      object: the federal income tax system
+      record: enacted legislation (Statutes at Large)
+      criterion: a law that simplifies the income tax is enacted
+      ambiguity: "\"Simplify\" and \"more fair\" are not defined; a law that cuts the number of brackets and removes deductions counts."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-lower-tax-rates
+    kind: ambition
+    sources:
+    - in: acceptance
+      ref: ¶80.2
+      quote: "bring the tax rates of every American further down, not up."
+    - in: inaugural
+      ref: ¶22.1
+      quote: "bring the rates down for all who work and earn."
+    restatement: "Lower every American's income tax rate."
+    group: reagan-1984-tax-reform
+    type: action
+    theme: taxes
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: high
+      object: federal income tax rates
+      record: enacted legislation (Statutes at Large); IRS rate schedules
+      criterion: a law lowers the income tax rate of every bracket
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-work-for-all
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶22.2
+      quote: "We must think anew and move with a new boldness, so every American who seeks work can find work"
+    restatement: "Work so that every American who seeks work can find it."
+    type: outcome
+    theme: economy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-revive-distressed-areas
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶23.1-23.2
+      quote: "The time has come for a new American emancipation—a great national drive to tear down economic barriers and liberate the spirit of enterprise in the most distressed areas of our country."
+    restatement: "A national drive to remove economic barriers in the most distressed areas."
+    type: ongoing
+    theme: economy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "The speech names no measure; it may mean his enterprise zones bill (acceptance ¶71.1), but does not say so."
+    links: []
+
+  - id: reagan-1984-freeze-budget
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶26.1
+      quote: "I will shortly submit a budget to the Congress aimed at freezing government program spending for the next year."
+    restatement: "Send Congress a budget that freezes program spending for a year."
+    type: action
+    theme: budget
+    deadline: { stated: "shortly", applied: 1989-01-20 }
+    verifiability:
+      level: high
+      object: the President's budget for fiscal year 1986
+      record: the budget message and budget documents sent to Congress
+      criterion: the President submits a budget that proposes freezing program spending for one year
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-control-tax-and-spend
+    kind: ambition
+    sources:
+    - in: inaugural
+      ref: ¶26.2-26.3
+      quote: "Beyond this, we must take further steps to permanently control government's power to tax and spend."
+    restatement: "Permanently limit the government's power to tax and spend."
+    type: action
+    theme: budget
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-meet-soviets
+    kind: promise
+    sources:
+    - in: inaugural
+      ref: ¶35.5
+      quote: "We will meet with the Soviets, hoping that we can agree on a way to rid the world of the threat of nuclear destruction."
+    restatement: "Meet with the Soviet Union on ending the nuclear threat."
+    type: action
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: high
+      object: talks between the United States and the Soviet Union on nuclear arms
+      record: the President's public papers; joint statements
+      criterion: the United States and the Soviet Union meet to negotiate on nuclear arms
+    uncertainty: { extraction: clear }
+    links: []
+
+  # ---- acceptance ---------------------------------------------------------
+  - id: reagan-1984-keep-growth
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶35.2
+      quote: "we're going to keep the mighty engine of this nation revved up."
+    restatement: "Keep the economy growing."
+    type: outcome
+    theme: economy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: medium
+      object: the US economy
+      record: real GDP (Bureau of Economic Analysis)
+      criterion: real GDP keeps growing through the term
+      ambiguity: "\"Revved up\" names no rate; read as real GDP growing in every year of the term, with no recession."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-israel
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶38.2
+      quote: "And we shall always maintain our pledge never to sell out one of our closest friends, the State of Israel."
+    restatement: "Never sell out Israel."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-stand-by-friends
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶39.3
+      quote: "We are not going to betray our friends, reward the enemies of freedom, or permit fear and retreat to become American policies—especially in this hemisphere."
+    restatement: "Not betray allies, reward enemies of freedom or retreat, especially in the Americas."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-unfinished-agenda
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶55.2
+      quote: "And that administration will be committed to completing the unfinished agenda that we've placed before the Congress and the Nation."
+    - in: debate
+      ref: ¶241.1
+      quote: "I want more than anything else to try to complete the new beginning that we charted 4 years ago."
+    restatement: "Complete the agenda of his first term."
+    type: ongoing
+    theme: government
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "The agenda is not listed; the speech goes on to name several bills (¶58.6-71.1)."
+    links: []
+
+  - id: reagan-1984-balanced-budget-amendment
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶58.6
+      quote: "We will continue to fight for that amendment, mandating that government spend no more than government takes in."
+    restatement: "Keep pressing Congress for a balanced budget amendment."
+    type: ongoing
+    theme: budget
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: medium
+      object: a balanced budget amendment to the Constitution
+      record: the President's public papers (State of the Union addresses, messages to Congress)
+      criterion: the President keeps asking Congress to pass a balanced budget amendment through the term
+      ambiguity: "\"Fight for\" names effort, not success; read as asking Congress for the amendment in public addresses through the term."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-line-item-veto
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶59.1
+      quote: "And we will fight, as the Vice President told you, for the right of a President to veto items in appropriations bills without having to veto the entire bill."
+    restatement: "Keep pressing Congress for a line-item veto."
+    type: ongoing
+    theme: budget
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: medium
+      object: a line-item veto for the President
+      record: the President's public papers (State of the Union addresses, messages to Congress)
+      criterion: the President keeps asking Congress for a line-item veto through the term
+      ambiguity: "\"Fight for\" names effort, not success; read as asking Congress for it in public addresses through the term."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-stop-tax-increases
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶74.1
+      quote: "We are committed to stopping them, and we will."
+    restatement: "Stop any increase in the tax burden."
+    type: ongoing
+    theme: taxes
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: medium
+      object: federal tax law
+      record: enacted legislation (Statutes at Large)
+      criterion: no law that raises federal taxes on net is enacted during the term
+      ambiguity: "\"Them\" are the opponents and their plan to raise the tax burden (¶72.1); read as no net tax increase becoming law during the term."
+    uncertainty:
+      extraction: probable
+      note: "\"Them\" refers back to ¶72.1; the object is taken from there."
+    links: []
+
+  - id: reagan-1984-progrowth-taxes
+    kind: promise
+    sources:
+    - in: acceptance
+      ref: ¶80.1
+      quote: "Our tax policies are and will remain prowork, progrowth, and profamily."
+    restatement: "Keep tax policy pro-work, pro-growth and pro-family."
+    type: ongoing
+    theme: taxes
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  # ---- debate -------------------------------------------------------------
+  - id: reagan-1984-cia-manual-action
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶20.2-20.3
+      quote: "We'll take the proper action at the proper time."
+    restatement: "Take proper action on the CIA manual for the contras once the investigation is done."
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-remove-guilty
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶22.2
+      quote: "But if guilt is established, whoever is guilty we will treat with that situation then, and they will be removed."
+    restatement: "Remove whoever is found guilty over the CIA manual."
+    type: action
+    theme: government
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Conditional on guilt being established; CIA personnel actions are not a public record."
+    links: []
+
+  - id: reagan-1984-not-change-soviet-system
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶36.7
+      quote: "And we're not going to change their system, and they sure better not try to change ours."
+    restatement: "Not try to change the Soviet system."
+    type: ongoing
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Could also be read as a prediction (\"we're not going to be able to\"); read as a stance."
+    links: []
+
+  - id: reagan-1984-deterrent
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶38.4
+      quote: "We simply are going to provide a deterrent so that it will be too costly for them if they are nursing any ideas of aggression against us."
+    restatement: "Keep a deterrent strong enough to make Soviet aggression too costly."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-no-troops
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶42.5
+      quote: "I don't want to send troops any place."
+    restatement: "Not send troops anywhere."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-shoot-back
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶84.5
+      quote: "I will never send troops anywhere on a mission of that kind without telling them that if somebody shoots at them, they can darn well shoot back."
+    restatement: "Always let troops on peace missions fire back when fired upon."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-retaliate-terrorists
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶95.3-95.5
+      quote: "We are going to, as I say, we're busy trying to find the centers where these operations stem from, and retaliation will be taken."
+    - in: debate
+      ref: ¶87.6
+      quote: "In dealing with terrorists, yes, we want to retaliate, but only if we can put our finger on the people responsible and not endanger the lives of innocent civilians"
+    restatement: "Retaliate against terrorists, but only against those responsible."
+    type: ongoing
+    theme: defense
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "\"These operations\" are the Beirut bombings of ¶94-95; it is not clear whether the promise covers terrorism in general."
+    links: []
+
+  - id: reagan-1984-employer-sanctions
+    kind: ambition
+    sources:
+    - in: debate
+      ref: ¶139.5
+      quote: "With regard to the employer sanctions, we must have that"
+    restatement: "Penalties for employers who hire people who are in the country illegally."
+    type: action
+    theme: immigration
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: high
+      object: sanctions on employers of unauthorized immigrants
+      record: enacted legislation (Statutes at Large)
+      criterion: a law that penalizes employers for hiring unauthorized immigrants is enacted
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-immigration-bill
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶140.1
+      quote: "I'm going to do everything I can, and all of us in the administration are, to join in again when Congress is back at it to get an immigration bill that will give us, once again, control of our borders."
+    restatement: "Get an immigration bill enacted to regain control of the borders."
+    type: action
+    theme: immigration
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: medium
+      object: an immigration reform law
+      record: enacted legislation (Statutes at Large)
+      criterion: an immigration law aimed at control of illegal immigration is enacted
+      ambiguity: "Whether a law \"gives control of our borders\" is a judgement; read as a law enacted with the enforcement measures he names (employer sanctions, ¶139.5)."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-share-defense
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶173.3
+      quote: "Now, if you're willing to join us in getting rid of all the nuclear weapons in the world, then we'll give you this one, so that we would both know that no one can cheat"
+    - in: debate
+      ref: ¶159.4
+      quote: "We'll even give it to you."
+    restatement: "Share a missile defense with the Soviet Union if it agrees to eliminate nuclear weapons."
+    type: action
+    theme: defense
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty:
+      extraction: probable
+      note: "Conditional on a defense being found and on Soviet agreement; quoted as what he would say to the Soviets."
+    links: []
+
+  - id: reagan-1984-reduce-nuclear
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶235.1
+      quote: "I am grateful for the chance to reaffirm my commitment to reduce nuclear weapons"
+    restatement: "Reduce nuclear weapons."
+    group: reagan-1984-nuclear-commitment
+    type: action
+    theme: foreign-policy
+    deadline: { stated: null, applied: 1989-01-20 }
+    verifiability:
+      level: medium
+      object: nuclear weapons of the United States and the Soviet Union
+      record: treaties in force; the President's public papers
+      criterion: an agreement that reduces nuclear weapons enters into force
+      ambiguity: "\"Reduce\" names no number or means; read as an arms agreement that cuts nuclear weapons entering into force by the deadline."
+    uncertainty: { extraction: clear }
+    links: []
+
+  - id: reagan-1984-eliminate-nuclear
+    kind: promise
+    sources:
+    - in: debate
+      ref: ¶235.1
+      quote: "one day, to eliminate them entirely."
+    restatement: "One day eliminate nuclear weapons entirely."
+    group: reagan-1984-nuclear-commitment
+    type: outcome
+    theme: foreign-policy
+    deadline: { stated: "one day", applied: 1989-01-20 }
+    verifiability:
+      level: low
+    uncertainty: { extraction: clear }
+    links: []

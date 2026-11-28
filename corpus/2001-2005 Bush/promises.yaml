@@ -603,7 +603,9 @@ promises:
       ambiguity: '"Work to reduce" and "nuclear tension" are open; a reduction of US deployed warheads is read as kept, "tension" is not judged.'
     uncertainty:
       extraction: clear
-    links: []
+    links:
+    - kind: shared
+      to: reagan-1984-reduce-nuclear
 
   - id: bush-2000-missile-defense
     kind: promise
