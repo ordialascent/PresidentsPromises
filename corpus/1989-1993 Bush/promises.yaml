@@ -833,7 +833,9 @@ promises:
       record: "Statutes at Large; Congress.gov"
       criterion: "a law or amendment giving the President a line-item veto is enacted"
     uncertainty: { extraction: clear }
-    links: []
+    links:
+    - kind: shared
+      to: reagan-1984-line-item-veto
 
   - id: bush-1988-restrain-spending
     kind: ambition

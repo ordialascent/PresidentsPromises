@@ -131,6 +131,1874 @@ export interface CorpusTerm {
 /** Every term with its aggregated promise set, oldest first. */
 export const CORPUS_TERMS: CorpusTerm[] = [
   {
+    "key": "1985-1989 Reagan",
+    "name": "Ronald Reagan",
+    "surname": "Reagan",
+    "from": 1985,
+    "to": 1989,
+    "termLabel": "1985–1989",
+    "speechYear": 1984,
+    "label": "Reagan 1984",
+    "screening": {
+      "include": 33,
+      "others": 0,
+      "past": 1,
+      "describe": 19,
+      "conditional": 0,
+      "attack": 1,
+      "ceremony": 1
+    },
+    "screenedAdded": 5,
+    "promises": [
+      {
+        "id": "reagan-1984-deserve-trust",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Do his utmost to deserve the people's trust.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶6.2",
+            "quote": "I'll do my utmost to be deserving of your trust.",
+            "context": "I'll do my utmost to be deserving of your trust.",
+            "mark": [
+              0,
+              48
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-freedom-for-all",
+        "kind": "promise",
+        "theme": "rights",
+        "restatement": "Keep working until every American enjoys full freedom, dignity and opportunity.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶13.3",
+            "quote": "We will not rest until every American enjoys the fullness of freedom, dignity, and opportunity as our birthright.",
+            "context": "We will not rest until every American enjoys the fullness of freedom, dignity, and opportunity as our birthright.",
+            "mark": [
+              0,
+              113
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-freeze-budget",
+        "kind": "promise",
+        "theme": "budget",
+        "restatement": "Send Congress a budget that freezes program spending for a year.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶26.1",
+            "quote": "I will shortly submit a budget to the Congress aimed at freezing government program spending for the next year.",
+            "context": "I will shortly submit a budget to the Congress aimed at freezing government program spending for the next year.",
+            "mark": [
+              0,
+              111
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": "shortly",
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "the President's budget for fiscal year 1986",
+            "record": "the budget message and budget documents sent to Congress",
+            "criterion": "the President submits a budget that proposes freezing program spending for one year",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-28",
+          "summary": "Two weeks after the inaugural he sent Congress the fiscal year 1986 budget, which proposed a one-year freeze in total spending other than debt service.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Message to the Congress Transmitting the Fiscal Year 1986 Budget (\"The budget proposes a 1-year freeze in total spending other than debt service.\")",
+              "url": "https://www.presidency.ucsb.edu/documents/message-the-congress-transmitting-the-fiscal-year-1986-budget",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1985-02-04",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-meet-soviets",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Meet with the Soviet Union on ending the nuclear threat.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶35.5",
+            "quote": "We will meet with the Soviets, hoping that we can agree on a way to rid the world of the threat of nuclear destruction.",
+            "context": "We will meet with the Soviets, hoping that we can agree on a way to rid the world of the threat of nuclear destruction.",
+            "mark": [
+              0,
+              119
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "talks between the United States and the Soviet Union on nuclear arms",
+            "record": "the President's public papers; joint statements",
+            "criterion": "the United States and the Soviet Union meet to negotiate on nuclear arms",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-28",
+          "summary": "He met General Secretary Gorbachev in Geneva in November 1985, and the two issued a joint statement committing to faster nuclear arms negotiations.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Remarks on Issuing the Joint Soviet-United States Statement on the Summit Meeting in Geneva",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-issuing-the-joint-soviet-united-states-statement-the-summit-meeting-geneva",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1985-11-21",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-keep-growth",
+        "kind": "promise",
+        "theme": "economy",
+        "restatement": "Keep the economy growing.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶35.2",
+            "quote": "we're going to keep the mighty engine of this nation revved up.",
+            "context": "Well, if we have, it is that we're going to keep the mighty engine of this nation revved up.",
+            "mark": [
+              29,
+              92
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the US economy",
+            "record": "real GDP (Bureau of Economic Analysis)",
+            "criterion": "real GDP keeps growing through the term",
+            "ambiguity": "\"Revved up\" names no rate; read as real GDP growing in every year of the term, with no recession."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-28",
+          "summary": "Real GDP grew in every year of the term (4.2% in 1985, 3.5% in 1986, 3.5% in 1987, 4.2% in 1988) and in every quarter from 1985 to 1988; there was no recession.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Real gross domestic product, percent change from preceding year (A191RL1A225NBEA), 1985-1988",
+              "url": "https://fred.stlouisfed.org/series/A191RL1A225NBEA",
+              "publisher": "Federal Reserve Bank of St. Louis (FRED), from BEA data",
+              "date": "1989-01-27",
+              "secondary": false
+            },
+            {
+              "what": "Real gross domestic product, percent change from preceding quarter (A191RL1Q225SBEA), 1985 Q1-1988 Q4 (lowest 1.8%, 1986 Q2)",
+              "url": "https://fred.stlouisfed.org/series/A191RL1Q225SBEA",
+              "publisher": "Federal Reserve Bank of St. Louis (FRED), from BEA data",
+              "date": "1989-01-27",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-israel",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Never sell out Israel.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶38.2",
+            "quote": "And we shall always maintain our pledge never to sell out one of our closest friends, the State of Israel.",
+            "context": "And we shall always maintain our pledge never to sell out one of our closest friends, the State of Israel.",
+            "mark": [
+              0,
+              106
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-stand-by-friends",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Not betray allies, reward enemies of freedom or retreat, especially in the Americas.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶39.3",
+            "quote": "We are not going to betray our friends, reward the enemies of freedom, or permit fear and retreat to become American policies—especially in this hemisphere.",
+            "context": "Our policy is simple: We are not going to betray our friends, reward the enemies of freedom, or permit fear and retreat to become American policies—especially in this hemisphere.",
+            "mark": [
+              22,
+              178
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-unfinished-agenda",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Complete the agenda of his first term.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶55.2",
+            "quote": "And that administration will be committed to completing the unfinished agenda that we've placed before the Congress and the Nation.",
+            "context": "And that administration will be committed to completing the unfinished agenda that we've placed before the Congress and the Nation.",
+            "mark": [
+              0,
+              131
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶241.1",
+            "quote": "I want more than anything else to try to complete the new beginning that we charted 4 years ago.",
+            "context": "You know, I am grateful to all of you for giving me the opportunity to serve you for these 4 years, and I seek reelection because I want more than anything else to try to complete the new beginning that we charted 4 years ago.",
+            "mark": [
+              130,
+              226
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The agenda is not listed; the speech goes on to name several bills (¶58.6-71.1)."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-balanced-budget-amendment",
+        "kind": "promise",
+        "theme": "budget",
+        "restatement": "Keep pressing Congress for a balanced budget amendment.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶58.6",
+            "quote": "We will continue to fight for that amendment, mandating that government spend no more than government takes in.",
+            "context": "We will continue to fight for that amendment, mandating that government spend no more than government takes in.",
+            "mark": [
+              0,
+              111
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a balanced budget amendment to the Constitution",
+            "record": "the President's public papers (State of the Union addresses, messages to Congress)",
+            "criterion": "the President keeps asking Congress to pass a balanced budget amendment through the term",
+            "ambiguity": "\"Fight for\" names effort, not success; read as asking Congress for the amendment in public addresses through the term."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-28",
+          "summary": "He asked Congress for a balanced budget amendment in the State of the Union addresses of 1986, 1987 and 1988.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Address Before a Joint Session of Congress on the State of the Union, 1986 (\"we should lock in our gains with a balanced budget amendment to the Constitution\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1986-02-04",
+              "secondary": false
+            },
+            {
+              "what": "Address Before a Joint Session of Congress on the State of the Union, 1987 (\"pass a constitutional amendment that mandates a balanced budget\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union-1",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1987-01-27",
+              "secondary": false
+            },
+            {
+              "what": "Address Before a Joint Session of Congress on the State of the Union, 1988 (\"the line-item veto and balanced budget amendment\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union-0",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1988-01-25",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "The amendment never passed Congress. The promise is to fight for it, so the verdict rests on his requests; a reader who counts only success would call it broken."
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-line-item-veto",
+        "kind": "promise",
+        "theme": "budget",
+        "restatement": "Keep pressing Congress for a line-item veto.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶59.1",
+            "quote": "And we will fight, as the Vice President told you, for the right of a President to veto items in appropriations bills without having to veto the entire bill.",
+            "context": "And we will fight, as the Vice President told you, for the right of a President to veto items in appropriations bills without having to veto the entire bill.",
+            "mark": [
+              0,
+              157
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "a line-item veto for the President",
+            "record": "the President's public papers (State of the Union addresses, messages to Congress)",
+            "criterion": "the President keeps asking Congress for a line-item veto through the term",
+            "ambiguity": "\"Fight for\" names effort, not success; read as asking Congress for it in public addresses through the term."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-28",
+          "summary": "He asked Congress for a line-item veto in the State of the Union addresses of 1985, 1986 and 1988.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Address Before a Joint Session of the Congress on the State of the Union, 1985 (\"I hope you'll pass and send that legislation to my desk\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-5",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1985-02-06",
+              "secondary": false
+            },
+            {
+              "what": "Address Before a Joint Session of Congress on the State of the Union, 1986 (\"Give me a line-item veto this year\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1986-02-04",
+              "secondary": false
+            },
+            {
+              "what": "Address Before a Joint Session of Congress on the State of the Union, 1988 (\"Let's approve the line-item veto\")",
+              "url": "https://www.presidency.ucsb.edu/documents/address-before-joint-session-congress-the-state-the-union-0",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1988-01-25",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "No line-item veto was enacted. The promise is to fight for it, so the verdict rests on his requests; a reader who counts only success would call it broken."
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-stop-tax-increases",
+        "kind": "promise",
+        "theme": "taxes",
+        "restatement": "Stop any increase in the tax burden.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶74.1",
+            "quote": "We are committed to stopping them, and we will.",
+            "context": "We are committed to stopping them, and we will.",
+            "mark": [
+              0,
+              47
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "federal tax law",
+            "record": "enacted legislation (Statutes at Large)",
+            "criterion": "no law that raises federal taxes on net is enacted during the term",
+            "ambiguity": "\"Them\" are the opponents and their plan to raise the tax burden (¶72.1); read as no net tax increase becoming law during the term."
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"Them\" refers back to ¶72.1; the object is taken from there."
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "broken",
+          "asOf": "2026-11-28",
+          "summary": "He signed the Omnibus Budget Reconciliation Act of 1987, whose Title X (the Revenue Act of 1987) raised revenue, among other things by extending the telephone excise tax and the top estate tax rates and by taxing some publicly traded partnerships as corporations.",
+          "attempt": "none",
+          "review": null,
+          "evidence": [
+            {
+              "what": "Omnibus Budget Reconciliation Act of 1987, Pub. L. 100-203, Title X (Revenue Act of 1987), secs. 10211, 10401 and 10501",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg1330.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1987-12-22",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "probable",
+            "note": "The 1986 tax reform was designed to be revenue-neutral and is not counted. Under the narrower reading (stopping the opponents' proposed increase), winning the election kept it."
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-progrowth-taxes",
+        "kind": "promise",
+        "theme": "taxes",
+        "restatement": "Keep tax policy pro-work, pro-growth and pro-family.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶80.1",
+            "quote": "Our tax policies are and will remain prowork, progrowth, and profamily.",
+            "context": "Our tax policies are and will remain prowork, progrowth, and profamily.",
+            "mark": [
+              0,
+              71
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-cia-manual-action",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Take proper action on the CIA manual for the contras once the investigation is done.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶20.2-20.3",
+            "quote": "We'll take the proper action at the proper time.",
+            "context": "And as soon as we have an investigation and find out where any blame lies for the few that did not get excised or changed, we certainly are going to do something about that. We'll take the proper action at the proper time.",
+            "mark": [
+              174,
+              222
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-remove-guilty",
+        "kind": "promise",
+        "theme": "government",
+        "restatement": "Remove whoever is found guilty over the CIA manual.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶22.2",
+            "quote": "But if guilt is established, whoever is guilty we will treat with that situation then, and they will be removed.",
+            "context": "But if guilt is established, whoever is guilty we will treat with that situation then, and they will be removed.",
+            "mark": [
+              0,
+              112
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Conditional on guilt being established; CIA personnel actions are not a public record."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-not-change-soviet-system",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Not try to change the Soviet system.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶36.7",
+            "quote": "And we're not going to change their system, and they sure better not try to change ours.",
+            "context": "And we're not going to change their system, and they sure better not try to change ours.",
+            "mark": [
+              0,
+              88
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Could also be read as a prediction (\"we're not going to be able to\"); read as a stance."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-deterrent",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Keep a deterrent strong enough to make Soviet aggression too costly.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶38.4",
+            "quote": "We simply are going to provide a deterrent so that it will be too costly for them if they are nursing any ideas of aggression against us.",
+            "context": "We simply are going to provide a deterrent so that it will be too costly for them if they are nursing any ideas of aggression against us.",
+            "mark": [
+              0,
+              137
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-shoot-back",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Always let troops on peace missions fire back when fired upon.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶84.5",
+            "quote": "I will never send troops anywhere on a mission of that kind without telling them that if somebody shoots at them, they can darn well shoot back.",
+            "context": "I will never send troops anywhere on a mission of that kind without telling them that if somebody shoots at them, they can darn well shoot back.",
+            "mark": [
+              0,
+              144
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-retaliate-terrorists",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Retaliate against terrorists, but only against those responsible.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶95.3-95.5",
+            "quote": "We are going to, as I say, we're busy trying to find the centers where these operations stem from, and retaliation will be taken.",
+            "context": "We are going to, as I say, we're busy trying to find the centers where these operations stem from, and retaliation will be taken. But we're not going to simply kill some people to say, \"Oh, look, we got even.\" We want to know when we retaliate that we're retaliating with those who are responsible for the terrorist acts.",
+            "mark": [
+              0,
+              129
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶87.6",
+            "quote": "In dealing with terrorists, yes, we want to retaliate, but only if we can put our finger on the people responsible and not endanger the lives of innocent civilians",
+            "context": "In dealing with terrorists, yes, we want to retaliate, but only if we can put our finger on the people responsible and not endanger the lives of innocent civilians there in the various communities and in the city of Beirut where these terrorists are operating.",
+            "mark": [
+              0,
+              163
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"These operations\" are the Beirut bombings of ¶94-95; it is not clear whether the promise covers terrorism in general."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-immigration-bill",
+        "kind": "promise",
+        "theme": "immigration",
+        "restatement": "Get an immigration bill enacted to regain control of the borders.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶140.1",
+            "quote": "I'm going to do everything I can, and all of us in the administration are, to join in again when Congress is back at it to get an immigration bill that will give us, once again, control of our borders.",
+            "context": "And this was why the provisions that we had in with regard to sanctions, and so forth—and I'm going to do everything I can, and all of us in the administration are, to join in again when Congress is back at it to get an immigration bill that will give us, once again, control of our borders.",
+            "mark": [
+              90,
+              291
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "an immigration reform law",
+            "record": "enacted legislation (Statutes at Large)",
+            "criterion": "an immigration law aimed at control of illegal immigration is enacted",
+            "ambiguity": "Whether a law \"gives control of our borders\" is a judgement; read as a law enacted with the enforcement measures he names (employer sanctions, ¶139.5)."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-28",
+          "summary": "He signed the Immigration Reform and Control Act of 1986, which made hiring unauthorized immigrants unlawful, funded more enforcement and gave legal status to long-term residents.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Immigration Reform and Control Act of 1986, Pub. L. 99-603, Title I (control of illegal immigration; sec. 101, control of unlawful employment of aliens)",
+              "url": "https://www.govinfo.gov/content/pkg/STATUTE-100/pdf/STATUTE-100-Pg3445.pdf",
+              "publisher": "govinfo (U.S. Government Publishing Office)",
+              "date": "1986-11-06",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-share-defense",
+        "kind": "promise",
+        "theme": "defense",
+        "restatement": "Share a missile defense with the Soviet Union if it agrees to eliminate nuclear weapons.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶173.3",
+            "quote": "Now, if you're willing to join us in getting rid of all the nuclear weapons in the world, then we'll give you this one, so that we would both know that no one can cheat",
+            "context": "Now, if you're willing to join us in getting rid of all the nuclear weapons in the world, then we'll give you this one, so that we would both know that no one can cheat; that we're both got something that if anyone tries to cheat .... \"",
+            "mark": [
+              0,
+              168
+            ]
+          },
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶159.4",
+            "quote": "We'll even give it to you.",
+            "context": "We'll even give it to you.",
+            "mark": [
+              0,
+              26
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "Conditional on a defense being found and on Soviet agreement; quoted as what he would say to the Soviets."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-reduce-nuclear",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "Reduce nuclear weapons.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶235.1",
+            "quote": "I am grateful for the chance to reaffirm my commitment to reduce nuclear weapons",
+            "context": "I am grateful for the chance to reaffirm my commitment to reduce nuclear weapons and, one day, to eliminate them entirely.",
+            "mark": [
+              0,
+              80
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "reagan-1984-nuclear-commitment",
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "nuclear weapons of the United States and the Soviet Union",
+            "record": "treaties in force; the President's public papers",
+            "criterion": "an agreement that reduces nuclear weapons enters into force",
+            "ambiguity": "\"Reduce\" names no number or means; read as an arms agreement that cuts nuclear weapons entering into force by the deadline."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": {
+          "verdict": "kept",
+          "asOf": "2026-11-28",
+          "summary": "The Intermediate-Range Nuclear Forces Treaty, which eliminates all US and Soviet intermediate- and shorter-range missiles, entered into force when he and Gorbachev exchanged the instruments of ratification in Moscow on 1 June 1988.",
+          "attempt": null,
+          "review": null,
+          "evidence": [
+            {
+              "what": "Joint Statement Following the Soviet-United States Summit Meeting in Moscow (protocol on the exchange of instruments of ratification of the INF Treaty)",
+              "url": "https://www.presidency.ucsb.edu/documents/joint-statement-following-the-soviet-united-states-summit-meeting-moscow",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1988-06-01",
+              "secondary": false
+            },
+            {
+              "what": "Message to the Senate Transmitting the Soviet-United States Intermediate-Range Nuclear Forces Treaty",
+              "url": "https://www.presidency.ucsb.edu/documents/message-the-senate-transmitting-the-soviet-united-states-intermediate-range-nuclear-forces",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "date": "1988-01-25",
+              "secondary": false
+            }
+          ],
+          "uncertainty": {
+            "verdict": "clear",
+            "note": null
+          }
+        }
+      },
+      {
+        "id": "reagan-1984-eliminate-nuclear",
+        "kind": "promise",
+        "theme": "foreign-policy",
+        "restatement": "One day eliminate nuclear weapons entirely.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶235.1",
+            "quote": "one day, to eliminate them entirely.",
+            "context": "I am grateful for the chance to reaffirm my commitment to reduce nuclear weapons and, one day, to eliminate them entirely.",
+            "mark": [
+              86,
+              122
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": "reagan-1984-nuclear-commitment",
+          "deadline": {
+            "stated": "one day",
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      }
+    ],
+    "ambitions": [
+      {
+        "id": "reagan-1984-do-right",
+        "kind": "ambition",
+        "theme": "government",
+        "restatement": "Do what is right, with all the country's might.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶15.2",
+            "quote": "We must do what we know is right, and do it with all our might.",
+            "context": "We must do what we know is right, and do it with all our might.",
+            "mark": [
+              0,
+              63
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "\"We\" is the nation; read as including the government he leads."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-restrain-spending",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Stop feeding the growing demands of the federal government with workers' earnings.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶20.2-20.3",
+            "quote": "We must never again abuse the trust of working men and women by sending their earnings on a futile chase after the spiraling demands of a bloated Federal Establishment.",
+            "context": "As we do, we must not repeat the well-intentioned errors of our past. We must never again abuse the trust of working men and women by sending their earnings on a futile chase after the spiraling demands of a bloated Federal Establishment.",
+            "mark": [
+              70,
+              238
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-simplify-taxes",
+        "kind": "ambition",
+        "theme": "taxes",
+        "restatement": "Simplify the tax system and make it fairer.",
+        "quality": "medium",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶80.2",
+            "quote": "We intend to simplify the entire tax system—to make taxes more fair, easier to understand",
+            "context": "We intend to simplify the entire tax system—to make taxes more fair, easier to understand, and, most important, to bring the tax rates of every American further down, not up.",
+            "mark": [
+              0,
+              89
+            ]
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶22.1",
+            "quote": "We must simplify our tax system, make it more fair",
+            "context": "We must simplify our tax system, make it more fair and bring the rates down for all who work and earn.",
+            "mark": [
+              0,
+              50
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "reagan-1984-tax-reform",
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "medium",
+            "object": "the federal income tax system",
+            "record": "enacted legislation (Statutes at Large)",
+            "criterion": "a law that simplifies the income tax is enacted",
+            "ambiguity": "\"Simplify\" and \"more fair\" are not defined; a law that cuts the number of brackets and removes deductions counts."
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-lower-tax-rates",
+        "kind": "ambition",
+        "theme": "taxes",
+        "restatement": "Lower every American's income tax rate.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "acceptance",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Remarks Accepting the Presidential Nomination at the Republican National Convention in Dallas, Texas",
+              "year": 1984,
+              "date": "1984-08-23",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/remarks-accepting-the-presidential-nomination-the-republican-national-convention-dallas",
+              "label": "1984 acceptance speech"
+            },
+            "ref": "¶80.2",
+            "quote": "bring the tax rates of every American further down, not up.",
+            "context": "We intend to simplify the entire tax system—to make taxes more fair, easier to understand, and, most important, to bring the tax rates of every American further down, not up.",
+            "mark": [
+              115,
+              174
+            ]
+          },
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶22.1",
+            "quote": "bring the rates down for all who work and earn.",
+            "context": "We must simplify our tax system, make it more fair and bring the rates down for all who work and earn.",
+            "mark": [
+              55,
+              102
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": "reagan-1984-tax-reform",
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "federal income tax rates",
+            "record": "enacted legislation (Statutes at Large); IRS rate schedules",
+            "criterion": "a law lowers the income tax rate of every bracket",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-work-for-all",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "Work so that every American who seeks work can find it.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶22.2",
+            "quote": "We must think anew and move with a new boldness, so every American who seeks work can find work",
+            "context": "We must think anew and move with a new boldness, so every American who seeks work can find work, so the least among us shall have an equal chance to achieve the greatest things—to be heroes who heal our sick, feed the hungry, protect peace among nations, and leave this world a better place.",
+            "mark": [
+              0,
+              95
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "outcome",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-revive-distressed-areas",
+        "kind": "ambition",
+        "theme": "economy",
+        "restatement": "A national drive to remove economic barriers in the most distressed areas.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶23.1-23.2",
+            "quote": "The time has come for a new American emancipation—a great national drive to tear down economic barriers and liberate the spirit of enterprise in the most distressed areas of our country.",
+            "context": "The time has come for a new American emancipation—a great national drive to tear down economic barriers and liberate the spirit of enterprise in the most distressed areas of our country. My friends, together we can do this, and do it we must, so help me God.",
+            "mark": [
+              0,
+              186
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "probable",
+            "note": "The speech names no measure; it may mean his enterprise zones bill (acceptance ¶71.1), but does not say so."
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-control-tax-and-spend",
+        "kind": "ambition",
+        "theme": "budget",
+        "restatement": "Permanently limit the government's power to tax and spend.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "inaugural",
+              "medium": "speech",
+              "speaker": "Ronald Reagan",
+              "event": "Inaugural Address",
+              "year": 1985,
+              "date": "1985-01-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/inaugural-address-10",
+              "label": "1985 inaugural address"
+            },
+            "ref": "¶26.2-26.3",
+            "quote": "Beyond this, we must take further steps to permanently control government's power to tax and spend.",
+            "context": "Beyond this, we must take further steps to permanently control government's power to tax and spend. We must act now to protect future generations from government's desire to spend its citizens' money and tax them into servitude when the bills come due.",
+            "mark": [
+              0,
+              99
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-no-troops",
+        "kind": "ambition",
+        "theme": "defense",
+        "restatement": "Not send troops anywhere.",
+        "quality": "low",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶42.5",
+            "quote": "I don't want to send troops any place.",
+            "context": "I don't want to send troops any place.",
+            "mark": [
+              0,
+              38
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "ongoing",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "low",
+            "object": null,
+            "record": null,
+            "criterion": null,
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      },
+      {
+        "id": "reagan-1984-employer-sanctions",
+        "kind": "ambition",
+        "theme": "immigration",
+        "restatement": "Penalties for employers who hire people who are in the country illegally.",
+        "quality": "high",
+        "occurrences": [
+          {
+            "source": {
+              "kind": "debate",
+              "medium": "debate",
+              "speaker": "Ronald Reagan",
+              "event": "Debate Between the President and Former Vice President Walter F. Mondale in Kansas City, Missouri",
+              "year": 1984,
+              "date": "1984-10-21",
+              "publisher": "Gerhard Peters and John T. Woolley, The American Presidency Project",
+              "url": "https://www.presidency.ucsb.edu/documents/debate-between-the-president-and-former-vice-president-walter-f-mondale-kansas-city",
+              "label": "1984 debate"
+            },
+            "ref": "¶139.5",
+            "quote": "With regard to the employer sanctions, we must have that",
+            "context": "With regard to the employer sanctions, we must have that not only to ensure that we can identify the illegal aliens, but also, while some keep protesting about what it would do to employers, there is another employer that we shouldn't be so concerned about, and these are employers down through the years who have encouraged the illegal entry into this country because they then hire these individuals and hire them at starvation wages and with none of the benefits that we think are normal and natural for workers in our country, and the individuals can't complain because of their illegal status.",
+            "mark": [
+              0,
+              56
+            ]
+          }
+        ],
+        "protocol": {
+          "type": "action",
+          "group": null,
+          "deadline": {
+            "stated": null,
+            "applied": "1989-01-20"
+          },
+          "verifiability": {
+            "level": "high",
+            "object": "sanctions on employers of unauthorized immigrants",
+            "record": "enacted legislation (Statutes at Large)",
+            "criterion": "a law that penalizes employers for hiring unauthorized immigrants is enacted",
+            "ambiguity": null
+          },
+          "uncertainty": {
+            "extraction": "clear",
+            "note": null
+          },
+          "links": []
+        },
+        "verdict": null
+      }
+    ]
+  },
+  {
     "key": "1989-1993 Bush",
     "name": "George H. W. Bush",
     "surname": "H. W. Bush",
@@ -3663,7 +5531,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "extraction": "clear",
             "note": null
           },
-          "links": []
+          "links": [
+            {
+              "kind": "shared",
+              "to": "reagan-1984-line-item-veto"
+            }
+          ]
         },
         "verdict": null
       },
@@ -14253,7 +16126,12 @@ export const CORPUS_TERMS: CorpusTerm[] = [
             "extraction": "clear",
             "note": null
           },
-          "links": []
+          "links": [
+            {
+              "kind": "shared",
+              "to": "reagan-1984-reduce-nuclear"
+            }
+          ]
         },
         "verdict": {
           "verdict": "kept",
@@ -56248,10 +58126,10 @@ export const CORPUS_TERMS: CorpusTerm[] = [
 ];
 
 /** Total distinct promises across the corpus (sanity anchor for tests). */
-export const CORPUS_PROMISE_COUNT = 590;
+export const CORPUS_PROMISE_COUNT = 612;
 
 /** Total ambitions across the corpus. */
-export const CORPUS_AMBITION_COUNT = 253;
+export const CORPUS_AMBITION_COUNT = 262;
 
 /** Total promise occurrences (utterances) across the corpus. */
-export const CORPUS_OCCURRENCE_COUNT = 855;
+export const CORPUS_OCCURRENCE_COUNT = 880;

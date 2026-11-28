@@ -1,0 +1,46 @@
+# Screening ledger for 1984-acceptance.md (protocol v1).
+# Every trigger-matched sentence has a row. Ids shared with the other two
+# ledgers are further occurrences of the same promise.
+#
+# The published transcript marks the crowd's chants as "Audience"
+# paragraphs. They are kept as published and contain no candidates.
+#
+# Added: ¶55.2 ("that administration will be committed to completing the
+# unfinished agenda"), ¶80.1 ("Our tax policies are and will remain …") and
+# ¶80.2 ("We intend to simplify the entire tax system …"), statements of
+# what his administration will do without a trigger word.
+#
+# Not candidates: ¶68.1, ¶70.1 and ¶71.1 (prayer amendment, tuition tax
+# credits, enterprise zones) argue for bills already before Congress and
+# state no future act. ¶82.2 ("the greatest challenge of all, is to reduce
+# the risk of nuclear war") describes a challenge. ¶122.1-122.6 are past
+# promises reported as kept.
+source: 1984-acceptance
+protocol: 1
+rows:
+  - { ref: "¶4.2", decision: describe, note: "About the campaign." }
+  - { ref: "¶6.2", decision: describe, note: "About the party's colours; no object." }
+  - { ref: "¶35.2", decision: include, promises: [reagan-1984-keep-growth] }
+  - { ref: "¶38.2", decision: include, promises: [reagan-1984-israel] }
+  - { ref: "¶39.3", decision: include, promises: [reagan-1984-stand-by-friends] }
+  - ref: "¶55.2"
+    decision: include
+    added: true
+    promises: [reagan-1984-unfinished-agenda]
+  - { ref: "¶58.6", decision: include, promises: [reagan-1984-balanced-budget-amendment] }
+  - { ref: "¶59.1", decision: include, promises: [reagan-1984-line-item-veto] }
+  - { ref: "¶74.1", decision: include, promises: [reagan-1984-stop-tax-increases], note: "\"Them\" are the opponents committed to raising the tax burden (¶72.1)." }
+  - ref: "¶80.1"
+    decision: include
+    added: true
+    promises: [reagan-1984-progrowth-taxes]
+  - ref: "¶80.2"
+    decision: include
+    added: true
+    promises: [reagan-1984-simplify-taxes, reagan-1984-lower-tax-rates]
+    note: "\"We intend to\" is an intention: ambitions."
+  - { ref: "¶84.2", decision: attack, note: "About the opponents' campaign." }
+  - { ref: "¶109.1", decision: describe, note: "Rhetorical question about public service." }
+  - { ref: "¶118.2", decision: describe, note: "About his last convention address." }
+  - { ref: "¶118.4", decision: ceremony, note: "Thanks." }
+  - { ref: "¶135.4", decision: describe, note: "Imagery: the Statue of Liberty's torch, already being replaced by the restoration." }

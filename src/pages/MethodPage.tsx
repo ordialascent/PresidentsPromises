@@ -1,10 +1,11 @@
 import { CORPUS_TERMS } from '../content/promises.generated.js';
 import {
-  QUALITIES,
-  QUALITY_META,
+  CHECKS,
+  CHECK_META,
   VERDICT_META,
   VERDICT_STATUSES,
   methodRows,
+  type Check,
   type VerdictValue,
 } from '../promises/model.js';
 import { EXCLUSIONS, THEMES } from './method.js';
@@ -14,6 +15,14 @@ const PROTOCOL_URL = `${REPO}/blob/main/corpus/PROTOCOL.md`;
 const CORPUS_URL = `${REPO}/tree/main/corpus`;
 
 const ROWS = methodRows(CORPUS_TERMS);
+
+/** Where the line between verifiable and unverifiable falls (corpus/PROTOCOL.md §4). */
+const CHECK_RULE: Record<Check, string> = {
+  verifiable:
+    'Object and record are clear, and the words fix what counts as kept, or leave at most one judgement call. That call is written down on the promise. Every verifiable promise gets a verdict.',
+  unverifiable:
+    'The object or the record is missing, or checking it would need more than one judgement call. It never gets a verdict.',
+};
 const FIRST = CORPUS_TERMS[0];
 const LAST = CORPUS_TERMS[CORPUS_TERMS.length - 1];
 
@@ -141,7 +150,7 @@ export function MethodPage() {
           </table>
           <p>
             Vague promises are <em>not</em> left out. “We will defend our allies” is a promise; it is
-            rated low. How much of a president’s language cannot be checked is part of what this site
+            rated unverifiable. How much of a president’s language cannot be checked is part of what this site
             shows.
           </p>
         </section>
@@ -170,7 +179,10 @@ export function MethodPage() {
 
         <section>
           <h2>5. Rating verifiability</h2>
-          <p>Three questions are asked of every promise:</p>
+          <p>
+            Each promise is either <strong>verifiable</strong> or <strong>unverifiable</strong>. Three
+            questions decide which:
+          </p>
           <ul>
             <li><strong>Object:</strong> is it clear what the promise is about (a law, a programme, a quantity)?</li>
             <li>
@@ -185,28 +197,28 @@ export function MethodPage() {
           <table className="method-table method-levels">
             <thead>
               <tr>
-                <th scope="col">Level</th>
+                <th scope="col">Rating</th>
                 <th scope="col">Rule</th>
               </tr>
             </thead>
             <tbody>
-              {QUALITIES.map((q) => (
-                <tr key={q}>
+              {CHECKS.map((c) => (
+                <tr key={c}>
                   <th scope="row">
-                    <span className="veri-swatch method-swatch" data-q={q} aria-hidden="true" />
-                    {QUALITY_META[q].label}
+                    <span className="veri-swatch method-swatch" data-c={c} aria-hidden="true" />
+                    {CHECK_META[c].label}
                   </th>
-                  <td>
-                    {q === 'high' && 'All three are fixed by the words.'}
-                    {q === 'medium' &&
-                      'Object and record are clear; the criterion needs one judgement call. That call is written down on the promise.'}
-                    {q === 'low' &&
-                      'The object or the record is missing, or checking it would need more than one judgement call.'}
-                  </td>
+                  <td>{CHECK_RULE[c]}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <p className="method-note">
+            The published records keep one finer note inside “verifiable”: whether the words fix
+            the criterion fully (<code>high</code>) or need the one judgement call{' '}
+            (<code>medium</code>). Unverifiable promises are recorded as <code>low</code>. The site
+            draws only the line that decides whether a verdict is possible.
+          </p>
           <p>
             Verifiability rates the sentence, not the president. Each promise also records its{' '}
             <strong>type</strong> (an action, an outcome, or ongoing conduct), one{' '}
@@ -225,7 +237,7 @@ export function MethodPage() {
             Language is ambiguous, so doubt is recorded, not hidden. A promise whose reading is not
             clear-cut is marked <em>probable</em> or <em>contested</em>, with a note on why: an unclear
             subject, an unclear scope, or a word like “it” that could point to more than one thing. A
-            medium promise shows its judgement call. When a rule is unclear, the sentence is included
+            verifiable promise that needs a judgement call shows it. When a rule is unclear, the sentence is included
             and the doubt is noted, rather than quietly left out.
           </p>
           <p>
@@ -238,7 +250,7 @@ export function MethodPage() {
         <section>
           <h2>7. Kept or broken</h2>
           <p>
-            Every high and medium promise gets one verdict. Low promises and ambitions never get one.
+            Every verifiable promise gets one verdict. Unverifiable promises and ambitions never get one.
             The verdict answers one question: <strong>was the criterion met by the deadline?</strong>{' '}
             It is judged against the criterion shown with the promise, never against what the speaker
             later said the promise meant.
@@ -310,9 +322,8 @@ export function MethodPage() {
                   <th scope="col">Included</th>
                   <th scope="col">Left out</th>
                   <th scope="col">Promises</th>
-                  <th scope="col" title="High / medium / low">
-                    H / M / L
-                  </th>
+                  <th scope="col">Verifiable</th>
+                  <th scope="col">Unverifiable</th>
                   <th scope="col">Ambitions</th>
                 </tr>
               </thead>
@@ -324,9 +335,8 @@ export function MethodPage() {
                     <td>{r.included}</td>
                     <td title={r.excludedBy.map(([d, n]) => `${d}: ${n}`).join(', ')}>{r.excluded}</td>
                     <td>{r.promises}</td>
-                    <td>
-                      {r.tiers.high} / {r.tiers.medium} / {r.tiers.low}
-                    </td>
+                    <td>{r.tiers.high + r.tiers.medium}</td>
+                    <td>{r.tiers.low}</td>
                     <td>{r.ambitions}</td>
                   </tr>
                 ))}
@@ -349,7 +359,7 @@ export function MethodPage() {
               is planned, and its agreement rate will be reported here. It has not been measured yet.
             </li>
             <li>
-              Where the line between medium and low falls is the most judgement-heavy step, and is
+              Where the line between verifiable and unverifiable falls is the most judgement-heavy step, and is
               re-checked across all terms in regular audits.
             </li>
             <li>
